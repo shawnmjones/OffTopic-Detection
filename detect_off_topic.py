@@ -42,6 +42,9 @@ parser.add_argument('-r', dest='uri',
 
 parser.add_argument('-m', dest='mode', default="cosim",
                    help='The similarity measure: cosim or wcount. The default is cosim.')
+
+parser.add_argument('-c', dest='input_dir',
+                    help='The already downloaded collection directory to use for data input.')
                    
 args = parser.parse_args()
 
@@ -65,6 +68,7 @@ if args.mode != None:
          sys.exit(1)
          
 base_timemap_link_uri = "http://wayback.archive-it.org/"
+download_mementos = True
 if args.id !=None:
     # extract from id
     collection_id = args.id
@@ -97,10 +101,18 @@ elif args.timemap_uri !=None:
     ensure_dir(timemap_file_name)
     timemap_file =  open(timemap_file_name,'w')
     timemap_downloader.write_timemap_to_file(1, memento_list,timemap_file) 
+elif args.input_dir !=None:
+    #collection_directory = data_directory+"/collection_"+str(collection_id)
+    collection_directory = args.input_dir
+    seed_list_file = collection_directory+"/seed_list.txt"
+    timemap_file_name = collection_directory+"/timemap.txt"
+    download_mementos = False
 else:
     parser.print_help() 
 
-html_wayback_downloader.download_html_from_wayback(timemap_file_name,collection_directory)      
+if download_mementos:
+    html_wayback_downloader.download_html_from_wayback(timemap_file_name,collection_directory)      
+
 os.system('./extract_text_from_html '+timemap_file_name+' '+  collection_directory)
 
 if mode == "cosim" :
