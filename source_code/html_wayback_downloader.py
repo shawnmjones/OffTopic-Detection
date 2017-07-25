@@ -4,6 +4,7 @@ from sys import argv
 import sys
 import time
 import os
+import requests
 
 def ensure_dir(f):
     d = os.path.dirname(f)
@@ -37,7 +38,7 @@ def download_html_from_wayback( timemap_file_name,collection_directory ) :
         old_uri_id = uri_id
         memento_list.append( (dt,uri) )
        # time.sleep(2)
-    download_memento_list(uri_id, memento_list, collection_directory)
+    download_memento_list(old_uri_id, memento_list, collection_directory)
     number_of_downloading_mementos=number_of_downloading_mementos+len(memento_list)
     print "Downloading "+str(number_of_downloading_mementos)+" mementos out of "+str(number_of_mementos)
  
@@ -47,28 +48,35 @@ def download_memento_list(uri_id, memento_list, collection_directory):
         
         ensure_dir(collection_directory+"/html/"+uri_id+"/")
         for memento in memento_list:
+            memento_file_name = collection_directory+"/html/"+uri_id+"/"+memento[0]+".html"
+            if os.path.exists(memento_file_name) :
+                        #print "found"
+                continue
+            
             the_page = get_one_memento(memento[0], memento[1])
-            f = open(collection_directory+"/html/"+uri_id+"/"+memento[0]+".html","w")
-            f.write(the_page)
+            f = open(memento_file_name,"w")
+            f.write(the_page.encode('utf-8'))
             f.close()                
             
 def get_one_memento(dt, uri):
         the_page = ""
-
+        uri = uri.replace('\n','')
         uri = uri.replace(dt,dt+"id_")
-        try:
-            request = urllib2.Request(uri)
-            opener = urllib2.build_opener()
-            response = opener.open(request)
 
-            the_page = response.read()
-            response.close();
+        if uri[0:5] != 'http':
+            uri = 'https:' + uri
+
+        try:
+         #   request = urllib2.Request(uri)
+         #   opener = urllib2.build_opener()
+          #  response = opener.open(request)
+            response = requests.get(uri)
+            the_page = response.text
+            print str(len(the_page))+" "+uri
+            #response.close();
             
-        except urllib2.HTTPError, e:    
+        except requests.exceptions.RequestException as e:    
             print uri
-            print str(e.code) +"\n"+str(e.msg)+"\n"+str(e.args)
-        except urllib2.URLError, e:
-            print uri
-            print str(e.args)+"\n"+str(e.reason)+"\n"+str(e.args)
+            print str(e)
         return the_page
             

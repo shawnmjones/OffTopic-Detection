@@ -36,7 +36,11 @@ if __name__ == "__main__":
             for link in links:
                 if link.a != None:
                     seed_uri = link.a.get('title').encode("utf-8")
-                    if seed_uri.endswith(".png") or  seed_uri.endswith(".jpg") or  seed_uri.endswith(".pdf") or  seed_uri.endswith(".jpeg"):
+                    if seed_uri.endswith(".png") or\
+                      seed_uri.endswith(".jpg") or\
+                      seed_uri.endswith(".pdf") or\
+                      seed_uri.endswith(".mov") or\
+                      seed_uri.endswith(".jpeg"):
                         continue;
                     else:
                         id = id + 1

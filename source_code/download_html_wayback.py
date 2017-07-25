@@ -4,6 +4,7 @@ from sys import argv
 import sys
 import time
 import os
+import os.path
 
 def ensure_dir(f):
     d = os.path.dirname(f)
@@ -43,6 +44,14 @@ if __name__ == "__main__":
             continue
         uri = uri.replace(dt,dt+"id_")
         try:
+            ensure_dir(collection_directory+"/html/"+uri_id+"/")
+            memento_file_name = collection_directory+"/html/"+uri_id+"/"+dt+".html"
+            if os.path.exists(memento_file_name) :
+                print "found"
+                continue
+            else:
+                print memento_file_name
+
             request = urllib2.Request(uri)
             opener = urllib2.build_opener()
             response = opener.open(request)
@@ -50,8 +59,7 @@ if __name__ == "__main__":
             the_page = response.read()
             response.close();
             
-            ensure_dir(collection_directory+"/html/"+uri_id+"/")
-            f = open(collection_directory+"/html/"+uri_id+"/"+dt+".html","w")
+            f = open(memento_file_name,"w")
             f.write(the_page)
             f.close()
         except urllib2.HTTPError, e:    

@@ -71,10 +71,10 @@ def convert_timemap_to_hash(timemap_file_name):
     timemap_list_file.close()
     return timemap_dict
     
-def compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold):
+def compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file):
     memento_t0 = ntpath.basename(file_list[0].replace('.txt',''))
     vector_text = build_vector_from_file_list(file_list)
-    if vector_text is not None  and len(vector_text)>0 :
+    if vector_text is not None  and len(vector_text)>1 :
         tfidf_matrix = tfidf.fit_transform(vector_text.values())
         
         first_index = -1
@@ -91,13 +91,18 @@ def compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tf
             for idx, test_cell in enumerate(train_row):
                 if test_cell < threshold:
                     memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_list[idx])]
-                    off_topic_cosine_file.write( str(test_cell)+"\t"+memento_uri+"\n")                    
+                    off_topic_cosine_file.write( str(test_cell)+"\t"+memento_uri+"\n")
+                else:
+                    new_timemap_file.write(old_uri_id+"\t"+str(computed_file_list[idx])+"\t"+timemap_dict[str(old_uri_id)][str(computed_file_list[idx])])
+                    
     
 
    
 def get_off_topic_memento(timemap_file_name,off_topic_cosine_file, collection_directory,threshold):
          
     english_stopwords = load_stopwords()
+    new_timemap_file = open(collection_directory + "/ontopic_timemap.txt",'w')
+    
     timemap_dict = convert_timemap_to_hash(timemap_file_name)
     
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
@@ -120,12 +125,13 @@ def get_off_topic_memento(timemap_file_name,off_topic_cosine_file, collection_di
               continue
           
           if old_uri_id != uri_id and len(file_list)>0:
-              compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold)
+              compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file)
               file_list=[]
           file_list.append(text_file)
           old_uri_id=uri_id
 
             
     if len(file_list)>0:
-        compute_off_topic(uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold)
+        compute_off_topic(uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file)
+    new_timemap_file.close()
 

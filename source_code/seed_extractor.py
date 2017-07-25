@@ -7,11 +7,15 @@ import os
 def seed_extractor_from_uri(collection_uri,collection_directory):
         if not os.path.exists(collection_directory):
             os.makedirs(collection_directory)
-            
-        seed_file = open( collection_directory+"/seed_list.txt","w")
+        seed_file_path = collection_directory+"/seed_list.txt"
+        print seed_file_path
+        if os.path.exists(seed_file_path):
+            print "Using cached seed_file at " + seed_file_path
+            return
+        seed_file = open( seed_file_path,"w")
         id = 0
         for i in range(1,20):
-            page_uri = collection_uri +"/?page="+str(i)
+            page_uri = collection_uri +"?page="+str(i)
             request = urllib2.Request(page_uri)
             opener = urllib2.build_opener()
             response = opener.open(request)
@@ -25,7 +29,9 @@ def seed_extractor_from_uri(collection_uri,collection_directory):
             for link in links:
                 if link.a != None:
                     seed_uri = link.a.get('title').encode("utf-8")
-                    if seed_uri.endswith(".png") or  seed_uri.endswith(".jpg") or  seed_uri.endswith(".pdf") or  seed_uri.endswith(".jpeg"):
+                    if seed_uri.endswith(".png") or  seed_uri.endswith(".jpg") \
+                        or  seed_uri.endswith(".pdf") or  seed_uri.endswith(".jpeg") :
+                 #       or "facebook.com/" in seed_uri or "twitter.com/" in seed_uri \
                         continue;
                     else:
                         id = id + 1

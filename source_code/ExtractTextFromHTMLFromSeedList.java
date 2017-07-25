@@ -66,6 +66,9 @@ public class ExtractTextFromHTMLFromSeedList {
 					}
 								
 					File textFile = new File(text_dir+uri_id+"/"+dt+".txt");
+					if(textFile.exists()){
+						continue;
+					}
 					textFile.getParentFile().mkdirs();
 					BufferedReader reader = new BufferedReader(new FileReader(htmlFile));
 						
