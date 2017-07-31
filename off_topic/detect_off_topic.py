@@ -11,6 +11,7 @@ import random
 import html_wayback_downloader
 import off_topic_detector_cos_sim
 import off_topic_detector_count_words
+import off_topic_detector_jaccard
 import urlparse
 def ensure_dir(f):
     d = os.path.dirname(f)
@@ -63,7 +64,7 @@ if args.file != None:
 if args.mode != None:
     mode = args.mode 
     
-    if mode != "cosim" and mode != "wcount":
+    if mode != "cosim" and mode != "wcount" and mode != "jaccard":
          parser.print_help()
          sys.exit(1)
          
@@ -119,6 +120,8 @@ if mode == "cosim" :
     off_topic_detector_cos_sim.get_off_topic_memento(timemap_file_name,output_file,collection_directory,threshold)
 elif mode ==  "wcount":
     off_topic_detector_count_words.get_off_topic_memento(timemap_file_name,output_file,collection_directory,threshold)
+elif mode == 'jaccard':
+    off_topic_detector_jaccard.get_off_topic_memento(timemap_file_name, output_file, collection_directory, threshold)
 else:
     print "Undefined methods"
 

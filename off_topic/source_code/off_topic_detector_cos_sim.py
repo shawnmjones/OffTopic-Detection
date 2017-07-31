@@ -74,6 +74,8 @@ def convert_timemap_to_hash(timemap_file_name):
 def compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file):
     memento_t0 = ntpath.basename(file_list[0].replace('.txt',''))
     vector_text = build_vector_from_file_list(file_list)
+
+    # if len(vector_text) == 1, we only have 1 memento and hence it is not off-topic from its friends
     if vector_text is not None  and len(vector_text)>1 :
         tfidf_matrix = tfidf.fit_transform(vector_text.values())
         
