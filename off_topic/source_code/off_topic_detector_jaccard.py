@@ -5,7 +5,7 @@ import os
 sys.path.append("source_code")
 import off_topic_detector_cos_sim as ot
 
-def compute_off_topic(old_uri_id, file_list, timemap_dict, off_topic_jaccard_file, threshold, new_timemap_file):
+def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, threshold):
 
     vector_text = ot.build_vector_from_file_list(file_list)
 
@@ -17,22 +17,23 @@ def compute_off_topic(old_uri_id, file_list, timemap_dict, off_topic_jaccard_fil
         for filename in vector_text.keys():
             content_vector = ot.tokenize(vector_text[filename])
            
-            score = distance.jaccard(content_vector, t0_vector)
+            jaccard_score = distance.jaccard(content_vector, t0_vector)
 
             computed_file_name = ntpath.basename(filename.replace('.txt', ''))
+            mdatetime = computed_file_name
+            memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_name)] 
+
+            collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), jaccard_score))
 
             # Jaccard distance works differently than cosine similarity
-            if score > threshold:
-                memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_name)]
-                off_topic_jaccard_file.write( str(score) + "\t" + memento_uri + "\n")
-            else:
-                new_timemap_file.write(old_uri_id+"\t"+str(computed_file_name)+"\t"+timemap_dict[str(old_uri_id)][str(computed_file_name)])
+#            if score > threshold:
+#                memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_name)]
+#                off_topic_jaccard_file.write( str(score) + "\t" + memento_uri + "\n")
+#            else:
+#                new_timemap_file.write(old_uri_id+"\t"+str(computed_file_name)+"\t"+timemap_dict[str(old_uri_id)][str(computed_file_name)])
  
 
-def get_off_topic_memento(timemap_file_name, off_topic_jaccard_file, collection_directory, threshold):
-
-    english_stopwords = ot.load_stopwords()
-    new_timemap_file = open(collection_directory + "/ontopic_timemap.txt", 'w')
+def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_directory, threshold):
 
     timemap_dict = ot.convert_timemap_to_hash(timemap_file_name)
 
@@ -40,7 +41,8 @@ def get_off_topic_memento(timemap_file_name, off_topic_jaccard_file, collection_
 
     print "Determining off-otpic mementos using Jaccard method."
 
-    off_topic_jaccard_file.write("Similarity\tmemento_uri\n")
+    collection_scores_file.write("URIR_ID\tmemento_datetime\tmemento_uri\tjaccard_score\n")
+
     old_uri_id = "0"
     old_mem_id = "0"
     file_list = []
@@ -58,13 +60,11 @@ def get_off_topic_memento(timemap_file_name, off_topic_jaccard_file, collection_
             continue
 
         if old_uri_id != uri_id and len(file_list) > 0:
-            compute_off_topic(old_uri_id, file_list, timemap_dict, off_topic_jaccard_file, threshold, new_timemap_file)
+            compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, threshold)
             file_list = []
 
         file_list.append(text_file)
         old_uri_id = uri_id
 
     if len(file_list) > 0:
-        compute_off_topic(old_uri_id, file_list, timemap_dict, off_topic_jaccard_file, threshold, new_timemap_file)
-
-    new_timemap_file.close()
+        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, threshold)

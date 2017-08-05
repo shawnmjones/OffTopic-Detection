@@ -76,7 +76,7 @@ if args.id !=None:
     collection_directory = data_directory+"/collection_"+str(collection_id)
     seed_extractor.seed_extractor_from_id(collection_id,collection_directory)
     seed_list_file = collection_directory+"/seed_list.txt"
-    timemap_file_name = collection_directory+"/timemap.txt"
+    collectionmap_file_name = collection_directory+"/timemap.txt"
     timemap_downloader.download(seed_list_file, base_timemap_link_uri+ str(collection_id)+"/timemap/link", collection_directory)
     
 elif args.uri !=None:
@@ -89,7 +89,7 @@ elif args.uri !=None:
         
     collection_directory = data_directory+"/collection_"+str(collection_id)
     seed_list_file = collection_directory+"/seed_list.txt"
-    timemap_file_name = collection_directory+"/timemap.txt"
+    collectionmap_file_name = collection_directory+"/timemap.txt"
     
     seed_extractor.seed_extractor_from_uri(collection_uri,collection_directory)
     timemap_downloader.download(seed_list_file, base_timemap_link_uri+str(collection_id)+"/timemap/link", collection_directory)
@@ -98,31 +98,35 @@ elif args.timemap_uri !=None:
     memento_list = timemap_downloader.get_mementos_from_timemap(args.timemap_uri)
     collection_id = str(random.randrange(1000000))
     collection_directory = data_directory+"/collection_"+collection_id
-    timemap_file_name =collection_directory+"/timemap.txt"
-    ensure_dir(timemap_file_name)
-    timemap_file =  open(timemap_file_name,'w')
-    timemap_downloader.write_timemap_to_file(1, memento_list,timemap_file) 
+    collectionmap_file_name =collection_directory+"/timemap.txt"
+    ensure_dir(collectionmap_file_name)
+    collectionmap_file =  open(collectionmap_file_name,'w')
+    timemap_downloader.write_timemap_to_file(1, memento_list, collectionmap_file) 
 elif args.input_dir !=None:
     #collection_directory = data_directory+"/collection_"+str(collection_id)
     collection_directory = args.input_dir
     seed_list_file = collection_directory+"/seed_list.txt"
-    timemap_file_name = collection_directory+"/timemap.txt"
+    collectionmap_file_name = collection_directory+"/timemap.txt"
     download_mementos = False
 else:
     parser.print_help() 
 
 if download_mementos:
-    html_wayback_downloader.download_html_from_wayback(timemap_file_name,collection_directory)      
+    html_wayback_downloader.download_html_from_wayback(collectionmap_file_name,collection_directory)      
 
-os.system('./extract_text_from_html '+timemap_file_name+' '+  collection_directory)
+os.system('./extract_text_from_html ' + collectionmap_file_name + ' ' + collection_directory)
+
+off_topic_scores = {}
 
 if mode == "cosim" :
-    off_topic_detector_cos_sim.get_off_topic_memento(timemap_file_name,output_file,collection_directory,threshold)
+    # TODO: change output_file to a cosine_scores_file
+    off_topic_scores["cosine"] = off_topic_detector_cos_sim.get_off_topic_memento(collectionmap_file_name, 
+        output_file, collection_directory, threshold)
 elif mode ==  "wcount":
-    off_topic_detector_count_words.get_off_topic_memento(timemap_file_name,output_file,collection_directory,threshold)
+    off_topic_scores["word count"] = off_topic_detector_count_words.get_off_topic_memento(collectionmap_file_name, 
+        output_file, collection_directory, threshold)
 elif mode == 'jaccard':
-    off_topic_detector_jaccard.get_off_topic_memento(timemap_file_name, output_file, collection_directory, threshold)
+    off_topic_scores["jaccard"] = off_topic_detector_jaccard.get_off_topic_memento(collectionmap_file_name,
+        output_file, collection_directory, threshold)
 else:
     print "Undefined methods"
-
-

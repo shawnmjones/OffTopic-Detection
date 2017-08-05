@@ -71,8 +71,8 @@ def convert_timemap_to_hash(timemap_file_name):
     timemap_list_file.close()
     return timemap_dict
     
-def compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file):
-    memento_t0 = ntpath.basename(file_list[0].replace('.txt',''))
+def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf, threshold):
+
     vector_text = build_vector_from_file_list(file_list)
 
     # if len(vector_text) == 1, we only have 1 memento and hence it is not off-topic from its friends
@@ -80,60 +80,56 @@ def compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tf
         tfidf_matrix = tfidf.fit_transform(vector_text.values())
         
         first_index = -1
+
         for j in enumerate(tfidf_matrix.toarray()):
             if vector_text.keys()[j[0]]==file_list[0]:
                 first_index=j[0]
+
         cosine_similarity_results_matrix = cosine_similarity(tfidf_matrix[first_index], tfidf_matrix)
         computed_file_list = []
 
         for  document_list in enumerate(tfidf_matrix.toarray()):
             file_name =  vector_text.keys()[document_list[0]]
             computed_file_list.append( ntpath.basename(file_name.replace('.txt','')))
+
         for train_row in cosine_similarity_results_matrix:
             for idx, test_cell in enumerate(train_row):
-                if test_cell < threshold:
                     memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_list[idx])]
-                    off_topic_cosine_file.write( str(test_cell)+"\t"+memento_uri+"\n")
-                else:
-                    new_timemap_file.write(old_uri_id+"\t"+str(computed_file_list[idx])+"\t"+timemap_dict[str(old_uri_id)][str(computed_file_list[idx])])
-                    
-    
-
-   
-def get_off_topic_memento(timemap_file_name,off_topic_cosine_file, collection_directory,threshold):
+                    cosine_score = test_cell
+                    mdatetime = str(computed_file_list[idx])
+                    collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), cosine_score))
+ 
+def get_off_topic_memento(collectionmap_file_name, collection_scores_file, collection_directory,threshold):
          
-    english_stopwords = load_stopwords()
-    new_timemap_file = open(collection_directory + "/ontopic_timemap.txt",'w')
-    
-    timemap_dict = convert_timemap_to_hash(timemap_file_name)
+    timemap_dict = convert_timemap_to_hash(collectionmap_file_name)
     
     tfidf = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
     old_uri_id = "0"
     old_mem_id = 0
     file_list=[]
 
-    timemap_list_file = open(timemap_file_name)
+    collectionmap_list_file = open(collectionmap_file_name)
     print "Detecting off-topic mementos using Cosine Similarity method."
-    off_topic_cosine_file.write( "Similarity\tmemento_uri\n") 
-    for memento_record in timemap_list_file:
+
+    collection_scores_file.write("URIR_ID\tmemento_datetime\tmemento_uri\tcosine_score\n")
+
+    for memento_record in collectionmap_list_file:
           fields = memento_record.split("\t")
           uri_id = fields[0]
           dt = fields[1]
           mem_id = fields[2]
           uri = fields[3]
 
-          text_file = collection_directory+"/text/"+uri_id+"/"+dt+".txt"
+          text_file = collection_directory + "/text/" + uri_id + "/" + dt + ".txt"
           if not os.path.isfile(text_file):
               continue
           
           if old_uri_id != uri_id and len(file_list)>0:
-              compute_off_topic(old_uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file)
+              compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf, threshold)
               file_list=[]
           file_list.append(text_file)
           old_uri_id=uri_id
 
             
     if len(file_list)>0:
-        compute_off_topic(uri_id,file_list,timemap_dict,off_topic_cosine_file,tfidf,threshold, new_timemap_file)
-    new_timemap_file.close()
-
+        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf, threshold)

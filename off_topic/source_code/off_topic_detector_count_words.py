@@ -20,20 +20,23 @@ def count_word(text_file_path):
     words = re.split(ur"[\s,]+",re.sub(ur"\p{P}+", "",document),flags=re.UNICODE)
     return len(words)
 
-def compute_off_topic(old_uri_id,file_list,timemap_dict,count_list,off_topic_count_file,threshold, new_timemap_file):
+def compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file, threshold):
+
     if len(count_list) == 0 or max(count_list)==0:
         return
+
     if count_list[0]==0:
         print old_uri_id
         return
     
     percentage_list = [(count_list[i] - count_list[0]+0.0) / count_list[0] for i in range(len(count_list))]
-    for  idx,p in enumerate(percentage_list):
+
+    for  idx, p in enumerate(percentage_list):
+
         memento_uri = timemap_dict[str(old_uri_id)][str(file_list[idx])]
-        if p < threshold:
-            off_topic_count_file.write( str(p)+"\t"+memento_uri+"\n")
-        else:
-            new_timemap_file.write(str(old_uri_id)+"\t"+str(file_list[idx])+"\t"+memento_uri)                
+        wcount_score = p
+        mdatetime = str(file_list[idx])
+        collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), wcount_score))
 
 def convert_timemap_to_hash(timemap_file_name):
     timemap_list_file = open(timemap_file_name)
@@ -50,14 +53,15 @@ def convert_timemap_to_hash(timemap_file_name):
     return timemap_dict
     
 
-def get_off_topic_memento(timemap_file_name,off_topic_count_file, collection_directory,threshold):
+def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_directory, threshold):
 
   timemap_dict = convert_timemap_to_hash(timemap_file_name)
-  new_timemap_file = open(collection_directory + "/ontopic_timemap.txt",'w')
 
   timemap_list_file = open(timemap_file_name)
   print "Detecting off-topic mementos using Word Count method."
-  off_topic_count_file.write( "Similarity\tmemento_uri\n") 
+
+  collection_scores_file.write("URIR_ID\tmemento_datetime\tmemento_uri\tcosine_score\n")
+
   count_list = []
   file_list = []
   old_uri_id = "0"
@@ -71,7 +75,7 @@ def get_off_topic_memento(timemap_file_name,off_topic_count_file, collection_dir
     uri = fields[3]
     
     if old_uri_id != uri_id and old_uri_id > -1:
-          compute_off_topic(old_uri_id,file_list,timemap_dict,count_list,off_topic_count_file,threshold, new_timemap_file)
+          compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file, threshold)
           
           count_list = []
           file_list = []
@@ -83,6 +87,6 @@ def get_off_topic_memento(timemap_file_name,off_topic_count_file, collection_dir
         count_list.append(word_count)
       
     old_uri_id = uri_id      
-  compute_off_topic(old_uri_id,file_list,timemap_dict,count_list,off_topic_count_file,threshold, new_timemap_file)
-  new_timemap_file.close()
+
+  compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file, threshold)
   
