@@ -13,15 +13,62 @@ import off_topic_detector_cos_sim
 import off_topic_detector_count_words
 import off_topic_detector_jaccard
 import urlparse
+
 def ensure_dir(f):
     d = os.path.dirname(f)
     if not os.path.exists(d):
         os.makedirs(d)
-        
 
+def create_scores_dict(filenames):
+
+    scores_dict = {}
+
+    for filename in filenames:
+
+        with open(filename) as scorefile:
+
+            for line in scorefile:
+                line = line.strip()
+
+                fields = line.split('\t')
+
+                if fields[0] == "URIR_ID":
+                    scorename = fields[3].replace('_score', '')
+                else:
+                    urir_id = fields[0]
+                    mdatetime = fields[1]
+                    memento_uri = fields[2]
+                    score = fields[3]
+
+                    scores_dict.setdefault(urir_id, {})
+                    scores_dict[urir_id].setdefault(mdatetime, {})
+                    scores_dict[urir_id][mdatetime]["uri-m"] = memento_uri
+                    scores_dict[urir_id][mdatetime].setdefault("scores", {})
+                    scores_dict[urir_id][mdatetime]["scores"][scorename] = float(score)
+
+    return scores_dict
+        
+def determine_off_topic(score, threshold, comparison):
+
+    off_topic = False
+
+    if comparison == "<":
+
+#        print "score {} is < threshold {} = {}".format(score, threshold, score < threshold)
+#        print "score {}({}) is < threshold {}({}) = {}".format(
+#            score, type(score), threshold, type(threshold), score < threshold)
+
+        if score < threshold:
+            off_topic = True
+
+    elif comparison == ">":
+
+        if score > threshold:
+            off_topic = True
+
+    return off_topic
 
 parser = argparse.ArgumentParser(description='Detecting off-topic webpages.')
-
 
 parser.add_argument('-d', dest='dir', 
                    help='The directory that is used for the downloaded/processed data')
@@ -116,17 +163,68 @@ if download_mementos:
 
 os.system('./extract_text_from_html ' + collectionmap_file_name + ' ' + collection_directory)
 
-off_topic_scores = {}
+off_topic_measures = {}
 
 if mode == "cosim" :
     # TODO: change output_file to a cosine_scores_file
-    off_topic_scores["cosine"] = off_topic_detector_cos_sim.get_off_topic_memento(collectionmap_file_name, 
-        output_file, collection_directory, threshold)
+    off_topic_measures["cosine"] = {}
+    off_topic_measures["cosine"]["score_file"] = collection_directory + "/cosine_scores.txt"
+    off_topic_measures["cosine"]["default_threshold"] = 0.15
+
+    # a cosine value of 1 means that 2 documents are equivalent
+    off_topic_measures["cosine"]["threshold_comparison"] = "<" 
+   
+    with open(off_topic_measures["cosine"]["score_file"], 'w') as score_file:
+        off_topic_detector_cos_sim.get_off_topic_memento(
+            collectionmap_file_name, score_file, collection_directory)
+
 elif mode ==  "wcount":
-    off_topic_scores["word count"] = off_topic_detector_count_words.get_off_topic_memento(collectionmap_file_name, 
-        output_file, collection_directory, threshold)
+    off_topic_measures["wcount"] = {}
+    off_topic_measures["wcount"]["score_file"] = collection_directory + "/wordcount_scores.txt"
+    off_topic_measures["wcount"]["default_threshold"] = -0.85
+
+    # a word count difference of 0 means that 2 documents are equivalent,
+    # but the threshold is less than 0
+    off_topic_measures["cosine"]["threshold_comparison"] = "<" 
+
+    with open(off_topic_measures["wcount"]["score_file"], 'w') as score_file:
+        off_topic_detector_count_words.get_off_topic_memento(
+            collectionmap_file_name, score_file, collection_directory)
+
 elif mode == 'jaccard':
-    off_topic_scores["jaccard"] = off_topic_detector_jaccard.get_off_topic_memento(collectionmap_file_name,
-        output_file, collection_directory, threshold)
+    off_topic_measures["jaccard"] = {}
+    off_topic_measures["jaccard"]["score_file"] = collection_directory + "/jaccard_scores.txt"
+    off_topic_measures["jaccard"]["default_threshold"] = 0.05
+
+    # a jaccard distance of 0 means that 2 documents are equivalent
+    off_topic_measures["jaccard"]["threshold_comparison"] = ">" 
+    
+    with open(off_topic_measures["jaccard"]["score_file"], 'w') as score_file:
+        off_topic_detector_jaccard.get_off_topic_memento(
+            collectionmap_file_name, score_file, collection_directory)
+
 else:
     print "Undefined methods"
+
+scores_filenames = []
+
+for measure in off_topic_measures:
+    scores_filenames.append(off_topic_measures[measure]["score_file"])
+
+scores_dict = create_scores_dict(scores_filenames)
+
+output_file.write("Measure\tSimilarity\tmemento_uri\n")
+
+for measure in off_topic_measures:
+    comparison = off_topic_measures[measure]["threshold_comparison"]
+    threshold = off_topic_measures[measure]["default_threshold"]
+
+    for urir_id in scores_dict:
+        for mdatetime in scores_dict[urir_id]:
+           
+            score = scores_dict[urir_id][mdatetime]["scores"][measure]
+            off_topic = determine_off_topic(score, threshold, comparison)
+
+            if off_topic:
+                memento_uri = scores_dict[urir_id][mdatetime]["uri-m"]
+                output_file.write("{}\t{}\t{}\n".format(measure, score, memento_uri))

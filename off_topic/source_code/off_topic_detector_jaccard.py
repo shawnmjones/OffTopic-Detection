@@ -5,7 +5,7 @@ import os
 sys.path.append("source_code")
 import off_topic_detector_cos_sim as ot
 
-def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, threshold):
+def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file):
 
     vector_text = ot.build_vector_from_file_list(file_list)
 
@@ -25,19 +25,11 @@ def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_fil
 
             collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), jaccard_score))
 
-            # Jaccard distance works differently than cosine similarity
-#            if score > threshold:
-#                memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_name)]
-#                off_topic_jaccard_file.write( str(score) + "\t" + memento_uri + "\n")
-#            else:
-#                new_timemap_file.write(old_uri_id+"\t"+str(computed_file_name)+"\t"+timemap_dict[str(old_uri_id)][str(computed_file_name)])
- 
+def get_off_topic_memento(collectionmap_file_name, collection_scores_file, collection_directory):
 
-def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_directory, threshold):
+    timemap_dict = ot.convert_timemap_to_hash(collectionmap_file_name)
 
-    timemap_dict = ot.convert_timemap_to_hash(timemap_file_name)
-
-    timemap_list_file = open(timemap_file_name)
+    collectionmap_list_file = open(collectionmap_file_name)
 
     print "Determining off-otpic mementos using Jaccard method."
 
@@ -47,7 +39,7 @@ def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_
     old_mem_id = "0"
     file_list = []
 
-    for memento_record in timemap_list_file:
+    for memento_record in collectionmap_list_file:
         fields = memento_record.split("\t")
         uri_id = fields[0]
         dt = fields[1]
@@ -60,11 +52,13 @@ def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_
             continue
 
         if old_uri_id != uri_id and len(file_list) > 0:
-            compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, threshold)
+            compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file)
             file_list = []
 
         file_list.append(text_file)
         old_uri_id = uri_id
 
     if len(file_list) > 0:
-        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, threshold)
+        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file)
+
+    collectionmap_list_file.close()

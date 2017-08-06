@@ -20,7 +20,7 @@ def count_word(text_file_path):
     words = re.split(ur"[\s,]+",re.sub(ur"\p{P}+", "",document),flags=re.UNICODE)
     return len(words)
 
-def compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file, threshold):
+def compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file):
 
     if len(count_list) == 0 or max(count_list)==0:
         return
@@ -53,11 +53,11 @@ def convert_timemap_to_hash(timemap_file_name):
     return timemap_dict
     
 
-def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_directory, threshold):
+def get_off_topic_memento(collectionmap_file_name, collection_scores_file, collection_directory):
 
-  timemap_dict = convert_timemap_to_hash(timemap_file_name)
+  timemap_dict = convert_timemap_to_hash(collectionmap_file_name)
 
-  timemap_list_file = open(timemap_file_name)
+  collectionmap_list_file = open(collectionmap_file_name)
   print "Detecting off-topic mementos using Word Count method."
 
   collection_scores_file.write("URIR_ID\tmemento_datetime\tmemento_uri\tcosine_score\n")
@@ -67,7 +67,7 @@ def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_
   old_uri_id = "0"
   old_mem_id = 0
 
-  for memento_record in timemap_list_file:
+  for memento_record in collectionmap_list_file:
     fields = memento_record.split("\t")
     uri_id = fields[0]
     dt = fields[1]
@@ -75,7 +75,7 @@ def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_
     uri = fields[3]
     
     if old_uri_id != uri_id and old_uri_id > -1:
-          compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file, threshold)
+          compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
           
           count_list = []
           file_list = []
@@ -88,5 +88,6 @@ def get_off_topic_memento(timemap_file_name, collection_scores_file, collection_
       
     old_uri_id = uri_id      
 
-  compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file, threshold)
+  compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
   
+  collectionmap_list_file.close()

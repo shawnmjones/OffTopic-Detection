@@ -71,7 +71,7 @@ def convert_timemap_to_hash(timemap_file_name):
     timemap_list_file.close()
     return timemap_dict
     
-def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf, threshold):
+def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf):
 
     vector_text = build_vector_from_file_list(file_list)
 
@@ -99,7 +99,7 @@ def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_fil
                     mdatetime = str(computed_file_list[idx])
                     collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), cosine_score))
  
-def get_off_topic_memento(collectionmap_file_name, collection_scores_file, collection_directory,threshold):
+def get_off_topic_memento(collectionmap_file_name, collection_scores_file, collection_directory):
          
     timemap_dict = convert_timemap_to_hash(collectionmap_file_name)
     
@@ -125,11 +125,13 @@ def get_off_topic_memento(collectionmap_file_name, collection_scores_file, colle
               continue
           
           if old_uri_id != uri_id and len(file_list)>0:
-              compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf, threshold)
+              compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf)
               file_list=[]
           file_list.append(text_file)
           old_uri_id=uri_id
 
             
     if len(file_list)>0:
-        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf, threshold)
+        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file, tfidf)
+
+    collectionmap_list_file.close()
