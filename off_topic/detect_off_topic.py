@@ -165,46 +165,53 @@ os.system('./extract_text_from_html ' + collectionmap_file_name + ' ' + collecti
 
 off_topic_measures = {}
 
-if mode == "cosim" :
-    # TODO: change output_file to a cosine_scores_file
-    off_topic_measures["cosine"] = {}
-    off_topic_measures["cosine"]["score_file"] = collection_directory + "/cosine_scores.txt"
-    off_topic_measures["cosine"]["default_threshold"] = 0.15
+if ',' in mode:
+    measures = mode.split(',')
 
-    # a cosine value of 1 means that 2 documents are equivalent
-    off_topic_measures["cosine"]["threshold_comparison"] = "<" 
-   
-    with open(off_topic_measures["cosine"]["score_file"], 'w') as score_file:
-        off_topic_detector_cos_sim.get_off_topic_memento(
-            collectionmap_file_name, score_file, collection_directory)
-
-elif mode ==  "wcount":
-    off_topic_measures["wcount"] = {}
-    off_topic_measures["wcount"]["score_file"] = collection_directory + "/wordcount_scores.txt"
-    off_topic_measures["wcount"]["default_threshold"] = -0.85
-
-    # a word count difference of 0 means that 2 documents are equivalent,
-    # but the threshold is less than 0
-    off_topic_measures["cosine"]["threshold_comparison"] = "<" 
-
-    with open(off_topic_measures["wcount"]["score_file"], 'w') as score_file:
-        off_topic_detector_count_words.get_off_topic_memento(
-            collectionmap_file_name, score_file, collection_directory)
-
-elif mode == 'jaccard':
-    off_topic_measures["jaccard"] = {}
-    off_topic_measures["jaccard"]["score_file"] = collection_directory + "/jaccard_scores.txt"
-    off_topic_measures["jaccard"]["default_threshold"] = 0.05
-
-    # a jaccard distance of 0 means that 2 documents are equivalent
-    off_topic_measures["jaccard"]["threshold_comparison"] = ">" 
+for measure in measures:
+    if measure == "cosim" :
+        # TODO: change output_file to a cosine_scores_file
+        off_topic_measures["cosine"] = {}
+        off_topic_measures["cosine"]["score_file"] = collection_directory + "/cosine_scores.txt"
+        off_topic_measures["cosine"]["default_threshold"] = 0.15
     
-    with open(off_topic_measures["jaccard"]["score_file"], 'w') as score_file:
-        off_topic_detector_jaccard.get_off_topic_memento(
-            collectionmap_file_name, score_file, collection_directory)
-
-else:
-    print "Undefined methods"
+        # a cosine value of 1 means that 2 documents are equivalent
+        off_topic_measures["cosine"]["threshold_comparison"] = "<" 
+       
+        with open(off_topic_measures["cosine"]["score_file"], 'w') as score_file:
+            off_topic_detector_cos_sim.get_off_topic_memento(
+                collectionmap_file_name, score_file, collection_directory)
+    
+    elif measure ==  "wcount":
+        off_topic_measures["wcount"] = {}
+        off_topic_measures["wcount"]["score_file"] = collection_directory + "/wordcount_scores.txt"
+        off_topic_measures["wcount"]["default_threshold"] = -0.85
+    
+        # a word count difference of 0 means that 2 documents are equivalent,
+        # but the threshold is less than 0
+        off_topic_measures["cosine"]["threshold_comparison"] = "<" 
+    
+        with open(off_topic_measures["wcount"]["score_file"], 'w') as score_file:
+            off_topic_detector_count_words.get_off_topic_memento(
+                collectionmap_file_name, score_file, collection_directory)
+    
+    elif measure == 'jaccard':
+        off_topic_measures["jaccard"] = {}
+        off_topic_measures["jaccard"]["score_file"] = collection_directory + "/jaccard_scores.txt"
+        off_topic_measures["jaccard"]["default_threshold"] = 0.05
+    
+        # a jaccard distance of 0 means that 2 documents are equivalent
+        off_topic_measures["jaccard"]["threshold_comparison"] = ">" 
+        
+        with open(off_topic_measures["jaccard"]["score_file"], 'w') as score_file:
+            off_topic_detector_jaccard.get_off_topic_memento(
+                collectionmap_file_name, score_file, collection_directory)
+    
+    else:
+        print "Skipping undefined measure {}"
+        print "Supported measures: "
+        print "cosine similarity (cosim), word count (wcount), Jaccard Distance (jaccard)"
+        print
 
 scores_filenames = []
 
