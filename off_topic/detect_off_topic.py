@@ -13,6 +13,7 @@ import off_topic_detector_cos_sim
 import off_topic_detector_count_words
 import off_topic_detector_jaccard
 import urlparse
+import pprint
 
 def ensure_dir(f):
     d = os.path.dirname(f)
@@ -54,10 +55,6 @@ def determine_off_topic(score, threshold, comparison):
 
     if comparison == "<":
 
-#        print "score {} is < threshold {} = {}".format(score, threshold, score < threshold)
-#        print "score {}({}) is < threshold {}({}) = {}".format(
-#            score, type(score), threshold, type(threshold), score < threshold)
-
         if score < threshold:
             off_topic = True
 
@@ -68,13 +65,19 @@ def determine_off_topic(score, threshold, comparison):
 
     return off_topic
 
-parser = argparse.ArgumentParser(description='Detecting off-topic webpages.')
+# thanks to https://www.tuxevara.de/2015/01/pythons-argparse-and-lists/
+def arg_list(input_string):
+    print "calling arg_list"
+    print "returning {}".format(input_string.split(','))
+    return input_string.split(',')
+
+parser = argparse.ArgumentParser(prog="python {}".format(sys.argv[0]), description='Detecting off-topic webpages.')
 
 parser.add_argument('-d', dest='dir', 
                    help='The directory that is used for the downloaded/processed data')
                    
-parser.add_argument('-th', dest='threshold', 
-                   help='The threshold to compute the off-topic pages between 0 to 1. The default threshold is 0.15')
+#parser.add_argument('-th', dest='threshold', 
+#                   help='The threshold to compute the off-topic pages between 0 to 1. The default threshold is 0.15')
                 
 parser.add_argument('-o', dest='file', 
                    help='The file path to write the output')
@@ -88,21 +91,25 @@ parser.add_argument('-i', dest='id',
 parser.add_argument('-r', dest='uri', 
                    help='The collection uri as appeared on archive-it')
 
-parser.add_argument('-m', dest='mode', default="cosim",
+parser.add_argument('-m', dest='mode', default="cosim,wcount",
                    help='The similarity measure: cosim or wcount. The default is cosim.')
 
 parser.add_argument('-c', dest='input_dir',
                     help='The already downloaded collection directory to use for data input.')
-                   
+
+print "attempting to parse args..."
+
 args = parser.parse_args()
+
+print "args: {}".format(args)
 
 data_directory = 'tmp'
 if args.dir != None:
    data_directory =  args.dir
    
-threshold = 0.15
-if args.threshold != None:
-   threshold =  float(args.threshold)
+#threshold = 0.15
+#if args.threshold != None:
+#   threshold =  float(args.threshold)
 
 output_file = sys.stdout
 if args.file != None:
@@ -111,9 +118,9 @@ if args.file != None:
 if args.mode != None:
     mode = args.mode 
     
-    if mode != "cosim" and mode != "wcount" and mode != "jaccard":
-         parser.print_help()
-         sys.exit(1)
+#    if mode != "cosim" and mode != "wcount" and mode != "jaccard":
+#         parser.print_help()
+#         sys.exit(1)
          
 base_timemap_link_uri = "http://wayback.archive-it.org/"
 download_mementos = True
@@ -123,7 +130,7 @@ if args.id !=None:
     collection_directory = data_directory+"/collection_"+str(collection_id)
     seed_extractor.seed_extractor_from_id(collection_id,collection_directory)
     seed_list_file = collection_directory+"/seed_list.txt"
-    collectionmap_file_name = collection_directory+"/timemap.txt"
+    collectionmap_file_name = collection_directory+"/collectionmap.txt"
     timemap_downloader.download(seed_list_file, base_timemap_link_uri+ str(collection_id)+"/timemap/link", collection_directory)
     
 elif args.uri !=None:
@@ -136,7 +143,7 @@ elif args.uri !=None:
         
     collection_directory = data_directory+"/collection_"+str(collection_id)
     seed_list_file = collection_directory+"/seed_list.txt"
-    collectionmap_file_name = collection_directory+"/timemap.txt"
+    collectionmap_file_name = collection_directory+"/collectionmap.txt"
     
     seed_extractor.seed_extractor_from_uri(collection_uri,collection_directory)
     timemap_downloader.download(seed_list_file, base_timemap_link_uri+str(collection_id)+"/timemap/link", collection_directory)
@@ -145,7 +152,7 @@ elif args.timemap_uri !=None:
     memento_list = timemap_downloader.get_mementos_from_timemap(args.timemap_uri)
     collection_id = str(random.randrange(1000000))
     collection_directory = data_directory+"/collection_"+collection_id
-    collectionmap_file_name =collection_directory+"/timemap.txt"
+    collectionmap_file_name =collection_directory+"/collectionmap.txt"
     ensure_dir(collectionmap_file_name)
     collectionmap_file =  open(collectionmap_file_name,'w')
     timemap_downloader.write_timemap_to_file(1, memento_list, collectionmap_file) 
@@ -153,7 +160,7 @@ elif args.input_dir !=None:
     #collection_directory = data_directory+"/collection_"+str(collection_id)
     collection_directory = args.input_dir
     seed_list_file = collection_directory+"/seed_list.txt"
-    collectionmap_file_name = collection_directory+"/timemap.txt"
+    collectionmap_file_name = collection_directory+"/collectionmap.txt"
     download_mementos = False
 else:
     parser.print_help() 
@@ -167,6 +174,9 @@ off_topic_measures = {}
 
 if ',' in mode:
     measures = mode.split(',')
+else:
+    measures = [ mode ]
+
 
 for measure in measures:
     if measure == "cosim" :
@@ -189,7 +199,7 @@ for measure in measures:
     
         # a word count difference of 0 means that 2 documents are equivalent,
         # but the threshold is less than 0
-        off_topic_measures["cosine"]["threshold_comparison"] = "<" 
+        off_topic_measures["wcount"]["threshold_comparison"] = "<" 
     
         with open(off_topic_measures["wcount"]["score_file"], 'w') as score_file:
             off_topic_detector_count_words.get_off_topic_memento(
@@ -220,6 +230,12 @@ for measure in off_topic_measures:
 
 scores_dict = create_scores_dict(scores_filenames)
 
+pp = pprint.PrettyPrinter(indent=4)
+print
+pp.pprint(off_topic_measures)
+print
+pp.pprint(scores_dict)
+
 output_file.write("Measure\tSimilarity\tmemento_uri\n")
 
 for measure in off_topic_measures:
@@ -229,9 +245,15 @@ for measure in off_topic_measures:
     for urir_id in scores_dict:
         for mdatetime in scores_dict[urir_id]:
            
-            score = scores_dict[urir_id][mdatetime]["scores"][measure]
-            off_topic = determine_off_topic(score, threshold, comparison)
+            try:
+                score = scores_dict[urir_id][mdatetime]["scores"][measure]
+                off_topic = determine_off_topic(score, threshold, comparison)
 
-            if off_topic:
-                memento_uri = scores_dict[urir_id][mdatetime]["uri-m"]
-                output_file.write("{}\t{}\t{}\n".format(measure, score, memento_uri))
+                if off_topic:
+                    memento_uri = scores_dict[urir_id][mdatetime]["uri-m"]
+                    output_file.write("{}\t{}\t{}\n".format(measure, score, memento_uri))
+            except KeyError as e:
+                for measure in off_topic_measures:
+                    if measure in e.message:
+                        print "No {} measure for URIR_ID {} at datetime {}".format(measure, urir_id, mdatetime)
+                        break

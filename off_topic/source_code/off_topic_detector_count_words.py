@@ -60,7 +60,7 @@ def get_off_topic_memento(collectionmap_file_name, collection_scores_file, colle
   collectionmap_list_file = open(collectionmap_file_name)
   print "Detecting off-topic mementos using Word Count method."
 
-  collection_scores_file.write("URIR_ID\tmemento_datetime\tmemento_uri\tcosine_score\n")
+  collection_scores_file.write("URIR_ID\tmemento_datetime\tmemento_uri\twcount_score\n")
 
   count_list = []
   file_list = []
@@ -74,20 +74,33 @@ def get_off_topic_memento(collectionmap_file_name, collection_scores_file, colle
     mem_id = fields[2]
     uri = fields[3]
     
-    if old_uri_id != uri_id and old_uri_id > -1:
-          compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
-          
-          count_list = []
-          file_list = []
+#    if old_uri_id != uri_id and old_uri_id > -1:
+#          compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
+#          
+#          count_list = []
+#          file_list = []
       
-    text_file_path = collection_directory+"/text/"+uri_id+"/"+dt+".txt"
-    if os.path.exists(text_file_path):
-        file_list.append(dt)
-        word_count = count_word(text_file_path)
-        count_list.append(word_count)
-      
-    old_uri_id = uri_id      
+    text_file = collection_directory+"/text/"+uri_id+"/"+dt+".txt"
 
-  compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
+    # TODO: deal with the fact that somehow Yasmin spotted text files missing?
+    if not os.path.isfile(text_file):
+        continue
+
+    if old_uri_id != uri_id and len(file_list) > 0:
+        compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
+        file_list = [] 
+
+    file_list.append(text_file)
+    old_uri_id = uri_id
+
+#    if os.path.exists(text_file_path):
+#        file_list.append(dt)
+#        word_count = count_word(text_file_path)
+#        count_list.append(word_count)
+      
+#    old_uri_id = uri_id      
+
+    if len(file_list) > 0:
+        compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
   
   collectionmap_list_file.close()
