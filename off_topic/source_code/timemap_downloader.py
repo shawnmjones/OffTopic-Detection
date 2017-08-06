@@ -12,15 +12,14 @@ orginalExpression = re.compile( r"<http://[A-Za-z0-9.:=/%-_ ]*>; [\s]*rel=\"orig
 mementoExpression = re.compile( r"(<//[A-Za-z0-9.:=/&,%-_ \?]*>;\s?rel=\"(memento|first memento|last memento|first memento last memento|first last memento)\";\s?datetime=\"(Sat|Sun|Mon|Tue|Wed|Thu|Fri), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (19|20)\d\d \d\d:\d\d:\d\d GMT\")" )
 zeroMementoExpression = re.compile(r"Resource: http://[A-Za-z0-9.:=/&,%-_ ]*")
 
-def download(seed_list_file_name, base_timemap_link_uri , collection_directory, start_dt="19900101121200", end_dt="20200101000000"):
-    timemap_file_path = collection_directory+"/timemap.txt"
-    if  os.path.exists(timemap_file_path):
-        print "Using cached tmiemap file at " + timemap_file_path
-        return
-    timemap_file=open(timemap_file_path,"w")
+def download(collectionmap_file_name, seed_list_file_name, base_timemap_link_uri , collection_directory, start_dt="19900101121200", end_dt="20200101000000"):
+    #timemap_file_path = collection_directory+"/timemap.txt"
+    #if  os.path.exists(timemap_file_path):
+    #    print "Using cached tmiemap file at " + timemap_file_path
+    #    return
+    collectionmap_file=open(collectionmap_file_name,"w")
     seed_list_file = open(seed_list_file_name)
-
-    
+ 
     for line in seed_list_file:
         seed_record = line.split("\t")
         id = seed_record[0]
@@ -31,14 +30,14 @@ def download(seed_list_file_name, base_timemap_link_uri , collection_directory, 
 
         memento_list = get_mementos_from_timemap(base_timemap_link_uri+"/"+uri, start_dt, end_dt)
         
-        write_timemap_to_file(id,memento_list,timemap_file)   
-    timemap_file.close()
+        write_timemap_to_file(id, memento_list, collectionmap_file)   
+    collectionmap_file.close()
     
-def write_timemap_to_file(id, memento_list,timemap_file) :       
+def write_timemap_to_file(id, memento_list,collectionmap_file) :       
         count = 1
         for memento in memento_list:
-            timemap_file.write( str(id)+"\t"+memento[0]+"\t"+str(count)+"\t"+memento[1]+"\n")
-            timemap_file.flush()
+            collectionmap_file.write( str(id)+"\t"+memento[0]+"\t"+str(count)+"\t"+memento[1]+"\n")
+            collectionmap_file.flush()
             count = count + 1
     
 def get_mementos_from_timemap(base_timemap_link, start_dt="19900101121200", end_dt="20200101000000"):

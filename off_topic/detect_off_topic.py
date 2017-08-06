@@ -131,7 +131,7 @@ if args.id !=None:
     seed_extractor.seed_extractor_from_id(collection_id,collection_directory)
     seed_list_file = collection_directory+"/seed_list.txt"
     collectionmap_file_name = collection_directory+"/collectionmap.txt"
-    timemap_downloader.download(seed_list_file, base_timemap_link_uri+ str(collection_id)+"/timemap/link", collection_directory)
+    timemap_downloader.download(collectionmap_file_name, seed_list_file, base_timemap_link_uri+ str(collection_id)+"/timemap/link", collection_directory)
     
 elif args.uri !=None:
     # extract from uri
@@ -146,7 +146,7 @@ elif args.uri !=None:
     collectionmap_file_name = collection_directory+"/collectionmap.txt"
     
     seed_extractor.seed_extractor_from_uri(collection_uri,collection_directory)
-    timemap_downloader.download(seed_list_file, base_timemap_link_uri+str(collection_id)+"/timemap/link", collection_directory)
+    timemap_downloader.download(collectionmap_file_name, seed_list_file, base_timemap_link_uri+str(collection_id)+"/timemap/link", collection_directory)
 elif args.timemap_uri !=None:
     # extract directly from timemap
     memento_list = timemap_downloader.get_mementos_from_timemap(args.timemap_uri)
@@ -156,6 +156,7 @@ elif args.timemap_uri !=None:
     ensure_dir(collectionmap_file_name)
     collectionmap_file =  open(collectionmap_file_name,'w')
     timemap_downloader.write_timemap_to_file(1, memento_list, collectionmap_file) 
+    collectionmap_file.close()
 elif args.input_dir !=None:
     #collection_directory = data_directory+"/collection_"+str(collection_id)
     collection_directory = args.input_dir

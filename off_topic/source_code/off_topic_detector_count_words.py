@@ -3,6 +3,7 @@ import os
 import re
 import sys
 import platform
+import ntpath
 
 def translate_non_alphanumerics(to_translate, translate_to=u' '):
     not_letters_or_digits = u'!"#%\'()*+,-./:;<=>?@[\]^_`{|}~1234567890$&\u201C\u2018\u2019\u2014\u201D\u00AB.\u20AC\u25A0\uFD3E\uFD3F\u2022\u2013\u060C\u061F\u00BB\u0640\u2026\u202B\u2022\u202B\u200F\u200F\u200E\u200E\u200E\u200E'
@@ -20,23 +21,34 @@ def count_word(text_file_path):
     words = re.split(ur"[\s,]+",re.sub(ur"\p{P}+", "",document),flags=re.UNICODE)
     return len(words)
 
-def compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file):
+def compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file):
 
-    if len(count_list) == 0 or max(count_list)==0:
-        return
-
-    if count_list[0]==0:
-        print old_uri_id
-        return
+    if len(file_list) > 1:
+        count_list = []
     
-    percentage_list = [(count_list[i] - count_list[0]+0.0) / count_list[0] for i in range(len(count_list))]
-
-    for  idx, p in enumerate(percentage_list):
-
-        memento_uri = timemap_dict[str(old_uri_id)][str(file_list[idx])]
-        wcount_score = p
-        mdatetime = str(file_list[idx])
-        collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), wcount_score))
+        for filename in file_list:
+            count_list.append(count_word(filename))
+    
+        if len(count_list) == 0 or max(count_list)==0:
+            return
+    
+        if count_list[0]==0:
+            print old_uri_id
+            return
+        
+        percentage_list = [(count_list[i] - count_list[0]+0.0) / count_list[0] for i in range(len(count_list))]
+    
+        computed_file_list = []
+    
+        for  idx, p in enumerate(percentage_list):
+    
+            file_name = file_list[idx]
+            computed_file_list.append( ntpath.basename(file_name.replace('.txt','')))
+    
+            memento_uri = timemap_dict[str(old_uri_id)][str(computed_file_list[idx])]
+            wcount_score = p
+            mdatetime = str(computed_file_list[idx])
+            collection_scores_file.write("{}\t{}\t{}\t{}\n".format(old_uri_id, mdatetime, memento_uri.strip(), wcount_score))
 
 def convert_timemap_to_hash(timemap_file_name):
     timemap_list_file = open(timemap_file_name)
@@ -87,7 +99,7 @@ def get_off_topic_memento(collectionmap_file_name, collection_scores_file, colle
         continue
 
     if old_uri_id != uri_id and len(file_list) > 0:
-        compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
+        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file)
         file_list = [] 
 
     file_list.append(text_file)
@@ -101,6 +113,6 @@ def get_off_topic_memento(collectionmap_file_name, collection_scores_file, colle
 #    old_uri_id = uri_id      
 
     if len(file_list) > 0:
-        compute_off_topic(old_uri_id, file_list, timemap_dict, count_list, collection_scores_file)
+        compute_off_topic(old_uri_id, file_list, timemap_dict, collection_scores_file)
   
   collectionmap_list_file.close()
