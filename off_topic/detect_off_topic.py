@@ -2,21 +2,7 @@ import sys
 import logging
 import argparse
 from input_types import supported_input_types, get_input_type
-
-supported_measures = {
-    'cosine': {
-        'name': 'Cosine Similarity',
-        'default_threshold': 0.15
-    },
-    'jaccard': {
-        'name': 'Jaccard Distance',
-        'default_threshold': 0.10
-    },
-    'wcount': {
-        'name': 'Word Count',
-        'default_threshold': -0.10
-    }
-}
+from topic_models import supported_measures
 
 def process_similarity_measure_inputs(input_argument):
     
@@ -56,12 +42,10 @@ def process_input_types(input_argument):
         raise argparse.ArgumentTypeError(
             "no required argument supplied for input type {}\n\n"
             "Examples:\n"
-            "for a list of URIs, use something like (no spaces between commas)\n"
-            "-i uris=http://example.com,http://example2.com\n\n"
             "for an Archive-It collection use something like\n"
             "-i archiveit=3639\n\n"
-            "for a WARC use\n"
-            "-i warc=myfile.warc.gz\n\n"
+            "for WARCs use (separate with commas, but no spaces)\n"
+            "-i warc=myfile.warc.gz,myfile2.warc.gz\n\n"
             "for a TimeMap use\n"
             "-i timemap=http://archive.example.org/timemap/http://example.com"
             .format(input_argument)
@@ -92,19 +76,17 @@ def process_arguments(args):
     parser.add_argument('-i', '--input', dest='input_type',
         required=True, type=process_input_types,
         help="input data to use with one of the following:\n"
-        "* warc=[warc-filename]\n"
+        "* warc=[warc-filenames separated by commas with no spaces]\n"
         "* archiveit=[collection identifier or collection URI]\n"
         "* timemap=[URI of TimeMap]\n"
-        "* uris=[list of URIs separated by commas with no spaces]\n"
         "* dir=[existing input directory from prior run]"
         )
 
     parser.add_argument('-o', '--output', dest='output_filename', 
-        type=str, required=True,
-        help="file name in which to store the scores")
+        required=True, help="file name in which to store the scores")
 
     parser.add_argument('-d', '--directory', dest='working_directory',
-        default='/tmp/working', type=str,
+        default='/tmp/working',
         help='The working directory holding the data being downloaded'
         ' and processed.')
 
@@ -124,7 +106,7 @@ def process_arguments(args):
         )
 
     parser.add_argument('-l', '--logfile', dest='logfile',
-        default=sys.stdout, type=str,
+        default=sys.stdout,
         help="path to logging file")
 
     parser.add_argument('-v', '--verbose', dest='verbose',
@@ -143,7 +125,6 @@ def get_logger(appname, loglevel, logfile):
     else:
         ch = logging.FileHandler(logfile)
 
-
     ch.setLevel(loglevel)
 
     formatter = logging.Formatter(
@@ -156,8 +137,6 @@ def get_logger(appname, loglevel, logfile):
 
 def calculate_loglevel(verbose):
   
-    print("verbose: {}".format(verbose))
-
     if verbose:
         return logging.DEBUG
     else:
@@ -178,8 +157,11 @@ if __name__ == '__main__':
     # TODO: submit input_type to a factory method and get back an object that
     # handles that input type
     input_data = get_input_type(args.input_type[0], args.input_type[1],
-        logger)
-    input_filelist = input_data.get_filelist()
+        args.working_directory, logger)
+    input_filedata = input_data.get_filedata()
+    logger.info('input filedata now contains {} entries'.format(
+        len(input_filedata)))
+    logger.info('using input_filelist: {}'.format(input_filedata))
 
     # TODO: submit directory output from input_type to a topic processor
 

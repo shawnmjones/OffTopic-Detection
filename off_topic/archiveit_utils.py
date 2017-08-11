@@ -1,7 +1,27 @@
 import requests
 import os
+
+import memento_fetch
 from memento_fetch import download_TimeMaps_and_mementos
 from bs4 import BeautifulSoup
+
+
+def generate_logger():
+    import logging
+
+    logger = logging.getLogger(__name__)
+    logger.propagate = False
+
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.WARNING)
+    formatter = logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(message)s')
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+
+    return logger
+
+logger = generate_logger()
 
 def retrieve_archiveit_accountid(collection_id):
 
@@ -38,13 +58,16 @@ def retrieve_archiveit_seeds(collection_id):
     r = requests.get(seed_resource_uri)
 
     for line in r.content.splitlines():
+        line = line.decode('utf-8')
         if line != "Seed URL":
             seeds.append(line.strip())
 
     return seeds
 
 def download_archiveit_collection(collection_id, output_directory, depth):
-  
+
+    memento_fetch.logger = logger
+
     base_timemap_link_uri = "http://wayback.archive-it.org/{}/timemap/link".format(collection_id)
 
     collection_directory = "{}/collection/{}".format(output_directory, collection_id)
@@ -63,25 +86,16 @@ def download_archiveit_collection(collection_id, output_directory, depth):
 
     timemap_uris = []
 
+    logger.info("discovered {} seeds".format(len(seeds)))
+
     for seed in seeds:
         timemap_uri = "{}/{}".format(base_timemap_link_uri, seed)
+        
+        logger.debug("building URI-T for seed {}: {}".format(seed, timemap_uri))
+        
         timemap_uris.append(timemap_uri)
         metadata_file.write("{}\t{}\n".format(seed, timemap_uri))    
 
-    download_TimeMaps_and_mementos(timemap_uris, output_directory, depth) 
+    download_TimeMaps_and_mementos(timemap_uris, collection_directory, depth) 
 
     metadata_file.close()
-
-#def build_collection_dict(collection_directory):
-#
-#    metadata = {}
-#
-#    timemap_dir = "{}/../../timemaps"
-#    memento_dir = "{}/../../mementos"
-#
-#    metadata_filename = "{}/metadata.tsv".format(collection_directory)
-#    metadata_file = open(metadata_filename)
-#
-#    
-#
-#    metadata_file.close()
