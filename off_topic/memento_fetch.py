@@ -63,12 +63,12 @@ def download_uri_list(uri_list, output_directory):
         downloaded_uri_list = []
 
         for uri in uri_list:
-            logger.info("starting download for uri {}".format(uri))
+            logger.debug("starting download for uri {}".format(uri))
             if uri not in existing_metadata:
                 futures[uri] = session.get(uri)
                 downloaded_uri_list.append(uri)
             else:
-                logger.info("skipping download of uri {}".format(uri))
+                logger.debug("skipping download of uri {}".format(uri))
   
         working_uri_list = list(downloaded_uri_list)
 
@@ -223,8 +223,12 @@ def parse_downloads_into_structure(top_directory):
         
             if tm_metadata[timemap]['status'] == '200':
                 tm_filename = tm_metadata[timemap]['content_filename']
-    
+  
+                logger.info("TimeMap filename: {}".format(tm_filename))
+
                 tm_memdata = parse_TimeMap_into_dict(tm_filename)
+
+                #logger.info("tm_metadata: {}".format(tm_metadata))
     
                 original = tm_memdata["original"]
         
@@ -274,6 +278,10 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
 
             timemap_filename = metadata[urit]["content_filename"]
             tmdict = parse_TimeMap_into_dict(timemap_filename)
+
+            logger.info("URI-T: {}".format(urit))
+            logger.info("TimeMap Filename: {}".format(timemap_filename))
+            logger.debug("tmdict: {}".format(tmdict))
 
             try:
 
