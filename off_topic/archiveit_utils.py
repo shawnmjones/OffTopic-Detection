@@ -89,7 +89,7 @@ def download_archiveit_collection(collection_id, output_directory, depth):
     logger.info("discovered {} seeds".format(len(seeds)))
 
     for seed in seeds:
-        logger.info("working on seed [{}]".format(seed))
+        logger.debug("working on seed [{}]".format(seed))
         timemap_uri = "{}/{}".format(base_timemap_link_uri, seed)
         
         logger.debug("building URI-T for seed {}: {}".format(seed, timemap_uri))

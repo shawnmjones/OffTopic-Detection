@@ -2,7 +2,10 @@ import sys
 import logging
 import argparse
 from input_types import supported_input_types, get_input_type
-from topic_models import supported_measures
+from topic_processor import supported_measures, get_topic_processor
+
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 def process_similarity_measure_inputs(input_argument):
     
@@ -46,7 +49,7 @@ def process_input_types(input_argument):
             "-i archiveit=3639\n\n"
             "for WARCs use (separate with commas, but no spaces)\n"
             "-i warc=myfile.warc.gz,myfile2.warc.gz\n\n"
-            "for a TimeMap use\n"
+            "for a TimeMap use (separate with commas, but not spaces)\n"
             "-i timemap=http://archive.example.org/timemap/http://example.com"
             .format(input_argument)
             )
@@ -152,19 +155,36 @@ if __name__ == '__main__':
         args.logfile)
 
     logger.info('Starting run')
-    logger.debug('args: {}'.format(args))
+    logger.info('args: {}'.format(args))
 
-    # TODO: submit input_type to a factory method and get back an object that
-    # handles that input type
     input_data = get_input_type(args.input_type[0], args.input_type[1],
         args.working_directory, logger)
     input_filedata = input_data.get_filedata()
     logger.info('input filedata now contains {} entries'.format(
         len(input_filedata)))
-    logger.info('using input_filelist: {}'.format(input_filedata))
+    logger.debug('using input_filelist: {}'.format(input_filedata))
 
+    scores = None
     # TODO: submit directory output from input_type to a topic processor
+    for measure in args.measures:
+        topic_processor = get_topic_processor(measure, 
+            args.measures[measure], args.working_directory, logger)
+        scores = topic_processor.get_scores(input_filedata, scores)
 
     # TODO: write output to a file
+
+    with open(args.output_filename, 'w') as f:
+
+        for urit in scores:
+
+            for memento in scores[urit]['mementos']:
+
+                if memento['measures']['on_topic'] == False:
+                    urim = memento['uri-m']
+                    off_topic_measure = memento['measures']['off_topic_measure']
+                    score = memento['measures'][off_topic_measure]
+
+                    f.write("{}\t{}\t{}\n".format(
+                        score, off_topic_measure, urim))
 
     logger.info('Finishing run')

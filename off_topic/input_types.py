@@ -266,13 +266,13 @@ class TimeMapInput(InputType):
 
     def get_filedata(self):
 
-        urit = self.input_arguments[0]
+        urits = self.input_arguments
         filelist = []
 
-        self.logger.debug("attempting to download files for URI-T: {}".format(
-            urit))
+        self.logger.debug("attempting to download files for URI-T: {}"
+            .format(urits))
 
-        download_TimeMaps_and_mementos([urit], self.output_directory, 1)
+        download_TimeMaps_and_mementos(urits, self.output_directory, 1)
 
         timemap_data = parse_downloads_into_structure(self.output_directory)
 
@@ -311,7 +311,7 @@ supported_input_types = {
 
 def get_input_type(input_type, arguments, directory, logger):
 
-    logger.info("using input type matching input type {}".format(input_type))
+    logger.info("using input type {}".format(input_type))
     logger.debug("input type arguments: {}".format(arguments))
     logger.debug("using supported input type {}".format(
         supported_input_types[input_type]))

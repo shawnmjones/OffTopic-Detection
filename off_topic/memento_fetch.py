@@ -1,5 +1,5 @@
 from requests_futures.sessions import FuturesSession
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError, TooManyRedirects
 import hashlib
 import os
 import csv
@@ -117,7 +117,10 @@ def download_uri_list(uri_list, output_directory):
 
                     working_uri_list.remove(uri)
                 except ConnectionError as e:
-                    metadata_writer.writerow([uri, "ERROR", e.message, None, None])
+                    metadata_writer.writerow([uri, "ERROR", e, None, None])
+                    working_uri_list.remove(uri)
+                except TooManyRedirects as e:
+                    metadata_writer.writerow([uri, "ERROR", e, None, None])
                     working_uri_list.remove(uri)
 
     metadata_file.close()
@@ -224,7 +227,7 @@ def parse_downloads_into_structure(top_directory):
             if tm_metadata[timemap]['status'] == '200':
                 tm_filename = tm_metadata[timemap]['content_filename']
   
-                logger.info("TimeMap filename: {}".format(tm_filename))
+                logger.debug("TimeMap filename: {}".format(tm_filename))
 
                 tm_memdata = parse_TimeMap_into_dict(tm_filename)
 
@@ -235,7 +238,7 @@ def parse_downloads_into_structure(top_directory):
                 mementos = []
 
                 for memento in tm_memdata["mementos"]:
-                    logger.info(memento)
+                    logger.debug("memento: {}".format(memento))
                 
                     urim = memento['uri-m']
                     #dt = memento['memento-datetime']
@@ -279,8 +282,8 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
             timemap_filename = metadata[urit]["content_filename"]
             tmdict = parse_TimeMap_into_dict(timemap_filename)
 
-            logger.info("URI-T: {}".format(urit))
-            logger.info("TimeMap Filename: {}".format(timemap_filename))
+            logger.debug("URI-T: {}".format(urit))
+            logger.debug("TimeMap Filename: {}".format(timemap_filename))
             logger.debug("tmdict: {}".format(tmdict))
 
             try:
