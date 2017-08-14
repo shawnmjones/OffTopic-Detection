@@ -1,13 +1,6 @@
-FROM python:2.7.13-stretch
+FROM python:3.6.2-stretch
 # FYI: Stretch is Debian...
 MAINTAINER Shawn M. Jones <jones.shawn.m@gmail.com>
-
-RUN echo What is going on
-RUN uname -a 
-RUN python -V
-
-RUN ls -al /etc/os-release
-RUN cat /etc/os-release
 
 RUN apt-get update -y 
 
