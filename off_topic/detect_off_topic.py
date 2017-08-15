@@ -47,7 +47,7 @@ def process_input_types(input_argument):
             "Examples:\n"
             "for an Archive-It collection use something like\n"
             "-i archiveit=3639\n\n"
-            "for WARCs use (separate with commas, but no spaces)\n"
+            "for [EXPERIMENTAL] WARCs use (separate with commas, but no spaces)\n"
             "-i warc=myfile.warc.gz,myfile2.warc.gz\n\n"
             "for a TimeMap use (separate with commas, but not spaces)\n"
             "-i timemap=http://archive.example.org/timemap/http://example.com"
@@ -79,7 +79,7 @@ def process_arguments(args):
     parser.add_argument('-i', '--input', dest='input_type',
         required=True, type=process_input_types,
         help="input data to use with one of the following:\n"
-        "* warc=[warc-filenames separated by commas with no spaces]\n"
+        "* warc=[warc-filenames separated by commas with no spaces] - EXPERIMENTAL\n"
         "* archiveit=[collection identifier or collection URI]\n"
         "* timemap=[URI of TimeMap]\n"
         "* dir=[existing input directory from prior run]"

@@ -18,8 +18,9 @@ RUN mkdir -p /app
 COPY requirements.txt /app
 WORKDIR /app
 RUN pip install -r /app/requirements.txt --no-cache-dir
-RUN git clone https://github.com/ptwobrussell/python-boilerpipe.git
+RUN git clone https://github.com/misja/python-boilerpipe.git
 WORKDIR /app/python-boilerpipe
+# for some reason this will not work within boilerpipe's setup.py
 RUN wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/boilerpipe/boilerpipe-1.2.0-bin.tar.gz
 RUN python setup.py install
 
