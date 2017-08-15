@@ -6,6 +6,7 @@ from boilerpipe.extract import Extractor
 import distance
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
+import string
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -39,6 +40,8 @@ class TopicProcessor(metaclass=ABCMeta):
 
         # remove stop words
         tokens = [ i for i in stems if i not in self.stopwords ]
+
+        tokens = [ i for i in tokens if i not in string.punctuation ]
 
         return tokens
 
@@ -340,9 +343,67 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
 
 class TFIntersectionAgainstSingleResource(TopicProcessor):
 
-    def get_scores(self, input_filedata, score_data):
-        raise NotImplementedError("TFIntersection Not Implemented Yet!")
+    def score_term_frequencies(self, term_frequencies1, term_frequencies2):
 
+        return len([i for i, j in zip(term_frequencies1, term_frequencies2)
+            if i != j])
+
+    def generate_term_frequencies(self, data):
+
+        tokens = self.tokenize(data) 
+
+        term_frequencies = []
+
+        for token in set(tokens):
+            token_count = tokens.count(token)
+
+            term_frequencies.append( (token_count, token) )
+
+        return sorted(term_frequencies, reverse=True)
+
+    def get_scores(self, input_filedata, score_data):
+
+        # strip all tags out of all remaining content
+        updated_filedata = self.remove_boilerplate(input_filedata)
+
+        for urit in updated_filedata:
+
+            # some TimeMaps have no mementos
+            # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
+            if len(updated_filedata[urit]['mementos']) > 0:
+
+                first_mem = self.find_first_memento(
+                    updated_filedata[urit]['mementos'])
+
+                with open(first_mem['text-only_filename']) as f:
+                    first_tf = self.generate_term_frequencies(f.read())
+
+                for memento in updated_filedata[urit]['mementos']:
+
+                    with open(memento['text-only_filename']) as f:
+                        # tokenize, stemming, remove stop words
+                        current_tf = self.generate_term_frequencies(f.read())
+
+                    tfdist = self.score_term_frequencies(
+                        first_tf, current_tf)
+
+                    memento.setdefault('measures', {})
+                    memento['measures']['tfintersection'] = tfdist
+
+                    if 'on_topic' not in memento['measures']:
+                    
+                        memento['measures']['on_topic'] = True
+                    
+                        if jdist > self.threshold:
+                            memento['measures']['on_topic'] = False
+                            memento['measures']['off_topic_measure'] = \
+                                'tfintersection'
+            else:
+                self.logger.info(
+                    "TimeMap for {} has no mementos, skipping...".format(
+                    urit))
+
+        return updated_filedata
 
 
 supported_measures = {
