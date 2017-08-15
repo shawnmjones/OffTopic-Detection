@@ -1,3 +1,4 @@
+import sys
 import os
 import nltk
 from abc import ABCMeta, abstractmethod
@@ -7,6 +8,7 @@ import distance
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import string
+from decimal import Decimal
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -135,10 +137,10 @@ class ByteCountAgainstSingleResource(TopicProcessor):
                 with open(first_mem['text-only_filename']) as f:
                     first_tokens = self.tokenize(f.read())
     
-                first_mem_bcount = ''.join(first_tokens)
+                first_mem_bcount = sys.getsizeof(''.join(first_tokens))
     
                 first_mem.setdefault('measures', {})
-                first_mem['measures']['bcount'] = first_mem_bcount
+                first_mem['measures']['bytecount'] = first_mem_bcount
     
                 for memento in updated_filedata[urit]['mementos']:
     
@@ -153,12 +155,11 @@ class ByteCountAgainstSingleResource(TopicProcessor):
                     
                     # compare the word count of all documents with 
                     # the first in TimeMap
-                    bcount_diff = memento['measures']['bcount'] - \
-                        first_mem_bcount
+                    bcount_diff = bcount - first_mem_bcount
                     bcount_diff_pc = bcount_diff / float(first_mem_bcount)
 
                     # the difference percentage is what is important
-                    memento['measures']['bcount'] = bcount_diff_pc
+                    memento['measures']['bytecount'] = bcount_diff_pc
                     
                     if 'on_topic' not in memento['measures']:
                     
@@ -167,7 +168,7 @@ class ByteCountAgainstSingleResource(TopicProcessor):
                         if bcount_diff_pc < self.threshold:
                             memento['measures']['on_topic'] = False
                             memento['measures']['off_topic_measure'] = \
-                                'bcount'
+                                'bytecount'
             else:
                 self.logger.info(
                     "TimeMap for {} has no mementos, skipping...".format(
@@ -198,7 +199,7 @@ class WordCountAgainstSingleResource(TopicProcessor):
                 first_mem_wcount = len(first_tokens)
     
                 first_mem.setdefault('measures', {})
-                first_mem['measures']['wcount'] = first_mem_wcount
+                first_mem['measures']['wordcount'] = first_mem_wcount
     
                 for memento in updated_filedata[urit]['mementos']:
     
@@ -213,12 +214,11 @@ class WordCountAgainstSingleResource(TopicProcessor):
                     
                     # compare the word count of all documents with 
                     # the first in TimeMap
-                    wcount_diff = memento['measures']['wcount'] - \
-                        first_mem_wcount
+                    wcount_diff = wcount - first_mem_wcount
                     wcount_diff_pc = wcount_diff / float(first_mem_wcount)
 
                     # the difference percentage is what is important
-                    memento['measures']['wcount'] = wcount_diff_pc
+                    memento['measures']['wordcount'] = wcount_diff_pc
                     
                     if 'on_topic' not in memento['measures']:
                     
@@ -227,7 +227,7 @@ class WordCountAgainstSingleResource(TopicProcessor):
                         if wcount_diff_pc < self.threshold:
                             memento['measures']['on_topic'] = False
                             memento['measures']['off_topic_measure'] = \
-                                'wcount'
+                                'wordcount'
             else:
                 self.logger.info(
                     "TimeMap for {} has no mementos, skipping...".format(
@@ -283,16 +283,17 @@ class CosineSimilarityAgainstSingleResource(TopicProcessor):
                         tfidf_matrix[0], tfidf_matrix[1])
 
                     memento.setdefault('measures', {})
-                    memento['measures']['cosine'] = csresults[0]
+                    memento['measures']['cosine'] = Decimal(csresults[0][0])
 
                     if 'on_topic' not in memento['measures']:
                         self.logger.info("checking if URI-M {} is off-topic"
-                            " with cosine score {}"
-                            .format(memento['uri-m'], csresults[0]))
+                            " with cosine score {} and threshold {}"
+                            .format(memento['uri-m'], csresults[0][0],
+                            self.threshold))
                     
                         memento['measures']['on_topic'] = True
                     
-                        if csresults[0] < self.threshold:
+                        if Decimal(csresults[0][0]) < Decimal(self.threshold):
                             memento['measures']['on_topic'] = False
                             memento['measures']['off_topic_measure'] = \
                                 'cosine'
@@ -431,7 +432,7 @@ supported_measures = {
     'bytecount': {
         'name': 'Byte Count',
         'default_threshold': -0.65,
-        'class': WordCountAgainstSingleResource
+        'class': ByteCountAgainstSingleResource
     },
     'tfintersection': {
         'name': 'TF-Intersection',

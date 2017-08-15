@@ -155,7 +155,7 @@ if __name__ == '__main__':
         args.logfile)
 
     logger.info('Starting run')
-    logger.info('args: {}'.format(args))
+    logger.debug('command-line arguments: {}'.format(args))
 
     input_data = get_input_type(args.input_type[0], args.input_type[1],
         args.working_directory, logger)
@@ -167,8 +167,9 @@ if __name__ == '__main__':
     scores = None
     # TODO: submit directory output from input_type to a topic processor
     for measure in args.measures:
-        topic_processor = get_topic_processor(measure, 
-            args.measures[measure], args.working_directory, logger)
+        threshold = args.measures[measure]
+        topic_processor = get_topic_processor(measure, threshold,
+            args.working_directory, logger)
         scores = topic_processor.get_scores(input_filedata, scores)
 
     # TODO: write output to a file
