@@ -385,7 +385,7 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
                         current_tf = self.generate_term_frequencies(f.read())
 
                     tfdist = self.score_term_frequencies(
-                        first_tf, current_tf)
+                        first_tf[0:20], current_tf[0:20])
 
                     memento.setdefault('measures', {})
                     memento['measures']['tfintersection'] = tfdist
