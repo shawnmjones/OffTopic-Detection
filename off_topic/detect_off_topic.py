@@ -100,7 +100,7 @@ def process_arguments(args):
             supported_measures[measure]['default_threshold'])
 
     parser.add_argument('-m', '--measures', dest='measures',
-        default="cosine=0.15,wcount=0.10",
+        default="cosine=0.15,wordcount=-0.85",
         type=process_similarity_measure_inputs,
         help="similarity measures to use, separated by commas with no spaces\n"
         "with thresholds after (e.g., jaccard=0.10,cosine=0.15,wcount);\n"

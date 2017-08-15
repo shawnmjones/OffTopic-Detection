@@ -246,13 +246,15 @@ class ArchiveItInput(InputType):
             else:
                 collection_id = self.input_arguments[0]
     
-            download_archiveit_collection(collection_id, self.output_directory, 1)
+            download_archiveit_collection(
+                collection_id, self.output_directory, 1)
 
             # TODO: input_types requires too much knowledge of memnto_fetch
             collection_directory = "{}/collection/{}".format(
                 self.output_directory, collection_id)
     
-            timemap_data = parse_downloads_into_structure(collection_directory)
+            timemap_data = parse_downloads_into_structure(
+                collection_directory)
 
             self.filedata = timemap_data
         else:

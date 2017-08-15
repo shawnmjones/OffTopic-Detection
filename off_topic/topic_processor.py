@@ -147,21 +147,24 @@ class ByteCountAgainstSingleResource(TopicProcessor):
                         tokens = self.tokenize(f.read())
     
                     # calculate the word count on all documents
-                    wcount = len(tokens)
+                    bcount = len(tokens)
                     
                     memento.setdefault('measures', {})
-                    memento['measures']['bcount'] = wcount
                     
                     # compare the word count of all documents with 
                     # the first in TimeMap
-                    bcount_diff = first_mem_wcount - \
-                        memento['measures']['bcount']
+                    bcount_diff = memento['measures']['bcount'] - \
+                        first_mem_bcount
+                    bcount_diff_pc = bcount_diff / float(first_mem_bcount)
+
+                    # the difference percentage is what is important
+                    memento['measures']['bcount'] = bcount_diff_pc
                     
                     if 'on_topic' not in memento['measures']:
                     
                         memento['measures']['on_topic'] = True
                     
-                        if wcount_diff < self.threshold:
+                        if bcount_diff_pc < self.threshold:
                             memento['measures']['on_topic'] = False
                             memento['measures']['off_topic_measure'] = \
                                 'bcount'
@@ -207,18 +210,21 @@ class WordCountAgainstSingleResource(TopicProcessor):
                     wcount = len(tokens)
                     
                     memento.setdefault('measures', {})
-                    memento['measures']['wcount'] = wcount
                     
                     # compare the word count of all documents with 
                     # the first in TimeMap
-                    wcount_diff = first_mem_wcount - \
-                        memento['measures']['wcount']
+                    wcount_diff = memento['measures']['wcount'] - \
+                        first_mem_wcount
+                    wcount_diff_pc = wcount_diff / float(first_mem_wcount)
+
+                    # the difference percentage is what is important
+                    memento['measures']['wcount'] = wcount_diff_pc
                     
                     if 'on_topic' not in memento['measures']:
                     
                         memento['measures']['on_topic'] = True
                     
-                        if wcount_diff < self.threshold:
+                        if wcount_diff_pc < self.threshold:
                             memento['measures']['on_topic'] = False
                             memento['measures']['off_topic_measure'] = \
                                 'wcount'
@@ -394,7 +400,7 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
                     
                         memento['measures']['on_topic'] = True
                     
-                        if jdist > self.threshold:
+                        if tfdist > self.threshold:
                             memento['measures']['on_topic'] = False
                             memento['measures']['off_topic_measure'] = \
                                 'tfintersection'
@@ -417,7 +423,7 @@ supported_measures = {
         'default_threshold': 0.05,
         'class': JaccardDistanceAgainstSingleResource
     },
-    'wcount': {
+    'wordcount': {
         'name': 'Word Count',
         'default_threshold': -0.85,
         'class': WordCountAgainstSingleResource
