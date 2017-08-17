@@ -13,6 +13,101 @@ from decimal import Decimal
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
+stemmer = PorterStemmer()
+
+def load_stopwords():
+    f = open('stopwords.txt')
+    stopwords =[]
+    for w in f:
+        stopwords.append(w.replace('\r','').replace('\n',''))
+    return stopwords
+
+def stem_tokens(tokens):
+    stemmed = []
+    for item in tokens:
+        stemmed.append(stemmer.stem(item))
+    return stemmed
+
+def remove_stop_words(tokens):
+    
+    # remove stop words
+    tokens = [ i for i in tokens if i not in stopwords ]
+
+    return tokens
+
+def tokenize(text):
+    tokens = nltk.word_tokenize(text)
+    stems = stem_tokens(tokens)
+
+
+    # remove punctuation
+    tokens = [ i for i in tokens if i not in string.punctuation ]
+
+    return tokens
+
+def remove_boilerplate(filedata):
+
+    updated_filedata = {}
+
+    for urit in filedata:
+
+        mementos = filedata[urit]['mementos']
+
+        for memento in mementos:
+
+            data_filename = memento['content_filename']
+
+            output_filename = "{}.txt".format(data_filename)
+
+            if not os.path.exists(output_filename):
+
+                with open(data_filename) as f:
+                    input_data = f.read()
+
+                extractor = Extractor(extractor='KeepEverythingExtractor', 
+                    html=input_data)
+
+                boilerplate_text = extractor.getText()
+
+                with open(output_filename, 'w') as f:
+                    f.write(boilerplate_text)
+
+            memento['text-only_filename'] = output_filename
+
+        updated_filedata[urit] = {}
+
+        updated_filedata[urit]['mementos'] = mementos
+
+    return updated_filedata
+
+def find_first_memento(memento_records):
+
+    # sometimes there is an empty list...
+    if len(memento_records) > 0:
+
+        memento_list = []
+
+        for memento in memento_records:
+            memento_list.append( (
+                memento['memento-datetime'],
+                memento['uri-m']
+                ) )
+
+        if len(memento_list) == 0:
+            print("NO MEMENTOS!!!")
+            print(memento_records)
+            return
+
+        first_memento = sorted(memento_list)[0]
+
+        for memento in memento_records:
+            if memento['uri-m'] == first_memento[1]:
+                first_memento = memento
+                break
+
+    return first_memento
+
+
 class TopicProcessor(metaclass=ABCMeta):
 
     def __init__(self, threshold, working_directory, logger):
@@ -20,99 +115,7 @@ class TopicProcessor(metaclass=ABCMeta):
         self.working_directory = working_directory
         self.logger = logger
 
-        self.stemmer = PorterStemmer()
-        self.stopwords = self.load_stopwords()
-
-    def load_stopwords(self):
-        f = open('stopwords.txt')
-        stopwords =[]
-        for w in f:
-            stopwords.append(w.replace('\r','').replace('\n',''))
-        return stopwords
-    
-    def stem_tokens(self, tokens, stemmer):
-        stemmed = []
-        for item in tokens:
-            stemmed.append(self.stemmer.stem(item))
-        return stemmed
-    
-    def tokenize(self, text):
-        tokens = nltk.word_tokenize(text)
-        stems = self.stem_tokens(tokens, self.stemmer)
-
-        # remove stop words
-        tokens = [ i for i in stems if i not in self.stopwords ]
-
-        # remove punctuation
-        tokens = [ i for i in tokens if i not in string.punctuation ]
-
-        return tokens
-
-    def remove_boilerplate(self, filedata):
-
-        updated_filedata = {}
-
-        for urit in filedata:
-
-            mementos = filedata[urit]['mementos']
-
-            for memento in mementos:
-
-                data_filename = memento['content_filename']
-
-                output_filename = "{}.txt".format(data_filename)
-
-                if not os.path.exists(output_filename):
-
-                    with open(data_filename) as f:
-                        input_data = f.read()
-
-                    extractor = Extractor(extractor='KeepEverythingExtractor', 
-                        html=input_data)
-    
-                    boilerplate_text = extractor.getText()
-
-                    #print("boilerplate_text: {}".format(boilerplate_text))
-                    #return
-
-                    with open(output_filename, 'w') as f:
-                        f.write(boilerplate_text)
-
-                memento['text-only_filename'] = output_filename
-
-            updated_filedata[urit] = {}
-
-            updated_filedata[urit]['mementos'] = mementos
-
-        return updated_filedata
-
-    def find_first_memento(self, memento_records):
-
-        # sometimes there is an empty list...
-        if len(memento_records) > 0:
-
-            memento_list = []
-    
-            for memento in memento_records:
-                memento_list.append( (
-                    memento['memento-datetime'],
-                    memento['uri-m']
-                    ) )
-    
-            if len(memento_list) == 0:
-                print("NO MEMENTOS!!!")
-                print(memento_records)
-                return
-    
-            first_memento = sorted(memento_list)[0]
-    
-            for memento in memento_records:
-                if memento['uri-m'] == first_memento[1]:
-                    first_memento = memento
-                    break
-
-        return first_memento
-
+        self.stopwords = load_stopwords()
 
     @abstractmethod
     def get_scores(self, input_filedata):
@@ -132,11 +135,11 @@ class ByteCountAgainstSingleResource(TopicProcessor):
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
             if len(updated_filedata[urit]['mementos']) > 0:
 
-                first_mem = self.find_first_memento(
+                first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
     
                 with open(first_mem['text-only_filename']) as f:
-                    first_tokens = self.tokenize(f.read())
+                    first_tokens = tokenize(f.read())
     
                 first_mem_bcount = sys.getsizeof(''.join(first_tokens))
     
@@ -147,7 +150,7 @@ class ByteCountAgainstSingleResource(TopicProcessor):
     
                     with open(memento['text-only_filename']) as f:
                         # tokenize, stemming, remove stop words
-                        tokens = self.tokenize(f.read())
+                        tokens = tokenize(f.read())
     
                     # calculate the word count on all documents
                     bcount = len(tokens)
@@ -195,7 +198,8 @@ class WordCountAgainstSingleResource(TopicProcessor):
                     updated_filedata[urit]['mementos'])
     
                 with open(first_mem['text-only_filename']) as f:
-                    first_tokens = self.tokenize(f.read())
+                    first_tokens = tokenize(f.read())
+                    first_tokens = remove_stop_words(first_tokens)
     
                 first_mem_wcount = len(first_tokens)
     
@@ -206,7 +210,8 @@ class WordCountAgainstSingleResource(TopicProcessor):
     
                     with open(memento['text-only_filename']) as f:
                         # tokenize, stemming, remove stop words
-                        tokens = self.tokenize(f.read())
+                        tokens = tokenize(f.read())
+                        tokens = remove_stop_words(tokens)
     
                     # calculate the word count on all documents
                     wcount = len(tokens)
@@ -241,11 +246,11 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
 
     def get_scores(self, input_filedata, score_data):
         # strip all tags out of all remaining content
-        updated_filedata = self.remove_boilerplate(input_filedata)
+        updated_filedata = remove_boilerplate(input_filedata)
 
         # tokenizer removes stop words, hence stop_words = None
-        tfidf = TfidfVectorizer(tokenizer=self.tokenize,
-            stop_words=None)
+        tfidf = TfidfVectorizer(tokenizer=tokenize,
+            stop_words=self.stopwords)
 
         for urit in updated_filedata:
 
@@ -273,7 +278,9 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
                 self.logger.info("discovered {} mementos for processing under"
                     " cosine similarity".format(len(filesdata)))
 
-                first_mem = self.find_first_memento(
+                self.logger.info("mementos found: {}".format(updated_filedata[urit]['mementos']))
+
+                first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
                 first_mem_filename = first_mem['text-only_filename']
@@ -305,10 +312,10 @@ class CosineSimilarityAgainstSingleResource(TopicProcessor):
         # TODO: eliminate everything that is not HTML, text, or PDF
 
         # strip all tags out of all remaining content
-        updated_filedata = self.remove_boilerplate(input_filedata)
+        updated_filedata = remove_boilerplate(input_filedata)
 
         # tokenizer removes stop words, hence stop_words = None
-        tfidf = TfidfVectorizer(tokenizer=self.tokenize,
+        tfidf = TfidfVectorizer(tokenizer=tokenize,
             stop_words=None)
 
         for urit in updated_filedata:
@@ -317,7 +324,7 @@ class CosineSimilarityAgainstSingleResource(TopicProcessor):
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
             if len(updated_filedata[urit]['mementos']) > 0:
 
-                first_mem = self.find_first_memento(
+                first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
                 first_mem_filename = first_mem['text-only_filename']
@@ -370,7 +377,7 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
         # TODO: eliminate everything that is not HTML, text, or PDF
 
         # strip all tags out of all remaining content
-        updated_filedata = self.remove_boilerplate(input_filedata)
+        updated_filedata = remove_boilerplate(input_filedata)
 
         for urit in updated_filedata:
 
@@ -378,17 +385,19 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
             if len(updated_filedata[urit]['mementos']) > 0:
 
-                first_mem = self.find_first_memento(
+                first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
                 with open(first_mem['text-only_filename']) as f:
-                    first_tokens = self.tokenize(f.read())
+                    first_tokens = tokenize(f.read())
+                    first_tokens = remove_stop_words(first_tokens)
 
                 for memento in updated_filedata[urit]['mementos']:
 
                     with open(memento['text-only_filename']) as f:
                         # tokenize, stemming, remove stop words
-                        tokens = self.tokenize(f.read())
+                        tokens = tokenize(f.read())
+                        tokens = remove_stop_words(tokens)
 
                     jdist = distance.jaccard(tokens, first_tokens)
 
@@ -419,7 +428,8 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
 
     def generate_term_frequencies(self, data):
 
-        tokens = self.tokenize(data) 
+        tokens = tokenize(data) 
+        tokens = remove_stop_words(tokens)
 
         term_frequencies = []
 
@@ -433,7 +443,7 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
     def get_scores(self, input_filedata, score_data):
 
         # strip all tags out of all remaining content
-        updated_filedata = self.remove_boilerplate(input_filedata)
+        updated_filedata = remove_boilerplate(input_filedata)
 
         for urit in updated_filedata:
 
@@ -441,7 +451,7 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
             if len(updated_filedata[urit]['mementos']) > 0:
 
-                first_mem = self.find_first_memento(
+                first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
                 with open(first_mem['text-only_filename']) as f:
