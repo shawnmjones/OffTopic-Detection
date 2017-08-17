@@ -43,6 +43,7 @@ class TopicProcessor(metaclass=ABCMeta):
         # remove stop words
         tokens = [ i for i in stems if i not in self.stopwords ]
 
+        # remove punctuation
         tokens = [ i for i in tokens if i not in string.punctuation ]
 
         return tokens
@@ -236,6 +237,68 @@ class WordCountAgainstSingleResource(TopicProcessor):
         return updated_filedata
 
 
+class CosineSimilarityAgainstTimeMap(TopicProcessor):
+
+    def get_scores(self, input_filedata, score_data):
+        # strip all tags out of all remaining content
+        updated_filedata = self.remove_boilerplate(input_filedata)
+
+        # tokenizer removes stop words, hence stop_words = None
+        tfidf = TfidfVectorizer(tokenizer=self.tokenize,
+            stop_words=None)
+
+        for urit in updated_filedata:
+
+            self.logger.info("processing data for Timemap {} using cosine similarity"
+                .format(urit))
+
+            # some TimeMaps have no mementos
+            # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
+            if len(updated_filedata[urit]['mementos']) > 0:
+
+                fileids = {}
+                filesdata = {}
+
+                mementos = updated_filedata[urit]['mementos']
+
+                for i in range(0, len(mementos)):
+                    filename = mementos[i]['text-only_filename']
+                    fileids[filename] = i 
+
+                    with open(filename) as f:
+                        filedata = f.read()
+
+                    filesdata[filename] = filedata
+
+                self.logger.info("discovered {} mementos for processing under"
+                    " cosine similarity".format(len(filesdata)))
+
+                first_mem = self.find_first_memento(
+                    updated_filedata[urit]['mementos'])
+
+                first_mem_filename = first_mem['text-only_filename']
+
+                first = fileids[first_mem_filename]
+
+                tfidf_matrix = tfidf.fit_transform(filesdata.values())
+
+                csresults = cosine_similarity(tfidf_matrix[first], tfidf_matrix)
+
+                for i in range(0, len(csresults[0])):
+                    mementos[i].setdefault('measures', {})
+                    mementos[i]['measures']['cosine'] = Decimal(csresults[0][i])
+                  
+                    if 'on-topic' not in mementos[i]['measures']:
+
+                        mementos[i]['measures']['on_topic'] = True
+
+                        if Decimal(csresults[0][i]) < Decimal(self.threshold):
+                            mementos[i]['measures']['on_topic'] = False
+                            mementos[i]['measures']['off_topic_measure'] = \
+                                'cosine'
+
+        return updated_filedata
+
 class CosineSimilarityAgainstSingleResource(TopicProcessor):
 
     def get_scores(self, input_filedata, score_data):
@@ -272,7 +335,6 @@ class CosineSimilarityAgainstSingleResource(TopicProcessor):
                         .format( filename, memento['uri-m']))
 
                     with open(filename) as f:
-
                         filedata = f.read()
 
                     tfidf_matrix = tfidf.fit_transform(
@@ -417,7 +479,7 @@ supported_measures = {
     'cosine': {
         'name': 'Cosine Similarity',
         'default_threshold': 0.15,
-        'class': CosineSimilarityAgainstSingleResource
+        'class': CosineSimilarityAgainstTimeMap
     },
     'jaccard': {
         'name': 'Jaccard Distance',

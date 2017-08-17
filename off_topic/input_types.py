@@ -20,6 +20,8 @@ class InputType(metaclass=ABCMeta):
         self.output_directory = output_directory
         self.filedata = None
 
+        memento_fetch.logger = self.logger
+
     @abstractmethod
     def get_filedata(self):
         pass
@@ -271,12 +273,15 @@ class TimeMapInput(InputType):
         urits = self.input_arguments
         filelist = []
 
-        self.logger.debug("attempting to download files for URI-T: {}"
+        self.logger.info("attempting to download files for URI-T: {}"
             .format(urits))
 
         download_TimeMaps_and_mementos(urits, self.output_directory, 1)
 
+        self.logger.info("parsing downloaded TimeMaps into data structure")
         timemap_data = parse_downloads_into_structure(self.output_directory)
+
+        self.logger.info("returning TimeMap data")
 
         return timemap_data
 

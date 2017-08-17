@@ -5,7 +5,12 @@ import os
 import csv
 import json
 import re
+from urllib.parse import urlparse
 from datetime import datetime
+import time
+
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 def generate_logger():
     import logging
@@ -32,6 +37,9 @@ mementoDatetimeExpression = re.compile( r"datetime=\"([^\"]*)")
 #originalResourceExpression = re.compile( r"<(.*//[A-Za-z0-9.:=/&,%-_ \?]*)>;\s?rel=\"original\"" )
 originalResourceExpression = re.compile( r"<(.*//[^>]*)>;\s?rel=\"original\"" )
 
+wayback_domain_list = [
+    'wayback.archive-it.org'
+]
 
 def list_generator(input_list):
 
@@ -63,7 +71,8 @@ def download_uri_list(uri_list, output_directory):
         downloaded_uri_list = []
 
         for uri in uri_list:
-            logger.debug("starting download for uri {}".format(uri))
+
+            logger.info("starting download for uri {}".format(uri))
             if uri not in existing_metadata:
                 futures[uri] = session.get(uri)
                 downloaded_uri_list.append(uri)
@@ -74,7 +83,7 @@ def download_uri_list(uri_list, output_directory):
 
         for uri in list_generator(working_uri_list):
 
-            logger.debug("checking done-ness of uri {}".format(uri))
+            logger.info("checking done-ness of uri {}".format(uri))
             # TODO: implement a timeout, things may get dicey
             if futures[uri].done():
                 logger.debug("uri {} is done".format(uri))
@@ -103,13 +112,13 @@ def download_uri_list(uri_list, output_directory):
                         content_destination_file, headers_destination_file])
 
                     with open(content_destination_file, 'wb') as f:
-                        logger.debug("writing content of uri {} to {}".format(
+                        logger.info("writing content of uri {} to {}".format(
                             uri, content_destination_file))
                         f.write(response.content)
 
                     # TODO: what if we want all headers for all responses, not just the last?
                     with open(headers_destination_file, 'w') as f:
-                        logger.debug("writing headers of uri {} to {}".format(
+                        logger.info("writing headers of uri {} to {}".format(
                             uri, headers_destination_file))
 
                         # workaround from: https://github.com/requests/requests/issues/1380
@@ -123,12 +132,17 @@ def download_uri_list(uri_list, output_directory):
                     metadata_writer.writerow([uri, "ERROR", e, None, None])
                     working_uri_list.remove(uri)
 
+            time.sleep(1)
+
     metadata_file.close()
 
 def parse_metadata_to_dict(directory):
 
     metadata_dict = {}
     metadata_filename = "{}/metadata.tsv".format(directory)
+
+    logger.debug("parsing data from metadata file {}".format(metadata_filename))
+
     metadata_file = open(metadata_filename)
 
     metadata_reader = csv.reader(metadata_file, delimiter='\t', quotechar='"')
@@ -148,7 +162,7 @@ def parse_metadata_to_dict(directory):
 
     return metadata_dict
 
-def parse_TimeMap_into_dict(filename):
+def parse_TimeMap_into_dict(filename, convert_raw_mementos=True):
 
     logger.debug("parsing timemap filename: {}".format(filename))
 
@@ -162,7 +176,7 @@ def parse_TimeMap_into_dict(filename):
         try:
             tmdict["original"] = original_resource[0]
         except IndexError:
-            print(filename)
+            logger.warn("TimeMap in file {} could not be processed".format(filename))
             return
 
         memento_entries = re.findall(mementoExpression, tmdata)
@@ -177,6 +191,12 @@ def parse_TimeMap_into_dict(filename):
     
             for i in range(0, len(memento_entries)):
                 urim = memento_entries[i]
+
+                if convert_raw_mementos \
+                    and urlparse(urim).netloc in wayback_domain_list \
+                    and '/timemap/' not in urim:
+                    urim = urim.replace('/http', 'id_/http')
+
                 dt = datetime.strptime(memento_datetime_entries[i],
                     "%a, %d %b %Y %H:%M:%S GMT")
    
@@ -200,7 +220,7 @@ def parse_TimeMap_into_dict(filename):
 
 def parse_downloads_into_structure(top_directory):
 
-    logger.info("parsing directory {}".format(top_directory))
+    logger.debug("parsing directory {}".format(top_directory))
 
     timemap_data = {}
 
@@ -216,13 +236,15 @@ def parse_downloads_into_structure(top_directory):
 
     else:
 
-        timemaps_metadata_filename = "{}/metadata.tsv".format(timemaps_dir)
+        logger.debug("parsing metadata for TimeMap from dir {}".format(timemaps_dir))
+
         tm_metadata = parse_metadata_to_dict(timemaps_dir)
 
-        logger.info("using timemaps metadata file {}".format(
-            timemaps_metadata_filename))
+        logger.debug("TimeMap metadata loaded: {}".format(tm_metadata))
 
         for timemap in tm_metadata:
+
+            logger.debug("generating structure for TimeMap {}".format(timemap))
         
             if tm_metadata[timemap]['status'] == '200':
                 tm_filename = tm_metadata[timemap]['content_filename']
@@ -231,7 +253,8 @@ def parse_downloads_into_structure(top_directory):
 
                 tm_memdata = parse_TimeMap_into_dict(tm_filename)
 
-                #logger.info("tm_metadata: {}".format(tm_metadata))
+                logger.info("tm_metadata: {}".format(tm_metadata))
+                logger.info("tm_memdata: {}".format(tm_memdata))
     
                 original = tm_memdata["original"]
         
@@ -241,7 +264,6 @@ def parse_downloads_into_structure(top_directory):
                     logger.debug("memento: {}".format(memento))
                 
                     urim = memento['uri-m']
-                    #dt = memento['memento-datetime']
                 
                     memento['content_filename'] = \
                         memento_metadata[urim]['content_filename']
@@ -250,6 +272,8 @@ def parse_downloads_into_structure(top_directory):
                 
                 timemap_data[timemap] = {}
                 timemap_data[timemap]["mementos"] = mementos
+
+    logger.info("timemap_data: {}".format(timemap_data))
 
     return timemap_data 
 
@@ -264,6 +288,9 @@ def download_mementos(urims, destination_directory):
 
 def download_TimeMaps_and_mementos(urits, destination_directory, depth):
 
+    logger.info("beginning download of Timemaps and associated mementos"
+        " from: {}".format(urits))
+
     if depth > 0:
 
         timemap_dir = "{}/timemaps".format(destination_directory)
@@ -275,14 +302,18 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
         no_mementos_file = open(no_mementos_filename, 'w')
 
         download_uri_list(urits, timemap_dir)
+
+        logger.debug("calling parse_metadata_to_dict")
         metadata = parse_metadata_to_dict(timemap_dir)
+        logger.debug("done with call to parse_metadata_to_dict")
 
         for urit in urits:
+
+            logger.debug("URI-T: {}".format(urit))
 
             timemap_filename = metadata[urit]["content_filename"]
             tmdict = parse_TimeMap_into_dict(timemap_filename)
 
-            logger.debug("URI-T: {}".format(urit))
             logger.debug("TimeMap Filename: {}".format(timemap_filename))
             logger.debug("tmdict: {}".format(tmdict))
 
@@ -291,7 +322,11 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
                 urims = []
 
                 for memento_data in tmdict["mementos"]:
-                    urims.append(memento_data["uri-m"])
+
+                    urim = memento_data["uri-m"]
+
+                    logger.info("appending urim {}".format(urim))
+                    urims.append(urim)
 
                 download_mementos(urims, destination_directory)
 
@@ -303,3 +338,5 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
             #       destination_directory, depth - 1...)
 
         no_mementos_file.close()
+
+    logger.info("done downloading timemaps and associated mementos from: {}".format(urits))

@@ -155,7 +155,7 @@ if __name__ == '__main__':
         args.logfile)
 
     logger.info('Starting run')
-    logger.debug('command-line arguments: {}'.format(args))
+    logger.info('command-line arguments: {}'.format(args))
 
     input_data = get_input_type(args.input_type[0], args.input_type[1],
         args.working_directory, logger)
@@ -167,10 +167,12 @@ if __name__ == '__main__':
     scores = None
     # TODO: submit directory output from input_type to a topic processor
     for measure in args.measures:
+        logger.info("processing measure {}".format(measure))
         threshold = args.measures[measure]
         topic_processor = get_topic_processor(measure, threshold,
             args.working_directory, logger)
         scores = topic_processor.get_scores(input_filedata, scores)
+        logger.info("done with processing of measure {}".format(measure))
 
     # TODO: write output to a file
 
@@ -179,6 +181,11 @@ if __name__ == '__main__':
         for urit in scores:
 
             for memento in scores[urit]['mementos']:
+
+                print()
+                print("memento:")
+                pp.pprint(memento)
+                print()
 
                 if memento['measures']['on_topic'] == False:
                     urim = memento['uri-m']
