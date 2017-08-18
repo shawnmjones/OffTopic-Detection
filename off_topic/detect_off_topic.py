@@ -1,6 +1,7 @@
 import sys
 import logging
 import argparse
+import topic_processor
 from input_types import supported_input_types, get_input_type
 from topic_processor import supported_measures, get_topic_processor
 
@@ -169,9 +170,9 @@ if __name__ == '__main__':
     for measure in args.measures:
         logger.info("processing measure {}".format(measure))
         threshold = args.measures[measure]
-        topic_processor = get_topic_processor(measure, threshold,
-            args.working_directory, logger)
-        scores = topic_processor.get_scores(input_filedata, scores)
+        topic_processor.logger = logger
+        tp = get_topic_processor(measure, threshold)
+        scores = tp.get_scores(input_filedata)
         logger.info("done with processing of measure {}".format(measure))
 
     # TODO: write output to a file

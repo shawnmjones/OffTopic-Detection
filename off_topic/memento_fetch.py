@@ -72,7 +72,7 @@ def download_uri_list(uri_list, output_directory):
 
         for uri in uri_list:
 
-            logger.info("starting download for uri {}".format(uri))
+            logger.debug("starting download for uri {}".format(uri))
             if uri not in existing_metadata:
                 futures[uri] = session.get(uri)
                 downloaded_uri_list.append(uri)
@@ -83,7 +83,7 @@ def download_uri_list(uri_list, output_directory):
 
         for uri in list_generator(working_uri_list):
 
-            logger.info("checking done-ness of uri {}".format(uri))
+            logger.debug("checking done-ness of uri {}".format(uri))
             # TODO: implement a timeout, things may get dicey
             if futures[uri].done():
                 logger.debug("uri {} is done".format(uri))
@@ -112,13 +112,13 @@ def download_uri_list(uri_list, output_directory):
                         content_destination_file, headers_destination_file])
 
                     with open(content_destination_file, 'wb') as f:
-                        logger.info("writing content of uri {} to {}".format(
+                        logger.debug("writing content of uri {} to {}".format(
                             uri, content_destination_file))
                         f.write(response.content)
 
                     # TODO: what if we want all headers for all responses, not just the last?
                     with open(headers_destination_file, 'w') as f:
-                        logger.info("writing headers of uri {} to {}".format(
+                        logger.debug("writing headers of uri {} to {}".format(
                             uri, headers_destination_file))
 
                         # workaround from: https://github.com/requests/requests/issues/1380
@@ -141,7 +141,7 @@ def parse_metadata_to_dict(directory):
     metadata_dict = {}
     metadata_filename = "{}/metadata.tsv".format(directory)
 
-    logger.debug("parsing data from metadata file {}".format(metadata_filename))
+    logger.info("parsing data from metadata file {}".format(metadata_filename))
 
     metadata_file = open(metadata_filename)
 
@@ -153,11 +153,12 @@ def parse_metadata_to_dict(directory):
         response_uri = row[2]
         content_filename = row[3]
         headers_filename = row[4]
+
         metadata_dict.setdefault(uri, {})
         metadata_dict[uri]["content_filename"] = content_filename
         metadata_dict[uri]["headers_filename"] = headers_filename
         metadata_dict[uri]["status"] = status_code
-    
+
     metadata_file.close()
 
     return metadata_dict
@@ -253,8 +254,8 @@ def parse_downloads_into_structure(top_directory):
 
                 tm_memdata = parse_TimeMap_into_dict(tm_filename)
 
-                logger.info("tm_metadata: {}".format(tm_metadata))
-                logger.info("tm_memdata: {}".format(tm_memdata))
+                logger.debug("tm_metadata: {}".format(tm_metadata))
+                logger.debug("tm_memdata: {}".format(tm_memdata))
     
                 original = tm_memdata["original"]
         
@@ -267,13 +268,16 @@ def parse_downloads_into_structure(top_directory):
                 
                     memento['content_filename'] = \
                         memento_metadata[urim]['content_filename']
+
+                    memento['headers_filename'] = \
+                        memento_metadata[urim]['headers_filename']
                 
                     mementos.append(memento)
                 
                 timemap_data[timemap] = {}
                 timemap_data[timemap]["mementos"] = mementos
 
-    logger.info("timemap_data: {}".format(timemap_data))
+    logger.debug("timemap_data: {}".format(timemap_data))
 
     return timemap_data 
 
@@ -288,8 +292,8 @@ def download_mementos(urims, destination_directory):
 
 def download_TimeMaps_and_mementos(urits, destination_directory, depth):
 
-    logger.info("beginning download of Timemaps and associated mementos"
-        " from: {}".format(urits))
+    logger.info("beginning download of Timemaps and associated mementos")
+    logger.debug("URI-T list: {}".format(urits))
 
     if depth > 0:
 
@@ -325,7 +329,7 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
 
                     urim = memento_data["uri-m"]
 
-                    logger.info("appending urim {}".format(urim))
+                    logger.debug("appending urim {}".format(urim))
                     urims.append(urim)
 
                 download_mementos(urims, destination_directory)

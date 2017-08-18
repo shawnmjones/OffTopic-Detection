@@ -9,17 +9,39 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import string
 from decimal import Decimal
+import json
+import chardet
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 stemmer = PorterStemmer()
 
+def generate_logger():
+    import logging
+
+    logger = logging.getLogger(__name__)
+    logger.propagate = False
+
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.WARNING)
+    formatter = logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(message)s')
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+
+    return logger
+
+logger = generate_logger()
+
 def load_stopwords():
-    f = open('stopwords.txt')
-    stopwords =[]
-    for w in f:
-        stopwords.append(w.replace('\r','').replace('\n',''))
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+
+    with open('{}/stopwords.txt'.format(dir_path)) as f:
+        stopwords =[]
+        for w in f:
+            stopwords.append(w.replace('\r','').replace('\n',''))
+
     return stopwords
 
 def stem_tokens(tokens):
@@ -28,7 +50,7 @@ def stem_tokens(tokens):
         stemmed.append(stemmer.stem(item))
     return stemmed
 
-def remove_stop_words(tokens):
+def remove_stop_words(tokens, stopwords):
     
     # remove stop words
     tokens = [ i for i in tokens if i not in stopwords ]
@@ -38,7 +60,6 @@ def remove_stop_words(tokens):
 def tokenize(text):
     tokens = nltk.word_tokenize(text)
     stems = stem_tokens(tokens)
-
 
     # remove punctuation
     tokens = [ i for i in tokens if i not in string.punctuation ]
@@ -55,24 +76,57 @@ def remove_boilerplate(filedata):
 
         for memento in mementos:
 
-            data_filename = memento['content_filename']
+            logger.debug("removing boilerplate from: {}".format(memento))
 
-            output_filename = "{}.txt".format(data_filename)
+            if memento['processed_for_off_topic'] == True:
 
-            if not os.path.exists(output_filename):
+                data_filename = memento['content_filename']
 
-                with open(data_filename) as f:
-                    input_data = f.read()
+                logger.debug("processing file: {}".format(data_filename))
+    
+                output_filename = "{}.txt".format(data_filename)
+    
+                if not os.path.exists(output_filename):
 
-                extractor = Extractor(extractor='KeepEverythingExtractor', 
-                    html=input_data)
+                    ctype='utf-8'
 
-                boilerplate_text = extractor.getText()
+                    if 'charset=' in memento['content-type']:
+                        ctype = memento['content-type'].split('=')[1]
 
-                with open(output_filename, 'w') as f:
-                    f.write(boilerplate_text)
+                    try:
 
-            memento['text-only_filename'] = output_filename
+                        with open(data_filename, encoding=ctype) as f:
+                            input_data = f.read()
+
+                    except UnicodeDecodeError as e:
+
+                        try:
+                            # TODO: opening the file twice is ridiculous
+                            with open(data_filename, 'rb') as f:
+                                data = f.read()
+
+                                charset = chardet.detect(data)['encoding']
+
+                            with open(data_filename, encoding=charset) as f:
+                                input_data = f.read()
+
+                        except UnicodeDecodeError as e:
+                            logger.info("Can not determine character set "
+                                "for URI-M: {}, skipping...".format(
+                                memento['uri-m']))
+   
+                    if len(input_data) > 0:
+                        extractor = Extractor(extractor='KeepEverythingExtractor', 
+                            html=input_data)
+    
+                        boilerplate_text = extractor.getText()
+                    else:
+                        boilerplate_text = ''
+    
+                    with open(output_filename, 'w') as f:
+                        f.write(boilerplate_text)
+    
+                memento['text-only_filename'] = output_filename
 
         updated_filedata[urit] = {}
 
@@ -80,7 +134,40 @@ def remove_boilerplate(filedata):
 
     return updated_filedata
 
+def mark_unsupported_items(filedata):
+
+    updated_filedata = {}
+
+    for urit in filedata:
+
+        mementos = filedata[urit]['mementos']
+
+        for memento in mementos:
+
+            with open(memento['headers_filename']) as f:
+                headers = json.load(f)
+
+            if 'content-type' in headers:
+                if 'text/html' in headers['content-type']:
+                    memento['processed_for_off_topic'] = True
+                    memento['content-type'] = headers['content-type']
+
+                else:
+                    memento['processed_for_off_topic'] = \
+                        'unsupported file format {} for memento at {}'.format(
+                            headers['content-type'], memento['uri-m'])
+                    memento['content-type'] = headers['content-type']
+
+            else:
+                memento['processed_for_off_topic'] =  \
+                    'unknown file format for memento at {}'.format(
+                        memento['uri-m'])
+
+    return updated_filedata
+
 def find_first_memento(memento_records):
+
+    first_memento = None
 
     # sometimes there is an empty list...
     if len(memento_records) > 0:
@@ -88,15 +175,18 @@ def find_first_memento(memento_records):
         memento_list = []
 
         for memento in memento_records:
-            memento_list.append( (
-                memento['memento-datetime'],
-                memento['uri-m']
-                ) )
+
+           if memento['processed_for_off_topic'] == True:
+
+                memento_list.append( (
+                    memento['memento-datetime'],
+                    memento['uri-m']
+                    ) )
 
         if len(memento_list) == 0:
-            print("NO MEMENTOS!!!")
-            print(memento_records)
-            return
+            logger.info("NO MEMENTOS!!! Cannot find first memento!")
+            logger.info(memento_records)
+            return None
 
         first_memento = sorted(memento_list)[0]
 
@@ -110,10 +200,8 @@ def find_first_memento(memento_records):
 
 class TopicProcessor(metaclass=ABCMeta):
 
-    def __init__(self, threshold, working_directory, logger):
+    def __init__(self, threshold):
         self.threshold = threshold
-        self.working_directory = working_directory
-        self.logger = logger
 
         self.stopwords = load_stopwords()
 
@@ -123,16 +211,23 @@ class TopicProcessor(metaclass=ABCMeta):
 
 class ByteCountAgainstSingleResource(TopicProcessor):
 
-    def get_scores(self, input_filedata, score_data):
-        # TODO: eliminate every file that is not HTML, text
+    def get_scores(self, input_filedata):
+
+        # trash in, trash out
+        if input_filedata == None:
+            return None
+
+        # eliminate every file that is not HTML, text
+        updated_filedata = mark_unsupported_items(input_filedata)
 
         # strip all tags out of all remaining content
-        updated_filedata = self.remove_boilerplate(input_filedata)
+        updated_filedata = remove_boilerplate(input_filedata)
 
         for urit in updated_filedata:
 
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
+            # also, if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 0:
 
                 first_mem = find_first_memento(
@@ -148,58 +243,72 @@ class ByteCountAgainstSingleResource(TopicProcessor):
     
                 for memento in updated_filedata[urit]['mementos']:
     
-                    with open(memento['text-only_filename']) as f:
-                        # tokenize, stemming, remove stop words
-                        tokens = tokenize(f.read())
-    
-                    # calculate the word count on all documents
-                    bcount = len(tokens)
-                    
-                    memento.setdefault('measures', {})
-                    
-                    # compare the word count of all documents with 
-                    # the first in TimeMap
-                    bcount_diff = bcount - first_mem_bcount
-                    bcount_diff_pc = bcount_diff / float(first_mem_bcount)
+                    if memento['processed_for_off_topic'] == True:
 
-                    # the difference percentage is what is important
-                    memento['measures']['bytecount'] = bcount_diff_pc
-                    
-                    if 'on_topic' not in memento['measures']:
-                    
-                        memento['measures']['on_topic'] = True
-                    
-                        if bcount_diff_pc < self.threshold:
-                            memento['measures']['on_topic'] = False
-                            memento['measures']['off_topic_measure'] = \
-                                'bytecount'
+                        with open(memento['text-only_filename']) as f:
+                            # tokenize, stemming, remove stop words
+                            tokens = tokenize(f.read())
+    
+                        # calculate the word count on all documents
+                        bcount = len(tokens)
+                        
+                        memento.setdefault('measures', {})
+                        
+                        # compare the word count of all documents with 
+                        # the first in TimeMap
+                        bcount_diff = bcount - first_mem_bcount
+                        bcount_diff_pc = bcount_diff / float(first_mem_bcount)
+
+                        # the difference percentage is what is important
+                        memento['measures']['bytecount'] = bcount_diff_pc
+                        
+                        if 'on_topic' not in memento['measures']:
+                        
+                            memento['measures']['on_topic'] = True
+                        
+                            if bcount_diff_pc < self.threshold:
+                                memento['measures']['on_topic'] = False
+                                memento['measures']['off_topic_measure'] = \
+                                    'bytecount'
             else:
-                self.logger.info(
-                    "TimeMap for {} has no mementos, skipping...".format(
-                    urit))
+                if len(updated_filedata[urit]['mementos']) == 1:
+                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                else:
+                    logger.info(
+                        "TimeMap for {} has no mementos, skipping...".format(
+                        urit))
 
         return updated_filedata
 
 class WordCountAgainstSingleResource(TopicProcessor):
 
-    def get_scores(self, input_filedata, score_data):
-        # TODO: eliminate every file that is not HTML, text
+    def get_scores(self, input_filedata):
+
+        # trash in, trash out
+        if input_filedata == None:
+            return None
+
+        # eliminate every file that is not HTML, text
+        updated_filedata = mark_unsupported_items(input_filedata)
 
         # strip all tags out of all remaining content
-        updated_filedata = self.remove_boilerplate(input_filedata)
+        updated_filedata = remove_boilerplate(input_filedata)
 
         for urit in updated_filedata:
 
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
-            if len(updated_filedata[urit]['mementos']) > 0:
+            # also, if there is only 1 memento, it isn't really off-topic, is it?
+            if len(updated_filedata[urit]['mementos']) > 1:
 
-                first_mem = self.find_first_memento(
+                first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
     
                 with open(first_mem['text-only_filename']) as f:
                     first_tokens = tokenize(f.read())
-                    first_tokens = remove_stop_words(first_tokens)
+                    first_tokens = remove_stop_words(first_tokens, self.stopwords)
     
                 first_mem_wcount = len(first_tokens)
     
@@ -207,44 +316,59 @@ class WordCountAgainstSingleResource(TopicProcessor):
                 first_mem['measures']['wordcount'] = first_mem_wcount
     
                 for memento in updated_filedata[urit]['mementos']:
-    
-                    with open(memento['text-only_filename']) as f:
-                        # tokenize, stemming, remove stop words
-                        tokens = tokenize(f.read())
-                        tokens = remove_stop_words(tokens)
-    
-                    # calculate the word count on all documents
-                    wcount = len(tokens)
-                    
-                    memento.setdefault('measures', {})
-                    
-                    # compare the word count of all documents with 
-                    # the first in TimeMap
-                    wcount_diff = wcount - first_mem_wcount
-                    wcount_diff_pc = wcount_diff / float(first_mem_wcount)
 
-                    # the difference percentage is what is important
-                    memento['measures']['wordcount'] = wcount_diff_pc
-                    
-                    if 'on_topic' not in memento['measures']:
-                    
-                        memento['measures']['on_topic'] = True
-                    
-                        if wcount_diff_pc < self.threshold:
-                            memento['measures']['on_topic'] = False
-                            memento['measures']['off_topic_measure'] = \
-                                'wordcount'
+                    if memento['processed_for_off_topic'] == True:
+
+                        with open(memento['text-only_filename']) as f:
+                            # tokenize, stemming, remove stop words
+                            tokens = tokenize(f.read())
+                            tokens = remove_stop_words(tokens, self.stopwords)
+    
+                        # calculate the word count on all documents
+                        wcount = len(tokens)
+                        
+                        memento.setdefault('measures', {})
+                        
+                        # compare the word count of all documents with 
+                        # the first in TimeMap
+                        wcount_diff = wcount - first_mem_wcount
+                        wcount_diff_pc = wcount_diff / float(first_mem_wcount)
+
+                        # the difference percentage is what is important
+                        memento['measures']['wordcount'] = wcount_diff_pc
+                        
+                        if 'on_topic' not in memento['measures']:
+                        
+                            memento['measures']['on_topic'] = True
+                        
+                            if wcount_diff_pc < self.threshold:
+                                memento['measures']['on_topic'] = False
+                                memento['measures']['off_topic_measure'] = \
+                                    'wordcount'
             else:
-                self.logger.info(
-                    "TimeMap for {} has no mementos, skipping...".format(
-                    urit))
+                if len(updated_filedata[urit]['mementos']) == 1:
+                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                else:
+                    logger.info(
+                        "TimeMap for {} has no mementos, skipping...".format(
+                        urit))
 
         return updated_filedata
 
 
 class CosineSimilarityAgainstTimeMap(TopicProcessor):
 
-    def get_scores(self, input_filedata, score_data):
+    def get_scores(self, input_filedata):
+
+        # trash in, trash out
+        if input_filedata == None:
+            return None
+
+        # eliminate every file that is not HTML, text
+        updated_filedata = mark_unsupported_items(input_filedata)
+
         # strip all tags out of all remaining content
         updated_filedata = remove_boilerplate(input_filedata)
 
@@ -254,62 +378,88 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
 
         for urit in updated_filedata:
 
-            self.logger.info("processing data for Timemap {} using cosine similarity"
+            logger.debug("processing data for Timemap {} using cosine similarity"
                 .format(urit))
 
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
-            if len(updated_filedata[urit]['mementos']) > 0:
+            # also, if there is only 1 memento, it isn't really off-topic, is it?
+            if len(updated_filedata[urit]['mementos']) > 1:
 
                 fileids = {}
                 filesdata = {}
 
                 mementos = updated_filedata[urit]['mementos']
 
+                logger.debug("there are {} mementos for processing"
+                    " under cosine similarity".format(len(mementos)))
+
                 for i in range(0, len(mementos)):
-                    filename = mementos[i]['text-only_filename']
-                    fileids[filename] = i 
 
-                    with open(filename) as f:
-                        filedata = f.read()
+                    if mementos[i]['processed_for_off_topic'] == True:
 
-                    filesdata[filename] = filedata
+                        filename = mementos[i]['text-only_filename']
+                        fileids[filename] = i 
+    
+                        with open(filename) as f:
+                            filedata = f.read()
+    
+                        filesdata[filename] = filedata
+                    else:
+                        logger.debug("not processing memento at URI-M {}"
+                            " for off topic".format(mementos[i]['uri-m']))
 
-                self.logger.info("discovered {} mementos for processing under"
+                logger.debug("discovered {} mementos for processing under"
                     " cosine similarity".format(len(filesdata)))
 
-                self.logger.info("mementos found: {}".format(updated_filedata[urit]['mementos']))
+                logger.debug("mementos found: {}".format(updated_filedata[urit]['mementos']))
 
                 first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
-                first_mem_filename = first_mem['text-only_filename']
+                # sometimes there are no first memento because the mementos
+                # are not able to be processed (i.e., not a supported format
+                # like HTML)
+                if first_mem != None:
 
-                first = fileids[first_mem_filename]
+                    first_mem_filename = first_mem['text-only_filename']
+    
+                    first = fileids[first_mem_filename]
+ 
+                    tfidf_matrix = tfidf.fit_transform(filesdata.values())
+    
+                    csresults = cosine_similarity(tfidf_matrix[first], tfidf_matrix)
+    
+                    for i in range(0, len(csresults[0])):
+                        mementos[i].setdefault('measures', {})
+                        mementos[i]['measures']['cosine'] = Decimal(csresults[0][i])
+                      
+                        if 'on-topic' not in mementos[i]['measures']:
+    
+                            mementos[i]['measures']['on_topic'] = True
+    
+                            if Decimal(csresults[0][i]) < Decimal(self.threshold):
+                                mementos[i]['measures']['on_topic'] = False
+                                mementos[i]['measures']['off_topic_measure'] = \
+                                    'cosine'
 
-                tfidf_matrix = tfidf.fit_transform(filesdata.values())
-
-                csresults = cosine_similarity(tfidf_matrix[first], tfidf_matrix)
-
-                for i in range(0, len(csresults[0])):
-                    mementos[i].setdefault('measures', {})
-                    mementos[i]['measures']['cosine'] = Decimal(csresults[0][i])
-                  
-                    if 'on-topic' not in mementos[i]['measures']:
-
-                        mementos[i]['measures']['on_topic'] = True
-
-                        if Decimal(csresults[0][i]) < Decimal(self.threshold):
-                            mementos[i]['measures']['on_topic'] = False
-                            mementos[i]['measures']['off_topic_measure'] = \
-                                'cosine'
+            else:
+                if len(updated_filedata[urit]['mementos']) == 1:
+                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                else:
+                    logger.info(
+                        "TimeMap for {} has no mementos, skipping...".format(
+                        urit))
 
         return updated_filedata
 
 class CosineSimilarityAgainstSingleResource(TopicProcessor):
 
-    def get_scores(self, input_filedata, score_data):
-        # TODO: eliminate everything that is not HTML, text, or PDF
+    def get_scores(self, input_filedata):
+        # eliminate every file that is not HTML, text
+        updated_filedata = mark_unsupported_items(input_filedata)
 
         # strip all tags out of all remaining content
         updated_filedata = remove_boilerplate(input_filedata)
@@ -322,7 +472,8 @@ class CosineSimilarityAgainstSingleResource(TopicProcessor):
 
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
-            if len(updated_filedata[urit]['mementos']) > 0:
+            # also, if there is only 1 memento, it isn't really off-topic, is it?
+            if len(updated_filedata[urit]['mementos']) > 1:
 
                 first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
@@ -336,45 +487,62 @@ class CosineSimilarityAgainstSingleResource(TopicProcessor):
 
                 for memento in updated_filedata[urit]['mementos']:
 
-                    filename = memento['text-only_filename']
-                    self.logger.debug(
-                        "working on file {} corresponding to URI-M {}"
-                        .format( filename, memento['uri-m']))
+                    if memento['processed_for_off_topic'] == True:
+                        filename = memento['text-only_filename']
+                        logger.debug(
+                            "working on file {} corresponding to URI-M {}"
+                            .format( filename, memento['uri-m']))
 
-                    with open(filename) as f:
-                        filedata = f.read()
+                        with open(filename) as f:
+                            filedata = f.read()
 
-                    tfidf_matrix = tfidf.fit_transform(
-                        [ first_filedata, filedata ]
-                        )
+                        tfidf_matrix = tfidf.fit_transform(
+                            [ first_filedata, filedata ]
+                            )
 
-                    csresults = cosine_similarity(
-                        tfidf_matrix[0], tfidf_matrix[1])
+                        csresults = cosine_similarity(
+                            tfidf_matrix[0], tfidf_matrix[1])
 
-                    memento.setdefault('measures', {})
-                    memento['measures']['cosine'] = Decimal(csresults[0][0])
+                        memento.setdefault('measures', {})
+                        memento['measures']['cosine'] = Decimal(csresults[0][0])
 
-                    if 'on_topic' not in memento['measures']:
-                        self.logger.info("checking if URI-M {} is off-topic"
-                            " with cosine score {} and threshold {}"
-                            .format(memento['uri-m'], csresults[0][0],
-                            self.threshold))
-                    
-                        memento['measures']['on_topic'] = True
-                    
-                        if Decimal(csresults[0][0]) < Decimal(self.threshold):
-                            memento['measures']['on_topic'] = False
-                            memento['measures']['off_topic_measure'] = \
-                                'cosine'
-                            self.logger.info("URI-M {} is off-topic".format(
-                                memento['uri-m']))
+                        if 'on_topic' not in memento['measures']:
+                            logger.debug("checking if URI-M {} is off-topic"
+                                " with cosine score {} and threshold {}"
+                                .format(memento['uri-m'], csresults[0][0],
+                                self.threshold))
+                        
+                            memento['measures']['on_topic'] = True
+                        
+                            if Decimal(csresults[0][0]) < Decimal(self.threshold):
+                                memento['measures']['on_topic'] = False
+                                memento['measures']['off_topic_measure'] = \
+                                    'cosine'
+                                logger.debug("URI-M {} is off-topic".format(
+                                    memento['uri-m']))
+
+            else:
+                if len(updated_filedata[urit]['mementos']) == 1:
+                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                else:
+                    logger.info(
+                        "TimeMap for {} has no mementos, skipping...".format(
+                        urit))
 
         return updated_filedata 
 
 class JaccardDistanceAgainstSingleResource(TopicProcessor):
 
-    def get_scores(self, input_filedata, score_data):
-        # TODO: eliminate everything that is not HTML, text, or PDF
+    def get_scores(self, input_filedata):
+
+        # trash in, trash out
+        if input_filedata == None:
+            return None
+
+        # eliminate every file that is not HTML, text
+        updated_filedata = mark_unsupported_items(input_filedata)
 
         # strip all tags out of all remaining content
         updated_filedata = remove_boilerplate(input_filedata)
@@ -383,39 +551,46 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
 
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
-            if len(updated_filedata[urit]['mementos']) > 0:
+            # also, if there is only 1 memento, it isn't really off-topic, is it?
+            if len(updated_filedata[urit]['mementos']) > 1:
 
                 first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
                 with open(first_mem['text-only_filename']) as f:
                     first_tokens = tokenize(f.read())
-                    first_tokens = remove_stop_words(first_tokens)
+                    first_tokens = remove_stop_words(first_tokens, self.stopwords)
 
                 for memento in updated_filedata[urit]['mementos']:
 
-                    with open(memento['text-only_filename']) as f:
-                        # tokenize, stemming, remove stop words
-                        tokens = tokenize(f.read())
-                        tokens = remove_stop_words(tokens)
+                    if memento['processed_for_off_topic'] == True:
+                        with open(memento['text-only_filename']) as f:
+                            # tokenize, stemming, remove stop words
+                            tokens = tokenize(f.read())
+                            tokens = remove_stop_words(tokens, self.stopwords)
 
-                    jdist = distance.jaccard(tokens, first_tokens)
+                        jdist = distance.jaccard(tokens, first_tokens)
 
-                    memento.setdefault('measures', {})
-                    memento['measures']['jaccard'] = jdist
+                        memento.setdefault('measures', {})
+                        memento['measures']['jaccard'] = jdist
 
-                    if 'on_topic' not in memento['measures']:
-                    
-                        memento['measures']['on_topic'] = True
-                    
-                        if jdist > self.threshold:
-                            memento['measures']['on_topic'] = False
-                            memento['measures']['off_topic_measure'] = \
-                                'jaccard'
+                        if 'on_topic' not in memento['measures']:
+                        
+                            memento['measures']['on_topic'] = True
+                        
+                            if jdist > self.threshold:
+                                memento['measures']['on_topic'] = False
+                                memento['measures']['off_topic_measure'] = \
+                                    'jaccard'
             else:
-                self.logger.info(
-                    "TimeMap for {} has no mementos, skipping...".format(
-                    urit))
+                if len(updated_filedata[urit]['mementos']) == 1:
+                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                else:
+                    logger.info(
+                        "TimeMap for {} has no mementos, skipping...".format(
+                        urit))
 
         return updated_filedata
 
@@ -429,7 +604,7 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
     def generate_term_frequencies(self, data):
 
         tokens = tokenize(data) 
-        tokens = remove_stop_words(tokens)
+        tokens = remove_stop_words(tokens, self.stopwords)
 
         term_frequencies = []
 
@@ -440,7 +615,14 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
 
         return sorted(term_frequencies, reverse=True)
 
-    def get_scores(self, input_filedata, score_data):
+    def get_scores(self, input_filedata):
+
+        # trash in, trash out
+        if input_filedata == None:
+            return None
+
+        # eliminate every file that is not HTML, text
+        updated_filedata = mark_unsupported_items(input_filedata)
 
         # strip all tags out of all remaining content
         updated_filedata = remove_boilerplate(input_filedata)
@@ -449,7 +631,8 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
 
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
-            if len(updated_filedata[urit]['mementos']) > 0:
+            # also, if there is only 1 memento, it isn't really off-topic, is it?
+            if len(updated_filedata[urit]['mementos']) > 1:
 
                 first_mem = find_first_memento(
                     updated_filedata[urit]['mementos'])
@@ -458,27 +641,28 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
                     first_tf = self.generate_term_frequencies(f.read())
 
                 for memento in updated_filedata[urit]['mementos']:
+                    if memento['processed_for_off_topic'] == True:
 
-                    with open(memento['text-only_filename']) as f:
-                        # tokenize, stemming, remove stop words
-                        current_tf = self.generate_term_frequencies(f.read())
+                        with open(memento['text-only_filename']) as f:
+                            # tokenize, stemming, remove stop words
+                            current_tf = self.generate_term_frequencies(f.read())
 
-                    tfdist = self.score_term_frequencies(
-                        first_tf[0:20], current_tf[0:20])
+                        tfdist = self.score_term_frequencies(
+                            first_tf[0:20], current_tf[0:20])
 
-                    memento.setdefault('measures', {})
-                    memento['measures']['tfintersection'] = tfdist
+                        memento.setdefault('measures', {})
+                        memento['measures']['tfintersection'] = tfdist
 
-                    if 'on_topic' not in memento['measures']:
-                    
-                        memento['measures']['on_topic'] = True
-                    
-                        if tfdist > self.threshold:
-                            memento['measures']['on_topic'] = False
-                            memento['measures']['off_topic_measure'] = \
-                                'tfintersection'
+                        if 'on_topic' not in memento['measures']:
+                        
+                            memento['measures']['on_topic'] = True
+                        
+                            if tfdist > self.threshold:
+                                memento['measures']['on_topic'] = False
+                                memento['measures']['off_topic_measure'] = \
+                                    'tfintersection'
             else:
-                self.logger.info(
+                logger.info(
                     "TimeMap for {} has no mementos, skipping...".format(
                     urit))
 
@@ -513,6 +697,5 @@ supported_measures = {
     }
 }
 
-def get_topic_processor(measure, threshold, working_directory, logger):
-    return supported_measures[measure]['class'](
-        threshold, working_directory, logger)
+def get_topic_processor(measure, threshold):
+    return supported_measures[measure]['class'](threshold)

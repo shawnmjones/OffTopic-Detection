@@ -80,7 +80,7 @@ class WARCInput(InputType):
                             headers = {}
     
                             for line in record.http_headers.headers:
-                                key = line[0]
+                                key = line[0].lower()
                                 value = line[1]
     
                                 headers[key] = value

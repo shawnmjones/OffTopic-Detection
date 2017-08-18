@@ -1,0 +1,14 @@
+{
+    "cache-control": "max-age=300",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Tue, 01 Feb 2011 02:03:26 GMT",
+    "expires": "Tue, 01 Feb 2011 02:08:26 GMT",
+    "last-modified": "Wed, 11 Jan 1984 08:00:00 GMT",
+    "location": "path_to_url",
+    "server": "nginx",
+    "source-age": "5293",
+    "via": "1.1 varnish",
+    "x-varnish": "2780528296 2764928019",
+    "content-length": "0",
+    "connection": "close"
+}
