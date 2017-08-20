@@ -145,7 +145,12 @@ def mark_unsupported_items(filedata):
         for memento in mementos:
 
             with open(memento['headers_filename']) as f:
-                headers = json.load(f)
+                json_headers = json.load(f)
+
+                headers = {}
+
+                for key in json_headers:
+                    headers[key.lower()] = json_headers[key]
 
             if 'content-type' in headers:
                 if 'text/html' in headers['content-type']:
@@ -160,8 +165,11 @@ def mark_unsupported_items(filedata):
 
             else:
                 memento['processed_for_off_topic'] =  \
-                    'unknown file format for memento at {}'.format(
+                    'no content-type header for memento at {}'.format(
                         memento['uri-m'])
+
+        updated_filedata.setdefault(urit, {})
+        updated_filedata[urit]['mementos'] = mementos
 
     return updated_filedata
 

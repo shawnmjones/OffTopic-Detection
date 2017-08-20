@@ -1,0 +1,19 @@
+{
+    "Server": "Apache-Coyote/1.1",
+    "Content-Security-Policy-Report-Only": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org data: blob: ; frame-src 'self' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org ; report-uri https://partner.archive-it.org/csp-report",
+    "Memento-Datetime": "Mon, 18 Mar 2013 08:47:24 GMT",
+    "Link": "<https://www.facebook.com/elshaheeed.co.uk>; rel=\"original\", <http://wayback.archive-it.org/2358/timemap/link/https://www.facebook.com/elshaheeed.co.uk>; rel=\"timemap\"; type=\"application/link-format\", <http://wayback.archive-it.org/2358/https://www.facebook.com/elshaheeed.co.uk>; rel=\"timegate\", <http://wayback.archive-it.org/2358/20110223063427/https://www.facebook.com/elshaheeed.co.uk>; rel=\"first memento\"; datetime=\"Wed, 23 Feb 2011 06:34:27 GMT\", <http://wayback.archive-it.org/2358/20130317084721/https://www.facebook.com/elshaheeed.co.uk>; rel=\"prev memento\"; datetime=\"Sun, 17 Mar 2013 08:47:21 GMT\", <http://wayback.archive-it.org/2358/20130318084724/https://www.facebook.com/elshaheeed.co.uk>; rel=\"memento\"; datetime=\"Mon, 18 Mar 2013 08:47:24 GMT\", <http://wayback.archive-it.org/2358/20130319084726/https://www.facebook.com/elshaheeed.co.uk>; rel=\"next memento\"; datetime=\"Tue, 19 Mar 2013 08:47:26 GMT\", <http://wayback.archive-it.org/2358/20170324111505/https://www.facebook.com/elshaheeed.co.uk>; rel=\"last memento\"; datetime=\"Fri, 24 Mar 2017 11:15:05 GMT\"",
+    "X-XSS-Protection": "0",
+    "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+    "Set-Cookie": "reg_fb_ref=https%3A%2F%2Fwww.facebook.com%2Felshaheeed.co.uk; path=/; domain=.facebook.com",
+    "Connection": "close, close",
+    "X-Content-Type-Options": "nosniff",
+    "Cache-Control": "private, no-cache, no-store, must-revalidate",
+    "Pragma": "no-cache",
+    "X-FB-Debug": "J1FnbG9wZPslDk7Ci84KhM93m+oPKNiYaZdjGZ12ZQk=",
+    "X-Frame-Options": "DENY",
+    "Date": "Mon, 18 Mar 2013 08:47:24 GMT",
+    "P3P": "CP=\"Facebook does not have a P3P policy. Learn why here: http://fb.me/p3p\"",
+    "Content-Type": "text/html;charset=utf-8",
+    "Content-Length": "69294"
+}

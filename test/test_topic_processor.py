@@ -9,7 +9,6 @@ sys.path.append('../off_topic')
 import  datetime
 import topic_processor as tp
 
-
 logging.basicConfig(level=logging.DEBUG)
 
 # this is useful for debugging at times
@@ -203,4 +202,42 @@ class TestErrorStates(unittest.TestCase):
         for measure in measures:
             test_each_measure(measures[measure], filedata)
 
+    def test_mark_unsupported_items_supported_content_type_html(self):
 
+        filedata = {
+            'test': {
+                'mementos': [
+                    {
+                        'uri-m': 'local-archive:test1',
+                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+                        'content_filename': '{}/samplecontent/facebook_example.dat'.format(working_dir),
+                        'headers_filename': '{}/samplecontent/facebook_example.hdr'.format(working_dir)
+                    }
+                ]
+            }
+        }
+
+        outdata = tp.mark_unsupported_items(filedata)
+
+        self.assertEqual(outdata['test']['mementos'][0]['content-type'], 'text/html;charset=utf-8')
+        self.assertTrue(outdata['test']['mementos'][0]['processed_for_off_topic'])
+
+#    def test_mark_unsupported_items_unsupported_content_type_jpg(self):
+#
+#        filedata = {
+#            'test': {
+#                'mementos': [
+#                    {
+#                        'uri-m': 'local-archive:test1',
+#                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+#                        'content_filename': '{}/samplecontent/facebook_example.dat'.format(working_dir),
+#                        'headers_filename': '{}/samplecontent/facebook_example.hdr'.format(working_dir)
+#                    }
+#                ]
+#            }
+#        }
+#
+#        outdata = tp.mark_unsupported_items(filedata)
+#
+#        self.assertEqual(outdata['test']['mementos'][0]['content-type'], 'text/html;charset=utf-8')
+#        self.assertFalse(outdata['test']['mementos'][0]['processed_for_off_topic'])

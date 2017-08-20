@@ -29,13 +29,9 @@ def generate_logger():
 
 logger = generate_logger()
 
-#mementoExpression = re.compile( r"(<.*//[A-Za-z0-9.:=/&,%-_ \?]*>;\s?rel=\"(memento|first memento|last memento|first memento last memento|first last memento)\";\s?datetime=\"(Sat|Sun|Mon|Tue|Wed|Thu|Fri), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (19|20)\d\d \d\d:\d\d:\d\d GMT\")" )
-#mementoExpression = re.compile( r"<(.*//[^>]*)>;\s?rel=\"(memento|first memento|last memento|first memento last memento|first last memento)\";")
-#mementoExpression = re.compile( r"<([^>]*)>;\s?rel=\"(memento|first memento|last memento|first memento last memento|first last memento)\";")
 mementoExpression = re.compile( r"<([^>]*)>;\s?rel=\".*memento.*\";")
 mementoDatetimeExpression = re.compile( r"datetime=\"([^\"]*)")
-#originalResourceExpression = re.compile( r"<(.*//[A-Za-z0-9.:=/&,%-_ \?]*)>;\s?rel=\"original\"" )
-originalResourceExpression = re.compile( r"<(.*//[^>]*)>;\s?rel=\"original\"" )
+originalResourceExpression = re.compile( r"<([^>]*)>;\s?rel=\"original\"" )
 
 wayback_domain_list = [
     'wayback.archive-it.org'
@@ -127,9 +123,13 @@ def download_uri_list(uri_list, output_directory):
                     working_uri_list.remove(uri)
                 except ConnectionError as e:
                     metadata_writer.writerow([uri, "ERROR", e, None, None])
+                    logger.error("Connection Error while downloading URI {},"
+                        "error text: {}".format(uri, e))
                     working_uri_list.remove(uri)
                 except TooManyRedirects as e:
                     metadata_writer.writerow([uri, "ERROR", e, None, None])
+                    logger.error("Too Many Redirects while downloading URI {},"
+                        "error text: {}".format(uri, e))
                     working_uri_list.remove(uri)
 
             time.sleep(1)
@@ -143,23 +143,21 @@ def parse_metadata_to_dict(directory):
 
     logger.info("parsing data from metadata file {}".format(metadata_filename))
 
-    metadata_file = open(metadata_filename)
+    with open(metadata_filename) as metadata_file:
 
-    metadata_reader = csv.reader(metadata_file, delimiter='\t', quotechar='"')
-
-    for row in metadata_reader:
-        uri = row[0] 
-        status_code = row[1]
-        response_uri = row[2]
-        content_filename = row[3]
-        headers_filename = row[4]
-
-        metadata_dict.setdefault(uri, {})
-        metadata_dict[uri]["content_filename"] = content_filename
-        metadata_dict[uri]["headers_filename"] = headers_filename
-        metadata_dict[uri]["status"] = status_code
-
-    metadata_file.close()
+        metadata_reader = csv.reader(metadata_file, delimiter='\t', quotechar='"')
+    
+        for row in metadata_reader:
+            uri = row[0] 
+            status_code = row[1]
+            response_uri = row[2]
+            content_filename = row[3]
+            headers_filename = row[4]
+    
+            metadata_dict.setdefault(uri, {})
+            metadata_dict[uri]["content_filename"] = content_filename
+            metadata_dict[uri]["headers_filename"] = headers_filename
+            metadata_dict[uri]["status"] = status_code
 
     return metadata_dict
 
@@ -177,7 +175,7 @@ def parse_TimeMap_into_dict(filename, convert_raw_mementos=True):
         try:
             tmdict["original"] = original_resource[0]
         except IndexError:
-            logger.warn("TimeMap in file {} could not be processed".format(filename))
+            logger.error("TimeMap in file {} could not be processed".format(filename))
             return
 
         memento_entries = re.findall(mementoExpression, tmdata)
@@ -196,7 +194,10 @@ def parse_TimeMap_into_dict(filename, convert_raw_mementos=True):
                 if convert_raw_mementos \
                     and urlparse(urim).netloc in wayback_domain_list \
                     and '/timemap/' not in urim:
-                    urim = urim.replace('/http', 'id_/http')
+
+                    # in case we have a TimeMap that actually lists raw mementos
+                    if 'id_/http' not in urim: 
+                        urim = urim.replace('/http', 'id_/http')
 
                 dt = datetime.strptime(memento_datetime_entries[i],
                     "%a, %d %b %Y %H:%M:%S GMT")
@@ -228,7 +229,6 @@ def parse_downloads_into_structure(top_directory):
     timemaps_dir = "{}/timemaps".format(top_directory)
 
     mementos_dir = "{}/mementos".format(top_directory)
-    mementos_metadata_filename = "{}/metadata.tsv".format(mementos_dir)
     memento_metadata = parse_metadata_to_dict(mementos_dir)
 
     if not os.path.isdir(timemaps_dir):
@@ -262,17 +262,22 @@ def parse_downloads_into_structure(top_directory):
                 mementos = []
 
                 for memento in tm_memdata["mementos"]:
+
                     logger.debug("memento: {}".format(memento))
                 
                     urim = memento['uri-m']
-                
-                    memento['content_filename'] = \
-                        memento_metadata[urim]['content_filename']
 
-                    memento['headers_filename'] = \
-                        memento_metadata[urim]['headers_filename']
+                    # if there was an error in downloading, then there is
+                    # no content to be processed so don't include it
+                    if memento_metadata[urim]['status'] != 'ERROR':
                 
-                    mementos.append(memento)
+                        memento['content_filename'] = \
+                            memento_metadata[urim]['content_filename']
+    
+                        memento['headers_filename'] = \
+                            memento_metadata[urim]['headers_filename']
+                    
+                        mementos.append(memento)
                 
                 timemap_data[timemap] = {}
                 timemap_data[timemap]["mementos"] = mementos
