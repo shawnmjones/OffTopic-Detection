@@ -1,0 +1,14 @@
+{
+    "Content-Security-Policy-Report-Only": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org data: blob: ; frame-src 'self' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org ; report-uri https://partner.archive-it.org/csp-report",
+    "Memento-Datetime": "Wed, 01 Aug 2012 13:39:47 GMT",
+    "Link": "<http://www.ahram.org.eg/>; rel=\"original\", <http://wayback.archive-it.org/2358/timemap/link/http://www.ahram.org.eg/>; rel=\"timemap\"; type=\"application/link-format\", <http://wayback.archive-it.org/2358/http://www.ahram.org.eg/>; rel=\"timegate\", <http://wayback.archive-it.org/2358/20110218084037/http://www.ahram.org.eg/>; rel=\"first memento\"; datetime=\"Fri, 18 Feb 2011 08:40:37 GMT\", <http://wayback.archive-it.org/2358/20120731140739/http://www.ahram.org.eg/>; rel=\"prev memento\"; datetime=\"Tue, 31 Jul 2012 14:07:39 GMT\", <http://wayback.archive-it.org/2358/20120801133947/http://www.ahram.org.eg/>; rel=\"memento\"; datetime=\"Wed, 01 Aug 2012 13:39:47 GMT\", <http://wayback.archive-it.org/2358/20120801133952/http://www.ahram.org.eg/>; rel=\"next memento\"; datetime=\"Wed, 01 Aug 2012 13:39:52 GMT\", <http://wayback.archive-it.org/2358/20161103080405/http://www.ahram.org.eg/>; rel=\"last memento\"; datetime=\"Thu, 03 Nov 2016 08:04:05 GMT\"",
+    "X-AspNet-Version": "2.0.50727",
+    "Date": "Wed, 01 Aug 2012 13:36:39 GMT",
+    "Set-Cookie": "UserArab=IsArabIP=0; expires=Wed, 01-Aug-2012 16:36:40 GMT; path=/",
+    "Connection": "close, close",
+    "Server": "Microsoft-IIS/7.5",
+    "X-Powered-By": "ASP.NET",
+    "Cache-Control": "private",
+    "Content-Type": "text/html;charset=utf-8",
+    "Content-Length": "176127"
+}

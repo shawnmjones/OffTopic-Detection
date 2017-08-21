@@ -1,0 +1,12 @@
+{
+    "Content-Security-Policy-Report-Only": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org data: blob: ; frame-src 'self' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org ; report-uri https://partner.archive-it.org/csp-report",
+    "Memento-Datetime": "Thu, 24 May 2012 10:36:23 GMT",
+    "Link": "<http://www.elections.eg/>; rel=\"original\", <http://wayback.archive-it.org/2358/timemap/link/http://www.elections.eg/>; rel=\"timemap\"; type=\"application/link-format\", <http://wayback.archive-it.org/2358/http://www.elections.eg/>; rel=\"timegate\", <http://wayback.archive-it.org/2358/20120506152914/http://www.elections.eg/>; rel=\"first memento\"; datetime=\"Sun, 06 May 2012 15:29:14 GMT\", <http://wayback.archive-it.org/2358/20120506152919/http://www.elections.eg/>; rel=\"prev memento\"; datetime=\"Sun, 06 May 2012 15:29:19 GMT\", <http://wayback.archive-it.org/2358/20120524103623/http://www.elections.eg/>; rel=\"memento\"; datetime=\"Thu, 24 May 2012 10:36:23 GMT\", <http://wayback.archive-it.org/2358/20140224173443/http://www.elections.eg/>; rel=\"next memento\"; datetime=\"Mon, 24 Feb 2014 17:34:43 GMT\", <http://wayback.archive-it.org/2358/20170724082226/http://www.elections.eg/>; rel=\"last memento\"; datetime=\"Mon, 24 Jul 2017 08:22:26 GMT\"",
+    "Date": "Thu, 24 May 2012 10:36:24 GMT",
+    "Last-Modified": "Mon, 21 May 2012 14:54:53 GMT",
+    "Connection": "close, close",
+    "Accept-Ranges": "bytes",
+    "Server": "Spirula Web Server",
+    "Content-Type": "text/html",
+    "Content-Length": "4985"
+}

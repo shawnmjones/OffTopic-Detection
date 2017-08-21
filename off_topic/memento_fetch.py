@@ -166,6 +166,7 @@ def parse_TimeMap_into_dict(filename, convert_raw_mementos=True):
     logger.debug("parsing timemap filename: {}".format(filename))
 
     tmdict = {}
+    tmdict.setdefault("mementos", {})
 
     with open(filename) as tmfile:
         tmdata = tmfile.read()
@@ -186,7 +187,9 @@ def parse_TimeMap_into_dict(filename, convert_raw_mementos=True):
 
         if len(memento_entries) > 0:
 
-            logger.debug(memento_entries)
+            logger.debug("memento entries: {}".format(memento_entries))
+
+            memento_data = {}
     
             for i in range(0, len(memento_entries)):
                 urim = memento_entries[i]
@@ -208,15 +211,10 @@ def parse_TimeMap_into_dict(filename, convert_raw_mementos=True):
                 if urim[0:2] == "//":
                     urim = "https:{}".format(urim)
 
-                memento_data = {
-                    "uri-m": urim,
-                    "memento-datetime": dt
-                }
-    
-                tmdict.setdefault("mementos", []).append(memento_data)
+                memento_data[urim] = {}
+                memento_data[urim]['memento-datetime'] = dt
 
-        else:
-            tmdict["mementos"] = []
+            tmdict["mementos"] = memento_data
 
     return tmdict
 
@@ -259,13 +257,13 @@ def parse_downloads_into_structure(top_directory):
     
                 original = tm_memdata["original"]
         
-                mementos = []
+                mementos = {}
 
-                for memento in tm_memdata["mementos"]:
+                for urim in tm_memdata["mementos"]:
+
+                    memento = tm_memdata["mementos"][urim]
 
                     logger.debug("memento: {}".format(memento))
-                
-                    urim = memento['uri-m']
 
                     # if there was an error in downloading, then there is
                     # no content to be processed so don't include it
@@ -277,7 +275,7 @@ def parse_downloads_into_structure(top_directory):
                         memento['headers_filename'] = \
                             memento_metadata[urim]['headers_filename']
                     
-                        mementos.append(memento)
+                        mementos[urim] = memento
                 
                 timemap_data[timemap] = {}
                 timemap_data[timemap]["mementos"] = mementos
@@ -330,9 +328,7 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
 
                 urims = []
 
-                for memento_data in tmdict["mementos"]:
-
-                    urim = memento_data["uri-m"]
+                for urim in tmdict["mementos"]:
 
                     logger.debug("appending urim {}".format(urim))
                     urims.append(urim)

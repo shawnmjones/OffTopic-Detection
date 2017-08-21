@@ -32,10 +32,10 @@ class TestParseDownloadsIntoStructure(unittest.TestCase):
         
         shutil.copytree('samplecontent', "{}/samplecontent".format(working_dir))
 
-    @classmethod
-    def tearDownClass(cls):
-
-        shutil.rmtree(working_dir)
+#    @classmethod
+#    def tearDownClass(cls):
+#
+#        shutil.rmtree(working_dir)
 
     def test_key_error(self):
 
@@ -73,8 +73,8 @@ class TestDownloads(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
 
-        #logger = logging.getLogger(__name__)
-        #mf.logger = logger
+        logger = logging.getLogger(__name__)
+        mf.logger = logger
 
         if not os.path.isdir(working_dir):
             os.makedirs(working_dir)
@@ -85,10 +85,10 @@ class TestDownloads(unittest.TestCase):
         
         shutil.copytree('samplecontent', "{}/samplecontent".format(working_dir))
 
-    @classmethod
-    def tearDownClass(cls):
-
-        shutil.rmtree(working_dir)
+#    @classmethod
+#    def tearDownClass(cls):
+#
+#        shutil.rmtree(working_dir)
 
     def test_download_TimeMaps_and_mementos_happy_path(self):
 
@@ -100,6 +100,9 @@ class TestDownloads(unittest.TestCase):
 
         with open('{}/timemaps/no_mementos_list.txt'.format(test_working_dir)) as f:
             data = f.read()
+
+        pp.pprint(os.listdir(test_working_dir))
+        pp.pprint(os.listdir(test_working_dir + '/mementos/'))
 
         self.assertEqual(len(data), 0)
 

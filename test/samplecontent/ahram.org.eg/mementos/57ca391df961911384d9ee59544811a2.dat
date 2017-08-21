@@ -1,0 +1,2055 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<script src="scripts/xgemius.js" type="text/javascript"></script>
+
+<html>
+<head id="Head1"><title>
+	الأهرام اليومى
+</title><base id="MainBase" href="http://www.ahram.org.eg/"></base><meta name="msapplication-task" content="name=الاهرام اليومى;action-uri=http://www.ahram.org.eg/;icon-uri=http://www.ahram.org.eg/images/favicon.ico"><meta name="application-name" content="الاهرام اليومى"><meta name="msapplication-tooltip" content="الاهرام اليومى"><meta http-equiv="Content-Language" content="ar-eg"><meta http-equiv="Content-Type" content="text/html; charset=windows-1256"><link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" /><link href="css/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="interstitial.css" />
+    <script type="text/javascript" src="interstitial.js"></script>
+    <script type="text/javascript" src="jx.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
+    <script src="js/SitePinning.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/expand.js"></script>
+    <script type="text/javascript" src="js/featuredcontentglider.js"></script>
+    <link type="text/css" href="css/featuredcontentglider.css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="style.css" /><meta name="google-site-verification" content="KsVThSxcjMj9RxzJYpyPbgsBl0-4w0VcecuQHPmNngM">
+    <script type="text/javascript">
+        if (navigator.appName == "Netscape") {
+            var IE = 0
+        }
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            var IE = 1
+        }
+    
+    </script>
+    <style type="text/css">
+        .WebAppStyle
+        {
+            display: none;
+            direction: rtl;
+            font-size: 14px;
+            border-width: thin;
+            border-color: #ffffff;
+            border-style: solid;
+            margin-bottom: 10px;
+            background-color: #cd0001;
+            text-align: right;
+        }
+        .WebAppStyle a, .WebAppStyle a:active, .WebAppStyle a:link, .WebAppStyle a:visited
+        {
+            text-decoration: none;
+            color: White;
+            text-align: right;
+        }
+        .WebAppStyle a:hover
+        {
+            text-decoration: underline;
+            color: White;
+            text-align: right;
+        }
+        .style1
+        {
+            width: 7px;
+        }
+    </style>
+<meta name="Keywords" content="موقع اخبار,اخر اخبار,اخبار النجوم,اخبار الرياضة,اخبار العالم,الاخبار,اخبار فنية
+                        ,اخبار العرب,أخر اخبار,اخر اخبار العالم,اخبار العالم اليوم,اخبار مصر اليوم,شبكة اخبار,آخر الاخبار,اخبار الطقس,اخبار,reyada,أخبارك,akhbarak,الرياضه,المسائي,الفنانين,رياضة,العالم"><meta name="Description" content="الأهرام اليومى"></head>
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" onload="initApp();">
+    <form name="aspnetForm" method="post" action="/index.aspx" id="aspnetForm" onsubmit="return disableEnterKey(event)">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTI5Nzk3MzQ1OGRkFVBZ/LGBZRwXSVMo+sxkW/z44OA=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKJ8tihBwLvhpnPDarl9VK+cghMop70TwWtHeszcIdE" />
+    
+
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+
+
+<script type="text/javascript">    var _sf_startpt = (new Date()).getTime()</script>
+
+<script src="rssticker.js" type="text/javascript" />
+<script type="text/javascript">
+    (function () {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+    })();
+</script>
+<noscript>
+    <img src="//me.effectivemeasure.net/em_image" alt="" style="position: absolute; left: -5px;" />
+</noscript>
+<script type="text/javascript">
+    function showcalendar() {
+        var CalDiv = document.getElementById("CalDiv")
+        if (caldiv.style.display == 'none') {
+            caldiv.style.display = 'block'
+        } else {
+            caldiv.style.display = 'none'
+        }
+    }
+    function fixform() {
+        if (document.getElementById("aspnetForm").target != "_blank") return;
+
+        //document.getElementById("aspnetForm").target = "";
+        //document.getElementById("aspnetForm").action = opener.location.href;
+    }
+
+
+    function ChckTextSearch(theinput, action) {
+        //
+        input = document.getElementById("Header1_txtSearch");
+        if (input == null) {
+            input = theinput;
+        }
+        //alert(input);
+        var myvalue = input.value;
+
+        if (action == 0) {
+            if (input.value == "بحث") {
+                myvalue = ""
+            }
+        } else {
+            if (input.value == "") {
+                myvalue = "بحث";
+            }
+        }
+        //alert(myvalue)
+        input.value = myvalue;
+    }
+    function disableEnterKey(e) {
+        var key;
+
+        if (window.event)
+            key = window.event.keyCode;     //IE
+        else
+            key = e.which;     //firefox
+
+        if (key == 13)
+            return false;
+        else
+            return true;
+    }
+
+    function CheckSearchForm() {
+        value = document.getElementById("Header1_txtSearch").value
+        if (value == "بحث") {
+            alert("برجاء كتابة كلمة البحث");
+            return false;
+        }
+        if (value.length < 3) {
+            alert("برجاء ادخال كلمة بحث لا تقل عن 3 حروف");
+            return false;
+        }
+        return true;
+    }
+    function Sho_moshax() {
+        hideFlash();
+        showcontainer()
+        data = '<object width="640" height="505"><param name="movie" value="http://www.youtube.com/v/XChlE0HpvgQ?fs=1&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/XChlE0HpvgQ?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed></object>';
+        document.getElementById("interContent").innerHTML = data;
+
+    }
+        
+</script>
+<style type="text/css">
+    /* --------
+      The CSS rules offered here are just an example, you may use them as a base. 
+      Shape your 'expand/collapse' content so that it meets the style of your site. 
+     --------- */
+     
+     .header_daily_9
+{
+	background-image:url(images/daily_logo.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	width:659px;
+	height:90px;
+	margin:0 auto;
+	font-family:"Times New Roman", Times, serif;
+	text-align:center;
+	direction:rtl;
+}
+.right_text_9{
+	float:right;
+	width:140px;
+	font-size:20px;
+	color:#000;
+	margin:20px
+}
+.right_text_9 span{
+	color:#000}
+.left_text_9{
+	float:left;
+	width:140px;
+	font-size:20px;
+	color:#000;
+	margin:20px
+}
+.left_text_9 span{
+	color:#000}
+	
+	
+    #wrapper
+    {
+        margin: 0 auto;
+    }
+    #content
+    {
+    }
+    .demo
+    {
+        /*
+      margin:0;
+      
+      padding:1.5em 1.5em 0.75em;
+      border:1px solid #ccc;
+      
+      position:relative
+      */
+    }
+    .collapse p
+    {
+        padding: 0 10px 1em;
+    }
+    .top
+    {
+        font-size: .9em;
+        text-align: right;
+    }
+    #switch, .switch
+    {
+        margin-bottom: 5px;
+        text-align: right;
+    }
+    
+    /* --- Headings  --- */
+    h1
+    {
+        margin-bottom: .75em;
+        font-family: georgia, 'times new roman' ,times,serif;
+        font-size: 2.5em;
+        font-weight: normal;
+        color: #c30;
+    }
+    h2
+    {
+        font-size: 1em;
+        margin-left: 15px;
+    }
+    
+    .expand
+    {
+        padding-bottom: 0;
+    }
+    
+    /* --- Links  --- */
+    a:link, a:visited
+    {
+        text-decoration: none;
+    }
+    a:hover, a:active, a:focus
+    {
+        text-decoration: none;
+    }
+    a:active, a:focus
+    {
+    }
+    .expand a
+    {
+        display: block;
+    }
+    .expand a:link, .expand a:visited
+    {
+        background-image: url(images/d-adv-tp01.jpg);
+        background-repeat: no-repeat;
+    }
+    .expand a:hover, .expand a:active, .expand a:focus
+    {
+    }
+    .expand a.open:link, .expand a.open:visited
+    {
+        background-image: url(images/d-adv-tp02.jpg);
+        background-repeat: no-repeat;
+    }
+    
+    .page
+    {
+        margin: auto;
+        text-align: center;
+    }
+    .top_img
+    {
+        width: 948px;
+        height: 54px;
+        background-repeat: no-repeat;
+    }
+    .right_top_img
+    {
+        float: right;
+        width: 102px;
+        height: 49px;
+        margin-top: 5px;
+    }
+    .left_top_img
+    {
+        float: right;
+        width: 893px;
+        height: 54px;
+    }
+    .collapse
+    {
+        margin: 0 auto;
+        text-align: right;
+        width: 948px;
+        height: 379px;
+        background-image: url(images/d-adv-tp03.jpg);
+        background-repeat: no-repeat;
+        display: none;
+    }
+    .img1
+    {
+        float: right;
+        width: 392px;
+        height: 333px;
+    }
+    .img2
+    {
+        float: right;
+        width: 144px;
+        height: 333px;
+    }
+    .img3
+    {
+        float: right;
+        width: 335px;
+        height: 333px;
+        border: none;
+    }
+    .img4
+    {
+        float: right;
+        width: 120px;
+        height: 333px;
+    }
+    .footer_img
+    {
+        width: 948px;
+        height: 46px;
+        background-image: url(images/footer_img.jpg);
+        background-repeat: no-repeat;
+    }
+    .right_footer_img
+    {
+        width: 871px;
+    }
+    .left_footer_img
+    {
+        float: right;
+        width: 125px;
+        height: 46px;
+    }
+    .img_close
+    {
+        float: right;
+        width: 61px;
+        height: 16px;
+        margin-top: 10px;
+        margin-right: 30px;
+    }
+    .LoginGate
+    {
+        float: right;
+        text-align: center;
+        padding-top: 310px;
+        padding-right: 40px;
+        width: 100px;
+    }
+    
+    .OVid
+    {
+        float: right;
+        padding-top: 10px;
+        padding-right: 210px;
+        width: 300px;
+    }
+    
+    #hassan
+    {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+</style>
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+    <tr>
+        <td id="Header1_tdGoogle" valign="top" align="right" style="position: fixed;
+            z-index: 10; margin-left: -250px; float: left; width: 250px;"><iframe src='http://www.ahram.org.eg/newadv/a.aspx?ZoneID=83&amp;Task=Get&amp;PageID=8687&amp;SiteID=1'
+                                                width='180' height='720' marginwidth='0' marginheight='0' hspace='0' vspace='0'
+                                                frameborder='0' scrolling='No'>
+                                                <script language='javascript1.1' src='http://www.ahram.org.eg/newadv/a.aspx?ZoneID=83&amp;Task=Get&amp;Browser=NETSCAPE4&amp;NoCache=True&PageID=8687&amp;SiteID=1'></script>
+                                                <noscript>
+                                                    <a href='http://www.ahram.org.eg/newadv/a.aspx?ZoneID=83&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=8687'
+                                                        target='_blank'>
+                                                        <img src='http://www.ahram.org.eg/newadv/a.aspx?ZoneID=83&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=8687'
+                                                            width='180' height='720' border='0' alt=''></a>
+                                                </noscript>
+                                            </iframe></td>
+
+        <td width="997px">
+            <div align="center" dir="rtl">
+                <table border="0" width="997" cellspacing="0" cellpadding="0" height="29" background="images/date_bg.jpg">
+                    <tr>
+                        <td>
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="25">
+                                        &nbsp;
+                                    </td>
+                                    <td id="Header1_DateTD" align="right" style="width: 450px;"><font color='#FFFFFF' size='2'>الخميس 18 من ذى القعدة 1433 هـ  &nbsp; 4 اكتوبر 2012 السنة 137 العدد 45958</font></td>
+
+                                    <td id="Header1_tdMobile" style="color: #fff; font-family: Tahoma,Geneva,sans-serif; font-size: 16px; font-weight: bold;
+                                        text-align: center; direction: rtl;">
+                                        
+                                    </td>
+
+                                    <td id="Header1_oldIssue">
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div align="center">
+                <table border="0" width="997" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="9">
+                            <img border="0" src="images/lvl02_fill.jpg" width="9" height="14">
+                        </td>
+                        <td width="9">
+                            <img border="0" src="images/lvl02_leftcrn.jpg" width="9" height="14">
+                        </td>
+                        <td background="images/lvl02_bg.jpg">
+                            <img border="0" src="images/lvl02_bg.jpg" width="3" height="14">
+                        </td>
+                        <td width="9">
+                            <img border="0" src="images/lvl02_rightcrn.jpg" width="9" height="14">
+                        </td>
+                        <td width="9">
+                            <img border="0" src="images/lvl02_fill.jpg" width="9" height="14">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div align="center">
+                <table border="0" width="997" cellspacing="0" cellpadding="0" height="84">
+                    <tr>
+                        <td width="9" background="images/lvl02_fill.jpg">
+                            <img border="0" src="images/lvl02_fill.jpg" width="9" height="14">
+                        </td>
+                        <td style="background-image: url(images/lvl03_bg.jpg); background-repeat: repeat-x;">
+                            <table width="100%">
+                                <tr>
+                                    
+                                    <td align="center" valign="top">
+                                        <div id="Header1_divHeader" class="header_daily_9"><div class='right_text_9'>رئيس مجلس الادارة<br /><span>ممدوح الولي</span></div><div class='left_text_9'>رئيس التحرير<br /><span>عبد الناصر سلامة</span></div></div>
+                                        
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="9" background="images/lvl02_fill.jpg">
+                            <img border="0" src="images/lvl02_fill.jpg" width="9" height="14">
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="997" height="100%">
+                    <tr>
+                        <td background="images/red.jpg" width="9" valign="top">
+                            <img border="0" src="images/red.jpg" width="9" height="14">
+                        </td>
+                        <td valign="top">
+                            <div align="center">
+                                <table border="0" cellpadding="0" cellspacing="0" width="979" height="100%" class="wahitetable">
+                                    <tr>
+                                        <td valign="top">
+                                            <div align="center">
+                                                
+                                                                                          
+                                                
+                                                <table border="0" cellpadding="0" cellspacing="0" width="953" class="wahitetable">
+                                                    <tr>
+                                                        <td background="images/px_wight.jpg" height="2" valign="top">
+                                                            <img border="0" src="images/px_wight.jpg" width="7" height="2">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <div align="center">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                    <tr>
+                                                                        <td valign="top">
+                                                                            <div align="center" id="TOpAdv">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                    <tr>
+                                                                                        <td align="center">
+                                                                                            <div id="Header1_divHomeTopLeft" style="text-align: left; vertical-align: middle;">
+                                                                                                
+                                                                                                <img width="205px" height="92px" src="banners/Ahram-sms.png" alt="" border="0" />
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td id="Header1_AdvPlace" align="Right" valign="middle">
+                                                                                            <div id="Header1_divHome"><iframe src='AdsRotator.aspx?typeid=1'  id='AdsRotator' name='IssuesAds' width='730' height='90' frameborder='0' scrolling='no'></iframe></div>
+                                                                                            <div id="Header1_divOuter" align="centr"></div>
+                                                                                            <div id="Header1_divInner" align="center"></div>
+                                                                                        </td>
+
+                                                                                        <td>
+                                                                                            <img src="images/advertisements.jpg" />
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="8" valign="top">
+                                                                            <img border="0" src="Images/trns_px.gif" width="5" height="5">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div id="Header1_divServices" style="float: right; width: 643px;"><div class='right_bar'>
+                                        <div class='right_icon'><img src='images/bar/right_icon.jpg' width='9' height='35' alt='' /></div>
+                                        <div class='center_bar'>
+                                        <div class='logo_1'><a href='http://gate.ahram.org.eg/' alt='بوابة الأهرام' title='بوابة الأهرام' target='_blank'><img src='images/bar/logo3.png' width='81' height='13' alt='' /></a></div>
+                                        <div class='line'><img src='images/bar/line_menu.jpg' width='2' height='22' alt='' /></div>
+                                        <div class='logo_2'><a href='http://english.ahram.org.eg/'  alt='Ahram Online' title='Ahram Online' target='_blank'><img src='images/bar/logo2.jpg' width='78' height='14' alt='' /></a></div>
+                                        
+                                        <div class='line'><img src='images/bar/line_menu.jpg' width='2' height='22' alt='' /></div>
+                                        <div class='logo_10'><a href='http://sport.ahram.org.eg/'  alt='أهرام سبورت' title='أهرام سبورت' target='_blank'><img src='images/bar/sport-logo.png' width='98' height='26' alt='' /></a></div>
+                                        </div>
+
+                                        <div class='icons'>
+                                        <div class='left_iocns'><img src='images/bar/left_icon1.jpg' width='7' height='35' alt='' /></div>
+                                        <div class='bk_icons'>
+                                        <div class='icon_1'><a href='http://itunes.apple.com/us/app/ahram/id499549488?ls=1&mt=8' target='_blank'><img alt='تطبيق الاهرام علي ايفون' title='تطبيق الاهرام علي ايفون' src='images/bar/icon9.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='http://gate.ahram.org.eg/Page/67/Ahram-Mobile-App.aspx' target='_blank'><img  alt='تطبيق الاهرام علي الموبايل' title='تطبيق الاهرام علي الموبايل'  src='images/bar/icon8.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='http://www.youtube.com/AhramGate'  alt='Youtube' title='Youtube' target='_blank'><img src='images/bar/icon1.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='http://twitter.com/eahram' alt='Twitter' title='Twitter' target='_blank'><img src='images/bar/icon2.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='http://www.facebook.com/Alahram.Newspaper' alt='Facebook' title='Facebook' target='_blank'><img src='images/bar/icon3.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='RssContent.aspx' alt='RSS' title='RSS' target='_top' ><img src='images/bar/icon4.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='javascript:void(null)' onclick='ShowDesiredTopic("PrayIndex.aspx?issueid=1041")' title='مواقيت الصلاة' target='_parent'><img src='images/bar/icon5.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='javascript:void(null)' onclick='ShowDesiredTopic("Temprature.aspx?l=1&issueid=1041")' alt='درجات الحرارة' title='درجات الحرارة' target='_parent'><img src='images/bar/icon7.png' width='28' height='28' alt='' /></a></div>
+                                        <div class='icon_1'><a href='javascript:void(null)' onclick='ShowDesiredTopic("NewCurrencies.aspx?issueid=1041")' alt='أسعار العملات' title='أسعار العملات' target='_parent'><img src='images/bar/icon6.png' width='28' height='28' alt='' /></a></div>
+                                        </div>
+                                        </div>
+                                        <div class='left_icon'><img src='images/bar/left_icon.jpg' width='9' height='35' alt='' /></div>
+                                        </div></div>
+                                                                            <div style="float: right; margin-top: 1px;">
+                                                                                <iframe name="I1" src="Searchbox.aspx" width="310px" height="34px" scrolling="no"
+                                                                                    border="0" frameborder="0" marginwidth="1" marginheight="1">Your browser does not
+                                                                                    support inline frames or is currently configured not to display inline frames.
+                                                                                </iframe>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table border="0" cellpadding="0" cellspacing="0" width="950">
+                                                    <tr>
+                                                        <td background="images/px_wight.jpg" height="1" valign="top">
+                                                            <img border="0" src="images/px_wight.jpg" width="7" height="1">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background: url(images/line.jpg); background-repeat: repeat-x;" height="1"
+                                                            valign="top">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="5">
+                                                    <tr>
+                                                        <td height="5" valign="top">
+                                                            <img border="0" src="images/px_wight.jpg" width="7" height="10">
+                                                            <img border="0" src="images/px_wight_gry.jpg" width="3" height="7">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div id="Header1_mawaqe3na">
+                                                </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="953" bgcolor="white">
+        <tr>
+            <td width="100%" valign="top" align="center">
+                <div align="right">
+                    <div id="LeftAdv_mainDiv" align="left" dir="ltr"><iframe src='LeftAdv.aspx?PageID=1' width='128' height='2160' id='LaftAdv' name='IssuesAds' frameborder='0' scrolling='no'></iframe></div>
+
+                </div>
+            </td>
+            <td width="4" valign="top">
+                <img border="0" src="images/px_wight.jpg" width="5" height="11">
+            </td>
+            <td valign="top" width="309" bgcolor="#EFEFEF">
+                <div align="center">
+                    <table border="0" cellpadding="0" cellspacing="0" width="309" bgcolor="#EFEFEF">
+                        <tr>
+                            <td valign="top">
+                                <div align="center">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="309">
+                                        <tr>
+                                            <td valign="top" height="10" width="309">
+                                                <img border="0" src="images/sep_dots.jpg" width="1" height="2"><br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <div id="btnAddWebApp" class="WebAppStyle" style="display: none;">
+                                                <div style="margin-right: 10px;">
+                                                    <a href="javascript:void(null)" onclick="addWebApp();">اسحب علامة التاب وأسقطه على شريط
+                                                        المهام لحفظ الموقع أو انقر هنا لإضافتة إلى قائمة البداية </a>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            
+                                            <div style="margin-bottom: 10px; float: left;">
+                                                <div style="float: left; background-image: url(images/line_gred.jpg); background-repeat: repeat-x;
+                                                    width: 186px; height: 13px; margin-left: 15px; margin-top: 5px;">
+                                                </div>
+                                                <div style="float: left; width: 100px; font-size: 14pt; color: #333333; font-family: Times New Roman;
+                                                    font-weight: bold;">
+                                                    إعلانات
+                                                </div>
+                                            </div>
+                                            <div id="RezoraDiv">
+                                                <iframe src="AdsRotator.aspx?typeid=15" id="AdsRotator" name="IssuesAds" width="300"
+                                                    height="250" frameborder="0" scrolling="no"></iframe>
+                                            </div>
+                                            <div id="divUnderRezora" style="margin-top: 20px;"></div>
+                                            <td class="wrighting" valign="top" width="309">
+                                                <div align="center">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="92%" height="19">
+                                                        <tr>
+                                                            <td height="19">
+                                                                <div align="left">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="186" height="12">
+                                                                        <tr>
+                                                                            <td background="images/line_gred.jpg" width="186" height="13" align="center">
+                                                                                <img border="0" src="images/line_gred.gif" width="189" height="13">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                            <td class=" wrighting" valign="top" align="right" height="19" width="80">
+                                                                <p align="center">
+                                                                    <font color="#333333"><span lang="ar-eg">أهم الأخبار</span></font></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="7" valign="top" width="309">
+                                                <img border="0" src="images/px_wight_gry.gif" width="3" height="7">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="309">
+                                                <div align="center">
+                                                    <table border="1" cellpadding="0" width="289" style="border-collapse: collapse" bordercolor="#DDDDDD"
+                                                        bgcolor="#FFFFFF" height="108">
+                                                        <tr>
+                                                            <td>
+                                                                <div id="ImpNewsDiv" align="center">  <table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/175010.aspx' style='text-decoration: none'> تأجيل محاكمة المتهمين فى واقعة تسمم المياه ب"صنصفط " إلى جلسة 29 نوفمبر</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174926.aspx' style='text-decoration: none'> سائقو المكروباص يقطعون طريقي شبرا وصلاح سالـم</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174929.aspx' style='text-decoration: none'> إضراب الأطباء يهز المستشفيات .. الصحة تدفع بفرق انتشار سريع والعيادات الخارجية تواجه الموقف</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174932.aspx' style='text-decoration: none'> المحكمة ترفض الدعاوي المدنية ضد توفيق عكاشة</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174935.aspx' style='text-decoration: none'> الكنيسة تصلي من أجل البابا الـ‏118‏</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174938.aspx' style='text-decoration: none'> الشائعات تخيم علي انتخابات رئاسة الحرية والعدالة</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174941.aspx' style='text-decoration: none'> من أسرار حرب أكتوبر‏:‏ عبد الناصـر اعتمد خطـة نسـف بارليـف ســنة‏1969‏</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174944.aspx' style='text-decoration: none'> رئاسة الجمهورية‏:‏ حق الإضراب مكفول ولكن بدون عقاب للمواطنين</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174947.aspx' style='text-decoration: none'> الحرية والعدالة يتهم المعارضين للتأسيسية باختلاق الأكاذيب</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table><table border='0' cellpadding='0' cellspacing='2' width='255' dir='rtl'><tr><td width='6' valign='top'><img border='0' src='images/bolet.jpg' width='6' height='11'></td><td width='7' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='11'></td><td class='berf2'  valign='top' align='right'><p style='margin-top: 0; margin-bottom: 0'><a href style='text-decoration: none'><a href = 'The-First/News/174949.aspx' style='text-decoration: none'> إسرائيل تحذر‏:‏ سيناء أصبحت مقرا لشبكة جهادية مؤيدة للقاعدة</a></a> </p></td></tr></table><table border='0' cellpadding='0' cellspacing='0' width='256'><tr><td  height='5' valign='top'></td></tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table border="0" cellpadding="0" cellspacing="0" style="width: 289px">
+                                                        <tr>
+                                                            <td height="20" valign="top">
+                                                                <img border="0" src="images/px_gry_wight.jpg" width="4" height="20">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+
+<table border="0" cellpadding="0" cellspacing="0" width="270" height="19">
+		<tr>
+		    <td>
+		        <a href="WriterIndex.aspx" class="wrighting">المزيد</a>
+		    </td>
+			<td height="19">
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="0" width="130" height="12">
+					<tr>
+						<td background="images/line_gred.jpg" width="130" height="13" align="center"></td>
+					</tr>
+				</table>
+			</div>
+			</td>
+			<td  class=" wrighting" valign="top" align="right" height="19" width="80">
+			<p align="center"><font color="#333333"><span lang="ar-eg"><a href="WriterIndex.aspx" class="wrighting">كتاب الأهرام</a></span></font></td>
+		</tr>
+	</table>
+	
+<div class="POPULAR">
+<div class="header_p">
+<div id="Writers1_divMostComment" class="buttons_p">
+            <div class="active_button_p" id="CAGN1"><a href="javascript:void(null)"  onclick="GetWriters_New('1','DivCContent','CAGN','1',1041)" >كتاب الأهرام</a></div>
+            <div class="normal_button_p" id="CAGN2"><a href="javascript:void(null)"  onclick="GetWriters_New('2','DivCContent','CAGN','2',1041)" >الأعمدة</a></div>
+            <div class="normal_button_p" id="CAGN3"><a href="javascript:void(null)"  onclick="GetWriters_New('3','DivCContent','CAGN','3',1041)" >أراء حرة</a></div>
+            </div>
+</div>
+<div class="bk_wight_23_2" id="DivCContent">
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+    function GetWriters_New(wType,divname,aname,current,issueID) {
+        jx.load("AhramWriterTopics.aspx?IssueID=" + issueID + "&wtype=" + wType , function(data) {
+        document.getElementById(divname).innerHTML = data        
+        });
+        mostreadtab(current, aname);
+    }
+
+    function mostreadtab(current, aname) {
+
+
+        if (current == "") {
+            current = 0;
+        }
+        var myItems = new Array(1, 2, 3);
+        for (var i = 0, len = myItems.length; i < len; ++i) {
+            currentitem = myItems[i];
+
+            if (current == currentitem) { // this is active tab
+                SetActiveTab(currentitem, aname);
+            } else {
+                InActiveTab(currentitem, aname);
+            }
+        }
+
+    }
+
+
+    function InActiveTab(current, aname) {
+
+        var LItabs = document.getElementById(aname + current);        
+        if (IE == 0) {
+            LItabs.setAttribute("class", 'normal_button_p');
+        } else {
+            LItabs.setAttribute('className', 'normal_button_p');
+        }        
+        return;
+    }
+
+    function SetActiveTab(current, aname) {
+
+        var LItabs = document.getElementById(aname + current);        
+        if (IE == 0) {
+                LItabs.setAttribute("class", 'active_button_p');
+        } else {
+                LItabs.setAttribute('className', 'active_button_p');
+        }        
+        return;
+
+    }
+    
+</script>
+<div id="Writers1_divScript"><script type='text/javascript'>
+                GetWriters_New('1', 'DivCContent', 'CAGN', '1', '1041');                
+                </script></div>
+
+
+
+                                                    
+                                                    <!-- Begin -  Site: ahram.org.eg Zone: IPad_All_300*250 -->
+                                                    <iframe src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=94&amp;Task=Get&amp;PageID=28079&amp;SiteID=1"
+                                                        width="300" height="250" marginwidth="0" marginheight="0" hspace="0" vspace="0"
+                                                        frameborder="0" scrolling="No">
+                                                        <script language='javascript1.1' src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=94&amp;Task=Get&amp;Browser=NETSCAPE4&amp;NoCache=True&PageID=28079&amp;SiteID=1"></script>
+                                                        <noscript>
+                                                            <a href="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=94&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=28079"
+                                                                target="_blank">
+                                                                <img src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=94&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=28079"
+                                                                    width="300" height="250" border="0" alt=""></a>
+                                                        </noscript>
+                                                    </iframe>
+                                                    <!-- End -  Site: ahram.org.eg Zone: IPad_All_300*250 -->
+                                                    
+<div class="page_esdarat" id="p-select2">
+    <div class="hd_esdarat">
+        <img src="http://www.ahram.org.eg/images/hd_esdarat.png" id="EsdaratContent1_imgHeader" width="291" height="25" /></div>
+    <div id="EsdaratContent1_divContent"><div id='canadaprovinces2' class='glidecontentwrapper22'><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=16' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_16.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat' style='float: left; direction: ltr; text-align: left;'><div class='text_contents_esdarat' style='float: left;'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=16&CID=54789' target='_blank'>Italian-Egyptian El-Shaarawy becomes youngest Milan player to score in Champions League (+Video)</a></div><div style='float: left; margin-top: 5px; margin-left: 5px; color: #444444;'>04/10/2012&nbsp;&nbsp;<b>02:34 PM</b></div></div><div class='bref_esdarat' style='margin-left: 7px;'>Stephan El-Shaarawy becomes AC Milan's youngest scorer in Champions League after netting goal in 3-2 victory over Zenit St Petersburg</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=16' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_16.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat' style='float: left; direction: ltr; text-align: left;'><div class='text_contents_esdarat' style='float: left;'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=16&CID=54761' target='_blank'>Culture Events: Picks for the Weekend</a></div><div style='float: left; margin-top: 5px; margin-left: 5px; color: #444444;'>04/10/2012&nbsp;&nbsp;<b>01:46 PM</b></div></div><div class='bref_esdarat' style='margin-left: 7px;'>Not sure what to do this weekend? With a few cultural festivals happening, besides the regular set of culture events, you won't be bored. Ahram Online compiles its recommendations for the we...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=16' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_16.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat' style='float: left; direction: ltr; text-align: left;'><div class='text_contents_esdarat' style='float: left;'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=16&CID=54756' target='_blank'>US presidential debate: Quotes of the night</a></div><div style='float: left; margin-top: 5px; margin-left: 5px; color: #444444;'>04/10/2012&nbsp;&nbsp;<b>12:52 PM</b></div></div><div class='bref_esdarat' style='margin-left: 7px;'>US President Barack Obama and his Republican challenger Mitt Romney faced off Wednesday in the first of three televised debates in the run-up to the November 6 election</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=15' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_15.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=15&CID=2717' target='_blank'>مخاطر غير مقصودة:|سياسات دول الخليج تجاه الصراع في سوريا</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/03&nbsp;&nbsp;<b>06:01 م</b></div></div><div class='bref_esdarat'>
+	يكتسب الصراع الدائر في سوريا، منذ ما يزيد على 18 شهرا، أهمية كبيرة لدى دول الخليج، حيث تعد سوريا الحالة الثانية بعد اليمن، التي هناك تخوف من تأثيراتها في الأوضاع الداخلية لدول الخليج. كما...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=15' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_15.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=15&CID=2715' target='_blank'>الخاصرة الرخوة:|الجدل الإسرائيلي حول التعامل مع الحدود المصرية </a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/02&nbsp;&nbsp;<b>12:18 م</b></div></div><div class='bref_esdarat'>
+	أثار الهجومُ الذي شنه مسلحون على الجيش الإسرائيلي بالقرب من الحدود المصرية، وأسفر عن مقتل مجند إسرائيلي، وإصابة آخرين يوم 21 سبتمبر، العديدَ من القضايا داخل إسرائيل.
+</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=15' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_15.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=15&CID=2714' target='_blank'>اتفاقات منقوصة:|هل تنجح مفاوضات أديس أبابا بإعادة الاستقرار بين شمال وجنوب السودان؟</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/09/30&nbsp;&nbsp;<b>10:57 ص</b></div></div><div class='bref_esdarat'>
+	حالة من الغموض اكتنفت مباحثات القمة التي استضافتها العاصمة الإثيوبية أديس أبابا منذ يوم 22 سبتمبر 2012 بين الرئيسين السوداني عمر البشير ونظيره الجنوبي سيلفا كير.
+</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=10' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_10.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=10&CID=377' target='_blank'>الاحتجاجات فى العالم العربى اختبار لأوباما</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/09/29&nbsp;&nbsp;<b>10:44 م</b></div></div><div class='bref_esdarat'>بعد أيام من العنف ضد الأمريكان فى العالم الاسلامى، يستعد البيت الابيض فى الدخول الى فترة من الاضطرابات التى سوف تختبر أمن البعثات الامريكية الدبلوماسية، وقدرة باراك أوباما على تشكيل قوات الت...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=10' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_10.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=10&CID=376' target='_blank'>قواعد روبسبير للمتطرفين:  كيف تحمى ثورتك بدون أن تفقد رأسك</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/09/29&nbsp;&nbsp;<b>10:40 م</b></div></div><div class='bref_esdarat'>كانت الثورة الفرنسية فى 1789 بوتقة تتجمع بها كل العناصر التى تجسد السياسيات الغريية فى القرن 19 و20، وكانت كل العيون على باريس. وكان ينظر الى ماكسميليان روبسبير كالبطل أو الوغد. كان روبسبير ...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=10' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_10.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=10&CID=375' target='_blank'>التحول الديمقراطي في تركيا والدروس المستفادة مصريا</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/09/26&nbsp;&nbsp;<b>10:43 م</b></div></div><div class='bref_esdarat'>"على مدى الأعوام الفائتة، أصبحت تركيا محلا للقوى السياسية والاقتصادية وحتى الثقافية في منطقة المتوسط وما وراءها. وبعد أن كانت واحدة من الديكتاتوريات العسكرية...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=4' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_4.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=4&CID=63812' target='_blank'>د‏.‏ شريف قنديل :‏أهدرنــا الملايـين في برنامج تطوير التعــليم دون جــــدوي
+</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>01:02 م</b></div></div><div class='bref_esdarat'>بعد أن خطا برنامج تطوير التعليم ما قبل الجامعي خطوات واسعة‏,‏ وبدلا من أن يتم تطبيقه طبقا للخطة الخمسية المحددة له </div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=4' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_4.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=4&CID=63797' target='_blank'>‏8‏ ملايين جنيه الحد الأدني لتكلفة المخبز المليوني
+</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>12:57 م</b></div></div><div class='bref_esdarat'>ينشر الاهرام المسائي تفاصيل الخطة التنفيذية لانشاء المخابز المليونية في الفترة الحالية‏,‏ التي تتبناها وزارة التموين والتجارة </div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=4' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_4.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=4&CID=63791' target='_blank'>الأهلي يتدرب في لاجوس اليوم
+</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>12:54 م</b></div></div><div class='bref_esdarat'>غادر الفريق الأول لكرة القدم بالنادي الأهلي القاهرة متوجها إلي مدينة لاجوس في نيجيريا استعدادا للقاء فريق صن شاين النيجيري</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=5' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_5.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=5&CID=6114' target='_blank'>النشرة المرورية الصباحية برعاية بيقولك: اتجاه صلاح سالم مغلق من نفق الأزهر بسبب حادث</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>02:41 م</b></div></div><div class='bref_esdarat'>لو أنت في عربيتك أو نازل من بيتك أو من شغلك ومش عارف إيه هو أنسب طريق تسلكه للوصول إلى أي مكان، من خلال هذه السطور سوف نحاول مساعدتك بالتعاون مع "بيقولك" من خلال تقديم نشرة تبين الحالة المرو...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=5' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_5.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=5&CID=6113' target='_blank'>عايدة الكاشف تثير استياء المشاهدين بحدوته من صاج</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>01:42 م</b></div></div><div class='bref_esdarat'>عشنا قبل الثورة فترة فضل فيها شباب المبدعون الابتعاد عن الجرأة السياسية في افلامهم، ليتجهو لجرأة من نوع آخر تخيلوا أنها تمثل فتحا سينمائيا جديدا، وعلامة على مناخ الحرية والتطور، وهي الجرأة ف...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=5' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_5.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=5&CID=6112' target='_blank'>أسعار الذهب اليوم</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>01:25 م</b></div></div><div class='bref_esdarat'></div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=3' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_3.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=3&CID=33650' target='_blank'>الداخلية توافق على انطلاق الدوري 17 أكتوبر وتتعهد بتأمين المباريات</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>03:34 م</b></div></div><div class='bref_esdarat'>عقد عامر حسين المدير التنفيذى لإتحاد الكرة اجتماعًا ظهر ـ اليوم ـ الخميس باللواء أحمد جمال الدين وزير الداخلية من أجل مناقشة انطلاق الدورى العام فى موعده يوم 17 أكتوبر الجارى والترتيبات الأخ...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=3' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_3.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=3&CID=33648' target='_blank'>تأجيل بدء معسكر المنتخب للإثنين لعدم وجود لاعبين</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>03:29 م</b></div></div><div class='bref_esdarat'>اتفق أعضاء الجهاز الفنى للمنتخب الوطنى الأول لكرة القدم على بدء المعسكر الجديد للفريق يوم الإثنين المقبل بدلا من غد الجمعة، بسبب عدم توافر عدد كاف</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=3' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_3.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=3&CID=33644' target='_blank'>"الشباب" يحتفل بمئوية الحضري الإفريقية أمام إنتر كلوب بأنجولا</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>03:12 م</b></div></div><div class='bref_esdarat'>تقابل فريق المريخ السودانى مع بعثة منتخب الشباب على متن الطائرة المتوجهة من اثيوبيا الى انجولا حيث استقل الفريقان نفس الطائرة المتوجهة الى لواندا .</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=2' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_2.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=2&CID=257987' target='_blank'>النائب العام المساعد: إغفال الجنايات لبعض الوقائع في قضية مبارك والعادلى سبب الطعن على الحكم</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>03:23 م</b></div></div><div class='bref_esdarat'>أعلن المستشار عادل السعيد النائب العام المساعد والمتحدث الرسمى للنيابة العامة أن الإغفال عن بعض الوقائع فى الحكم الصادر عن محكمة جنايات القاهرة فى قضية قتل المتظاهرين المتهم فيها مبارك والعا...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=2' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_2.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=2&CID=257834' target='_blank'>سيف الدولة لـ "الأهرام العربى": إسرائيل هددت باحتلال سيناء 3 مرات بعد الثورة.. و"كامب ديفيد" ليست قرآنا أو إنجيلا </a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>03:15 م</b></div></div><div class='bref_esdarat'>فجر محمد عصمت سيف الدولة، المستشار السياسى  للرئيس محمد مرسى، مفاجأة من العيار الثقيل بإعلانه خلال حوار تنشره مجلة "الأهرام العربي" في عددها الصادر السبت أن سيناء ليست تحت السيادة المصرية، و...</div></div></div><div class='glidecontent2'><div class='logo_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=2' target='_blank'><img src='http://www.ahram.org.eg/images/Esdarat_2.png' alt='' border='0' /></a></div><div style='float: left;'><img src='http://www.ahram.org.eg/images/Ahram_Logo.png' alt='' /></div><div class='text_content_esdarat'><div class='text_contents_esdarat'><div class='text_hd_esdarat'><a href='http://www.ahram.org.eg/GoTo.aspx?EID=2&CID=257962' target='_blank'>ننشر أرقام تليفونات غرفتي عمليات خدمة الحجاج في قنصليتي مصر بجدة والعقبة</a></div><div style='float: right; margin-top: 5px; margin-right: 5px; color: #444444;'>2012/10/04&nbsp;&nbsp;<b>02:50 م</b></div></div><div class='bref_esdarat'>حرصًا من "بوابة الأهرام" على تقديم كل ما يمكن أن يسهل على حجاج بيت الله الحرام، رحلتهم المقدسة، تقوم البوابة بنشر أرقام تليفونات غرفتي عمليات الحجاج بقنصليتى مصر بمدينتي جدة السعودية والعقبة...</div></div></div></div></div>
+    <div class="icon_left_esdarat">
+        <a href="#" class="_next">
+            <img src="http://www.ahram.org.eg/images/left_green.png" id="EsdaratContent1_imgLeft" width="20" height="19" border="0" /></a></div>
+    <div class="icon_right_esdarat">
+        <a href="#" class="_prev">
+            <img src="http://www.ahram.org.eg/images/right_green.png" id="EsdaratContent1_imgRight" width="20" height="19" border="0" /></a></div>
+</div>
+<script type="text/javascript">
+    featuredcontentglider.init({
+        gliderid: "canadaprovinces2", //ID of main glider container
+        contentclass: "glidecontent2", //Shared CSS class name of each glider content
+        togglerid: "p-select2", //ID of toggler container
+        remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
+        selected: 0, //Default selected content index (0=1st)
+        persiststate: false, //Remember last content shown within browser session (true/false)?
+        speed: 500, //Glide animation duration (in milliseconds)
+        direction: "rightleft", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
+        autorotate: true, //Auto rotate contents (true/false)?
+        autorotateconfig: [6000] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
+    })
+</script>
+
+                                                    <div style="clear: both;">
+                                                    </div>
+                                                    <div id="shababE3lan" style="padding: 20px 0 20px 0;"><a href='http://shabab.ahram.org.eg' target='_blank' > <img border='0px' src='/Banners/5_3_10_2012_39_23.jpg' alt='shabab banner' title='shabab banner' /></a><br /></div>
+                                                    
+                                                    <div>
+                                                        <!-- Begin -  Site: ahram.org.eg Zone: AhramDaily_HomePage_3_300_250 -->
+                                                        <iframe src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=109&amp;Task=Get&amp;PageID=82221&amp;SiteID=1"
+                                                            width="300" height="250" marginwidth="0" marginheight="0" hspace="0" vspace="0"
+                                                            frameborder="0" scrolling="No">
+                                                            <script language='javascript1.1' src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=109&amp;Task=Get&amp;Browser=NETSCAPE4&amp;NoCache=True&PageID=82221&amp;SiteID=1"></script>
+                                                            <noscript>
+                                                                <a href="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=109&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=82221"
+                                                                    target="_blank">
+                                                                    <img src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=109&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=82221"
+                                                                        width="300" height="250" border="0" alt=""></a>
+                                                            </noscript>
+                                                        </iframe>
+                                                        <!-- End -  Site: ahram.org.eg Zone: AhramDaily_HomePage_3_300_250 -->
+                                                    </div>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="309">
+                                                        <tr>
+                                                            <td>
+                                                                <div style="padding-left: 8px;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" width="289">
+                                                                        <tr>
+                                                                            <td valign="top">
+                                                                                <table border="0" width="291" cellspacing="0" cellpadding="0" dir="rtl">
+                                                                                    <tr>
+                                                                                        <td id="gall-0">
+                                                                                            <a href="javascript:void(0)" onclick="showGallarydiv(0)">
+                                                                                                <img border="0" src="images/Ahram_Caricature.png" width="291" /></a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                                <table border="1" cellpadding="0" width="289" style="border-collapse: collapse" bordercolor="#DDDDDD"
+                                                                                    bgcolor="#FFFFFF">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div align="center" id="GallMainDiv">
+                                                                                            </div>
+                                                                                            <div id="ComicGallary">
+                                                                                            </div>
+                                                                                            <div id="PhotoGallary">
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <br>
+                                                                <div style="padding-left: 8px;">
+                                                                    <table border="1" cellpadding="0" width="289" style="border-collapse: collapse" bordercolor="#DDDDDD"
+                                                                        bgcolor="#FFFFFF">
+                                                                        <tr>
+                                                                            <td align="right">
+                                                                                <img src="images/ahram-services.jpg" alt="" />
+                                                                                <select id='service' style="width: 179px" dir="rtl" class="AhramServicesDrop" onchange='javascript:var url = document.getElementById("service").options[document.getElementById("service").selectedIndex].value; if(url !=0) window.location=url;'
+                                                                                    name='service' size='1'>
+                                                                                    <option value='0'>أختر الخدمة</option>
+                                                                                    <option value='http://school.ahram.org.eg/'>برامج تعليمية</option>
+                                                                                    <option value='http://www.ahram.org.eg/waf.aspx?issueid=1041'>
+                                                                                        الوفيات</option>
+                                                                                    <option value='http://electric.ahram.org.eg'>مشتركى الكهرباء</option>
+                                                                                    <option value='http://nbank.ahram.org.eg/index.asp'>البنك الأهلي</option>
+                                                                                    <option value='http://extra.ahram.org.eg/mail/mail.htm'>عناوين الأهرام</option>
+                                                                                    <option value='http://gate.ahram.org.eg'>بوابه الأهرام الإلكترونيه</option>
+                                                                                    <option value='http://sport.ahram.org.eg'>بوابه الأهرام الرياضيه</option>
+                                                                                    
+                                                                                    
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="7" valign="top" width="270">
+                                                                <img border="0" src="images/px_wight_gry.gif" width="3" height="7" width="270">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td valign="top" width="270">
+                                                                <div align="center">
+                                                                    <div id="DivAhramServices" align="left">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="7" valign="top" width="270">
+                                                                <img border="0" src="images/px_wight_gry.gif" width="3" height="15" width="270">
+                                                            </td>
+                                                        </tr>
+                                                        <br>
+                                                        <tr>
+                                                            <td align="center">
+                                                            </td>
+                                                        </tr>
+                                                        <div align="center">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="289">
+                                                                <tr>
+                                                                    <td class="wrighting" valign="top" height="23" width="289" colspan="3">
+                                                                        <div id="VotingDiv">
+                                                                            <div id="voting1_tdVoting"> <table border='0' cellpadding='0' cellspacing='0' width='289'>               
+                                    <tr>
+                                    <td class='wrighting' valign='top' height='23' width='289' colspan='3'>
+                                                          <div align='right'>
+                                    <table border='0' cellpadding='0' cellspacing='0' width='100%' height='19'>
+                                    <tr>
+                                  <td height='19'>
+                                  <div align='left'>
+                                      <table border='0' cellpadding='0' cellspacing='0' width='213' height='12'>
+                                          <tr>
+                                              <td background='images/line_gred.jpg' width='213' height='12' align='Right'><img border='0' src='images/line_gred.gif' width='189' height='13'></td>
+                                          </tr>
+                                      </table>
+                                  </div>
+                                  </td>
+                                  <td class=' wrighting' valign='top' align='right' height='19' width='74'><font color='#333333'><span lang='ar-eg'>شارك برايك</span></font></td>
+                                      </tr>
+                                  </table>
+                              </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td height='7' valign='top' width='289' colspan='3'>
+                              <img border='0' src='images/px_wight_gry.gif' width='3' height='7'></td>
+                          </tr>
+                          <tr>
+                              <td valign='top' width='131'>
+                              <div align='center'>
+                                  <table border='1' cellpadding='0' width='289' style='border-collapse: collapse' bordercolor='#DDDDDD' bgcolor='#FFFFFF' height='108'>
+                                      <tr>
+                                          <td>
+                                          <div align='right'>
+                                              <table border='0' cellpadding='0' cellspacing='0' width='260' height='150'>
+                                                  <tr>
+                                                      <td height='145' valign='top'>
+                                                      <div align='center'>
+                                                          <table border='0' cellpadding='0' cellspacing='0' width='285'>
+                           <tr>
+                               <td class='vote' align='right' height='26'>
+                              هل تحسنت الأوضاع الأمنية في مصر خلال الأسابيع الماضية؟
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                       <td height='14' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='14'></td>
+                                   </tr> <tr>
+                                                   <td bgcolor='#F0F4F7' height='22' align='right'>
+                                                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+                                                       <tr>
+                                                           <td class='vote' align='right' valign='top'><span lang='ar-eg'>نعم</span></td>
+                                                           <td width='27'><input type='radio' value='475' name='rdVoting'></td>
+                                                       </tr>
+                                                   </table>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td height='2' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+                                               </tr>    <tr>
+                                                   <td bgcolor='#F0F4F7' height='22' align='right'>
+                                                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+                                                       <tr>
+                                                           <td class='vote' align='right' valign='top'><span lang='ar-eg'>قليلا</span></td>
+                                                           <td width='27'><input type='radio' value='476' name='rdVoting'></td>
+                                                       </tr>
+                                                   </table>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td height='2' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+                                               </tr>    <tr>
+                                                   <td bgcolor='#F0F4F7' height='22' align='right'>
+                                                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+                                                       <tr>
+                                                           <td class='vote' align='right' valign='top'><span lang='ar-eg'>لا</span></td>
+                                                           <td width='27'><input type='radio' value='477' name='rdVoting'></td>
+                                                       </tr>
+                                                   </table>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td height='2' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+                                               </tr>    <tr>
+                                                   <td bgcolor='#F0F4F7' height='22' align='right'>
+                                                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+                                                       <tr>
+                                                           <td class='vote' align='right' valign='top'><span lang='ar-eg'>غير مهتم</span></td>
+                                                           <td width='27'><input type='radio' value='478' name='rdVoting'></td>
+                                                       </tr>
+                                                   </table>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td height='2' valign='top'><img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+                                               </tr>   </table></div>
+
+<div id="voting1_divBtn"><table><tr>     <td>
+                                                       <div align='center'>
+                                                           <table border='0' cellpadding='0' cellspacing='0' width='75' height='31'>
+                                                               <tr><td class='votinglink' background='images/buton_vote.jpg' align='center' width='75' height='31'><span lang='ar-eg'><A HREF='javascript:void(0)' onclick='SendVoting2(168,0);'>شارك</td></span></td>
+                                                               </tr>
+                                                           </table>
+                                                       </div>
+                                                       </td>
+                                                               </tr>
+                                                                              </table>
+                                                                          </div>
+                                                                          </td>
+                                                                      </tr>
+                                                                  </table>
+                                                              </div>
+                                                              </td>
+                                                          </tr>
+                                                      </table>
+                                                  </div>
+                                                  </td>
+                                                  <td valign='top' width='158'>&nbsp;</td>
+                                                  <td valign='top' width='122'>&nbsp;</td>
+                                              </tr>
+                                             </table></div>
+
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="wrighting" valign="top" height="23" width="289" colspan="3">
+                                                                        <div id="Div1">
+                                                                            
+
+                                                                        </div>
+                                                                        <br />
+                                                                        
+
+<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" height="19">
+		<tr>
+			<td height="19">
+			<div align="left">
+				<table border="0" cellpadding="0" cellspacing="0" width="179" height="12">
+					<tr>
+						<td background="images/line_gred.jpg" width="179" height="12" align="center"><img border="0" src="images/line_gred.gif" width="150" height="13"></td>
+					</tr>
+				</table>
+			</div>
+			</td>
+			<td class="wrighting" valign="top" align="right" height="19" width="109"><font color="#333333">
+                <span lang="ar-eg" style="direction: ltr">
+                الارشيف</span></font>
+            </td>
+		</tr>
+	</table>
+</div>
+<iframe name="i1" height="170" width="100%" src="archive.aspx" scrolling="no" border="0" frameborder="0">
+Your browser does not support inline frames or is currently configured not to display inline frames.
+</iframe>
+
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="309">
+                                                                <tr>
+                                                                    <td valign="top" align="center">
+                                                                        <img border="0" src="images/px_gry_wight.jpg" width="4" height="20">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table id="tblAhramfacebook" width="290" height="91" border="0" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td colspan="2" style="height: 35px;">
+                                                                        <img src="images/Subscribewithahram.jpg" width="290" height="35" alt="">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr valign="top" style="vertical-align: top;">
+                                                                    <td>
+                                                                        <a href="http://www.facebook.com/Alahram.Newspaper" target="_blank">
+                                                                            <img src="images/facebook.jpg" width="149" height="56" alt=""></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="http://twitter.com/eahram" target="_blank">
+                                                                            <img src="images/twitter.jpg" width="141" height="56" alt=""></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="text-align: center;">
+                                                                    <td colspan="2">
+                                                                        <div id="FaceBookImg">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            
+                                                            
+                                                        </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td width="10" valign="top">
+                <img border="0" src="images/px_wight.jpg" width="2" height="2">
+            </td>
+            <td width="529" valign="top">
+                <div align="center">
+                    <table border="0" cellpadding="0" cellspacing="0" width="531" height="830">
+                        <tr>
+                            <td valign="top">
+                                <div id="TheMainTableDiv" align="right" style="margin-top: 0;">
+         <table border='0' cellpadding='0' cellspacing='0' width='380'>
+          <tr><td>
+                <script type='text/javascript'>
+                var MainNewsIds = new Array('0','175007','175007','175007','175007','175007','175007');
+                var MainNewsImages = new Array('0','/MediaFiles/2012/10/4/2-2_5_9_2012_3_19_4_10_2012_28_40.jpg','/MediaFiles/2012/10/4/student-elections_3_10_2012_30_53.jpg','/MediaFiles/2012/10/4/579_3_10_2012_14_15.jpg','/MediaFiles/2012/10/4/f1ab_3_10_2012_18_3.jpg','/MediaFiles/2012/10/4/real-estate-taxes_3_10_2012_45_7.jpg','/MediaFiles/2012/10/4/45958_133_3_10_2012_36_8.jpg');
+                var MainNewsTitles = new Array('0' ,'السجن سبع سنوات لـ أحمد عز لإدانته بغسل الأموال' ,'خلافات في أول اجتماع للتشريعات حول الانتخابات<br> تأييد إخواني لـ المختلط‏..‏ والنور‏:‏ القوائم أفضل' ,'الحكومة تبدأ اليوم حوارا مجتمعيا لوضع رؤية شاملة للإصلاح' ,'الفريق صدقي صبحي‏:‏ <br>القوات المسلحة صمام القوة والأمان لشعب مصر' ,'سداد الضريبة العقارية إلكترونيا وبالتقسيط' ,'تظاهرة تضامن امام المحكمة .. نخنوخ ينكر التهم‏‏ والدفاع يؤكد عدم اتهامه في قضايا سابقة');
+                var MainNewsAbstract = new Array('0','عاقبت محكمة جنايات القاهرة اليوم الخميس رجل الأعمال أحمد عز بالسجن سبع سنوات وتغريمه أكثر من 19 مليار جنيه (3.12 مليار دولار) لإدانته بغسل الأموال.','اختلفت القوي السياسية في أول اجتماع لها بلجنة إعداد التشريعات والانتخابات حول فكرة أن يصدر الرئيس مرسوما بقانون حول النظام الانتخابي',' تبدأ الحكومة اليوم حوارا مجتمعيا يستمر حتي نهاية الشهر الحالي‏,‏ حول رؤيتها الاستراتيجية للتنمية الاقتصادية والاجتماعية وبرامج الإصلاح‏,‏ بما يحقق أهداف ثورة25 يناير','شهد الفريق صدقي صبحي رئيس أركان حرب القوات المسلحة أمس المرحلة الرئيسية للمشروع التكتيكي بالذخيرة الحية الذي يجريه أحد تشكيلات المنطقة المركزية العسكرية والذي نفذ علي مدي عدة أيام','أكد طارق فراج رئيس مصلحة الضرائب العقارية استعداد وزارة المالية لبدء سريان الضريبة العقارية من أول يناير‏2013‏ بعد مرور نحو اربع سنوات علي صدور القانون‏196‏ لسنة ‏2008','قررت محكمة جنايات الاسكندرية تأجيل نظر قضية نخنوخ امبراطور البلطجة بغرب الاسكندرية الي جلسة‏3‏ نوفمبر المقبل مع الموافقة علي طلبات دفاع المتهم واستدعاء شهود الاثبات من رجال الشرطة‏');
+                var MainNewsLinks = new Array('0','Incidents/News/175007.aspx','Al-Mashhad-Al-Syiassy/News/174905.aspx','The-First/News/174919.aspx','Al-Ahram-Files/News/174965.aspx','Economy/News/174916.aspx','Incidents/News/174969.aspx');
+                var MainNewsCommentsNumber = new Array('0','4','9','45','3','57','31');
+                </script>
+            
+        <div id='TheMainNewsHolderBase'>
+        <table width='377' border='1' cellspacing='0' cellpadding='0' bordercolor='#CCCCCC' style='border-collapse: collapse; font-family: 'Arabic Transparent';'>
+        <tr>
+        <td><div id='ANMainNewsImg' style='height:236px;'></div></td>
+        </tr>
+        <tr>
+        <td align='center' background='New_rot_bg.jpg'>
+        <table border='0' width='95%' cellspacing='0' cellpadding='0' >
+        <tr>
+        <td>
+        <table width='100%' border='0' cellspacing='0' cellpadding='2'>
+        <tr>
+        <td align='right' valign='middle' class='MainNews'>
+        <div id='ANMainNewsTitle'>
+        <a href='#' target='#1'><span style='font-size: 16pt'></span></a>
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td align='right' class='MainNewsDataNews'>
+        <div id='ANMainNewsAbstract'>
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <td align='right' class='DataNews'>
+        <img border='0' src='images/5px.png' width='5' height='5'></td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div id='MainNewsnavtable'>
+        </div>
+        </td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        </table>
+        </div>
+        <script type='text/javascript'>NewMainNewsNavTo(0,1)</script>        
+        </td></tr>
+                    
+
+            <tr>
+            <td  valign='top' dir='rtl'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='364' >
+            <tr>
+            <td width='108' valign='top'>
+            <img border='1' src='/MediaFiles//2012/10/4/Untitled-uuu_3_10_2012_24_1.jpg' width='78' height='79' title='مرسي يكرم اسمي السادات والشاذلي ويشارك في احتفالات أكتوبر 'alt='' align='left' style='padding:5px; border:3px double #C0C0C0; ' vspace='3'>
+            </td>
+            <td background='images/px_wight.jpg' width='7' valign='top'>
+            <img border='0' src='images/px_wight.jpg' width='10' height='15'></td><td class='outer_bref' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' >
+            <tr>
+            <td class='title_list' valign='top'>
+            <a href = 'The-First/News/174889.aspx'> مرسي يكرم اسمي السادات والشاذلي ويشارك في احتفالات أكتوبر</a>
+            </td>
+            </tr>
+            <tr>
+            <td class='outer_bref' valign='top'>
+            <p style='margin-top: 0; margin-bottom: 0'>
+            <span lang='ar-eg'> أصدر الرئيس محمد مرسي قرارا بتكريم اسمي كل من الرئيس الراحل محمد أنور السادات‏,‏ والفريق سعد الشاذلي رئيس أركان حرب القوات المسلحة الأسبق‏,‏ ومنحهما قلادة النيل, تقديرا لدورهما في انتصار حرب أكتوبر, في غضون ذلك.</span> <a href = 'The-First/News/174889.aspx#comments'> <br/>[تعليقات  - 69] </a> 
+            </p>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>            
+            <tr>
+            <td valign='top' dir='rtl' height='2'>
+            <img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+            </tr>
+            <tr>
+            <td dir='rtl' height='10' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='362' height='1'>
+            <tr>
+            <td background='images/line.jpg' valign='top' height='1'>
+            <img border='0' src='images/line.jpg' width='3' height='1'></td>
+            </tr>
+            </table>
+            </div>
+            <img border='0' src='images/px_wight.jpg' width='7' height='10'></td>
+            </tr>
+
+                       
+
+            <tr>
+            <td  valign='top' dir='rtl'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='364' >
+            <tr>
+            <td width='108' valign='top'>
+            <img border='1' src='/MediaFiles//2012/10/4/Bullying-cropped-proto-uuuu_3_10_2012_31_54.jpg' width='78' height='79' title='أمناء شرطة يمارسون البلطجة في عز الظهر 'alt='' align='left' style='padding:5px; border:3px double #C0C0C0; ' vspace='3'>
+            </td>
+            <td background='images/px_wight.jpg' width='7' valign='top'>
+            <img border='0' src='images/px_wight.jpg' width='10' height='15'></td><td class='outer_bref' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' >
+            <tr>
+            <td class='title_list' valign='top'>
+            <a href = 'The-First/News/174921.aspx'> أمناء شرطة يمارسون البلطجة في عز الظهر</a>
+            </td>
+            </tr>
+            <tr>
+            <td class='outer_bref' valign='top'>
+            <p style='margin-top: 0; margin-bottom: 0'>
+            <span lang='ar-eg'>شهدت محطات قطارات القاهرة والجيزة وبني سويف حالة من الاضطراب والفوضي‏,‏ أثارها العشرات من أمناء الشرطة‏,‏ لإصرارهم علي استقلال القطار المتجه إلي بني سويف مجانا‏,استنادا إلي أنهم يعملون في جهاز الشرطة.</span> <a href = 'The-First/News/174921.aspx#comments'> <br/>[تعليقات  - 36] </a> 
+            </p>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>            
+            <tr>
+            <td valign='top' dir='rtl' height='2'>
+            <img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+            </tr>
+            <tr>
+            <td dir='rtl' height='10' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='362' height='1'>
+            <tr>
+            <td background='images/line.jpg' valign='top' height='1'>
+            <img border='0' src='images/line.jpg' width='3' height='1'></td>
+            </tr>
+            </table>
+            </div>
+            <img border='0' src='images/px_wight.jpg' width='7' height='10'></td>
+            </tr>
+
+                       
+
+            <tr>
+            <td  valign='top' dir='rtl'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='364' >
+            <tr>
+            <td width='108' valign='top'>
+            <img border='1' src='/MediaFiles//2012/10/4/child-smokinguuu_3_10_2012_36_15.jpg' width='78' height='79' title='أطفال حشاشون‏..‏ بالوراثة 'alt='' align='left' style='padding:5px; border:3px double #C0C0C0; ' vspace='3'>
+            </td>
+            <td background='images/px_wight.jpg' width='7' valign='top'>
+            <img border='0' src='images/px_wight.jpg' width='10' height='15'></td><td class='outer_bref' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' >
+            <tr>
+            <td class='title_list' valign='top'>
+            <a href = 'The-First/News/174894.aspx'> أطفال حشاشون‏..‏ بالوراثة</a>
+            </td>
+            </tr>
+            <tr>
+            <td class='outer_bref' valign='top'>
+            <p style='margin-top: 0; margin-bottom: 0'>
+            <span lang='ar-eg'> صيحة تحذير أطلقها مركز السموم بجامعة عين شمس‏,‏ حيث كشف أحدث الإحصاءات الصادرة عنه عن أن ثلث الحالات التي استقبلها المركز خلال عام‏2011‏ كانت لأطفال دون الثانية عشرة من العمر‏.‏</span> <a href = 'The-First/News/174894.aspx#comments'> <br/>[تعليقات  - 7] </a> 
+            </p>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>            
+            <tr>
+            <td valign='top' dir='rtl' height='2'>
+            <img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+            </tr>
+            <tr>
+            <td dir='rtl' height='10' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='362' height='1'>
+            <tr>
+            <td background='images/line.jpg' valign='top' height='1'>
+            <img border='0' src='images/line.jpg' width='3' height='1'></td>
+            </tr>
+            </table>
+            </div>
+            <img border='0' src='images/px_wight.jpg' width='7' height='10'></td>
+            </tr>
+
+                       
+
+            <tr>
+            <td  valign='top' dir='rtl'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='364' >
+            <tr>
+            <td width='108' valign='top'>
+            <img border='1' src='/MediaFiles//2012/10/4/s_1429uuuu_3_10_2012_41_7.jpg' width='78' height='79' title='خفض فائدة القروض لصغار المزارعين إلي‏3%‏<br>شركات الأسمدة تتعهد بتثبيت سعر السماد 'alt='' align='left' style='padding:5px; border:3px double #C0C0C0; ' vspace='3'>
+            </td>
+            <td background='images/px_wight.jpg' width='7' valign='top'>
+            <img border='0' src='images/px_wight.jpg' width='10' height='15'></td><td class='outer_bref' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' >
+            <tr>
+            <td class='title_list' valign='top'>
+            <a href = 'The-First/News/174896.aspx'> خفض فائدة القروض لصغار المزارعين إلي‏3%‏<br>شركات الأسمدة تتعهد بتثبيت سعر السماد</a>
+            </td>
+            </tr>
+            <tr>
+            <td class='outer_bref' valign='top'>
+            <p style='margin-top: 0; margin-bottom: 0'>
+            <span lang='ar-eg'> أعد بنك التنمية والائتمان الزراعي مشروعا بقانون لخفض أسعار الفائدة علي قروض المزارعين‏,‏ خاصة صغارهم, ويطبق المشروع سبع شرائح من الفائدة علي القروض بدلا من شريحة واحدة.</span> <a href = 'The-First/News/174896.aspx#comments'> <br/>[تعليقات  - 4] </a> 
+            </p>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>            
+            <tr>
+            <td valign='top' dir='rtl' height='2'>
+            <img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+            </tr>
+            <tr>
+            <td dir='rtl' height='10' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='362' height='1'>
+            <tr>
+            <td background='images/line.jpg' valign='top' height='1'>
+            <img border='0' src='images/line.jpg' width='3' height='1'></td>
+            </tr>
+            </table>
+            </div>
+            <img border='0' src='images/px_wight.jpg' width='7' height='10'></td>
+            </tr>
+
+                       
+
+            <tr>
+            <td  valign='top' dir='rtl'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='364' >
+            <tr>
+            <td width='108' valign='top'>
+            <img border='1' src='/MediaFiles//2012/10/4/45958_11uuu_3_10_2012_43_45.jpg' width='78' height='79' title='فرق ميدانية في أسوان لمراقبة مخرات السيول 'alt='' align='left' style='padding:5px; border:3px double #C0C0C0; ' vspace='3'>
+            </td>
+            <td background='images/px_wight.jpg' width='7' valign='top'>
+            <img border='0' src='images/px_wight.jpg' width='10' height='15'></td><td class='outer_bref' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' >
+            <tr>
+            <td class='title_list' valign='top'>
+            <a href = 'The-First/News/174892.aspx'> فرق ميدانية في أسوان لمراقبة مخرات السيول</a>
+            </td>
+            </tr>
+            <tr>
+            <td class='outer_bref' valign='top'>
+            <p style='margin-top: 0; margin-bottom: 0'>
+            <span lang='ar-eg'> كلف مصطفي السيد‏,‏ محافظ أسوان‏,‏ فرق العمل بالمحافظة‏,‏ واللجان الشعبية‏,‏ ووحدات حرس الحدود بمراقبة مخرات السيول بالصحراء الشرقية وجبال أسوان, للتأكد من عدم تجمع كميات كبيرة من الأمطار فيها وتحاشي تحولها إلي سيول خطيرة.</span> <a href = 'The-First/News/174892.aspx#comments'> <br/>[تعليقات  - 2] </a> 
+            </p>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>
+            </table>
+            </div>
+            </td>
+            </tr>            
+            <tr>
+            <td valign='top' dir='rtl' height='2'>
+            <img border='0' src='images/px_wight.jpg' width='7' height='2'></td>
+            </tr>
+            <tr>
+            <td dir='rtl' height='10' valign='top'>
+            <div style='text-align: right;'>
+            <table border='0' cellpadding='0' cellspacing='0' width='362' height='1'>
+            <tr>
+            <td background='images/line.jpg' valign='top' height='1'>
+            <img border='0' src='images/line.jpg' width='3' height='1'></td>
+            </tr>
+            </table>
+            </div>
+            <img border='0' src='images/px_wight.jpg' width='7' height='10'></td>
+            </tr>
+
+            
+        </table>
+        </div>
+                            </td>
+                            <td width="10" valign="top">
+                                &nbsp;
+                            </td>
+                            <td background="images/sep_dots.jpg" width="1" valign="top">
+                                <img border="0" src="images/line.jpg" width="1" height="1">
+                            </td>
+                            <td width="10" valign="top" height="100%">
+                                <img border="0" src="images/px_wight.jpg" width="2" height="2">
+                            </td>
+                            <td width="135" valign="top">
+                                <div id="RightMenu_MainCats"><table border='0' width='13%' cellspacing='4' dir='rtl'>
+                    <tr>
+                    <td>
+                    <table border='0' width='125' background='Images/button_bg_on.jpg' style='border-collapse: collapse' height='23'>
+                    <tr>
+                    <td class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/index.aspx"'>
+                    <font face='Times New Roman' style='font-size: 11pt; font-weight: 700' color='#CC0000'>
+                    <span lang='en-us'>&nbsp; </span></font>
+                    <font face='Times New Roman' style='font-weight: 700' color='#CC0000' size='2'>
+                    <a href='http://www.ahram.org.eg/index.aspx'>الأولى</a></font></td>
+                    </tr>
+                    </table>
+                    </td>
+                    </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id21'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id21',2,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/74/Al-mashhad.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='2'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/74/Al-mashhad.html'>الصفحة الثانية</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id31'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id31',3,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/27/Egypt.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='3'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/27/Egypt.html'>مصر</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id41'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id41',4,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/60/Al-Mashhad-Al-Syiassy.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='4'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/60/Al-Mashhad-Al-Syiassy.html'>المشهد السياسي</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id51'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id51',5,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/29/Provinces.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='5'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/29/Provinces.html'>المحافظات</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id61'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id61',6,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/31/Arab-world.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='6'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/31/Arab-world.html'>الوطن العربي</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id71'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id71',7,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/26/World.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='7'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/26/World.html'>العالم</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id81'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id81',8,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/2/Journalist-reporters.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='8'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/2/Journalist-reporters.html'>حول العالم</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id91'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id91',9,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/3/Investigations.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='9'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/3/Investigations.html'>تحقيقات</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id101'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id101',10,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/4/Issues-Views.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='10'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/4/Issues-Views.html'>قضايا واراء</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id111'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id111',11,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/5/Economy.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='11'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/5/Economy.html'>اقتصاد</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id111'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id111',11,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='11'>
+                        <span lang='en-us'>&nbsp; </span><a target='_blank' href='http://www.ahram.org.eg/Stock.aspx?issueid=1041' >البورصة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id121'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id121',12,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/6/Sport.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='12'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/6/Sport.html'>رياضة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id131'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id131',13,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/38/Incidents.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='13'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/38/Incidents.html'>حوادث</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id141'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id141',14,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/7/Culture-world.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='14'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/7/Culture-world.html'>دنيا الثقافة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id151'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id151',15,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/8/Women-Child.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='15'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/8/Women-Child.html'>المراة والطفل</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id161'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id161',16,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/9/New-day.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='16'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/9/New-day.html'>إذاعة وتليفزيون</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id171'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id171',17,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/10/The-Writers.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='17'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/10/The-Writers.html'>الكتاب</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id181'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id181',18,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/11/Columns.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='18'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/11/Columns.html'>الاعمدة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id191'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id191',19,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/59/Free-Opinions.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='19'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/59/Free-Opinions.html'>أراء حرة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id201'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id201',20,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/12/Al-Ahram-Files.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='20'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/12/Al-Ahram-Files.html'>ملفات الاهرام</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id211'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id211',21,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/15/Al-Ahram-Email.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='21'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/15/Al-Ahram-Email.html'>بريد الاهرام</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id221'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id221',22,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/61/Revolution-Parliament.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='22'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/61/Revolution-Parliament.html'>برلمان الثورة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    
+                        <tr>
+                        <td>
+                        <table border='0' width='125' background='Images/button_bg.jpg' style='border-collapse: collapse' height='23' id='id231'  onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'id231',23,'style.backgroundImage','url(\'Images/button_bg_on.jpg\')')">
+                        <tr>
+                        <td  class='menu' style='cursor: hand; cursor:pointer; '  onclick='window.location="http://www.ahram.org.eg/outer/16/The-Last.html"'>
+                        <font face='Times New Roman' color='#333333' style='font-size: 11pt'  id='23'>
+                        <span lang='en-us'>&nbsp; </span><a href='http://www.ahram.org.eg/outer/16/The-Last.html'>الاخيرة</a></font></td>
+                        </tr>
+                        </table>
+                        </td>
+                        </tr>
+                    </table></div>
+<div id="RightMenu_NewMainMenu" class="menut">
+</div>
+<div id="RightMenu_bareed" align="center">
+</div>
+<div id="RightMenu_WeelkyMenuDIV" align="center"><table width='124' border='0' cellspacing='0' cellpadding='0' dir='ltr'>
+<tr> <td><img src='images/wk_head.jpg' width='124' height='24' /></td></tr>
+<tr><td class='Wk_item_bg_Current'><a href='http://www.ahram.org.eg/outer/30/Tourism-Travel.html'>سياحة وسفر</a></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/32/International-files.html'>ملفات دولية</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/33/Youth-Education.html'>شباب وتعليم</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/34/Medicine-Science.html'>طب وعلوم وبيئة</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/39/Friday-supplement.html'>ملحق الجمعه</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/40/Parliamentary-photos.html'>صور برلمانيه</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/41/Religious-thought.html'>فكر دينى</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/42/Free-margins.html'>هوامش حره</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/43/Diplomatic-papers.html'>أوراق دبلوماسيه</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg_Current'><a href='http://www.ahram.org.eg/outer/44/Books.html'>كتب</a></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/45/Cinema.html'>سينما</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg_Current'><a href='http://www.ahram.org.eg/outer/47/Strategic-issues.html'>قضايا إستراتيجية</a></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/48/Friday-mail.html'>بريد الجمعة</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/56/Heritage-Civilization.html'>تراث و حضارة</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/62/Alexandria.html'>الاسكندرية</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/63/Accidents-supplement.html'>ملحق الحوادث</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/64/Cultural-Ahram.html'>الأهرام الثقافى</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/65/Political-Ahram.html'>الأهرام السياسى</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/66/Baladna.html'>ملحق المحافظات</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/67/Economic-Supplement.html'>الملحق الاقتصادى</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg_Current'><a href='http://www.ahram.org.eg/outer/68/Stars-Arts.html'>نجوم وفنون</a></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/69/Friday-sports.html'>الجمعة الرياضى</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg_Current'><a href='http://www.ahram.org.eg/outer/70/Last-week.html'>آخر الاسبوع</a></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/71/Science-Technology.html'>علوم وتكنولوجيا</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/72/Egyptians-abroad.html'>المصريون فى الخارج</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/73/Islamic.html'>إسلاميات</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+<tr><td class='Wk_item_bg'><a href='http://www.ahram.org.eg/outer/75/Ketaba.html'>ك ت ا ب ة</a><img src='images/wk_bullet.jpg' width='5'  class='wk_bullet'/></td></tr>
+</table>
+</div>
+
+
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" width="520">
+                        <tr>
+                            <td valign="middle" align="center">
+                                <iframe src="AdsRotator.aspx?typeid=10" id="Iframe1" name="IssuesAds" width="530"
+                                    height="95" frameborder="0" scrolling="no"></iframe>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div align="center">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="520" height="297">
+                                        <tr>
+                                            <td width="267" valign="top">
+                                                <div id="WorldDiv" align="right"><table border='0' cellpadding='0' cellspacing='0' width='249' height='278'><tr><td height='130' valign='top'><img border='0' src='/MediaFiles/2012/10/4/moooooooorsyuuuuuuu_3_10_2012_26_56.jpg' style='border-bottom-style:dotted; border-bottom-width:1px' width='249' height='123'  alt='إضرابات الأطباء وسائقي الميكروباص؟  شــارك برأيك علــى راديــو الاهــرام' title="إضرابات الأطباء وسائقي الميكروباص؟  شــارك برأيك علــى راديــو الاهــرام" ></td></tr><tr><td class='som_text' height='17' valign='top'><p align='right'><span lang='ar-eg'>إذاعة وتليفزيون</span></p></td></tr><tr><td class='text_m' valign='top' dir='rtl' height='22'><a style='text-decoration: none;' href=New-day/News/174834.aspx>إضرابات الأطباء وسائقي الميكروباص؟ <br>شــارك برأيك علــى راديــو الاهــرام</a></td></tr><tr><td valign='top' height='10'><img border='0' src='images/px_wight.jpg' width='7' height='10'></td></tr><tr><td class='outer_bref' valign='top' dir='rtl' height='53'>يناقش برنامج ميدان التحرير اليوم.. ما رأيك في إضرابات الأطباء وسائقي الميكروباص, وهل تري أنها الوسيلة المثلي لتحقيق مطالبهم؟.. يمكنكم المشاركة بكتابة تعليق علي الخبر بموقع الأهرام والاتصال للمناقشة علي الهواء على 27703442 من 1 : 3ظهرا. <br/><a style='text-decoration: none;' href='New-day/News/174834.aspx#comments'>[تعليقات  - 16]</a></td></tr><tr></tr></table></div>
+                                            </td>
+                                            <td width="25" valign="top">
+                                                <img border="0" src="images/px_wight.jpg" width="25" height="11">
+                                            </td>
+                                            <td width="267" valign="top">
+                                                <div id="EgyDiv" align="right"><table border='0' cellpadding='0' cellspacing='0' width='249' height='278'><tr><td height='130' valign='top'><img border='0' src='/MediaFiles/2012/10/4/45958_22_3_10_2012_28_47.jpg' style='border-bottom-style:dotted; border-bottom-width:1px' width='249' height='123'  alt='إطلاق لقب المنقذة علي طبيبة مصرية بالولايات المتحدة' title="إطلاق لقب المنقذة علي طبيبة مصرية بالولايات المتحدة" ></td></tr><tr><td class='som_text' height='17' valign='top'><p align='right'><span lang='ar-eg'>الصفحة الثانية</span></p></td></tr><tr><td class='text_m' valign='top' dir='rtl' height='22'><a style='text-decoration: none;' href=Al-mashhad/News/174927.aspx>إطلاق لقب المنقذة علي طبيبة مصرية بالولايات المتحدة</a></td></tr><tr><td valign='top' height='10'><img border='0' src='images/px_wight.jpg' width='7' height='10'></td></tr><tr><td class='outer_bref' valign='top' dir='rtl' height='53'>تمكنت طبيبة مصرية من إنقاذ حياة الرضيعة الأمريكية مارين التي لايتعدي عمرها أسبوعا‏,‏ وتوقع الأطباء وفاتها فور ولادتها بسبب عيب خلقي شديد في شرايين القلب‏.<br/><a style='text-decoration: none;' href='Al-mashhad/News/174927.aspx#comments'>[تعليقات  - 39]</a></td></tr><tr></tr></table></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="10" valign="top">
+                                <img border="0" src="images/px_wight.jpg" width="7" height="10">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="37" valign="top">
+                                <div align="center">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="529" height="297">
+                                        <tr>
+                                            <td width="249" valign="top">
+                                                <div id="EconomicDiv" align="right"><table border='0' cellpadding='0' cellspacing='0' width='249' height='278'><tr><td height='130' valign='top'><img border='0' src='/MediaFiles/2012/10/4/21791_3_10_2012_47_36.jpg' style='border-bottom-style:dotted; border-bottom-width:1px' width='249' height='123'  alt='زوار الرعب بين أطفال المدارس الالتهاب السحائي والحميات والسل' title="زوار الرعب بين أطفال المدارس الالتهاب السحائي والحميات والسل" ></td></tr><tr><td class='som_text' height='17' valign='top'><p align='right'><span lang='ar-eg'>طب وعلوم وبيئة</span></p></td></tr><tr><td class='text_m' valign='top' dir='rtl' height='22'><a style='text-decoration: none;' href=Medicine-Science/News/174848.aspx>زوار الرعب بين أطفال المدارس<br>الالتهاب السحائي والحميات والسل</a></td></tr><tr><td valign='top' height='10'><img border='0' src='images/px_wight.jpg' width='7' height='10'></td></tr><tr><td class='outer_bref' valign='top' dir='rtl' height='53'>لم تكد تمر أسابيع معدودة علي بداية العام الدراسي لتطالعنا الأخبار بتفشي مرض الغدة النكافية بين طلاب المدارس الإعدادية والثانوية‏.‏<br/><a style='text-decoration: none;' href='Medicine-Science/News/174848.aspx#comments'>[تعليقات  - 4]</a></td></tr><tr></tr></table></div>
+                                            </td>
+                                            <td width="25" valign="top">
+                                                <img border="0" src="images/px_wight.jpg" width="25" height="11">
+                                            </td>
+                                            <td width="249" valign="top">
+                                                <div id="SportDiv" align="right"><table border='0' cellpadding='0' cellspacing='0' width='249' height='278'><tr><td height='130' valign='top'><img border='0' src='/MediaFiles/2012/10/4/small11200819144923_3_10_2012_52_38.jpg' style='border-bottom-style:dotted; border-bottom-width:1px' width='249' height='123'  alt='عماد الدين أديب‏:‏ نعيش حالة هيستريا إعلامية وفوضي كاملة' title="عماد الدين أديب‏:‏ نعيش حالة هيستريا إعلامية وفوضي كاملة" ></td></tr><tr><td class='som_text' height='17' valign='top'><p align='right'><span lang='ar-eg'>نجوم وفنون</span></p></td></tr><tr><td class='text_m' valign='top' dir='rtl' height='22'><a style='text-decoration: none;' href=Stars-Arts/News/174855.aspx>عماد الدين أديب‏:‏ نعيش حالة هيستريا إعلامية وفوضي كاملة</a></td></tr><tr><td valign='top' height='10'><img border='0' src='images/px_wight.jpg' width='7' height='10'></td></tr><tr><td class='outer_bref' valign='top' dir='rtl' height='53'>هو صاحب مدرسة إعلامية كبيرة تتسم بالحرفية الشديدة والموضوعية في طرح أعقد القضايا الساخنة بهدوء مصحوب برشاقة لغوية وزخم معلوماتي قلما تجده علي أي شاشة فضائية.<br/><a style='text-decoration: none;' href='Stars-Arts/News/174855.aspx#comments'>[تعليقات  - 14]</a></td></tr><tr></tr></table></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="529" height="297">
+                                        <tr>
+                                            <td width="249" valign="top">
+                                                <div id="CatNews6" align="right"><table border='0' cellpadding='0' cellspacing='0' width='249' height='278'><tr><td height='130' valign='top'><img border='0' src='/MediaFiles/2012/10/4/user439602_pic12622_1274560_3_10_2012_54_16.jpg' style='border-bottom-style:dotted; border-bottom-width:1px' width='249' height='123'  alt='الميرغني يطلب الرحيل عن الزمالك‏..‏ وفييرا يرد‏:‏ الباب مفتوح' title="الميرغني يطلب الرحيل عن الزمالك‏..‏ وفييرا يرد‏:‏ الباب مفتوح" ></td></tr><tr><td class='som_text' height='17' valign='top'><p align='right'><span lang='ar-eg'>رياضة</span></p></td></tr><tr><td class='text_m' valign='top' dir='rtl' height='22'><a style='text-decoration: none;' href=Sport/News/174895.aspx>الميرغني يطلب الرحيل عن الزمالك‏..‏ وفييرا يرد‏:‏ الباب مفتوح</a></td></tr><tr><td valign='top' height='10'><img border='0' src='images/px_wight.jpg' width='7' height='10'></td></tr><tr><td class='outer_bref' valign='top' dir='rtl' height='53'>وصلت مساء أمس الأربعاء بعثة فريق الكرة الأول بنادي الزمالك إلي الكويت لبدء معسكر الفريق الإعداداي تمهيدا للمشاركة في دوري الموسم الجديد‏.<br/><a style='text-decoration: none;' href='Sport/News/174895.aspx#comments'>[تعليقات  - 2]</a></td></tr><tr></tr></table></div>
+                                            </td>
+                                            <td width="25" valign="top">
+                                                <img border="0" src="images/px_wight.jpg" width="25" height="11">
+                                            </td>
+                                            <td width="249" valign="top">
+                                                <div id="CatNews5" align="right"><table border='0' cellpadding='0' cellspacing='0' width='249' height='278'><tr><td height='130' valign='top'><img border='0' src='/MediaFiles/2012/10/4/imagesCA66PCJ3_3_10_2012_42_1.jpg' style='border-bottom-style:dotted; border-bottom-width:1px' width='249' height='123'  alt='مقتل طالب في معركة بالأسلحة البيضاء بجامعة حلوان' title="مقتل طالب في معركة بالأسلحة البيضاء بجامعة حلوان" ></td></tr><tr><td class='som_text' height='17' valign='top'><p align='right'><span lang='ar-eg'>حوادث</span></p></td></tr><tr><td class='text_m' valign='top' dir='rtl' height='22'><a style='text-decoration: none;' href=Incidents/News/174973.aspx>مقتل طالب في معركة بالأسلحة البيضاء بجامعة حلوان</a></td></tr><tr><td valign='top' height='10'><img border='0' src='images/px_wight.jpg' width='7' height='10'></td></tr><tr><td class='outer_bref' valign='top' dir='rtl' height='53'>شهدت جامعة حلوان أمس الأول حادثا مؤسفا بعد اشتباك بالأسلحة البيضاء داخل الحرم الجامعي بين مجموعة من طلاب الجامعة وآخرين من جامعة عين شمس وحلوان مما أدي إلي مقتل طالب وإصابة آخر بجروح بالغة.<br/><a style='text-decoration: none;' href='Incidents/News/174973.aspx#comments'>[تعليقات  - 23]</a></td></tr><tr></tr></table></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="IframeBottomDiv" colspan="4" align="center">
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" height="5">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td background="images/line.jpg" valign="top" height="1" colspan="4">
+                                                <img border="0" src="images/line.jpg" width="3" height="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" align="center">
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td background="images/line.jpg" valign="top" height="1" colspan="4">
+                                                <img border="0" src="images/line.jpg" width="3" height="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                <br />
+                                                <div id="NewCategories" dir="rtl"><table><tr><td width='100%' valign='top' ><table><tr><td width='100%' valign='top' ><div style='color:#950000;font-family:Tahoma;font-size:10pt;line-height:30px;background-color:#EFEFEF;padding-right:10px'><a style='text-decoration:none;' href='outer/3/Investigations.html'>تحقيقات</a></div></td></tr><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Investigations/News/174966.aspx'>فتوات السرفيس<br>المواقف يحتلها البلطجية لتأديب الركاب المعترضين</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Investigations/News/174967.aspx'>العناية المركزة‏..‏ للمحظوظين‏!‏</a></li> </div></td></tr><ul> </tr><ul> </table></td><td width='100%' valign='top' ><table><tr><td width='100%' valign='top' ><div style='color:#950000;font-family:Tahoma;font-size:10pt;line-height:30px;background-color:#EFEFEF;padding-right:10px'><a style='text-decoration:none;' href='outer/68/Stars & Arts.html'>نجوم وفنون</a></div></td></tr><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Stars-Arts/News/175009.aspx'>دراسة علمية حديثة: "سكاى نيوز" تنافس الجزيرة والعربية</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Stars-Arts/News/174852.aspx'>غادة رجب‏:‏ منافستي لأصالة وحماقي تقويني وتسعدني</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Stars-Arts/News/174853.aspx'>غادة عبدالرازق: لن أدخل هذه الغرفة المغلقة‏!‏</a></li> </div></td></tr><ul> </table></td></tr><tr><td colspan='2' style='border-bottom:dashed 1px #999999;margin-bottom:10px;'><br /></td></tr><tr><td width='100%' valign='top' ><table><tr><td width='100%' valign='top' ><div style='color:#950000;font-family:Tahoma;font-size:10pt;line-height:30px;background-color:#EFEFEF;padding-right:10px'><a style='text-decoration:none;' href='outer/70/Last week.html'>آخر الاسبوع</a></div></td></tr><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Last-week/News/174882.aspx'>ماذا تبقي من مارلــــــــــــــــــــــــــــــين ؟‏!‏</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Last-week/News/174883.aspx'>إضحـــــك مع الملوخيــــــة والشــــــــــاي الأخضـــــر<br></a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Last-week/News/174884.aspx'>أبو منجل‏..‏ زعلان من رؤساء مصر‏!‏</a></li> </div></td></tr></tr><ul> </table></td><td width='100%' valign='top' ><table><tr><td width='100%' valign='top' ><div style='color:#950000;font-family:Tahoma;font-size:10pt;line-height:30px;background-color:#EFEFEF;padding-right:10px'><a style='text-decoration:none;' href='outer/27/Egypt.html'>مصر</a></div></td></tr><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Egypt/News/174960.aspx'>‏17‏ حركة طلابية تنظم مسيرة بجامعة القاهرة</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Egypt/News/174964.aspx'>تقرير للبيئة يرصد تحسنا في نسب تلوث الهواء</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Egypt/News/174970.aspx'>سـلاسـل بشـرية لتجـريم ظـاهرة التحـرش</a></li> </div></td></tr><ul> </table></td></tr><tr><td colspan='2' style='border-bottom:dashed 1px #999999;margin-bottom:10px;'><br /></td></tr><tr><td width='100%' valign='top' ><table><tr><td width='100%' valign='top' ><div style='color:#950000;font-family:Tahoma;font-size:10pt;line-height:30px;background-color:#EFEFEF;padding-right:10px'><a style='text-decoration:none;' href='outer/38/Incidents.html'>حوادث</a></div></td></tr><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Incidents/News/174972.aspx'>تأجيل قضية قناص العيون إلي‏5‏ نوفمبر</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Incidents/News/174973.aspx'>مقتل طالب في معركة بالأسلحة البيضاء بجامعة حلوان</a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Incidents/News/174975.aspx'>انتحار طالب بالمدينة الجامعية بالقاهرة بعد خطوبة محبوبته</a></li> </div></td></tr></tr><ul> </table></td><td width='100%' valign='top' ><table><tr><td width='100%' valign='top' ><div style='color:#950000;font-family:Tahoma;font-size:10pt;line-height:30px;background-color:#EFEFEF;padding-right:10px'><a style='text-decoration:none;' href='outer/15/Al-Ahram Email.html'>بريد الاهرام</a></div></td></tr><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Al-Ahram-Email/News/174836.aspx'>بريد الاهرام - اشراف / احمد البرى<br>أين المادة الفعالة؟<br></a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Al-Ahram-Email/News/174838.aspx'>سجل الشرف<br></a></li> </div></td></tr><ul> <td width='100%' valign='top' ><ul><tr><td width='100%' valign='top' align='right'><div style='width:250px;font-weight:lighter;' class='text_m'><li style='margin-right:8px;'><a style='font-weight:lighter;font-size:15px;' href='Al-Ahram-Email/News/174839.aspx'>‏..‏ وكان بطلا بحق<br></a></li> </div></td></tr><ul> </table></td></tr><tr><td colspan='2' style='border-bottom:dashed 1px #999999;margin-bottom:10px;'><br /></td></tr></table></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                                                <fb:like-box href="http://www.facebook.com/Alahram.Newspaper" width="530" height="480"
+                                                    show_faces="true" stream="true" header="false"></fb:like-box>
+                                                <div id="fb-root">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+    
+<script type="text/javascript" src='http://common2.ahram.org.eg/js.aspx?ProjectID=1&type=4'></script>
+<script type="text/javascript" src='http://common2.ahram.org.eg/JS.aspx?ProjectID=1&type=2'></script>
+<script type="text/javascript" src='http://common2.ahram.org.eg/JS.aspx?ProjectID=1&type=1'></script>
+
+<table border="0" cellpadding="0" cellspacing="0" width="950" height="42">
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div align="center">
+                <div id="contents-list">
+                    <div class="hd_footer">
+                        إصدارات الأهرام</div>
+                    <div id="footer_divFooterEsdarat" class="list_footer">
+                    <li><a href='http://gate.ahram.org.eg/' target='_blank'>بوابة الأهرام</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://massai.ahram.org.eg/' target='_blank'>الأهرام المسائي</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://shabab.ahram.org.eg/' target='_blank'>الشباب</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://elbeit.ahram.org.eg/' target='_blank'>البيت</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://democracy.ahram.org.eg/' target='_blank'>الديموقراطية</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://ik.ahram.org.eg/' target='_blank'>الاقتصادي</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://arabi.ahram.org.eg/' target='_blank'>الأهرام العربي</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://weekly.ahram.org.eg/index.htm' target='_blank'>الأهرام ويكلي</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://hebdo.ahram.org.eg/' target='_blank'>الأهرام إبدو</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://www.siyassa.org.eg/' target='_blank'>مجلة السياسة الدولية</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://english.ahram.org.eg/' target='_blank'>Ahram Online</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://sport.ahram.org.eg/' target='_blank'>الأهرام سبورت</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://alaa-eldeen.ahram.org.eg/' target='_blank'>علاء الدين</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://radio.ahram.org.eg/homepage.aspx' target='_blank'>راديو الأهرام</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://cars.ahram.org.eg/' target='_blank'>سيارات الأهرام</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://bookshop.ahram.org.eg' target='_blank'>مكتبة الأهرام</a></li><li><img src='http://www.ahram.org.eg/images/inner_line.gif' width='2' height='13' alt='' /></li><li><a href='http://nisfeldunia.ahram.org.eg/' target='_blank'>نصف الدنيا</a></li></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div> </td> </tr>
+<tr>
+    <td height="9" valign="top" background="images/red.jpg" dir="rtl">
+        <p align="center">
+            <span lang="ar-eg"><font color="#FFFFFF" size="2">جميع حقوق النشر محفوظة لدى مؤسسة الأهرام،و
+                يحظر نشر أو توزيع أو طبع أى مادة دون إذن مسبق من مؤسسة الأهرام<br>
+                راسلنا على البريد الاليكترونى ahramdaily@ahram.org.eg </font></span>
+    </td>
+</tr>
+</table> </div> </td>
+<td background="images/red.jpg" width="9" valign="top">
+    <img border="0" src="images/red.jpg" width="9" height="14">
+</td>
+</tr> </table> </div>
+
+<script type="text/javascript">
+    //    append();
+    //rssticker_ajax(RSS_id, cachetime, divId, divClass, delay, optionalswitch)
+    //1) RSS_id: "Array key of RSS feed in PHP script"
+    //2) cachetime: Time to cache the feed in seconds (0 for no cache)
+    //3) divId: "ID of DIV to display ticker in. DIV dynamically created"
+    //4) divClass: "Class name of this ticker, for styling purposes"
+    //5) delay: delay between message change, in milliseconds
+    //6) optionalswitch: "string" to control which parts of an item to display: "date" or "date+description"
+
+    new rssticker_ajax("BBC", 600, "ddbox", "bbcclass", 4500, "")
+
+</script>
+
+<script type="text/javascript">
+    var _sf_async_config = { uid: 34693, domain: "ahram.org.eg" };
+    (function () {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+       "js/chartbeat.js");
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function () { oldonload(); loadChartbeat(); };
+    })();
+</script>
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27416827-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11370086-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+
+
+
+    </td>
+    <td id="tdGoogle" valign="top" align="left" style="position: fixed;
+        z-index: 10;">
+        <!-- Begin -  Site: ahram.org.eg Zone: Ahram_HomePage_Right_SiteSkin_180*720 -->
+        <iframe src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=49&amp;Task=Get&amp;PageID=8864&amp;SiteID=1"
+            width="180" height="720" marginwidth="0" marginheight="0" hspace="0" vspace="0"
+            frameborder="0" scrolling="No">
+            <script language='javascript1.1' src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=49&amp;Task=Get&amp;Browser=NETSCAPE4&amp;NoCache=True&PageID=8864&amp;SiteID=1"></script>
+            <noscript>
+                <a href="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=49&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=8864"
+                    target="_blank">
+                    <img src="http://www.ahram.org.eg/newadv/a.aspx?ZoneID=49&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=8864"
+                        width="180" height="720" border="0" alt=""></a>
+            </noscript>
+        </iframe>
+        <!-- End -  Site: ahram.org.eg Zone: Ahram_HomePage_Right_SiteSkin_180*720 -->
+    </td>
+
+    </tr> </table> </div>
+    <input name="theissueid" type="hidden" id="theissueid" value="1041" />
+    </form>
+    <script type="text/javascript">
+        showGallarydiv(0);
+        var start = 0;
+        var NewsSlideShowID = setInterval("MainNewsSlideShow()", 7000)
+    </script>
+</body>
+</html>
+<script language="javascript">
+    if (window.adgroupid == undefined) {
+        window.adgroupid = Math.round(Math.random() * 1000);
+    }
+    document.write('<scr' + 'ipt language="javascript1.1" src="http://adserver.adtech.de/addyn/3.0/974/2856095/0/16/ADTECH;loc=100;target=_blank;grp=' + window.adgroupid + ';misc=' + new Date().getTime() + '"></scri' + 'pt>');
+</script>
+<noscript>
+    <a href="http://adserver.adtech.de/adlink/3.0/974/2856095/0/16/ADTECH;loc=300" target="_blank">
+        <img src="http://adserver.adtech.de/adserv/3.0/974/2856095/0/16/ADTECH;loc=300" border="0"
+            width="1" height="1"></a></noscript>
+<script type="text/javascript">
+    initFocus("http://www.ahram.org.eg/images/favicon.ico");
+</script>

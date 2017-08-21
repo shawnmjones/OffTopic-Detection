@@ -84,30 +84,47 @@ class TestErrorStates(unittest.TestCase):
                 tp.supported_measures['wordcount']['default_threshold'])
                 }
 
+#        filedata = {
+#            'test': {
+#                'mementos': [
+#                    {
+#                        'uri-m': 'local-archive:test1',
+#                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+#                        'content_filename': '{}/samplecontent/verysimple.dat'.format(working_dir),
+#                        'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
+#                    },
+#                    {
+#                        'uri-m': 'local-archive:test1',
+#                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+#                        'content_filename': '{}/samplecontent/empty_vocab.dat'.format(working_dir),
+#                        'headers_filename': '{}/samplecontent/empty_vocab.hdr'.format(working_dir)
+#                    }
+#                ]
+#            }
+#        }
+
         filedata = {
             'test': {
-                'mementos': [
-                    {
-                        'uri-m': 'local-archive:test1',
-                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
-                        'content_filename': '{}/samplecontent/verysimple.dat'.format(working_dir),
-                        'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
-                    },
-                    {
-                        'uri-m': 'local-archive:test1',
-                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
-                        'content_filename': '{}/samplecontent/empty_vocab.dat'.format(working_dir),
-                        'headers_filename': '{}/samplecontent/empty_vocab.hdr'.format(working_dir)
-                    }
-                ]
+                'mementos': {
+                        'local-archive:test1': {
+                            'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+                            'content_filename': '{}/samplecontent/verysimple.dat'.format(working_dir),
+                            'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
+                        },
+                        'local-archive:test2': {
+                            'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+                            'content_filename': '{}/samplecontent/empty_vocab.dat'.format(working_dir),
+                            'headers_filename': '{}/samplecontent/empty_vocab.hdr'.format(working_dir)
+                        }
+                }
             }
         }
 
         def test_each_measure(instance, filedata):
             outdata = instance.get_scores(filedata) 
 
-            self.assertTrue(outdata['test']['mementos'][0]['measures']['on_topic'])
-            self.assertFalse(outdata['test']['mementos'][1]['measures']['on_topic'])
+            self.assertTrue(outdata['test']['mementos']['local-archive:test1']['measures']['on_topic'])
+            self.assertFalse(outdata['test']['mementos']['local-archive:test2']['measures']['on_topic'])
 
         for measure in measures:
             test_each_measure(measures[measure], filedata)
@@ -134,28 +151,26 @@ class TestErrorStates(unittest.TestCase):
 
         filedata = {
             'test': {
-                'mementos': [
-                    {
-                        'uri-m': 'local-archive:test1',
-                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
-                        'content_filename': '{}/samplecontent/verysimple.dat'.format(working_dir),
-                        'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
-                    },
-                    {
-                        'uri-m': 'local-archive:test2',
-                        'memento-datetime': datetime.datetime(2011, 2, 2, 2, 3, 26),
-                        'content_filename': '{}/samplecontent/verysimple_same.dat'.format(working_dir),
-                        'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
-                    }
-                ]
+                'mementos': {
+                        'local-archive:test1': {
+                            'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+                            'content_filename': '{}/samplecontent/verysimple.dat'.format(working_dir),
+                            'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
+                        },
+                        'local-archive:test2': {
+                            'memento-datetime': datetime.datetime(2011, 2, 2, 2, 3, 26),
+                            'content_filename': '{}/samplecontent/verysimple_same.dat'.format(working_dir),
+                            'headers_filename': '{}/samplecontent/verysimple.hdr'.format(working_dir)
+                        }
+                }
             }
         }
 
         def test_each_measure(instance, filedata):
             outdata = instance.get_scores(filedata) 
 
-            self.assertTrue(outdata['test']['mementos'][0]['measures']['on_topic'])
-            self.assertTrue(outdata['test']['mementos'][1]['measures']['on_topic'])
+            self.assertTrue(outdata['test']['mementos']['local-archive:test1']['measures']['on_topic'])
+            self.assertTrue(outdata['test']['mementos']['local-archive:test2']['measures']['on_topic'])
 
 
         for measure in measures:
@@ -182,22 +197,21 @@ class TestErrorStates(unittest.TestCase):
 
         filedata = {
             'test': {
-                'mementos': [
-                    {
-                        'uri-m': 'local-archive:test1',
-                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
-                        'content_filename': '{}/samplecontent/empty_vocab.dat'.format(working_dir),
-                        'headers_filename': '{}/samplecontent/empty_vocab.hdr'.format(working_dir)
-                    }
-                ]
+                'mementos': {
+                        'local-archive:test1': {
+                            'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+                            'content_filename': '{}/samplecontent/empty_vocab.dat'.format(working_dir),
+                            'headers_filename': '{}/samplecontent/empty_vocab.hdr'.format(working_dir)
+                        }
+                }
             }
         }
 
         def test_each_measure(instance, filedata):
             outdata = instance.get_scores(filedata) 
 
-            self.assertTrue(outdata['test']['mementos'][0]['measures']['on_topic'])
-            self.assertEqual(outdata['test']['mementos'][0]['measures']['off_topic_measure'],
+            self.assertTrue(outdata['test']['mementos']['local-archive:test1']['measures']['on_topic'])
+            self.assertEqual(outdata['test']['mementos']['local-archive:test1']['measures']['off_topic_measure'],
                 'only 1 memento')
 
         for measure in measures:
@@ -207,21 +221,20 @@ class TestErrorStates(unittest.TestCase):
 
         filedata = {
             'test': {
-                'mementos': [
-                    {
-                        'uri-m': 'local-archive:test1',
-                        'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
-                        'content_filename': '{}/samplecontent/facebook_example.dat'.format(working_dir),
-                        'headers_filename': '{}/samplecontent/facebook_example.hdr'.format(working_dir)
-                    }
-                ]
+                'mementos': {
+                        'local-archive:test1': {
+                            'memento-datetime': datetime.datetime(2011, 2, 1, 2, 3, 26),
+                            'content_filename': '{}/samplecontent/facebook_example.dat'.format(working_dir),
+                            'headers_filename': '{}/samplecontent/facebook_example.hdr'.format(working_dir)
+                        }
+                }
             }
         }
 
         outdata = tp.mark_unsupported_items(filedata)
 
-        self.assertEqual(outdata['test']['mementos'][0]['content-type'], 'text/html;charset=utf-8')
-        self.assertTrue(outdata['test']['mementos'][0]['processed_for_off_topic'])
+        self.assertEqual(outdata['test']['mementos']['local-archive:test1']['content-type'], 'text/html;charset=utf-8')
+        self.assertTrue(outdata['test']['mementos']['local-archive:test1']['processed_for_off_topic'])
 
         # TODO: test for unsupported content types
 
@@ -234,20 +247,18 @@ class TestErrorStates(unittest.TestCase):
 
         filedata = {
             'test': {
-                'mementos': [
-                    {
-                        'uri-m': 'local-archive:test1',
+                'mementos': {
+                    'local-archive:test1': {
                         'memento-datetime': datetime.datetime(2012, 5, 6, 15, 29, 19),
                         'content_filename': '{}/samplecontent/not_processed1-1.dat'.format(working_dir),
                         'headers_filename': '{}/samplecontent/not_processed1-1.hdr'.format(working_dir)
                     },
-                    {
-                        'uri-m': 'local-archive:test2',
+                    'local-archive:test2': {
                         'memento-datetime': datetime.datetime(2012, 5, 24, 10, 36, 23),
                         'content_filename': '{}/samplecontent/not_processed1-2.dat'.format(working_dir),
                         'headers_filename': '{}/samplecontent/not_processed1-2.hdr'.format(working_dir)
                     }
-                ]
+                }
             }
         }
 
@@ -256,7 +267,8 @@ class TestErrorStates(unittest.TestCase):
 
         outdata = csat.get_scores(filedata)
 
-        for memento in outdata['test']['mementos']:
+        for urim in outdata['test']['mementos']:
+            memento = outdata['test']['mementos'][urim] 
             self.assertTrue('measures' in memento)
 
     def test_originally_not_processed_by_cosine2(self):
@@ -265,7 +277,7 @@ class TestErrorStates(unittest.TestCase):
 
         def process_ahram_mementos(metadata_filename):
 
-            mementos = []
+            mementos = {}
 
             print("processing file {}".format(metadata_filename))
 
@@ -284,12 +296,11 @@ class TestErrorStates(unittest.TestCase):
                         "%Y%m%d%H%M%S")
 
                     memento = {}
-                    memento['uri-m'] = urim
                     memento['memento-datetime'] = mdt
                     memento['content_filename'] = "{}/mementos/{}".format(test_working_dir, content_file)
                     memento['headers_filename'] = "{}/mementos/{}".format(test_working_dir, header_file)
 
-                    mementos.append(memento)
+                    mementos[urim] = memento
                     
             return mementos
 
@@ -297,7 +308,7 @@ class TestErrorStates(unittest.TestCase):
         filedata = {
 
             'test': {
-                'mementos': []
+                'mementos': {}
                 }
         }
 
@@ -308,6 +319,6 @@ class TestErrorStates(unittest.TestCase):
 
         outdata = csat.get_scores(filedata)
 
-        for memento in outdata['test']['mementos']:
-            print(memento)
+        for urim in outdata['test']['mementos']:
+            memento = outdata['test']['mementos'][urim] 
             self.assertTrue('measures' in memento)

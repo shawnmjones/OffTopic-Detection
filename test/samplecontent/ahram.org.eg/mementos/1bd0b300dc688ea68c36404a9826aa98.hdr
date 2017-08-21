@@ -1,0 +1,11 @@
+{
+    "Content-Security-Policy-Report-Only": "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org data: blob: ; frame-src 'self' *.archive-it.org archive-it.org *.qa-archive-it.org qa-archive-it.org archive.org *.archive.org https://*.archive-it.org https://archive-it.org https://*.qa-archive-it.org https://qa-archive-it.org https://archive.org https://*.archive.org ; report-uri https://partner.archive-it.org/csp-report",
+    "Memento-Datetime": "Wed, 06 Feb 2013 11:03:40 GMT",
+    "Link": "<http://www.ahram.org.eg/>; rel=\"original\", <http://wayback.archive-it.org/2358/timemap/link/http://www.ahram.org.eg/>; rel=\"timemap\"; type=\"application/link-format\", <http://wayback.archive-it.org/2358/http://www.ahram.org.eg/>; rel=\"timegate\", <http://wayback.archive-it.org/2358/20110218084037/http://www.ahram.org.eg/>; rel=\"first memento\"; datetime=\"Fri, 18 Feb 2011 08:40:37 GMT\", <http://wayback.archive-it.org/2358/20130205110219/http://www.ahram.org.eg/>; rel=\"prev memento\"; datetime=\"Tue, 05 Feb 2013 11:02:19 GMT\", <http://wayback.archive-it.org/2358/20130206110340/http://www.ahram.org.eg/>; rel=\"memento\"; datetime=\"Wed, 06 Feb 2013 11:03:40 GMT\", <http://wayback.archive-it.org/2358/20130207115518/http://www.ahram.org.eg/>; rel=\"next memento\"; datetime=\"Thu, 07 Feb 2013 11:55:18 GMT\", <http://wayback.archive-it.org/2358/20161103080405/http://www.ahram.org.eg/>; rel=\"last memento\"; datetime=\"Thu, 03 Nov 2016 08:04:05 GMT\"",
+    "Date": "Wed, 06 Feb 2013 10:59:11 GMT",
+    "Connection": "close, close",
+    "Server": "Microsoft-IIS/7.5",
+    "X-Powered-By": "ASP.NET",
+    "Content-Type": "text/html",
+    "Content-Length": "27"
+}

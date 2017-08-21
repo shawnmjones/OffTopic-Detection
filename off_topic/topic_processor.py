@@ -74,7 +74,9 @@ def remove_boilerplate(filedata):
 
         mementos = filedata[urit]['mementos']
 
-        for memento in mementos:
+        for urim in mementos:
+
+            memento = mementos[urim]
 
             logger.debug("removing boilerplate from: {}".format(memento))
 
@@ -142,7 +144,9 @@ def mark_unsupported_items(filedata):
 
         mementos = filedata[urit]['mementos']
 
-        for memento in mementos:
+        for urim in mementos:
+
+            memento = mementos[urim]
 
             with open(memento['headers_filename']) as f:
                 json_headers = json.load(f)
@@ -175,20 +179,22 @@ def mark_unsupported_items(filedata):
 
 def find_first_memento(memento_records):
 
-    first_memento = None
+    first_urim = None
 
     # sometimes there is an empty list...
     if len(memento_records) > 0:
 
         memento_list = []
 
-        for memento in memento_records:
+        for urim in memento_records:
 
-           if memento['processed_for_off_topic'] == True:
+            memento = memento_records[urim]
+
+            if memento['processed_for_off_topic'] == True:
 
                 memento_list.append( (
                     memento['memento-datetime'],
-                    memento['uri-m']
+                    urim
                     ) )
 
         if len(memento_list) == 0:
@@ -198,12 +204,12 @@ def find_first_memento(memento_records):
 
         first_memento = sorted(memento_list)[0]
 
-        for memento in memento_records:
-            if memento['uri-m'] == first_memento[1]:
-                first_memento = memento
+        for urim in memento_records:
+            if urim == first_memento[1]:
+                first_urim = urim 
                 break
 
-    return first_memento
+    return first_urim
 
 
 class TopicProcessor(metaclass=ABCMeta):
@@ -238,18 +244,22 @@ class ByteCountAgainstSingleResource(TopicProcessor):
             # also, if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 0:
 
-                first_mem = find_first_memento(
+                mementos = updated_filedata[urit]['mementos']
+
+                first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
     
-                with open(first_mem['text-only_filename']) as f:
+                with open(mementos[first_urim]['text-only_filename']) as f:
                     first_tokens = tokenize(f.read())
     
                 first_mem_bcount = sys.getsizeof(''.join(first_tokens))
     
-                first_mem.setdefault('measures', {})
-                first_mem['measures']['bytecount'] = first_mem_bcount
+                mementos[first_urim].setdefault('measures', {})
+                mementos[first_urim]['measures']['bytecount'] = first_mem_bcount
     
-                for memento in updated_filedata[urit]['mementos']:
+                for urim in mementos:
+
+                    memento = mementos[urim]
     
                     if memento['processed_for_off_topic'] == True:
 
@@ -280,9 +290,10 @@ class ByteCountAgainstSingleResource(TopicProcessor):
                                     'bytecount'
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
-                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
-                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
-                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                    urim = list(updated_filedata[urit]['mementos'].keys())[0]
+                    updated_filedata[urit]['mementos'][urim].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][urim]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][urim]['measures']['off_topic_measure'] = 'only 1 memento'
                 else:
                     logger.info(
                         "TimeMap for {} has no mementos, skipping...".format(
@@ -311,19 +322,23 @@ class WordCountAgainstSingleResource(TopicProcessor):
             # also, if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 1:
 
-                first_mem = find_first_memento(
+                mementos = updated_filedata[urit]['mementos']
+
+                first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
     
-                with open(first_mem['text-only_filename']) as f:
+                with open(mementos[first_urim]['text-only_filename']) as f:
                     first_tokens = tokenize(f.read())
                     first_tokens = remove_stop_words(first_tokens, self.stopwords)
     
                 first_mem_wcount = len(first_tokens)
     
-                first_mem.setdefault('measures', {})
-                first_mem['measures']['wordcount'] = first_mem_wcount
-    
-                for memento in updated_filedata[urit]['mementos']:
+                mementos[first_urim].setdefault('measures', {})
+                mementos[first_urim]['measures']['wordcount'] = first_mem_wcount
+
+                for urim in mementos:
+
+                    memento = mementos[urim]
 
                     if memento['processed_for_off_topic'] == True:
 
@@ -355,9 +370,10 @@ class WordCountAgainstSingleResource(TopicProcessor):
                                     'wordcount'
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
-                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
-                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
-                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                    urim = list(updated_filedata[urit]['mementos'].keys())[0]
+                    updated_filedata[urit]['mementos'][urim].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][urim]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][urim]['measures']['off_topic_measure'] = 'only 1 memento'
                 else:
                     logger.info(
                         "TimeMap for {} has no mementos, skipping...".format(
@@ -394,85 +410,84 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
             # also, if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 1:
 
-                fileids = {}
-                filesdata = {}
+                filesdata = []
+                urims = []
 
                 mementos = updated_filedata[urit]['mementos']
 
                 logger.debug("there are {} mementos for processing"
                     " under cosine similarity".format(len(mementos)))
 
-                for i in range(0, len(mementos)):
+                for urim in mementos:
 
-                    if mementos[i]['processed_for_off_topic'] == True:
+                    memento = mementos[urim]
 
-                        filename = mementos[i]['text-only_filename']
-                        fileids[filename] = i 
+                    if memento['processed_for_off_topic'] == True:
+
+                        filename = memento['text-only_filename']
     
                         with open(filename) as f:
                             filedata = f.read()
-    
-                        filesdata[filename] = filedata
+   
+                        # the index for filesdata must correspond to the index
+                        # in urims for this to work
+                        filesdata.append(filedata)
+                        urims.append(urim)
                     else:
                         logger.debug("not processing memento at URI-M {}"
-                            " for off topic".format(mementos[i]['uri-m']))
+                            " for off topic".format(urim))
 
                 logger.debug("discovered {} mementos for processing under"
                     " cosine similarity".format(len(filesdata)))
 
                 logger.debug("mementos found: {}".format(updated_filedata[urit]['mementos']))
 
-                first_mem = find_first_memento(
+                first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
                 # sometimes there are no first memento because the mementos
                 # are not able to be processed (i.e., not a supported format
                 # like HTML)
-                if first_mem != None:
+                if first_urim != None:
 
-                    first_mem_filename = first_mem['text-only_filename']
-    
-                    first = fileids[first_mem_filename]
+                    first = urims.index(first_urim)
  
-                    tfidf_matrix = tfidf.fit_transform(filesdata.values())
+                    tfidf_matrix = tfidf.fit_transform(filesdata)
     
                     csresults = cosine_similarity(tfidf_matrix[first], tfidf_matrix)
-    
+   
+                    # TODO: this solution assumes that the positions between .values()
+                    # and .keys() for a dict are the same
                     for i in range(0, len(csresults[0])):
-                        logger.debug("processing memento {}".format(mementos[i]))
-                        mementos[i].setdefault('measures', {})
-                        mementos[i]['measures']['cosine'] = Decimal(csresults[0][i])
-                        logger.debug("memento should now have scores {}".format(mementos[i]))
+
+                        urim = urims[i]
+
+                        logger.debug("processing memento {}".format(mementos[urim]))
+                        mementos[urim].setdefault('measures', {})
+                        mementos[urim]['measures']['cosine'] = Decimal(csresults[0][i])
+                        logger.debug("memento should now have scores {}".format(mementos[urim]))
                       
-                        if 'on-topic' not in mementos[i]['measures']:
+                        if 'on-topic' not in mementos[urim]['measures']:
     
-                            mementos[i]['measures']['on_topic'] = True
+                            mementos[urim]['measures']['on_topic'] = True
     
                             if Decimal(csresults[0][i]) < Decimal(self.threshold):
-                                mementos[i]['measures']['on_topic'] = False
-                                mementos[i]['measures']['off_topic_measure'] = \
+                                mementos[urim]['measures']['on_topic'] = False
+                                mementos[urim]['measures']['off_topic_measure'] = \
                                     'cosine'
 
-                        logger.debug("memento should now have on-topic score {}".format(mementos[i]))
-
-                        if mementos[i]['uri-m'] == 'http://wayback.archive-it.org/2358/20120926134142id_/http://www.ahram.org.eg/':
-                            logger.debug("memento for strange URI: {}".format(mementos[i]))
-
+                        logger.debug("memento should now have on-topic score {}".format(mementos[urim]))
 
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
-                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
-                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
-                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                    urim = list(updated_filedata[urit]['mementos'].keys())[0]
+                    updated_filedata[urit]['mementos'][urim].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][urim]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][urim]['measures']['off_topic_measure'] = 'only 1 memento'
                 else:
                     logger.info(
                         "TimeMap for {} has no mementos, skipping...".format(
                         urit))
-
-        # TODO: remove this diagnostic code
-        for memento in updated_filedata[urit]['mementos']:
-            if memento['uri-m'] == 'http://wayback.archive-it.org/2358/20120926134142id_/http://www.ahram.org.eg/':
-                logger.debug("memento on the way out: {}".format(memento))
 
         return updated_filedata
 
@@ -492,19 +507,23 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
 
         for urit in updated_filedata:
 
+            mementos = updated_filedata[urit]['mementos']
+
             # some TimeMaps have no mementos
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
             # also, if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 1:
 
-                first_mem = find_first_memento(
+                first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
-                with open(first_mem['text-only_filename']) as f:
+                with open(mementos[first_urim]['text-only_filename']) as f:
                     first_tokens = tokenize(f.read())
                     first_tokens = remove_stop_words(first_tokens, self.stopwords)
 
-                for memento in updated_filedata[urit]['mementos']:
+                for urim in mementos:
+
+                    memento = mementos[urim]
 
                     if memento['processed_for_off_topic'] == True:
                         with open(memento['text-only_filename']) as f:
@@ -527,9 +546,10 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
                                     'jaccard'
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
-                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
-                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
-                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
+                    urim = list(updated_filedata[urit]['mementos'].keys())[0]
+                    updated_filedata[urit]['mementos'][urim].setdefault('measures', {}) 
+                    updated_filedata[urit]['mementos'][urim]['measures']['on_topic'] = True
+                    updated_filedata[urit]['mementos'][urim]['measures']['off_topic_measure'] = 'only 1 memento'
                 else:
                     logger.info(
                         "TimeMap for {} has no mementos, skipping...".format(
@@ -576,14 +596,19 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
             # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
             # also, if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 1:
+                
+                mementos = updated_filedata[urit]['mementos']
 
-                first_mem = find_first_memento(
+                first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
-                with open(first_mem['text-only_filename']) as f:
+                with open(mementos[first_urim]['text-only_filename']) as f:
                     first_tf = self.generate_term_frequencies(f.read())
 
-                for memento in updated_filedata[urit]['mementos']:
+                for urim in mementos:
+
+                    memento = mementos[urim]
+
                     if memento['processed_for_off_topic'] == True:
 
                         with open(memento['text-only_filename']) as f:
