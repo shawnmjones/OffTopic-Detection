@@ -111,7 +111,7 @@ def remove_boilerplate(filedata):
                                 input_data = f.read()
 
                         except UnicodeDecodeError as e:
-                            logger.info("Can not determine character set "
+                            logger.warn("Can not determine character set "
                                 "for URI-M: {}, skipping...".format(
                                 memento['uri-m']))
    
@@ -439,8 +439,10 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
                     csresults = cosine_similarity(tfidf_matrix[first], tfidf_matrix)
     
                     for i in range(0, len(csresults[0])):
+                        logger.debug("processing memento {}".format(mementos[i]))
                         mementos[i].setdefault('measures', {})
                         mementos[i]['measures']['cosine'] = Decimal(csresults[0][i])
+                        logger.debug("memento should now have scores {}".format(mementos[i]))
                       
                         if 'on-topic' not in mementos[i]['measures']:
     
@@ -451,6 +453,12 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
                                 mementos[i]['measures']['off_topic_measure'] = \
                                     'cosine'
 
+                        logger.debug("memento should now have on-topic score {}".format(mementos[i]))
+
+                        if mementos[i]['uri-m'] == 'http://wayback.archive-it.org/2358/20120926134142id_/http://www.ahram.org.eg/':
+                            logger.debug("memento for strange URI: {}".format(mementos[i]))
+
+
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
                     updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
@@ -460,86 +468,13 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
                     logger.info(
                         "TimeMap for {} has no mementos, skipping...".format(
                         urit))
+
+        # TODO: remove this diagnostic code
+        for memento in updated_filedata[urit]['mementos']:
+            if memento['uri-m'] == 'http://wayback.archive-it.org/2358/20120926134142id_/http://www.ahram.org.eg/':
+                logger.debug("memento on the way out: {}".format(memento))
 
         return updated_filedata
-
-class CosineSimilarityAgainstSingleResource(TopicProcessor):
-
-    def get_scores(self, input_filedata):
-        # eliminate every file that is not HTML, text
-        updated_filedata = mark_unsupported_items(input_filedata)
-
-        # strip all tags out of all remaining content
-        updated_filedata = remove_boilerplate(input_filedata)
-
-        # tokenizer removes stop words, hence stop_words = None
-        tfidf = TfidfVectorizer(tokenizer=tokenize,
-            stop_words=None)
-
-        for urit in updated_filedata:
-
-            # some TimeMaps have no mementos
-            # e.g., http://wayback.archive-it.org/3936/timemap/link/http://www.peacecorps.gov/shutdown/?from=hpb
-            # also, if there is only 1 memento, it isn't really off-topic, is it?
-            if len(updated_filedata[urit]['mementos']) > 1:
-
-                first_mem = find_first_memento(
-                    updated_filedata[urit]['mementos'])
-
-                first_mem_filename = first_mem['text-only_filename']
-
-                with open(first_mem['text-only_filename']) as f:
-                    first_filedata = f.read()
-
-                first_mem.setdefault('measures', {})
-
-                for memento in updated_filedata[urit]['mementos']:
-
-                    if memento['processed_for_off_topic'] == True:
-                        filename = memento['text-only_filename']
-                        logger.debug(
-                            "working on file {} corresponding to URI-M {}"
-                            .format( filename, memento['uri-m']))
-
-                        with open(filename) as f:
-                            filedata = f.read()
-
-                        tfidf_matrix = tfidf.fit_transform(
-                            [ first_filedata, filedata ]
-                            )
-
-                        csresults = cosine_similarity(
-                            tfidf_matrix[0], tfidf_matrix[1])
-
-                        memento.setdefault('measures', {})
-                        memento['measures']['cosine'] = Decimal(csresults[0][0])
-
-                        if 'on_topic' not in memento['measures']:
-                            logger.debug("checking if URI-M {} is off-topic"
-                                " with cosine score {} and threshold {}"
-                                .format(memento['uri-m'], csresults[0][0],
-                                self.threshold))
-                        
-                            memento['measures']['on_topic'] = True
-                        
-                            if Decimal(csresults[0][0]) < Decimal(self.threshold):
-                                memento['measures']['on_topic'] = False
-                                memento['measures']['off_topic_measure'] = \
-                                    'cosine'
-                                logger.debug("URI-M {} is off-topic".format(
-                                    memento['uri-m']))
-
-            else:
-                if len(updated_filedata[urit]['mementos']) == 1:
-                    updated_filedata[urit]['mementos'][0].setdefault('measures', {}) 
-                    updated_filedata[urit]['mementos'][0]['measures']['on_topic'] = True
-                    updated_filedata[urit]['mementos'][0]['measures']['off_topic_measure'] = 'only 1 memento'
-                else:
-                    logger.info(
-                        "TimeMap for {} has no mementos, skipping...".format(
-                        urit))
-
-        return updated_filedata 
 
 class JaccardDistanceAgainstSingleResource(TopicProcessor):
 
