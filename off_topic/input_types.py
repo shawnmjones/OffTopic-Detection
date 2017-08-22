@@ -318,7 +318,7 @@ supported_input_types = {
 
 def get_input_type(input_type, arguments, directory, logger):
 
-    logger.info("using input type {}".format(input_type))
+    logger.info("Using input type {}".format(input_type))
     logger.debug("input type arguments: {}".format(arguments))
     logger.debug("using supported input type {}".format(
         supported_input_types[input_type]))

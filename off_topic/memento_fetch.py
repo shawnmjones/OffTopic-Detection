@@ -141,7 +141,7 @@ def parse_metadata_to_dict(directory):
     metadata_dict = {}
     metadata_filename = "{}/metadata.tsv".format(directory)
 
-    logger.info("parsing data from metadata file {}".format(metadata_filename))
+    logger.debug("parsing data from metadata file {}".format(metadata_filename))
 
     with open(metadata_filename) as metadata_file:
 
@@ -344,4 +344,4 @@ def download_TimeMaps_and_mementos(urits, destination_directory, depth):
 
         no_mementos_file.close()
 
-    logger.info("done downloading timemaps and associated mementos from: {}".format(urits))
+    logger.info("done downloading timemaps and associated mementos")

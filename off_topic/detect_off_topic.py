@@ -155,45 +155,42 @@ if __name__ == '__main__':
     logger = get_logger(__name__, calculate_loglevel(args.verbose), 
         args.logfile)
 
-    logger.info('Starting run')
-    logger.info('command-line arguments: {}'.format(args))
+    logger.info('Starting run.')
+    logger.debug('command-line arguments: {}'.format(args))
 
+    # use the arguments to generate the appropriate input type class
     input_data = get_input_type(args.input_type[0], args.input_type[1],
         args.working_directory, logger)
     input_filedata = input_data.get_filedata()
-    logger.info('input filedata now contains {} entries'.format(
+    logger.info('Generated or downloaded {} TimeMaps for processing'.format(
         len(input_filedata)))
     logger.debug('using input_filelist: {}'.format(input_filedata))
 
     scores = None
-    # TODO: submit directory output from input_type to a topic processor
+
     for measure in args.measures:
-        logger.info("processing measure {}".format(measure))
+        logger.info("Processing mementos using measure {}.".format(measure))
         threshold = args.measures[measure]
         topic_processor.logger = logger
         tp = get_topic_processor(measure, threshold)
         scores = tp.get_scores(input_filedata)
-        logger.info("done with processing of measure {}".format(measure))
-
-    # TODO: write output to a file
+        logger.info("Done with processing of measure {}.".format(measure))
 
     with open(args.output_filename, 'w') as f:
 
         for urit in scores:
 
-            for memento in scores[urit]['mementos']:
+            for urim in scores[urit]['mementos']:
 
-                print()
-                print("memento:")
-                pp.pprint(memento)
-                print()
+                memento = scores[urit]['mementos'][urim]
 
-                if memento['measures']['on_topic'] == False:
-                    urim = memento['uri-m']
-                    off_topic_measure = memento['measures']['off_topic_measure']
-                    score = memento['measures'][off_topic_measure]
+                if memento['processed_for_off_topic'] == True:
+    
+                    if memento['measures']['on_topic'] == False:
+                        off_topic_measure = memento['measures']['off_topic_measure']
+                        score = memento['measures'][off_topic_measure]
+    
+                        f.write("{}\t{}\t{}\n".format(
+                            score, off_topic_measure, urim))
 
-                    f.write("{}\t{}\t{}\n".format(
-                        score, off_topic_measure, urim))
-
-    logger.info('Finishing run')
+    logger.info('Finishing run.')

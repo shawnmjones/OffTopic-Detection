@@ -170,7 +170,7 @@ def mark_unsupported_items(filedata):
             else:
                 memento['processed_for_off_topic'] =  \
                     'no content-type header for memento at {}'.format(
-                        memento['uri-m'])
+                        urim)
 
         updated_filedata.setdefault(urit, {})
         updated_filedata[urit]['mementos'] = mementos
@@ -198,8 +198,10 @@ def find_first_memento(memento_records):
                     ) )
 
         if len(memento_list) == 0:
-            logger.info("NO MEMENTOS!!! Cannot find first memento!")
-            logger.info(memento_records)
+            logger.warn("Cannot find first memento in TimeMap!"
+                " This is likely because all mementos in this TimeMap"
+                " use an unsupported or unknown content-type.")
+            logger.debug("no mementos in records: {}".format(memento_records))
             return None
 
         first_memento = sorted(memento_list)[0]
@@ -248,46 +250,48 @@ class ByteCountAgainstSingleResource(TopicProcessor):
 
                 first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
-    
-                with open(mementos[first_urim]['text-only_filename']) as f:
-                    first_tokens = tokenize(f.read())
-    
-                first_mem_bcount = sys.getsizeof(''.join(first_tokens))
-    
-                mementos[first_urim].setdefault('measures', {})
-                mementos[first_urim]['measures']['bytecount'] = first_mem_bcount
-    
-                for urim in mementos:
+  
+                if first_urim != None:
 
-                    memento = mementos[urim]
+                    with open(mementos[first_urim]['text-only_filename']) as f:
+                        first_tokens = tokenize(f.read())
+        
+                    first_mem_bcount = sys.getsizeof(''.join(first_tokens))
+        
+                    mementos[first_urim].setdefault('measures', {})
+                    mementos[first_urim]['measures']['bytecount'] = first_mem_bcount
+        
+                    for urim in mementos:
     
-                    if memento['processed_for_off_topic'] == True:
-
-                        with open(memento['text-only_filename']) as f:
-                            # tokenize, stemming, remove stop words
-                            tokens = tokenize(f.read())
+                        memento = mementos[urim]
+        
+                        if memento['processed_for_off_topic'] == True:
     
-                        # calculate the word count on all documents
-                        bcount = len(tokens)
-                        
-                        memento.setdefault('measures', {})
-                        
-                        # compare the word count of all documents with 
-                        # the first in TimeMap
-                        bcount_diff = bcount - first_mem_bcount
-                        bcount_diff_pc = bcount_diff / float(first_mem_bcount)
-
-                        # the difference percentage is what is important
-                        memento['measures']['bytecount'] = bcount_diff_pc
-                        
-                        if 'on_topic' not in memento['measures']:
-                        
-                            memento['measures']['on_topic'] = True
-                        
-                            if bcount_diff_pc < self.threshold:
-                                memento['measures']['on_topic'] = False
-                                memento['measures']['off_topic_measure'] = \
-                                    'bytecount'
+                            with open(memento['text-only_filename']) as f:
+                                # tokenize, stemming, remove stop words
+                                tokens = tokenize(f.read())
+        
+                            # calculate the word count on all documents
+                            bcount = len(tokens)
+                            
+                            memento.setdefault('measures', {})
+                            
+                            # compare the word count of all documents with 
+                            # the first in TimeMap
+                            bcount_diff = bcount - first_mem_bcount
+                            bcount_diff_pc = bcount_diff / float(first_mem_bcount)
+    
+                            # the difference percentage is what is important
+                            memento['measures']['bytecount'] = bcount_diff_pc
+                            
+                            if 'on_topic' not in memento['measures']:
+                            
+                                memento['measures']['on_topic'] = True
+                            
+                                if bcount_diff_pc < self.threshold:
+                                    memento['measures']['on_topic'] = False
+                                    memento['measures']['off_topic_measure'] = \
+                                        'bytecount'
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
                     urim = list(updated_filedata[urit]['mementos'].keys())[0]
@@ -326,48 +330,50 @@ class WordCountAgainstSingleResource(TopicProcessor):
 
                 first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
+  
+                if first_urim != None:
+
+                    with open(mementos[first_urim]['text-only_filename']) as f:
+                        first_tokens = tokenize(f.read())
+                        first_tokens = remove_stop_words(first_tokens, self.stopwords)
+        
+                    first_mem_wcount = len(first_tokens)
+        
+                    mementos[first_urim].setdefault('measures', {})
+                    mementos[first_urim]['measures']['wordcount'] = first_mem_wcount
     
-                with open(mementos[first_urim]['text-only_filename']) as f:
-                    first_tokens = tokenize(f.read())
-                    first_tokens = remove_stop_words(first_tokens, self.stopwords)
+                    for urim in mementos:
     
-                first_mem_wcount = len(first_tokens)
+                        memento = mementos[urim]
     
-                mementos[first_urim].setdefault('measures', {})
-                mementos[first_urim]['measures']['wordcount'] = first_mem_wcount
-
-                for urim in mementos:
-
-                    memento = mementos[urim]
-
-                    if memento['processed_for_off_topic'] == True:
-
-                        with open(memento['text-only_filename']) as f:
-                            # tokenize, stemming, remove stop words
-                            tokens = tokenize(f.read())
-                            tokens = remove_stop_words(tokens, self.stopwords)
+                        if memento['processed_for_off_topic'] == True:
     
-                        # calculate the word count on all documents
-                        wcount = len(tokens)
-                        
-                        memento.setdefault('measures', {})
-                        
-                        # compare the word count of all documents with 
-                        # the first in TimeMap
-                        wcount_diff = wcount - first_mem_wcount
-                        wcount_diff_pc = wcount_diff / float(first_mem_wcount)
-
-                        # the difference percentage is what is important
-                        memento['measures']['wordcount'] = wcount_diff_pc
-                        
-                        if 'on_topic' not in memento['measures']:
-                        
-                            memento['measures']['on_topic'] = True
-                        
-                            if wcount_diff_pc < self.threshold:
-                                memento['measures']['on_topic'] = False
-                                memento['measures']['off_topic_measure'] = \
-                                    'wordcount'
+                            with open(memento['text-only_filename']) as f:
+                                # tokenize, stemming, remove stop words
+                                tokens = tokenize(f.read())
+                                tokens = remove_stop_words(tokens, self.stopwords)
+        
+                            # calculate the word count on all documents
+                            wcount = len(tokens)
+                            
+                            memento.setdefault('measures', {})
+                            
+                            # compare the word count of all documents with 
+                            # the first in TimeMap
+                            wcount_diff = wcount - first_mem_wcount
+                            wcount_diff_pc = wcount_diff / float(first_mem_wcount)
+    
+                            # the difference percentage is what is important
+                            memento['measures']['wordcount'] = wcount_diff_pc
+                            
+                            if 'on_topic' not in memento['measures']:
+                            
+                                memento['measures']['on_topic'] = True
+                            
+                                if wcount_diff_pc < self.threshold:
+                                    memento['measures']['on_topic'] = False
+                                    memento['measures']['off_topic_measure'] = \
+                                        'wordcount'
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
                     urim = list(updated_filedata[urit]['mementos'].keys())[0]
@@ -517,33 +523,35 @@ class JaccardDistanceAgainstSingleResource(TopicProcessor):
                 first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
-                with open(mementos[first_urim]['text-only_filename']) as f:
-                    first_tokens = tokenize(f.read())
-                    first_tokens = remove_stop_words(first_tokens, self.stopwords)
+                if first_urim != None:
 
-                for urim in mementos:
-
-                    memento = mementos[urim]
-
-                    if memento['processed_for_off_topic'] == True:
-                        with open(memento['text-only_filename']) as f:
-                            # tokenize, stemming, remove stop words
-                            tokens = tokenize(f.read())
-                            tokens = remove_stop_words(tokens, self.stopwords)
-
-                        jdist = distance.jaccard(tokens, first_tokens)
-
-                        memento.setdefault('measures', {})
-                        memento['measures']['jaccard'] = jdist
-
-                        if 'on_topic' not in memento['measures']:
-                        
-                            memento['measures']['on_topic'] = True
-                        
-                            if jdist > self.threshold:
-                                memento['measures']['on_topic'] = False
-                                memento['measures']['off_topic_measure'] = \
-                                    'jaccard'
+                    with open(mementos[first_urim]['text-only_filename']) as f:
+                        first_tokens = tokenize(f.read())
+                        first_tokens = remove_stop_words(first_tokens, self.stopwords)
+    
+                    for urim in mementos:
+    
+                        memento = mementos[urim]
+    
+                        if memento['processed_for_off_topic'] == True:
+                            with open(memento['text-only_filename']) as f:
+                                # tokenize, stemming, remove stop words
+                                tokens = tokenize(f.read())
+                                tokens = remove_stop_words(tokens, self.stopwords)
+    
+                            jdist = distance.jaccard(tokens, first_tokens)
+    
+                            memento.setdefault('measures', {})
+                            memento['measures']['jaccard'] = jdist
+    
+                            if 'on_topic' not in memento['measures']:
+                            
+                                memento['measures']['on_topic'] = True
+                            
+                                if jdist > self.threshold:
+                                    memento['measures']['on_topic'] = False
+                                    memento['measures']['off_topic_measure'] = \
+                                        'jaccard'
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
                     urim = list(updated_filedata[urit]['mementos'].keys())[0]
@@ -602,33 +610,35 @@ class TFIntersectionAgainstSingleResource(TopicProcessor):
                 first_urim = find_first_memento(
                     updated_filedata[urit]['mementos'])
 
-                with open(mementos[first_urim]['text-only_filename']) as f:
-                    first_tf = self.generate_term_frequencies(f.read())
+                if first_urim != None:
 
-                for urim in mementos:
-
-                    memento = mementos[urim]
-
-                    if memento['processed_for_off_topic'] == True:
-
-                        with open(memento['text-only_filename']) as f:
-                            # tokenize, stemming, remove stop words
-                            current_tf = self.generate_term_frequencies(f.read())
-
-                        tfdist = self.score_term_frequencies(
-                            first_tf[0:20], current_tf[0:20])
-
-                        memento.setdefault('measures', {})
-                        memento['measures']['tfintersection'] = tfdist
-
-                        if 'on_topic' not in memento['measures']:
-                        
-                            memento['measures']['on_topic'] = True
-                        
-                            if tfdist > self.threshold:
-                                memento['measures']['on_topic'] = False
-                                memento['measures']['off_topic_measure'] = \
-                                    'tfintersection'
+                    with open(mementos[first_urim]['text-only_filename']) as f:
+                        first_tf = self.generate_term_frequencies(f.read())
+    
+                    for urim in mementos:
+    
+                        memento = mementos[urim]
+    
+                        if memento['processed_for_off_topic'] == True:
+    
+                            with open(memento['text-only_filename']) as f:
+                                # tokenize, stemming, remove stop words
+                                current_tf = self.generate_term_frequencies(f.read())
+    
+                            tfdist = self.score_term_frequencies(
+                                first_tf[0:20], current_tf[0:20])
+    
+                            memento.setdefault('measures', {})
+                            memento['measures']['tfintersection'] = tfdist
+    
+                            if 'on_topic' not in memento['measures']:
+                            
+                                memento['measures']['on_topic'] = True
+                            
+                                if tfdist > self.threshold:
+                                    memento['measures']['on_topic'] = False
+                                    memento['measures']['off_topic_measure'] = \
+                                        'tfintersection'
             else:
                 logger.info(
                     "TimeMap for {} has no mementos, skipping...".format(
