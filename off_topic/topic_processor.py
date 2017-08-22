@@ -3,7 +3,8 @@ import os
 import nltk
 from abc import ABCMeta, abstractmethod
 from nltk.stem.porter import PorterStemmer
-from boilerpipe.extract import Extractor
+# This did not work in all cases, went the Java route instead
+#from boilerpipe.extract import Extractor
 import distance
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -11,6 +12,7 @@ import string
 from decimal import Decimal
 import json
 import chardet
+import logging
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -18,13 +20,13 @@ pp = pprint.PrettyPrinter(indent=4)
 stemmer = PorterStemmer()
 
 def generate_logger():
-    import logging
 
     logger = logging.getLogger(__name__)
     logger.propagate = False
 
     ch = logging.StreamHandler()
-    ch.setLevel(logging.WARNING)
+#    ch.setLevel(logging.WARNING)
+    ch.setLevel(logging.INFO)
     formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s')
     ch.setFormatter(formatter)
@@ -33,6 +35,8 @@ def generate_logger():
     return logger
 
 logger = generate_logger()
+logger.setLevel(logging.INFO)
+logger.info("info from {}".format(__name__))
 
 def load_stopwords():
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -68,7 +72,13 @@ def tokenize(text):
 
 def remove_boilerplate(filedata):
 
+    # TODO: this function performs quite poorly because of the number of 
+    # calls out to the shell to call Java's boilerpipe, the Python
+    # boilerpipe could not handle some files with ambiguous character sets
+
     updated_filedata = {}
+    this_file_dir = os.path.dirname(os.path.realpath(__file__))
+    original_dir = os.getcwd()
 
     for urit in filedata:
 
@@ -90,44 +100,11 @@ def remove_boilerplate(filedata):
     
                 if not os.path.exists(output_filename):
 
-                    ctype='utf-8'
+                    os.chdir("{}/java_off_topic".format(this_file_dir))
 
-                    if 'charset=' in memento['content-type']:
-                        ctype = memento['content-type'].split('=')[1]
+                    os.system("./ExtractTextFromHTML {} {}".format(data_filename, output_filename))
 
-                    input_data = ''
-
-                    try:
-
-                        with open(data_filename, encoding=ctype) as f:
-                            input_data = f.read()
-
-                    except UnicodeDecodeError as e:
-
-                        try:
-                            # TODO: opening the file twice is ridiculous
-                            with open(data_filename, 'rb') as f:
-                                data = f.read()
-
-                                charset = chardet.detect(data)['encoding']
-
-                            with open(data_filename, encoding=charset) as f:
-                                input_data = f.read()
-
-                        except UnicodeDecodeError as e:
-                            logger.warn("Can not determine character set "
-                                "for URI-M: {}, skipping...".format(urim))
-   
-                    if len(input_data) > 0:
-                        extractor = Extractor(extractor='KeepEverythingExtractor', 
-                            html=input_data)
-    
-                        boilerplate_text = extractor.getText()
-                    else:
-                        boilerplate_text = ''
-    
-                    with open(output_filename, 'w') as f:
-                        f.write(boilerplate_text)
+                    os.chdir(original_dir)
     
                 memento['text-only_filename'] = output_filename
 
