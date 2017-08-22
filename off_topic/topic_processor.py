@@ -114,8 +114,7 @@ def remove_boilerplate(filedata):
 
                         except UnicodeDecodeError as e:
                             logger.warn("Can not determine character set "
-                                "for URI-M: {}, skipping...".format(
-                                memento['uri-m']))
+                                "for URI-M: {}, skipping...".format(urim))
    
                     if len(input_data) > 0:
                         extractor = Extractor(extractor='KeepEverythingExtractor', 
