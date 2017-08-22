@@ -95,6 +95,8 @@ def remove_boilerplate(filedata):
                     if 'charset=' in memento['content-type']:
                         ctype = memento['content-type'].split('=')[1]
 
+                    input_data = ''
+
                     try:
 
                         with open(data_filename, encoding=ctype) as f:
