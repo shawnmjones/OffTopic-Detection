@@ -171,11 +171,11 @@ if __name__ == '__main__':
 
             print("processing TimeMap {}".format(urit))
     
-            for memento in scoredata[urit]['mementos']:
+            for urim in scoredata[urit]['mementos']:
+
+                memento = scoredata[urit]['mementos'][urim]
 
                 print("processing memento {}".format(memento))
-    
-                urim = memento['uri-m']
 
                 try:
                     score = memento['measures'][measure]
