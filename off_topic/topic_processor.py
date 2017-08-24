@@ -332,7 +332,6 @@ class TopicProcessor(metaclass=ABCMeta):
 
         for urit in updated_filedata:
 
-            # if there is only 1 memento, it isn't really off-topic, is it?
             if len(updated_filedata[urit]['mementos']) > 1:
 
                 mementos = updated_filedata[urit]['mementos']
@@ -354,12 +353,14 @@ class TopicProcessor(metaclass=ABCMeta):
                         memento.setdefault('measures', {}) 
                         # This should probably be set to something other than 
                         # True if we couldn't measure the memento
-                        memento['measures']['on_topic'] = True
+                        memento['measures']['on_topic'] = None
                         memento['measures']['off_topic_measure'] = \
                             'unsupported content-type for memento'
 
             else:
                 if len(updated_filedata[urit]['mementos']) == 1:
+                    # if there is only 1 memento, it isn't really off-topic,
+                    # is it?
                     urim = list(updated_filedata[urit]['mementos'].keys())[0]
                     memento = updated_filedata[urit]['mementos'][urim]
                     memento.setdefault('measures', {}) 
@@ -537,8 +538,12 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
                 logger.debug("not processing memento at URI-M {}"
                     " for off topic".format(urim))
                     
-                logger.debug("discovered {} mementos for processing under"
-                    " cosine similarity".format(len(filesdata)))
+                mementos[urim].setdefault('measures', {})
+                mementos[urim]['measures']['cosine'] = None
+                mementos[urim]['measures']['off_topic_measure'] = \
+                    memento['processed_for_off_topic']
+                mementos[urim]['measures']['on_topic'] = None
+
                 
         if len(urims) > 0:
         
@@ -547,8 +552,6 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
             first = urims.index(first_urim)
         
             tfidf_matrix = tfidf.fit_transform(filesdata)
-        
-            logger.debug("matrix: {}".format(tfidf_matrix.todense()))
         
             csresults = cosine_similarity(tfidf_matrix[first], tfidf_matrix)
         
@@ -573,7 +576,7 @@ class CosineSimilarityAgainstTimeMap(TopicProcessor):
         
                 logger.debug("memento should now have on-topic score {}".format(mementos[urim]))
 
-            return mementos
+        return mementos
 
     def get_scores(self, input_filedata):
 

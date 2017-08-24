@@ -147,7 +147,7 @@ class TestErrorStates(unittest.TestCase):
             outdata = instance.get_scores(filedata) 
 
             self.assertTrue(outdata['test']['mementos']['local-archive:test1']['measures']['on_topic'])
-            self.assertFalse(outdata['test']['mementos']['local-archive:test2']['measures']['on_topic'])
+            self.assertIsNone(outdata['test']['mementos']['local-archive:test2']['measures']['on_topic'])
 
         for measure in self.measures:
             test_each_measure(self.measures[measure]['default_instance'], filedata)
@@ -177,10 +177,10 @@ class TestErrorStates(unittest.TestCase):
 
             outdata = instance.get_scores(filedata) 
 
-            self.assertTrue(outdata['local-archive:test']['mementos']['local-archive:test1']['measures']['on_topic'], 
+            self.assertIsNone(outdata['local-archive:test']['mementos']['local-archive:test1']['measures']['on_topic'], 
                 msg="measure {} did not work".format(measure))
 
-            self.assertTrue(outdata['local-archive:test']['mementos']['local-archive:test2']['measures']['on_topic'],
+            self.assertIsNone(outdata['local-archive:test']['mementos']['local-archive:test2']['measures']['on_topic'],
                 msg="measure {} did not work".format(measure))
 
         for measure in self.measures:
@@ -272,86 +272,79 @@ class TestErrorStates(unittest.TestCase):
         self.assertEqual(outdata['test']['mementos']['local-archive:test1']['content-type'], 'text/html;charset=utf-8')
         self.assertTrue(outdata['test']['mementos']['local-archive:test1']['processed_for_off_topic'])
 
-#    def test_originally_not_processed_by_cosine(self):
-#        """
-#            In this set, there were 3 mementos, 1 did not get processed. Why?
-#        """
-#
-#
-#        filedata = {
-#            'test': {
-#                'mementos': {
-#                    'local-archive:test1': {
-#                        'memento-datetime': datetime.datetime(2012, 5, 6, 15, 29, 19),
-#                        'content_filename': '{}/samplecontent/not_processed1-1.dat'.format(working_dir),
-#                        'headers_filename': '{}/samplecontent/not_processed1-1.hdr'.format(working_dir)
-#                    },
-#                    'local-archive:test2': {
-#                        'memento-datetime': datetime.datetime(2012, 5, 24, 10, 36, 23),
-#                        'content_filename': '{}/samplecontent/not_processed1-2.dat'.format(working_dir),
-#                        'headers_filename': '{}/samplecontent/not_processed1-2.hdr'.format(working_dir)
-#                    }
-#                }
-#            }
-#        }
-#
-#        
-#        csat = tp.CosineSimilarityAgainstTimeMap(0.15)
-#
-#        outdata = csat.get_scores(filedata)
-#
-#        for urim in outdata['test']['mementos']:
-#            memento = outdata['test']['mementos'][urim] 
-#            self.assertTrue('measures' in memento)
-#
-#    def test_originally_not_processed_by_cosine2(self):
-#
-#        test_working_dir = "{}/samplecontent/ahram.org.eg".format(working_dir)
-#
-#        def process_ahram_mementos(metadata_filename):
-#
-#            mementos = {}
-#
-#            print("processing file {}".format(metadata_filename))
-#
-#            with open(metadata_filename) as metadata_file:
-#                csvreader = csv.reader(metadata_file, delimiter='\t', quotechar='"')
-#
-#                for row in csvreader:
-#                    urim = row[0]
-#                    status = row[1]
-#                    urim_redir = row[2]
-#                    content_file = row[3]
-#                    header_file = row[4]
-#
-#                    mdt = datetime.datetime.strptime(
-#                        urim.split('/')[4].replace('id_', ''),
-#                        "%Y%m%d%H%M%S")
-#
-#                    memento = {}
-#                    memento['memento-datetime'] = mdt
-#                    memento['content_filename'] = "{}/mementos/{}".format(test_working_dir, content_file)
-#                    memento['headers_filename'] = "{}/mementos/{}".format(test_working_dir, header_file)
-#
-#                    mementos[urim] = memento
-#                    
-#            return mementos
-#
-#
-#        filedata = {
-#
-#            'test': {
-#                'mementos': {}
-#                }
-#        }
-#
-#        filedata['test']['mementos'] = process_ahram_mementos(
-#                    "{}/mementos/metadata.tsv".format(test_working_dir))
-#
-#        csat = tp.CosineSimilarityAgainstTimeMap(0.15)
-#
-#        outdata = csat.get_scores(filedata)
-#
-#        for urim in outdata['test']['mementos']:
-#            memento = outdata['test']['mementos'][urim] 
-#            self.assertTrue('measures' in memento)
+    def test_process_arabic_with_cosine(self):
+        """
+            In this set, there were 2 mementos, 1 did not get processed. Why?
+        """
+
+
+        filedata = {
+            'test': {
+                'mementos': {
+                    'local-archive:test1': {
+                        'memento-datetime': datetime.datetime(2012, 5, 6, 15, 29, 19),
+                        'content_filename': '{}/samplecontent/not_processed1-1.dat'.format(working_dir),
+                        'headers_filename': '{}/samplecontent/not_processed1-1.hdr'.format(working_dir)
+                    },
+                    'local-archive:test2': {
+                        'memento-datetime': datetime.datetime(2012, 5, 24, 10, 36, 23),
+                        'content_filename': '{}/samplecontent/not_processed1-2.dat'.format(working_dir),
+                        'headers_filename': '{}/samplecontent/not_processed1-2.hdr'.format(working_dir)
+                    }
+                }
+            }
+        }
+
+        
+        csat = tp.CosineSimilarityAgainstTimeMap(0.15)
+
+        self.sanity_check(csat, 'cosine', filedata)
+
+    def test_originally_not_processed_by_cosine2(self):
+
+        test_working_dir = "{}/samplecontent/ahram.org.eg".format(working_dir)
+
+        def process_ahram_mementos(metadata_filename):
+
+            mementos = {}
+
+            print("processing file {}".format(metadata_filename))
+
+            with open(metadata_filename) as metadata_file:
+                csvreader = csv.reader(metadata_file, delimiter='\t', quotechar='"')
+
+                for row in csvreader:
+                    urim = row[0]
+                    status = row[1]
+                    urim_redir = row[2]
+                    content_file = row[3]
+                    header_file = row[4]
+
+                    mdt = datetime.datetime.strptime(
+                        urim.split('/')[4].replace('id_', ''),
+                        "%Y%m%d%H%M%S")
+
+                    memento = {}
+                    memento['memento-datetime'] = mdt
+                    memento['content_filename'] = "{}/mementos/{}".format(test_working_dir, content_file)
+                    memento['headers_filename'] = "{}/mementos/{}".format(test_working_dir, header_file)
+
+                    mementos[urim] = memento
+                    
+            return mementos
+
+
+        filedata = {
+
+            'test': {
+                'mementos': {}
+                }
+        }
+
+        filedata['test']['mementos'] = process_ahram_mementos(
+                    "{}/mementos/metadata.tsv".format(test_working_dir))
+
+        csat = tp.CosineSimilarityAgainstTimeMap(0.15)
+
+        self.sanity_check(csat, 'cosine', filedata)
+
