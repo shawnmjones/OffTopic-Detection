@@ -10,7 +10,7 @@ sys.path.append('../off_topic')
 import  datetime
 import topic_processor as tp
 
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
 
 # this is useful for debugging at times
 pp = pprint.PrettyPrinter(indent=4)
@@ -55,8 +55,8 @@ class TestErrorStates(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
 
-        logger = logging.getLogger(__name__)
-        tp.logger = logger
+        #logger = logging.getLogger(__name__)
+        #tp.logger = logger
 
         if not os.path.isdir(working_dir):
             os.makedirs(working_dir)
@@ -67,10 +67,10 @@ class TestErrorStates(unittest.TestCase):
         
         shutil.copytree('samplecontent', "{}/samplecontent".format(working_dir))
 
-#    @classmethod
-#    def tearDownClass(cls):
-#
-#        shutil.rmtree(working_dir)
+    @classmethod
+    def tearDownClass(cls):
+
+        shutil.rmtree(working_dir)
 
     def sanity_check(self, instance, measure, filedata):
 
@@ -307,8 +307,6 @@ class TestErrorStates(unittest.TestCase):
         def process_ahram_mementos(metadata_filename):
 
             mementos = {}
-
-            print("processing file {}".format(metadata_filename))
 
             with open(metadata_filename) as metadata_file:
                 csvreader = csv.reader(metadata_file, delimiter='\t', quotechar='"')
