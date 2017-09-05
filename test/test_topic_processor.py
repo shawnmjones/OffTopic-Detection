@@ -17,7 +17,7 @@ pp = pprint.PrettyPrinter(indent=4)
 
 working_dir = '/tmp/test_topic_processor'
 
-class TestErrorStates(unittest.TestCase):
+class TestTopicProcessor(unittest.TestCase):
 
     measures = {
         'cosine': {
@@ -345,4 +345,3 @@ class TestErrorStates(unittest.TestCase):
         csat = tp.CosineSimilarityAgainstTimeMap(0.15)
 
         self.sanity_check(csat, 'cosine', filedata)
-

@@ -162,6 +162,9 @@ if __name__ == '__main__':
     scoredata = topic_processor.get_scores(input_data)
 
     print("cross-referening scores and writing to {}".format(output_file))
+
+    goldmementocount = 0
+
     with open(output_file, 'w') as tsvfile:
 
         outputwriter = csv.writer(tsvfile, delimiter='\t')
@@ -174,6 +177,8 @@ if __name__ == '__main__':
             for urim in scoredata[urit]['mementos']:
 
                 memento = scoredata[urit]['mementos'][urim]
+
+                goldmementocount += 1
 
                 print("processing memento {}".format(memento))
 
@@ -204,5 +209,43 @@ if __name__ == '__main__':
                 if urim not in processed_goldstandard_uris:
                     goldscore = memento['gold-standard-ontopic']
                     outputwriter.writerow([urim, goldscore, measure, 'MISSING', 'MISSING'])
+
+    print("Status report:")
+
+    processed_count = 0
+    unsupported_format_count = 0 
+    no_content_type_count = 0
+    content_size_zero_count = 0
+    unknown_process_status_count = 0
+    urimcount = 0
+    
+    for urit in scoredata:
+
+        for urim in scoredata[urit]['mementos']:
+            urimcount += 1
+
+            memento = scoredata[urit]['mementos'][urim]
+
+            process_status = memento['processed_for_off_topic']
+
+            if process_status == True:
+                processed_count += 1
+            elif 'unsupported file format' in process_status:
+                unsupported_format_count += 1
+            elif 'no content-type header for memento' in process_status:
+                no_content_type_count += 1
+            elif 'content size is zero for memento' in process_status:
+                content_size_zero_count += 1
+            else:
+                unknown_process_status_count += 1
+
+    print("URI-Ms in gold standard data: {}".format(goldmementocount))
+    print("All URI-Ms in data structure: {}".format(urimcount))
+    print("Should be processed: {}".format(processed_count))
+    print("Unsupported format: {}".format(unsupported_format_count))
+    print("No Content Type header: {}".format(no_content_type_count))
+    print("Content size zero: {}".format(content_size_zero_count))
+    print("Unknown processing status: {}".format(unknown_process_status_count))
+        
     
     print("Done with processing, output data is in {}".format(output_file))

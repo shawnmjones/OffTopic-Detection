@@ -14,6 +14,7 @@ import json
 import chardet
 import logging
 import tempfile
+import regex as re # for the older regex functionality used by AlNoamany
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -27,7 +28,8 @@ def generate_logger():
 
     ch = logging.StreamHandler()
 #    ch.setLevel(logging.WARNING)
-    ch.setLevel(logging.INFO)
+#    ch.setLevel(logging.INFO)
+    ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(message)s')
     ch.setFormatter(formatter)
@@ -236,7 +238,7 @@ def find_first_supported_urim(memento_records):
 
     return first_urim
 
-def mark_empty_mementos(filedata):
+def mark_empty_mementos_without_boilerplate(filedata):
     """
         Rather than deleting the mementos from the data structure
         we mark them with a reason for why they are not processed.
@@ -244,7 +246,8 @@ def mark_empty_mementos(filedata):
         This way, one can find out why without digging through this
         library's code.
 
-        This function just detects those mementos that have no content.
+        This function is run after the boilerplate is removed and
+        just detects those mementos that have no content.
     """
 
     updated_filedata = {}
@@ -257,12 +260,14 @@ def mark_empty_mementos(filedata):
 
             memento = mementos[urim]
 
-            fsize = os.stat(memento['content_filename']).st_size
+            if memento['processed_for_off_topic'] == True:
 
-            if fsize == 0:
-                memento['processed_for_off_topic'] =  \
-                    'content size is zero for memento at {}'.format(
-                        urim)
+                fsize = os.stat(memento['text-only_filename']).st_size
+
+                if fsize == 0:
+                    memento['processed_for_off_topic'] =  \
+                        'content size is zero for memento at {}'.format(
+                            urim)
 
         updated_filedata.setdefault(urit, {})
         updated_filedata[urit]['mementos'] = mementos
@@ -285,11 +290,11 @@ def get_clean_memento_data(input_filedata):
     # eliminate every file that is not HTML, text
     updated_filedata = mark_unsupported_items(updated_filedata)
 
-    # eliminate empty mementos
-    updated_filedata = mark_empty_mementos(updated_filedata)
-    
     # strip all tags out of all remaining content
     updated_filedata = remove_boilerplate(updated_filedata)
+
+    # eliminate empty mementos
+    updated_filedata = mark_empty_mementos_without_boilerplate(updated_filedata)
 
     return updated_filedata
 
@@ -434,16 +439,27 @@ class ByteCountAgainstSingleResource(TopicProcessor):
 
 class WordCountAgainstSingleResource(TopicProcessor):
 
+    def count_word(self, text_file_path):
+        """
+            AlNoamany's word count function.
+        """
+        text_file= open(text_file_path)
+        document = text_file.read()
+        if document == "":
+           return 0
+    
+        #words = re.split(ur"[\s,]+",re.sub(ur"\p{P}+", "",document),flags=re.UNICODE)
+        words = re.split(r"[\s,]+",re.sub(r"\p{P}+", "",document),flags=re.UNICODE)
+        return len(words)
+
     def memento_scorefunction(self, mementos, first_urim, *args):
 
         logger.debug("there are {} mementos for processing"
             " under word count".format(len(mementos)))
 
-        with open(mementos[first_urim]['text-only_filename']) as f:
-            first_tokens = tokenize(f.read())
-            first_tokens = remove_stop_words(first_tokens, self.stopwords)
-        
-        first_mem_wcount = len(first_tokens)
+        first_mem_wcount = self.count_word(mementos[first_urim]['text-only_filename'])
+
+        print("first memento word count: {}".format(first_mem_wcount))
         
         mementos[first_urim].setdefault('measures', {})
         mementos[first_urim]['measures']['wordcount'] = first_mem_wcount
@@ -453,14 +469,12 @@ class WordCountAgainstSingleResource(TopicProcessor):
             memento = mementos[urim]
         
             if memento['processed_for_off_topic'] == True:
-        
-                with open(memento['text-only_filename']) as f:
-                    # tokenize, stemming, remove stop words
-                    tokens = tokenize(f.read())
-                    tokens = remove_stop_words(tokens, self.stopwords)
-        
-                # calculate the word count on all documents
-                wcount = len(tokens)
+      
+                # calculate the word count 
+                wcount = self.count_word(memento['text-only_filename'])
+
+                print("urim: {}".format(urim))
+                print("fname: {}".format(memento['text-only_filename']))
                 
                 memento.setdefault('measures', {})
                 
