@@ -1,9 +1,0 @@
-
-SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-if [ ! -e "${SCRIPTDIR}/ExtractTextFromHTMLFiles.class" ]; then
-    echo "compiling Java class"
-    javac -classpath "lib/*" ExtractTextFromHTMLFiles.java
-fi
-
-java -cp ".:lib/*" ExtractTextFromHTMLFiles $1

@@ -1,6 +1,0 @@
-
-if [ ! -e ExtractTextFromHTML.class ]; then
-    javac -classpath "lib/*" ExtractTextFromHTML.java
-fi
-
-java -cp ".:lib/*" ExtractTextFromHTML $1 $2
