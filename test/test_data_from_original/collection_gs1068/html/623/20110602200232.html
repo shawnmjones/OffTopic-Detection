@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Volksanwaltschaft</title>
+		<link rel="stylesheet" type="text/css" href="/assemble-css.php?reset&base&va.layout&va.header&va.typo&va.elements&va.lbox&va.nyromodal&va.topnavigation" media="screen">
+		<link rel="stylesheet" type="text/css" href="/assemble-css.php?reset&base&va.typo&va.print" media="print">
+		
+<script type="text/javascript" src="/js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery-columnizer/autocolumn.min.js"></script>
+<script type="text/javascript" src="/js/nyromodal/jquery.nyroModal-1.6.2.js"></script>
+
+<script type="text/javascript">
+//<!--
+$(document).ready(function() {
+    va.layout.init();
+});
+//-->
+
+</script>		<script type="text/javascript" src="/assemble-js.php?va.modal&va.layout&bt.ief"></script>
+<script type="text/javascript">
+var preAAA = '';
+$(document).ready(function() {
+	va.modal.var1($('.testx8'));
+	$('.no-js').removeClass('no-js');
+
+	$('.form-mark-content').each(function() {
+		$(this).change(function() {
+			if($(this).val().length > 0) {
+				$(this).addClass('has-content');
+			} else {
+				$(this).removeClass('has-content');
+			}
+		});
+		$(this).keypress(function() {
+			if($(this).val().length > 0) {
+				$(this).addClass('has-content');
+			} else {
+				$(this).removeClass('has-content');
+			}
+		});
+		if($(this).val().length) {
+			$(this).addClass('has-content');
+		}
+	});
+
+
+	$('#aaa-control span').each(function() {
+		$(this).click(function() {
+//			console.log($(this).attr('class'));
+			$('.font-size-dynamic').removeClass(preAAA);
+			$('.font-size-dynamic').addClass($(this).attr('class'));
+			preAAA = $(this).attr('class');
+			va.layout.refreshNavParPos();
+		})
+		.css('cursor','pointer');
+	});
+
+
+});
+
+
+</script>
+
+	</head>
+	<body class="no-js">
+<!--[if IE]><div id="ie"><![endif]-->
+<!--[if IE 6]><div id="ie6"><![endif]-->
+	<div id="body-wrapper" class="va-typo">
+
+		<div id="va-header" class="font-size-dynamic">
+			
+			<div id="va-top-bar-1" class="va-top-bar startpage">
+								<div id="va-logo-big">
+					<a href="/" title="Zur Startseite"><img src="/images/va-site/logo/va-logo-opaque-big.png" class="transparent" alt="Logo der Volksanwaltschaft" /></a>
+				</div>
+				
+				<div id="nav-i18l" style="position:absolute; z-index:9; cursor: pointer;">
+					<a href="/" title="Deutsch">de</a>
+					<a href="/en" title="English">en</a>
+					<a href="/fr" title="Français">fr</a>
+					<a href="/es" title="Español">es</a>
+					<a href="/tr" title="Türkçe">tr</a>
+					<a href="/hr" title="Hrvatski">hr</a>
+					<a href="/sl" title="Slovenščina">sl</a>
+				</div>
+
+
+								<script type="text/javascript" src="/js/swfobject/swfobject-2.2.js"></script>
+				<script type="text/javascript">
+					var flashvars = {
+						'cloud_data': '../../tag-cloud.xml.php?t=1307044953',
+						'tcolor': '0xeeeeee',
+						'tcolor2': '0xeeeeee',
+						'hicolor': '0xffffff',
+						'tspeed': '120',
+						'fontFace': 'Arial'
+					};
+					var params = {
+						'wmode': 'transparent'
+					};
+					var attributes = {
+					  id: "flash-cloud",
+					  name: "flash-cloud"
+					};
+
+					swfobject.embedSWF("/swf/tagcloud/cloud.swf", "flash-cloud", "250", "120", "9.0.0","/js/swfobject/expressInstall.swf", flashvars, params, attributes);
+				</script>
+				<div style="position:absolute;top: 0px;left:00px;z-index:0; cursor: pointer">
+					<div id="flash-cloud">
+						<div style="position:relative; top:20px;left:10px;">
+						<ul class="tagcloud"><li><a href="/aktuelles/presse/abgaben-und-gebuehren" style="font-size: 15px;">Abgaben und Gebühren</a></li> <li><a href="/aktuelles/presse/erwerb-und-verlust-der-staatsbuergerschaft" style="font-size: 10px;">Staatsbürgerschaft</a></li> <li><a href="/aktuelles/presse/alter-und-pflege" style="font-size: 13px;">Alter und Pflege</a></li> <li><a href="/beschwerden/voraussetzungen" style="font-size: 15px;">Beschwerde</a></li> <li><a href="/sprechtage" style="font-size: 20px;">Sprechtage</a></li></ul>						</div>
+					</div>
+				</div>
+				
+				<div id="search-top">
+					<form action="/suche" method="get">
+						<label for="q">Suche</label>
+						<input type="text" name="q" id="va-top-search-query" value="" class="form-mark-content">						<input type="image" alt="Suche" src="/images/va-site/icons/icon-search.png"/>
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div id="va-top-bar-2" class="va-top-bar startpage">
+				<div id="nav-site">
+					<a href="/">Startseite</a>
+					<a href="/sitemap">Sitemap</a>
+					<a href="/impressum">Impressum</a>
+					<div style="margin-left:0.4em; color: white; float:left;" id="aaa-control">
+						<span class="font-size-a-small">A</span>
+						<span class="font-size-a-normal">A</span>
+						<span class="font-size-a-big">A</span>
+					</div>
+				</div>
+
+								<div id="va-portaits">
+					<img src="/images/va-site/logo/va-3.png" class="transparent" alt="Portraits der 3 Volkswälte"/>
+				</div>
+								<div class="clear"></div>
+			</div>
+
+			<div id="fix-on-top">
+				<div id="va-top-bar-3">
+					
+<ul class="va-top-nav">
+			<li style="float:right;" class="l1"><span class="l1"><a href="/kontakt" >Kontakt</a></span></li>
+					<li class="l1 "><span class="l1"><a href="/das-team">Das Team</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/das-team/die-mitglieder">Die Mitglieder</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/das-team/peter-kostelka">Peter Kostelka</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/das-team/gertrude-brinek">Gertrude Brinek</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/das-team/terezija-stoisits">Terezija Stoisits</a></span></li>
+				</ul>
+	</li>
+				<li class="l1 "><span class="l1"><a href="/die-volksanwaltschaft">Die Volksanwaltschaft</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/die-volksanwaltschaft/aufgaben">Aufgaben</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/die-volksanwaltschaft/organisation">Organisation</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/die-volksanwaltschaft/rechtsgrundlagen">Rechtsgrundlagen</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/die-volksanwaltschaft/geschichte">Geschichte</a></span></li>
+				</ul>
+	</li>
+				<li class="l1 "><span class="l1"><a href="/beschwerden">Beschwerden</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/beschwerden/formular">Formular</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/beschwerden/voraussetzungen">Voraussetzungen</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/beschwerden/zustaendigkeit">Zuständigkeit</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/beschwerden/pruefverfahren">Prüfverfahren</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/beschwerden/faq-beschwerden">FAQ Beschwerden</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/beschwerden/fallsammlung">Fallsammlung</a></span></li>
+				</ul>
+	</li>
+				<li class="l1 "><span class="l1"><a href="/aktuelles">Aktuelles</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/sprechtage">Sprechtage</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/aktuelles/fall-der-woche">Fall der Woche</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/aktuelles/buergeranwalt">Bürgeranwalt</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/aktuelles/news">News</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/aktuelles/stellungnahmen">Stellungnahmen</a></span></li>
+				</ul>
+	</li>
+				<li class="l1 "><span class="l1"><a href="/berichte">Berichte</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/berichte/berichte-bund">Berichte Bund</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/berichte/berichte-laender">Berichte Länder</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/berichte/internationale-berichte">Internationale Berichte</a></span></li>
+				</ul>
+	</li>
+				<li class="l1 "><span class="l1"><a href="/internationales">Internationales</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/internationales/international-ombudsman-institute">International Ombudsman Institute</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/internationales/internationale-aktivitaeten">Internationale Aktivitäten</a></span></li>
+				</ul>
+	</li>
+				<li class="l1 "><span class="l1"><a href="/service">Service</a></span>
+		<ul>
+														<li class="l2 "><span class="l2"><a href="/service/infomaterial">Infomaterial</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/service/kollegialbeschluesse">Kollegialbeschlüsse</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/service/besuch">Besuch</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/service/pressekontakt">Pressekontakt</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/service/links">Links</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/service/jobs">Jobs</a></span></li>
+														<li class="l2 "><span class="l2"><a href="/service/amtssignatur">Amtssignatur</a></span></li>
+				</ul>
+	</li>
+					
+</ul>
+					<div class="clear"></div>
+				</div>
+				<div id="header-shadow" class="clear">
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+
+		
+		<div id="va-print-header"><img src="/images/va-site/logo/va-logo-opaque-big.png" alt="Die Volksanwaltschaft"/></div>
+		
+		<div class="col-container left-col" id="va-content">
+			<div class="main-col">
+				<div class="main-col-wrapper">
+					<div id="va-col-main" class="va-main-typo font-size-dynamic">
+						<div id="n-1040g" class="node node-basic">
+	
+<!--<div style="border: 2px dotted red;width:120px;height:120px;position: absolute; top:0;right:0;">Test Leadimage</div>-->
+
+
+
+
+<div id="va-col-center" class="">
+
+<div class="header">
+
+
+
+	
+	
+						<div style="color:#666;font-size:0.9em;font-style:italic;position: relative;top:-4px;"></div>
+			
+	</div>
+
+	<div id="e-1040g" class="element element-teasernode ">
+	
+<h2>Die Volksanwaltschaft</h2>
+<style type="text/css">
+#testme-2col .column {
+	margin-right: 1%;
+}
+</style>
+<div id="testme-2col">
+<p>
+Die Volksanwaltschaft kontrolliert seit mehr als 30 Jahren die &ouml;ffentliche Verwaltung in &Ouml;sterreich. Rund 15.000 Personen wenden sich j&auml;hrlich an Volksanwalt Dr. Peter Kostelka, Volksanw&auml;ltin Dr. Gertrude Brinek und Volksanw&auml;ltin Mag. Terezija Stoisits.</p>
+<p>Sie gehen&nbsp;Beschwerden nach und pr&uuml;fen in j&auml;hrlich &uuml;ber 6.000 Pr&uuml;fverfahren, ob beh&ouml;rdliche Entscheidungen den Gesetzen entsprechen. Diese &ouml;ffentliche Kontrolle ist wichtig, denn alle haben ein Anrecht auf eine transparente und faire Verwaltung. &nbsp; <span class="more">&raquo;  <a href="/die-volksanwaltschaft">mehr</a></span>
+</p>
+</div>
+<hr/>
+</div>
+	<div id="e-20810" class="element element-teasernode ">
+	
+
+<div style="width:48%; float: left;margin-right: 1%;">
+<h2>BRINEK: 6 JAHRE WARTEN AUF ERBSCHAFTSSTEUER</h2>
+<p>Eine K&auml;rntnerin wandte sich an die Volksanwaltschaft, da erst sechs Jahre nach dem Tod ihres Lebensgef&auml;hrten die Erbschaftssteuer festgesetzt wurde. Das Finanzamt Feldkirch hatte zwar im Herbst 2004 vom Todesfall erfahren, eine Nachfrage beim zust&auml;ndigen Bezirksgericht &uuml;ber den Stand des Nachlassverfahrens unterblieb aber. Erst im November 2009 forderte das Finanzamt eine Erbschaftssteuererkl&auml;rung. Obwohl noch im Dezember 2009 die erforderlichen Angaben vorlagen, wurde der Bescheid erst weitere sechs Monate sp&auml;ter erlassen.	 &nbsp;&nbsp;<span class="more">&raquo;  <a href="/aktuelles/fall-der-woche/brinek-6-jahre-warten-auf-erbschaftssteuer">mehr</a></span>
+</p>
+</div>
+<div style="float:left;width: 48%;text-align:left;"><img src="/images/crjfd/fr-big/finanzverwaltung-jpg.png"  alt="Festsetzung der Erbschaftssteuer" /></div>
+<div class="clear"></div>
+</div>
+	<div id="e-30c1g" class="element element-teasernode half-width">
+	
+<div style="float:left;margin-right: 1em;"><img src="/images/frvet/fr-small/SchengenVisum-jpg.png"  alt="Aufenthaltstitelkette nicht gegeben" /></div>
+<h2>STOISITS: TROTZ RECHTSANSPRUCH SCHLIESST AUFENTHALTSTITEL NICHT DIREKT AN SUBSIDIÄRE SCHUTZBERECHTIGUNG AN</h2>
+<p>Das Bundesasylamt verl&auml;ngerte Herrn K.s subsidi&auml;re Schutzberechtigung nicht mehr. Gleichzeitig erkl&auml;rte es die Ausweisung des Kosovaren auf Dauer f&uuml;r unzul&auml;ssig. Herr K. und seine Familie erhielten einige Monate sp&auml;ter die Erstniederlassungsbewilligungen. Der Antrag auf Familienbeihilfe wurde vorerst abgewiesen, da kein g&uuml;ltiger Aufenthaltstitel vorhanden war. &nbsp; <span class="more">&raquo;  <a href="/aktuelles/fall-der-woche/stoisits-trotz-rechtsanspruch-schliesst-aufenthaltstitel-nicht-direkt-an-subsidiaere-schutzberechtigung-an">mehr</a></span></p>
+</div>
+	<div id="e-40g20" class="element element-teasernode half-width">
+	
+<div style="float:left;margin-right: 1em;"><img src="/images/brfct/fr-small/Dokumente-oder-Antraege-jpg.png"  alt="Der Zeitpunkt der Antragstellung sollte sich nicht negativ auswirken dürfen." /></div>
+<h2>KOSTELKA: HÄRTEN DURCH DAS ANTRAGSPRINZIP BEI HINTERBLIEBENENLEISTUNGEN</h2>
+<p>Die Volksanwaltschaft fordert: Die Bestimmungen der Sozialversicherungsgesetze betreffend Hinterbliebenenleistungen sollten dahingehend ge&auml;ndert werden, dass diese &ndash; unabh&auml;ngig vom Zeitpunkt der Antragstellung &ndash; ab dem Ableben des Versicherten zu erbringen sind. Frau N.N. wandte sich an die VA, weil Antr&auml;ge auf eine nachtr&auml;gliche Gew&auml;hrung der Halbwaisenpension abgelehnt wurden. &nbsp; <span class="more">&raquo;  <a href="/aktuelles/fall-der-woche/kostelka-haerten-durch-das-antragsprinzip-bei-hinterbliebenenleistungen">mehr</a></span></p>
+</div>
+</div>
+
+</div>
+					</div>
+				</div>
+
+
+				<div id="va-col-left" class="font-size-dynamic">
+												<div class="lbox">
+            <a href="/beschwerden">
+		<div class="lbox-header">
+			<div class="inner">
+				<h3>Beschwerde</h3>
+			</div>
+		</div>
+            </a>
+		<div class="lbox-content">
+			<img src="/images/va-site/lbox-header/stamps.png" alt="Die Volksanwaltschaft hilft" />
+			<div class="lbox-inner">
+				<p><span class="bold" style="color: #c00;">Probleme mit Behörden?</span><br/>
+				Die Volksanwaltschaft hilft.</p>
+				<p class="more">&raquo; <a target="_blank" href="https://www.formularservice.gv.at/forms/fscasp/content/bin/fscvext.dll?ax=COO.1.1001.1.83288&dx=COO.1.1001.1.83191&sol_createclass=COO.3000.550.1.14283&formtarget=COO.3000.500.2.1541783" style="color:#c00;text-decoration: underline;">zum Beschwerdeformular</a></p>
+                        </div>
+		</div>
+	</div>
+	<div class="lbox">
+            <a href="/sprechtage">
+		<div class="lbox-header">
+			<div class="lbox-inner">
+				<h3>Sprechtage</h3>
+			</div>
+		</div>
+            </a>
+		<div class="lbox-content">
+			<div class="lbox-inner">
+				<p style="margin-top: 5px;">Wählen Sie Ihr Bundesland:</p>
+				<img src="/images/va-site/map/at-full.png"
+				border="0" id="atfull" usemap="#m_atfull" alt="Karte von Österreich" /><map name="m_atfull" id="m_atfull">
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-bgl.png')" href="/sprechtage/burgenland" alt="Sprechtage Burgenland" shape="poly" coords="171,44,165,42,163,43,161,46,167,49,165,52,164,53,162,53,161,58,163,67,157,70,155,58,157,55,161,52,161,39,164,40,167,36,170,34,175,35,175,43,171,44,171,44"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-w.png')" href="/sprechtage/wien" alt="Sprechtage Wien" shape="poly" coords="162,27,161,30,158,30,158,26,162,27,162,27"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-noe.png')" href="/sprechtage/niederoesterreich" alt="Sprechtage Niederösterreich" shape="poly" coords="157,13,159,11,162,10,168,11,171,15,169,21,170,26,174,31,171,33,167,34,164,29,161,24,156,25,155,28,156,30,158,31,164,31,167,36,161,37,157,43,158,45,159,47,159,52,157,53,152,51,147,47,142,42,137,41,128,45,125,44,126,39,121,37,119,34,120,30,121,31,124,32,128,29,130,26,128,19,124,17,125,13,129,11,131,4,157,13,157,13"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-stmk.png')" href="/sprechtage/steiermark" alt="Sprechtage Steiermark" shape="poly" coords="154,54,152,54,152,56,155,68,152,70,151,73,152,78,146,77,144,78,142,81,133,80,132,73,130,69,126,67,121,67,119,68,117,69,111,67,105,71,106,68,108,65,104,59,101,60,100,57,102,54,104,53,103,50,102,49,104,48,112,51,124,46,126,47,128,48,132,45,137,43,144,47,154,54,154,54"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-ktn.png')" href="/sprechtage/kaernten" alt="Sprechtage Kärnten" shape="poly" coords="89,71,94,69,105,73,108,71,111,70,117,72,118,71,120,70,129,70,130,79,126,84,121,88,107,84,92,82,79,79,85,80,86,78,83,73,80,68,89,71,89,71"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-sbg.png')" href="/sprechtage/salzburg" alt="Sprechtage Salzburg" shape="poly" coords="96,45,95,48,95,52,96,56,100,60,105,65,103,70,97,66,92,66,89,67,88,68,74,64,68,66,67,62,73,59,78,56,80,54,78,49,84,56,88,56,89,49,87,45,85,45,87,42,86,38,85,38,89,37,90,40,91,43,96,45,96,45"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-trl.png')" href="/sprechtage/tirol" shape="poly" alt="Sprechtage Tirol" coords="72,48,77,52,77,56,69,57,65,59,64,62,65,66,70,68,71,67,73,66,75,67,78,70,82,76,78,76,77,80,72,77,71,75,72,73,73,72,68,71,66,69,65,67,63,67,59,68,53,68,48,69,44,71,38,75,32,71,26,68,23,69,21,72,22,66,24,61,28,56,29,54,30,52,33,52,38,56,44,58,56,51,69,51,69,48,72,48,72,48"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-vbg.png')" href="/sprechtage/vorarlberg" alt="Sprechtage Vorarlberg" shape="poly" coords="23,57,19,71,16,69,18,67,17,65,11,65,10,60,11,57,13,55,12,52,11,52,15,51,19,53,23,57,23,57"/>
+<area onmouseout="javascript:$('#atfull').attr('src','/images/va-site/map/at-full.png')" onmouseover="javascript:$('#atfull').attr('src','/images/va-site/map/at-ooe.png')" href="/sprechtage/oberoesterreich" alt="Sprechtage Oberösterreich" shape="poly" coords="114,19,118,17,121,18,124,20,128,25,128,28,123,30,119,28,116,31,116,35,119,38,123,42,121,44,117,46,112,48,104,45,100,46,99,50,99,51,101,52,100,54,97,50,97,46,96,42,93,42,95,38,89,35,83,36,82,34,84,31,89,28,94,24,97,19,102,21,105,13,108,16,114,19,114,19"/>
+</map>
+			</div>
+		</div>
+		
+	</div>
+	<div class="lbox">
+            <a href="/aktuelles/buergeranwalt">
+		<div class="lbox-header">
+			<div class="lbox-inner">
+				<h3>ORF - Bürgeranwalt</h3>
+			</div>
+		</div>
+            </a>
+		<div class="lbox-content">
+			<img src="/images/va-site/lbox-header/orf_buergeranwalt.png" alt="ORF Bürgeranwalt" />
+			<div class="lbox-inner">
+				<p>Ausgewählte Fälle, wöchentlich präsentiert.</p>
+				<p class="more">&raquo; <a href="/aktuelles/buergeranwalt" style="color:#c00;text-decoration: underline;">mehr</a></p>
+			</div>
+		</div>
+	</div>
+                   					</div>
+			</div>
+			
+		</div>
+
+		
+		<div id="va-footer" class="va-red-bar">
+			<div class="font-size-dynamic">
+			<address>
+				Volksanwaltschaft,
+				1015 Wien,
+				Singerstraße 17,
+				Kostenlose Servicenummer: <b>0800 - 223 223</b>
+			</address>
+			</div>
+		</div>
+	</div>
+
+<!--[if IE 6]></div><![endif]-->
+
+<!--[if IE]></div><![endif]-->
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://pstats.vbox7.braintrust.at/" : "http://pstats.vbox7.braintrust.at/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script type="text/javascript">
+        try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+        </script><noscript><p><img src="http://pstats.vbox7.braintrust.at/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+        <!-- End Piwik Tag -->
+	</body>
+</html>
+

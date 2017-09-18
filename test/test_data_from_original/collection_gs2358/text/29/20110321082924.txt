@@ -1,0 +1,17 @@
+pause
+slow
+fast
+HyperCities Egypt
+Voices from Cairo through social media
+Go back in time  
+Go
+or...
+Show live tweets
+Search tweets    
+Enter text to search tweets for:
+A Digital Humanities Project
+About
+This website was created by 3 technology enthusiasts from the UCLA Digital Humanities collaborative .
+Todd Presner is the Director of the Hypercities Project , and faculty sponsor of this initiative.
+Yoh Kawano is UCLA's Campus GIS Coordinator and a lecturer in the School of Public Affairs who relishes in seeing all things spatially.
+David Shepard is the HyperCities tech team lead, and a sixth-year Graduate Student in the Department of English, who likes making maps of books.

@@ -1,0 +1,12 @@
+Opriţi Tortura în Republica Moldova!
+Un slideshow care vorbeşte despre faptul că tortura şi impunitatea în Republica Moldova persistă în ciuda declaraţiilor că acestea sunt combatute
+Bulgaria: Acţiuni şi nu doar cuvinte sunt necesare pentru combaterea crimelor de ură împotriva gay-ilor
+Sunt necesare schimbări urgente la legile din Bulgaria pentru a garanta faptul că crimele de ură ale cărora ţintă foarte des sunt oamenii din comunitatea lesbienilor, gay-lor, bisexualilor şi transgender (LGBT) sunt investigate şi sancţionate în mod adecvat
+Cercul de impunitate în Caucazul de Nord trebuie să fie rupt
+Autorităţile ruse trebuie să sporească responsabilizarea organelor de drept, care, reacţionând la activităţile grupurilor înarmate din Caucazul de Nord, contribuie la insecuritatea regiunii respective
+Moldova: Curtea Europeană pentru Drepturile Omului reconfirmă dreptul persoanelor LGBT la libera întrunire
+La 12 iunie Curtea Europeană pentru Drepturile Omului (în continuare – Curtea) a hotărât că interzicerea demonstraţiei gay-lor, lesbienilor, bisexualilor şi persoanelor transgender (LGBT) din mai 2005 a constituit încălcarea Convenţiei Europene
+Frontierele ucigaşe ale Europei: Parlamentul European trebuie să protejeze imigranţii
+Mai multe
+warning: realpath(): SAFE MODE Restriction in effect.  The script whose uid is 719 is not allowed to access /tmp owned by uid 0 in /var/www/amnesty/data/www/amnesty.md/includes/file.inc on line 815.
+warning: tempnam(): Unable to access  in /var/www/amnesty/data/www/amnesty.md/includes/file.inc on line 815.

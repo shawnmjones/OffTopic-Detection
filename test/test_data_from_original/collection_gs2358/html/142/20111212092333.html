@@ -1,0 +1,2521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Twitter</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+
+  <meta name="description" content="Instantly connect to what's most important to you. Follow your friends, experts, favorite celebrities, and breaking news." />
+
+
+
+  <link rel="dns-prefetch" href="http://a0.twimg.com"/>
+
+  <link rel="dns-prefetch" href="http://a1.twimg.com"/>
+
+  <link rel="dns-prefetch" href="http://a2.twimg.com"/>
+
+  <link rel="dns-prefetch" href="http://a3.twimg.com"/>
+
+  <link rel="dns-prefetch" href="http://api.twitter.com"/>
+
+
+<script type="text/javascript" charset="utf-8">
+  
+  
+  document.domain = 'twitter.com';
+
+  // this will be copied to twttr.appStartTime once our JS has started up
+  document.startTime = new Date().getTime();
+  var twttr = {};
+  twttr.versionName = 'phoenix';
+  
+  twttr.didPingKeynote = false;
+  twttr.keynoteTTFTPing = function() {
+    if (!twttr.didPingKeynote && window.location.href.indexOf('keynoteTest') > 0) {
+      var image = document.createElement('img');
+      image.src = '/images/keynote.gif';
+      twttr.didPingKeynote = true;
+    }
+  }
+
+  if(!window.console){(function(){var B=["log","debug","info","warn","error","assert","dir","dirxml","group","groupEnd","time","timeEnd","count","trace","profile","profileEnd"];window.console={};for(var A=0;A<B.length;++A){window.console[B[A]]=function(){}}}())};
+</script>
+
+
+
+<script type="text/javascript">(function(){window.setTimeout=window.setTimeout;window.setInterval=window.setInterval;window.WATCH=function(label,block){if(typeof block==="undefined"){block=label;label=undefined}if(typeof label==="string"){WATCH._didExecute[label]=true}WATCH._attempt(this,block)};WATCH._didExecute={};WATCH._reportCount=0;WATCH._reportLimit=25;WATCH._reportInterval=60*1000;WATCH._active=false;WATCH.activate=function(setting){if(typeof setting==="undefined"){setting=true}WATCH._active=setting;extend(WATCH,WATCH._active?WATCH.actives:WATCH.inactives)};WATCH.actives={};WATCH.inactives={};var extend=function(destination,source){for(var key in source){destination[key]=source[key]}};var noop=function(){};WATCH._attempt=function(that,block){if(arguments.length<2){block=that;that=window}if(WATCH._active){try{block.apply(that)}catch(error){WATCH._triggerError(error)}}else{block.apply(that)}};WATCH.inactives.end=noop;WATCH.actives.end=function(label){if(typeof label==="undefined"){throw new Error("WATCH.end() requires a label")}if(WATCH._didExecute[label]){WATCH._didExecute[label]=false}else{if(WATCH._active){WATCH._triggerError(new Error('WATCH.end("'+label+'") called without successful call to WATCH("'+label+'", fn(){...}) - a SyntaxError probably just happened'))}}WATCH._didExecute[label]=false};WATCH.inactives.callback=function(that,callback){return typeof callback==="undefined"?that:callback};WATCH.actives.callback=function(that,callback){if(arguments.length===1){callback=that;that=this}if(typeof callback==="string"){callback=(function(stringVersion){return function(){eval(stringVersion)}}(callback))}var watchedCallback=function(){var that=this,args=arguments,result;WATCH._attempt(function(){result=callback.apply(that,args)});return result};watchedCallback.isWatched=true;return watchedCallback};WATCH._onErrorCallbacks={};WATCH.inactives._addOnError=noop;WATCH.actives._addOnError=function(callback){var unique=WATCH._unique();WATCH._onErrorCallbacks[unique]=callback;return unique};WATCH.inactives._removeOnError=noop;WATCH.actives._removeOnError=function(id){delete WATCH._onErrorCallbacks[id]};WATCH._lastUnique=-1;WATCH._unique=function(){return ++WATCH._lastUnique};WATCH.inactives.jQuery=noop;WATCH.actives.jQuery=function(){WATCH._originalJQueryEventAdd=WATCH._originalJQueryEventAdd||jQuery.event.add;jQuery.event.add=function(){var newArgs=Array.prototype.slice.call(arguments);if(typeof newArgs[2]==="function"){newArgs[2]=WATCH.callback(newArgs[2])}else{if(newArgs&&typeof newArgs[2]==="object"&&newArgs[2].handler){newArgs[2].handler=WATCH.callback(newArgs[2].handler)}}return WATCH._originalJQueryEventAdd.apply(this,newArgs)};WATCH._originalJQueryAjax=WATCH._originalJQueryAjax||jQuery.ajax;jQuery.ajax=function(options){jQuery.each(["complete","error","success"],function(which,key){if(!options[key]){return }options[key]=WATCH.callback(options[key])});return WATCH._originalJQueryAjax.apply(this,arguments)}};WATCH.inactives.undoJQuery=noop;WATCH.actives.undoJQuery=function(){jQuery.event.add=WATCH._originalJQueryEventAdd;jQuery.ajax=WATCH._originalJQueryAjax};WATCH._previousErrors={};var escapeDoubleQuotes=function(string){return string.toString().replace('"','\\"')};var stringifyLite=function(object){var result="{",hasProperty=false;for(var key in object){if(typeof object[key]==="undefined"||object[key]===null){continue}result+=(hasProperty?',"':'"')+escapeDoubleQuotes(key)+'":"'+escapeDoubleQuotes(object[key])+'"';hasProperty=true}return result+"}"};WATCH._scribeError=function(report){if(WATCH._previousErrors[report.error]&&(new Date())-WATCH._previousErrors[report.error]<WATCH._reportInterval){return false}if(WATCH.reportLimit<=WATCH.reportCount){return }WATCH.reportCount++;if(!document.location.hostname.match(/(^(www|api)\.)?twitter\.com$/)){return }WATCH._previousErrors[report.error]=new Date();report.product_name="webclient";report.type="js_error";report.url=window.location.href;report.event_name="test";var isProduction=document.location.hostname.match(/(^(www|api|staging\d+.local)\.)twitter\.com$/)!=null;var scribeHost=isProduction?"scribe.twitter.com":window.location.host;var scribeUrl=(window.location.protocol.match(/s\:$/)?"https":"http")+"://"+scribeHost;scribeUrl+=isProduction?"/":"/scribe";scribeUrl+="?category=client_watch_error&log="+encodeURIComponent(stringifyLite(report))+"&ts="+(new Date()).getTime();(new Image()).src=scribeUrl};WATCH._triggerError=function(error){var reraise=true;var report={error:error};for(var key in WATCH._onErrorCallbacks){try{if(WATCH._onErrorCallbacks[key](report)===false){reraise=false}}catch(callbackError){report.callbackFailure=true}}WATCH._scribeError(report);if(reraise){throw error}};WATCH.inactives.natives=noop;WATCH.actives.natives=function(){window.setInterval=WATCH._watchedSetInterval;window.setTimeout=WATCH._watchedSetTimeout};WATCH.inactives.undoNatives=noop;WATCH.actives.undoNatives=function(){window.setInterval=WATCH._originalSetInterval;window.setTimeout=WATCH._originalSetTimeout};WATCH._originalSetInterval=window.setInterval;WATCH._originalSetTimeout=window.setTimeout;WATCH._watchedSetInterval=function(callback,timeout){var setInterval=WATCH._originalSetInterval;return setInterval(WATCH.callback(callback),timeout)};WATCH._watchedSetTimeout=function(callback,timeout){var setTimeout=WATCH._originalSetTimeout;return setTimeout(WATCH.callback(callback),timeout)};WATCH.activate(false)}());</script>
+<script type="text/javascript">
+  
+</script>
+
+
+
+  <script>
+function bust () {
+  document.write = "";
+  window.top.location = window.self.location;
+  setTimeout(function() {
+    document.body.innerHTML = '';
+    }, 0);
+  window.self.onload = function(evt) {
+    document.body.innerHTML = '';
+  };
+}
+if (window.top !== window.self) { // are you trying to put self in an iframe?
+  try {
+    if (window.top.location.host) { // this is illegal to access unless you share a non-spoofable document domain
+      // fun times
+    } else {
+      bust(); // chrome executes this
+    }
+  } catch (ex) {
+    bust(); // everyone executes this
+  }
+}
+</script>
+
+
+
+
+
+
+  <link href="/phoenix/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+<base href="http://twitter.com" />
+
+
+    
+    
+      
+      
+        <link rel="stylesheet" href="http://a2.twimg.com/a/1323449606/phoenix/css/phoenix_core_logged_out.bundle.css" type="text/css" media="screen" />
+      
+
+      
+        
+      
+    
+
+    
+      <link rel="canonical" href="http://twitter.com/bikyamasr/" />
+    
+
+    
+      <noscript>
+        
+          <meta http-equiv=refresh content="0; URL=/bikyamasr/?_twitter_noscript=1" />
+        
+      </noscript>
+    
+
+    
+      
+      
+        <style id="user-style-bikyamasr">
+  body.user-style-bikyamasr {
+    
+      background-position: left 40px;
+      background-attachment: fixed;
+      
+        background-repeat: no-repeat;
+      
+    
+    
+      background-color: #292627;
+    
+    
+      color: #333333;
+    
+  }
+
+  body.user-style-bikyamasr a,
+  body.user-style-bikyamasr ul.stream-tabs li,
+  body.user-style-bikyamasr .component .promo strong,
+  body.user-style-bikyamasr .message-thread-preview:hover .message-count,
+  body.user-style-bikyamasr .list-membership-container li.create-a-list {
+    
+      color: #E39000;
+    
+  }
+
+  body.user-style-bikyamasr .stream-item:hover .tweet-screen-name,
+  body.user-style-bikyamasr .stream-item:hover .tweet-timestamp,
+  body.user-style-bikyamasr .stream-item:hover .tweet-geo-text,
+  body.user-style-bikyamasr .stream-item:hover .user-profile-link,
+  body.user-style-bikyamasr span.user-stat-link,
+  body.user-style-bikyamasr a.title-link:hover,
+  body.user-style-bikyamasr a.user-stats-count:hover span.user-stats-stat,
+  body.user-style-bikyamasr .dashboard .user-small-list-item:hover a.user-screen-name,
+  body.user-style-bikyamasr .dashboard .user-small-list-item:hover .user-meta a,
+  body.user-style-bikyamasr .user-detailed-list-item:hover a.user-screen-name,
+  body.user-style-bikyamasr .tweet-activity:hover a.latest-tweet-timestamp,
+  body.user-style-bikyamasr .stream-item:hover a.icon-link,
+  body.user-style-bikyamasr .stream-item:hover a.icon-link b,
+  body.user-style-bikyamasr .stream-item:hover .tweet-feedback,
+  body.user-style-bikyamasr .promoted-tweet:hover .social-context a,
+  body.user-style-bikyamasr .dashboard ul.trends li a:hover span.icon-link,
+  body.user-style-bikyamasr .dashboard-activity-item-sentence .dashboard-activity-item-entity,
+  body.user-style-bikyamasr .dashboard-activity-item-sentence .dashboard-activity-item-entity .user,
+  body.user-style-bikyamasr .dashboard-activity-item-sentence .dashboard-activity-item-count,
+  body.user-style-bikyamasr .dashboard-activity-item-link:hover .dashboard-activity-item-sentence,
+  body.user-style-bikyamasr .dashboard-activity-item-link:hover .dashboard-activity-item-sentence span.user,
+  body.user-style-bikyamasr .onebox-user-screen-name:hover {
+    
+      color: #E39000 !important;
+    
+  }
+
+  body.user-style-bikyamasr .expanding-stream-item:hover .tweet-screen-name {
+    color: #333 !important;
+  }
+  body.user-style-bikyamasr .expanding-stream-item:hover .tweet-timestamp {
+    color: #999 !important;
+  }
+
+  body.user-style-bikyamasr .hovered-stream-item,
+  body.user-style-bikyamasr .stream-item:hover,
+  body.user-style-bikyamasr #new-tweets-bar,
+  body.user-style-bikyamasr #new-tweets-bar:active {
+    
+      background-color: rgba(227,144,0,0.1);
+    
+    
+      border-color: rgba(227,144,0,0.15);
+    
+  }
+
+  body.user-style-bikyamasr .expanding-stream-item:hover {
+    border-top-color: transparent;
+    border-bottom-color: #EBEBEB;
+  }
+
+  body.user-style-bikyamasr #new-tweets-bar:hover {
+    
+      background-color: rgba(227,144,0,0.2);
+    
+    
+      border-color: rgba(227,144,0,0.25);
+    
+  }
+
+  body.user-style-bikyamasr .dashboard .user-small-list-item .user-screen-name,
+  body.user-style-bikyamasr .profile-screenname,
+  body.user-style-bikyamasr .title-link,
+  body.user-style-bikyamasr div.latest-tweet .latest-tweet-timestamp,
+  body.user-style-bikyamasr div.truncated-tweet .latest-tweet-timestamp,
+  body.user-style-bikyamasr a.user-stats-count span.user-stats-stat,
+  body.user-style-bikyamasr .welcome-steps li .active a strong,
+  body.user-style-bikyamasr .dashboard-activity-item-sentence span.user {
+    
+      color: #333333;
+    
+  }
+
+  body.user-style-bikyamasr .dashboard .user-small-list-item .user-full-name,
+  body.user-style-bikyamasr span.trend-location,
+  body.user-style-bikyamasr .your-activity h3,
+  body.user-style-bikyamasr .trends-inner h3,
+  body.user-style-bikyamasr .dashboard .user-rec-inner h3,
+  body.user-style-bikyamasr .latest-tweet,
+  body.user-style-bikyamasr .truncated-tweet,
+  body.user-style-bikyamasr .latest-tweet a.latest-tweet-timestamp,
+  body.user-style-bikyamasr .truncated-tweet a.latest-tweet-timestamp,
+  body.user-style-bikyamasr .dashboard .user-small-list-item .user-meta,
+  body.user-style-bikyamasr .dashboard .user-small-list-item .user-meta a,
+  body.user-style-bikyamasr .social-context div,
+  body.user-style-bikyamasr .dashboard .dot,
+  body.user-style-bikyamasr .component .promo,
+  body.user-style-bikyamasr .component .promo a.definition,
+  body.user-style-bikyamasr .dashboard .user-small-list-item .dismiss,
+  body.user-style-bikyamasr .dashboard .user-small-list-item .ellip,
+  body.user-style-bikyamasr .facets-media-not-displayed .not-displayed-text,
+  body.user-style-bikyamasr .dashboard .copyright,
+  body.user-style-bikyamasr .dashboard .user-small-list-item a.icon-link,
+  body.user-style-bikyamasr .dashboard ul.trends li a span.icon-link,
+  body.user-style-bikyamasr .dashboard-activity-item-link,
+  body.user-style-bikyamasr .dashboard-activity-item-sentence {
+    
+      color: rgba(51,51,51,0.6);
+    
+  }
+
+  body.user-style-bikyamasr #page-container,
+  body.user-style-bikyamasr .user-sidebar-color,
+  body.user-style-bikyamasr .expando-container .dashboard {
+    
+      /* IE7/8 */
+      background: #EFEFEF;
+    
+    
+      /* Modern browsers */
+      background: rgba(239,239,239,0.9);
+    
+    
+      /* IE6 */
+      _background-color: #EFEFEF;
+    
+  }
+
+  body.user-style-bikyamasr .activity:hover .stream-item-activity-network .activity-supplement .activity-item-tweet .activity-item-tweet-content,
+  body.user-style-bikyamasr .hovered-stream-item .stream-item-activity-network .activity-supplement .activity-item-tweet .activity-item-tweet-content,
+  body.user-style-bikyamasr .dashboard .stream-item-activity-network .activity-supplement .activity-item-tweet .activity-item-tweet-content  {
+    
+      border-color: rgba(227,144,0,0.15) !important;
+    
+  }
+
+  body.user-style-bikyamasr .expanding-stream-item:hover a.twitter-atreply:hover,
+  body.user-style-bikyamasr .expanding-stream-item.open a.twitter-atreply,
+  body.user-style-bikyamasr .expanding-stream-item.colorful-links a.twitter-atreply,
+  body.user-style-bikyamasr .expanding-stream-item:hover a.twitter-hashtag:hover,
+  body.user-style-bikyamasr .expanding-stream-item.open a.twitter-hashtag,
+  body.user-style-bikyamasr .expanding-stream-item.colorful-links a.twitter-hashtag,
+  body.user-style-bikyamasr .expanding-stream-item:hover a.twitter-timeline-link:hover,
+  body.user-style-bikyamasr .expanding-stream-item.open a.twitter-timeline-link,
+  body.user-style-bikyamasr .expanding-stream-item.colorful-links a.twitter-timeline-link {
+    
+      color: #E39000 !important;
+    
+  }
+
+  .profile-style-bikyamasr a {
+  
+    color: #E39000 !important;
+  
+}
+
+a:hover .geo-pin, body.user-style-bikyamasr .stream-item:hover .geo-pin {
+  background-color: #E39000;
+}
+</style>
+      
+      <style id="user-style-bikyamasr-bg-img" class="js-user-style-bg-img">
+  body.user-style-bikyamasr {
+    
+      
+        background-image: url(http://a1.twimg.com/profile_background_images/310060726/xecfccf174850a843c2fd476f95b22de.jpg);
+      
+    
+  }
+</style>
+    
+
+    
+      <script>(function(){var A=document.getElementsByTagName("html")[0];var B=window.location.hash.split("?")[0];var C=B.match(/#/)&&(B.replace(/#[!]?[\/]?/,"")!=="");if(C){A.className+=" remove-prerendered-content"}else{A.className+=" use-prerendered-content";if(A.getAttribute("data-nav-highlight-class-name")){A.className+=" "+A.getAttribute("data-nav-highlight-class-name")}}})();</script>
+    
+
+    
+      <link rel="stylesheet" href="http://a0.twimg.com/a/1323449606/phoenix/css/phoenix_more.bundle.css" type="text/css" media="screen" />
+    
+
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-30775-6"],["_trackPageview"],["_setDomainName","twitter.com"]);twttr.didInsertGA=false;twttr.insertGAScriptElement=function(){if(!twttr.didInsertGA){var A=document.getElementsByTagName("script")[0],B=document.createElement("script");B.async=true;B.src=(document.location.protocol=="https:"?"https://ssl":"http://www")+".google-analytics.com/ga.js";A.parentNode.insertBefore(B,A);twttr.didInsertGA=true}};twttr.trackPageView=function(A){var B=["_trackPageview"];if(A){B.push(A)}_gaq.push(B)};</script>
+  </head>
+
+
+  <body class=" user-style-bikyamasr     logged-out ">
+    <div id="doc">
+      <div id="top-stuff" class="js-topbar">
+        <div id="banners" class="js-banners" style="clear:both;">
+          
+          <noscript><div class="banner-outer">
+  <div class="banner">
+    <div class="banner-inside noscript-warning">
+      <h5>Twitter.com makes heavy use of JavaScript.</h5>
+      <span class="warning">If you cannot enable it in your browser's preferences, you may have a better experience on our <a href="http://m.twitter.com">mobile site</a>.</span>
+    </div>
+  </div>
+</div>
+</noscript>
+          <div class="banner-outer" id="slow-load-banner">
+  <div class="banner">
+    <div class="banner-inside noscript-warning">
+      <h5>Twitter.com is loading slowly.</h5>
+      <span class="warning">Hmm, this seems to be taking a while. If problems persist, <a href="javascript:window.location.reload(true);">please reload</a> to try again.</span>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div id="top-bar-outer">
+          <div id="top-bar-bg"></div>
+          <div id="top-bar">
+            <div class="top-bar-inside">
+              <div class="static-links">
+  <div id="logo">
+    <a href="/">Twitter</a>
+  </div>
+  <form id="search-form" class="js-search-form" action="/search" method="GET">
+    <span class="glass js-search-action"><i></i></span>
+    <input value="" placeholder="Search" name="q" id="search-query" type="text" />
+  </form>
+  <div id="global-nav">
+    <ul id="global-actions">
+      
+    </ul>
+  </div>
+  <div id="sections"></div>
+</div>
+<div class="active-links">
+  
+  
+    <div id="session" class="js-session">
+      <a id="signin-link" href="/login">
+        <em>Have an account?</em>
+        <strong>Sign in</strong><i></i>
+      </a>
+      <a id="signup-link" href="https://twitter.com/signup?context=login">
+        <em>New to Twitter?</em>
+        <strong>Join Today&#32;&raquo;</strong>
+      </a>
+      <div id="signin-dropdown" class="dropdown dark">
+        <form action="https://twitter.com/sessions?phx=1" class="signin" method="post">
+  <fieldset class="textbox">
+  <label class="username js-username">
+    <span>Username or email</span>
+    <input class="js-username-field" type="text" value="" name="session[username_or_email]" autocomplete="on" />
+  </label>
+  <label class="password">
+    <span>Password</span>
+    <input class="js-password-field" type="password" value="" name="session[password]" />
+  </label>
+</fieldset>
+
+  <fieldset class="subchck">
+  <label class="remember">
+    <input type="checkbox" value="1" name="remember_me" />
+    <span>Remember me</span>
+  </label>
+  <button type="submit" class="submit button">Sign in</button>
+</fieldset>
+
+<input type="hidden" name="scribe_log" />
+<input type="hidden" name="redirect_after_login" value="" />
+
+  <div class="divider"></div>
+  <p>
+    <a class="forgot" href="/account/resend_password">Forgot password?</a><br />
+    <a class="mobile" href="/account/complete">Already using Twitter via SMS?</a>
+  </p>
+</form>
+      </div>
+    </div>
+  
+</div>
+
+            </div>
+          </div>
+          <div id="message-drawer"></div>
+        </div>
+      </div>
+
+      
+      <div id="page-outer" >
+        
+          
+        
+
+        <div id="page-container" class="page-container profile-container">
+          <div id="page-node-profile">
+            
+
+            
+
+            
+              
+  <div class="main-content">
+    
+      
+        
+
+<div class="profile-header" data-user="{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;default_profile&quot;:false,&quot;contributors_enabled&quot;:false,&quot;following&quot;:false,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17278,&quot;profile_background_tile&quot;:false,&quot;status&quot;:{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146156912021487616&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 09:18:17 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:146156912021487616,&quot;geo&quot;:null,&quot;text&quot;:&quot;In Greece, hate crime trial begins http:\/\/t.co\/xrUJburo  #Europe #HumanRights #LatestNews #Greece #HateCrime #Trial&quot;},&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;}" data-screen-name="bikyamasr">
+  
+  <div class="profile-info clearfix">
+
+    
+
+    <div class="profile-image-container">
+      <a href="http://a2.twimg.com/profile_images/1491711207/BikyaAvatar.png" class='profile-picture' target="_blank"><img src="http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_reasonably_small.png" alt="Bikya Masr" /></a>
+    </div>
+    <div class="profile-details">
+      <div class="full-name">
+  <h2>Bikya Masr</h2>
+  
+  
+</div>
+      <div class="screen-name-and-location"><span class="screen-name screen-name-bikyamasr pill">@bikyamasr</span> Egypt</div>
+      <div class="bio">Multi-award winning independent news for the world</div>
+      <div class="url"><a target="_blank" rel="me nofollow" href="http://bikyamasr.com">http://bikyamasr.com</a></div>
+    </div>
+  </div>
+  <div class="profile-actions-container " data-user-id="74446328">
+    
+      <div class="component profile-actions-component">
+        
+
+<div class="profile-actions profile-actions-74446328 clearfix" data-user-id="74446328">
+
+  
+    
+  <div class="sms-follow">
+    <span class="icon"></span> Text <strong>follow bikyamasr</strong> to <strong>40404</strong> in <a href="#" class="sms-codes-link">the United States</a>
+  </div>
+
+  
+
+  <div class="buttons js-actionable-user" data-user-id="74446328">
+    
+    
+    
+      
+    
+
+    
+
+  </div>
+
+  <div class="follow-state">
+    
+      
+
+      
+        
+        
+          
+          
+            <div class="button profile-follow-button" data-user-id="74446328">
+              <span class="plus"></span> <strong>Follow</strong>
+            </div>
+          
+        
+      
+    
+
+    
+  </div>
+
+  
+  
+</div>
+
+      </div>
+    
+  </div>
+  
+    
+  
+
+    <ul class="stream-tabs">
+      <li class="stream-tab stream-tab-tweets active">
+        <a class="tab-text" href="/bikyamasr">Tweets</a>
+      </li>
+      
+        <li class="stream-tab stream-tab-favorites ">
+          <a class="tab-text" href="/bikyamasr/#/favorites">Favorites</a>
+        </li>
+      
+      
+      
+      <li class="stream-tab stream-tab-following ">
+        <a class="tab-text" href="/bikyamasr/#/following">Following</a>
+      </li>
+      
+      
+      
+      <li class="stream-tab stream-tab-followers ">
+        <a class="tab-text" href="/bikyamasr/#/followers">Followers</a>
+      </li>
+      
+      
+      <li class="stream-tab stream-tab-lists dropdown-link ">
+        <p class="tab-text">Lists<i></i></p>
+      </li>
+    </ul>
+</div>
+
+      
+      <div class="stream-manager js-stream-manager-container" id="profile-stream-manager">
+  
+    <div class="stream-title"></div>
+    <div class="stream-container">
+      <div class="stream profile-stream">
+        
+        <div class="js-stream-items stream-items" id="stream-items-id"><div class='js-stream-item stream-item' data-item-id="146156912021487616" data-item-type="tweet" id="stream-item-tweet-146156912021487616">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146156912021487616"
+  
+  data-item-id="146156912021487616"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146156912021487616&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 09:18:17 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;default_profile&quot;:false,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17278,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kUJ&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kUJ&quot;,&quot;indices&quot;:[35,55],&quot;url&quot;:&quot;http:\/\/t.co\/xrUJburo&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[57,64],&quot;text&quot;:&quot;Europe&quot;},{&quot;indices&quot;:[65,77],&quot;text&quot;:&quot;HumanRights&quot;},{&quot;indices&quot;:[78,89],&quot;text&quot;:&quot;LatestNews&quot;},{&quot;indices&quot;:[90,97],&quot;text&quot;:&quot;Greece&quot;},{&quot;indices&quot;:[98,108],&quot;text&quot;:&quot;HateCrime&quot;},{&quot;indices&quot;:[109,115],&quot;text&quot;:&quot;Trial&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:146156912021487616,&quot;geo&quot;:null,&quot;text&quot;:&quot;In Greece, hate crime trial begins http:\/\/t.co\/xrUJburo  #Europe #HumanRights #LatestNews #Greece #HateCrime #Trial&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">In Greece, hate crime trial begins <a  data-expanded-url="http://wso.li/1kUJ"  class="twitter-timeline-link"href="http://t.co/xrUJburo" rel="nofollow" class="twitter-timeline-link">wso.li/1kUJ</a>  <a href="/#!/search?q=%23Europe" title="#Europe" class="tweet-url twitter-hashtag" rel="nofollow">#Europe</a> <a href="/#!/search?q=%23HumanRights" title="#HumanRights" class="tweet-url twitter-hashtag" rel="nofollow">#HumanRights</a> <a href="/#!/search?q=%23LatestNews" title="#LatestNews" class="tweet-url twitter-hashtag" rel="nofollow">#LatestNews</a> <a href="/#!/search?q=%23Greece" title="#Greece" class="tweet-url twitter-hashtag" rel="nofollow">#Greece</a> <a href="/#!/search?q=%23HateCrime" title="#HateCrime" class="tweet-url twitter-hashtag" rel="nofollow">#HateCrime</a> <a href="/#!/search?q=%23Trial" title="#Trial" class="tweet-url twitter-hashtag" rel="nofollow">#Trial</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146156912021487616" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 09:18:17 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146156912021487616">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="146154210046640128" data-item-type="tweet" id="stream-item-tweet-146154210046640128">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146154210046640128"
+  
+  data-item-id="146154210046640128"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146154210046640128&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 09:07:33 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17277,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/uD8KHu&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/uD8KHu&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/4cZEVhx3&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:146154210046640128,&quot;geo&quot;:null,&quot;text&quot;:&quot;Writing checks in Maori: \u201cis a legal right\u201d: AUCKLAND: Patrick Tangaere is raising awareness of the official sta... http:\/\/t.co\/4cZEVhx3&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Writing checks in Maori: “is a legal right”: AUCKLAND: Patrick Tangaere is raising awareness of the official sta... <a  data-expanded-url="http://bit.ly/uD8KHu"  class="twitter-timeline-link"href="http://t.co/4cZEVhx3" rel="nofollow" class="twitter-timeline-link">bit.ly/uD8KHu</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146154210046640128" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 09:07:33 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146154210046640128">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="146154209040023552" data-item-type="tweet" id="stream-item-tweet-146154209040023552">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146154209040023552"
+  
+  data-item-id="146154209040023552"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;coordinates&quot;:null,&quot;contributors&quot;:null,&quot;id_str&quot;:&quot;146154209040023552&quot;,&quot;created_at&quot;:&quot;Mon Dec 12 09:07:33 +0000 2011&quot;,&quot;user&quot;:{&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;protected&quot;:false,&quot;following&quot;:true,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;statuses_count&quot;:17277,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;possibly_sensitive&quot;:false,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/spdTCp&quot;,&quot;indices&quot;:[116,136],&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/spdTCp&quot;,&quot;url&quot;:&quot;http:\/\/t.co\/mCPvoHbO&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;id&quot;:146154209040023552,&quot;in_reply_to_user_id_str&quot;:null,&quot;geo&quot;:null,&quot;text&quot;:&quot;Israel okays funding to block African migrants: \u00a0 CAIRO: The Israeli government on Sunday voted unanimously to l... http:\/\/t.co\/mCPvoHbO&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Israel okays funding to block African migrants:   CAIRO: The Israeli government on Sunday voted unanimously to l... <a  data-expanded-url="http://bit.ly/spdTCp"  class="twitter-timeline-link"href="http://t.co/mCPvoHbO" rel="nofollow" class="twitter-timeline-link">bit.ly/spdTCp</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146154209040023552" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 09:07:33 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146154209040023552">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="146154207815282688" data-item-type="tweet" id="stream-item-tweet-146154207815282688">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146154207815282688"
+  
+  data-item-id="146154207815282688"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146154207815282688&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 09:07:33 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;default_profile&quot;:false,&quot;statuses_count&quot;:17277,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/sQrY69&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/sQrY69&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/HNKiNsQN&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:146154207815282688,&quot;geo&quot;:null,&quot;text&quot;:&quot;Egypt Islamists attempt to allay fears over tourism: CAIRO: Egypt\u2019s Islamic groups are battling against fears th... http:\/\/t.co\/HNKiNsQN&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Egypt Islamists attempt to allay fears over tourism: CAIRO: Egypt’s Islamic groups are battling against fears th... <a  data-expanded-url="http://bit.ly/sQrY69"  class="twitter-timeline-link"href="http://t.co/HNKiNsQN" rel="nofollow" class="twitter-timeline-link">bit.ly/sQrY69</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146154207815282688" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 09:07:33 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146154207815282688">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="146153075147685888" data-item-type="tweet" id="stream-item-tweet-146153075147685888">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146153075147685888"
+  
+  data-item-id="146153075147685888"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146153075147685888&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 09:03:03 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;default_profile&quot;:false,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17274,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kUE&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kUE&quot;,&quot;indices&quot;:[44,64],&quot;url&quot;:&quot;http:\/\/t.co\/tOFhm2ns&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[66,73],&quot;text&quot;:&quot;Oceana&quot;},{&quot;indices&quot;:[74,81],&quot;text&quot;:&quot;Checks&quot;},{&quot;indices&quot;:[82,91],&quot;text&quot;:&quot;Language&quot;},{&quot;indices&quot;:[92,98],&quot;text&quot;:&quot;Maori&quot;},{&quot;indices&quot;:[99,110],&quot;text&quot;:&quot;NewZealand&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:146153075147685888,&quot;geo&quot;:null,&quot;text&quot;:&quot;Writing checks in Maori: \u201cis a legal right\u201d http:\/\/t.co\/tOFhm2ns  #Oceana #Checks #Language #Maori #NewZealand&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Writing checks in Maori: “is a legal right” <a  data-expanded-url="http://wso.li/1kUE"  class="twitter-timeline-link"href="http://t.co/tOFhm2ns" rel="nofollow" class="twitter-timeline-link">wso.li/1kUE</a>  <a href="/#!/search?q=%23Oceana" title="#Oceana" class="tweet-url twitter-hashtag" rel="nofollow">#Oceana</a> <a href="/#!/search?q=%23Checks" title="#Checks" class="tweet-url twitter-hashtag" rel="nofollow">#Checks</a> <a href="/#!/search?q=%23Language" title="#Language" class="tweet-url twitter-hashtag" rel="nofollow">#Language</a> <a href="/#!/search?q=%23Maori" title="#Maori" class="tweet-url twitter-hashtag" rel="nofollow">#Maori</a> <a href="/#!/search?q=%23NewZealand" title="#NewZealand" class="tweet-url twitter-hashtag" rel="nofollow">#NewZealand</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146153075147685888" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 09:03:03 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146153075147685888">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="146150515879845888" data-item-type="tweet" id="stream-item-tweet-146150515879845888">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146150515879845888"
+  
+  data-item-id="146150515879845888"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146150515879845888&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 08:52:52 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;default_profile&quot;:false,&quot;statuses_count&quot;:17273,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kUx&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kUx&quot;,&quot;indices&quot;:[47,67],&quot;url&quot;:&quot;http:\/\/t.co\/0T01BpsD&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[69,75],&quot;text&quot;:&quot;Egypt&quot;},{&quot;indices&quot;:[76,85],&quot;text&quot;:&quot;Features&quot;},{&quot;indices&quot;:[86,98],&quot;text&quot;:&quot;HumanRights&quot;},{&quot;indices&quot;:[99,110],&quot;text&quot;:&quot;LatestNews&quot;},{&quot;indices&quot;:[111,121],&quot;text&quot;:&quot;Palestine&quot;},{&quot;indices&quot;:[122,131],&quot;text&quot;:&quot;Africans&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:146150515879845888,&quot;geo&quot;:null,&quot;text&quot;:&quot;Israel okays funding to block African migrants http:\/\/t.co\/0T01BpsD  #Egypt #Features #HumanRights #LatestNews #Palestine #Africans&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Israel okays funding to block African migrants <a  data-expanded-url="http://wso.li/1kUx"  class="twitter-timeline-link"href="http://t.co/0T01BpsD" rel="nofollow" class="twitter-timeline-link">wso.li/1kUx</a>  <a href="/#!/search?q=%23Egypt" title="#Egypt" class="tweet-url twitter-hashtag" rel="nofollow">#Egypt</a> <a href="/#!/search?q=%23Features" title="#Features" class="tweet-url twitter-hashtag" rel="nofollow">#Features</a> <a href="/#!/search?q=%23HumanRights" title="#HumanRights" class="tweet-url twitter-hashtag" rel="nofollow">#HumanRights</a> <a href="/#!/search?q=%23LatestNews" title="#LatestNews" class="tweet-url twitter-hashtag" rel="nofollow">#LatestNews</a> <a href="/#!/search?q=%23Palestine" title="#Palestine" class="tweet-url twitter-hashtag" rel="nofollow">#Palestine</a> <a href="/#!/search?q=%23Africans" title="#Africans" class="tweet-url twitter-hashtag" rel="nofollow">#Africans</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146150515879845888" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 08:52:52 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146150515879845888">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="146147239377633280" data-item-type="tweet" id="stream-item-tweet-146147239377633280">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="146147239377633280"
+  
+  data-item-id="146147239377633280"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;146147239377633280&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Mon Dec 12 08:39:51 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17272,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kUm&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kUm&quot;,&quot;indices&quot;:[52,72],&quot;url&quot;:&quot;http:\/\/t.co\/qxEKSVki&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[74,80],&quot;text&quot;:&quot;Egypt&quot;},{&quot;indices&quot;:[81,92],&quot;text&quot;:&quot;LatestNews&quot;},{&quot;indices&quot;:[93,100],&quot;text&quot;:&quot;Travel&quot;},{&quot;indices&quot;:[101,109],&quot;text&quot;:&quot;Beaches&quot;},{&quot;indices&quot;:[110,120],&quot;text&quot;:&quot;Elections&quot;},{&quot;indices&quot;:[121,130],&quot;text&quot;:&quot;Featured&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:146147239377633280,&quot;geo&quot;:null,&quot;text&quot;:&quot;Egypt Islamists attempt to allay fears over tourism http:\/\/t.co\/qxEKSVki  #Egypt #LatestNews #Travel #Beaches #Elections #Featured&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Egypt Islamists attempt to allay fears over tourism <a  data-expanded-url="http://wso.li/1kUm"  class="twitter-timeline-link"href="http://t.co/qxEKSVki" rel="nofollow" class="twitter-timeline-link">wso.li/1kUm</a>  <a href="/#!/search?q=%23Egypt" title="#Egypt" class="tweet-url twitter-hashtag" rel="nofollow">#Egypt</a> <a href="/#!/search?q=%23LatestNews" title="#LatestNews" class="tweet-url twitter-hashtag" rel="nofollow">#LatestNews</a> <a href="/#!/search?q=%23Travel" title="#Travel" class="tweet-url twitter-hashtag" rel="nofollow">#Travel</a> <a href="/#!/search?q=%23Beaches" title="#Beaches" class="tweet-url twitter-hashtag" rel="nofollow">#Beaches</a> <a href="/#!/search?q=%23Elections" title="#Elections" class="tweet-url twitter-hashtag" rel="nofollow">#Elections</a> <a href="/#!/search?q=%23Featured" title="#Featured" class="tweet-url twitter-hashtag" rel="nofollow">#Featured</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/146147239377633280" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Mon Dec 12 08:39:51 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="146147239377633280">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145975751068499968" data-item-type="tweet" id="stream-item-tweet-145975751068499968">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145975751068499968"
+  
+  data-item-id="145975751068499968"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145975751068499968&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 21:18:25 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12752,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;default_profile&quot;:false,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/ryalbr&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/ryalbr&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/dLwcsHx2&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145975751068499968,&quot;geo&quot;:null,&quot;text&quot;:&quot;Painting faith, inspiring conversation: LONDON: Camilla Howalt, Mohamed Negm, and Orly Orbach\u2019s art piece Thresh... http:\/\/t.co\/dLwcsHx2&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Painting faith, inspiring conversation: LONDON: Camilla Howalt, Mohamed Negm, and Orly Orbach’s art piece Thresh... <a  data-expanded-url="http://bit.ly/ryalbr"  class="twitter-timeline-link"href="http://t.co/dLwcsHx2" rel="nofollow" class="twitter-timeline-link">bit.ly/ryalbr</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145975751068499968" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 21:18:25 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145975751068499968">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145975749227192321" data-item-type="tweet" id="stream-item-tweet-145975749227192321">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145975749227192321"
+  
+  data-item-id="145975749227192321"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145975749227192321&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 21:18:25 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17274,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/rzPxtm&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/rzPxtm&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/rU78VBWr&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145975749227192321,&quot;geo&quot;:null,&quot;text&quot;:&quot;Islam, democracy not at odds in Tunisia: TUNIS: The 23 October elections in Tunisia were as important and as his... http:\/\/t.co\/rU78VBWr&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Islam, democracy not at odds in Tunisia: TUNIS: The 23 October elections in Tunisia were as important and as his... <a  data-expanded-url="http://bit.ly/rzPxtm"  class="twitter-timeline-link"href="http://t.co/rU78VBWr" rel="nofollow" class="twitter-timeline-link">bit.ly/rzPxtm</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145975749227192321" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 21:18:25 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145975749227192321">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145975747322986496" data-item-type="tweet" id="stream-item-tweet-145975747322986496">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145975747322986496"
+  
+  data-item-id="145975747322986496"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145975747322986496&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 21:18:24 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17273,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/tDbXKb&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/tDbXKb&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/ztHqYaCi&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145975747322986496,&quot;geo&quot;:null,&quot;text&quot;:&quot;Egypt football clubs to be fined over fan\u2019s firecrackers, say police: CAIRO: The Egyptian Football Association (... http:\/\/t.co\/ztHqYaCi&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Egypt football clubs to be fined over fan’s firecrackers, say police: CAIRO: The Egyptian Football Association (... <a  data-expanded-url="http://bit.ly/tDbXKb"  class="twitter-timeline-link"href="http://t.co/ztHqYaCi" rel="nofollow" class="twitter-timeline-link">bit.ly/tDbXKb</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145975747322986496" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 21:18:24 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145975747322986496">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145971611168813056" data-item-type="tweet" id="stream-item-tweet-145971611168813056">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145971611168813056"
+  
+  data-item-id="145971611168813056"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145971611168813056&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 21:01:58 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12753,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kOJ&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kOJ&quot;,&quot;indices&quot;:[39,59],&quot;url&quot;:&quot;http:\/\/t.co\/zFtsuCko&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[61,70],&quot;text&quot;:&quot;Religion&quot;},{&quot;indices&quot;:[71,80],&quot;text&quot;:&quot;Dialogue&quot;},{&quot;indices&quot;:[81,87],&quot;text&quot;:&quot;Faith&quot;},{&quot;indices&quot;:[88,95],&quot;text&quot;:&quot;London&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:145971611168813056,&quot;geo&quot;:null,&quot;text&quot;:&quot;Painting faith, inspiring conversation http:\/\/t.co\/zFtsuCko  #Religion #Dialogue #Faith #London&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Painting faith, inspiring conversation <a  data-expanded-url="http://wso.li/1kOJ"  class="twitter-timeline-link"href="http://t.co/zFtsuCko" rel="nofollow" class="twitter-timeline-link">wso.li/1kOJ</a>  <a href="/#!/search?q=%23Religion" title="#Religion" class="tweet-url twitter-hashtag" rel="nofollow">#Religion</a> <a href="/#!/search?q=%23Dialogue" title="#Dialogue" class="tweet-url twitter-hashtag" rel="nofollow">#Dialogue</a> <a href="/#!/search?q=%23Faith" title="#Faith" class="tweet-url twitter-hashtag" rel="nofollow">#Faith</a> <a href="/#!/search?q=%23London" title="#London" class="tweet-url twitter-hashtag" rel="nofollow">#London</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145971611168813056" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 21:01:58 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145971611168813056">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145969330482462720" data-item-type="tweet" id="stream-item-tweet-145969330482462720">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145969330482462720"
+  
+  data-item-id="145969330482462720"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145969330482462720&quot;,&quot;retweet_count&quot;:1,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 20:52:55 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17274,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kOC&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kOC&quot;,&quot;indices&quot;:[40,60],&quot;url&quot;:&quot;http:\/\/t.co\/FAtnJbBa&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[62,71],&quot;text&quot;:&quot;Religion&quot;},{&quot;indices&quot;:[72,80],&quot;text&quot;:&quot;Tunisia&quot;},{&quot;indices&quot;:[81,91],&quot;text&quot;:&quot;Democracy&quot;},{&quot;indices&quot;:[92,103],&quot;text&quot;:&quot;Government&quot;},{&quot;indices&quot;:[104,110],&quot;text&quot;:&quot;Islam&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:145969330482462720,&quot;geo&quot;:null,&quot;text&quot;:&quot;Islam, democracy not at odds in Tunisia http:\/\/t.co\/FAtnJbBa  #Religion #Tunisia #Democracy #Government #Islam&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Islam, democracy not at odds in Tunisia <a  data-expanded-url="http://wso.li/1kOC"  class="twitter-timeline-link"href="http://t.co/FAtnJbBa" rel="nofollow" class="twitter-timeline-link">wso.li/1kOC</a>  <a href="/#!/search?q=%23Religion" title="#Religion" class="tweet-url twitter-hashtag" rel="nofollow">#Religion</a> <a href="/#!/search?q=%23Tunisia" title="#Tunisia" class="tweet-url twitter-hashtag" rel="nofollow">#Tunisia</a> <a href="/#!/search?q=%23Democracy" title="#Democracy" class="tweet-url twitter-hashtag" rel="nofollow">#Democracy</a> <a href="/#!/search?q=%23Government" title="#Government" class="tweet-url twitter-hashtag" rel="nofollow">#Government</a> <a href="/#!/search?q=%23Islam" title="#Islam" class="tweet-url twitter-hashtag" rel="nofollow">#Islam</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145969330482462720" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 20:52:55 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145969330482462720">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145968547045187584" data-item-type="tweet" id="stream-item-tweet-145968547045187584">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145968547045187584"
+  
+  data-item-id="145968547045187584"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145968547045187584&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 20:49:48 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:true,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12753,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:false,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kOz&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kOz&quot;,&quot;indices&quot;:[69,89],&quot;url&quot;:&quot;http:\/\/t.co\/E5Gqszvw&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[91,97],&quot;text&quot;:&quot;Egypt&quot;},{&quot;indices&quot;:[98,112],&quot;text&quot;:&quot;EgyptianSport&quot;},{&quot;indices&quot;:[113,122],&quot;text&quot;:&quot;Football&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:145968547045187584,&quot;geo&quot;:null,&quot;text&quot;:&quot;Egypt football clubs to be fined over fan&#39;s firecrackers, say police http:\/\/t.co\/E5Gqszvw  #Egypt #EgyptianSport #Football&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Egypt football clubs to be fined over fan's firecrackers, say police <a  data-expanded-url="http://wso.li/1kOz"  class="twitter-timeline-link"href="http://t.co/E5Gqszvw" rel="nofollow" class="twitter-timeline-link">wso.li/1kOz</a>  <a href="/#!/search?q=%23Egypt" title="#Egypt" class="tweet-url twitter-hashtag" rel="nofollow">#Egypt</a> <a href="/#!/search?q=%23EgyptianSport" title="#EgyptianSport" class="tweet-url twitter-hashtag" rel="nofollow">#EgyptianSport</a> <a href="/#!/search?q=%23Football" title="#Football" class="tweet-url twitter-hashtag" rel="nofollow">#Football</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145968547045187584" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 20:49:48 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145968547045187584">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145968027026980864" data-item-type="tweet" id="stream-item-tweet-145968027026980864">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145968027026980864"
+  
+  data-item-id="145968027026980864"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145968027026980864&quot;,&quot;retweet_count&quot;:2,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 20:47:44 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17277,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/uImZUs&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/uImZUs&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/SRfJ3FUn&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145968027026980864,&quot;geo&quot;:null,&quot;text&quot;:&quot;Yemen\u2019s heritage under threat: Zabid: Heir to an ancient culture spanning through several millennia and that goe... http:\/\/t.co\/SRfJ3FUn&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Yemen’s heritage under threat: Zabid: Heir to an ancient culture spanning through several millennia and that goe... <a  data-expanded-url="http://bit.ly/uImZUs"  class="twitter-timeline-link"href="http://t.co/SRfJ3FUn" rel="nofollow" class="twitter-timeline-link">bit.ly/uImZUs</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145968027026980864" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 20:47:44 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145968027026980864">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145964486967312385" data-item-type="tweet" id="stream-item-tweet-145964486967312385">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145964486967312385"
+  
+  data-item-id="145964486967312385"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145964486967312385&quot;,&quot;retweet_count&quot;:1,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 20:33:40 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;default_profile&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;wso.li\/1kOq&quot;,&quot;expanded_url&quot;:&quot;http:\/\/wso.li\/1kOq&quot;,&quot;indices&quot;:[37,57],&quot;url&quot;:&quot;http:\/\/t.co\/L9lACPbl&quot;}],&quot;hashtags&quot;:[{&quot;indices&quot;:[59,67],&quot;text&quot;:&quot;Culture&quot;},{&quot;indices&quot;:[68,77],&quot;text&quot;:&quot;Features&quot;},{&quot;indices&quot;:[78,87],&quot;text&quot;:&quot;Heritage&quot;},{&quot;indices&quot;:[88,99],&quot;text&quot;:&quot;LatestNews&quot;},{&quot;indices&quot;:[100,106],&quot;text&quot;:&quot;Yemen&quot;},{&quot;indices&quot;:[107,115],&quot;text&quot;:&quot;Ancient&quot;},{&quot;indices&quot;:[116,121],&quot;text&quot;:&quot;Ites&quot;},{&quot;indices&quot;:[122,128],&quot;text&quot;:&quot;Sanaa&quot;}],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/wso.li\&quot; rel=\&quot;nofollow\&quot;\u003EWordSocial\u003C\/a\u003E&quot;,&quot;id&quot;:145964486967312385,&quot;geo&quot;:null,&quot;text&quot;:&quot;Yemen\u2019s heritage under threat: Zabid http:\/\/t.co\/L9lACPbl  #Culture #Features #Heritage #LatestNews #Yemen #Ancient #Ites #Sanaa&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Yemen’s heritage under threat: Zabid <a  data-expanded-url="http://wso.li/1kOq"  class="twitter-timeline-link"href="http://t.co/L9lACPbl" rel="nofollow" class="twitter-timeline-link">wso.li/1kOq</a>  <a href="/#!/search?q=%23Culture" title="#Culture" class="tweet-url twitter-hashtag" rel="nofollow">#Culture</a> <a href="/#!/search?q=%23Features" title="#Features" class="tweet-url twitter-hashtag" rel="nofollow">#Features</a> <a href="/#!/search?q=%23Heritage" title="#Heritage" class="tweet-url twitter-hashtag" rel="nofollow">#Heritage</a> <a href="/#!/search?q=%23LatestNews" title="#LatestNews" class="tweet-url twitter-hashtag" rel="nofollow">#LatestNews</a> <a href="/#!/search?q=%23Yemen" title="#Yemen" class="tweet-url twitter-hashtag" rel="nofollow">#Yemen</a> <a href="/#!/search?q=%23Ancient" title="#Ancient" class="tweet-url twitter-hashtag" rel="nofollow">#Ancient</a> <a href="/#!/search?q=%23Ites" title="#Ites" class="tweet-url twitter-hashtag" rel="nofollow">#Ites</a> <a href="/#!/search?q=%23Sanaa" title="#Sanaa" class="tweet-url twitter-hashtag" rel="nofollow">#Sanaa</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145964486967312385" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 20:33:40 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145964486967312385">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145904554469371904" data-item-type="tweet" id="stream-item-tweet-145904554469371904">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145904554469371904"
+  
+  data-item-id="145904554469371904"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145904554469371904&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 16:35:31 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12754,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;default_profile&quot;:false,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/rYdX0p&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/rYdX0p&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/blVIKmT9&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145904554469371904,&quot;geo&quot;:null,&quot;text&quot;:&quot;New Pakistani-US dawn needed: WASHINGTON: The deaths of 24 Pakistani soldiers on 26 November during NATO operati... http:\/\/t.co\/blVIKmT9&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">New Pakistani-US dawn needed: WASHINGTON: The deaths of 24 Pakistani soldiers on 26 November during NATO operati... <a  data-expanded-url="http://bit.ly/rYdX0p"  class="twitter-timeline-link"href="http://t.co/blVIKmT9" rel="nofollow" class="twitter-timeline-link">bit.ly/rYdX0p</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145904554469371904" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 16:35:31 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145904554469371904">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145878894011088896" data-item-type="tweet" id="stream-item-tweet-145878894011088896">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145878894011088896"
+  
+  data-item-id="145878894011088896"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145878894011088896&quot;,&quot;retweet_count&quot;:1,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 14:53:33 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17277,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/ur7DzW&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/ur7DzW&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/AcvSYy8k&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145878894011088896,&quot;geo&quot;:null,&quot;text&quot;:&quot;Nine men in Kuwait have their heads shaved for harassing women: CAIRO: Nine men in Hawalli, Kuwait had their hea... http:\/\/t.co\/AcvSYy8k&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Nine men in Kuwait have their heads shaved for harassing women: CAIRO: Nine men in Hawalli, Kuwait had their hea... <a  data-expanded-url="http://bit.ly/ur7DzW"  class="twitter-timeline-link"href="http://t.co/AcvSYy8k" rel="nofollow" class="twitter-timeline-link">bit.ly/ur7DzW</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145878894011088896" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 14:53:33 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145878894011088896">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145878892836691969" data-item-type="tweet" id="stream-item-tweet-145878892836691969">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145878892836691969"
+  
+  data-item-id="145878892836691969"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145878892836691969&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 14:53:33 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12754,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;default_profile&quot;:false,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/u7FGHx&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/u7FGHx&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/0QTbJboL&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145878892836691969,&quot;geo&quot;:null,&quot;text&quot;:&quot;Youthward for peace: \u00a0 BOSTON, Massachusetts: Can the youthful energy, passion and idealism that fuelled the Ara... http:\/\/t.co\/0QTbJboL&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Youthward for peace:   BOSTON, Massachusetts: Can the youthful energy, passion and idealism that fuelled the Ara... <a  data-expanded-url="http://bit.ly/u7FGHx"  class="twitter-timeline-link"href="http://t.co/0QTbJboL" rel="nofollow" class="twitter-timeline-link">bit.ly/u7FGHx</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145878892836691969" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 14:53:33 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145878892836691969">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145878891523870720" data-item-type="tweet" id="stream-item-tweet-145878891523870720">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145878891523870720"
+  
+  data-item-id="145878891523870720"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145878891523870720&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 14:53:32 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12751,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17277,&quot;profile_background_tile&quot;:false,&quot;default_profile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/ux4OzA&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/ux4OzA&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/Ky4kKxCG&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145878891523870720,&quot;geo&quot;:null,&quot;text&quot;:&quot;Challenges for Egypt\u2019s new government: CAIRO: As millions of Egyptians turned to polling stations to take part i... http:\/\/t.co\/Ky4kKxCG&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">Challenges for Egypt’s new government: CAIRO: As millions of Egyptians turned to polling stations to take part i... <a  data-expanded-url="http://bit.ly/ux4OzA"  class="twitter-timeline-link"href="http://t.co/Ky4kKxCG" rel="nofollow" class="twitter-timeline-link">bit.ly/ux4OzA</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145878891523870720" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 14:53:32 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145878891523870720">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+<div class='js-stream-item stream-item' data-item-id="145878890081030144" data-item-type="tweet" id="stream-item-tweet-145878890081030144">
+  
+
+<div class="more">&raquo;</div>
+<div class="stream-item-content tweet js-actionable-tweet js-stream-tweet stream-tweet  "
+  data-is-reply-to="false"
+  data-tweet-id="145878890081030144"
+  
+  data-item-id="145878890081030144"
+  
+  
+  
+  data-screen-name="bikyamasr"
+  data-user-id="74446328"
+  
+  
+  data-status="{&quot;contributors&quot;:null,&quot;coordinates&quot;:null,&quot;id_str&quot;:&quot;145878890081030144&quot;,&quot;retweet_count&quot;:0,&quot;in_reply_to_user_id&quot;:null,&quot;favorited&quot;:false,&quot;created_at&quot;:&quot;Sun Dec 11 14:53:32 +0000 2011&quot;,&quot;possibly_sensitive&quot;:false,&quot;user&quot;:{&quot;time_zone&quot;:&quot;Cairo&quot;,&quot;profile_text_color&quot;:&quot;333333&quot;,&quot;protected&quot;:false,&quot;id_str&quot;:&quot;74446328&quot;,&quot;contributors_enabled&quot;:false,&quot;following&quot;:null,&quot;profile_background_image_url&quot;:&quot;http:\/\/a1.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;followers_count&quot;:12753,&quot;profile_image_url&quot;:&quot;http:\/\/a2.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;name&quot;:&quot;Bikya Masr&quot;,&quot;profile_link_color&quot;:&quot;E39000&quot;,&quot;profile_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_images\/1491711207\/BikyaAvatar_normal.png&quot;,&quot;default_profile&quot;:false,&quot;listed_count&quot;:626,&quot;utc_offset&quot;:7200,&quot;created_at&quot;:&quot;Tue Sep 15 13:26:55 +0000 2009&quot;,&quot;description&quot;:&quot;Multi-award winning independent news for the world&quot;,&quot;notifications&quot;:null,&quot;profile_background_color&quot;:&quot;292627&quot;,&quot;statuses_count&quot;:17271,&quot;profile_background_tile&quot;:false,&quot;profile_sidebar_fill_color&quot;:&quot;EFEFEF&quot;,&quot;default_profile_image&quot;:false,&quot;follow_request_sent&quot;:null,&quot;lang&quot;:&quot;en&quot;,&quot;geo_enabled&quot;:false,&quot;friends_count&quot;:40,&quot;profile_sidebar_border_color&quot;:&quot;E8E4E4&quot;,&quot;location&quot;:&quot;Egypt&quot;,&quot;is_translator&quot;:false,&quot;show_all_inline_media&quot;:false,&quot;screen_name&quot;:&quot;bikyamasr&quot;,&quot;id&quot;:74446328,&quot;verified&quot;:false,&quot;profile_use_background_image&quot;:true,&quot;profile_background_image_url_https&quot;:&quot;https:\/\/si0.twimg.com\/profile_background_images\/310060726\/xecfccf174850a843c2fd476f95b22de.jpg&quot;,&quot;favourites_count&quot;:0,&quot;url&quot;:&quot;http:\/\/bikyamasr.com&quot;},&quot;in_reply_to_screen_name&quot;:null,&quot;in_reply_to_status_id&quot;:null,&quot;in_reply_to_status_id_str&quot;:null,&quot;entities&quot;:{&quot;urls&quot;:[{&quot;display_url&quot;:&quot;bit.ly\/rO0ifk&quot;,&quot;expanded_url&quot;:&quot;http:\/\/bit.ly\/rO0ifk&quot;,&quot;indices&quot;:[116,136],&quot;url&quot;:&quot;http:\/\/t.co\/3iB6avT5&quot;}],&quot;hashtags&quot;:[],&quot;user_mentions&quot;:[]},&quot;retweeted&quot;:false,&quot;truncated&quot;:false,&quot;in_reply_to_user_id_str&quot;:null,&quot;place&quot;:null,&quot;source&quot;:&quot;\u003Ca href=\&quot;http:\/\/twitterfeed.com\&quot; rel=\&quot;nofollow\&quot;\u003Etwitterfeed\u003C\/a\u003E&quot;,&quot;id&quot;:145878890081030144,&quot;geo&quot;:null,&quot;text&quot;:&quot;New Israel ambassador to Egypt to arrive Monday: CAIRO: Sources inside Israel said Sunday that the new Israeli a... http:\/\/t.co\/3iB6avT5&quot;}">
+
+  
+
+  <div class="tweet-dogear"></div>
+  <div class="tweet-image">
+      
+<img height="48" width="48" src='http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png' alt='Bikya Masr' class='user-profile-link js-action-profile-avatar' data-user-id='74446328'/>
+
+
+  </div>
+  <div class="tweet-content">
+    <div class="tweet-row">
+      
+      
+        
+<span class='tweet-user-name'>
+  <a class='tweet-screen-name user-profile-link js-action-profile-name' data-user-id='74446328' href='/bikyamasr' title='Bikya Masr'>bikyamasr</a>
+  <span class='tweet-full-name'>Bikya Masr</span>
+  
+</span>
+
+      
+      <div class="tweet-corner">
+        <div class='tweet-meta'>
+  <span class='icons'>
+    
+
+    
+
+    <div class="extra-icons">
+      
+        
+        <span class="inlinemedia-icons js-icon-container"></span>
+        
+      
+      
+    </div>
+  </span>
+</div>
+
+
+      </div>
+    </div>
+    <div class="tweet-row">
+      <div class="tweet-text js-tweet-text">New Israel ambassador to Egypt to arrive Monday: CAIRO: Sources inside Israel said Sunday that the new Israeli a... <a  data-expanded-url="http://bit.ly/rO0ifk"  class="twitter-timeline-link"href="http://t.co/3iB6avT5" rel="nofollow" class="twitter-timeline-link">bit.ly/rO0ifk</a></div>
+
+    </div>
+    
+      <div class="tweet-row">
+        <a href="/#!/bikyamasr/status/145878890081030144" class="tweet-timestamp js-permalink">
+  
+  <span class="_timestamp js-tweet-timestamp" title="" data-time="Sun Dec 11 14:53:32 +0000 2011" data-long-form="true">&nbsp;</span>
+</a>
+
+        <span class="tweet-actions js-actions" data-tweet-id="145878890081030144">
+  
+</span>
+
+
+
+      </div>
+    
+    
+
+    
+
+    
+  </div>
+</div>
+
+
+
+
+</div>
+</div>
+        
+        
+
+      </div>
+    </div>
+  
+  
+    
+  
+</div>
+
+      <script>if (window.ttft) window.ttft.serverRendered('profile');</script>
+    
+  </div>
+  <div class="dashboard profile-dashboard">
+  
+    
+      
+      <div class="component">
+        <div class='dashboard-profile-annotations clearfix'>
+  <h2 class="dashboard-profile-title"><img src="http://a2.twimg.com/profile_images/1491711207/BikyaAvatar_normal.png" alt="Bikya Masr" width="24" class="profile-dashboard"/>About @bikyamasr</h2>
+  
+</div>
+
+<ul class='user-stats clearfix'>
+    
+      <li><a class='user-stats-count user-stats-tweets' href="/bikyamasr">17,278<span class='user-stats-stat'>Tweets</span></a></li>
+    
+    <li><a class='user-stats-count user-stats-following' href="/bikyamasr/#/following">40<span class='user-stats-stat'>Following</span></a></li>
+    <li><a class='user-stats-count user-stats-followers' href="/bikyamasr/#/followers">12,751<span class='user-stats-stat'>Followers</span></a></li>
+    <li><a class='user-stats-count user-stats-listed' href="/bikyamasr/#/lists/memberships">626<span class='user-stats-stat'>Listed</span></a></li>
+</ul>
+
+
+        <hr/>
+      </div>
+      <div class="component">
+        <div class="footer inline-list">
+  <ul>
+    <li><a href="/about">About</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="//support.twitter.com">Help</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="http://blog.twitter.com">Blog</a><span class="dot divider"> &middot;</span></li>
+
+    
+      <li><a href="/download">Mobile</a><span class="dot divider"> &middot;</span></li>
+    
+
+    <li><a href="http://status.twitter.com">Status</a><span class="dot divider"> &middot;</span></li>
+
+    <li><a href="/jobs">Jobs</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="/tos">Terms</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="/privacy">Privacy</a><span class="dot divider"> &middot;</span></li>
+
+    
+
+    <li><a href="//business.twitter.com/advertise/start">Advertisers</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="//business.twitter.com/">Businesses</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="http://media.twitter.com">Media</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="//dev.twitter.com">Developers</a><span class="dot divider"> &middot;</span></li>
+    <li><a href="/about/resources">Resources</a><span class="dot divider"> &middot;</span></li>
+    <li><span class="copyright">&copy; 2011 Twitter</span></li>
+  </ul>
+  
+</div>
+
+      </div>
+      
+    
+  
+</div>
+
+  <div id="details-pane-outer">
+  <div class="details-pane-shell">
+    <div class="details-pane">
+      
+    </div>
+  </div>
+</div>
+
+
+
+            
+
+            
+          </div>
+        </div>
+      </div>
+
+      
+      
+        
+      
+
+      <div id="message-notifications"></div>
+    </div>
+
+    <div id="flash-message-storage" style="display:none"></div>
+    <div id="flash-object-container"></div>
+
+    <div id="off-screen-preload">
+      <div class="content-fe-sprites"></div>
+    </div>
+
+    
+
+    
+
+<script type="text/javascript">WATCH('loadrunner', function() {
+    (function(context,document){var useInteractive=context.attachEvent&&!context.opera,scripts=document.getElementsByTagName("script"),uuid=0,scriptTag,scriptTemplate=document.createElement("script"),scriptsInProgress={},modulesInProgress={},loadedModule,currentScript,activeScripts={},oldUsing=context.using,oldProvide=context.provide,oldDefine=context.define,oldLoadrunner=context.loadrunner,pausedScripts={};for(var i=0,s;s=scripts[i];i++){if(s.src.match(/loadrunner\.js(\?|#|$)/)){scriptTag=s;break}}function aug(target){for(var i=1,o;o=arguments[i];i++){for(var key in o){target[key]=o[key]}}return target}function makeArray(o){return Array.prototype.slice.call(o)}var isArray=Array.isArray||function(obj){return obj.constructor==Array};function indexOf(arr,thing){for(var i=0,item;item=arr[i];i++){if(thing==item){return i}}return -1}function path(){var parts=makeArray(arguments),normalized=[];for(var i=0,len=parts.length;i<len;i++){if(parts[i].length>0){normalized.push(parts[i].replace(/\/$/,""))}}return normalized.join("/")}function pushObjPath(obj,path,newobj){var names=path.split("/"),cursor=obj;while(names.length>1){var name=names.shift();cursor=cursor[name]=cursor[name]||{}}cursor[names[0]]=newobj}function Dependency(){}Dependency.prototype.then=function(cb){var dep=this;if(!this.started){this.started=true;this.start()}if(this.completed){cb.apply(context,this.results)}else{this.callbacks=this.callbacks||[];this.callbacks.push(cb)}return this};Dependency.prototype.start=function(){};Dependency.prototype.complete=function(){if(!this.completed){this.results=makeArray(arguments);this.completed=true;if(this.callbacks){for(var i=0,cb;cb=this.callbacks[i];i++){cb.apply(context,this.results)}}}};function Script(path,force){if(path){this.id=this.path=this.resolvePath(path)}this.force=!!force}Script.loaded=[];Script.times={};Script.prototype=new Dependency;Script.prototype.resolvePath=function(path){return whichBundle(path)};Script.prototype.start=function(){var me=this,dep,module;if(module=modulesInProgress[this.id]){module.then(function(){me.complete()});return this}if(dep=scriptsInProgress[this.id]){dep.then(function(){me.loaded()})}else{if(!this.force&&indexOf(Script.loaded,this.id)>-1){this.loaded()}else{this.load()}}return this};Script.prototype.createScriptTag=function(){var me=this,paused;scriptsInProgress[this.id]=me;if(paused=pausedScripts[this.path]){me.then(function(){for(var i=0,d;d=paused[i];i++){d.complete.apply(d,arguments)}})}this.times={start:new Date()};var script=scriptTemplate.cloneNode(false);this.scriptId=script.id="LR"+ ++uuid;script.type="text/javascript";script.async=true;script.onerror=function(){throw new Error(me.path+" not loaded")};script.onreadystatechange=script.onload=function(e){e=context.event||e;if(e.type=="load"||indexOf(["loaded","complete"],this.readyState)>-1){this.onreadystatechange=null;me.loaded()}};script.src=this.path;currentScript=this;scripts[0].parentNode.insertBefore(script,scripts[0]);currentScript=null;activeScripts[script.id]=this};Script.prototype.queueScript=function(){pausedScripts[this.path]=pausedScripts[this.path]||[];pausedScripts[this.path].push(this)};Script.prototype.load=function(force){if(using.autoLoad||force){this.createScriptTag()}else{this.queueScript()}return this};Script.prototype.loaded=function(){this.complete()};Script.prototype.complete=function(){if(indexOf(Script.loaded,this.id)==-1){Script.loaded.push(this.id)}if(this.times){Script.times[this.id]=aug(this.times,{end:new Date()})}delete scriptsInProgress[this.id];Dependency.prototype.complete.apply(this,arguments)};function Module(id,body){this.id=id;this.body=body;if(typeof body=="undefined"){this.path=this.resolvePath(id)}}Module.exports={};Module.prototype=new Script;Module.prototype.resolvePath=function(id){return(whichBundle(id)!=id)?whichBundle(id):path(using.path,id+".js")};Module.prototype.start=function(){var exports,module,me=this,oldCurrent;if(this.body){this.execute()}else{if(exports=Module.exports[this.id]){this.exp(exports)}else{if(module=modulesInProgress[this.id]){module.then(function(exports){me.exp(exports)})}else{modulesInProgress[this.id]=this;this.load()}}}};Module.prototype.loaded=function(){var module,exports,me=this;if(!useInteractive){module=loadedModule;loadedModule=null;module.id=module.id||this.id;module.then(function(exports){me.exp(exports)})}else{if(exports=Module.exports[this.id]){this.exp(exports)}else{if(module=modulesInProgress[this.id]){module.then(function(exports){me.exp(exports)})}}}};Module.prototype.complete=function(){delete modulesInProgress[this.id];Script.prototype.complete.apply(this,arguments)};Module.prototype.execute=function(){var me=this;if(typeof this.body=="object"){this.exp(this.body)}else{if(typeof this.body=="function"){this.body.apply(window,[function(exports){me.exp(exports)}])}}};Module.prototype.exp=function(exports){if(this.times){aug(this.times,{eval:new Date()})}this.complete(this.exports=Module.exports[this.id]=exports||{})};function flattenDeps(deps){var flat=[];for(var i=0,d;d=deps[i];i++){if(d instanceof Sequence){flat=flat.concat(flattenDeps(d.deps))}else{if(d instanceof Module){flat.push(d)}}}return flat}function Collection(deps){this.deps=deps;if(this.deps.length==0){this.complete()}}Collection.prototype=new Dependency;Collection.prototype.start=function(){var me=this;function depComplete(){var results=[];for(var i=0,d;d=me.deps[i];i++){if(!d.completed){return }if(d.results.length>0){results=results.concat(d.results)}}me.complete.apply(me,results)}for(var i=0,d;d=this.deps[i];i++){d.then(depComplete)}return this};Collection.prototype.load=function(){for(var i=0,d;d=this.deps[i];i++){if(d.load){d.load(true)}}return this};Collection.prototype.as=function(cb){var me=this;return this.then(function(){var flatDeps=flattenDeps(me.deps),obj={};for(var i=0,d;d=flatDeps[i];i++){pushObjPath(obj,d.id,arguments[i])}cb.apply(this,[obj].concat(makeArray(arguments)))})};function Sequence(deps){this.deps=deps}Sequence.prototype=new Dependency;Sequence.prototype.start=function(){var me=this,nextDep=0,allResults=[];(function next(){var dep=me.deps[nextDep++];if(dep){dep.then(function(results){if(dep.results.length>0){allResults=allResults.concat(dep.results)}next()})}else{me.complete.apply(me,allResults)}}());return this};Sequence.prototype.load=function(){var me=this,nextDep=0;(function next(){var dep=me.deps[nextDep++];if(dep&&dep.load){dep.load(true).then(function(){next()})}}());return this};function interactiveScript(){for(var i in scripts){if(scripts[i].readyState=="interactive"){return activeScripts[scripts[i].id]}}}function defineModule(name,body){var module;if(!name&&useInteractive){module=currentScript||interactiveScript()}if(module){delete activeScripts[module.scriptId];module.body=body;module.execute()}else{loadedModule=module=new Module(name,body);modulesInProgress[module.id]=module}return module}function provide(){var args=makeArray(arguments),name,body;if(typeof args[0]=="string"){name=args.shift()}body=args.shift();return defineModule(name,body)}function amdResolve(id,mod){var from=mod.id||"";var parts=from.split("/");parts.pop();var dir=parts.join("/");return id.replace(/^\./,dir)}function amdMap(args,mod){var mapped=[];function require(id){return Module.exports[amdResolve(id,mod)]}for(var i=0,len=args.length;i<len;i++){if(args[i]=="require"){mapped.push(require);continue}if(args[i]=="exports"){mod.exports=mod.exports||{};mapped.push(mod.exports);continue}mapped.push(require(args[i]))}return mapped}function amdDefine(){var args=makeArray(arguments),dependencies=[],id,factory;if(typeof args[0]=="string"){id=args.shift()}if(isArray(args[0])){dependencies=args.shift()}factory=args.shift();var mod=defineModule(id,function(exports){var mods=[];function executeAMD(){var args=amdMap(makeArray(dependencies),mod),exported;if(typeof factory=="function"){exported=factory.apply(mod,args)}else{exported=factory}if(typeof exported=="undefined"){exported=mod.exports}exports(exported)}for(var i=0,len=dependencies.length;i<len;i++){var d=dependencies[i];if(indexOf(["require","exports"],d)==-1){mods.push(amdResolve(d,mod))}}if(mods.length>0){using.apply(this,mods.concat(executeAMD))}else{executeAMD()}});return mod}amdDefine.amd={};function using(){var deps=makeArray(arguments),callback;if(typeof deps[deps.length-1]=="function"){callback=deps.pop()}var combi=new Collection(mapDependencies(deps));if(callback){combi.then(callback)}return combi}function mapDependencies(deps){var mapped=[];for(var i=0,dep;dep=deps[i];i++){if(typeof dep=="string"){dep=createDependency(dep)}if(isArray(dep)){dep=new Sequence(mapDependencies(dep))}mapped.push(dep)}return mapped}function createDependency(id){var m,dep;for(var i=0,matcher;matcher=using.matchers[i];i++){var regex=matcher[0],factory=matcher[1];if(m=id.match(regex)){return factory(id)}}throw new Error(id+" was not recognised by loader")}var loadrunner=function(f){return f(using,provide,loadrunner,amdDefine)};function noConflict(){context.using=oldUsing;context.provide=oldProvide;context.define=oldDefine;context.loadrunner=oldLoadrunner;return loadrunner}loadrunner.Script=Script;loadrunner.Module=Module;loadrunner.Collection=Collection;loadrunner.Sequence=Sequence;loadrunner.Dependency=Dependency;loadrunner.noConflict=noConflict;context.loadrunner=loadrunner;context.using=using;context.provide=provide;context.define=amdDefine;using.path="";using.autoLoad=true;using.bundles=[];var whichBundleMemo={};function whichBundle(id){if(typeof whichBundleMemo[id]!="undefined"){return whichBundleMemo[id]}for(var manifestId=0;manifestId<using.bundles.length;manifestId++){for(var bundleId in using.bundles[manifestId]){if(bundleId!=id&&indexOf(using.bundles[manifestId][bundleId],id)>-1){whichBundleMemo[id]=bundleId;return bundleId}}}whichBundleMemo[id]=id;return id}using.matchers=[];using.matchers.add=function(regex,factory){this.unshift([regex,factory])};using.matchers.add(/(^script!|\.js$)/,function(path){var script=new Script(path.replace(/^\$/,using.path.replace(/\/$/,"")+"/").replace(/^script!/,""),false);script.id=path;return script});using.matchers.add(/^[a-zA-Z0-9_\-\/]+$/,function(id){return new Module(id)});if(scriptTag){using.path=scriptTag.getAttribute("data-path")||scriptTag.src.split(/loadrunner\.js/)[0]||"";if(main=scriptTag.getAttribute("data-main")){using.apply(context,main.split(/\s*,\s*/)).then(function(){})}}}(this,document));
+    loadrunner(function(D,C,B,E){function A(F){this.id=this.path=F}A.inProgress=[];A.done=[];A.prototype=new B.Dependency;A.prototype.start=function(){var F=this,G;if(G=A.done[this.id]){this.complete(G.result)}else{if(G=A.inProgress[this.id]){G.then(function(){F.complete(G.result)})}else{A.inProgress[this.id]=this;this.load()}}};A.prototype.load=function(){var H,F=this;if(window.XMLHttpRequest){H=new window.XMLHttpRequest()}else{try{H=new window.ActiveXObject("Microsoft.XMLHTTP")}catch(G){return new Error("XHR not found.")}}H.onreadystatechange=function(){if(H.readyState==4){F.result=H.responseText;A.done[F.id]=F;delete A.inProgress[F.id];F.complete(F.result)}};H.open("GET",this.path,true);H.send(null)};D.matchers.add(/^json!/,function(F){return new A(F.substring(5))})});
+    loadrunner(function(D,C,B,E){function A(F){this.id=this.path=F}A.inProgress=[];A.done=[];A.prototype=new B.Dependency;A.prototype.start=function(){var F=this,G;if(G=A.done[this.id]){this.complete(G.result)}else{if(G=A.inProgress[this.id]){G.then(function(){F.complete(G.result)})}else{A.inProgress[this.id]=this;this.load()}}};A.prototype.load=function(){var F=this;D("lib/lazyload",function(G){if($("link[href='"+F.path+"']").length>0){H()}else{G.css(F.path,H)}function H(){A.done[F.id]=F;delete A.inProgress[F.id];F.complete()}})};D.matchers.add(/^css!/,function(G){var F;G=G.replace(/^css!/,"");F=/^(https?:)?\/\//.test(G);return new A(G.replace(/^\//,(!F&&D.cssPath||"").replace(/\/$/,"")+"/"))})});
+    loadrunner(function(F,E,A,G){function B(H,I){for(var J=0,K;K=H[J];J++){if(I==K){return J}}return -1}function D(I){var H;if(I.charAt(0)==">"){I=I.substring(1)}if(H=C.inProgress[I]){H.complete();delete C.inProgress[I]}C.done.push(I)}var C=function(H){this.id=H};C.inProgress=[];C.done=[];C.prototype=new A.Dependency;C.prototype.start=function(){var I,H=this;if(B(C.done,this.id)!=-1){this.complete()}else{if(I=C.inProgress[this.id]){I.then(function(){H.complete()})}else{C.inProgress[this.id]=this}}};F.matchers.add(/^>/,function(H){return new C(H.substring(1))});window.signal=D});
+});</script><script>WATCH.end('loadrunner');</script>
+
+
+
+  
+
+
+
+
+<script>WATCH('boot', function() {
+  using.cssPath = 'http://a3.twimg.com/a/1323449606/';
+  using.path = 'http://a1.twimg.com/a/1323449606/phoenix/js';
+  using.autoLoad = false;
+
+  // Load bluejs modules from their own modpath, in /bluejs
+  using.matchers.add(/^bluejs/, function(id) {
+    var mod = new loadrunner.Module(id);
+    mod.path = '/' + id + '.js';
+    return mod;
+  });
+
+  
+
+  provide("boot/init",function(C){var A={add:function(J,K){if(!K){K=new Date()}twttr.bootTimings.data.push({name:J,timestamp:K})},data:[],done:function(){twttr.bootTimings.add=twttr.bootTimings.done=$.noop;$.each(loadrunner.Script.times,function(J,K){$.each(K,function(L,M){twttr.bootTimings.data.push({name:["bundle",J,L].join(" "),timestamp:M})})});twttr.Profiler.logDataSet("Boot",twttr.appStartTime,twttr.bootTimings.data);twttr.bootTimings=null}};function G(K){for(var J in K){if(K.hasOwnProperty(J)){twttr[J]=K[J]}}}function H(L){twttr.bootTimings&&twttr.bootTimings.add("bootstrap_data process start");G(L.twttr);signal(">payload");if(L.boomr){using(L.boomr).load().then(function(){delete BOOMR.plugins.RT;BOOMR.init({allow_ssl:true,autorun:false,user_ip:L.remoteIP,BW:{base_url:twttr.hosts.local+"/images/boomerang/"}});using(">setupComplete","util").as(function(M){BOOMR.page_ready();BOOMR.subscribe("before_beacon",function(Q){if(!Q.bw){return }var O=parseInt(Q.bw/1024,10);var P=parseInt((Q.bw_err*100)/Q.bw,10);var N=parseInt((Q.lat_err*100)/Q.lat,10);scribble("measurement",{load_time_ms:Q.t_done,bandwidth_kbytes:O,bandwidth_error_percent:P,latency_ms:Q.lat,latency_error_percent:N,product:"webclient"},"boomerang");if(M.util.params()["boomr"]){twttr.showMessage("Bandwidth: "+M.util.addCommas(O)+" KB/s &plusmn; "+P+"%<br />Latency: "+Q.lat+" ms &plusmn; "+Q.lat_err,true)}})})})}if(L.countryCode){twttr.countryCode=L.countryCode}if(L.countries){twttr.countries=L.countries;if(twttr.countryCode){for(var K=0,J=twttr.countries.length;K<J;K++){if(twttr.countries[K].code==twttr.countryCode){twttr.countries[K].selected=true}}}}if(L.pageLocaleJS){twttr.bootTimings&&twttr.bootTimings.add("i18n fetch start");using(L.pageLocaleJS).load().then(function(){twttr.bootTimings&&twttr.bootTimings.add("i18n fetch finish");signal(">languageData")})}else{signal(">languageData")}using(">defaultViews",twttr.bundleMore,function(){if(L.showWelcomeBanner){(new twttr.views.WelcomeToPhoenixBanner()).render($("#banners"),"append")}if(L.flashNotice){twttr.showMessage(L.flashNotice,true)}});using(">decider",function(){twttr.decider._updateFeatures(L.deciderFeatures,true)});using(">ab_decider",function(){twttr.abdecider._updateExperiments(L.abBuckets,true)});using(">api_ready",function(){twttr.API.setConfig({postAuthenticityToken:L.postAuthenticityToken});$("input.authenticity_token").val(L.postAuthenticityToken);var P=L.requestCacheSeedData;for(var N=0,M=P.length;N<M;++N){var O=P[N];twttr.API._requestCache.inject(O.api_request_name,O.options,O.json,1)}signal(">request_cache_seeded");if(L.homeTimelineFetchSize){twttr.API.homeTimelineFetchSize=L.homeTimelineFetchSize}});twttr.bootTimings&&twttr.bootTimings.add("bootstrap_data process finish")}function D(){if(twttr.loggedIn){twttr.bootTimings&&twttr.bootTimings.add("initCurrentUser start");using("boot/bootstrap_data",">request_cache_seeded",function(J){twttr.API.User.current({error:function(){window.location.reload(true)},success:function(K){twttr.currentUser=K;for(var L in J.userProperties){twttr.currentUser.sync(L,J.userProperties[L]||false)}twttr.bootTimings&&twttr.bootTimings.add("initCurrentUser finish");signal(">allCurrentUserDataLoaded")}})})}else{signal(">allCurrentUserDataLoaded")}}function F(J){var K=new Date();using(J).load().then(function(){var L=new Date();using("boot/bootstrap_data",function(){twttr.Profiler.logPreviousEvent("twttr.bundles fetched",K,L)})})}function E(O){var K=false;function J(){if(!K){setTimeout(function(){twttr.keynoteTTFTPing();K=true;O()},0)}}function N(){setTimeout(J,0)}var L=document.getElementById("stream-items-id");if(!L){O();return }if(L.clientHeight>0){N();return }function M(){L.onresize=null;N()}L.onresize=M}function I(K){for(var J in K){return false}return true}function B(N){if(!N){return }var K=document.getElementById("slow-load-banner");if(!K){return }var J;function M(){clearTimeout(J);$(K).remove();twttr.app.recalculatePadding()}function L(){K.style.display="block";setTimeout(function(){K.style.height="60px"})}J=setTimeout(L,N);twttr.bundleCore&&using(twttr.bundleCore,M)}C({init:function(L){if(L.renderedOnServer){var J=document.getElementsByTagName("html")[0];var P=J.className.match(/highlight-global-nav-([a-z]+)/);if(L.twttr.loggedIn&&P){var K="global-nav-"+P[1];document.getElementById(K).className+=" active"}else{if(J.className.match(/remove-prerendered-content/)){document.getElementById("page-outer").className=document.getElementById("page-outer").className.replace("flush-to-top","");var N=document.getElementById("page-container");N.className=N.className.replace("home-container","");N.innerHTML="";signal(">wokeUp");L.renderedOnServer=false}}J.className=J.className.replace("use-prerendered-content","").replace("remove-prerendered-content","");if(J.getAttribute("data-nav-highlight-class-name")){J.className=J.className.replace(J.getAttribute("data-nav-highlight-class-name"),"");J.removeAttribute("data-nav-highlight-class-name")}}if(L.disablePhoenix){B(L.loadTimeoutInterval);return }G(L.twttr);twttr.appStartTime=document.startTime;twttr.geo=twttr.geo||{};twttr.session=twttr.session||{};twttr.session.impressionId=twttr.appStartTime+Math.random();twttr.isLocalhost=location.hostname.match(/localhost\.twitter\.com/);if(twttr.allScribeEvents){try{twttr.allScribeEvents=JSON.parse(localStorage.twttrAllScribeEvents)||[]}catch(O){twttr.allScribeEvents=[]}}twttr.bootTimings=L.profiling?A:null;for(var M=0;M<L.loadrunnerAssets.length;M++){using.bundles.push(L.loadrunnerAssets[M])}if(L.loadrunnerAssets.length==1&&I(L.loadrunnerAssets[0])){using.autoLoad=true}B(L.loadTimeoutInterval);twttr.proto=window.location.protocol.replace(":","");twttr.isSSL=function(){return twttr.proto==="https"};twttr.createIframe=function(R,Q){var U=document.createElement("div");U.innerHTML='<iframe tabindex="-1" role="presentation" style="position:absolute;top:-9999px;" src="'+R+'"></iframe>';var S=U.firstChild;var T=function(){Q.apply(S,arguments)};S.addEventListener?S.addEventListener("load",T,false):S.attachEvent("onload",T);document.body.insertBefore(S,document.body.firstChild);return S};if(!L.inline_bootstrap_data){provide("boot/bootstrap_data",function(Q){var R=[];R.push("json!/account/bootstrap_data"+window.location.search+(window.location.search?"&":"?")+"r="+Math.random());if(typeof JSON==="undefined"){R.push(twttr.bundleCore)}twttr.bootTimings&&twttr.bootTimings.add("bootstrap_data fetch start");using(R,function(T){twttr.bootTimings&&twttr.bootTimings.add("bootstrap_data fetch finish");var S=JSON.parse(T);Q(S)})})}F(L.assets);using(twttr.bundleCore,function(){twttr.anywhere.remote={};using("bluejs/api",function(Q){twttr.API=Q;twttr.API.setConfig({cacheObjects:true,includeEntities:true});twttr.extendAPI();signal(">api_ready");using(">request_cache_seeded",function(){D()})})});using(L.setupDependencies,function(){twttr.bootTimings&&twttr.bootTimings.add("setup start");jQuery.ready();twttr.setup(L.renderedOnServer);twttr.bootTimings&&twttr.bootTimings.add("setup finish");signal(">setupComplete");var Q=function(){using(twttr.bundleMore).load()};if($.browser.msie&&(parseInt($.browser.version,10)<=8)){E(Q)}else{Q()}});using(twttr.bundleMore,function(){signal(">allCodeLoaded")});using("boot/bootstrap_data",H);twttr.createIframe(L.pReceiverURL,function(){var Q=this;using(twttr.bundleCore,function(){twttr.anywhere.remote.server=Q;twttr.anywhere.api.util.RemoteRequest.flush()})})}})});
+  using('boot/init', function(boot) {
+    var data = {"loadrunnerAssets":[{"http:\/\/a0.twimg.com\/b\/1\/bundle\/phoenix-core-en-201112090902.js":["bundle\/phoenix-core"],"http:\/\/a2.twimg.com\/b\/1\/bundle\/sandbox-en-201112090902.js":["bundle\/sandbox"],"http:\/\/a3.twimg.com\/b\/1\/bundle\/ie6-en-201112090902.js":["bundle\/ie6"],"http:\/\/a1.twimg.com\/b\/1\/bundle\/signup-en-201112090902.js":["bundle\/signup"],"http:\/\/a2.twimg.com\/b\/1\/bundle\/phoenix-more-en-201112090902.js":["bundle\/phoenix-more"]}],"twttr":{"hosts":{"upload":"http:\/\/upload.twitter.com","local":"http:\/\/twitter.com","remote":"http:\/\/api.twitter.com"},"placeDataPrefix":"http:\/\/geo.l3.twitter.com\/places\/autocomplete_places-","bundleCore":"bundle\/phoenix-core","remoteIP":"207.241.234.124","loggedIn":false,"expando":false,"requestFullCity":"us,ca,san_francisco","isT1":false,"bundleMore":"bundle\/phoenix-more","domains":{"upload":"upload.twitter.com","local":"twitter.com","remote":"api.twitter.com"}},"pReceiverURL":"http:\/\/api.twitter.com\/receiver.html","inline_bootstrap_data":false,"loadTimeoutInterval":10000,"assets":["bundle\/phoenix-core"],"setupDependencies":["\u003EallCurrentUserDataLoaded","\u003Erequest_cache_seeded","bundle\/phoenix-core","\u003ElanguageData"],"disablePhoenix":false,"profiling":false,"renderedOnServer":true,"sandboxes":{"jsonp":"http:\/\/a3.twimg.com\/a\/1323449606\/jsonp_sandbox.html","detailsPaneContent":"http:\/\/a0.twimg.com\/a\/1323449606\/details_pane_content_sandbox.html"}};
+    boot.init(data);
+  });
+});</script><script>WATCH.end('boot');</script>
+
+
+
+<!--[if lte IE 6]>
+  <script>using('bundle/ie6').load();</script>
+<![endif]-->
+
+
+    
+      
+    
+  </body>
+
+
+</html>

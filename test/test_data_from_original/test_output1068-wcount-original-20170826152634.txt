@@ -1,0 +1,3325 @@
+Similarity	memento_uri
+0.0	http://wayback.archive-it.org/1068/20111013000640id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20111202210619id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20120302210435id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20120602210549id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20120902035158id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20121202092828id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20130307002013id_/http://acda.co/
+
+0.0	http://wayback.archive-it.org/1068/20100903012627id_/http://www.advocacyforum.org/
+
+-0.261780104712	http://wayback.archive-it.org/1068/20101202231130id_/http://www.advocacyforum.org/
+
+0.0	http://wayback.archive-it.org/1068/20121018173027id_/http://afapredesa-arabe.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20121018173240id_/http://afapredesa-arabe.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20121202092811id_/http://afapredesa-arabe.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20121202195556id_/http://afapredesa-arabe.blogspot.com/
+
+-0.349939246659	http://wayback.archive-it.org/1068/20130306212204id_/http://afapredesa-arabe.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20110317183255id_/http://amnesty.hu/
+
+-0.110974106042	http://wayback.archive-it.org/1068/20110405170927id_/http://amnesty.hu/
+
+-0.157829839704	http://wayback.archive-it.org/1068/20120302233153id_/http://amnesty.hu/
+
+-0.157829839704	http://wayback.archive-it.org/1068/20120303031354id_/http://www.amnesty.hu/
+
+-0.23477188656	http://wayback.archive-it.org/1068/20120603001240id_/http://amnesty.hu/
+
+-0.23477188656	http://wayback.archive-it.org/1068/20120603045220id_/http://www.amnesty.hu/
+
+-0.268557336621	http://wayback.archive-it.org/1068/20120902035247id_/http://amnesty.hu/
+
+-0.268557336621	http://wayback.archive-it.org/1068/20120902093602id_/http://www.amnesty.hu/
+
+-0.26411837238	http://wayback.archive-it.org/1068/20121202153756id_/http://www.amnesty.hu/
+
+-0.790628853268	http://wayback.archive-it.org/1068/20130306212428id_/http://amnesty.hu/
+
+-0.79457459926	http://wayback.archive-it.org/1068/20130307023428id_/http://www.amnesty.hu/
+
+0.0	http://wayback.archive-it.org/1068/20100602202513id_/http://www.amnesty.ie/
+
+-0.0101892285298	http://wayback.archive-it.org/1068/20100902220135id_/http://www.amnesty.ie/
+
+-0.163027656477	http://wayback.archive-it.org/1068/20101202215451id_/http://www.amnesty.ie/
+
+0.132459970888	http://wayback.archive-it.org/1068/20110302223233id_/http://www.amnesty.ie/
+
+0.120815138282	http://wayback.archive-it.org/1068/20110311212740id_/http://amnesty.ie/
+
+0.120815138282	http://wayback.archive-it.org/1068/20110312005019id_/https://amnesty.ie/
+
+0.120815138282	http://wayback.archive-it.org/1068/20110312005020id_/http://www.amnesty.ie/
+
+-0.056768558952	http://wayback.archive-it.org/1068/20110602192910id_/http://amnesty.ie/
+
+-0.056768558952	http://wayback.archive-it.org/1068/20110602220444id_/http://www.amnesty.ie/
+
+-0.056768558952	http://wayback.archive-it.org/1068/20110602235303id_/http://www.amnesty.ie/
+
+-0.056768558952	http://wayback.archive-it.org/1068/20110603020814id_/https://amnesty.ie/
+
+-0.0436681222707	http://wayback.archive-it.org/1068/20111202230153id_/http://amnesty.ie/
+
+-0.0436681222707	http://wayback.archive-it.org/1068/20111203024532id_/http://www.amnesty.ie/
+
+-0.0436681222707	http://wayback.archive-it.org/1068/20111203055107id_/https://www.amnesty.ie/
+
+-0.0436681222707	http://wayback.archive-it.org/1068/20111203200645id_/http://www.amnesty.ie/??
+
+-0.0771470160116	http://wayback.archive-it.org/1068/20120302210435id_/http://amnesty.ie/
+
+-0.0771470160116	http://wayback.archive-it.org/1068/20120303013903id_/http://www.amnesty.ie/
+
+-0.0771470160116	http://wayback.archive-it.org/1068/20120303030236id_/https://www.amnesty.ie/
+
+-0.0771470160116	http://wayback.archive-it.org/1068/20120303141914id_/http://www.amnesty.ie/??
+
+0.139737991266	http://wayback.archive-it.org/1068/20120603020921id_/http://amnesty.ie/
+
+0.139737991266	http://wayback.archive-it.org/1068/20120603032801id_/http://www.amnesty.ie/
+
+0.139737991266	http://wayback.archive-it.org/1068/20120603090905id_/https://www.amnesty.ie/
+
+0.139737991266	http://wayback.archive-it.org/1068/20120604064946id_/http://www.amnesty.ie/??
+
+-0.228529839884	http://wayback.archive-it.org/1068/20120902035158id_/http://amnesty.ie/
+
+-0.228529839884	http://wayback.archive-it.org/1068/20120902091039id_/http://www.amnesty.ie/
+
+-0.228529839884	http://wayback.archive-it.org/1068/20120902101858id_/https://www.amnesty.ie/
+
+-0.228529839884	http://wayback.archive-it.org/1068/20120903062857id_/http://www.amnesty.ie/??
+
+-0.245997088792	http://wayback.archive-it.org/1068/20121202092816id_/http://amnesty.ie/
+
+-0.245997088792	http://wayback.archive-it.org/1068/20121202143619id_/http://www.amnesty.ie/
+
+-0.245997088792	http://wayback.archive-it.org/1068/20121202160145id_/https://www.amnesty.ie/
+
+-0.245997088792	http://wayback.archive-it.org/1068/20121203175520id_/http://www.amnesty.ie/??
+
+-0.229985443959	http://wayback.archive-it.org/1068/20130306212215id_/http://amnesty.ie/
+
+-0.229985443959	http://wayback.archive-it.org/1068/20130307015454id_/http://www.amnesty.ie/
+
+-0.229985443959	http://wayback.archive-it.org/1068/20130307031354id_/https://www.amnesty.ie/
+
+-0.208151382824	http://wayback.archive-it.org/1068/20130308172635id_/http://www.amnesty.ie/??
+
+0.0	http://wayback.archive-it.org/1068/20110602235333id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20110903052730id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20111203110700id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20120303095004id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20120603235709id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20120903021051id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20120903040603id_/http://amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20121202163356id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20121202231252id_/http://amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20130307031038id_/http://www.amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20130307062103id_/http://amnesty.or.kr/
+
+0.0	http://wayback.archive-it.org/1068/20110602235334id_/http://www.amnesty.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20110602235344id_/http://amnesty.org.ru/
+
+0.0738916256158	http://wayback.archive-it.org/1068/20110903052729id_/http://www.amnesty.org.ru/
+
+0.0738916256158	http://wayback.archive-it.org/1068/20110903054842id_/http://amnesty.org.ru/
+
+0.142857142857	http://wayback.archive-it.org/1068/20111203110711id_/http://www.amnesty.org.ru/
+
+0.144499178982	http://wayback.archive-it.org/1068/20120302210618id_/http://amnesty.org.ru/
+
+0.144499178982	http://wayback.archive-it.org/1068/20120303095005id_/http://www.amnesty.org.ru/
+
+-0.0197044334975	http://wayback.archive-it.org/1068/20121202092755id_/http://amnesty.org.ru/
+
+-0.0197044334975	http://wayback.archive-it.org/1068/20121202154408id_/http://www.amnesty.org.ru/
+
+-0.0837438423645	http://wayback.archive-it.org/1068/20130306231542id_/http://amnesty.org.ru/
+
+-0.0837438423645	http://wayback.archive-it.org/1068/20130307031043id_/http://www.amnesty.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20110311212739id_/http://amnesty.tg/
+
+-0.00358422939068	http://wayback.archive-it.org/1068/20110321203647id_/http://amnesty.tg/
+
+-0.663082437276	http://wayback.archive-it.org/1068/20110602192913id_/http://amnesty.tg/
+
+0.0	http://wayback.archive-it.org/1068/20110311212740id_/http://amnestyghana.org/
+
+0.00852272727273	http://wayback.archive-it.org/1068/20110321203647id_/http://amnestyghana.org/
+
+0.0255681818182	http://wayback.archive-it.org/1068/20110602192841id_/http://amnestyghana.org/
+
+-0.900568181818	http://wayback.archive-it.org/1068/20120302232416id_/http://amnestyghana.org/
+
+0.0	http://wayback.archive-it.org/1068/20110221190405id_/http://www.amnestymauritius.org/
+
+0.0679611650485	http://wayback.archive-it.org/1068/20110317151734id_/http://amnestymauritius.org/
+
+0.0679611650485	http://wayback.archive-it.org/1068/20110317161108id_/http://amnestymauritius.org/
+
+-0.187702265372	http://wayback.archive-it.org/1068/20110602192838id_/http://amnestymauritius.org/
+
+-1.0	http://wayback.archive-it.org/1068/20111202210619id_/http://amnestymauritius.org/
+
+-0.991909385113	http://wayback.archive-it.org/1068/20120303005657id_/http://amnestymauritius.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602220810id_/http://www.amnistia.org.ar/
+
+0.0	http://wayback.archive-it.org/1068/20110602233013id_/http://www.amnistia.org.ar/
+
+0.0326633165829	http://wayback.archive-it.org/1068/20110902234811id_/http://www.amnistia.org.ar/
+
+0.0	http://wayback.archive-it.org/1068/20100902210504id_/http://www.amnistia.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20100902210852id_/http://amnistia.org.mx/
+
+0.0565476190476	http://wayback.archive-it.org/1068/20101202200252id_/http://www.amnistia.org.mx/
+
+0.0565476190476	http://wayback.archive-it.org/1068/20101202201138id_/http://amnistia.org.mx/
+
+-0.940476190476	http://wayback.archive-it.org/1068/20110302222044id_/http://www.amnistia.org.mx/
+
+-0.940476190476	http://wayback.archive-it.org/1068/20110317183254id_/http://www.amnistia.org.mx/
+
+-0.502976190476	http://wayback.archive-it.org/1068/20110405170927id_/http://amnistia.org.mx/
+
+-0.502976190476	http://wayback.archive-it.org/1068/20110405174649id_/https://amnistia.org.mx/
+
+-0.5625	http://wayback.archive-it.org/1068/20110602192837id_/http://amnistia.org.mx/
+
+-0.5625	http://wayback.archive-it.org/1068/20110602211749id_/http://www.amnistia.org.mx/
+
+-0.5625	http://wayback.archive-it.org/1068/20110602233721id_/https://amnistia.org.mx/
+
+-0.5625	http://wayback.archive-it.org/1068/20110602235312id_/http://www.amnistia.org.mx/
+
+-0.511904761905	http://wayback.archive-it.org/1068/20110902210646id_/http://amnistia.org.mx/
+
+-0.511904761905	http://wayback.archive-it.org/1068/20110903001818id_/http://www.amnistia.org.mx/
+
+-0.511904761905	http://wayback.archive-it.org/1068/20110903020257id_/https://amnistia.org.mx/
+
+-0.505952380952	http://wayback.archive-it.org/1068/20111202232140id_/http://amnistia.org.mx/
+
+-0.505952380952	http://wayback.archive-it.org/1068/20111203023108id_/http://www.amnistia.org.mx/
+
+-0.505952380952	http://wayback.archive-it.org/1068/20111203084727id_/https://amnistia.org.mx/
+
+-0.505952380952	http://wayback.archive-it.org/1068/20120302210437id_/http://amnistia.org.mx/
+
+-0.508928571429	http://wayback.archive-it.org/1068/20120303013938id_/http://www.amnistia.org.mx/
+
+-0.508928571429	http://wayback.archive-it.org/1068/20120303065538id_/https://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20120602210535id_/http://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20120603023004id_/http://www.amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20120603134801id_/https://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20120902035203id_/http://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20120902091814id_/http://www.amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20120902180313id_/https://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20121202092754id_/http://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20121202135936id_/http://www.amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20121202234740id_/https://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20130306212359id_/http://amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20130307013343id_/http://www.amnistia.org.mx/
+
+-0.5	http://wayback.archive-it.org/1068/20130307120742id_/https://amnistia.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20111107191152id_/http://www.andhes.org.ar/
+
+-0.0447530864198	http://wayback.archive-it.org/1068/20120303010305id_/http://www.andhes.org.ar/
+
+-0.0277777777778	http://wayback.archive-it.org/1068/20120602210535id_/http://www.andhes.org.ar/
+
+-0.054012345679	http://wayback.archive-it.org/1068/20120902035200id_/http://www.andhes.org.ar/
+
+0.00771604938272	http://wayback.archive-it.org/1068/20121202092758id_/http://www.andhes.org.ar/
+
+0.00617283950617	http://wayback.archive-it.org/1068/20130307001444id_/http://www.andhes.org.ar/
+
+0.0	http://wayback.archive-it.org/1068/20110129043404id_/http://aphra.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191948id_/http://aphra.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192838id_/http://aphra.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902215729id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20111202210723id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20120303004441id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20120603001042id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20120902035236id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20120902093131id_/http://www.aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20121202092805id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20121202142212id_/http://www.aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20130306232312id_/http://aphra.org/
+
+0.0588235294118	http://wayback.archive-it.org/1068/20130307020247id_/http://www.aphra.org/
+
+0.0	http://wayback.archive-it.org/1068/20090210190543id_/http://asvdh.net/
+
+0.0	http://wayback.archive-it.org/1068/20090210195139id_/http://www.asvdh.net/
+
+-0.350257834193	http://wayback.archive-it.org/1068/20100223153727id_/http://asvdh.net/
+
+-0.350257834193	http://wayback.archive-it.org/1068/20100223171050id_/http://www.asvdh.net/
+
+-0.356207854026	http://wayback.archive-it.org/1068/20100602185842id_/http://asvdh.net/
+
+-0.356207854026	http://wayback.archive-it.org/1068/20100602190902id_/http://www.asvdh.net/
+
+-0.299880999603	http://wayback.archive-it.org/1068/20100902185402id_/http://asvdh.net/
+
+-0.299880999603	http://wayback.archive-it.org/1068/20100902201314id_/http://www.asvdh.net/
+
+0.0725902419675	http://wayback.archive-it.org/1068/20101202190820id_/http://asvdh.net/
+
+0.0725902419675	http://wayback.archive-it.org/1068/20101202194811id_/http://www.asvdh.net/
+
+0.0725902419675	http://wayback.archive-it.org/1068/20101202203551id_/http://asvdh.net//
+
+-0.0785402618009	http://wayback.archive-it.org/1068/20110302192606id_/http://asvdh.net/
+
+-0.0126933756446	http://wayback.archive-it.org/1068/20110602192908id_/http://asvdh.net/
+
+0.0214200714002	http://wayback.archive-it.org/1068/20110902210646id_/http://asvdh.net/
+
+0.0499801666006	http://wayback.archive-it.org/1068/20111202210830id_/http://asvdh.net/
+
+0.0487901626339	http://wayback.archive-it.org/1068/20120302210440id_/http://asvdh.net/
+
+0.0448234827449	http://wayback.archive-it.org/1068/20120602210538id_/http://asvdh.net/
+
+-0.0428401428005	http://wayback.archive-it.org/1068/20120902035158id_/http://asvdh.net/
+
+0.0872669575565	http://wayback.archive-it.org/1068/20121202092823id_/http://asvdh.net/
+
+0.0515668385561	http://wayback.archive-it.org/1068/20130306220848id_/http://asvdh.net/
+
+0.0	http://wayback.archive-it.org/1068/20090210200111id_/http://www.awid.org/
+
+0.145833333333	http://wayback.archive-it.org/1068/20110419191807id_/http://awid.org/
+
+0.145833333333	http://wayback.archive-it.org/1068/20110419203910id_/http://www.awid.org/
+
+0.0	http://wayback.archive-it.org/1068/20120803234910id_/http://badil.org/
+
+0.00612745098039	http://wayback.archive-it.org/1068/20120803234934id_/http://www.badil.org/
+
+-0.0563725490196	http://wayback.archive-it.org/1068/20121019184306id_/http://badil.org/
+
+-0.0588235294118	http://wayback.archive-it.org/1068/20121019184324id_/http://www.badil.org/
+
+-0.373774509804	http://wayback.archive-it.org/1068/20130306212226id_/http://badil.org/
+
+-0.200980392157	http://wayback.archive-it.org/1068/20130307084848id_/http://www.badil.org/
+
+-0.359068627451	http://wayback.archive-it.org/1068/20130309021906id_/http://@badil.org/
+
+0.0	http://wayback.archive-it.org/1068/20100629171247id_/http://www.bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20100902193102id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20101202193706id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20110302210210id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20110602232148id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20110903010353id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20111203023631id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20120303034645id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20120603033824id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20120902073834id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20121202092814id_/http://bhrs.org/
+
+-0.946835443038	http://wayback.archive-it.org/1068/20130306234450id_/http://bhrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20110317183304id_/http://www.bo.amnesty.org/
+
+0.0	http://wayback.archive-it.org/1068/20110405170927id_/http://bo.amnesty.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192839id_/http://bo.amnesty.org/
+
+0.0641562064156	http://wayback.archive-it.org/1068/20110902215729id_/http://bo.amnesty.org/
+
+0.0641562064156	http://wayback.archive-it.org/1068/20111202210619id_/http://bo.amnesty.org/
+
+0.0641562064156	http://wayback.archive-it.org/1068/20120303011104id_/http://bo.amnesty.org/
+
+-0.991631799163	http://wayback.archive-it.org/1068/20130306212205id_/http://bo.amnesty.org/
+
+0.0	http://wayback.archive-it.org/1068/20120603022526id_/http://www.bono.org.do/
+
+0.0	http://wayback.archive-it.org/1068/20120603070243id_/http://bono.org.do/
+
+-0.595628415301	http://wayback.archive-it.org/1068/20120902091953id_/http://www.bono.org.do/
+
+-0.595628415301	http://wayback.archive-it.org/1068/20120902132250id_/http://bono.org.do/
+
+-0.506830601093	http://wayback.archive-it.org/1068/20121202142858id_/http://bono.org.do/
+
+-0.443989071038	http://wayback.archive-it.org/1068/20130307005018id_/http://bono.org.do/
+
+0.0	http://wayback.archive-it.org/1068/20080613154505id_/http://boxun.us/news/publish/
+
+0.0	http://wayback.archive-it.org/1068/20080613160845id_/http://boxun.us/news/publish/
+
+-0.225	http://wayback.archive-it.org/1068/20080721195452id_/http://boxun.us/news/publish/
+
+0.0	http://wayback.archive-it.org/1068/20120603031000id_/http://breakthrough.tv/explore/campaign/america-2049/
+
+0.00809061488673	http://wayback.archive-it.org/1068/20120902092105id_/http://breakthrough.tv/explore/campaign/america-2049/
+
+0.0129449838188	http://wayback.archive-it.org/1068/20121202142500id_/http://breakthrough.tv/explore/campaign/america-2049/
+
+0.0	http://wayback.archive-it.org/1068/20100602185841id_/http://byshr.org/
+
+0.118763796909	http://wayback.archive-it.org/1068/20101202190819id_/http://byshr.org/
+
+-0.0225165562914	http://wayback.archive-it.org/1068/20110302191947id_/http://byshr.org/
+
+-0.0935982339956	http://wayback.archive-it.org/1068/20111202210723id_/http://byshr.org/
+
+0.0216335540839	http://wayback.archive-it.org/1068/20120902035254id_/http://byshr.org/
+
+0.0	http://wayback.archive-it.org/1068/20120515165457id_/http://cdf-sy.org/
+
+0.0	http://wayback.archive-it.org/1068/20120515203628id_/http://www.cdf-sy.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902082538id_/http://cdf-sy.org/
+
+0.0	http://wayback.archive-it.org/1068/20120903040052id_/http://www.cdf-sy.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202130234id_/http://cdf-sy.org/
+
+0.0	http://wayback.archive-it.org/1068/20130307001445id_/http://cdf-sy.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510222355id_/http://www.cejil.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602213638id_/http://cejil.org/
+
+0.0	http://wayback.archive-it.org/1068/20100603021713id_/http://www.cejil.org/
+
+0.0824607329843	http://wayback.archive-it.org/1068/20100902194709id_/http://www.cejil.org/
+
+0.0876963350785	http://wayback.archive-it.org/1068/20101202193700id_/http://www.cejil.org/
+
+0.0876963350785	http://wayback.archive-it.org/1068/20101202194925id_/http://cejil.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185840id_/http://www.centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20100602193737id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20100602223105id_/http://centroprodh.org.mx//
+
+0.0	http://wayback.archive-it.org/1068/20100902185358id_/http://www.centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20100902193019id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20101202190819id_/http://www.centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20101202192822id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20101203074138id_/http://centroprodh.org.mx//
+
+0.0	http://wayback.archive-it.org/1068/20110304142617id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20110920214328id_/http://www.centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20110920215944id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20110921201600id_/http://www.centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20110921203302id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20111202210653id_/http://www.centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20111203021538id_/http://centroprodh.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20121202093051id_/http://cilvektiesibas.org.lv/
+
+0.0	http://wayback.archive-it.org/1068/20130307002933id_/http://cilvektiesibas.org.lv/
+
+0.0	http://wayback.archive-it.org/1068/20100602185844id_/http://cja.org/
+
+0.115973741794	http://wayback.archive-it.org/1068/20100902185405id_/http://cja.org/
+
+0.115973741794	http://wayback.archive-it.org/1068/20100902224607id_/http://www.cja.org/
+
+-0.277899343545	http://wayback.archive-it.org/1068/20101202190821id_/http://cja.org/
+
+-0.277899343545	http://wayback.archive-it.org/1068/20101202215450id_/http://www.cja.org/
+
+-0.228300510576	http://wayback.archive-it.org/1068/20110302192011id_/http://cja.org/
+
+-0.228300510576	http://wayback.archive-it.org/1068/20110303004209id_/http://www.cja.org/
+
+-0.137855579869	http://wayback.archive-it.org/1068/20110602192917id_/http://cja.org/
+
+-0.137855579869	http://wayback.archive-it.org/1068/20110603012622id_/http://www.cja.org/
+
+0.0824215900802	http://wayback.archive-it.org/1068/20110902223326id_/http://cja.org/
+
+0.0824215900802	http://wayback.archive-it.org/1068/20110903050437id_/http://www.cja.org/
+
+-0.0138584974471	http://wayback.archive-it.org/1068/20111202210627id_/http://cja.org/
+
+-0.0138584974471	http://wayback.archive-it.org/1068/20111203085202id_/http://www.cja.org/
+
+-0.26768781911	http://wayback.archive-it.org/1068/20120302233157id_/http://cja.org/
+
+-0.26768781911	http://wayback.archive-it.org/1068/20120303082555id_/http://www.cja.org/
+
+-0.224653537564	http://wayback.archive-it.org/1068/20120602210542id_/http://cja.org/
+
+-0.188913202042	http://wayback.archive-it.org/1068/20120902035206id_/http://cja.org/
+
+-0.198395331875	http://wayback.archive-it.org/1068/20121202092817id_/http://cja.org/
+
+-0.198395331875	http://wayback.archive-it.org/1068/20121202154621id_/http://www.cja.org/
+
+-0.0736688548505	http://wayback.archive-it.org/1068/20130306212213id_/http://cja.org/
+
+-0.0736688548505	http://wayback.archive-it.org/1068/20130307021555id_/http://www.cja.org/
+
+0.0	http://wayback.archive-it.org/1068/20090518172241id_/http://www.cmdpdh.org/
+
+0.0	http://wayback.archive-it.org/1068/20090518172345id_/http://www.cmdpdh.org/
+
+-0.549560853199	http://wayback.archive-it.org/1068/20100510173252id_/http://www.cmdpdh.org/
+
+-0.387703889586	http://wayback.archive-it.org/1068/20100602185840id_/http://www.cmdpdh.org/
+
+-0.338770388959	http://wayback.archive-it.org/1068/20100902185358id_/http://www.cmdpdh.org/
+
+-0.0376411543287	http://wayback.archive-it.org/1068/20101202190815id_/http://www.cmdpdh.org/
+
+-0.0175658720201	http://wayback.archive-it.org/1068/20110302191952id_/http://www.cmdpdh.org/
+
+0.0138017565872	http://wayback.archive-it.org/1068/20110602192837id_/http://www.cmdpdh.org/
+
+-0.0188205771644	http://wayback.archive-it.org/1068/20110902210649id_/http://www.cmdpdh.org/
+
+-0.232120451694	http://wayback.archive-it.org/1068/20110921000942id_/http://www.cmdpdh.org/
+
+-0.232120451694	http://wayback.archive-it.org/1068/20110921224213id_/http://www.cmdpdh.org/
+
+0.100376411543	http://wayback.archive-it.org/1068/20120302210436id_/http://www.cmdpdh.org/
+
+-0.215809284818	http://wayback.archive-it.org/1068/20120602210550id_/http://www.cmdpdh.org/
+
+-0.296110414053	http://wayback.archive-it.org/1068/20120902082622id_/http://www.cmdpdh.org/
+
+0.0	http://wayback.archive-it.org/1068/20100618170055id_/http://codeh.hn/v1
+
+0.0219587176109	http://wayback.archive-it.org/1068/20100902185359id_/http://codeh.hn/v1
+
+0.0219587176109	http://wayback.archive-it.org/1068/20100902185403id_/http://codeh.hn/v1/
+
+-0.0496267018006	http://wayback.archive-it.org/1068/20101202190820id_/http://codeh.hn/v1
+
+0.0707070707071	http://wayback.archive-it.org/1068/20110302191951id_/http://codeh.hn/v1
+
+0.0707070707071	http://wayback.archive-it.org/1068/20110602200230id_/http://codeh.hn/v1
+
+-0.137022397892	http://wayback.archive-it.org/1068/20110902210644id_/http://codeh.hn/v1
+
+-0.173034694774	http://wayback.archive-it.org/1068/20111202210659id_/http://codeh.hn/v1
+
+-0.159420289855	http://wayback.archive-it.org/1068/20120302210436id_/http://codeh.hn/v1
+
+-0.99604743083	http://wayback.archive-it.org/1068/20120602210551id_/http://codeh.hn/v1
+
+-0.99604743083	http://wayback.archive-it.org/1068/20120902035259id_/http://codeh.hn/v1/
+
+-0.99604743083	http://wayback.archive-it.org/1068/20121202092811id_/http://codeh.hn/v1
+
+-0.99604743083	http://wayback.archive-it.org/1068/20130307001047id_/http://codeh.hn/v1
+
+0.0	http://wayback.archive-it.org/1068/20101123192636id_/http://concernedscientists.org/
+
+0.0	http://wayback.archive-it.org/1068/20101124200759id_/http://concernedscientists.org/
+
+-0.217777777778	http://wayback.archive-it.org/1068/20101202190815id_/http://concernedscientists.org/
+
+0.146666666667	http://wayback.archive-it.org/1068/20110602200232id_/http://concernedscientists.org/
+
+0.0888888888889	http://wayback.archive-it.org/1068/20110902210644id_/http://concernedscientists.org/
+
+0.0	http://wayback.archive-it.org/1068/20120803234851id_/http://dadhuman.info/
+
+0.000315955766193	http://wayback.archive-it.org/1068/20121202092804id_/http://dadhuman.info/
+
+-0.0382306477093	http://wayback.archive-it.org/1068/20130306220317id_/http://dadhuman.info/
+
+0.0	http://wayback.archive-it.org/1068/20100902224944id_/http://derechoshumanos.pe/
+
+0.0160427807487	http://wayback.archive-it.org/1068/20101202215634id_/http://derechoshumanos.pe/
+
+-0.00401069518717	http://wayback.archive-it.org/1068/20110302192032id_/http://derechoshumanos.pe/
+
+-0.00401069518717	http://wayback.archive-it.org/1068/20110302223855id_/http://derechoshumanos.pe//
+
+-0.0401069518717	http://wayback.archive-it.org/1068/20110602192841id_/http://derechoshumanos.pe/
+
+0.0213903743316	http://wayback.archive-it.org/1068/20110902210649id_/http://derechoshumanos.pe/
+
+-0.0106951871658	http://wayback.archive-it.org/1068/20111202210621id_/http://derechoshumanos.pe/
+
+0.033422459893	http://wayback.archive-it.org/1068/20120302210449id_/http://derechoshumanos.pe/
+
+0.0467914438503	http://wayback.archive-it.org/1068/20120602210548id_/http://derechoshumanos.pe/
+
+-0.0160427807487	http://wayback.archive-it.org/1068/20121202092759id_/http://derechoshumanos.pe/
+
+0.135026737968	http://wayback.archive-it.org/1068/20130306212204id_/http://derechoshumanos.pe/
+
+0.0	http://wayback.archive-it.org/1068/20091016214639id_/http://desdecuba.com/generaciony/
+
+0.0	http://wayback.archive-it.org/1068/20091016215156id_/http://desdecuba.com/generaciony
+
+0.0	http://wayback.archive-it.org/1068/20100223153726id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185844id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902185359id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202190821id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191951id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192839id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902210707id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210621id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303010108id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20120602210536id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902035227id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202092758id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20130307002933id_/http://drom-vidin.org/
+
+0.0	http://wayback.archive-it.org/1068/20100223153726id_/http://eaaf.typepad.com/
+
+-0.582154515778	http://wayback.archive-it.org/1068/20110302191958id_/http://eaaf.typepad.com/
+
+-0.582154515778	http://wayback.archive-it.org/1068/20110302204256id_/http://eaaf.typepad.com//
+
+-0.532644178455	http://wayback.archive-it.org/1068/20110602192837id_/http://eaaf.typepad.com/
+
+-0.455930359086	http://wayback.archive-it.org/1068/20110902210644id_/http://eaaf.typepad.com/
+
+-0.318280739935	http://wayback.archive-it.org/1068/20111202222740id_/http://eaaf.typepad.com/
+
+-0.24972796518	http://wayback.archive-it.org/1068/20120302210435id_/http://eaaf.typepad.com/
+
+-0.168117519042	http://wayback.archive-it.org/1068/20120603013324id_/http://eaaf.typepad.com/
+
+-0.107725788901	http://wayback.archive-it.org/1068/20120902072253id_/http://eaaf.typepad.com/
+
+0.00326441784548	http://wayback.archive-it.org/1068/20121202092754id_/http://eaaf.typepad.com/
+
+0.0266594124048	http://wayback.archive-it.org/1068/20130306234449id_/http://eaaf.typepad.com/
+
+0.0	http://wayback.archive-it.org/1068/20110207185551id_/http://ebfhr.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20110207190048id_/http://ebfhr.blogspot.com//
+
+-0.011017838405	http://wayback.archive-it.org/1068/20110302191949id_/http://ebfhr.blogspot.com/
+
+-0.011017838405	http://wayback.archive-it.org/1068/20110302204611id_/http://ebfhr.blogspot.com//
+
+0.134837355719	http://wayback.archive-it.org/1068/20111202210618id_/http://ebfhr.blogspot.com/
+
+0.134837355719	http://wayback.archive-it.org/1068/20111203030837id_/http://ebfhr.blogspot.com//
+
+-0.0440713536201	http://wayback.archive-it.org/1068/20121202092940id_/http://ebfhr.blogspot.com/
+
+-0.0440713536201	http://wayback.archive-it.org/1068/20121202180840id_/http://ebfhr.blogspot.com//
+
+-0.0451206715635	http://wayback.archive-it.org/1068/20130306212204id_/http://ebfhr.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20100618170055id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20100902185356id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20101202190815id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20110302192029id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20110602192838id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20110902210646id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20111202210627id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20120302210435id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20120602210555id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20120902035235id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20130306212204id_/http://ecumene.org/INRFVVP/
+
+0.0	http://wayback.archive-it.org/1068/20110129043404id_/http://ecwronline.org/
+
+-0.018691588785	http://wayback.archive-it.org/1068/20110129043741id_/http://www.ecwronline.org/
+
+-0.954606141522	http://wayback.archive-it.org/1068/20110602192838id_/http://ecwronline.org/
+
+-0.954606141522	http://wayback.archive-it.org/1068/20110902210643id_/http://ecwronline.org/
+
+-0.946595460614	http://wayback.archive-it.org/1068/20111202210828id_/http://ecwronline.org/
+
+-0.874499332443	http://wayback.archive-it.org/1068/20120302210435id_/http://ecwronline.org/
+
+-0.874499332443	http://wayback.archive-it.org/1068/20120602210535id_/http://ecwronline.org/
+
+-0.874499332443	http://wayback.archive-it.org/1068/20120902035203id_/http://ecwronline.org/
+
+-0.874499332443	http://wayback.archive-it.org/1068/20121202092827id_/http://ecwronline.org/
+
+0.0	http://wayback.archive-it.org/1068/20100629171246id_/http://eipr.org/
+
+0.0	http://wayback.archive-it.org/1068/20100629171631id_/https://eipr.org/
+
+0.0851063829787	http://wayback.archive-it.org/1068/20100902185356id_/http://eipr.org/
+
+0.0808510638298	http://wayback.archive-it.org/1068/20101202190817id_/http://eipr.org/
+
+0.0808510638298	http://wayback.archive-it.org/1068/20101202201102id_/https://eipr.org/
+
+-0.0978723404255	http://wayback.archive-it.org/1068/20110302191949id_/http://eipr.org/
+
+-0.0978723404255	http://wayback.archive-it.org/1068/20110302200213id_/https://eipr.org/
+
+0.0957446808511	http://wayback.archive-it.org/1068/20110602200005id_/http://eipr.org/
+
+0.0723404255319	http://wayback.archive-it.org/1068/20110902210710id_/http://eipr.org/
+
+-0.117021276596	http://wayback.archive-it.org/1068/20111202210652id_/http://eipr.org/
+
+-0.117021276596	http://wayback.archive-it.org/1068/20111203021100id_/https://eipr.org/
+
+0.0063829787234	http://wayback.archive-it.org/1068/20120303011647id_/http://eipr.org/
+
+0.0063829787234	http://wayback.archive-it.org/1068/20120303033739id_/https://eipr.org/
+
+-0.114893617021	http://wayback.archive-it.org/1068/20120603020416id_/http://eipr.org/
+
+-0.114893617021	http://wayback.archive-it.org/1068/20120603062412id_/https://eipr.org/
+
+-0.0872340425532	http://wayback.archive-it.org/1068/20120902035254id_/http://eipr.org/
+
+-0.340425531915	http://wayback.archive-it.org/1068/20121202092803id_/http://eipr.org/
+
+-0.391489361702	http://wayback.archive-it.org/1068/20130307002003id_/http://eipr.org/
+
+0.0	http://wayback.archive-it.org/1068/20090521151339id_/http://en.eohr.org/
+
+0.0259344012204	http://wayback.archive-it.org/1068/20120902035205id_/http://en.eohr.org/
+
+-0.119755911518	http://wayback.archive-it.org/1068/20121202092824id_/http://en.eohr.org/
+
+-0.0366132723112	http://wayback.archive-it.org/1068/20130306212204id_/http://en.eohr.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902210458id_/http://www.fundar.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20100809190339id_/http://www.hafsite.org/
+
+0.0310880829016	http://wayback.archive-it.org/1068/20100902185356id_/http://www.hafsite.org/
+
+0.0414507772021	http://wayback.archive-it.org/1068/20101202190818id_/http://www.hafsite.org/
+
+0.0414507772021	http://wayback.archive-it.org/1068/20101202191343id_/http://www.hafsite.org//
+
+0.0241796200345	http://wayback.archive-it.org/1068/20110302192008id_/http://www.hafsite.org/
+
+0.0241796200345	http://wayback.archive-it.org/1068/20110302201730id_/http://www.hafsite.org//
+
+0.0915371329879	http://wayback.archive-it.org/1068/20110602200500id_/http://www.hafsite.org/
+
+0.0829015544041	http://wayback.archive-it.org/1068/20110902210803id_/http://www.hafsite.org/
+
+0.0397236614853	http://wayback.archive-it.org/1068/20111202225856id_/http://www.hafsite.org/
+
+-0.0293609671848	http://wayback.archive-it.org/1068/20120302210618id_/http://www.hafsite.org/
+
+0.0397236614853	http://wayback.archive-it.org/1068/20120602210557id_/http://www.hafsite.org/
+
+0.0656303972366	http://wayback.archive-it.org/1068/20120902035205id_/http://www.hafsite.org/
+
+0.0293609671848	http://wayback.archive-it.org/1068/20121202092802id_/http://www.hafsite.org/
+
+-0.47322970639	http://wayback.archive-it.org/1068/20130306212215id_/http://www.hafsite.org/
+
+-0.47322970639	http://wayback.archive-it.org/1068/20130307012329id_/http://hafsite.org/
+
+0.0	http://wayback.archive-it.org/1068/20110129043414id_/http://harakamasria.org/
+
+0.0	http://wayback.archive-it.org/1068/20110130224041id_/http://harakamasria.org//
+
+0.0	http://wayback.archive-it.org/1068/20110207185601id_/http://harakamasria.org/
+
+0.0	http://wayback.archive-it.org/1068/20110209092920id_/http://harakamasria.org//
+
+0.0	http://wayback.archive-it.org/1068/20100510173255id_/http://www.hcav.am/
+
+0.137009189641	http://wayback.archive-it.org/1068/20100602185844id_/http://www.hcav.am/
+
+0.047619047619	http://wayback.archive-it.org/1068/20100902185407id_/http://www.hcav.am/
+
+0.100250626566	http://wayback.archive-it.org/1068/20101202190835id_/http://www.hcav.am/
+
+0.0651629072682	http://wayback.archive-it.org/1068/20110602192857id_/http://www.hcav.am/
+
+-0.39933166249	http://wayback.archive-it.org/1068/20120302210444id_/http://www.hcav.am/
+
+-0.39933166249	http://wayback.archive-it.org/1068/20120303015029id_/http://hcav.am/
+
+-0.376775271512	http://wayback.archive-it.org/1068/20120602210535id_/http://hcav.am/
+
+-0.376775271512	http://wayback.archive-it.org/1068/20120603023739id_/http://www.hcav.am/
+
+-0.218045112782	http://wayback.archive-it.org/1068/20120902035158id_/http://hcav.am/
+
+-0.218045112782	http://wayback.archive-it.org/1068/20120902092258id_/http://www.hcav.am/
+
+-0.251461988304	http://wayback.archive-it.org/1068/20121202110909id_/http://hcav.am/
+
+-0.251461988304	http://wayback.archive-it.org/1068/20121202154337id_/http://www.hcav.am/
+
+-0.24895572264	http://wayback.archive-it.org/1068/20130306212206id_/http://hcav.am/
+
+-0.24895572264	http://wayback.archive-it.org/1068/20130307105837id_/http://www.hcav.am/
+
+0.0	http://wayback.archive-it.org/1068/20121018173337id_/http://www.helem.net/
+
+-0.0237154150198	http://wayback.archive-it.org/1068/20130123232125id_/http://www.helem.net/
+
+-0.0237154150198	http://wayback.archive-it.org/1068/20130306232322id_/http://helem.net/
+
+-0.0237154150198	http://wayback.archive-it.org/1068/20130307020336id_/http://www.helem.net/
+
+0.0	http://wayback.archive-it.org/1068/20121018173028id_/http://hotline.org.il/
+
+0.0	http://wayback.archive-it.org/1068/20130306212427id_/http://hotline.org.il/
+
+0.0	http://wayback.archive-it.org/1068/20110303005124id_/http://hras-syria.tripod.com/
+
+-0.127118644068	http://wayback.archive-it.org/1068/20120515165457id_/http://hras-syria.tripod.com/
+
+-0.110169491525	http://wayback.archive-it.org/1068/20120902035158id_/http://hras-syria.tripod.com/
+
+-0.110169491525	http://wayback.archive-it.org/1068/20121202092826id_/http://hras-syria.tripod.com/
+
+-0.110169491525	http://wayback.archive-it.org/1068/20130306231638id_/http://hras-syria.tripod.com/
+
+0.0	http://wayback.archive-it.org/1068/20100618170055id_/http://hrc-eritrea.org/
+
+-0.684730250482	http://wayback.archive-it.org/1068/20101202190817id_/http://hrc-eritrea.org/
+
+-0.603323699422	http://wayback.archive-it.org/1068/20110302191949id_/http://hrc-eritrea.org/
+
+-0.487235067437	http://wayback.archive-it.org/1068/20110602203049id_/http://hrc-eritrea.org/
+
+-0.482177263969	http://wayback.archive-it.org/1068/20110902210647id_/http://hrc-eritrea.org/
+
+-0.493737957611	http://wayback.archive-it.org/1068/20111202210638id_/http://hrc-eritrea.org/
+
+-0.518786127168	http://wayback.archive-it.org/1068/20120303003750id_/http://hrc-eritrea.org/
+
+-0.549373795761	http://wayback.archive-it.org/1068/20120602210552id_/http://hrc-eritrea.org/
+
+-0.549373795761	http://wayback.archive-it.org/1068/20120902035203id_/http://hrc-eritrea.org/
+
+-0.549373795761	http://wayback.archive-it.org/1068/20121202092754id_/http://hrc-eritrea.org/
+
+-0.411608863198	http://wayback.archive-it.org/1068/20130306220154id_/http://hrc-eritrea.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510173253id_/http://hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20100602185842id_/http://hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20100602190452id_/http://www.hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20100902185359id_/http://hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20101202190817id_/http://hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20110302192014id_/http://hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20110302204052id_/http://www.hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20110602192841id_/http://hrca.org.au/
+
+0.0511945392491	http://wayback.archive-it.org/1068/20111202210627id_/http://hrca.org.au/
+
+0.0511945392491	http://wayback.archive-it.org/1068/20111203015657id_/http://www.hrca.org.au/
+
+0.146757679181	http://wayback.archive-it.org/1068/20120302234006id_/http://hrca.org.au/
+
+0.146757679181	http://wayback.archive-it.org/1068/20120602210548id_/http://hrca.org.au/
+
+0.146757679181	http://wayback.archive-it.org/1068/20120902035208id_/http://hrca.org.au/
+
+0.146757679181	http://wayback.archive-it.org/1068/20121202092830id_/http://hrca.org.au/
+
+0.146757679181	http://wayback.archive-it.org/1068/20130306220157id_/http://hrca.org.au/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://hrfssaudiarabia.org/
+
+-0.47486535009	http://wayback.archive-it.org/1068/20100902185403id_/http://hrfssaudiarabia.org/
+
+-0.43065529623	http://wayback.archive-it.org/1068/20101202190816id_/http://hrfssaudiarabia.org/
+
+-0.59829443447	http://wayback.archive-it.org/1068/20110302192030id_/http://hrfssaudiarabia.org/
+
+-0.296454219031	http://wayback.archive-it.org/1068/20110602192838id_/http://hrfssaudiarabia.org/
+
+-0.196140035907	http://wayback.archive-it.org/1068/20110902210710id_/http://hrfssaudiarabia.org/
+
+-0.0908886894075	http://wayback.archive-it.org/1068/20111202210650id_/http://hrfssaudiarabia.org/
+
+-0.391382405745	http://wayback.archive-it.org/1068/20120302210435id_/http://hrfssaudiarabia.org/
+
+-0.128590664273	http://wayback.archive-it.org/1068/20120602210536id_/http://hrfssaudiarabia.org/
+
+0.028276481149	http://wayback.archive-it.org/1068/20120902035203id_/http://hrfssaudiarabia.org/
+
+-0.777603231598	http://wayback.archive-it.org/1068/20130306212204id_/http://hrfssaudiarabia.org/
+
+0.0	http://wayback.archive-it.org/1068/20121018173027id_/http://hritc.info/
+
+-0.721323011963	http://wayback.archive-it.org/1068/20130306212205id_/http://hritc.info/
+
+0.0	http://wayback.archive-it.org/1068/20110124222955id_/http://hrln.org/hrln/
+
+-0.363461538462	http://wayback.archive-it.org/1068/20110302191948id_/http://hrln.org/hrln/
+
+-0.363461538462	http://wayback.archive-it.org/1068/20110302193144id_/http://www.hrln.org/hrln
+
+-0.199038461538	http://wayback.archive-it.org/1068/20110602195414id_/http://hrln.org/hrln/
+
+-0.199038461538	http://wayback.archive-it.org/1068/20110602224048id_/http://www.hrln.org/hrln
+
+-0.0971153846154	http://wayback.archive-it.org/1068/20110902223322id_/http://hrln.org/hrln/
+
+-0.0971153846154	http://wayback.archive-it.org/1068/20110903012039id_/http://www.hrln.org/hrln
+
+-0.05	http://wayback.archive-it.org/1068/20111202210711id_/http://hrln.org/hrln/
+
+-0.05	http://wayback.archive-it.org/1068/20111203020551id_/http://www.hrln.org/hrln
+
+-0.391346153846	http://wayback.archive-it.org/1068/20120302210434id_/http://hrln.org/hrln/
+
+-0.391346153846	http://wayback.archive-it.org/1068/20120303011848id_/http://www.hrln.org/hrln
+
+-0.294230769231	http://wayback.archive-it.org/1068/20120603011021id_/http://hrln.org/hrln/
+
+-0.294230769231	http://wayback.archive-it.org/1068/20120603033913id_/http://www.hrln.org/hrln
+
+-0.266346153846	http://wayback.archive-it.org/1068/20120902035202id_/http://hrln.org/hrln/
+
+-0.266346153846	http://wayback.archive-it.org/1068/20120902084851id_/http://www.hrln.org/hrln
+
+-0.293269230769	http://wayback.archive-it.org/1068/20121202092755id_/http://hrln.org/hrln/
+
+-0.293269230769	http://wayback.archive-it.org/1068/20121202133100id_/http://www.hrln.org/hrln
+
+-0.183653846154	http://wayback.archive-it.org/1068/20130306212204id_/http://hrln.org/hrln/
+
+-0.183653846154	http://wayback.archive-it.org/1068/20130307005017id_/http://www.hrln.org/hrln
+
+0.0	http://wayback.archive-it.org/1068/20110721215307id_/http://hub.witness.org/
+
+-0.00311526479751	http://wayback.archive-it.org/1068/20110920214328id_/http://hub.witness.org/
+
+-0.00311526479751	http://wayback.archive-it.org/1068/20110921201600id_/http://hub.witness.org/
+
+-0.233644859813	http://wayback.archive-it.org/1068/20120903113723id_/http://hub.witness.org/
+
+-0.285046728972	http://wayback.archive-it.org/1068/20121203223510id_/http://hub.witness.org/
+
+-0.144859813084	http://wayback.archive-it.org/1068/20130307170326id_/http://hub.witness.org/
+
+0.0	http://wayback.archive-it.org/1068/20100413152505id_/http://www.humanrights.dk/
+
+-0.017094017094	http://wayback.archive-it.org/1068/20100510173252id_/http://humanrights.dk/
+
+-0.034188034188	http://wayback.archive-it.org/1068/20100602185841id_/http://humanrights.dk/
+
+-0.034188034188	http://wayback.archive-it.org/1068/20100602194025id_/http://www.humanrights.dk/
+
+0.025641025641	http://wayback.archive-it.org/1068/20100902203939id_/http://www.humanrights.dk/
+
+0.0683760683761	http://wayback.archive-it.org/1068/20101202201451id_/http://www.humanrights.dk/
+
+-0.0555555555556	http://wayback.archive-it.org/1068/20110302191951id_/http://humanrights.dk/
+
+-0.0555555555556	http://wayback.archive-it.org/1068/20110302223857id_/http://www.humanrights.dk/
+
+-0.192307692308	http://wayback.archive-it.org/1068/20110602192839id_/http://humanrights.dk/
+
+-0.192307692308	http://wayback.archive-it.org/1068/20110602225337id_/http://www.humanrights.dk/
+
+-0.196581196581	http://wayback.archive-it.org/1068/20110902213724id_/http://humanrights.dk/
+
+-0.196581196581	http://wayback.archive-it.org/1068/20110903014852id_/http://www.humanrights.dk/
+
+-0.102564102564	http://wayback.archive-it.org/1068/20111202210619id_/http://humanrights.dk/
+
+-0.102564102564	http://wayback.archive-it.org/1068/20111203030847id_/http://www.humanrights.dk/
+
+0.0	http://wayback.archive-it.org/1068/20111107191154id_/http://www.humanrights.ee/
+
+-0.105527638191	http://wayback.archive-it.org/1068/20120302210619id_/http://humanrights.ee/
+
+0.0552763819095	http://wayback.archive-it.org/1068/20120603020417id_/http://humanrights.ee/
+
+0.0452261306533	http://wayback.archive-it.org/1068/20121202092804id_/http://humanrights.ee/
+
+0.0502512562814	http://wayback.archive-it.org/1068/20130306212204id_/http://humanrights.ee/
+
+0.0	http://wayback.archive-it.org/1068/20090606015922id_/http://icdcprague.org/
+
+0.0	http://wayback.archive-it.org/1068/20100319192255id_/http://icdcprague.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185843id_/http://icdcprague.org/
+
+0.0	http://wayback.archive-it.org/1068/20100903013104id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20100903013114id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202231143id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110303015229id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110303015230id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110603043018id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110603043023id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110903110825id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110903110836id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20111203182426id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20111203182534id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303165429id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303165455id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120604013834id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120903223740id_/http://www.idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120903223806id_/http://idcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902221353id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20101202212047id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20110302232911id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20110602234914id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20110903015107id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20111203025301id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20120303030112id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20120603041509id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20120902120706id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20121202151818id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20130307015839id_/http://www.ihd.org.tr/
+
+0.0	http://wayback.archive-it.org/1068/20100903004317id_/http://ilsa.org.co:81/
+
+0.0750436300175	http://wayback.archive-it.org/1068/20101202222754id_/http://ilsa.org.co:81/
+
+0.0855148342059	http://wayback.archive-it.org/1068/20120302210435id_/http://ilsa.org.co:81/
+
+0.00523560209424	http://wayback.archive-it.org/1068/20120602210540id_/http://ilsa.org.co:81/
+
+0.0	http://wayback.archive-it.org/1068/20111107191155id_/http://indignacion.org.mx/
+
+-0.0357698289269	http://wayback.archive-it.org/1068/20120302221344id_/http://indignacion.org.mx/
+
+-0.0933125972006	http://wayback.archive-it.org/1068/20120602221436id_/http://indignacion.org.mx/
+
+-0.0513219284603	http://wayback.archive-it.org/1068/20120902035209id_/http://indignacion.org.mx/
+
+-0.0217729393468	http://wayback.archive-it.org/1068/20121202092818id_/http://indignacion.org.mx/
+
+-0.054432348367	http://wayback.archive-it.org/1068/20130306232317id_/http://indignacion.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20100510173254id_/http://iranhr.net/
+
+-0.0980036297641	http://wayback.archive-it.org/1068/20100602185843id_/http://iranhr.net/
+
+0.021778584392	http://wayback.archive-it.org/1068/20100902185405id_/http://iranhr.net/
+
+-0.0526315789474	http://wayback.archive-it.org/1068/20101202190815id_/http://iranhr.net/
+
+-0.057168784029	http://wayback.archive-it.org/1068/20110302192030id_/http://iranhr.net/
+
+0.00907441016334	http://wayback.archive-it.org/1068/20110602192842id_/http://iranhr.net/
+
+0.0	http://wayback.archive-it.org/1068/20100809190339id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20110317151734id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20110317161108id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20110602192841id_/http://jinsil.go.kr/
+
+-0.456273764259	http://wayback.archive-it.org/1068/20110902210805id_/http://jinsil.go.kr/
+
+-0.456273764259	http://wayback.archive-it.org/1068/20111202210651id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20120303005511id_/http://jinsil.go.kr/
+
+-0.456273764259	http://wayback.archive-it.org/1068/20120602210547id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20120902035255id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20121202092853id_/http://jinsil.go.kr/
+
+-0.460076045627	http://wayback.archive-it.org/1068/20130306212210id_/http://jinsil.go.kr/
+
+0.0	http://wayback.archive-it.org/1068/20120602210552id_/http://kafa.org.lb/
+
+0.0414634146341	http://wayback.archive-it.org/1068/20121202092754id_/http://kafa.org.lb/
+
+-0.180487804878	http://wayback.archive-it.org/1068/20130307002931id_/http://kafa.org.lb/
+
+-0.180487804878	http://wayback.archive-it.org/1068/20130307024718id_/http://www.kafa.org.lb/
+
+0.0	http://wayback.archive-it.org/1068/20110129043405id_/http://misrdigital.blogspirit.com/
+
+0.0	http://wayback.archive-it.org/1068/20110129043803id_/http://misrdigital.blogspirit.com//
+
+-0.700412112525	http://wayback.archive-it.org/1068/20110302191952id_/http://misrdigital.blogspirit.com/
+
+-0.700412112525	http://wayback.archive-it.org/1068/20110302204735id_/http://misrdigital.blogspirit.com//
+
+-0.310338648988	http://wayback.archive-it.org/1068/20110602192842id_/http://misrdigital.blogspirit.com/
+
+0.0517828346175	http://wayback.archive-it.org/1068/20110902210651id_/http://misrdigital.blogspirit.com/
+
+0.0516036552589	http://wayback.archive-it.org/1068/20111202210622id_/http://misrdigital.blogspirit.com/
+
+-0.0808098907006	http://wayback.archive-it.org/1068/20120302210517id_/http://misrdigital.blogspirit.com/
+
+-0.0747177925103	http://wayback.archive-it.org/1068/20120603014350id_/http://misrdigital.blogspirit.com/
+
+0.0804515319835	http://wayback.archive-it.org/1068/20130306212210id_/http://misrdigital.blogspirit.com/
+
+0.0	http://wayback.archive-it.org/1068/20090612191014id_/http://nchro.org/
+
+-0.0569176882662	http://wayback.archive-it.org/1068/20110902215005id_/http://nchro.org/
+
+0.015761821366	http://wayback.archive-it.org/1068/20111202210652id_/http://nchro.org/
+
+0.0271453590193	http://wayback.archive-it.org/1068/20120302210435id_/http://nchro.org/
+
+-0.436952714536	http://wayback.archive-it.org/1068/20120603001416id_/http://nchro.org/
+
+-0.402802101576	http://wayback.archive-it.org/1068/20120902035156id_/http://nchro.org/
+
+-0.430823117338	http://wayback.archive-it.org/1068/20121202092808id_/http://nchro.org/
+
+-0.0700525394046	http://wayback.archive-it.org/1068/20130306212426id_/http://nchro.org/
+
+0.0	http://wayback.archive-it.org/1068/20110419191806id_/http://notonourwatchproject.org/
+
+0.136655948553	http://wayback.archive-it.org/1068/20110602192839id_/http://notonourwatchproject.org/
+
+-0.107717041801	http://wayback.archive-it.org/1068/20110902210700id_/http://notonourwatchproject.org/
+
+-0.114147909968	http://wayback.archive-it.org/1068/20111202210723id_/http://notonourwatchproject.org/
+
+-0.114147909968	http://wayback.archive-it.org/1068/20120302222230id_/http://notonourwatchproject.org/
+
+-0.0836012861736	http://wayback.archive-it.org/1068/20120602221423id_/http://notonourwatchproject.org/
+
+0.0	http://wayback.archive-it.org/1068/20110207185551id_/http://www.nwrcegypt.org/
+
+0.0	http://wayback.archive-it.org/1068/20110207190328id_/http://nwrcegypt.org//
+
+0.0168128654971	http://wayback.archive-it.org/1068/20110302191951id_/http://nwrcegypt.org/
+
+-0.0767543859649	http://wayback.archive-it.org/1068/20110602200229id_/http://nwrcegypt.org/
+
+0.0687134502924	http://wayback.archive-it.org/1068/20111202210619id_/http://nwrcegypt.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302224912id_/http://www.odhikar.org/
+
+-0.230817610063	http://wayback.archive-it.org/1068/20120902094215id_/http://www.odhikar.org/
+
+-0.162893081761	http://wayback.archive-it.org/1068/20121202144755id_/http://www.odhikar.org/
+
+-0.141509433962	http://wayback.archive-it.org/1068/20130307021532id_/http://www.odhikar.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510173253id_/http://ombuds.am/main/
+
+0.0361445783133	http://wayback.archive-it.org/1068/20100602185842id_/http://ombuds.am/main/
+
+0.0120481927711	http://wayback.archive-it.org/1068/20100902185402id_/http://ombuds.am/main/
+
+-0.00602409638554	http://wayback.archive-it.org/1068/20101202190820id_/http://ombuds.am/main/
+
+0.0240963855422	http://wayback.archive-it.org/1068/20101217041426id_/http://ombuds.am/main/
+
+0.0361445783133	http://wayback.archive-it.org/1068/20110302191959id_/http://ombuds.am/main/
+
+0.0722891566265	http://wayback.archive-it.org/1068/20110602200232id_/http://ombuds.am/main/
+
+0.0903614457831	http://wayback.archive-it.org/1068/20111202220948id_/http://ombuds.am/main/
+
+-0.253012048193	http://wayback.archive-it.org/1068/20120302224302id_/http://ombuds.am/main/
+
+0.00602409638554	http://wayback.archive-it.org/1068/20120602210556id_/http://ombuds.am/main/
+
+-0.198795180723	http://wayback.archive-it.org/1068/20120902052919id_/http://ombuds.am/main/
+
+-0.0963855421687	http://wayback.archive-it.org/1068/20121202110123id_/http://ombuds.am/main/
+
+-0.246987951807	http://wayback.archive-it.org/1068/20130306212211id_/http://ombuds.am/main/
+
+0.0	http://wayback.archive-it.org/1068/20110129043404id_/http://openarab.net/
+
+0.0757381258023	http://wayback.archive-it.org/1068/20110302192008id_/http://openarab.net/
+
+0.0205391527599	http://wayback.archive-it.org/1068/20110602193457id_/http://openarab.net/
+
+0.0192554557125	http://wayback.archive-it.org/1068/20110902215728id_/http://openarab.net/
+
+-0.0500641848524	http://wayback.archive-it.org/1068/20111202210629id_/http://openarab.net/
+
+-0.132220795892	http://wayback.archive-it.org/1068/20120302210435id_/http://openarab.net/
+
+-0.152759948652	http://wayback.archive-it.org/1068/20120602210550id_/http://openarab.net/
+
+-0.147625160462	http://wayback.archive-it.org/1068/20120902052917id_/http://openarab.net/
+
+-0.178433889602	http://wayback.archive-it.org/1068/20121202111156id_/http://openarab.net/
+
+-0.151476251605	http://wayback.archive-it.org/1068/20130306212204id_/http://openarab.net/
+
+0.0	http://wayback.archive-it.org/1068/20110303005005id_/http://www.palhumanrights.org/
+
+-0.0808656036446	http://wayback.archive-it.org/1068/20121018173027id_/http://palhumanrights.org/
+
+-0.0968109339408	http://wayback.archive-it.org/1068/20130123232115id_/http://palhumanrights.org/
+
+-0.0968109339408	http://wayback.archive-it.org/1068/20130306232311id_/http://palhumanrights.org/
+
+0.0	http://wayback.archive-it.org/1068/20120416193732id_/http://pdhj.org/wp/
+
+0.0	http://wayback.archive-it.org/1068/20121018173032id_/http://www.pdhj.org/wp
+
+-0.00426742532006	http://wayback.archive-it.org/1068/20130306212205id_/http://pdhj.org/wp/
+
+0.0	http://wayback.archive-it.org/1068/20110302191947id_/http://persian2english.com/
+
+-0.13141025641	http://wayback.archive-it.org/1068/20110602192845id_/http://persian2english.com/
+
+-0.148397435897	http://wayback.archive-it.org/1068/20110902210644id_/http://persian2english.com/
+
+-0.158333333333	http://wayback.archive-it.org/1068/20111202210828id_/http://persian2english.com/
+
+-0.104487179487	http://wayback.archive-it.org/1068/20120302215611id_/http://persian2english.com/
+
+-0.0762820512821	http://wayback.archive-it.org/1068/20120602210535id_/http://persian2english.com/
+
+-0.117628205128	http://wayback.archive-it.org/1068/20120902035216id_/http://persian2english.com/
+
+-0.127884615385	http://wayback.archive-it.org/1068/20121202092826id_/http://persian2english.com/
+
+-0.0673076923077	http://wayback.archive-it.org/1068/20130307001254id_/http://persian2english.com/
+
+0.0	http://wayback.archive-it.org/1068/20100629171247id_/http://physiciansforhumanrights.org/
+
+-0.0441558441558	http://wayback.archive-it.org/1068/20100902185357id_/http://physiciansforhumanrights.org/
+
+0.0649350649351	http://wayback.archive-it.org/1068/20101202190818id_/http://physiciansforhumanrights.org/
+
+0.0	http://wayback.archive-it.org/1068/20110124222956id_/http://pointpedro.org/
+
+0.0145772594752	http://wayback.archive-it.org/1068/20110302191953id_/http://pointpedro.org/
+
+-0.244897959184	http://wayback.archive-it.org/1068/20110602200229id_/http://pointpedro.org/
+
+-0.247813411079	http://wayback.archive-it.org/1068/20110902225841id_/http://pointpedro.org/
+
+-0.227405247813	http://wayback.archive-it.org/1068/20111202210620id_/http://pointpedro.org/
+
+-0.227405247813	http://wayback.archive-it.org/1068/20120302210435id_/http://pointpedro.org/
+
+-0.236151603499	http://wayback.archive-it.org/1068/20120602210536id_/http://pointpedro.org/
+
+-0.236151603499	http://wayback.archive-it.org/1068/20120902044939id_/http://pointpedro.org/
+
+-0.250728862974	http://wayback.archive-it.org/1068/20121202092754id_/http://pointpedro.org/
+
+-0.250728862974	http://wayback.archive-it.org/1068/20130307001443id_/http://pointpedro.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902084206id_/http://publicverdict.ru/
+
+-0.0394904458599	http://wayback.archive-it.org/1068/20121202133110id_/http://publicverdict.ru/
+
+0.0687898089172	http://wayback.archive-it.org/1068/20130307013006id_/http://publicverdict.ru/
+
+0.0	http://wayback.archive-it.org/1068/20101221161731id_/http://www.raddho.org/
+
+0.0	http://wayback.archive-it.org/1068/20101221162639id_/http://raddho.org/
+
+0.0	http://wayback.archive-it.org/1068/20101223152747id_/http://www.raddho.org/
+
+0.0	http://wayback.archive-it.org/1068/20101223153410id_/http://raddho.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191958id_/http://raddho.org/
+
+0.0	http://wayback.archive-it.org/1068/20120416193731id_/http://relativesforjustice.com/
+
+0.0463258785942	http://wayback.archive-it.org/1068/20120602210533id_/http://relativesforjustice.com/
+
+0.0750798722045	http://wayback.archive-it.org/1068/20120902035217id_/http://relativesforjustice.com/
+
+0.091054313099	http://wayback.archive-it.org/1068/20121202092753id_/http://relativesforjustice.com/
+
+0.0	http://wayback.archive-it.org/1068/20130321174717id_/http://rightsperu.net/
+
+0.0	http://wayback.archive-it.org/1068/20130321202315id_/http://rightsperu.net/
+
+0.0	http://wayback.archive-it.org/1068/20090210190638id_/http://www.rnddh.org/
+
+0.0487444608567	http://wayback.archive-it.org/1068/20100602185850id_/http://www.rnddh.org/
+
+0.0546528803545	http://wayback.archive-it.org/1068/20101202190831id_/http://www.rnddh.org/
+
+0.0118168389956	http://wayback.archive-it.org/1068/20110602192927id_/http://www.rnddh.org/
+
+0.0841949778434	http://wayback.archive-it.org/1068/20110902210707id_/http://www.rnddh.org/
+
+0.0428360413589	http://wayback.archive-it.org/1068/20111202210859id_/http://www.rnddh.org/
+
+0.0221565731167	http://wayback.archive-it.org/1068/20120302210453id_/http://www.rnddh.org/
+
+0.0487444608567	http://wayback.archive-it.org/1068/20120602210617id_/http://www.rnddh.org/
+
+-0.230428360414	http://wayback.archive-it.org/1068/20120902175013id_/http://www.rnddh.org/
+
+-0.230428360414	http://wayback.archive-it.org/1068/20120902201707id_/http://rnddh.org/
+
+-0.231905465288	http://wayback.archive-it.org/1068/20121202231543id_/http://www.rnddh.org/
+
+-0.231905465288	http://wayback.archive-it.org/1068/20121203011533id_/http://rnddh.org/
+
+-0.224519940916	http://wayback.archive-it.org/1068/20130306232313id_/http://rnddh.org/
+
+0.0	http://wayback.archive-it.org/1068/20080613154505id_/http://savetibet.org/
+
+0.0	http://wayback.archive-it.org/1068/20080613154714id_/http://www.savetibet.org/
+
+0.0	http://wayback.archive-it.org/1068/20080613160845id_/http://savetibet.org/
+
+0.0	http://wayback.archive-it.org/1068/20080613161112id_/http://www.savetibet.org/
+
+0.0175438596491	http://wayback.archive-it.org/1068/20080721195452id_/http://savetibet.org/
+
+0.0175438596491	http://wayback.archive-it.org/1068/20080721195938id_/http://www.savetibet.org/
+
+0.0	http://wayback.archive-it.org/1068/20120603041138id_/http://www.seeingredinchina.com/
+
+0.0	http://wayback.archive-it.org/1068/20120603120904id_/http://seeingredinchina.com/
+
+-0.457570715474	http://wayback.archive-it.org/1068/20120902103348id_/http://www.seeingredinchina.com/
+
+-0.457570715474	http://wayback.archive-it.org/1068/20120902162756id_/http://seeingredinchina.com/
+
+-0.382457808415	http://wayback.archive-it.org/1068/20121202160623id_/http://www.seeingredinchina.com/
+
+-0.382457808415	http://wayback.archive-it.org/1068/20121202225331id_/http://seeingredinchina.com/
+
+0.0	http://wayback.archive-it.org/1068/20100618170055id_/http://www.semillas.org.mx/
+
+0.100649350649	http://wayback.archive-it.org/1068/20100902185358id_/http://www.semillas.org.mx/
+
+0.100649350649	http://wayback.archive-it.org/1068/20100902191943id_/http://www.semillas.org.mx//
+
+0.0735930735931	http://wayback.archive-it.org/1068/20101202190815id_/http://www.semillas.org.mx/
+
+0.0735930735931	http://wayback.archive-it.org/1068/20101202192552id_/http://www.semillas.org.mx//
+
+0.0919913419913	http://wayback.archive-it.org/1068/20110302192029id_/http://www.semillas.org.mx/
+
+0.0919913419913	http://wayback.archive-it.org/1068/20110302211558id_/http://www.semillas.org.mx//
+
+0.140692640693	http://wayback.archive-it.org/1068/20110602200229id_/http://www.semillas.org.mx/
+
+-0.292207792208	http://wayback.archive-it.org/1068/20120602233853id_/http://www.semillas.org.mx/
+
+-0.319264069264	http://wayback.archive-it.org/1068/20120902035202id_/http://www.semillas.org.mx/
+
+-0.323593073593	http://wayback.archive-it.org/1068/20121202092803id_/http://www.semillas.org.mx/
+
+-0.338744588745	http://wayback.archive-it.org/1068/20130306212357id_/http://www.semillas.org.mx/
+
+0.0	http://wayback.archive-it.org/1068/20111107191153id_/http://spring96.org/
+
+0.118906064209	http://wayback.archive-it.org/1068/20120302210456id_/http://spring96.org/
+
+0.0166468489893	http://wayback.archive-it.org/1068/20120603001417id_/http://spring96.org/
+
+-0.208085612366	http://wayback.archive-it.org/1068/20120902035201id_/http://spring96.org/
+
+0.123662306778	http://wayback.archive-it.org/1068/20121202092811id_/http://spring96.org/
+
+0.064209274673	http://wayback.archive-it.org/1068/20130306233557id_/http://spring96.org/
+
+0.0	http://wayback.archive-it.org/1068/20120515195342id_/http://www.syriahr.com/
+
+0.0	http://wayback.archive-it.org/1068/20090619191547id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20110422193724id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20110602192838id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20110902210702id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20111202210627id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20120302210528id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20120602210537id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20120902035234id_/http://tamaynut.org/
+
+-0.993968117191	http://wayback.archive-it.org/1068/20130306212204id_/http://tamaynut.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510173252id_/http://tapol.gn.apc.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185841id_/http://tapol.gn.apc.org/
+
+0.0993500464253	http://wayback.archive-it.org/1068/20100902185359id_/http://tapol.gn.apc.org/
+
+-0.743732590529	http://wayback.archive-it.org/1068/20101202190817id_/http://tapol.gn.apc.org/
+
+-0.630454967502	http://wayback.archive-it.org/1068/20110302191949id_/http://tapol.gn.apc.org/
+
+-0.597957288765	http://wayback.archive-it.org/1068/20110602195414id_/http://tapol.gn.apc.org/
+
+-0.590529247911	http://wayback.archive-it.org/1068/20110902210645id_/http://tapol.gn.apc.org/
+
+-0.561745589601	http://wayback.archive-it.org/1068/20111202210639id_/http://tapol.gn.apc.org/
+
+-0.583101207057	http://wayback.archive-it.org/1068/20120302210435id_/http://tapol.gn.apc.org/
+
+-0.509749303621	http://wayback.archive-it.org/1068/20120603003600id_/http://tapol.gn.apc.org/
+
+-0.504178272981	http://wayback.archive-it.org/1068/20120902035220id_/http://tapol.gn.apc.org/
+
+-0.614670380687	http://wayback.archive-it.org/1068/20121202092757id_/http://tapol.gn.apc.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202092802id_/http://www.tapol.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202141559id_/http://tapol.org/
+
+-0.00279329608939	http://wayback.archive-it.org/1068/20130307003005id_/http://tapol.org/
+
+-0.00279329608939	http://wayback.archive-it.org/1068/20130307115048id_/http://www.tapol.org/
+
+0.0	http://wayback.archive-it.org/1068/20110303191106id_/http://www.terradedireitos.org.br/
+
+-0.0452488687783	http://wayback.archive-it.org/1068/20110602213006id_/http://terradedireitos.org.br/
+
+-0.0701357466063	http://wayback.archive-it.org/1068/20110902225844id_/http://terradedireitos.org.br/
+
+-0.00678733031674	http://wayback.archive-it.org/1068/20111202225859id_/http://terradedireitos.org.br/
+
+0.0158371040724	http://wayback.archive-it.org/1068/20120302210440id_/http://terradedireitos.org.br/
+
+0.113122171946	http://wayback.archive-it.org/1068/20120902035207id_/http://terradedireitos.org.br/
+
+0.128959276018	http://wayback.archive-it.org/1068/20121202092758id_/http://terradedireitos.org.br/
+
+0.0	http://wayback.archive-it.org/1068/20120925175851id_/http://theilf.org/
+
+0.0164473684211	http://wayback.archive-it.org/1068/20121202092838id_/http://theilf.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://therightsexposureproject.com/
+
+-0.990894039735	http://wayback.archive-it.org/1068/20101202192902id_/http://therightsexposureproject.com//
+
+-0.12582781457	http://wayback.archive-it.org/1068/20110302192030id_/http://therightsexposureproject.com/
+
+-0.990894039735	http://wayback.archive-it.org/1068/20110302212900id_/http://therightsexposureproject.com//
+
+-0.426324503311	http://wayback.archive-it.org/1068/20110602192837id_/http://therightsexposureproject.com/
+
+-0.176324503311	http://wayback.archive-it.org/1068/20110902210803id_/http://therightsexposureproject.com/
+
+0.0273178807947	http://wayback.archive-it.org/1068/20111202210619id_/http://therightsexposureproject.com/
+
+-0.598233995585	http://wayback.archive-it.org/1068/20120302221341id_/http://therightsexposureproject.com/
+
+0.0753311258278	http://wayback.archive-it.org/1068/20120602221423id_/http://therightsexposureproject.com/
+
+-0.0325607064018	http://wayback.archive-it.org/1068/20120902083352id_/http://therightsexposureproject.com/
+
+0.0	http://wayback.archive-it.org/1068/20110903032606id_/http://www.tibetanwomen.org/
+
+-0.152749490835	http://wayback.archive-it.org/1068/20121018173028id_/http://tibetanwomen.org/
+
+-0.0967413441955	http://wayback.archive-it.org/1068/20130306212209id_/http://tibetanwomen.org/
+
+0.0	http://wayback.archive-it.org/1068/20110419175908id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192839id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602213308id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602224432id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902210642id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902232516id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110903014022id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210711id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20111203020551id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20111203025138id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120302221034id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303025618id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303030106id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120602210540id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120603024027id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120603040645id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902035156id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902084430id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902103004id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202092814id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202142715id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202154441id_/https://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20130306212355id_/http://www.trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20130307013314id_/http://trcofliberia.org/
+
+0.0	http://wayback.archive-it.org/1068/20110129043404id_/http://wa7damasrya.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20110129043623id_/http://wa7damasrya.blogspot.com//
+
+0.112886048988	http://wayback.archive-it.org/1068/20110207185551id_/http://wa7damasrya.blogspot.com/
+
+0.112886048988	http://wayback.archive-it.org/1068/20110207185811id_/http://wa7damasrya.blogspot.com//
+
+-0.169861554846	http://wayback.archive-it.org/1068/20110902210706id_/http://wa7damasrya.blogspot.com/
+
+-0.169861554846	http://wayback.archive-it.org/1068/20110903054130id_/http://wa7damasrya.blogspot.com//
+
+-1.0	http://wayback.archive-it.org/1068/20120603013325id_/http://wa7damasrya.blogspot.com/
+
+-1.0	http://wayback.archive-it.org/1068/20120902035252id_/http://wa7damasrya.blogspot.com/
+
+-1.0	http://wayback.archive-it.org/1068/20120902113945id_/http://wa7damasrya.blogspot.com//
+
+-1.0	http://wayback.archive-it.org/1068/20121202132622id_/http://wa7damasrya.blogspot.com/
+
+-1.0	http://wayback.archive-it.org/1068/20121202200550id_/http://wa7damasrya.blogspot.com//
+
+-1.0	http://wayback.archive-it.org/1068/20130306212204id_/http://wa7damasrya.blogspot.com/
+
+0.0	http://wayback.archive-it.org/1068/20080602172816id_/http://woeser.middle-way.net/
+
+0.0169855944958	http://wayback.archive-it.org/1068/20080606140121id_/http://woeser.middle-way.net/
+
+-0.998924962374	http://wayback.archive-it.org/1068/20080606150632id_/http://woeser.middle-way.net//
+
+-0.998924962374	http://wayback.archive-it.org/1068/20080826172304id_/http://woeser.middle-way.net//
+
+-0.703719630187	http://wayback.archive-it.org/1068/20110422193724id_/http://woeser.middle-way.net/
+
+-0.703719630187	http://wayback.archive-it.org/1068/20110422194118id_/http://woeser.middle-way.net//
+
+-0.0120404214147	http://wayback.archive-it.org/1068/20110602192837id_/http://woeser.middle-way.net/
+
+0.00365512792948	http://wayback.archive-it.org/1068/20110603092240id_/http://woeser.middle-way.net//
+
+-0.0165555794453	http://wayback.archive-it.org/1068/20110902215729id_/http://woeser.middle-way.net/
+
+-0.0165555794453	http://wayback.archive-it.org/1068/20110903134127id_/http://woeser.middle-way.net//
+
+0.00301010535369	http://wayback.archive-it.org/1068/20111202210638id_/http://woeser.middle-way.net/
+
+0.0197806923242	http://wayback.archive-it.org/1068/20111203224213id_/http://woeser.middle-way.net//
+
+-0.722855299935	http://wayback.archive-it.org/1068/20120902035235id_/http://woeser.middle-way.net/
+
+-0.657493012255	http://wayback.archive-it.org/1068/20120904030448id_/http://woeser.middle-way.net//
+
+-0.0105353687379	http://wayback.archive-it.org/1068/20121202095728id_/http://woeser.middle-way.net/
+
+-0.31412599441	http://wayback.archive-it.org/1068/20121204172849id_/http://woeser.middle-way.net//
+
+-0.692324231348	http://wayback.archive-it.org/1068/20130307001444id_/http://woeser.middle-way.net/
+
+0.0	http://wayback.archive-it.org/1068/20090210195318id_/http://www.worecnepal.org/
+
+-0.964285714286	http://wayback.archive-it.org/1068/20120902052917id_/http://worecnepal.org/
+
+0.0	http://wayback.archive-it.org/1068/20080905195529id_/http://wozazimbabwe.org/
+
+-0.167755991285	http://wayback.archive-it.org/1068/20120416193732id_/http://wozazimbabwe.org/
+
+0.0	http://wayback.archive-it.org/1068/20111203024959id_/http://wp.cedha.net/
+
+-0.0765027322404	http://wayback.archive-it.org/1068/20120303015544id_/http://wp.cedha.net/
+
+0.0	http://wayback.archive-it.org/1068/20120603121103id_/http://www.518.org/
+
+-0.00180878552972	http://wayback.archive-it.org/1068/20120603192458id_/http://518.org/
+
+-0.0118863049096	http://wayback.archive-it.org/1068/20120903070317id_/http://518.org/
+
+0.0348837209302	http://wayback.archive-it.org/1068/20121019184307id_/http://www.518.org/
+
+0.0136950904393	http://wayback.archive-it.org/1068/20121203165903id_/http://518.org/
+
+0.0	http://wayback.archive-it.org/1068/20090514154017id_/http://www.aappb.org/
+
+-0.49530075188	http://wayback.archive-it.org/1068/20100223153726id_/http://www.aappb.org/
+
+-0.486842105263	http://wayback.archive-it.org/1068/20100602185840id_/http://www.aappb.org/
+
+-0.507518796992	http://wayback.archive-it.org/1068/20100902185357id_/http://www.aappb.org/
+
+-0.65977443609	http://wayback.archive-it.org/1068/20101202190820id_/http://www.aappb.org/
+
+-0.399436090226	http://wayback.archive-it.org/1068/20110302191947id_/http://www.aappb.org/
+
+-0.402255639098	http://wayback.archive-it.org/1068/20110902223418id_/http://www.aappb.org/
+
+-0.334586466165	http://wayback.archive-it.org/1068/20111202210622id_/http://www.aappb.org/
+
+-0.375	http://wayback.archive-it.org/1068/20120302210437id_/http://www.aappb.org/
+
+-0.195488721805	http://wayback.archive-it.org/1068/20120602210548id_/http://www.aappb.org/
+
+-0.0479323308271	http://wayback.archive-it.org/1068/20120902035156id_/http://www.aappb.org/
+
+-0.431390977444	http://wayback.archive-it.org/1068/20130306212206id_/http://www.aappb.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602213007id_/http://www.abrandh.org.br/
+
+-0.0606741573034	http://wayback.archive-it.org/1068/20110902223322id_/http://www.abrandh.org.br/
+
+0.0719101123596	http://wayback.archive-it.org/1068/20111202222106id_/http://www.abrandh.org.br/
+
+-0.00449438202247	http://wayback.archive-it.org/1068/20120302212436id_/http://www.abrandh.org.br/
+
+0.0404494382022	http://wayback.archive-it.org/1068/20120602210550id_/http://www.abrandh.org.br/
+
+-0.0112359550562	http://wayback.archive-it.org/1068/20120902035220id_/http://www.abrandh.org.br/
+
+-0.00449438202247	http://wayback.archive-it.org/1068/20130306212209id_/http://www.abrandh.org.br/
+
+0.0	http://wayback.archive-it.org/1068/20080515181405id_/http://www.abuelas.org.ar/
+
+0.0406824146982	http://wayback.archive-it.org/1068/20100422210606id_/http://www.abuelas.org.ar/
+
+0.134733158355	http://wayback.archive-it.org/1068/20100602185843id_/http://www.abuelas.org.ar/
+
+-0.0249343832021	http://wayback.archive-it.org/1068/20100902185400id_/http://www.abuelas.org.ar/
+
+0.0603674540682	http://wayback.archive-it.org/1068/20101202190817id_/http://www.abuelas.org.ar/
+
+-0.207349081365	http://wayback.archive-it.org/1068/20110302191954id_/http://www.abuelas.org.ar/
+
+-0.145231846019	http://wayback.archive-it.org/1068/20130306220154id_/http://www.abuelas.org.ar/
+
+0.0	http://wayback.archive-it.org/1068/20100510173253id_/http://www.accesstojustice-ng.org/
+
+-0.98775671406	http://wayback.archive-it.org/1068/20100510173332id_/https://www.accesstojustice-ng.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.accesstojustice-ng.org/
+
+-0.98775671406	http://wayback.archive-it.org/1068/20100602185938id_/https://www.accesstojustice-ng.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902185358id_/http://www.accesstojustice-ng.org/
+
+-0.98775671406	http://wayback.archive-it.org/1068/20100902191553id_/https://www.accesstojustice-ng.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202190818id_/http://www.accesstojustice-ng.org/
+
+-0.98775671406	http://wayback.archive-it.org/1068/20101202191544id_/https://www.accesstojustice-ng.org/
+
+0.0	http://wayback.archive-it.org/1068/20101221161732id_/http://www.acdauk.org.uk/
+
+-0.373297002725	http://wayback.archive-it.org/1068/20110302192023id_/http://www.acdauk.org.uk/
+
+-0.893732970027	http://wayback.archive-it.org/1068/20110902210644id_/http://www.acdauk.org.uk/
+
+0.0	http://wayback.archive-it.org/1068/20111202210845id_/http://www.acdhrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20120302210451id_/http://www.acdhrs.org/
+
+-0.0759493670886	http://wayback.archive-it.org/1068/20120603011030id_/http://www.acdhrs.org/
+
+-0.0886075949367	http://wayback.archive-it.org/1068/20120902035204id_/http://www.acdhrs.org/
+
+-0.0379746835443	http://wayback.archive-it.org/1068/20121202111610id_/http://www.acdhrs.org/
+
+-0.0379746835443	http://wayback.archive-it.org/1068/20121203041047id_/http://acdhrs.org/
+
+-0.113924050633	http://wayback.archive-it.org/1068/20130306232313id_/http://www.acdhrs.org/
+
+-0.113924050633	http://wayback.archive-it.org/1068/20130307065356id_/http://acdhrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20100618170056id_/http://www.achr.org/en/index.html
+
+0.0	http://wayback.archive-it.org/1068/20101116152551id_/http://www.achr.org/en/index.html
+
+0.0	http://wayback.archive-it.org/1068/20101124200749id_/http://www.achr.org/en/index.html
+
+0.0	http://wayback.archive-it.org/1068/20101217041440id_/http://www.achr.org/en/index.html
+
+0.0	http://wayback.archive-it.org/1068/20110302222124id_/http://www.achr.org/en/index.html
+
+0.0	http://wayback.archive-it.org/1068/20100629171247id_/http://www.achrs.org/
+
+-0.0470788428815	http://wayback.archive-it.org/1068/20100902185358id_/http://www.achrs.org/
+
+-0.045377197958	http://wayback.archive-it.org/1068/20101202190818id_/http://www.achrs.org/
+
+-0.045377197958	http://wayback.archive-it.org/1068/20101204065936id_/http://www.achrs.org//
+
+0.109472490074	http://wayback.archive-it.org/1068/20110302192008id_/http://www.achrs.org/
+
+0.108338060125	http://wayback.archive-it.org/1068/20110304074518id_/http://www.achrs.org//
+
+0.148043108338	http://wayback.archive-it.org/1068/20110902210646id_/http://www.achrs.org/
+
+0.0589903573454	http://wayback.archive-it.org/1068/20111202210653id_/http://www.achrs.org/
+
+0.00340328984685	http://wayback.archive-it.org/1068/20120302210801id_/http://www.achrs.org/
+
+-0.0221213840045	http://wayback.archive-it.org/1068/20120602220533id_/http://www.achrs.org/
+
+-0.000567214974475	http://wayback.archive-it.org/1068/20120902035225id_/http://www.achrs.org/
+
+-0.0538854225752	http://wayback.archive-it.org/1068/20121202092802id_/http://www.achrs.org/
+
+-0.0175836642087	http://wayback.archive-it.org/1068/20130307002313id_/http://www.achrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20100319225820id_/http://www.achrweb.org/
+
+-0.0721112076455	http://wayback.archive-it.org/1068/20100602231720id_/http://www.achrweb.org/
+
+-0.169128294237	http://wayback.archive-it.org/1068/20100902222337id_/http://www.achrweb.org/
+
+-0.109759629308	http://wayback.archive-it.org/1068/20101202211119id_/http://www.achrweb.org/
+
+0.0524181870837	http://wayback.archive-it.org/1068/20110302195519id_/http://www.achrweb.org/
+
+0.00868809730669	http://wayback.archive-it.org/1068/20110602200104id_/http://www.achrweb.org/
+
+0.117578916884	http://wayback.archive-it.org/1068/20110902214312id_/http://www.achrweb.org/
+
+0.145670431509	http://wayback.archive-it.org/1068/20111203011203id_/http://www.achrweb.org/
+
+-0.0243266724587	http://wayback.archive-it.org/1068/20120603075816id_/http://www.achrweb.org/
+
+0.0	http://wayback.archive-it.org/1068/20120322183129id_/http://www.acijlp.org/
+
+0.0224525043178	http://wayback.archive-it.org/1068/20120602210546id_/http://www.acijlp.org/
+
+-0.594127806563	http://wayback.archive-it.org/1068/20120902035254id_/http://www.acijlp.org/
+
+-0.0708117443869	http://wayback.archive-it.org/1068/20121202092803id_/http://www.acijlp.org/
+
+-0.0915371329879	http://wayback.archive-it.org/1068/20130306212206id_/http://www.acijlp.org/
+
+0.0	http://wayback.archive-it.org/1068/20121019184307id_/http://www.acprahr.org/
+
+0.0135279458882	http://wayback.archive-it.org/1068/20130306212207id_/http://www.acprahr.org/
+
+0.0	http://wayback.archive-it.org/1068/20111107191152id_/http://www.acrr.ro/
+
+0.0247933884298	http://wayback.archive-it.org/1068/20120302210439id_/http://www.acrr.ro/
+
+0.0358126721763	http://wayback.archive-it.org/1068/20120602210535id_/http://www.acrr.ro/
+
+0.0550964187328	http://wayback.archive-it.org/1068/20120902035206id_/http://www.acrr.ro/
+
+0.0440771349862	http://wayback.archive-it.org/1068/20121202092755id_/http://www.acrr.ro/
+
+0.0440771349862	http://wayback.archive-it.org/1068/20130306212204id_/http://www.acrr.ro/
+
+0.0	http://wayback.archive-it.org/1068/20121020140017id_/http://www.addameer.org/
+
+-0.00202429149798	http://wayback.archive-it.org/1068/20130311180506id_/http://www.addameer.org/
+
+0.0	http://wayback.archive-it.org/1068/20090210190543id_/http://www.afapredesa.org/index.php
+
+0.142857142857	http://wayback.archive-it.org/1068/20100223153725id_/http://www.afapredesa.org/index.php
+
+0.126373626374	http://wayback.archive-it.org/1068/20100602185839id_/http://www.afapredesa.org/index.php
+
+0.104395604396	http://wayback.archive-it.org/1068/20100902185357id_/http://www.afapredesa.org/index.php
+
+0.104395604396	http://wayback.archive-it.org/1068/20101202190817id_/http://www.afapredesa.org/index.php
+
+0.0934065934066	http://wayback.archive-it.org/1068/20111202210619id_/http://www.afapredesa.org/index.php
+
+0.0	http://wayback.archive-it.org/1068/20090216194224id_/http://www.africaidp.org/
+
+0.0	http://wayback.archive-it.org/1068/20100223153731id_/http://www.africaidp.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185845id_/http://www.africaidp.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902185409id_/http://www.africaidp.org/
+
+0.0	http://wayback.archive-it.org/1068/20100618170056id_/http://www.africancourtcoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20110129043404id_/http://www.afteegypt.org/
+
+0.0	http://wayback.archive-it.org/1068/20110207185551id_/http://www.afteegypt.org/
+
+-0.0627147766323	http://wayback.archive-it.org/1068/20110302191959id_/http://www.afteegypt.org/
+
+0.036941580756	http://wayback.archive-it.org/1068/20110602192841id_/http://www.afteegypt.org/
+
+-0.0644329896907	http://wayback.archive-it.org/1068/20111202210619id_/http://www.afteegypt.org/
+
+0.0292096219931	http://wayback.archive-it.org/1068/20120303021316id_/http://www.afteegypt.org/
+
+-0.0395189003436	http://wayback.archive-it.org/1068/20120322183129id_/http://www.afteegypt.org/
+
+0.112542955326	http://wayback.archive-it.org/1068/20120602210545id_/http://www.afteegypt.org/
+
+0.0146048109966	http://wayback.archive-it.org/1068/20120902035157id_/http://www.afteegypt.org/
+
+-0.211340206186	http://wayback.archive-it.org/1068/20121202092814id_/http://www.afteegypt.org/
+
+-0.0807560137457	http://wayback.archive-it.org/1068/20130306224727id_/http://www.afteegypt.org/
+
+-0.0807560137457	http://wayback.archive-it.org/1068/20130307013946id_/http://afteegypt.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210620id_/http://www.aghauganda.org/
+
+0.0	http://wayback.archive-it.org/1068/20120302210513id_/http://www.aghauganda.org/
+
+0.0	http://wayback.archive-it.org/1068/20120602210551id_/http://www.aghauganda.org/
+
+0.0376470588235	http://wayback.archive-it.org/1068/20120902035202id_/http://www.aghauganda.org/
+
+0.0376470588235	http://wayback.archive-it.org/1068/20121202092754id_/http://www.aghauganda.org/
+
+0.0	http://wayback.archive-it.org/1068/20090216194221id_/http://www.ahrchk.net/index.php
+
+0.0629921259843	http://wayback.archive-it.org/1068/20100223153726id_/http://www.ahrchk.net/index.php
+
+0.0774278215223	http://wayback.archive-it.org/1068/20100319192257id_/http://www.ahrchk.net/index.php
+
+0.116797900262	http://wayback.archive-it.org/1068/20110302203720id_/http://www.ahrchk.net/index.php
+
+0.0918635170604	http://wayback.archive-it.org/1068/20110303083458id_/http://www.ahrchk.net/index.php/
+
+-0.969816272966	http://wayback.archive-it.org/1068/20110603012928id_/http://www.ahrchk.net/index.php
+
+-0.969816272966	http://wayback.archive-it.org/1068/20110903050906id_/http://www.ahrchk.net/index.php
+
+0.0	http://wayback.archive-it.org/1068/20110207185551id_/http://www.ahrla.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191949id_/http://www.ahrla.org/
+
+-0.112226277372	http://wayback.archive-it.org/1068/20110602200229id_/http://www.ahrla.org/
+
+-0.114051094891	http://wayback.archive-it.org/1068/20110902210643id_/http://www.ahrla.org/
+
+0.0	http://wayback.archive-it.org/1068/20100413140140id_/http://www.aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20100902185358id_/http://www.aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20101202190815id_/http://www.aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20110302191949id_/http://www.aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20110602193456id_/http://www.aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20110902215005id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20111202220302id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20120302210436id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20120303015503id_/http://aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20120602233854id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20120603043558id_/http://aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20120902072256id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20120902111843id_/http://aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20121202092754id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20121202142226id_/http://aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20130306212204id_/http://www.aihrc.org.af/
+
+-0.692307692308	http://wayback.archive-it.org/1068/20130307012457id_/http://aihrc.org.af/
+
+0.0	http://wayback.archive-it.org/1068/20110602233016id_/http://www.aivl.be/
+
+0.00333333333333	http://wayback.archive-it.org/1068/20110903034303id_/http://www.aivl.be/
+
+0.0233333333333	http://wayback.archive-it.org/1068/20111203092825id_/http://www.aivl.be/
+
+0.0133333333333	http://wayback.archive-it.org/1068/20120303083819id_/http://www.aivl.be/
+
+-0.116666666667	http://wayback.archive-it.org/1068/20130306215725id_/http://www.aivl.be/
+
+0.0	http://wayback.archive-it.org/1068/20121018173032id_/http://www.aldhom.org/
+
+0.0	http://wayback.archive-it.org/1068/20130306212216id_/http://www.aldhom.org/
+
+0.0	http://wayback.archive-it.org/1068/20100819195209id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902185359id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202190816id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191951id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192842id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902210700id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210619id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303005544id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20120603011215id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902035254id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202092827id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20130306212207id_/http://www.algeria-watch.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185843id_/http://www.algerie-laddh.org/
+
+0.0148367952522	http://wayback.archive-it.org/1068/20100902185357id_/http://www.algerie-laddh.org/
+
+0.100890207715	http://wayback.archive-it.org/1068/20101202190821id_/http://www.algerie-laddh.org/
+
+0.0178041543027	http://wayback.archive-it.org/1068/20110302191948id_/http://www.algerie-laddh.org/
+
+0.0296735905045	http://wayback.archive-it.org/1068/20110602200230id_/http://www.algerie-laddh.org/
+
+0.0741839762611	http://wayback.archive-it.org/1068/20110902210644id_/http://www.algerie-laddh.org/
+
+0.0	http://wayback.archive-it.org/1068/20080813155610id_/http://www.alhaq.org/
+
+0.0	http://wayback.archive-it.org/1068/20080819215111id_/http://www.alhaq.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302192018id_/http://www.alrc.net/
+
+0.0	http://wayback.archive-it.org/1068/20080905193651id_/http://www.amaniforum.org/
+
+0.0	http://wayback.archive-it.org/1068/20110317183255id_/http://www.amnesty.at/
+
+-0.983777520278	http://wayback.archive-it.org/1068/20110602192842id_/http://www.amnesty.at/
+
+-0.983777520278	http://wayback.archive-it.org/1068/20110602233005id_/http://www.amnesty.at/
+
+-0.544611819235	http://wayback.archive-it.org/1068/20120902035202id_/http://www.amnesty.at/
+
+-0.565469293163	http://wayback.archive-it.org/1068/20121202092942id_/http://www.amnesty.at/
+
+-0.570683661645	http://wayback.archive-it.org/1068/20130306233558id_/http://www.amnesty.at/
+
+0.0	http://wayback.archive-it.org/1068/20110311212740id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110311214834id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110312212220id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110312214402id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110422193724id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110422195834id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110602192838id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110602235336id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110602235453id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110902210703id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110903025058id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20111202210622id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20111203041919id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20120302210618id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20120303035011id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20120602210535id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20120603045802id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20120902035201id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20120902112004id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20121202133101id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20121202193834id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20130307002313id_/http://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20130307154332id_/https://www.amnesty.ch/
+
+0.0	http://wayback.archive-it.org/1068/20110317183259id_/http://www.amnesty.cz/
+
+-0.0910041841004	http://wayback.archive-it.org/1068/20110602200239id_/http://www.amnesty.cz/
+
+-0.0910041841004	http://wayback.archive-it.org/1068/20110602235335id_/http://www.amnesty.cz/
+
+-0.106694560669	http://wayback.archive-it.org/1068/20110902210648id_/http://www.amnesty.cz/
+
+-0.0564853556485	http://wayback.archive-it.org/1068/20111202210721id_/http://www.amnesty.cz/
+
+0.0397489539749	http://wayback.archive-it.org/1068/20120302210519id_/http://www.amnesty.cz/
+
+-0.0502092050209	http://wayback.archive-it.org/1068/20120603013330id_/http://www.amnesty.cz/
+
+-0.19769874477	http://wayback.archive-it.org/1068/20120902035222id_/http://www.amnesty.cz/
+
+-0.358786610879	http://wayback.archive-it.org/1068/20121202092803id_/http://www.amnesty.cz/
+
+-0.307531380753	http://wayback.archive-it.org/1068/20130306212214id_/http://www.amnesty.cz/
+
+0.0	http://wayback.archive-it.org/1068/20110317183254id_/http://www.amnesty.dk/
+
+0.0	http://wayback.archive-it.org/1068/20110317183619id_/https://www.amnesty.dk/
+
+0.06292749658	http://wayback.archive-it.org/1068/20110602192956id_/http://www.amnesty.dk/
+
+0.06292749658	http://wayback.archive-it.org/1068/20110602222918id_/https://www.amnesty.dk/
+
+0.06292749658	http://wayback.archive-it.org/1068/20110602233011id_/http://www.amnesty.dk/
+
+0.0766073871409	http://wayback.archive-it.org/1068/20110902210644id_/http://www.amnesty.dk/
+
+0.0766073871409	http://wayback.archive-it.org/1068/20110903001638id_/https://www.amnesty.dk/
+
+-0.0861833105335	http://wayback.archive-it.org/1068/20130306212214id_/http://www.amnesty.dk/
+
+-0.0861833105335	http://wayback.archive-it.org/1068/20130306225449id_/https://www.amnesty.dk/
+
+-0.0437756497948	http://wayback.archive-it.org/1068/20130307012339id_/http://amnesty.dk/
+
+0.0	http://wayback.archive-it.org/1068/20101202220119id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20110303001847id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20110602235342id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20110603011216id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20110715194058id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20110902210647id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20111202223507id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20120302210440id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20120602221424id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20120902035202id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20121202092803id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20130306212210id_/http://www.amnesty.eu/
+
+0.0	http://wayback.archive-it.org/1068/20110317183254id_/http://www.amnesty.fi/
+
+0.0	http://wayback.archive-it.org/1068/20110317183254id_/http://www.amnesty.fo/
+
+-0.533190578158	http://wayback.archive-it.org/1068/20110602192856id_/http://www.amnesty.fo/
+
+-0.533190578158	http://wayback.archive-it.org/1068/20110602235302id_/http://www.amnesty.fo/
+
+-0.461099214847	http://wayback.archive-it.org/1068/20110902223322id_/http://www.amnesty.fo/
+
+-0.811563169165	http://wayback.archive-it.org/1068/20111202210830id_/http://www.amnesty.fo/
+
+-0.866523911492	http://wayback.archive-it.org/1068/20120302210440id_/http://www.amnesty.fo/
+
+-0.850107066381	http://wayback.archive-it.org/1068/20120602210534id_/http://www.amnesty.fo/
+
+-0.518915060671	http://wayback.archive-it.org/1068/20120902075938id_/http://www.amnesty.fo/
+
+-0.561741613133	http://wayback.archive-it.org/1068/20121202092815id_/http://www.amnesty.fo/
+
+-0.515346181299	http://wayback.archive-it.org/1068/20130306212204id_/http://www.amnesty.fo/
+
+0.0	http://wayback.archive-it.org/1068/20110221193555id_/http://www.amnesty.fr/
+
+0.0928381962865	http://wayback.archive-it.org/1068/20110302210317id_/http://www.amnesty.fr/
+
+0.0	http://wayback.archive-it.org/1068/20110221190405id_/http://www.amnesty.is/
+
+0.0	http://wayback.archive-it.org/1068/20110221190533id_/https://www.amnesty.is/
+
+0.0	http://wayback.archive-it.org/1068/20110221190710id_/http://www.amnesty.is//
+
+0.0194805194805	http://wayback.archive-it.org/1068/20110602192839id_/http://www.amnesty.is/
+
+0.0194805194805	http://wayback.archive-it.org/1068/20110602220607id_/https://www.amnesty.is/
+
+0.0194805194805	http://wayback.archive-it.org/1068/20110602235304id_/http://www.amnesty.is/
+
+-0.0974025974026	http://wayback.archive-it.org/1068/20110902210646id_/http://www.amnesty.is/
+
+-0.0974025974026	http://wayback.archive-it.org/1068/20110903010335id_/https://www.amnesty.is/
+
+-0.0292207792208	http://wayback.archive-it.org/1068/20111202210724id_/http://www.amnesty.is/
+
+-0.0292207792208	http://wayback.archive-it.org/1068/20111203021519id_/https://www.amnesty.is/
+
+0.0422077922078	http://wayback.archive-it.org/1068/20120302210437id_/http://www.amnesty.is/
+
+0.0422077922078	http://wayback.archive-it.org/1068/20120303020452id_/https://www.amnesty.is/
+
+0.0	http://wayback.archive-it.org/1068/20110602192857id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20110602235307id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20110902225844id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20110920214329id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20111202211241id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20120302224303id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20120603020418id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20120902035207id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20121202092759id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20130306212206id_/http://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20130306215153id_/https://www.amnesty.it/
+
+0.0	http://wayback.archive-it.org/1068/20110311212740id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20110602192845id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20110602235309id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20110902210646id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20111202210619id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20120302210436id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20120602210536id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20120902035206id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20121202092941id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20130306212205id_/http://www.amnesty.lu/
+
+0.0	http://wayback.archive-it.org/1068/20110210211938id_/http://www.amnesty.md/
+
+-0.559498956159	http://wayback.archive-it.org/1068/20110602192855id_/http://www.amnesty.md/
+
+-0.496868475992	http://wayback.archive-it.org/1068/20110902210648id_/http://www.amnesty.md/
+
+-0.269311064718	http://wayback.archive-it.org/1068/20111202210639id_/http://www.amnesty.md/
+
+-0.540709812109	http://wayback.archive-it.org/1068/20120302210445id_/http://www.amnesty.md/
+
+-0.450939457203	http://wayback.archive-it.org/1068/20120602210537id_/http://www.amnesty.md/
+
+-0.275574112735	http://wayback.archive-it.org/1068/20120902035205id_/http://www.amnesty.md/
+
+-0.384133611691	http://wayback.archive-it.org/1068/20121202092818id_/http://www.amnesty.md/
+
+-0.118997912317	http://wayback.archive-it.org/1068/20130306212408id_/http://www.amnesty.md/
+
+0.0	http://wayback.archive-it.org/1068/20100903014908id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20101202232621id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20110303020913id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20110602232606id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20110902210654id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20111202222113id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20120302210445id_/http://www.amnesty.mn/
+
+0.0	http://wayback.archive-it.org/1068/20110311212740id_/http://www.amnesty.nl/
+
+0.0	http://wayback.archive-it.org/1068/20110311213745id_/https://www.amnesty.nl/
+
+0.0	http://wayback.archive-it.org/1068/20110311213948id_/http://www.amnesty.nl/?PHPSESSID=cdad403a170c2c68d3476c491279bcf9
+
+-0.179894179894	http://wayback.archive-it.org/1068/20110602192839id_/http://www.amnesty.nl/
+
+-0.179894179894	http://wayback.archive-it.org/1068/20110602215623id_/https://www.amnesty.nl/
+
+-0.179894179894	http://wayback.archive-it.org/1068/20110602235300id_/http://www.amnesty.nl/
+
+0.0	http://wayback.archive-it.org/1068/20110317183307id_/http://www.amnesty.org.ar/
+
+-0.0444763271162	http://wayback.archive-it.org/1068/20110405170927id_/http://www.amnesty.org.ar/
+
+-0.974175035868	http://wayback.archive-it.org/1068/20110602192956id_/http://www.amnesty.org.ar/
+
+-0.974175035868	http://wayback.archive-it.org/1068/20110602233002id_/http://www.amnesty.org.ar/
+
+-0.974175035868	http://wayback.archive-it.org/1068/20110902210643id_/http://www.amnesty.org.ar/
+
+-0.982783357245	http://wayback.archive-it.org/1068/20111202210622id_/http://www.amnesty.org.ar/
+
+-0.506456241033	http://wayback.archive-it.org/1068/20120302210442id_/http://www.amnesty.org.ar/
+
+-0.479196556671	http://wayback.archive-it.org/1068/20120603233207id_/http://www.amnesty.org.ar/
+
+-0.530846484935	http://wayback.archive-it.org/1068/20120903001752id_/http://www.amnesty.org.ar/
+
+0.0	http://wayback.archive-it.org/1068/20100223153726id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185841id_/http://www.arabhra.org/
+
+-0.190476190476	http://wayback.archive-it.org/1068/20100902185401id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202190818id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191951id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602200006id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902210711id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210623id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20120302212435id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20120322183132id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20120323171855id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20120602221425id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902063241id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202092817id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20130306212208id_/http://www.arabhra.org/
+
+0.0	http://wayback.archive-it.org/1068/20100629171247id_/http://www.ardhd.org/
+
+0.0810488676996	http://wayback.archive-it.org/1068/20100902185359id_/http://www.ardhd.org/
+
+0.057210965435	http://wayback.archive-it.org/1068/20101202190830id_/http://www.ardhd.org/
+
+0.0429082240763	http://wayback.archive-it.org/1068/20110302191954id_/http://www.ardhd.org/
+
+0.0786650774732	http://wayback.archive-it.org/1068/20110602203049id_/http://www.ardhd.org/
+
+0.0405244338498	http://wayback.archive-it.org/1068/20110902210646id_/http://www.ardhd.org/
+
+0.121573301549	http://wayback.archive-it.org/1068/20111202210624id_/http://www.ardhd.org/
+
+0.0	http://wayback.archive-it.org/1068/20100413152515id_/http://www.article19.org/
+
+-0.0702875399361	http://wayback.archive-it.org/1068/20100602204204id_/http://www.article19.org/
+
+0.0990415335463	http://wayback.archive-it.org/1068/20110302204926id_/http://www.article19.org/
+
+-0.88178913738	http://wayback.archive-it.org/1068/20120120080323id_/https://www.article19.org/
+
+-0.88178913738	http://wayback.archive-it.org/1068/20120304031017id_/https://www.article19.org/
+
+-0.88178913738	http://wayback.archive-it.org/1068/20120604205018id_/https://www.article19.org/
+
+0.0	http://wayback.archive-it.org/1068/20090514154017id_/http://www.asiapacificforum.net/
+
+-0.125799573561	http://wayback.archive-it.org/1068/20100223153726id_/http://www.asiapacificforum.net/
+
+-0.132196162047	http://wayback.archive-it.org/1068/20100602185842id_/http://www.asiapacificforum.net/
+
+-0.130063965885	http://wayback.archive-it.org/1068/20100902185358id_/http://www.asiapacificforum.net/
+
+-0.155650319829	http://wayback.archive-it.org/1068/20101202190816id_/http://www.asiapacificforum.net/
+
+-0.168443496802	http://wayback.archive-it.org/1068/20110302191949id_/http://www.asiapacificforum.net/
+
+-0.106609808102	http://wayback.archive-it.org/1068/20110602192838id_/http://www.asiapacificforum.net/
+
+0.100213219616	http://wayback.archive-it.org/1068/20110902210648id_/http://www.asiapacificforum.net/
+
+0.0788912579957	http://wayback.archive-it.org/1068/20111202210650id_/http://www.asiapacificforum.net/
+
+0.0660980810235	http://wayback.archive-it.org/1068/20120302210438id_/http://www.asiapacificforum.net/
+
+0.0767590618337	http://wayback.archive-it.org/1068/20120602210534id_/http://www.asiapacificforum.net/
+
+0.119402985075	http://wayback.archive-it.org/1068/20120902035158id_/http://www.asiapacificforum.net/
+
+0.121535181237	http://wayback.archive-it.org/1068/20121202092755id_/http://www.asiapacificforum.net/
+
+0.0191897654584	http://wayback.archive-it.org/1068/20130306234237id_/http://www.asiapacificforum.net/
+
+0.0	http://wayback.archive-it.org/1068/20100618170106id_/http://www.cgb.nl/
+
+0.111961722488	http://wayback.archive-it.org/1068/20100902185408id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20110302191953id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20110602192841id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20110902210648id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20111202210624id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20120303011248id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20120602210550id_/http://www.cgb.nl/
+
+-0.97990430622	http://wayback.archive-it.org/1068/20120902035157id_/http://www.cgb.nl/
+
+-0.991387559809	http://wayback.archive-it.org/1068/20121202092817id_/http://www.cgb.nl/
+
+-0.991387559809	http://wayback.archive-it.org/1068/20130306232314id_/http://www.cgb.nl/
+
+0.0	http://wayback.archive-it.org/1068/20110809165130id_/http://www.child-soldiers.org/
+
+0.0	http://wayback.archive-it.org/1068/20110816221905id_/http://www.child-soldiers.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210622id_/http://www.child-soldiers.org/
+
+0.0	http://wayback.archive-it.org/1068/20120302210522id_/http://www.child-soldiers.org/
+
+0.0	http://wayback.archive-it.org/1068/20120603021433id_/http://www.child-soldiers.org/
+
+0.0	http://wayback.archive-it.org/1068/20090521151338id_/http://www.chipsites.com/derechos/index_esp.html
+
+0.0	http://wayback.archive-it.org/1068/20100223153727id_/http://www.chipsites.com/derechos/index_esp.html
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.chipsites.com/derechos/index_esp.html
+
+0.0	http://wayback.archive-it.org/1068/20100902185405id_/http://www.chipsites.com/derechos/index_esp.html
+
+0.0	http://wayback.archive-it.org/1068/20101202190823id_/http://www.chipsites.com/derechos/index_esp.html
+
+0.0	http://wayback.archive-it.org/1068/20100618170056id_/http://www.chr.gov.ph/
+
+-0.0564042303173	http://wayback.archive-it.org/1068/20100902185357id_/http://www.chr.gov.ph/
+
+-0.00470035252644	http://wayback.archive-it.org/1068/20101202190817id_/http://www.chr.gov.ph/
+
+0.00117508813161	http://wayback.archive-it.org/1068/20110302192032id_/http://www.chr.gov.ph/
+
+-0.0152761457109	http://wayback.archive-it.org/1068/20110602192916id_/http://www.chr.gov.ph/
+
+-0.00117508813161	http://wayback.archive-it.org/1068/20110902210648id_/http://www.chr.gov.ph/
+
+0.0	http://wayback.archive-it.org/1068/20111202210624id_/http://www.chr.gov.ph/
+
+0.0	http://wayback.archive-it.org/1068/20120302210458id_/http://www.chr.gov.ph/
+
+-0.0740305522914	http://wayback.archive-it.org/1068/20120603014325id_/http://www.chr.gov.ph/
+
+-0.112808460635	http://wayback.archive-it.org/1068/20120902044943id_/http://www.chr.gov.ph/
+
+0.0258519388954	http://wayback.archive-it.org/1068/20121202132627id_/http://www.chr.gov.ph/
+
+0.0	http://wayback.archive-it.org/1068/20100510173252id_/http://www.chragg.go.tz/
+
+-0.115987460815	http://wayback.archive-it.org/1068/20100602185842id_/http://www.chragg.go.tz/
+
+-0.103448275862	http://wayback.archive-it.org/1068/20100902185358id_/http://www.chragg.go.tz/
+
+-0.115987460815	http://wayback.archive-it.org/1068/20101202190818id_/http://www.chragg.go.tz/
+
+-0.0626959247649	http://wayback.archive-it.org/1068/20120302221034id_/http://www.chragg.go.tz/
+
+-0.175548589342	http://wayback.archive-it.org/1068/20120602210536id_/http://www.chragg.go.tz/
+
+-0.175548589342	http://wayback.archive-it.org/1068/20120603023542id_/http://chragg.go.tz/
+
+-0.981191222571	http://wayback.archive-it.org/1068/20120902035202id_/http://www.chragg.go.tz/
+
+0.0	http://wayback.archive-it.org/1068/20100413152507id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20100510173253id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20100902185357id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20101202190818id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20110302191955id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20110602192845id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20110902210642id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20111202210619id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20120302210436id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20120602233853id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20120902035156id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20121202111402id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20130306231638id_/http://www.chrc-ccdp.ca/
+
+0.0	http://wayback.archive-it.org/1068/20090515160628id_/http://www.cidct.org.ua/en/
+
+0.0	http://wayback.archive-it.org/1068/20100223153726id_/http://www.cidct.org.ua/en/
+
+0.0	http://wayback.archive-it.org/1068/20100319192258id_/http://www.cidct.org.ua/en/
+
+0.0	http://wayback.archive-it.org/1068/20100602185906id_/http://www.cidct.org.ua/en/
+
+0.0	http://wayback.archive-it.org/1068/20100902185424id_/http://www.cidct.org.ua/en/
+
+0.0	http://wayback.archive-it.org/1068/20101202190840id_/http://www.cidct.org.ua/en/
+
+0.0	http://wayback.archive-it.org/1068/20100618170056id_/http://www.cihrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191950id_/http://www.cihrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192856id_/http://www.cihrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902210647id_/http://www.cihrs.org/
+
+0.0	http://wayback.archive-it.org/1068/20080813155610id_/http://www.cimi.org.br/
+
+-0.016501650165	http://wayback.archive-it.org/1068/20080819215112id_/http://www.cimi.org.br/
+
+0.029702970297	http://wayback.archive-it.org/1068/20110602224334id_/http://www.cimi.org.br/
+
+-0.16501650165	http://wayback.archive-it.org/1068/20110903015022id_/http://www.cimi.org.br/
+
+-0.160066006601	http://wayback.archive-it.org/1068/20120302210451id_/http://www.cimi.org.br/
+
+-0.160066006601	http://wayback.archive-it.org/1068/20120602210535id_/http://www.cimi.org.br/
+
+-0.16501650165	http://wayback.archive-it.org/1068/20120902035202id_/http://www.cimi.org.br/
+
+-0.160066006601	http://wayback.archive-it.org/1068/20121202130526id_/http://www.cimi.org.br/
+
+-0.16501650165	http://wayback.archive-it.org/1068/20130306212333id_/http://www.cimi.org.br/
+
+0.0	http://wayback.archive-it.org/1068/20100223154548id_/http://www.nearinternational.org/
+
+-0.132387706856	http://wayback.archive-it.org/1068/20100319193404id_/http://www.nearinternational.org/
+
+0.127659574468	http://wayback.archive-it.org/1068/20100602192008id_/http://www.nearinternational.org/
+
+0.101654846336	http://wayback.archive-it.org/1068/20120326200216id_/http://www.nearinternational.org/
+
+-0.0401891252955	http://wayback.archive-it.org/1068/20120602210559id_/http://www.nearinternational.org/
+
+-0.0401891252955	http://wayback.archive-it.org/1068/20120902035254id_/http://www.nearinternational.org/
+
+-0.0401891252955	http://wayback.archive-it.org/1068/20121202110138id_/http://www.nearinternational.org/
+
+-0.0401891252955	http://wayback.archive-it.org/1068/20130306212426id_/http://www.nearinternational.org/
+
+0.0	http://wayback.archive-it.org/1068/20110603094239id_/http://www.ngopulse.org/
+
+-0.215311004785	http://wayback.archive-it.org/1068/20110903035314id_/http://www.ngopulse.org/
+
+-0.167464114833	http://wayback.archive-it.org/1068/20130306212214id_/http://www.ngopulse.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510173253id_/http://www.nhrcnepal.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510173323id_/http://www.nhrcnepal.org//
+
+0.0041067761807	http://wayback.archive-it.org/1068/20100602185840id_/http://www.nhrcnepal.org/
+
+0.0041067761807	http://wayback.archive-it.org/1068/20100602185917id_/http://www.nhrcnepal.org//
+
+0.041067761807	http://wayback.archive-it.org/1068/20100902185359id_/http://www.nhrcnepal.org/
+
+0.041067761807	http://wayback.archive-it.org/1068/20100902185456id_/http://www.nhrcnepal.org//
+
+0.0554414784394	http://wayback.archive-it.org/1068/20101202190818id_/http://www.nhrcnepal.org/
+
+0.0554414784394	http://wayback.archive-it.org/1068/20101202190902id_/http://www.nhrcnepal.org//
+
+0.0595482546201	http://wayback.archive-it.org/1068/20110302191955id_/http://www.nhrcnepal.org/
+
+0.0595482546201	http://wayback.archive-it.org/1068/20110302192107id_/http://www.nhrcnepal.org//
+
+0.135523613963	http://wayback.archive-it.org/1068/20110602192841id_/http://www.nhrcnepal.org/
+
+0.135523613963	http://wayback.archive-it.org/1068/20110602192932id_/http://www.nhrcnepal.org//
+
+0.125256673511	http://wayback.archive-it.org/1068/20120302210638id_/http://www.nhrcnepal.org/
+
+0.125256673511	http://wayback.archive-it.org/1068/20120302211746id_/http://www.nhrcnepal.org//
+
+-0.170431211499	http://wayback.archive-it.org/1068/20120602210917id_/http://www.nhrcnepal.org/
+
+-0.23819301848	http://wayback.archive-it.org/1068/20120902045001id_/http://www.nhrcnepal.org/
+
+0.0985626283368	http://wayback.archive-it.org/1068/20121202092814id_/http://www.nhrcnepal.org/
+
+0.0	http://wayback.archive-it.org/1068/20120303041417id_/http://www.nigeriarights.gov.ng/
+
+-0.0451354062187	http://wayback.archive-it.org/1068/20120603074746id_/http://www.nigeriarights.gov.ng/
+
+-0.0511534603811	http://wayback.archive-it.org/1068/20120803234851id_/http://www.nigeriarights.gov.ng/
+
+-0.0451354062187	http://wayback.archive-it.org/1068/20120902115206id_/http://www.nigeriarights.gov.ng/
+
+-0.0451354062187	http://wayback.archive-it.org/1068/20120902180223id_/http://nigeriarights.gov.ng/
+
+-0.978936810431	http://wayback.archive-it.org/1068/20121019184306id_/http://www.nigeriarights.gov.ng/
+
+-0.685055165496	http://wayback.archive-it.org/1068/20130306212207id_/http://www.nigeriarights.gov.ng/
+
+0.0	http://wayback.archive-it.org/1068/20100602185840id_/http://www.nihrc.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602193002id_/http://www.nihrc.org/%20
+
+0.0201612903226	http://wayback.archive-it.org/1068/20100902185359id_/http://www.nihrc.org/
+
+0.0806451612903	http://wayback.archive-it.org/1068/20100902212453id_/http://www.nihrc.org/%20
+
+0.0806451612903	http://wayback.archive-it.org/1068/20100903031008id_/http://www.nihrc.org//
+
+0.0806451612903	http://wayback.archive-it.org/1068/20100903142516id_/http://www.nihrc.org//%20
+
+0.116935483871	http://wayback.archive-it.org/1068/20101202190821id_/http://www.nihrc.org/
+
+0.116935483871	http://wayback.archive-it.org/1068/20101202213032id_/http://www.nihrc.org/%20
+
+0.116935483871	http://wayback.archive-it.org/1068/20101203030634id_/http://www.nihrc.org//
+
+0.0241935483871	http://wayback.archive-it.org/1068/20110602200935id_/http://www.nihrc.org/
+
+-0.0201612903226	http://wayback.archive-it.org/1068/20110903114643id_/http://www.nihrc.org/
+
+-0.0443548387097	http://wayback.archive-it.org/1068/20110914203619id_/http://www.nihrc.org/
+
+0.0120967741935	http://wayback.archive-it.org/1068/20111203002152id_/http://www.nihrc.org/
+
+-0.0806451612903	http://wayback.archive-it.org/1068/20120302223749id_/http://www.nihrc.org/
+
+0.0	http://wayback.archive-it.org/1068/20120515165457id_/http://www.nohr-s.org/
+
+0.0	http://wayback.archive-it.org/1068/20120605160502id_/http://www.nohr-s.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902035202id_/http://www.nohr-s.org/
+
+0.0	http://wayback.archive-it.org/1068/20130306212204id_/http://www.nohr-s.org/
+
+0.0	http://wayback.archive-it.org/1068/20101116152550id_/http://www.nshr.org.na/
+
+0.0	http://wayback.archive-it.org/1068/20101117034055id_/http://www.nshr.org.na//
+
+0.0551724137931	http://wayback.archive-it.org/1068/20101124200753id_/http://www.nshr.org.na/
+
+0.0310344827586	http://wayback.archive-it.org/1068/20101125012513id_/http://www.nshr.org.na//
+
+-0.144827586207	http://wayback.archive-it.org/1068/20110302191958id_/http://www.nshr.org.na/
+
+-0.0431034482759	http://wayback.archive-it.org/1068/20110602192915id_/http://www.nshr.org.na/
+
+-0.0931034482759	http://wayback.archive-it.org/1068/20110902210648id_/http://www.nshr.org.na/
+
+-0.0568965517241	http://wayback.archive-it.org/1068/20111202215904id_/http://www.nshr.org.na/
+
+-0.160344827586	http://wayback.archive-it.org/1068/20120302221344id_/http://www.nshr.org.na/
+
+-0.137931034483	http://wayback.archive-it.org/1068/20120602210552id_/http://www.nshr.org.na/
+
+-0.165517241379	http://wayback.archive-it.org/1068/20120902065856id_/http://www.nshr.org.na/
+
+-0.125862068966	http://wayback.archive-it.org/1068/20121202092800id_/http://www.nshr.org.na/
+
+-0.122413793103	http://wayback.archive-it.org/1068/20130306220850id_/http://www.nshr.org.na/
+
+0.0	http://wayback.archive-it.org/1068/20100602185846id_/http://www.oajnu.org/
+
+-0.654545454545	http://wayback.archive-it.org/1068/20100902185357id_/http://www.oajnu.org/
+
+-0.6	http://wayback.archive-it.org/1068/20101202190818id_/http://www.oajnu.org/
+
+-0.6	http://wayback.archive-it.org/1068/20110302191948id_/http://www.oajnu.org/
+
+-0.6	http://wayback.archive-it.org/1068/20110602194331id_/http://www.oajnu.org/
+
+-0.6	http://wayback.archive-it.org/1068/20110902210711id_/http://www.oajnu.org/
+
+-0.6	http://wayback.archive-it.org/1068/20111202210627id_/http://www.oajnu.org/
+
+-0.6	http://wayback.archive-it.org/1068/20120302210435id_/http://www.oajnu.org/
+
+-1.0	http://wayback.archive-it.org/1068/20120603011214id_/http://www.oajnu.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302205816id_/http://www.observatorio.cl/
+
+-0.0950323974082	http://wayback.archive-it.org/1068/20111107191153id_/http://www.observatorio.cl/
+
+0.00575953923686	http://wayback.archive-it.org/1068/20111213225852id_/http://www.observatorio.cl/
+
+-0.00719942404608	http://wayback.archive-it.org/1068/20120303010306id_/http://www.observatorio.cl/
+
+0.0273578113751	http://wayback.archive-it.org/1068/20120602210547id_/http://www.observatorio.cl/
+
+0.060475161987	http://wayback.archive-it.org/1068/20120902035227id_/http://www.observatorio.cl/
+
+0.0	http://wayback.archive-it.org/1068/20100422210614id_/http://www.ochrance.cz/
+
+0.0519480519481	http://wayback.archive-it.org/1068/20100602185846id_/http://www.ochrance.cz/
+
+-0.0025974025974	http://wayback.archive-it.org/1068/20101202190823id_/http://www.ochrance.cz/
+
+0.0519480519481	http://wayback.archive-it.org/1068/20110302191959id_/http://www.ochrance.cz/
+
+0.119480519481	http://wayback.archive-it.org/1068/20110602192847id_/http://www.ochrance.cz/
+
+0.124675324675	http://wayback.archive-it.org/1068/20110902210653id_/http://www.ochrance.cz/
+
+0.109090909091	http://wayback.archive-it.org/1068/20120602210550id_/http://www.ochrance.cz/
+
+0.0	http://wayback.archive-it.org/1068/20101027200248id_/http://www.omal.info/www/
+
+0.0	http://wayback.archive-it.org/1068/20101027213920id_/http://www.omal.info/www
+
+0.0257913247362	http://wayback.archive-it.org/1068/20101202190816id_/http://www.omal.info/www/
+
+0.0257913247362	http://wayback.archive-it.org/1068/20101202214717id_/http://www.omal.info/www
+
+0.00703399765533	http://wayback.archive-it.org/1068/20110302191949id_/http://www.omal.info/www/
+
+0.00703399765533	http://wayback.archive-it.org/1068/20110303000858id_/http://www.omal.info/www
+
+-0.0433763188746	http://wayback.archive-it.org/1068/20110602200231id_/http://www.omal.info/www/
+
+-0.0433763188746	http://wayback.archive-it.org/1068/20110602222946id_/http://www.omal.info/www
+
+-0.0785463071512	http://wayback.archive-it.org/1068/20110902210804id_/http://www.omal.info/www/
+
+-0.0785463071512	http://wayback.archive-it.org/1068/20110903025256id_/http://www.omal.info/www
+
+-0.0890973036342	http://wayback.archive-it.org/1068/20111202220947id_/http://www.omal.info/www/
+
+-0.0890973036342	http://wayback.archive-it.org/1068/20111203005715id_/http://www.omal.info/www
+
+-0.0832356389215	http://wayback.archive-it.org/1068/20120302210436id_/http://www.omal.info/www/
+
+-0.0832356389215	http://wayback.archive-it.org/1068/20120303081925id_/http://www.omal.info/www
+
+-0.101992966002	http://wayback.archive-it.org/1068/20120602210537id_/http://www.omal.info/www/
+
+-0.052754982415	http://wayback.archive-it.org/1068/20120902035156id_/http://www.omal.info/www/
+
+-0.052754982415	http://wayback.archive-it.org/1068/20120902082059id_/http://www.omal.info/www
+
+-0.996483001172	http://wayback.archive-it.org/1068/20121202092754id_/http://www.omal.info/www/
+
+0.0	http://wayback.archive-it.org/1068/20100413140140id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20100902185406id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20101202190816id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20110302191952id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20110602192841id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20110902210647id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20111202210619id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20120302210518id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20120602210533id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20120902035218id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20121202092849id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20130306212204id_/http://www.ombudsman.bm/
+
+0.0	http://wayback.archive-it.org/1068/20100902232617id_/http://www.ombudsman.ge/
+
+0.104972375691	http://wayback.archive-it.org/1068/20101202232554id_/http://www.ombudsman.ge/
+
+0.0497237569061	http://wayback.archive-it.org/1068/20110303020835id_/http://www.ombudsman.ge/
+
+0.060773480663	http://wayback.archive-it.org/1068/20110603045643id_/http://www.ombudsman.ge/
+
+0.127071823204	http://wayback.archive-it.org/1068/20120303183459id_/http://www.ombudsman.ge/
+
+0.00552486187845	http://wayback.archive-it.org/1068/20120604021542id_/http://www.ombudsman.ge/
+
+0.0552486187845	http://wayback.archive-it.org/1068/20121202093051id_/http://www.ombudsman.ge/
+
+0.00552486187845	http://wayback.archive-it.org/1068/20130306212428id_/http://www.ombudsman.ge/
+
+0.0	http://wayback.archive-it.org/1068/20100413140140id_/http://www.ombudsman.gov.tt/
+
+0.0	http://wayback.archive-it.org/1068/20100602185840id_/http://www.ombudsman.gov.tt/
+
+0.0	http://wayback.archive-it.org/1068/20100902185356id_/http://www.ombudsman.gov.tt/
+
+0.0	http://wayback.archive-it.org/1068/20101202190816id_/http://www.ombudsman.gov.tt/
+
+0.0699300699301	http://wayback.archive-it.org/1068/20110302192031id_/http://www.ombudsman.gov.tt/
+
+0.0699300699301	http://wayback.archive-it.org/1068/20110602192845id_/http://www.ombudsman.gov.tt/
+
+0.0769230769231	http://wayback.archive-it.org/1068/20110902210647id_/http://www.ombudsman.gov.tt/
+
+-0.934731934732	http://wayback.archive-it.org/1068/20111202210828id_/http://www.ombudsman.gov.tt/
+
+0.0839160839161	http://wayback.archive-it.org/1068/20120302210515id_/http://www.ombudsman.gov.tt/
+
+0.0839160839161	http://wayback.archive-it.org/1068/20120602210556id_/http://www.ombudsman.gov.tt/
+
+0.0932400932401	http://wayback.archive-it.org/1068/20130306212210id_/http://www.ombudsman.gov.tt/
+
+0.0	http://wayback.archive-it.org/1068/20120731235235id_/http://www.ombudsman.gov.ua/
+
+-0.061797752809	http://wayback.archive-it.org/1068/20120902035243id_/http://www.ombudsman.gov.ua/
+
+-0.350187265918	http://wayback.archive-it.org/1068/20121202092803id_/http://www.ombudsman.gov.ua/
+
+-0.397003745318	http://wayback.archive-it.org/1068/20130306212402id_/http://www.ombudsman.gov.ua/
+
+0.0	http://wayback.archive-it.org/1068/20100413140141id_/http://www.ombudsman.hr/
+
+0.0871670702179	http://wayback.archive-it.org/1068/20100602185840id_/http://www.ombudsman.hr/
+
+0.111380145278	http://wayback.archive-it.org/1068/20101202190831id_/http://www.ombudsman.hr/
+
+-0.0387409200969	http://wayback.archive-it.org/1068/20110302191953id_/http://www.ombudsman.hr/
+
+-0.0532687651332	http://wayback.archive-it.org/1068/20110902223322id_/http://www.ombudsman.hr/
+
+0.116222760291	http://wayback.archive-it.org/1068/20120302210444id_/http://www.ombudsman.hr/
+
+0.0	http://wayback.archive-it.org/1068/20100903014754id_/http://www.ombudsman.kg/
+
+-0.443336355394	http://wayback.archive-it.org/1068/20110603045714id_/http://www.ombudsman.kg/
+
+0.078875793291	http://wayback.archive-it.org/1068/20110903114516id_/http://www.ombudsman.kg/
+
+-0.0163191296464	http://wayback.archive-it.org/1068/20111203194125id_/http://www.ombudsman.kg/
+
+-0.587488667271	http://wayback.archive-it.org/1068/20120604010047id_/http://www.ombudsman.kg/
+
+0.0	http://wayback.archive-it.org/1068/20111213011235id_/http://www.ombudsman.mk/
+
+0.0912596401028	http://wayback.archive-it.org/1068/20120119222642id_/http://www.ombudsman.mk/
+
+0.134961439589	http://wayback.archive-it.org/1068/20120302210444id_/http://www.ombudsman.mk/
+
+0.142673521851	http://wayback.archive-it.org/1068/20120603013327id_/http://www.ombudsman.mk/
+
+0.137532133676	http://wayback.archive-it.org/1068/20121202093125id_/http://www.ombudsman.mk/
+
+0.0	http://wayback.archive-it.org/1068/20080905195407id_/http://www.omct.org/
+
+-0.0618448637317	http://wayback.archive-it.org/1068/20100413152520id_/http://www.omct.org/
+
+-0.169811320755	http://wayback.archive-it.org/1068/20100902185358id_/http://www.omct.org/
+
+-0.194968553459	http://wayback.archive-it.org/1068/20101202190821id_/http://www.omct.org/
+
+-0.194968553459	http://wayback.archive-it.org/1068/20101202191505id_/https://www.omct.org/
+
+-0.101677148847	http://wayback.archive-it.org/1068/20110221193553id_/http://www.omct.org/
+
+-0.271488469602	http://wayback.archive-it.org/1068/20110302191953id_/http://www.omct.org/
+
+-0.271488469602	http://wayback.archive-it.org/1068/20110302203916id_/https://www.omct.org/
+
+-0.593291404612	http://wayback.archive-it.org/1068/20110602192858id_/http://www.omct.org/
+
+-0.593291404612	http://wayback.archive-it.org/1068/20110902210644id_/http://www.omct.org/
+
+0.127882599581	http://wayback.archive-it.org/1068/20111202210715id_/http://www.omct.org/
+
+0.127882599581	http://wayback.archive-it.org/1068/20111203021721id_/https://www.omct.org/
+
+0.0429769392034	http://wayback.archive-it.org/1068/20120603011429id_/http://www.omct.org/
+
+0.0429769392034	http://wayback.archive-it.org/1068/20120603051846id_/https://www.omct.org/
+
+-0.0765199161426	http://wayback.archive-it.org/1068/20120902035202id_/http://www.omct.org/
+
+-0.0765199161426	http://wayback.archive-it.org/1068/20120902093604id_/https://www.omct.org/
+
+-0.125786163522	http://wayback.archive-it.org/1068/20121202131725id_/http://www.omct.org/
+
+-0.125786163522	http://wayback.archive-it.org/1068/20121202162506id_/https://www.omct.org/
+
+-0.0377358490566	http://wayback.archive-it.org/1068/20130306212208id_/http://www.omct.org/
+
+-0.0408805031447	http://wayback.archive-it.org/1068/20130308051236id_/https://www.omct.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20100902185357id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202190815id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302191947id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20110602192838id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20110902215728id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20111202210621id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20120302222918id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20120602210547id_/http://www.uthr.org/
+
+0.0	http://wayback.archive-it.org/1068/20100510173254id_/http://www.volksanw.gv.at/
+
+0.0	http://wayback.archive-it.org/1068/20100602185844id_/http://www.volksanw.gv.at/
+
+0.0	http://wayback.archive-it.org/1068/20100611203134id_/http://www.vsv-rdc.com/
+
+0.14010989011	http://wayback.archive-it.org/1068/20110302192030id_/http://www.vsv-rdc.com/
+
+0.134615384615	http://wayback.archive-it.org/1068/20110602200500id_/http://www.vsv-rdc.com/
+
+0.134615384615	http://wayback.archive-it.org/1068/20110902210643id_/http://www.vsv-rdc.com/
+
+-0.0192307692308	http://wayback.archive-it.org/1068/20111202225900id_/http://www.vsv-rdc.com/
+
+-0.104395604396	http://wayback.archive-it.org/1068/20120302210435id_/http://www.vsv-rdc.com/
+
+-0.247252747253	http://wayback.archive-it.org/1068/20120603001417id_/http://www.vsv-rdc.com/
+
+-0.247252747253	http://wayback.archive-it.org/1068/20120902035202id_/http://www.vsv-rdc.com/
+
+-0.247252747253	http://wayback.archive-it.org/1068/20121202092944id_/http://www.vsv-rdc.com/
+
+-0.247252747253	http://wayback.archive-it.org/1068/20130306212358id_/http://www.vsv-rdc.com/
+
+0.0	http://wayback.archive-it.org/1068/20100819195210id_/http://www.wclac.org/
+
+0.015514809591	http://wayback.archive-it.org/1068/20100902185401id_/http://www.wclac.org/
+
+-0.0535966149506	http://wayback.archive-it.org/1068/20110302192030id_/http://www.wclac.org/
+
+-0.603667136812	http://wayback.archive-it.org/1068/20110602193017id_/http://www.wclac.org/
+
+-0.526093088858	http://wayback.archive-it.org/1068/20110902210644id_/http://www.wclac.org/
+
+-0.403385049365	http://wayback.archive-it.org/1068/20111202210626id_/http://www.wclac.org/
+
+-0.327221438646	http://wayback.archive-it.org/1068/20120302210444id_/http://www.wclac.org/
+
+-0.409026798307	http://wayback.archive-it.org/1068/20120602210603id_/http://www.wclac.org/
+
+-1.0	http://wayback.archive-it.org/1068/20120902035235id_/http://www.wclac.org/
+
+-1.0	http://wayback.archive-it.org/1068/20121202092830id_/http://www.wclac.org/
+
+-1.0	http://wayback.archive-it.org/1068/20130306232315id_/http://www.wclac.org/
+
+0.0	http://wayback.archive-it.org/1068/20100618170056id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20100902185358id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20101202190824id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20110302191953id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20110602192847id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20110902210652id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20111202210627id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20120302233154id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20120602210550id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20120902035236id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20121202092828id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20130306220318id_/http://www.wcons.org.ru/
+
+0.0	http://wayback.archive-it.org/1068/20101116153551id_/http://www.we-change.org/
+
+0.103206412826	http://wayback.archive-it.org/1068/20110302191948id_/http://www.we-change.org/
+
+0.120240480962	http://wayback.archive-it.org/1068/20110303021218id_/https://www.we-change.org/
+
+-0.0971943887776	http://wayback.archive-it.org/1068/20110602192838id_/http://www.we-change.org/
+
+-0.0991983967936	http://wayback.archive-it.org/1068/20110603041318id_/https://www.we-change.org/
+
+0.0410821643287	http://wayback.archive-it.org/1068/20110902210644id_/http://www.we-change.org/
+
+0.0410821643287	http://wayback.archive-it.org/1068/20110903092318id_/https://www.we-change.org/
+
+-0.0861723446894	http://wayback.archive-it.org/1068/20111202210621id_/http://www.we-change.org/
+
+0.0941883767535	http://wayback.archive-it.org/1068/20120302222919id_/http://www.we-change.org/
+
+0.0941883767535	http://wayback.archive-it.org/1068/20120303145205id_/https://www.we-change.org/
+
+-0.0280561122244	http://wayback.archive-it.org/1068/20120602210544id_/http://www.we-change.org/
+
+-0.0280561122244	http://wayback.archive-it.org/1068/20120604022628id_/https://www.we-change.org/
+
+-0.0200400801603	http://wayback.archive-it.org/1068/20120902035202id_/http://www.we-change.org/
+
+-0.00300601202405	http://wayback.archive-it.org/1068/20120902225054id_/https://www.we-change.org/
+
+0.104208416834	http://wayback.archive-it.org/1068/20121202130234id_/http://www.we-change.org/
+
+0.0450901803607	http://wayback.archive-it.org/1068/20121203010744id_/https://www.we-change.org/
+
+0.128256513026	http://wayback.archive-it.org/1068/20130306234450id_/http://www.we-change.org/
+
+0.104208416834	http://wayback.archive-it.org/1068/20130307194912id_/https://www.we-change.org/
+
+0.0	http://wayback.archive-it.org/1068/20101123192627id_/http://www.wluml.org/
+
+0.0	http://wayback.archive-it.org/1068/20101124200750id_/http://www.wluml.org/
+
+-0.514990006662	http://wayback.archive-it.org/1068/20110302192611id_/http://www.wluml.org/
+
+-0.575616255829	http://wayback.archive-it.org/1068/20110602192838id_/http://www.wluml.org/
+
+-0.5636242505	http://wayback.archive-it.org/1068/20110902210644id_/http://www.wluml.org/
+
+-0.556962025316	http://wayback.archive-it.org/1068/20111202210624id_/http://www.wluml.org/
+
+-0.490339773484	http://wayback.archive-it.org/1068/20120302210438id_/http://www.wluml.org/
+
+-0.503664223851	http://wayback.archive-it.org/1068/20120602210544id_/http://www.wluml.org/
+
+-0.499666888741	http://wayback.archive-it.org/1068/20120902035158id_/http://www.wluml.org/
+
+-0.521652231845	http://wayback.archive-it.org/1068/20121202092754id_/http://www.wluml.org/
+
+-0.502331778814	http://wayback.archive-it.org/1068/20130307001304id_/http://www.wluml.org/
+
+-0.502331778814	http://wayback.archive-it.org/1068/20130308044604id_/http://wluml.org/
+
+0.0	http://wayback.archive-it.org/1068/20100422210605id_/http://www.womenforafghanwomen.org/
+
+0.0	http://wayback.archive-it.org/1068/20100602185839id_/http://www.womenforafghanwomen.org/
+
+0.125	http://wayback.archive-it.org/1068/20101202190818id_/http://www.womenforafghanwomen.org/
+
+0.0	http://wayback.archive-it.org/1068/20101123192628id_/http://www.womenpress.net/
+
+-0.0890666666667	http://wayback.archive-it.org/1068/20101123192950id_/http://www.womenpress.net//
+
+0.0	http://wayback.archive-it.org/1068/20101124200750id_/http://www.womenpress.net/
+
+-0.0890666666667	http://wayback.archive-it.org/1068/20101124200959id_/http://www.womenpress.net//
+
+-0.175466666667	http://wayback.archive-it.org/1068/20110302201117id_/http://www.womenpress.net/
+
+0.0016	http://wayback.archive-it.org/1068/20110302223609id_/http://www.womenpress.net//
+
+-0.165333333333	http://wayback.archive-it.org/1068/20110602195415id_/http://www.womenpress.net/
+
+-0.165333333333	http://wayback.archive-it.org/1068/20110602220153id_/http://www.womenpress.net//
+
+-0.157866666667	http://wayback.archive-it.org/1068/20110902210644id_/http://www.womenpress.net/
+
+-0.157866666667	http://wayback.archive-it.org/1068/20110902231437id_/http://www.womenpress.net//
+
+-0.162133333333	http://wayback.archive-it.org/1068/20111202210714id_/http://www.womenpress.net/
+
+-0.162133333333	http://wayback.archive-it.org/1068/20111202233037id_/http://www.womenpress.net//
+
+-0.149866666667	http://wayback.archive-it.org/1068/20120302210442id_/http://www.womenpress.net/
+
+-0.149866666667	http://wayback.archive-it.org/1068/20120302232653id_/http://www.womenpress.net//
+
+-0.1376	http://wayback.archive-it.org/1068/20120602210536id_/http://www.womenpress.net/
+
+-0.0677333333333	http://wayback.archive-it.org/1068/20120603001056id_/http://www.womenpress.net//
+
+-0.016	http://wayback.archive-it.org/1068/20120902052916id_/http://www.womenpress.net/
+
+-0.101866666667	http://wayback.archive-it.org/1068/20120902075937id_/http://www.womenpress.net//
+
+0.0362666666667	http://wayback.archive-it.org/1068/20121202111407id_/http://www.womenpress.net/
+
+-0.0677333333333	http://wayback.archive-it.org/1068/20121202135749id_/http://www.womenpress.net//
+
+0.00106666666667	http://wayback.archive-it.org/1068/20130306212204id_/http://www.womenpress.net/
+
+0.00106666666667	http://wayback.archive-it.org/1068/20130306231348id_/http://www.womenpress.net//
+
+0.0	http://wayback.archive-it.org/1068/20111013000640id_/http://www.womensnetwork.org/
+
+-0.00555555555556	http://wayback.archive-it.org/1068/20111202221338id_/http://www.womensnetwork.org/
+
+0.111111111111	http://wayback.archive-it.org/1068/20120303004441id_/http://www.womensnetwork.org/
+
+-1.0	http://wayback.archive-it.org/1068/20120602210554id_/http://www.womensnetwork.org/
+
+-0.138888888889	http://wayback.archive-it.org/1068/20121202092755id_/http://www.womensnetwork.org/
+
+0.0	http://wayback.archive-it.org/1068/20120425202810id_/http://www.womensrightscoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120602210535id_/http://www.womensrightscoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902035253id_/http://www.womensrightscoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202123917id_/http://www.womensrightscoalition.org/
+
+0.0	http://wayback.archive-it.org/1068/20120902152430id_/http://www.womenundersiegeproject.org/
+
+0.0	http://wayback.archive-it.org/1068/20121202212411id_/http://www.womenundersiegeproject.org/
+
+0.0	http://wayback.archive-it.org/1068/20130308001613id_/http://www.womenundersiegeproject.org/
+
+0.0	http://wayback.archive-it.org/1068/20090619191544id_/http://www.wwhr.org/
+
+-0.103603603604	http://wayback.archive-it.org/1068/20100319192256id_/http://www.wwhr.org/
+
+-0.0225225225225	http://wayback.archive-it.org/1068/20100902185406id_/http://www.wwhr.org/
+
+0.0315315315315	http://wayback.archive-it.org/1068/20101202190825id_/http://www.wwhr.org/
+
+-0.0315315315315	http://wayback.archive-it.org/1068/20110302191958id_/http://www.wwhr.org/
+
+-0.036036036036	http://wayback.archive-it.org/1068/20110602200500id_/http://www.wwhr.org/
+
+-0.0315315315315	http://wayback.archive-it.org/1068/20110902210703id_/http://www.wwhr.org/
+
+-0.0315315315315	http://wayback.archive-it.org/1068/20111202234420id_/http://www.wwhr.org/
+
+-0.0315315315315	http://wayback.archive-it.org/1068/20120303002841id_/http://www.wwhr.org/
+
+-0.981981981982	http://wayback.archive-it.org/1068/20120605094326id_/http://wwhr.org/
+
+0.0	http://wayback.archive-it.org/1068/20101202220104id_/http://www.yesh-din.org/
+
+0.13829787234	http://wayback.archive-it.org/1068/20110317151734id_/http://www.yesh-din.org/
+
+0.13829787234	http://wayback.archive-it.org/1068/20110317161108id_/http://www.yesh-din.org/
+
+0.143617021277	http://wayback.archive-it.org/1068/20110602192857id_/http://www.yesh-din.org/
+
+0.122340425532	http://wayback.archive-it.org/1068/20110902210645id_/http://www.yesh-din.org/
+
+0.0425531914894	http://wayback.archive-it.org/1068/20111202210624id_/http://www.yesh-din.org/
+
+0.103723404255	http://wayback.archive-it.org/1068/20120302210618id_/http://www.yesh-din.org/
+
+0.0904255319149	http://wayback.archive-it.org/1068/20120602210535id_/http://www.yesh-din.org/
+
+0.101063829787	http://wayback.archive-it.org/1068/20120804115142id_/http://www.yesh-din.org/
+
+0.0984042553191	http://wayback.archive-it.org/1068/20120902061724id_/http://www.yesh-din.org/
+
+0.146276595745	http://wayback.archive-it.org/1068/20130306212204id_/http://www.yesh-din.org/
+
+0.0	http://wayback.archive-it.org/1068/20111107191154id_/http://www.yucom.org.rs/
+
+0.0889423076923	http://wayback.archive-it.org/1068/20120119222912id_/http://www.yucom.org.rs/
+
+0.0	http://wayback.archive-it.org/1068/20101116152549id_/http://www.alnadeem.org/
+
+-0.280913978495	http://wayback.archive-it.org/1068/20110302191947id_/http://www.alnadeem.org/
+
+-0.588709677419	http://wayback.archive-it.org/1068/20110902210644id_/http://www.alnadeem.org/
+
+0.0	http://wayback.archive-it.org/1068/20110302212534id_/http://www.newtactics.org/
+
+-0.00473186119874	http://wayback.archive-it.org/1068/20110603000624id_/http://www.newtactics.org/
+
+0.115141955836	http://wayback.archive-it.org/1068/20110902210654id_/http://www.newtactics.org/
+
+-0.124605678233	http://wayback.archive-it.org/1068/20111203031941id_/http://www.newtactics.org/
+
+-0.0331230283912	http://wayback.archive-it.org/1068/20120803234900id_/http://www.newtactics.org/
+
+-0.0331230283912	http://wayback.archive-it.org/1068/20120804024527id_/https://www.newtactics.org/
+
+-0.0220820189274	http://wayback.archive-it.org/1068/20120902101131id_/http://www.newtactics.org/
+
+-0.149842271293	http://wayback.archive-it.org/1068/20121019184306id_/http://www.newtactics.org/
+
+-0.149842271293	http://wayback.archive-it.org/1068/20121019194116id_/https://www.newtactics.org/
+
+-0.0906940063091	http://wayback.archive-it.org/1068/20121202154544id_/http://www.newtactics.org/
+
+-0.494479495268	http://wayback.archive-it.org/1068/20130306212406id_/http://www.newtactics.org/
+
+0.0	http://wayback.archive-it.org/1068/20100413152516id_/http://www.privacyinternational.org/
+
+0.107398568019	http://wayback.archive-it.org/1068/20100902185357id_/http://www.privacyinternational.org/
+
+-0.0149164677804	http://wayback.archive-it.org/1068/20101202190817id_/http://www.privacyinternational.org/
+
+-0.816825775656	http://wayback.archive-it.org/1068/20110302191949id_/http://www.privacyinternational.org/
+
+-0.816825775656	http://wayback.archive-it.org/1068/20110302193141id_/https://www.privacyinternational.org/
+
+-0.826372315036	http://wayback.archive-it.org/1068/20110602192838id_/http://www.privacyinternational.org/
+
+-0.826372315036	http://wayback.archive-it.org/1068/20110602210252id_/https://www.privacyinternational.org/
+
+-0.826968973747	http://wayback.archive-it.org/1068/20110902210647id_/http://www.privacyinternational.org/
+
+-0.826968973747	http://wayback.archive-it.org/1068/20110902233859id_/https://www.privacyinternational.org/
+
+-0.629474940334	http://wayback.archive-it.org/1068/20111202214754id_/http://www.privacyinternational.org/
+
+-0.629474940334	http://wayback.archive-it.org/1068/20111203024644id_/https://www.privacyinternational.org/
+
+-0.791169451074	http://wayback.archive-it.org/1068/20120302210455id_/http://www.privacyinternational.org/
+
+-0.791169451074	http://wayback.archive-it.org/1068/20120303015545id_/https://www.privacyinternational.org/
+
+-0.721360381862	http://wayback.archive-it.org/1068/20120602210537id_/http://www.privacyinternational.org/
+
+-0.721360381862	http://wayback.archive-it.org/1068/20120603021444id_/https://www.privacyinternational.org/
+
+-0.720167064439	http://wayback.archive-it.org/1068/20120902050455id_/http://www.privacyinternational.org/
+
+-0.720167064439	http://wayback.archive-it.org/1068/20120902101220id_/https://www.privacyinternational.org/
+
+-0.728520286396	http://wayback.archive-it.org/1068/20121202122252id_/http://www.privacyinternational.org/
+
+-0.728520286396	http://wayback.archive-it.org/1068/20121202160828id_/https://www.privacyinternational.org/
+
+-0.727326968974	http://wayback.archive-it.org/1068/20130306220154id_/http://www.privacyinternational.org/
+
+-0.727326968974	http://wayback.archive-it.org/1068/20130306220207id_/https://www.privacyinternational.org/
+
+0.0	http://wayback.archive-it.org/1068/20100422210613id_/http://www.nchr.org.jo/
+
+0.0	http://wayback.archive-it.org/1068/20100602185845id_/http://www.nchr.org.jo/
+
+0.0	http://wayback.archive-it.org/1068/20100902185408id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20110603051241id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20110903121413id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20110920214328id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20110921222122id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20111203202239id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20120303195029id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20120604025322id_/http://www.nchr.org.jo/
+
+-1.0	http://wayback.archive-it.org/1068/20120903031151id_/http://www.nchr.org.jo/
+
+0.0	http://wayback.archive-it.org/1068/20100618170059id_/http://www.kuru.co.bw/
+
+-1.0	http://wayback.archive-it.org/1068/20110602192848id_/http://www.kuru.co.bw/
+
+-1.0	http://wayback.archive-it.org/1068/20110902210715id_/http://www.kuru.co.bw/
+
+-1.0	http://wayback.archive-it.org/1068/20111202210626id_/http://www.kuru.co.bw/
+
+-1.0	http://wayback.archive-it.org/1068/20120302224305id_/http://www.kuru.co.bw/
+
+-1.0	http://wayback.archive-it.org/1068/20120602210553id_/http://www.kuru.co.bw/
+
+-1.0	http://wayback.archive-it.org/1068/20120902075940id_/http://www.kuru.co.bw/
+
+-0.957983193277	http://wayback.archive-it.org/1068/20130307000426id_/http://www.kuru.co.bw/
+
+0.0	http://wayback.archive-it.org/1068/20090518172240id_/http://www.codepu.cl/
+
+0.0	http://wayback.archive-it.org/1068/20090518172345id_/http://www.codepu.cl/
+
+0.0183908045977	http://wayback.archive-it.org/1068/20100510173253id_/http://www.codepu.cl/
+
+0.0183908045977	http://wayback.archive-it.org/1068/20100602185842id_/http://www.codepu.cl/
+
+-0.986206896552	http://wayback.archive-it.org/1068/20110902210644id_/http://www.codepu.cl/
+
+-0.986206896552	http://wayback.archive-it.org/1068/20111202230157id_/http://www.codepu.cl/
+
+-0.974712643678	http://wayback.archive-it.org/1068/20120302210503id_/http://www.codepu.cl/
+
+0.0	http://wayback.archive-it.org/1068/20100319192254id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20100602185840id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20100902185357id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20101202190818id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20110302191958id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20110302193949id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20110602192856id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20110602194528id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20110902210644id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20110902212709id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20111202210652id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20111202213138id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20120302210436id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20120302212310id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20120602210535id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20120602213434id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20120902035202id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20120902041657id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20121202092802id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20121202095022id_/http://www.nmjd.org//
+
+-1.0	http://wayback.archive-it.org/1068/20130306212206id_/http://www.nmjd.org/
+
+-1.0	http://wayback.archive-it.org/1068/20130306214154id_/http://www.nmjd.org//
+
+0.0	http://wayback.archive-it.org/1068/20100510173252id_/http://www.conadeh.hn/
+
+0.0	http://wayback.archive-it.org/1068/20100602185842id_/http://www.conadeh.hn/
+
+-0.941736798298	http://wayback.archive-it.org/1068/20120302215756id_/http://www.conadeh.hn/
+
+-0.925367613058	http://wayback.archive-it.org/1068/20120602210550id_/http://www.conadeh.hn/
+
+-0.910108203089	http://wayback.archive-it.org/1068/20120801170927id_/http://www.conadeh.hn/
+
+-0.922223249792	http://wayback.archive-it.org/1068/20120902035156id_/http://www.conadeh.hn/
+
+-0.933136039952	http://wayback.archive-it.org/1068/20121202092805id_/http://www.conadeh.hn/
+
+-0.928142051235	http://wayback.archive-it.org/1068/20130306230402id_/http://www.conadeh.hn/
+

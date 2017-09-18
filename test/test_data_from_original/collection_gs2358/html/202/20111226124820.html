@@ -1,0 +1,1065 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar">
+
+<head>
+
+  <title>Portal | Dar Al Hayat</title>
+  <style type="text/css" media="all">
+div.panel-flexible div.panel-row-1 div.panel-col-1 { width: 992px; }
+div.panel-flexible div.panel-row-2 div.panel-col-1 { width: 370px; }
+div.panel-flexible div.panel-row-2 div.panel-col-2 { width: 8px; }
+div.panel-flexible div.panel-row-2 div.panel-col-3 { width: 614px; }
+div.panel-flexible div.panel-row-3 div.panel-col-1 { width: 370px; }
+div.panel-flexible div.panel-row-3 div.panel-col-2 { width: 8px; }
+div.panel-flexible div.panel-row-3 div.panel-col-3 { width: 370px; }
+div.panel-flexible div.panel-row-3 div.panel-col-4 { width: 8px; }
+div.panel-flexible div.panel-row-3 div.panel-col-5 { width: 234px; }
+</style>
+
+<link rel="shortcut icon" href="/sites/all/themes/dah/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/sites/all/themes/dah/print.css" type="text/css" media="print" />
+
+<link rel="stylesheet" href="/sites/all/themes/dah/print.css" type="text/css" media="print" />
+
+  
+  <style type="text/css" media="all">@import "/modules/aggregator/aggregator.css";</style>
+<style type="text/css" media="all">@import "/modules/node/node.css";</style>
+<style type="text/css" media="all">@import "/modules/poll/poll.css";</style>
+<style type="text/css" media="all">@import "/modules/system/defaults.css";</style>
+<style type="text/css" media="all">@import "/modules/system/system.css";</style>
+<style type="text/css" media="all">@import "/modules/user/user.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/cck/content.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/date/date.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/cck/fieldgroup.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/panels/css/panels.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/panels/layouts/flexible.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/panels/layouts/threecol_33_34_33.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/quicktabs/quicktabs.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/panels/layouts/onecol.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/style.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/layout-liquid.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/dah_magic_tabs.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/html-elements.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/tabs.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/dah.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/blocks.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/english.css";</style>
+<style type="text/css" media="all">@import "/sites/all/themes/dah/block-editing.css";</style>
+  <!--[if IE]>
+    <link rel="stylesheet" href="/sites/all/themes/dah/ie.css" type="text/css">
+      <![endif]-->
+  <script type="text/javascript" src="/misc/jquery.js"></script>
+<script type="text/javascript" src="/misc/drupal.js"></script>
+<script type="text/javascript" src="/sites/all/modules/panels/js/panels.js"></script>
+<script type="text/javascript" src="/sites/all/modules/quicktabs/js/quicktabs.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/dah/searchhelp.js"></script>
+  <script type="text/javascript" src="/misc/jquery.js"></script>
+  <script type="text/javascript" src="/scripts/blocks/thickbox/thickbox.js"></script>
+  <link rel="stylesheet" href="/scripts/blocks/thickbox/thickbox.css" type="text/css" media="screen" />
+
+ <!--  <script type="text/javascript" src=""></script>
+ <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src=""></script>-->
+ 
+  <script language="javascript">
+function balanceHeights (selector) 
+{
+    var heighest_col_height = 0;
+    $(selector).each(function(){
+        if($(this).height() > heighest_col_height) heighest_col_height = $(this).height();
+    });
+	if(heighest_col_height > 0) {
+		$("#mini-panel-Currencies .currencies_mini_pane").height((heighest_col_height - 15 - 38)+"px");
+		$("#mini-panel-Weather div.panel-pane div.content:eq(1)").height((heighest_col_height - 56)+"px");
+		$(".view-content-gallery-KSA").height((heighest_col_height - 20 - 38)+"px");
+	}
+	
+}
+$(window).load(function () {
+   balanceHeights(".view-gallery-KSA, #mini-panel-Weather, #mini-panel-Currencies");
+});
+$(document).ready(function(){
+	$(".view-content-Portal-Tabs-Top li, .view-content-KSA-Monawaat li").each(function(){
+		$(this).find("a:first").addClass("tabs-categlink");
+	});
+	
+	setTimeout("clickTab()", 2000);
+	
+})
+
+function clickTab(){
+	//alert("hello");
+	$(".magic_tabs ul.tabs a.selected").click();
+}
+
+
+function MM_openBrWindow(theURL,winName,features) { 
+  window.open(theURL,winName,features);
+}
+
+</script>
+  <script language="javascript" src="/sites/all/themes/dah/js/nashra.js"></script><script type="text/javascript">
+var pp_gemius_identifier = new String('nX1F1jO8IQZ.xB6qR4UJJsUGP1INL__oQMqMBr3Pwxb.j7');
+</script>
+<script type="text/javascript" src="http://www.daralhayat.com/misc/xgemius.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body class="front not-logged-in one-sidebar sidebar-left" >
+<a name="top"></a>
+<div style="margin:0px;padding:0px;" id="page-portal">  <div id="page"><div id="page-inner">
+	
+    <a name="top" id="navigation-top"></a>
+	
+		
+	<div id="topheader">
+		<div id="topheaderinner">
+			<div id="topdatetime"><span id="clock" class="date"></span>
+<script src="/sites/all/themes/dah/includes/timeAR.js" language="javascript"></script>
+</div>
+			<div id="rssbutton"><div style="direction ltr"><a href="/rss_page" target="_blank"><img src="/sites/all/modules/site_map/feed-small.png"></a> خدمة RSS</div></div><div id="facebookbutton"><div><a href="http://www.facebook.com/pages/%D8%AC%D8%B1%D9%8A%D8%AF%D8%A9-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9-daralhayat/163171813747214" target="_blank"><img src="/sites/all/themes/dah/images/facebook-icon.gif" /></a></div></div><div id="facebookbutton"><div><a href="http://twitter.com/alhayatdaily" target="_blank"><img src="/sites/all/themes/dah/images/tweet.gif" /></a></div></div><div id="facebookbutton"><div><a href="http://mobile.alhayat.com" target="_blank"><img src="/sites/all/themes/dah/images/mobile.gif" alt="mobile version" title="mobile version"/></a></div></div>
+<div id="addthisbutton"><div><!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php?v=250" addthis:title="" addthis:description="" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=xa-4a1d4ca571dbb097"></script>
+<!-- AddThis Button END -->
+</div></div>
+			            <div id="primary">
+              <ul class="links"><li class="first menu-1-1-2"><a href="/" class="menu-1-1-2 active">الصفحة الرئيسية</a></li>
+<li class="menu-1-2-2"><a href="http://www.daralhayat.com/about" class="menu-1-2-2">عن الموقع </a></li>
+<li class="menu-1-3-2"><a href="/sitemap" class="menu-1-3-2">خريطة الموقع</a></li>
+<li class="menu-1-4-2"><a href="/advertise" class="menu-1-4-2">أعلن معنا</a></li>
+<li class="menu-1-5-2"><a href="/contact_us" class="menu-1-5-2">إتصل بنا</a></li>
+<li class="last menu-1-6-2"><a href="/user/register" class="menu-1-6-2">مستخدم جديد؟</a></li>
+</ul>            </div> <!-- /#primary -->
+          		</div>
+	</div>
+    <div id="header"><div style="position:relative;"><div id="header-inner" class="clear-block">
+    <!--<div style="position:absolute; right:628px; top:0px;"><img border="0" src="http://www.daralhayat.com/sites/all/themes/dah/soon.gif"/></div>--><div style="position:absolute; right:1128px; top:50px;"><a href="http://www.daralhayat.com/#translations"><img border="0" src="http://www.daralhayat.com/sites/all/themes/dah/btn-trans.gif"/></a></div>
+		<div class="other-sites">
+		<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <td width="148"><a href="http://international.daralhayat.com"  class="alhayat"><img src="/sites/all/themes/dah/images/common/trans.gif" height="121" width="148" border="0"></a></td>
+    <td width="115"><a href="http://ksa.daralhayat.com" class="ksa"><img src="/sites/all/themes/dah/images/common/trans.gif" height="121" width="115" border="0"></a></td>
+    <td width="62"><a href="http://www.lahamag.com" target="_lahanew" class="laha"><img src="/sites/all/themes/dah/images/common/trans.gif" height="121" width="62" border="0"></a></td>
+    
+    
+  </tr>
+</table>
+
+
+
+
+		</div>
+		
+      	  
+       
+        <div id="logo-title">
+
+                      <div id="logo"><a href="/" title="Home" rel="home"><img src="/sites/all/themes/dah/logo.png" alt="Home" id="logo-image" /></a></div>
+          
+        </div> <!-- /#logo-title -->
+      
+      
+    </div></div> </div><!-- /#header-inner, /#header -->
+
+    <div id="main"><div id="main-inner" class="clear-block with-navbar">
+
+      <div id="content"><div id="content-inner">
+
+        
+                  <div id="content-header">
+            
+                          <h1 class="title">Portal</h1>
+                                                          </div> <!-- /#content-header -->
+        
+        <div id="content-area">
+          <div class="panel-flexible clear-block" >
+<div>
+<div class="panel-row panel-row-1 clear-block">
+<div class="panel-col panel-col-1 panel-col-only">
+<div class="inside"></div>
+</div>
+</div>
+<div class="panel-row panel-row-2 clear-block">
+<div class="panel-col panel-col-1 panel-col-first">
+<div class="inside"><div class="panel-pane">
+<div class="content"><form action="/search/apachesolr_search"  method="post" id="search-block-form"><table width="370" class="search-tbl" style="margin:0px;" bgcolor="#b80000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><a href="/search/apachesolr_search/"><img src="/sites/all/themes/dah/images/common/btn-advanced-search.gif" border="0"></a></td>
+    <td><img src="/sites/all/themes/dah/images/common/question2.gif"  /></td>
+    <td><img src="/sites/all/themes/dah/images/common/search-seperator.gif" /></td>
+    <td><input type="image" src="/sites/all/themes/dah/images/common/btn-search.gif" name="op" id="edit-submit"  /></td>
+    <td><input style="width:150px; text-align:right" type="text" name="search_block_form_keys" onclick="if(this.value=='بحث'){this.value='';}" id="edit-search-block-form-keys" value="بحث" title="Enter the terms you wish to search for." class="search-text" /></td>
+	<td width="10">&nbsp;</td>
+  </tr>
+</table>
+<input type="hidden" name="form_token" id="edit-search-block-form-form-token" value="6040cda04ec9ba89395d9315105672ef"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</form>
+
+</div>
+</div>
+</div>
+</div>
+<div class="panel-col panel-col-2 panel-col-inside">
+<div class="inside"></div>
+</div>
+<div class="panel-col panel-col-3 panel-col-last">
+<div class="inside"><div class="panel-pane">
+<div class="content"><div class="panel-display panel-3col-33 clear-block"  id='mini-panel-Portal_breaking_news'>
+  <div class="panel-panel panel-col-first">
+    <div class="inside"><div class="panel-pane breaking-news-next">
+<div class="content"><a href="#" id="breaking_news_next_link">&nbsp;</a></div>
+</div>
+</div>
+  </div>
+
+  <div class="panel-panel panel-col">
+    <div class="inside"><div class="panel-pane">
+<div class="content"><div class='view view-Portal-breaking-news'><div class='view-content view-content-Portal-breaking-news'><div class="item-list"><ul><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343688">إسرائيل: تشكيل وحدة لحماية القواعد العسكرية من صواريخ حزب الله وحماس  </a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343688">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343687">العثور على 13 قتيلاً في شاحنة في المكسيك</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343687">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343685">سبعة قتلى في ولاية تكساس الاميركية</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343685">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343686">الجيش العراقي: قذيفتا مورتر تصيبان معسكراً لمعارضين إيرانيين في العراق</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343686">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343684">13 قتيلا على الاقل وعشرات الجرحى في قصف عنيف لحي بابا عمرو في حمص </a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343684">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343683">بعثة المراقبين العرب تزور مدينة حمص السورية غداً</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343683">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343682">قتيل وأكثر من 170 مصاباً بسبب المفرقعات في الأجنتين</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343682">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343681">الجيش الجزائري يقتل 7 مسلحين خلال تصديه لمحاولة تسلل</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343681">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343680">تفجير أنبوب غاز في شمال غرب باكستان</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343680">»</a></div></div>
+</li><li><div class='view-item view-item-Portal-breaking-news'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343679">مسؤول كوري جنوبي: سيول تخطط لشراء طائرتي استطلاع للتنصت على الشمال</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343679">»</a></div></div>
+</li></ul></div></div></div>
+</div>
+</div>
+</div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"></div>
+  </div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-row panel-row-3 clear-block">
+<div class="panel-col panel-col-1 panel-col-first">
+<div class="inside"><div class="panel-pane">
+<div class="content"><div class="quicktabs_wrapper"><table cellpadding="0" border="0" cellspacing="0" width="100%" class="quicktabs_tabs"><tr><td class="quicktabs_td" width="33%"> <a href="#">تسجيل</a> </td><td class="quicktabs_td" width="33%"> <a href="#">عن الموقع</a> </td><td class="quicktabs_td last-tab" width="33%"> <a href="#">لإعلاناتكم</a> </td></tr></table><div class="quicktabs_main"><div class="quicktabs"><div class="block block-user" id="block-user-0">
+ <div class="content"><form action="/dah?destination=dah"  accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="user-login">
+<form dir="rtl" action="/user/dah?destination=dah"  method="post" id="user-login-form">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td valign="top" align="right">إسم المستخدم</td>
+    <td valign="top" align="right">كلمة السر</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" align="right"><input type="text" name="name" id="edit-name" class="login-input" value="">&nbsp;</td>
+    <td valign="top" align="right"><input name="pass" id="edit-pass" type="password" class="login-input" value="">&nbsp;</td>
+    <td valign="top"><input type="image" src="/sites/all/themes/dah/images/common/btn-login.gif" name="op" id="edit-submit" class="btn"  value=""></td>
+  </tr>
+  <tr>
+  	<td colspan="3" align="right">التسجيل شرط للتعليقات وللبحث عن مواد أقدم من أسبوع</td>
+  </tr>
+</table>
+</div><div class="div-login-footer">
+<table class="login-footer" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  	<td align="left"><a href="/user/password"><img src="/sites/all/themes/dah/images/common/btn-forget.gif" border="0" /></a></td>
+    <td width="129"><a href="/user/register"><img src="/sites/all/themes/dah/images/common/btn-new-user.gif" border="0" /></a></td>
+  </tr>
+</table>
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+</form>
+</div>
+</div></form>
+</div>
+</div>
+</div><div class="quicktabs"><div class="block block-block" id="block-block-1">
+ <div class="content"><p>موقع "دار الحياة" مشروع إلكتروني يقدّم مختارات من "الحياة" و"الحياة السعودية" و"لها" ومواد خاصة وبعض الترجمات، ويرحّب بتفاعل القراء مع محتواه وكتّابه <a href="mailto:dhwebmaster@alhayat.com">dhwebmaster@alhayat.com</a></p>
+</div>
+</div>
+</div><div class="quicktabs"><div class="block block-block" id="block-block-2">
+ <div class="content"><div style="text-align:center;width:330px;">For information on advertising on DarAlhayat sites<br><br />
+لمزيد من المعلومات حول الاعلان على مواقعنا<br><br />
+<a href='mailto:advertise@alhayat.com'>advertise@alhayat.com</a>
+</div>
+</div>
+</div>
+</div></div></div></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><script type="text/javascript" src="/scripts/adv/portal_ipad.js"></script></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><script type="text/javascript" src="/scripts/adv/portal_digital.js"></script></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><table border="0" cellpadding="3" cellspacing="0" width="100%" style="border:2px solid #cfcfcf; background-color:#f0f0f0">
+<tr>
+<td align=center><img src="/scripts/adv/label_ad.gif" width="36" height="10" border="0" style="margin-bottom:5px;"/></td>
+</tr>
+<tr>
+<td align=center>
+<script type="text/javascript">
+document.write('<scr'+'ipt src="http://tradefx.advertserve.com/servlet/view/banner/javascript/zone?zid=9499&pid=21229&random='+Math.floor(89999999*Math.random()+10000000)+'&millis='+new Date().getTime()+'&referrer='+escape(document.location)+'" type="text/javascript"></scr'+'ipt>');
+</script></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-anonym3'><div class='view-header view-header-Portal-anonym3'><div class="anonymous3"></div>
+</div>
+<div class='view-content view-content-Portal-anonym3'><div class="item-list"><ul><li><div class='view-item view-item-Portal-anonym3'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324658105888027000.jpg" alt="الربيع العربي 2011.jpg" title="الربيع العربي 2011.jpg"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/343375">المثقفون العرب أمام أسئلة الثورة: أجوبة أشد إرباكاً </a></div><div class='view-field view-data-node-data-field-author-field-author-value'>عبده وازن</div><div class='view-field view-data-node-body'><p>هل حان الوقت لأن نتحدث عن ثقافة «الربيع العربي»، أم أن هذه «الثقافة» لا تزال عرضة للمفاجآت التي ما برحت تواجهها؟ لا شك في أن «الربيع» هذا كان في أحد وجوهه حدثاً ثقافياً، ولو أن الشارع العربي هو الذي أعلنه، مستبِقاً النخبة التي كانت تعيشه وكأنه حلم لا يتحقق بسهولة.</p>
+</div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-anonym3'> <a href="morenews/anonymous3"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-anonym2'><div class='view-header view-header-Portal-anonym2'><div class="anonymous2"></div>
+</div>
+<div class='view-content view-content-Portal-anonym2'><div class="item-list"><ul><li><div class='view-item view-item-Portal-anonym2'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324669323408375800.jpg" alt=" التونسي اسامة الملولي نجم مطلق وبطل أولمبي (أ ف ب) JPG" title=" التونسي اسامة الملولي نجم مطلق وبطل أولمبي (أ ف ب) JPG"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/342849">الدورة العربية تؤهل 16 بطلاً لألعاب لندن</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>دار الحياة - القسم الرياضي</div><div class='view-field view-data-node-body'><p>رسمت النسخة الـ12 من الدورات الرياضية العربية التي احتضنتها قطر من 9 الى 23 كانون الأول (ديسمبر) خريطة واضحة المعالم لاختصاصات كل بلد وكل من المنطقتين العربيتين في آسيا وأفريقيا.</p>
+</div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-anonym2'> <a href="morenews/anonymous2"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><p><A HREF="http://ksa.daralhayat.com/ksasub/1889"><IMG SRC="/images/common/banners/ntwrk_portal.jpg" BORDER=0  ALT=""></A></p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><script type="text/javascript" src="/scripts/adv/int-hayat.js"></script></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-ekhtiyarat-aldar'><div class='view-header view-header-ekhtiyarat-aldar'><div class="eikhtiyarat">&nbsp;</div>
+</div>
+<div class='view-content view-content-ekhtiyarat-aldar'><div class="item-list"><ul><li><div class='view-item view-item-ekhtiyarat-aldar'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343361">العراق بعد سورية على شفير... الهاوية؟</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343361">»</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>جورج سمعان</div></div>
+</li><li><div class='view-item view-item-ekhtiyarat-aldar'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343365">«قمة الرياض»... والاتحاد والإصلاح</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343365">»</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>جميل الذيابي</div></div>
+</li><li><div class='view-item view-item-ekhtiyarat-aldar'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343317">The Protestor</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343317">»</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>بيسان الشيخ</div></div>
+</li><li><div class='view-item view-item-ekhtiyarat-aldar'><div class='view-field view-data-node-title'><a href="/portalarticlendah/343638">قليلاً من الحياء لو سمحتم</a></div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343638">»</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>بدرية البشر</div></div>
+</li></ul></div></div><div class='view-footer view-footer-ekhtiyarat-aldar'><p><a href="morenews/ekhtiyarat_aldar">&nbsp;</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div style="padding:7px 0px 0px 0px;"><a href="http://itunes.apple.com/us/app/laha-magazine/id417230067?mt=8" target="_blank"><img src="/images/common/banners/ad.jpg" border="0"></a></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><p><a name="translations"></a></p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-English-Left'><div class='view-header view-header-English-Left'><p>&nbsp;</p>
+</div>
+<div class='view-content view-content-English-Left'><div class="item-list"><ul><li> 
+<div class="view-seperator">
+</div>
+<div class="view-field view-data-title" id="engTitle">
+  <a href="/portalarticlendah/342751">Syria Faces a New, Long-Term Phase</a>&nbsp;<span class="EnglishLink"><a href="/portalarticlendah/342751">»</a></span></div>
+<div class="view-field view-data-name" style="color:#848484;">
+  Walid Choucair</div>
+ </li><li> 
+<div class="view-seperator">
+</div>
+<div class="view-field view-data-title" id="engTitle">
+  <a href="/portalarticlendah/342749">Ayoon Wa Azan (Each Person Reaps What He Sows)</a>&nbsp;<span class="EnglishLink"><a href="/portalarticlendah/342749">»</a></span></div>
+<div class="view-field view-data-name" style="color:#848484;">
+  Jihad el-Khazen</div>
+ </li><li> 
+<div class="view-seperator">
+</div>
+<div class="view-field view-data-title" id="engTitle">
+  <a href="/portalarticlendah/342750">Moscow&#039;s Position: A Message to the Regime and Opposition in Syria </a>&nbsp;<span class="EnglishLink"><a href="/portalarticlendah/342750">»</a></span></div>
+<div class="view-field view-data-name" style="color:#848484;">
+  Raghida Dergham - New York </div>
+ </li><li> 
+<div class="view-seperator">
+</div>
+<div class="view-field view-data-title" id="engTitle">
+  <a href="/portalarticlendah/342748">Iraq: Retaliation Instead of Judiciary</a>&nbsp;<span class="EnglishLink"><a href="/portalarticlendah/342748">»</a></span></div>
+<div class="view-field view-data-name" style="color:#848484;">
+  Husam Itani</div>
+ </li></ul></div></div><div class='view-footer view-footer-English-Left'><p><a href="morenews/english">&nbsp;</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><script type="text/javascript"  src="/scripts/adv/portal_MR_2.js"></script></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Alhayat-Fi-Daralhayat'><div class='view-header view-header-Portal-Alhayat-Fi-Daralhayat'><p>&nbsp;</p>
+</div>
+<div class='view-content view-content-Portal-Alhayat-Fi-Daralhayat'><div class="item-list"><ul><li><div class="view-field view-data-title">
+  <a href="/portalarticlendah/26811">مركز معلومات دار الحياة</a></div>
+<div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/small_thumb/files/rbimages/1250072704690041700.jpg" alt="مكاتب الحياة اللبنانية في بيروت منتصف الخمسينيات (الأرشيف)" title="مكاتب الحياة اللبنانية في بيروت منتصف الخمسينيات (الأرشيف)"  /></div>
+<div class="view-field view-data-term-data-name">
+  دار الحياة</div>
+
+ 
+<div class="view-field view-data-body">
+  <p dir="rtl">تأسس المركز عام 1988 مع إعادة صدور صحيفة الحياة من العاصمة البريطانية، لندن. ثم انتقل إلى بيروت عام 2000، ليبدأ مرحلة جديدة من البناء والتوسع بانضمام مجلة  "لها" إلى صحيفة "الحياة" ومجلة "الوسط".</p>
+</div>
+
+<div class="view-field view-data-link">
+  <a href="/portalarticlendah/26811">»</a></div>
+<br />
+</li></ul></div></div><div class='view-footer view-footer-Portal-Alhayat-Fi-Daralhayat'><p><a href="morenews/daralhayat">&nbsp;</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class="panel-display panel-1col clear-block" id='mini-panel-Currencies'>
+  <div class="panel-panel panel-col">
+    <div><div class="panel-pane currencies_header">
+<div class="content"><div class="currencies-header">&nbsp;</div></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane currencies_mini_pane">
+<div class="content"><div class="main_currency_list"><div class="currency_list_0">Dow Jones Industr(10340.7)</div><div class="currency_list_1">NASDAQ Composite(2618.64)</div><div class="currency_list_0">FTSE 100(5512.7)</div><div class="currency_list_1">^CASE30(0)</div><div class="currency_list_0">USD to EUR(0.7651)</div><div class="currency_list_1">USD to GBP(0.6398)</div></div></div>
+</div>
+</div>
+  </div>
+</div></div>
+</div>
+</div>
+</div>
+<div class="panel-col panel-col-2 panel-col-inside">
+<div class="inside"></div>
+</div>
+<div class="panel-col panel-col-3 panel-col-inside">
+<div class="inside"><div class="panel-pane marginbottom11">
+<div class="content"><div class="panel-display panel-1col clear-block" id='mini-panel-Portal_Alnashra'>
+  <div class="panel-panel panel-col">
+    <div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Alnashra'><div class='view-content view-content-Portal-Alnashra'><div class="item-list"><ul><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1272229301832433200.jpg" alt="«ارشيفية» لإحدى جلسات مجلس الشورى. (الحياة)" title="«ارشيفية» لإحدى جلسات مجلس الشورى. (الحياة)"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343674">«الشورى» يعصف بآمال «المتقاعدين»!</a></div>
+<div class="view-field view-data-node-title">
+   الرياض - رياض المسلم وفيصل المخلفي</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>أسقطت غالبية أعضاء مجلس الشورى توصية برفع الحد الأدنى للراتب التقاعدي من 1500 ريال إلى ثلاثة آلاف ريال، إضافة إلى التأمين الصحي. فقد عارضها أمس71 عضواً، فيما أيدها 49 عضواً. وفي نسخة حصلت عليها «الحياة»</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343674">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324834232741350200.jpg" alt="انتشار أمني أمام احدى كنائس بغداد أمس. (ا ب).jpg" title="انتشار أمني أمام احدى كنائس بغداد أمس. (ا ب).jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343495">الأزمة العراقية تراوح مكانها رغم تعدد الوساطات والهاشمي يحذر من عودة الاقتتال الطائفي</a></div>
+<div class="view-field view-data-node-title">
+  بغداد - «الحياة»</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>في وقت لا تزال الأزمة السياسية الناجمة عن الصراع بين أقطاب السلطة في العراق تراوح مكانها بين فشل وساطة ومباشرة أخرى، طغت المخاوف الأمنية على احتفالات عيد الميلاد، فألغت الكنائس قداديس منتصف الليل واتخذت قوات الأمن إجراءات حماية مكثفة تحسباً لاستهداف المصلين.</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343495">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324838419471473900.jpg" alt="قافلة عسكرية في حمص أمس. (شبكة «أوغاريت» المعارضة).jpg" title="قافلة عسكرية في حمص أمس. (شبكة «أوغاريت» المعارضة).jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343493">تحذيرات من «مجازر» في حمص... والمراقبون في الأماكن الساخنة «فورا»</a></div>
+<div class="view-field view-data-node-title">
+  القاهرة - محمد الشاذلي</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>دمشق، نيقوسيا -»الحياة»، أ ف ب ، أ ب - قال سكان وناشطون إن أحياء بابا عمرو والخالدية والبياضة والقصور والوعر وكرم الزيتون في مدينة حمص، إضافة إلى مدينتي تلبيسة والرستن في محافظة حمص تعرضوا لقصف عنيف وملاحقات امنية عبر الشوارع منذ فجر أمس في ظل مساع محمومة من السلطات للقضاء على اية مظاهر للمقاومة من عناصر منشقة</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343493">»</a></div>
+<div class='related_nodes'>
+				<div class='related_label'>&#1605;&#1608;&#1575;&#1590;&#1610;&#1593; &#1584;&#1575;&#1578; &#1589;&#1604;&#1577;</div><div class="related_title"><a href="/portalarticlendah/343427">&raquo;تفجيرا دمشق ينذران بمرحلة أكثر دموية في الانتفاضة</a></div></div></li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324838419601474500.jpg" alt="خليل إبراهيم في صورة من الأرشيف. (ا ف ب).jpg" title="خليل إبراهيم في صورة من الأرشيف. (ا ف ب).jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343490">السودان: مقتل خليل إبراهيم  ضربة موجعة للتمرد في دارفور</a></div>
+<div class="view-field view-data-node-title">
+  الخرطوم - النور أحمد النور</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>تلقى المتمردون في إقليم دارفور السوداني ضربة موجعة بمقتل خليل إبراهيم، زعيم «حركة العدل والمساواة» أكبر حركات التمرد. ما يُضعف، ولو مرحلياً، تحالفا مناهضا لنظام الرئيس عمر البشير أسس حديثاً. واحتفل النظام الحاكم في الخرطوم وأنصاره بمقتل خصمه الأبرز، متأثراً بإصابته في مواجهات.</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343490">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324831313431194300.jpg" alt="122602b.jpg" title="122602b.jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343376">«بروفة» ليبية للخروج من سجن 42 عاماً</a></div>
+<div class="view-field view-data-node-title">
+  نجوى بن شتوان</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>حسنٌ أن ليبيا تتحرر من حكم «الجاهلية العظمى» بالقطعة، وإلا فلا يمكن تخيل ما يحدثه التحرير دفعة واحدة من فوضى عارمة، فليبيا بلاد كبيرة، وهذا قد يُصعب وضع كل شيء في مكانه الجديد بيسر وبلا أخطاء أو خسائر. قطعاً لم يكن ذلك بتدبيرنا، إنما بتدبير إلهنا، الذي جعل المدن سابقة ولاحقة في التحرر، علّنا نجتنب تكرار الأخطاء.</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343376">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324830995581171000.jpg" alt="إيان هسلوب في مكتبه (رويترز).jpg" title="إيان هسلوب في مكتبه (رويترز).jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343369">«برايفت آي»... تلاحق المشاهير  بـ «مجهر النقد والسخرية» </a></div>
+<div class="view-field view-data-node-title">
+   لندن – رانيا كرم</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>مجلة «برايفت آي» Private Eye البريطانية التي احتفلت أخيراً بمرور 50 سنة على صدورها، تحتل بجدارة مرتبة متقدمة بين منافساتها من المجلات الإخبارية، ولكن ليس فقط مقارنة بنسب التوزيع والمبيعات، بل أيضاً بنسب دعاوى التشهير القضائية التي تُرفع ضدها. فما هي قصة هذه المطبوعة البريطانية الشهيرة؟</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343369">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324829395861079900.jpg" alt="من تظاهرات الحراك العربي (رويترز).jpg" title="من تظاهرات الحراك العربي (رويترز).jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343333">تركيا فوجئت بـ«الربيع العربي» ولن تكون وحيدة في التدخل</a></div>
+<div class="view-field view-data-node-title">
+  سميح إيديز *</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>فوجئت تركيا على غرار عدد كبير من دول العالم بـ «الربيع العربي». ودحضت هذه الأحداث التاريخية التي تستمر في الانتشار في ما كان يعدّ منطقة مستقرة وعصية على صعيد التغيير الاجتماعي الثوري، كل الافتراضات في أنقرة أيضاً.</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343333">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324829022631047700.jpg" alt="122611b.jpg" title="122611b.jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343329">عام اكتشاف «شوية العيال» المصريين... وما أجملها ثورة!</a></div>
+<div class="view-field view-data-node-title">
+  أمينة خيري</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>نتحدث عن الشباب؟! الموضوع لا شك يتعلق إما بالبطالة، وإما بتدني مستوى التعليم، وربما انعدامه، وغالباً ما يدور حول البلادة والسلبية، وأغلب الأحوال سيعرّج على انعدام الشعور بالمسؤولية وتنامي الميول الأنانية. وسيخصص جانب واحد على الأقل لمناقشة الكبت الجنسي وممارسة التحرش</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343329">»</a></div>
+</li><li>
+<div class="view-data-node-data-field-related-nodes-field-related-nodes-nid">
+  <img src="http://www.daralhayat.com/files/imagecache/medium_thumb/files/rbimages/1324829395911080100.jpg" alt="بشار الأسد (ا ف ب).jpg" title="بشار الأسد (ا ف ب).jpg"  /></div>
+
+<div class="view-field view-data-node-title">
+  <a href="/portalarticlendah/343330">الإنذار الروسي «الأخير» يمهدلقبول أي حل لأزمة سورية</a></div>
+<div class="view-field view-data-node-title">
+  اندريه ستيبانوف *</div>
+<div class="view-field view-data-node-created">
+  <span class="date-display-single">الإثنين, 26 ديسيمبر, 2011</span></div>
+
+<div class="view-field view-data-node-body">
+  <p>التطورات في المشرق العربي وشمال أفريقيا منذ بداية 2011 كانت الحدث الرئيس الذي لفت أنظار العالم، وجعله يدهش حيناً ويعيد النظر في حساباته أحياناً.</p>
+<p>و «الربيع العربي» الذي بدا واضحاً أخيراً، أنه يميل إلى ارتداء عباءة الإسلام، كان وسيبقى تطوراً غامضاً بالنسبة إلى روسيا، مثيراً للمخاوف من تداعياته المحتملة على المنطقة والعالم.</p>
+</div>
+
+<div class="view-field view-data-node-link">
+  <a href="/portalarticlendah/343330">»</a></div>
+</li></ul></div></div></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane nashra-footer">
+<div class="content"><a href="morenews/alnashra" class="nashra-footer-more">&nbsp;</a><div id="nashra_dots"></div></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div id="pause-holder">
+<div id="pause-container"><a onClick="clickButton()" id="nashra-pause-btn" class="nashra-pause-btn-playing">&nbsp;</a></div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Jadal'><div class='view-header view-header-Portal-Jadal'><div class="jadal-title">&nbsp;</div>
+</div>
+<div class='view-content view-content-Portal-Jadal'><div class="item-list"><ul><li><div class='view-item view-item-Portal-Jadal'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324829969521113900.jpg" alt="lebanon-election.jpg" title="lebanon-election.jpg"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/343338">مشروع اللقاء الأرثوذكسي في أزمة تسويق واستغلال الهواجس يولد التطرف والانكفاء</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>بيروت - محمد شقير</div><div class='view-field view-data-node-body'><p>يتعامل معظم القيادات المارونية التي شاركت في لقاء بكركي الموسع برعاية البطريرك الماروني بشارة الراعي مع اعتبارها المشروع الأرثوذكسي لقانون الانتخاب صيغة صالحة لتحقيق التمثيل العادل والفاعل لكل الفئات الشعبية ولتكريس المناصفة بين المسيحيين والمسلمين</p>
+</div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343338">»</a></div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-Jadal'><a href="morenews/jadal"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane hani2an" id="hani2an">
+<h2 class="title">hani2an</h2>
+<div class="content"><script type="text/javascript" src="/scripts/blocks/thickbox/thickbox.js"></script><link rel="stylesheet" href="/scripts/blocks/thickbox/thickbox.css" type="text/css" media="screen" />
+<script type="text/javascript"  src="/scripts/blocks/hani2an.js"></script></div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane portal_tabs">
+<h2 class="title">tabs</h2>
+<div class="content"><div class='view view-Portal-Wafi-Alnashra'><div class='view-content view-content-Portal-Wafi-Alnashra'><div class="item-list"><ul><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/taxonomy/term/1482">رياضة</a></div>
+<div class="view-field view-data-name">
+  دار الحياة - بيروت</div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343691">قبرصلي ويموت يحرزان كأس قائد الجيش في سباق الميلاد الـ55 للسباحة</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p dir="rtl">أحرز سباحا نادي الجزيرة وائل قبرصلي ونيبال يموت كأسي قائد الجيش العماد جان قهوجي ممثلاً</div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324895218462288200_0.jpg" alt="من منافسات الإناث لفئة فوق 18 سنة (عدنان الحاج علي) JPG" title="من منافسات الإناث لفئة فوق 18 سنة (عدنان الحاج علي) JPG"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343691">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/taxonomy/term/1486">ناس وناس</a></div>
+<div class="view-field view-data-name">
+  </div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343690">عدد الفلسطينيين يتجاوز 11 مليون نسمة مع نهاية عام 2011</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p dir="rtl">رام الله، رويترز،  قال جهاز الاحصاء الفلسطيني اليوم الاثنين ان عدد الفلسطينيين تجاوز 11</div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324897718112333100.jpg" alt="بانتظار العودة.jpg" title="بانتظار العودة.jpg"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343690">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/ksasub/1453">المحليات</a></div>
+<div class="view-field view-data-name">
+  الرياض - وليد الأحمد</div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343543">كندا: شرطة ساسكاتون تصنف مبتعثاً سعودياً  أبرز السكان «المفقودين»</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p>تصدر نبأ اختفاء المبتعث السعودي حمزة الشريف في مدينة ساسكاتون الكندية الموقع الإلكتروني لشرطة مدي</div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324840474943151800.jpg" alt="من موقع الشرطة الإلكتروني وتظهر فيه صورة الشريف. " title="من موقع الشرطة الإلكتروني وتظهر فيه صورة الشريف. "  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343543">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/internationalsub/1421">إقتصاد</a></div>
+<div class="view-field view-data-name">
+  الرياض - سعد الأسمري</div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343474">السعودية: إمدادات الوقود ترفع أسعار الإسمنت</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p>حذر تقرير اقتصادي من أن إشكالات شركات الإسمنت السعودية مع شركة «أرامكو السعودية» بسبب الوقود قد ت</div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324835695431425600.jpg" alt="معمل للإسمنت في الهفوف (الحياة).jpg" title="معمل للإسمنت في الهفوف (الحياة).jpg"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343474">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/internationalsub/1428">تلفزيون</a></div>
+<div class="view-field view-data-name">
+  محمد موسى</div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343396">صورة العربي النمطية تعود في مسلسل «الوطن» الأميركي!</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p>عندما ودع المسلسل الأميركي «24» مشاهديه في العام الماضي، اعتبر عدد من نقاد التلفزيون الاميركيين، </div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324831545021217800.jpg" alt="لقطة من المسلسل الأميركي «الوطن».jpg" title="لقطة من المسلسل الأميركي «الوطن».jpg"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343396">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/internationalsub/1424">آداب وفنون</a></div>
+<div class="view-field view-data-name">
+  محمد الغزّي</div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343383">هل صنعت  الانتفاضة التونسية ثقافتها؟</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p>في مناخ عربيّ ساكن، خامل، منكمش، تفجّرت فجأة المدن التونسيّة منادية بسقوط الطاغية، فاتحة صدرها لر</div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324831313521194800.jpg" alt="122603b.jpg" title="122603b.jpg"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343383">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/internationalsub/1448">ميديا</a></div>
+<div class="view-field view-data-name">
+  باريس – ارليت خوري</div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343372">«فرانس سوار»... تودّع قراءها</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p>على رغم توقف صحيفة «فرانس سوار» المسائية الفرنسية عن الصدور في 13 كانون الأول (ديسمبر) الجاري، فإ</div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324830995611171100.jpg" alt="122609b.jpg" title="122609b.jpg"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343372">»</a></div></td>
+  </tr>
+</table></li><li><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><div class="view-field view-data-term-data-name">
+  <a href="/internationalsub/1420">دوليات</a></div>
+<div class="view-field view-data-name">
+  </div>
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343346">اتفاق ياباني - صيني على ضرورة الحفاظ على الاستقرار في كوريا</a></div>
+<!--
+<div class="view-field view-data-body">
+  <p>بكين، سيول - رويترز - ابلغ رئيس الوزراء الياباني يوشيهيكو نودا، نظيرَه الصيني وين جياباو امس، أن </div>
+--></td>
+    <td valign="top" width="50"><div class="view-field view-data-field-attached-image-fid">
+    <img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324830333081126800.jpg" alt="جموع المعزين بالزعيم الكوري الشمالي في بيونغيانغ (أ ف ب).jpg" title="جموع المعزين بالزعيم الكوري الشمالي في بيونغيانغ (أ ف ب).jpg"  /></div></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2"><div class="view-field view-data-link">
+  <a href="/portalarticlendah/343346">»</a></div></td>
+  </tr>
+</table></li></ul></div></div><div class='view-footer view-footer-Portal-Wafi-Alnashra'><a href="./morenews/wafianashra" class="more-news-link">&nbsp;</a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><p><!--</p>
+<script type="text/javascript" src="/scripts/adv/portal_awal.js"></script><p>--><a target="_blank" href="http://www.daralhayat.net/services/hayat-ads/index.php?option=com_flexbanner&amp;task=click&amp;bannerid=4"><img height="90" width="368" alt="awal mara1" src="http://www.daralhayat.net/services/hayat-ads/images/banners/1.jpg"></a></p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div id='oanda_ecc' align=center style="background:#fff; padding:10px 0"> <!-- IF YOU ALTER OR REMOVE THE FOLLOWING CODE, THE EMBEDDED WIDGET WILL NOT WORK. --><span style='color:#000; text-decoration:none; font-size:9px;'><a href='http://www.oanda.com/currency/converter/' id='oanda_cc_link'>Currency Converter</a> by OANDA</span></p>
+<script src='http://www.oanda.com/embedded/converter/get/bmFkYWFkZWhuLy9uZXdjb252ZXJ0ZXI=/?lang=en'></script></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Hawl-Almadina'><div class='view-header view-header-Portal-Hawl-Almadina'><div class="hawl-almadina">&nbsp;</div>
+</div>
+<div class='view-content view-content-Portal-Hawl-Almadina'><div class="item-list"><ul><li>	
+<div class="view-field view-data-title">
+  <a href="/portalarticlendah/343393">حول المدينة (26-12-2011)</a></div>
+
+<div class="view-field view-data-term-data-name">
+  </div>
+<div class="view-field view-data-field-attached-image-fid">
+    </div>
+
+<div class="view-field view-data-body">
+  <p>وزير الثقافة المصري شاكر عبدالحميد، عيّن زين عبدالهادي رئيساً للهيئة العامة لدار الكتب والوثائق القومية خلفاً لصابر عرب الذي بلغ السن القانونية للتقاعد.</p>
+</div>
+<div class="view-field view-data-link">
+  <a href="/portalarticlendah/343393">»</a></div>
+
+</li></ul></div></div><div class='view-footer view-footer-Portal-Hawl-Almadina'><a href="morenews/hawlalmadina"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-col panel-col-4 panel-col-inside">
+<div class="inside"></div>
+</div>
+<div class="panel-col panel-col-5 panel-col-last">
+<div class="inside"><div class="panel-pane" id="blockstory">
+<div class="content"><div class='view view-NoName'><div class='view-content view-content-NoName'><div class="item-list"><ul><li><div class='view-item view-item-NoName'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1252067520349158600.jpg" alt="لوغو الحياة" title="لوغو الحياة"  /></div><div class='view-field view-data-node-data-field-attached-image-field-attached-image-fid'><div class="field-item"></div></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/343505">نعالج السرطان بالإنكار</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>غسان شربل</div><div class='view-field view-data-node-body'><p>كانت رياح الغزو الأميركي تنذر بالهبوب. قلت اسأل السياسيين العراقيين عن مخاطر غرق العراق في الفوضى بفعل الفراغ الذي قد يخلّفه اقتلاع نظام صدام حسين. وسألت تحديداً عن احتمال اضطراب العلاقة بين المكونين السنّي والشيعي. أستقبل السؤال بقدر غير قليل من الاستغراب والانزعاج.</p>
+</div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343505">»</a></div></div>
+</li></ul></div></div></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Malafat-AlDar'><div class='view-header view-header-Portal-Malafat-AlDar'><div class="malafat-title">&nbsp;</div>
+</div>
+<div class='view-content view-content-Portal-Malafat-AlDar'><div class="item-list"><ul><li><div class='view-item view-item-Portal-Malafat-AlDar'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324829396011080500.jpg" alt="ثوار في ليبيا (رويترز).jpg" title="ثوار في ليبيا (رويترز).jpg"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/343335">ثورات العرب اليوم كما يراها الإيرانيون</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>طهران - محمد صالح صدقيان</div><div class='view-field view-data-node-body'><p>لم يتفق المشهد السياسي الإيراني علی قراءة موحدة للأحداث والتطورات التي تشهدها المنطقة العربية، فالبعض رأى في «الربيع العربي» خطوة في غاية الحكمة، فيما ذهب الآخر إلى اعتباره «صحوة إسلامية» تدخل في سياق التحرك الإسلامي الذي بدأ بمحمد عبده وجمال الدين الأفغاني، مروراً بالثورة الإسلامية الإيرانية.</p>
+</div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343335">»</a></div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-Malafat-AlDar'><a href="morenews/MalafatAlDar"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-cmg-soon'><div class='view-header view-header-Portal-cmg-soon'><div class="cmg_soon"></div>
+</div>
+<div class='view-content view-content-Portal-cmg-soon'><div class="item-list"><ul><li><div class='view-item view-item-Portal-cmg-soon'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324844254163461700.jpg" alt="الأهلي تجاوز مضيفه الفيصلي بصعوبة." title="الأهلي تجاوز مضيفه الفيصلي بصعوبة."  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/343560"> الأهلي يقفز لـ «الثالث» ... والنصر يداوي جراحه بالأنصار</a></div><div class='view-field view-data-node-data-field-author-field-author-value'> الرياض - علي المرشود - الدمام - هاني الباشا</div><div class='view-field view-data-node-body'><p>قفز الأهلي إلى المركز الثالث في دوري زين، بعد أن رفع رصيده إلى 30 نقطة إثر تغلبه على مضيفه الفيصلي بهدف من دون رد، في المباراة المؤجلة من الجولة السابعة، فيما كسب النصر مضيفه الأنصار بهدفين من دون رد، وخرج نجران وضيفه القادسية بالتعادل الإيجابي بهدفين لمثلهما.</p>
+</div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-cmg-soon'> <a href="morenews/kariban"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Shababona'><div class='view-header view-header-Portal-Shababona'><div class="shababona-title">&nbsp;</div>
+</div>
+<div class='view-content view-content-Portal-Shababona'><div class="item-list"><ul><li><div class='view-item view-item-Portal-Shababona'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324829022611047600.jpg" alt="122618b.jpg" title="122618b.jpg"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/343327">الشباب السعودي في عام الاستحقاقات المتسارعة</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>سيف السويلم</div><div class='view-field view-data-node-body'><p>لم يماثل عام 2011 غيره من الأعوام التي عاشها جيل الشباب المولود في فترة الثمانينات من القرن الماضي، إذ كان هذا العام فريداً من نوعه بالنسبة إليهم، فما شهده من أحداث دفعت التاريخ إلى التقاطها وتسجيلها في دفاتره كحالات لا تُنسى، جعله مستحقاً لهذا الوصف.</p>
+</div><div class='view-field view-data-node-link'><a href="/portalarticlendah/343327">»</a></div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-Shababona'><a href="morenews/shababona"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-anonym5'><div class='view-header view-header-Portal-anonym5'><div class="anonymous5"></div>
+</div>
+<div class='view-content view-content-Portal-anonym5'><div class="item-list"><ul><li><div class='view-item view-item-Portal-anonym5'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/342627">يوميات - صوت الديفا الذي يمزّق سقفنا</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>محمد علي فرحات</div><div class='view-field view-data-node-body'><p>الأحد 18/12/2011: حضور المغنية</p>
+<p>رحيل سيزاريا أيفورا هزّ انكفاءنا ممزقاً سقفاً من الأيديولوجيات ومن وحشية مستعادة تظلّل أيامنا: يكفينا سقوط رئيس أو ديكتاتور حتى يظهر خواؤنا تحت السقف، فنسترخي، تاركين لنمل الأرض وحشرات الفضاء أن تأكل أجسادنا وأرواحنا قطعة قطعة، ولا نتنبه.</p>
+</div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-anonym5'> <a href="morenews/anonymous5"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-anonym4'><div class='view-header view-header-Portal-anonym4'><div class="anonymous4"></div>
+</div>
+<div class='view-content view-content-Portal-anonym4'><div class="item-list"><ul><li><div class='view-item view-item-Portal-anonym4'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324389691999866100.jpg" alt="122109b‭.jpg" title="122109b‭.jpg"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/341563">كوريا الشمالية على مفترق طرق </a></div><div class='view-field view-data-node-data-field-author-field-author-value'>هان زهنشي*</div><div class='view-field view-data-node-body'><p>اندلاع الفوضى في كوريا الشمالية إثر وفاة كيم جونغ - إيل غير مستبعد، فالأخير أمسك بمقاليد السلطة منذ 1994 الى 2011. آلية القرار في كوريا الشمالية تقضي بتوجيه القائد الأعلى النظامَ كله وتحريكِ خيوطه</p>
+</div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-anonym4'> <a href="morenews/anonymous4"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane">
+<div class="content"><div class='view view-Portal-Sigharona'><div class='view-header view-header-Portal-Sigharona'><div class="sigharona-title">&nbsp;</div>
+</div>
+<div class='view-content view-content-Portal-Sigharona'><div class="item-list"><ul><li><div class='view-item view-item-Portal-Sigharona'><div class='view-field view-data-node-data-field-related-nodes-field-related-nodes-nid'><img src="http://www.daralhayat.com/files/imagecache/micro_thumb/files/rbimages/1324473230332298900.jpg" alt="لوغو تحت الـ20.jpg" title="لوغو تحت الـ20.jpg"  /></div><div class='view-field view-data-node-title'><a href="/portalarticlendah/341923">ثقافة المال والسوق لدى الأطفال</a></div><div class='view-field view-data-node-data-field-author-field-author-value'>مونتريال - علي حويلي  </div><div class='view-field view-data-node-body'><p>مخطئ من يعتقد بأن الأطفال غير قادرين على التعامل مع المال وفهم طريقة صرفه أو التعامل معه، فالطفل يبدأ بالتعرف إلى المال في مرحلة مبكرة من حياته.</p>
+</div><div class='view-field view-data-node-link'><a href="/portalarticlendah/341923">»</a></div></div>
+</li></ul></div></div><div class='view-footer view-footer-Portal-Sigharona'><a href="morenews/sigharona"><div class="btn-more-details">&nbsp;</div></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+
+        
+        
+      </div></div> <!-- /#content-inner, /#content -->
+
+              <div id="navbar"><div id="navbar-inner">
+
+          <a name="navigation" id="navigation"></a>
+
+          
+
+          
+          
+        </div></div> <!-- /#navbar-inner, /#navbar -->
+      
+      
+
+    </div></div> <!-- /#main-inner, /#main -->
+
+    <div id="footer"><div id="footer-inner">
+
+      <div id="footer-message">
+<div id="block-block-9" class="clear-block block block-block">
+
+
+  <div class="content"><div align="center"><a href="#top"><img src="/sites/all/themes/dah/images/top.gif" alt="" border="0" align="absmiddle"></a></div>
+</div>
+</div>
+ </div>
+
+    </div></div> <!-- /#footer-inner, /#footer -->
+
+    
+    
+  </div></div> <!-- /#page-inner, /#page -->
+	</div>
+<script type='text/javascript'>
+$(document).ready(function(){
+		
+	var first = 0;
+	var speed = 700;
+	var pause = 9000;
+	
+		function removeFirst(){
+			first = $('.view-content-Portal-breaking-news ul li:first').html();
+			$('.view-content-Portal-breaking-news ul li:first')
+			.fadeOut(800, function() {$(this).remove();});
+			addLast(first);
+		}
+		
+		function addLast(first){
+			last = '<li style="display:none">'+first+'</li>';
+			$('.view-content-Portal-breaking-news ul').append(last)
+			$('.view-content-Portal-breaking-news ul li:last')
+			.fadeIn(800)
+		}
+	
+	interval = setInterval(removeFirst, pause);
+	initMenu();
+	// remove href on all expandable links
+	$("ul.menu").find("li.collapsed").find("a:first").attr("href", "javascript:;");
+	
+	// actions on expandable menu main links
+	$("ul.menu").find("li.expanded").click(function() { toggleMenu(this) });
+	
+	// highlight current section in menu
+	$("ul.menu .active").parents("li.expanded").find("a:first").addClass("active");
+	$("ul.menu .active").css({"background-color": "#464646", "color":"#ffffff","background-image": "url(/sites/all/themes/dah/images/common/menu-bullet3.gif)","background-position": "95% 10px" });
+})
+ 
+function initMenu () {
+    $("ul.menu li.expanded ul.menu").each(function(){
+		makeDropmenu(this);
+	}) 
+}
+
+function makeDropmenu (ul) 
+{
+	$(ul).css({position: "absolute", display: "none"  }).addClass("side-dropmenu").wrap('<div class="side-dropmenu-rel"></div>')
+	$(ul).hover(function(){
+		$(this).show();
+	}, function(){
+		$(this).hide();
+	});
+	$(ul).parent().parent().hover(function(){
+		$(this).find(".side-dropmenu").show();
+	}, function(){
+		$(this).find(".side-dropmenu").hide();
+	});
+	
+	// add a class to the last menu item
+	$(ul).find("a:last").addClass("side-dropmenu-last")
+}
+
+function toggleMenu(e)
+{
+	if($(e).attr("class") == "expanded")
+	{
+		// collapse
+		$(e).find("ul.menu").css("display", "none");
+		$(e).attr("class", "collapsed");
+	} else {
+		// expand
+		$(e).find("ul.menu").css("display", "block");
+		$(e).attr("class", "expanded");
+	}
+}
+</script>
+<script type="text/javascript">
+function limitChars(textid, limit, infodiv)
+{
+	var text = $('#'+textid).val();	
+	var textlength = text.length;
+	if(textlength > limit)
+	{
+		alert('You cannot write more than '+limit+' characters!');
+		$('#'+textid).val(text.substr(0,limit));
+		return false;
+	}
+}
+
+
+$(document).ready(function(){
+	var praction = $('#poll-view-voting').attr("action");
+	if($('#poll-view-voting').length>0){
+		var arr = praction.split('/');
+		$('#poll-view-voting').attr("action","/node/"+arr[2]);
+	//	$('#edit-vote').attr("type",'button');
+		$('#edit-vote').click(function(){
+	//		$("#vote-form").load("/node/"+arr[2]);
+		});
+	}
+	$('#edit-comment').keyup(function(){
+ 		limitChars('edit-comment', 800, 'comlimit');
+ 	})
+});
+
+</script>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>	<!-- alhayat.com -->		
+		
+    <!--- Dashboard Script -->
+								<script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-8777468-3");
+				pageTracker._trackPageview();
+				} catch(err) {}</script>
+	    <!--- End Dashboard Script -->
+    <!--- Consolidated Script -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8777468-8']);
+  _gaq.push(['_setDomainName', '.daralhayat.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <!--- End Consolidated Script -->
+<!-- YAMLI CODE START -->
+<script type="text/javascript" src="http://api.yamli.com/js/yamli_api.js"></script>
+<script type="text/javascript">
+  if (typeof(Yamli) == "object" && Yamli.init( { uiLanguage: "en" , startMode: "onOrUserDefault" } ))
+  {
+    Yamli.yamlify( "edit-search-block-form-keys", { settingsPlacement: "hide" } );
+  }
+</script>
+<!-- YAMLI CODE END -->
+</body>
+</html>

@@ -1,0 +1,886 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+
+<head>
+
+<meta name="description" content="المركز العربي للإستقلال القضاء المحاماه">
+
+<meta name="keywords" content="المركز العربي للإستقلال القضاء المحاماه إعدام الإعدام المرأة النيابة العامة الحقوق الاقتصادية والاجتماعية قضاء محاماة منظمات حقوق إنسان �">
+
+<title>المركز العربي للإستقلال القضاء المحاماه</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<link href="css/paner.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="javascript/jquery-1.3.2.min.js"></script>
+
+<script type="text/javascript" src="javascript/paner.js"></script>
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+<script language="javascript">
+
+$(function(){
+
+  $("#submit").bind("click", add_Email);
+
+});
+
+
+
+function add_Email(event)
+
+{
+
+	event.preventDefault();
+
+
+
+
+
+		email = $("#email").val();
+
+		phone = $("#phone").val();
+
+		name = $("#name").val();
+
+		$("#form_f").html("<img src='images/spinner.gif'/>");
+
+		//the main ajax request
+
+		$.ajax({
+
+			type: "POST",
+
+			data: "action=maillist&email="+email+"&phone="+phone+"&name="+name,
+
+			url: "mail.php",
+
+			success: function(msg)
+
+			{
+
+				$("#form_f").fadeOut();
+
+				$("#form_f").html(msg).fadeIn("slow");				
+
+				$("#form_f").fadeIn();				
+
+			}
+
+		});
+
+	
+
+}
+
+</script>
+
+<script type="text/javascript" src="highslide/highslide-with-html.js"></script>
+
+<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+
+<script type="text/javascript">
+
+hs.graphicsDir = 'highslide/graphics/';
+
+hs.outlineType = 'rounded-white';
+
+hs.wrapperClassName = 'draggable-header';
+
+</script>
+
+<style>
+
+.highslide-html-content{
+
+	width:485px !important;
+
+	height:auto;
+
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- outer -->
+
+<div id="outer">
+
+	<!-- header -->
+
+    <div id="header">
+
+    	<!-- serv -->
+
+    	<div id="serv">
+
+        	<!-- lang -->
+
+    		<div id="lang"><a href="en/main.php">English</a><br /><a href="#">خريطة الموقع</a></div>
+
+    		<!-- /lang -->
+
+            
+
+            <!-- date_time -->
+
+   		  <div id="date_time"> 11:05:54 02/06/2012</div>
+
+    		<!-- /date_time -->
+
+            
+
+            <!-- search -->
+
+<div id="search">
+
+            	<!--<a href="#"><div class="adv_search">بحث متقدم</div></a>-->
+
+            	<div class="search2">
+
+            	<form method="get" action="search.php">
+
+				<span class="b_search"></span>
+
+				<input type="text" name="srea" size="20" class="search" /></div>
+
+				</form>
+
+            </div>
+
+    		<!-- /search -->
+
+      </div>
+
+    	<!-- /serv -->
+
+        
+
+        <!-- logo_intro -->
+
+    	<div id="logo_intro">
+
+        	<!-- logo -->
+
+            <div id="logo"></div>
+
+            <!-- /logo -->
+
+            
+
+            <!-- intro -->
+
+            <div id="intro">
+
+            <p>مؤسسة إقليمية عربية غير حكومية يعمل من أجل دعم وتعزيز أوضاع العدالة في المنطقة العربية، وإرساء مبادئ سيادة القانون واستقلال السلطة القضائية ومهنة المحاماة واحترام حقوق الإنسان وحرياته الأساسية <a href="http://acijlp.org/main/art.php?id=14&amp;art=48" style="text-decoration: none;"><span style="color: rgb(0, 0, 0);">المزيد..</span></a></p>
+			
+            <!--
+			<a href="topics.php?id=1"><span class="more">المزيد</span></a>
+            -->
+            
+            </div>
+
+            <!-- /intro -->
+
+        </div>
+
+    	<!-- /logo_intro -->
+
+        
+
+        <!-- paner 
+
+    	<div id="paner">
+
+        	<div class="fadeinsss">
+
+              <img src="images/paner/pic1.jpg" />
+
+              
+
+            </div>
+
+        </div>
+
+    	/paner -->
+
+        
+
+        <!-- menu -->
+
+    	<div id="menu">
+
+        	<!-- menu_l -->
+
+    		<div id="menu_l"></div>
+
+    		<!-- /menu_l -->
+
+            
+
+            <!-- menu_r -->
+
+    		<div id="menu_r"></div>
+
+    		<!-- /menu_r -->
+
+            
+
+            <!-- menu_c -->
+
+    		<div id="menu_c">
+
+            	<ul>
+
+                	<a href="contactsform.php?id=3"><li class="bu_contact"></li></a>
+
+                    <a href="topics.php?id=2"><li class="bu_viplink"></li></a>
+
+                    <a href="cat.php?id=2"><li class="bu_news"></li></a>
+
+                    <a href="cat.php?id=3"><li class="bu_docu"></li></a>
+
+                    <li> 
+
+                    	
+
+                    	<ul>
+
+
+							<a href="cat.php?id=5"><li>دورات تدريبية</li></a>
+
+
+							<a href="cat.php?id=6"><li>مؤتمرات</li></a>
+
+
+							<a href="cat.php?id=16"><li>مطبوعات</li></a>
+
+							
+
+						</ul>
+
+						
+
+					<img src="images/bu_activty.png" /></li>
+
+                    <a href="cat.php?id=9"><li class="bu_room"></li></a>
+
+                    <a href="cat.php?id=14"><li class="bu_about"></li></a>
+
+                    <a href="main.php"><li class="bu_home"></li></a>
+
+                </ul>
+
+            </div>
+
+    		<!-- /menu_c -->
+
+        </div>
+
+    	<!-- /menu -->
+
+        
+
+    </div>
+
+    <!-- /header -->
+
+    
+
+    <!-- lat_update -->
+
+    
+    <div id="lat_update"><span class="latest_upd">آخر تحديث للموقع  12:18:56 29/05/2012</span></div>
+
+    <!-- /lat_update -->
+
+    
+
+    <!-- marquee_news -->
+
+    <div id="marquee_news">
+
+ 
+
+     	<marquee width="1000" direction="right" scrolldelay="5" onMouseOut="scrollAmount=3" onMouseOver="scrollAmount=1" scrollamount="3" align="left">
+
+            
+
+  
+
+		<a href="art.php?id=2&art=120">دورة تدريبية للمحاميات  "حول تفعيل الاتفاقيات والمواثيق الخاصة ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=9&art=118">مصر  :  هجوم على المحكمة الدستورية   يعصف بدورها في الرقابة على ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=2&art=112">دورة تدريبية للمحاميات "حول تفعيل الاتفاقيات والمواثيق الخاصة  ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=9&art=111"> اختيار المركز للمرة الثانية  كمنسق لشمال افريقيا في تحالف ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=2&art=110">نتائج  اللقاء التشاورى بين منظمات ونشطاء المجتمع المدنى المصرى  ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=2&art=109">رئيس جمعية الدول الأطراف للمحكمة الجنائية الدولية  في لقاء ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=9&art=108">المركز يطالب مجلس  الشعب المصرى  التصديق والانضمام الى المحكمة ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=2&art=106">ورشة عمل حول :  "مشاركة المرأة المصرية في اللجنة التأسيسية ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=2&art=104">المركز ينظم ورشة العمل الاقليمية الخامسة  بيروت حول " دور القضاة ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+  
+
+		<a href="art.php?id=9&art=103">المركز يحمل السلطات السعودية مسئولية السلامة الجسدية للمحامى ...</a>&nbsp;&nbsp;:::&nbsp;&nbsp;
+
+<!-- / -->	
+
+               
+
+            </marquee>           
+
+    </div>
+
+    <!-- /marquee_news -->
+
+    
+
+    <!-- content -->
+
+    <div id="content">
+
+     	<!-- right -->
+    	<div id="right">
+        	<!-------------------------- columns -------------------------------->
+            <!-- column1-->
+            <div class="column_r">
+            	<!-- plock prees room -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/prees.png" /></div>
+                    <div class="plock_title">
+<a href="cat.php?id=9"><img src="images/tex_room.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              <div>
+              
+                    <a href="art.php?id=9&art=118">
+                   	<P class="date_supj">17/05/2012</P>
+                    
+                    <P class="intro_supj">
+                        <img src="upload/313المحكمة-الدستورية-العليا.jpg" width="100" height="100" style="float: left; margin: 5px; border: 1px solid #5DA4B1;" />
+                        مصر  :  هجوم على المحكمة الدستورية   يعصف بدورها في الرقابة على دستورية القوانين  ...                    </P>
+                    <P class="text_supj"></P>
+                      <p class="pu_more">إقرأ المزيد</p>
+                  </a>
+                </div>
+            	</div>
+    			
+                <br />
+                <!-- plock activety -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/activety.gif" /></div>
+                    <div class="plock_title"><a href="cat.php?id=4"><img src="images/tex_actvity.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              	<div class="media">
+              <div>
+              
+                    <a href="art.php?id=5&art=117">
+                   	<P class="date_supj">16/05/2012</P>
+                    
+                    <P class="intro_supj">
+                        <img src="upload/639logo-0٤.jpg" width="100" height="100" style="float: left; margin: 5px; border: 1px solid #5DA4B1;" />
+                        دورة تدريبية للمحاميات "حول تفعيل الاتفاقيات والمواثيق الخاصة  بحق المرأة فى تولى ...                    </P>
+                    <P class="text_supj">
+القاهرة</P>
+                      <p class="pu_more">إقرأ المزيد</p>
+                  </a>
+                </div>
+                </div>
+            	</div>
+    			<!-- /plock activety -->
+                
+                
+                <br />
+                <!-- plock media -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/media.png" /></div>
+                    <div class="plock_title"><a href="media_p.php"><img src="images/tex_media.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              <div>
+              
+                    <a href="media_cat.php?cat=photos">
+                   	<P class="date_supj"></P>
+                    
+                    <P class="intro_supj">
+                        <img src="upload/489578001_357042921020649_100001448339085_979383_1207092367_n.jpg" width="100" height="100" style="float: left; margin: 5px; border: 1px solid #5DA4B1;" />
+                        نتائج اللقاء التشاورى بين منظمات ونشطاء المجتمع المدنى المصرى ورئيس جمعية الدول ...                    </P>
+                    <P class="text_supj"></P>
+                      <p class="pu_more">إقرأ المزيد</p>
+                  </a>
+                </div>
+            	</div>
+    			<!-- /plock media -->
+                
+                <!-- /plock prees room -->
+                
+                <!-- plock prees room2 -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/prees.png" /></div>
+                    <div class="plock_title">
+<a href="cat.php?id=20"><img src="images/tex_arabkanon.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              <div>
+              
+                    <a href="art.php?id=20&art=74">
+                   	<P class="date_supj">13/03/2012</P>
+                    
+                    <P class="intro_supj">
+                        <img src="upload/544Egypt_s.gif" width="100" height="100" style="float: left; margin: 5px; border: 1px solid #5DA4B1;" />
+                        تشريعات جمهورية مصر العربية                    </P>
+                    <P class="text_supj">&nbsp;
+
+    
+    الدستور&nbsp;  		(</P>
+                      <p class="pu_more">إقرأ المزيد</p>
+                  </a>
+                </div>
+            	</div>
+    			<!-- /plock prees room2 -->
+                
+                <!--plock mail list-->
+                <div class="maillist">
+                	<p align="right"><img src="images/title_m-list.png" /></p>
+                    <p align="center"><b>أضف بريدك ليصلك كل ما هو جديد</b></p>
+                    <p><br />
+                    	 <form method="post" id="form_mail" onsubmit="return false" action="" class="form">
+                        	<table>
+                            	<tr>
+                                	<td class="inbut">الاسم</td>
+                                    <td class="coma">:</td>
+                                    <td><input type="text" size="25" name="name"  id="name" value=""  /></td>
+                                </tr>
+                                <tr>
+                                	<td class="inbut">التليفون</td>
+                                    <td class="coma">:</td>
+                                    <td><input type="text" size="25" name="phone"  id="phone" value=""  /></td>
+                                </tr>
+                                <tr>
+                                	<td class="inbut">البريد</td>
+                                    <td class="coma">:</td>
+                                    <td><input type="text" size="25" name="email"  id="email" value=""  /></td>
+                                </tr>
+                                <tr>
+                                	<td class="inbut"></td>
+                                    <td class="coma"></td>
+                                    <td align="right"><input type="submit" class="put" id="submit" value="أشــتراك" /></td>
+                                </tr>
+                            </table>
+                    </form>
+
+                    <span id="form_f"></span>
+                    </p>
+                </div>
+                <!--plock mail list-->
+                
+            </div>
+            <!-- column1-->
+            
+            <!-- column1-->
+	        <div class="column_l">
+            	<!-- plock programs -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/programs.png" /></div>
+                    <div class="plock_title"><a href="cat.php?id=10"><img src="images/tex_programs.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              	<div class="media">
+               <div>
+              
+                    <a href="art.php?id=11&art=119">
+                   	<P class="date_supj">27/05/2012</P>
+                    
+                    <P class="intro_supj">
+                        <img src="upload/16الإعدام.jpg" width="100" height="100" style="float: left; margin: 5px; border: 1px solid #5DA4B1;" />
+                        ورشة عمل اقليمية حول :" دور القضاة والمدعين العامين والمحامين في ...                    </P>
+                    
+                      <p class="pu_more">إقرأ المزيد</p>
+                  </a>
+                </div>
+                </div>
+            	</div>
+    			
+                <br />
+                <!-- plock documents -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/documents.png" /></div>
+                    <div class="plock_title"><a href="cat.php?id=3"><img src="images/tex_etfakat.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              <div>
+               	<P class="date_supj">05/04/2012</P>
+                <P class="intro_supj">
+                    <img src="upload/707images666.jpg" width="100" height="100" style="float: left; margin: 3px; border: 1px solid #5DA4B1;" />
+                    مواثيق دولية                 </P>
+                <P class="text_supj">&nbsp;
+
+    </P>
+                  <a href="art.php?id=3&art=100"><p class="pu_more">إقرأ المزيد</p></a>
+                </div>
+            	</div>
+    			<!-- /plock documents -->
+                
+                <br />
+                
+                
+                <!-- plock tashre3at -->
+    			<div class="plock hieght">
+                    <div class="ti_pic_plocks">
+                        <div class="plock_pic"><img src="images/rules.png" /></div>
+                        <div class="plock_title"><a href="topics.php?id=7"><img src="images/tex_viplinks.png" /></a></div>
+                    </div>
+                    <div class="hr_plock"></div>
+                  <div>
+                    <P class="intro_supj">روابط هامة</P>
+                    <P class="text_supj">
+				
+					دليل مواقع
+&nbsp;
+ دليل مواقع 
+ابعث لنا بموقع مفيد ونشكرك على إضافة موقعنا لديكم 		 ...</P>
+                      <a href="topics.php?id=7"><p class="pu_more">إقرأ المزيد</p></a>
+                    </div>
+
+            	</div>
+		  <!-- /plock tashre3at -->
+          
+          <!-- /plock programs -->
+               
+                <!-- plock programs2 -->
+    			<div class="plock hieght">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/programs.png" /></div>
+                    <div class="plock_title"><a href="cat.php?id=21"><img src="images/tex_modahma.png" /></a></div>
+                </div>
+                <div class="hr_plock"></div>
+              	<div class="media">
+               <div>
+              
+                    <a href="art.php?id=21&art=82">
+                   	<P class="date_supj">18/03/2012</P>
+                    
+                    <P class="intro_supj">
+                        <img src="upload/321images5.jpg" width="100" height="100" style="float: left; margin: 5px; border: 1px solid #5DA4B1;" />
+                        تحرك جماعى لمنظمات حقوق الانسان المصرية  يبدأ بلاغ ...                    </P>
+                    <P class="text_supj">&nbsp;
+
+القاهرة في ...</P>
+                      <p class="pu_more">إقرأ المزيد</p>
+                  </a>
+                </div>
+                </div>
+            	</div>
+    			<!-- /plock programs2 -->
+          
+          
+          <!-- links reports -->
+                    <div class="linkspdf"><a href="ppt/acijlp.rar"><img src="images/link_pdf.png" /></a></div>
+          <!-- links reports -->
+                
+          <!-- links acicc-->
+        <div class="links"><a href="http://www.acicc.org"><img src="images/link_acicc.png" /></a></div>
+                <!-- links acicc -->
+          </div>
+            <!-- column1-->
+            <!-------------------------- /columns -------------------------------->
+  		</div>
+    	<!-- /right -->
+        
+        <!-- left -->
+    	<div id="left">
+        	<!-- plock video --> 
+    		<div class="plock_video">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/media2.png" /></div>
+                    <div class="plock_title"><img src="images/tex_history.png" /></div>
+                </div>
+                <div class="hr_plock"></div>
+                <iframe width="270" height="250" src="http://www.youtube.com/embed/NFnI-21Fwzk?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+    		<!-- /plock video -->
+            
+            <!-- plock news -->
+   		    <div class="plock22">
+	    		<div class="ti_pic_plocks">
+                	<div class="plock_pic"><img src="images/icon.png" /></div>
+                    <div class="plock_title"><img src="images/tex_news.png" /></div>
+                </div>
+            <div class="hr_plock"></div>
+              <div class="newsly">
+               	  <a href="art.php?id=2&art=120">
+                      <p class="textnews">
+                          <table>
+                            <tr>
+                                <td>
+                                    <span style="font-size: 12px; color: #777;">29/05/2012</span><br />
+                                    <img src="upload/567logo-0٤.jpg" width="63" height="57" class="picnewsly" />
+                                </td>
+                                 <td align="right">
+                                    <span class="titly_news">دورة تدريبية للمحاميات  "حول تفعيل الاتفاقيات والمواثيق الخاصة بحق المرأة فى تولى ...</span>
+                                </td>
+                            </tr>
+                          </table>
+                      </p>
+                  </a>
+               	  <a href="art.php?id=2&art=112">
+                      <p class="textnews">
+                          <table>
+                            <tr>
+                                <td>
+                                    <span style="font-size: 12px; color: #777;">16/05/2012</span><br />
+                                    <img src="upload/657logo-0٤.jpg" width="63" height="57" class="picnewsly" />
+                                </td>
+                                 <td align="right">
+                                    <span class="titly_news">دورة تدريبية للمحاميات "حول تفعيل الاتفاقيات والمواثيق الخاصة  بحق المرأة فى تولى ...</span>
+                                </td>
+                            </tr>
+                          </table>
+                      </p>
+                  </a>
+               	  <a href="art.php?id=2&art=110">
+                      <p class="textnews">
+                          <table>
+                            <tr>
+                                <td>
+                                    <span style="font-size: 12px; color: #777;">08/05/2012</span><br />
+                                    <img src="upload/807398857_357042464354028_100001448339085_979373_403490136_n.jpg" width="63" height="57" class="picnewsly" />
+                                </td>
+                                 <td align="right">
+                                    <span class="titly_news">نتائج  اللقاء التشاورى بين منظمات ونشطاء المجتمع المدنى المصرى  ورئيس جمعية الدول ...</span>
+                                </td>
+                            </tr>
+                          </table>
+                      </p>
+                  </a>
+               	  <a href="art.php?id=2&art=109">
+                      <p class="textnews">
+                          <table>
+                            <tr>
+                                <td>
+                                    <span style="font-size: 12px; color: #777;">08/05/2012</span><br />
+                                    <img src="upload/862578001_357042921020649_100001448339085_979383_1207092367_n.jpg" width="63" height="57" class="picnewsly" />
+                                </td>
+                                 <td align="right">
+                                    <span class="titly_news">رئيس جمعية الدول الأطراف للمحكمة الجنائية الدولية  في لقاء تشاورى مع منظمات ...</span>
+                                </td>
+                            </tr>
+                          </table>
+                      </p>
+                  </a>
+               	  <a href="art.php?id=2&art=106">
+                      <p class="textnews">
+                          <table>
+                            <tr>
+                                <td>
+                                    <span style="font-size: 12px; color: #777;">29/04/2012</span><br />
+                                    <img src="upload/495logo-0٤.jpg" width="63" height="57" class="picnewsly" />
+                                </td>
+                                 <td align="right">
+                                    <span class="titly_news">ورشة عمل حول :  "مشاركة المرأة المصرية في اللجنة التأسيسية للدستور"  القاهرة في 29 -30 ...</span>
+                                </td>
+                            </tr>
+                          </table>
+                      </p>
+                  </a>
+ 
+               </div>
+            </div>
+    		<!-- /plock news -->
+            
+            <!-- plock vote -->
+    		<div class="plockvots">
+	    		<div class="bg_vo"><img src="images/title_vote.png" width="270" height="31" /></div>
+                <div class="cont_vo">
+                <link rel="stylesheet" href="css/poller.css"  />
+	
+
+<script language="javascript">
+$(function(){
+  $("#submit_poll").bind("click", poll);
+});
+
+function poll(event)
+{
+	event.preventDefault();
+
+         //Get the data from all the fields  
+        var option_poll = $('input[name=option_poll]:checked');
+		var id_poller = $('input[name=id_poller]');   
+
+		var data = 'option_poll=' + option_poll.val()+ '&id_poller=' + id_poller.val();  
+		$("#poller").html("<div align='center'><img src='images/loading_black.gif' border='0'/></div>");
+		//the main ajax request
+		$.ajax({
+			type: "POST",
+			data: data,
+			url: "poll_post.php",
+			success: function(msg)
+			{
+				$("#poller").fadeOut();
+				$("#poller").html(msg).fadeIn("slow");				
+				$("#poller").fadeIn();
+								
+			}
+		});
+	
+}
+</script>
+
+<form  onsubmit="return false" id="form" class="form">
+<div id="poller">
+<h3>يجب أن يتضمن الدستور المصري الجديد قيم ومبادئ حقوق الانسان الواردة في الاعلان العالمي لحقوق الانسان</h3>		
+
+<div class="poll_option">
+<input type="radio" value="53" name="option_poll" checked="checked" />
+<label>نعم</label>
+</div>
+ 
+<div class="poll_option">  
+<input type="radio" value="54" name="option_poll" />
+<label>لا</label>	
+</div>		
+ 
+<div class="poll_option">  
+<input type="radio" value="55" name="option_poll" />
+<label>لا أعلم</label>	
+</div>		
+	
+<input type="hidden" name="id_poller" value="19">		
+<input type="submit" class="put" id="submit_poll" value="تصويت">
+
+<a href="poll_post.php" onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )">
+<input type="button" class="put" value="النتائج">
+</a>
+
+</div>
+</form>	
+<span id="poller_ajax"></span>
+                </div>
+            </div>
+    		<!-- /plock vote -->
+            
+        </div>
+    	<!-- /left -->
+    </div>
+    <!-- /content -->
+    
+    <!-- footer -->
+    <div id="footer">
+    	<!-- serv2 -->
+        <div id="serv2">
+        	<!-- Visit Us On -->
+            <div id="visit"><br /><br />
+                <a href="rss.php" target="_blank"><img src="images/rss.png" width="25" height="25" /></a>
+          		<a href="contactsform.php?id=3" target="_blank"><img src="images/mail-red-icon.png" width="25" height="25" /></a>
+                <a href="https://accounts.google.com" target="_blank"><img src="images/Gmail-icon.png" width="25" height="25" /></a>
+                <a href="https://twitter.com/acijlp" target="_blank"><img src="images/social-twitter-box-blue-icon.png" width="25" height="25" /></a>
+                <a href="http://www.facebook.com/acijlp.org" target="_blank"><img src="images/social-facebook-box-white-icon.png" width="25" height="25" /></a>
+            </div>
+            <!-- /Visit Us On -->
+            
+            <!-- counter Visitors -->
+          <div id="counter"><br /><br />
+<img src="/cgi-sys/Count.cgi?df=acijlp.dat|display=Counter|ft=6|md=5|frgb=255;255;255|dd=B"> 
+			</div>
+            <!-- /counter Visitors -->
+    </div>
+        <!-- /serv2 -->
+        
+        <!-- hrfoter -->
+      <div id="hrfoter"></div>
+        <!-- /hrfoter -->
+        
+        <!-- copyright -->
+        <div id="copyright">
+        	<!-- menudowen -->
+            <p id="menudowen">
+            	<a href="main.php">الرئيسية</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="cat.php?id=14">عن المركز</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="cat.php?id=9">بيانات صحفية</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="cat.php?id=4">أنشطة المركز</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="cat.php?id=3">اتفاقيات عامة</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="cat.php?id=2">أخبارنا</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="topics.php?id=2">روابط هامة</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="contactsform.php?id=3">اتصل بنا</a>       
+            </p>
+            <!-- /menudowen -->
+            <!-- menudowen -->
+          <p id="rightreserv">Copy All Right reserved Design & Hosting For <a href="#">MIDEASTNET.com</a></p>
+            <!-- /menudowen -->
+      </div>
+        <!-- /copyright -->
+    </div>
+    <!-- /footer -->
+</div>
+<!-- /outer -->
+</body>
+</html>
+
+

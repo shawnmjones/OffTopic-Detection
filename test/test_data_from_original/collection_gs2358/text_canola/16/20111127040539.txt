@@ -1,0 +1,31 @@
+Goto comments Leave a comment
+Like much of the world, we’ve watched the incidents unroll in Egypt over the past week. While our role as a company is a non-political one, with today’s escalation, we can’t help but feel concern and empathy for the people in Egypt. And, like many, we’re feeling frustrated as we examine our role in the events as seen through our particular lens.
+Amidst the growing protests and political upheaval in Egypt, it was immediately clear that social media was a key tool for informing and organizing the protesters. As such, the Egyptian government began blocking access to social networking/media sites including Twitter.com and Facebook.com on Jan. 24/25.
+HootSuite was not initially blocked, and starting Jan 24th, experienced a spike in user sign-ups and activity from Egypt as people quickly recognized this way to by-pass Egyptian government blocks.
+Our observations of massive increase of user sign-ups and social updates from Egypt led us to create an infographic to document the effects of the massive Internet shutdown as well as the reaction of the people faced with a dire need to broadcast messages.
+Download PDF of Social Media and Egypt infographic
+Based on observation, people used HootSuite to broadcast messages to organize protests, share curfew info, outreach to outside media, and monitor the status of family/friends. Shortly thereafter, the “entire” Internet was blocked in Egypt, excluding the country’s stock exchange, while 1 million protesters took to the streets. HootSuite traffic from the area dropped to a trickle though some messages were getting out via improvised access points including landlines, satellite and ad hoc ISPs.
+As of now (Feb. 2), Internet routes are resolving in Egypt but the situation has grown violent as evidenced in thousands of Tweets sent from the Tahrir Square. To all people on the ground, please know the world is watching your difficult situation.
+We are inspired by the courage and resourcefulness evidenced in messages sent by people on the ground like @ soniaverma , @ mfouada , @ AlMasryAlYoum_A , @ IreneYanni , @ NileRiverMan and so many more.
+It is also inspiring to see tech-savvy groups and companies step up to encourage and support expression. See “ The Tweets Must Flow ” and @ speak2tweet .
+The Egyptian government blocked all access to Twitter.com , preventing users from posting messages to Twitter web or through official Twitter clients on their mobile phones. However hootsuite.com was initially left open. When a user posts a message to Twitter through HootSuite, the message first travels to hootsuite.com servers outside of Egypt – and thus outside the blockade – before travelling to twitter.com . In this way users are able to circumvent the blockade.
+HootSuite mobile clients (iPhone, Android, Blackberry) use a different process than websites called xAuth in which the authentication is performed directly between the hootsuite.com servers and the  twitter.com servers. The end user never has to access  twitter.com directly. In this way an Egyptian mobile user could create a new HootSuite account and add their Twitter accounts without hitting the blockade. Unfortunately new users of the HootSuite web version (from desktop or laptop computers) inside Egypt were not able to add their Twitter accounts. This is due to our account authentication process, which uses a process called OAuth to ask  twitter.com directly whether or not the user has permission to add the Twitter account to HootSuite. This process requires the user to access  twitter.com from their browser, which was prevented by the blockade.
+Google and Twitter created a Twitter-by-phone service @ speak2tweet
+Egypt used different tactics for blocking Internet traffic than Iran during Iran’s 2007 election – complete shut down of “routes” rather than slowing traffic down to a crawl ( GigaOm )
+China blocked searches for “Egypt” during this crisis ( WSJ ) & HootSuite experienced a spike in traffic when China unblocked access for 1 day
+Renesys – Egypt Leaves the Internet
+Related posts brought to you by Yet Another Related Posts Plugin .
+February 3rd, 2011 at 09:07      | #1
+My team used Hootsuite to achieve amazing engagement for the Hyundai Hopman up Tennis.
+Now we are seeing your work being used by people to gain their freedom.
+February 7th, 2011 at 12:39      | #3
+It amazes me how many people in Egypt used Hootsuite to broadcast messages to the outside world. Social media these days is really important even with political issues. Interesting article.
+March 2nd, 2011 at 02:09      | #4
+Thanks for mentioning @AlMasryAlYoum_A, it has been great to see HootSuite mentioning our usage of your client. Thank you for offering it :)
+| #5
+| #6
+| #16
+| #18
+La révolution numérique favorise-t-elle une révolution démocratique ? (Tunisie, Egypte, Iran, Chine … et Neutralité du net) » Papa Citoyen – Journal d'un papa solo, geek, et citoyen
+Click to cancel reply
+#HootTip android blackberry business case studies dave olson enterprise Events Facebook Features foursquare geo-location HootSuite HootSuite University Hoot Tip info sheet international ipad iPhone Japan Learning LinkedIn localization mashable Mobile new release news News Roundup ow.ly pro release reviews ryan holmes Social Media social media dashboard spanish SXSW team collaboration techvibes tips tools Translation Twitter update video

@@ -1,0 +1,2261 @@
+﻿<!doctype html>
+<html>
+<head>
+<link rel='stylesheet' id='wp-polls-css'  href='http://www.moheet.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.50' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-rtl-css'  href='http://www.moheet.com/wp-content/plugins/wp-polls/polls-css-rtl.css?ver=2.50' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.moheet.com/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://www.moheet.com/wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.moheet.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.moheet.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='محيط' href='http://www.moheet.com/' />
+
+<!-- Comment Rating plugin Version: 2.9.29 by Bob King, http://wealthynetizen.com/, dynamic comment voting & styling. --> 
+<style type="text/css" media="screen">
+   .ckrating_highly_rated {text-decoration: underline;}
+   .ckrating_poorly_rated {opacity:0.6;filter:alpha(opacity=60) !important;}
+   .ckrating_hotly_debated {background-color:#FFF0F5 !important;}
+</style>
+
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://www.moheet.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.moheet.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.moheet.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='محيط' href='http://www.moheet.com/' />
+
+<!-- Comment Rating plugin Version: 2.9.29 by Bob King, http://wealthynetizen.com/, dynamic comment voting & styling. --> 
+<style type="text/css" media="screen">
+   .ckrating_highly_rated {text-decoration: underline;}
+   .ckrating_poorly_rated {opacity:0.6;filter:alpha(opacity=60) !important;}
+   .ckrating_hotly_debated {background-color:#FFF0F5 !important;}
+</style>
+
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://www.moheet.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>محيط | شبكة الإعلام العربية</title>
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/jquery.ui.widget.js"></script>
+<script src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/jquery.ui.tabs.js"></script>
+
+<script src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/jquery.tabswitch.yui.js"></script>
+<script type="text/javascript" src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/jsibox_basic.js"></script> 
+
+<script type="text/javascript" src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+<link rel="stylesheet" href="http://www.moheet.com/wp-content/themes/moheet_theme/new-css/jquery.ui.tabs.css" type="text/css"/>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.SlideTab').tabSwitch('create', {type: 'toggle', toggle: 'fade', height: 255, width: 603});
+	$('.SlideTab').tabSwitch('startAuto',{interval: 10000});
+	
+	$('.tabSelect').click (function(e){
+		$('.SlideTab').tabSwitch('moveTo',{index: parseInt($(this).attr("rel"))});
+		e.preventDefault();
+		$(".nubring > a").removeClass("color25");
+		$(this).addClass("color25");
+		$('.SlideTab').tabSwitch('stopAuto',{interval: 10000});
+		$('.SlideTab').tabSwitch('startAuto',{interval: 10000});
+		
+		//alert($(this).attr("rel"));
+	});
+
+	$('.Nav').click(function(e){
+		$('.SlideTab').tabSwitch('moveStep',{step: parseInt($(this).attr("rel"))});
+		e.preventDefault();
+		$('.SlideTab').tabSwitch('stopAuto',{interval: 10000});
+		$('.SlideTab').tabSwitch('startAuto',{interval: 10000});
+	});
+	
+	var browser_name_t;
+	browser_name = $(function(){
+	var userAgent = navigator.userAgent.toLowerCase();
+	var userBrowserName  = navigator.appName.toLowerCase();
+	// Figure out what browser is being used
+	$.browser = {
+	safari: /webkit/.test( userAgent ),
+	opera: /opera/.test( userAgent ),
+	msie: /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+	mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+	name:userBrowserName
+	};
+
+	if($.browser.name == 'microsoft internet explorer'){
+		$("a.mcms_gallery").click(function(){
+			return jsiBoxOpen(this);
+		});
+	}else{
+		$("a.mcms_gallery").fancybox({
+			'titlePosition'	: 'inside'
+		});
+	}
+
+	});
+
+
+
+	
+	$( "#tabs" ).tabs();
+
+});
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="http://www.moheet.com/wp-content/themes/moheet_theme/new-style.css"/>
+<!--[if IE 7]> <link rel="stylesheet" type="text/css" href="http://www.moheet.com/wp-content/themes/moheet_theme/new-css/ie7.css"> <![endif]-->
+<script src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/html5.js"></script>
+
+<title>Moheet</title>
+
+<!--[if IE 6]>
+<script src="http://www.moheet.com/wp-content/themes/moheet_theme/new-js/png.js"></script>
+<script>
+  DD_belatedPNG.fix('body ,img, .nav, .logo, .mster, .menu a:hover , .date, .navin, .rss2, .shmleft, .shmright, .taba , .navin ,.hedboxho ,.bgmore ,.sites ,.newctgr , li, #mnv2 li a ,.act2 ,#mnv2 ,.newsbar2 ,.newsbar ,ul.newsbar2 li a:hover ,ul.newsbar2 ,.newstxt ,.boxleft ,.bxnews ,.mdd ,.hdnews ,*.png ,.bottsrch ,.newsletter ,.info,.bxfooter  ,.fotcntleft , .bxlogos img ,.nsltr ,.thenewsscrl ,.prev, .prev2 ,.bxrow ,.mouseWheel ,.leftside ');
+</script>
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css"  href="http://www.moheet.com/wp-content/themes/moheet_theme/new-css/ie6.css" />
+<![endif]-->
+
+<script type="text/javascript" src="http://www.moheet.com/wp-content/themes/moheet_theme/js/ticker.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+	$('#fade').list_ticker({
+		speed:4000,
+		effect:'fade'
+	});
+});
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8270677-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+  (function() {
+    var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+    em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+  })();
+</script>
+<noscript>
+<img src="//me.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+</noscript>
+
+<section class="mster">
+  <header class="header"> 
+  <div class="theheader">
+  <div class="logobox">
+  <div class="logo">
+         <a href="http://www.moheet.com/"><img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-img/logo25.png"/></a>
+  </div>
+  </div>
+  
+				
+			 
+  <div class="allboxhead">
+    <div class="boxes">
+      <div class="datetime">
+        <div class="date">
+          <div class="datetx">الاثنين 2011/12/<span>19</span> </div>
+        </div>
+        <div class="date">
+          <div class="datetx">/محرم/1433<span>24</span> </div>
+        </div>
+        <div class="time">
+          <div class="datetx2"><span> 2:25 م</span> </div>
+        </div>
+      </div>
+      <div class="sites">
+        <div class="bxsite"> <a class="txtbxsite" href="http://www.korabia.com/" target="_blank">رياضة </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr1"> <a class="txtbxsite" href="http://alfanonline.moheet.com/" target="_blank">فن </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr2"> <a class="txtbxsite" href="http://shoghlanty.moheet.com/" target="_blank">وظائف </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr3"> <a class="txtbxsite" href="http://lahona.moheet.com/" target="_blank">مرأه </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr4"> <a class="txtbxsite" href="http://www.bayanonline.com/" target="_blank">تعليم </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr5"> <a class="txtbxsite" href="http://shamlola.com/" target="_blank">أكلات</a> </div>
+      </div>
+    </div>
+    <div class="boxes2">
+      <div class="icons2">
+        <div class="allicon"> <a href="http://www.youtube.com/moheeteg" class="rss" target="_blank"></a> <a href="http://www.facebook.com/pages/Moheet/184864788215006" class="rss face" target="_blank"></a><!--rss--> 
+          <a href="https://twitter.com/#!/MoheetFans" class="rss twet1" target="_blank"></a><!--rss--> 
+        </div>
+        <!--allicon--> 
+        
+      </div>
+      <div class="search">
+        <div class="bxallsrch" >
+		
+			<form name="search" type="GET" action="#">
+				<input name="s" class="inserch" value="" type="text" />
+
+			  <input class="bottsrch" value="" type="submit">
+			</form>
+
+        </div>
+        <!--bxallsrch--> 
+      </div>
+<script>
+
+function isValidEmailAddress(emailAddress) {
+	var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+	return pattern.test(emailAddress);
+}
+
+function mcms_newletter_submit(email){
+	$.ajax({
+		url:"http://www.moheet.com/?newsletter="+email,
+		success:function(result){
+			if(result.indexOf("Warning") == -1)
+				$("#news_message").html(result);
+			else
+				$("#news_message").html("تعذر عرض المحتوى");
+		}
+	});
+
+}
+
+$(function(){
+	$("#news_sub").click(function(e){
+		e.preventDefault();
+		mcms_email = $('#news_input').val();
+		if(isValidEmailAddress(mcms_email)){
+			$("#news_message").html("<img src='http://www.moheet.com/wp-content/themes/moheet_theme/img/ajax.gif'/>");
+			mcms_newletter_submit(mcms_email);
+		}else
+			$('#news_input').val('البريد غير صحيح');
+	});
+});
+
+</script>
+
+      <div class="newsletter2">
+        <div id="news_message" class="bxallsrch nsltr" >
+          <input id="news_input" class="inserch2 nsltr2" value="النشرة البريدية  |  إدخل بريدك" type="text" onFocus="if(this.value == 'النشرة البريدية  |  إدخل بريدك' || this.value == 'البريد غير صحيح')	this.value = ''" onBlur="if(!this.value || this.value.indexOf(' ') >= 0) this.value = 'النشرة البريدية  |  إدخل بريدك'" />
+          <a  id="news_sub" href="#" class="bottsrch btnsr"></a><!--bottsrch--> 
+        </div>
+        <!--bxallsrch--> 
+        
+      </div>
+	  
+      <a href="http://www.moheet.com/2011/12/19/" class="moheetyum"></a> </div>
+      </div><!--allboxhead-->
+  </div>
+  
+      <nav class="nav">
+    <div class="menu">
+	
+<div  class="navin "> <a class="txtnav actv"> الرئيسية </a><!--txtnav--></div><!--navin-->	<div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/" class="txtnav">أخبار</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/" class="txtnav">اقتصاد</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/" class="txtnav">توك شو</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/" class="txtnav">ثقافة</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/" class="txtnav">حوادث</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/" class="txtnav">دين</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/" class="txtnav">سياحة</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/" class="txtnav">سيارات</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/" class="txtnav">عالم الكتاب</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/" class="txtnav">علوم وتكنولوجيا</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/" class="txtnav">كمبيوتر واتصالات</a></div><!--navin-->	
+      <!--navin--> 
+      <a class="rss2" href="http://www.moheet.com/feed/rss" target="_blank"></a> </div>
+  </nav>  <!--nav-->
+  
+  <nav class="nav2">
+	<div class="menu2">
+		<div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a3%d9%82%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d8%b5%d8%ad%d8%a7%d9%81%d8%a9/" class="txtnav2">أقوال الصحافة</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a7%d9%86%d8%aa%d8%ae%d8%a7%d8%a8%d8%a7%d8%aa-%d9%85%d8%b5%d8%b1/" class="txtnav2">انتخابات مصر</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d8%ab%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9/" class="txtnav2">الثورة السورية</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%aa%d9%88%d9%86%d8%b3-%d8%a7%d9%84%d8%ad%d8%b1%d8%a9/" class="txtnav2">تونس الحرة</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d9%84%d9%8a%d8%a8%d9%8a%d8%a7-%d8%a7%d9%84%d8%ac%d8%af%d9%8a%d8%af%d8%a9/" class="txtnav2">ليبيا الجديدة</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d9%8a%d9%85%d9%86-%d8%ab%d9%88%d8%b1%d8%a9-%d9%85%d8%b3%d8%aa%d9%85%d8%b1%d8%a9/" class="txtnav2">اليمن .. ثورة مستمرة</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%ab%d9%88%d8%b1%d8%a9-%d8%b9%d9%84%d9%89-%d8%b6%d9%81%d8%a7%d9%81-%d8%a7%d9%84%d9%86%d9%8a%d9%84/" class="txtnav2">ثورة على ضفاف النيل</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a7%d9%84%d8%aa%d9%82%d8%a7%d8%b1%d9%8a%d8%b1-%d9%88%d8%a7%d9%84%d9%85%d9%84%d9%81%d8%a7%d8%aa/" class="txtnav2">التقارير والملفات</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%ad%d9%88%d8%a7%d8%b1%d8%a7%d8%aa-%d9%85%d8%ad%d9%8a%d8%b7/" class="txtnav2">حوارات محيط</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/%d9%81%d9%8a%d8%af%d9%8a%d9%88-%d9%85%d8%ad%d9%8a%d8%b7/" class="txtnav2">فيديو محيط</a></div><!--navin--><div  class="navin "> <a href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%ad%d9%8a%d8%a7%d8%aa%d9%83-%d8%a7%d9%84%d8%ac%d9%86%d8%b3%d9%8a%d8%a9/" class="txtnav2">حياتك الجنسية</a></div><!--navin-->	</div>
+</nav>
+
+    
+  <div class="advs">
+    <div class="theadvs" style="height: 90px !important;">
+	<center>
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Super Banner - 728 x 90 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="728"; var zflag_height="90"; var zflag_sz="14"; 
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Super Banner - 728 x 90 -->
+	</center>
+	</div>
+  </div>
+  </header> <!--header-->
+  
+  <section class="container">
+  
+          <div class="side_adv_left" style="margin-top: -642px !important;">
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Left Sponsor - 141 x 693 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="141"; var zflag_height="693"; var zflag_sz="24";
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Left Sponsor - 141 x 693 -->
+         </div>
+        
+		<div class="side_adv_right" style="margin-top: -642px !important;">
+
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Right Sponsor - 141 x 692 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="141"; var zflag_height="692"; var zflag_sz="23";
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Right Sponsor - 141 x 692 -->
+
+         </div>
+		 
+		 
+          <section class="part1">
+          <div class="gallery">
+            <div class="gallerycont">
+            
+            
+            <div class="gallerya-tab">
+			
+  <div class="gallerycont1 SlideTab" id="Tab0"> <a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%86%d8%a7%d9%86-%d9%8a%d9%84%d8%aa%d9%82%d9%8a-%d8%a7%d9%84%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%b4%d8%a7%d8%b1%d9%8a-%d8%b5%d8%a8%d8%a7%d8%ad-%d8%ba%d8%af-%d9%84%d9%85/"><img src="http://image.moheet.com/images/10/big/104836.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%86%d8%a7%d9%86-%d9%8a%d9%84%d8%aa%d9%82%d9%8a-%d8%a7%d9%84%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%b4%d8%a7%d8%b1%d9%8a-%d8%b5%d8%a8%d8%a7%d8%ad-%d8%ba%d8%af-%d9%84%d9%85/" title="عنان يلتقي المجلس الاستشاري صباح غد لمناقشة أحداث مجلس الوزراء" class="newsgallery1tx">عنان يلتقي المجلس الاستشاري صباح غد لمناقشة أحداث مجلس الوزراء </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx">يعقد الفريق سامي عنان، رئيس أركان الجيش، نائب رئيس المجلس العسكري، صباح غد الثلاثاء، اجتماعًا مع المجلس الاستشاري، استجابة لطلب رئيسه منصور حسن، بعقد هذه الجلسة؛ لبحث الحلول السريعة للخروج من أزمة أحداث مجلس الوزراء.</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%86%d8%a7%d9%86-%d9%8a%d9%84%d8%aa%d9%82%d9%8a-%d8%a7%d9%84%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%b4%d8%a7%d8%b1%d9%8a-%d8%b5%d8%a8%d8%a7%d8%ad-%d8%ba%d8%af-%d9%84%d9%85/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+<div id="mcms_slide_hide" style="display: none;">
+  <div class="gallerycont1 SlideTab" id="Tab1"> <a href="http://www.moheet.com/2011/12/19/%d9%86%d8%af%d8%a8-%d9%82%d8%a7%d8%b6%d9%8a%d9%8a%d9%86-%d9%84%d9%84%d8%aa%d8%ad%d9%82%d9%8a%d9%82-%d9%81%d9%89-%d8%a7%d8%ad%d8%af%d8%a7%d8%ab-%d8%b4%d8%a7%d8%b1%d8%b9-%d8%a7%d9%84%d9%82%d8%b5%d8%b1/"><img src="http://image.moheet.com/images/11/big/119398.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d9%86%d8%af%d8%a8-%d9%82%d8%a7%d8%b6%d9%8a%d9%8a%d9%86-%d9%84%d9%84%d8%aa%d8%ad%d9%82%d9%8a%d9%82-%d9%81%d9%89-%d8%a7%d8%ad%d8%af%d8%a7%d8%ab-%d8%b4%d8%a7%d8%b1%d8%b9-%d8%a7%d9%84%d9%82%d8%b5%d8%b1/" title="ندب قاضيين للتحقيق فى احداث شارع القصر العينى " class="newsgallery1tx">ندب قاضيين للتحقيق فى احداث شارع القصر العينى  </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx">قرر المستشار عبد المعز البراهيم  رئيس  محاكم الاستئناف ندب المستشارين وجدى عبد المنعم ووجية الشاعر للتحقيق فى الاحداث الاخيرة .</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d9%86%d8%af%d8%a8-%d9%82%d8%a7%d8%b6%d9%8a%d9%8a%d9%86-%d9%84%d9%84%d8%aa%d8%ad%d9%82%d9%8a%d9%82-%d9%81%d9%89-%d8%a7%d8%ad%d8%af%d8%a7%d8%ab-%d8%b4%d8%a7%d8%b1%d8%b9-%d8%a7%d9%84%d9%82%d8%b5%d8%b1/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab2"> <a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%85%d8%a7%d8%b1%d8%a9-%d8%a3%d8%ad%d8%af%d8%a7%d8%ab-%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a3%d8%ab%d8%a8%d8%aa%d8%aa-%d9%85%d9%86%d9%87%d8%ac%d9%8a%d8%a9/"><img src="http://image.moheet.com/images/11/big/119628.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%85%d8%a7%d8%b1%d8%a9-%d8%a3%d8%ad%d8%af%d8%a7%d8%ab-%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a3%d8%ab%d8%a8%d8%aa%d8%aa-%d9%85%d9%86%d9%87%d8%ac%d9%8a%d8%a9/" title="عمارة : أحداث مجلس الوزراء أثبتت منهجية التخطيط لهدم الدولة (فيديو)" class="newsgallery1tx">عمارة : أحداث مجلس الوزراء أثبتت منهجية التخطيط لهدم الدولة (فيديو) </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx"> قال اللواء عادل عمارة عضو المجلس الأعلى للقوات المسلحة نائب وزير الدفاع ان المجلس العسكري تحمل منذ بداية الثورة المصرية الكثير من النقض الذي يصل الي درجة </div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%85%d8%a7%d8%b1%d8%a9-%d8%a3%d8%ad%d8%af%d8%a7%d8%ab-%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a3%d8%ab%d8%a8%d8%aa%d8%aa-%d9%85%d9%86%d9%87%d8%ac%d9%8a%d8%a9/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab3"> <a href="http://www.moheet.com/2011/12/19/%d8%ac%d8%a7%d9%85%d8%b9%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9-%d8%aa%d8%aa%d8%b4%d8%ad-%d8%a8%d8%a7%d9%84%d8%b3%d9%88%d8%a7%d8%af-%d8%ad%d8%af%d8%a7%d8%af%d9%8b%d8%a7-%d8%b9%d9%84%d9%89/"><img src="http://image.moheet.com/images/11/big/119635.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d8%ac%d8%a7%d9%85%d8%b9%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9-%d8%aa%d8%aa%d8%b4%d8%ad-%d8%a8%d8%a7%d9%84%d8%b3%d9%88%d8%a7%d8%af-%d8%ad%d8%af%d8%a7%d8%af%d9%8b%d8%a7-%d8%b9%d9%84%d9%89/" title="جامعة القاهرة تتشح بالسواد حدادًا على ضحايا مجلس الوزراء" class="newsgallery1tx">جامعة القاهرة تتشح بالسواد حدادًا على ضحايا مجلس الوزراء </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx">نفذ طلاب جامعة القاهرة اليوم الاثنين إضرابا سلميا منذ بداية اليوم الدراسي وحتى انتهائه، امتنع فيه الطلاب عن ممارسة أنشطتهم ومهامهم حدادًا على أرواح شهداء مصر الطاهرة.</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d8%ac%d8%a7%d9%85%d8%b9%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9-%d8%aa%d8%aa%d8%b4%d8%ad-%d8%a8%d8%a7%d9%84%d8%b3%d9%88%d8%a7%d8%af-%d8%ad%d8%af%d8%a7%d8%af%d9%8b%d8%a7-%d8%b9%d9%84%d9%89/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab4"> <a href="http://www.moheet.com/2011/12/19/%d9%85%d9%88%d8%b3%d9%89-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%a5%d8%ac%d8%b1%d8%a7%d8%a1-%d8%aa%d8%ad%d9%82%d9%8a%d9%82%d8%a7%d8%aa-%d9%81%d9%88%d8%b1%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d8%a3%d8%ad/"><img src="http://image.moheet.com/images/11/big/118110.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d9%85%d9%88%d8%b3%d9%89-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%a5%d8%ac%d8%b1%d8%a7%d8%a1-%d8%aa%d8%ad%d9%82%d9%8a%d9%82%d8%a7%d8%aa-%d9%81%d9%88%d8%b1%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d8%a3%d8%ad/" title="موسى يطالب بإجراء تحقيقات فورية بالأحداث وإعلان نتائجها على الشعب" class="newsgallery1tx">موسى يطالب بإجراء تحقيقات فورية بالأحداث وإعلان نتائجها على الشعب </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx">طالب عمرو موسى المرشح المحتمل للانتخابات الرئاسية المقبلة، المجلس الاعلى للقوات المسلحة بضرورة إجراء تحقيقات فورية وعرض نتائجها على الشعب المصرى،</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d9%85%d9%88%d8%b3%d9%89-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%a5%d8%ac%d8%b1%d8%a7%d8%a1-%d8%aa%d8%ad%d9%82%d9%8a%d9%82%d8%a7%d8%aa-%d9%81%d9%88%d8%b1%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d8%a3%d8%ad/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab5"> <a href="http://www.moheet.com/2011/12/19/%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%aa%d9%88%d9%82%d8%b9-%d8%b9%d9%84%d9%89-%d8%a8%d8%b1%d9%88%d8%aa%d9%88%d9%83%d9%88%d9%84-%d8%a8%d8%b9%d8%ab%d8%a9-%d8%a7%d9%84%d9%85%d8%b1%d8%a7%d9%82%d8%a8%d9%8a/"><img src="http://image.moheet.com/images/11/big/113684.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%aa%d9%88%d9%82%d8%b9-%d8%b9%d9%84%d9%89-%d8%a8%d8%b1%d9%88%d8%aa%d9%88%d9%83%d9%88%d9%84-%d8%a8%d8%b9%d8%ab%d8%a9-%d8%a7%d9%84%d9%85%d8%b1%d8%a7%d9%82%d8%a8%d9%8a/" title="سوريا توقع على بروتوكول بعثة المراقبين العرب  " class="newsgallery1tx">سوريا توقع على بروتوكول بعثة المراقبين العرب   </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx"> وقعت سوريا اليوم الاثنين على البروتوكول المتعلق ببعثة مراقبي جامعة الدول العربية بمقر الأمانة العامة للجامعة.</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%aa%d9%88%d9%82%d8%b9-%d8%b9%d9%84%d9%89-%d8%a8%d8%b1%d9%88%d8%aa%d9%88%d9%83%d9%88%d9%84-%d8%a8%d8%b9%d8%ab%d8%a9-%d8%a7%d9%84%d9%85%d8%b1%d8%a7%d9%82%d8%a8%d9%8a/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab6"> <a href="http://www.moheet.com/2011/12/19/%d9%85%d8%b5%d8%af%d8%b1-%d9%85%d8%b3%d8%a6%d9%88%d9%84-%d8%aa%d9%88%d8%b1%d8%b7-%d8%b4%d8%ae%d8%b5%d9%8a%d8%a7%d8%aa-%d8%ad%d8%b2%d8%a8%d9%8a%d8%a9-%d8%b3%d8%a7%d8%a8%d9%82%d8%a9-%d9%88%d8%b1%d8%ac/"><img src="http://image.moheet.com/images/11/big/119449.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d9%85%d8%b5%d8%af%d8%b1-%d9%85%d8%b3%d8%a6%d9%88%d9%84-%d8%aa%d9%88%d8%b1%d8%b7-%d8%b4%d8%ae%d8%b5%d9%8a%d8%a7%d8%aa-%d8%ad%d8%b2%d8%a8%d9%8a%d8%a9-%d8%b3%d8%a7%d8%a8%d9%82%d8%a9-%d9%88%d8%b1%d8%ac/" title="مصدر مسئول : تورط شخصيات حزبية سابقة ورجال اعمال فى أحداث مجلس الوزراء " class="newsgallery1tx">مصدر مسئول : تورط شخصيات حزبية سابقة ورجال اعمال فى أحداث مجلس الوزراء  </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx">كشف مصدر مسئول عن تورط شخصيات حزبية وبرلمانية سابقة ورجال اعمال ونشطاء سيايين فى الاحداث التى تعرضت لها مصر فى الاونة الاخيرة بما فيها احداث مجلس الوزراء .</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d9%85%d8%b5%d8%af%d8%b1-%d9%85%d8%b3%d8%a6%d9%88%d9%84-%d8%aa%d9%88%d8%b1%d8%b7-%d8%b4%d8%ae%d8%b5%d9%8a%d8%a7%d8%aa-%d8%ad%d8%b2%d8%a8%d9%8a%d8%a9-%d8%b3%d8%a7%d8%a8%d9%82%d8%a9-%d9%88%d8%b1%d8%ac/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab7"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%86%d9%8a%d8%a7%d8%a8%d8%a9-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d8%aa%d9%82%d8%b1%d8%b1-%d8%ad%d8%a8%d8%b3-123-%d9%85%d8%aa%d9%87%d9%85%d8%a7-%d8%a3%d8%b1%d8%a8%d8%b9%d8%a9-%d8%a3/"><img src="http://image.moheet.com/images/11/big/119577.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%86%d9%8a%d8%a7%d8%a8%d8%a9-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d8%aa%d9%82%d8%b1%d8%b1-%d8%ad%d8%a8%d8%b3-123-%d9%85%d8%aa%d9%87%d9%85%d8%a7-%d8%a3%d8%b1%d8%a8%d8%b9%d8%a9-%d8%a3/" title="النيابة العامة تقرر حبس 123 متهما فى أحداث قصر العينى " class="newsgallery1tx">النيابة العامة تقرر حبس 123 متهما فى أحداث قصر العينى  </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx"> قررت النيابة العامة صباح اليوم الاثنين حبس 123 متهما فى أحداث المصادمات بشارع قصر العينى فى محيط مبنى مجلس الوزراء لمدة أربعة أيام على ذمة التحقيقات.</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%86%d9%8a%d8%a7%d8%a8%d8%a9-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d8%aa%d9%82%d8%b1%d8%b1-%d8%ad%d8%a8%d8%b3-123-%d9%85%d8%aa%d9%87%d9%85%d8%a7-%d8%a3%d8%b1%d8%a8%d8%b9%d8%a9-%d8%a3/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+
+  <div class="gallerycont1 SlideTab" id="Tab8"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%88%d8%b3%d8%b7-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d9%8a%d9%86-%d8%a8%d8%b7%d9%85%d8%a6%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a/"><img src="http://image.moheet.com/images/11/big/117720.jpg" class="imggallery" /></a>
+	<div class="newsgallery">
+	  <div class="newsgallery1"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%88%d8%b3%d8%b7-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d9%8a%d9%86-%d8%a8%d8%b7%d9%85%d8%a6%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a/" title=""الوسط" يطالب الإسلاميين بطمئنة المصريين كما فعل الغنوشى فى تونس  " class="newsgallery1tx">"الوسط" يطالب الإسلاميين بطمئنة المصريين كما فعل الغنوشى فى تونس   </a></div>
+	  <div class="newsgallery2">
+		<div class="newsgallery2tx"> طالب نائب رئيس حزب "الوسط" عصام سلطان التيار الإسلامى الفائز بأغلبية المقاعد فى الانتخابات البرلمانية بأن يطمئن الشعب أن مصر</div>
+	  </div>
+	  <div class="tfasel"><a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%88%d8%b3%d8%b7-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d9%8a%d9%86-%d8%a8%d8%b7%d9%85%d8%a6%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a/" class="tfaseltx">التفاصيل</a></div>
+	</div>
+  </div>
+			 
+
+
+</div>              </div>
+              
+      
+        <div class="gallerycont2"> <a href="#" class="shmright newsback Nav" rel="-1" ></a> 
+
+				  <a href="#Tab0" class="tabSelect thnber" rel="0"><img src="http://image.moheet.com/images/10/small/104836.jpg" class="imgsmall"/></a>
+				  <a href="#Tab1" class="tabSelect thnber" rel="1"><img src="http://image.moheet.com/images/11/small/119398.jpg" class="imgsmall"/></a>
+				  <a href="#Tab2" class="tabSelect thnber" rel="2"><img src="http://image.moheet.com/images/11/small/119628.jpg" class="imgsmall"/></a>
+				  <a href="#Tab3" class="tabSelect thnber" rel="3"><img src="http://image.moheet.com/images/11/small/119635.jpg" class="imgsmall"/></a>
+				  <a href="#Tab4" class="tabSelect thnber" rel="4"><img src="http://image.moheet.com/images/11/small/118110.jpg" class="imgsmall"/></a>
+				  <a href="#Tab5" class="tabSelect thnber" rel="5"><img src="http://image.moheet.com/images/11/small/113684.jpg" class="imgsmall"/></a>
+				  <a href="#Tab6" class="tabSelect thnber" rel="6"><img src="http://image.moheet.com/images/11/small/119449.jpg" class="imgsmall"/></a>
+				  <a href="#Tab7" class="tabSelect thnber" rel="7"><img src="http://image.moheet.com/images/11/small/119577.jpg" class="imgsmall"/></a>
+				  <a href="#Tab8" class="tabSelect thnber" rel="8"><img src="http://image.moheet.com/images/11/small/117720.jpg" class="imgsmall"/></a>
+								
+              <a href="#" class="shmleft newsback Nav" rel="1" ></a>
+              </div>
+            </div>
+          </div>
+          <div class="adv"> 
+		  <div class="adv1">
+		  
+			<!-- Javascript tag  -->
+			<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Header - 300 x 60 -->
+			<script language="JavaScript">
+			var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="300"; var zflag_height="60"; var zflag_sz="33"; 
+			</script>
+			<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+			<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Header - 300 x 60 -->
+					  
+		  </embed></div>
+		          
+<div class="adv2">
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Medium Rectangle - 300 x 250 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="300"; var zflag_height="250"; var zflag_sz="9";
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Medium Rectangle - 300 x 250 -->
+</div>
+
+</div>
+		  </section> <!--part1-->
+       
+        
+        <section class="part2">
+          <div class="boxallcontain">
+            <div id="tabs" class="allcontain1">
+              <ul class="newstab">
+                <li class="taba"><a href="#tabs-1" class="tabatx">محيط مباشر</a></li>
+                <li class="taba"><a href="#tabs-2" class="tabatx">اخبار خفيفة</a></li>
+                <li class="taba"><a href="#tabs-3" class="tabatx">الاكثر قراءه</a></li>
+                <li class="taba"><a href="#tabs-4" class="tabatx">الاكثر تعليقا</a></li>
+              </ul>
+				
+					
+<div id="tabs-1">              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:25<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%85%d8%b9-%d8%aa%d8%ae%d9%84%d9%8a-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1-%d8%b9%d9%86-%d9%85%d9%83%d8%a7%d8%b3%d8%a8%d9%87/" class="boxnews">
+                <div class="boxnewstx">النفط يرتفع مع تخلي الدولار عن مكاسبه <span>بترول وطاقة</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:24<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/%d8%ad%d8%b1%d9%83%d8%a9-%d8%a3%d8%b2%d9%87%d8%b1%d9%8a%d9%88%d9%86-%d8%a8%d9%84%d8%a7-%d8%ad%d8%af%d9%88%d8%af-%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%b6%d8%b1%d9%88%d8%b1%d8%a9-%d8%a7%d8%b1/" class="boxnews">
+                <div class="boxnewstx">حركة "أزهريون بلا حدود" تطالب بضرورة ارتداء "المايوه الإسلامى" <span>أخبار</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:18<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%b5%d8%ad%d9%81%d9%8a-%d9%84%d9%88%d9%84%d9%8a%d8%af-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%85-%d9%88%d8%b2%d9%8a%d8%b1-%d8%a7%d9%84%d8%ae%d8%a7%d8%b1%d8%ac%d9%8a%d8%a9/" class="boxnews">
+                <div class="boxnewstx">مؤتمر صحفي لوليد المعلم وزير الخارجية السوري (فيديو) <span>فيديو محيط</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:17<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/8-6-%d9%85%d9%84%d9%8a%d8%a7%d8%b1-%d8%ac%d9%86%d9%8a%d9%87-%d8%ad%d8%b5%d9%8a%d9%84%d8%a9-%d8%a7%d9%83%d8%aa%d8%aa%d8%a7%d8%a8-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%89-%d9%81%d9%89-%d8%b3%d9%86%d8%af/" class="boxnews">
+                <div class="boxnewstx">8.6 مليار جنيه حصيلة اكتتاب "الأهلى" فى سندات حكومية خلال خمس شهور <span>بنوك وتأمين</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:17<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/%d9%82%d8%a7%d8%a6%d9%85%d8%a9-%d8%a7%d9%84%d8%a3%d9%83%d8%ab%d8%b1-%d9%85%d8%a8%d9%8a%d8%b9%d8%a7%d9%8b-%d8%ae%d9%84%d8%a7%d9%84-%d8%a7%d9%84%d8%a3%d8%b3%d8%a8%d9%88%d8%b9-%d8%a7%d9%84%d8%a3%d8%ae/" class="boxnews">
+                <div class="boxnewstx">قائمة الأكثر مبيعاً خلال الأسبوع الأخير في نيويورك    <span>المكتبة العالمية</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:15<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/%d9%84%d9%83%d9%84-%d8%b9%d8%b1%d9%88%d8%b3%d9%8a%d9%86-%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%aa%d9%87%d9%85%d9%83-%d8%b9%d9%86-%d9%84%d9%8a%d9%84%d8%a9-%d8%a7%d9%84%d8%b9%d9%85%d8%b1/" class="boxnews">
+                <div class="boxnewstx">لكل عروسين .. معلومات تهمك عن ليلة العمر وفض غشاء البكارة (فيديو) <span>حياتك الجنسية</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:11<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%b2%d8%ba%d8%a8%d9%8a-%d9%85%d9%86-%d8%ae%d8%b1%d8%ac-%d8%a5%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b8%d8%a7%d9%87%d8%b1%d8%a7%d8%aa-%d9%81%d9%87%d9%88-%d8%a2%d8%ab%d9%85/" class="boxnews">
+                <div class="boxnewstx">الزغبي: من خرج إلي المظاهرات فهو آثم <span>أخبار</span>.</div>
+                </a> </div>
+
+</div><div id="tabs-2">              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">7:21<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%a3%d9%85%d9%8a%d8%b1-%d9%87%d8%a7%d8%b1%d9%8a-%d9%8a%d8%af%d8%ae%d9%84-%d9%82%d8%b3%d9%85-%d8%a7%d9%84%d8%b4%d8%b1%d8%b7%d8%a9-%d8%a8%d8%b3%d8%a8%d8%a8-%d9%87%d8%a7%d8%aa%d9%81-%d9%85/" class="boxnews">
+                <div class="boxnewstx">الأمير هاري يدخل قسم الشرطة بسبب هاتف محمول ! <span></span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">7:05<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/18/%d9%83%d9%88%d9%8a%d8%aa%d9%8a-%d9%8a%d8%aa%d8%b1%d9%83-%d8%b3%d9%8a%d8%a7%d8%b1%d8%aa%d9%87-%d9%84%d8%b3%d8%a7%d8%b1%d9%82%d9%87%d8%a7-%d9%85%d9%82%d8%a7%d8%a8%d9%84-%d8%a7%d8%b3%d8%aa%d8%b1%d8%af/" class="boxnews">
+                <div class="boxnewstx">كويتي يترك سيارته لسارقها مقابل استرداد هاتفه المحمول !  <span></span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">6:42<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/18/%d8%b9%d8%af%d8%a7%d8%a1%d8%a9-%d9%85%d8%ba%d8%b1%d8%a8%d9%8a%d8%a9-%d8%aa%d8%b1%d8%af-%d8%a7%d8%b9%d8%aa%d8%a8%d8%a7%d8%b1-%d8%a8%d9%84%d8%a7%d8%af%d9%87%d8%a7-%d8%a8%d9%88%d8%ac%d9%87%d9%87%d8%a7/" class="boxnews">
+                <div class="boxnewstx">عداءة مغربية ترد اعتبار بلادها بوجهها !  <span></span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">6:28<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/18/%d8%af%d9%85%d9%8a%d8%a9-%d8%ad%d8%a7%d9%85%d9%84-%d9%84%d9%84%d8%a3%d9%85%d9%8a%d8%b1%d8%a9-%d9%83%d9%8a%d8%aa/" class="boxnews">
+                <div class="boxnewstx">دمية حامل للأميرة كيت !  <span></span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">5:56<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/18/%d8%a8%d8%b1%d9%8a%d8%b7%d8%a7%d9%86%d9%8a%d8%a9-%d9%85%d9%85%d9%86%d9%88%d8%b9%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d8%aa%d8%b3%d9%88%d9%82-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%a7%d9%84%d9%85%d9%88%d8%b2-%d8%a7/" class="boxnews">
+                <div class="boxnewstx">بريطانية محرومة من التسوق بسبب الموز القاتل ! <span></span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">8:51<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/17/%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a-%d9%8a%d9%87%d8%af%d8%af-%d8%a3%d9%88%d8%a8%d8%a7%d9%85%d8%a7-%d8%a8%d8%a7%d9%84%d9%82%d8%aa%d9%84-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b2%d9%88%d8%ac%d8%aa%d9%87/" class="boxnews">
+                <div class="boxnewstx">أمريكي يهدد أوباما بالقتل بسبب زوجته ! <span></span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">8:47<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/12/17/%d8%a8%d8%b1%d9%8a%d8%b7%d8%a7%d9%86%d9%8a%d8%a9-%d9%85%d8%ad%d8%b1%d9%88%d9%88%d9%85%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d8%a8%d9%83%d8%a7%d8%a1-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%a7%d9%84%d8%af%d9%85%d9%88/" class="boxnews">
+                <div class="boxnewstx">بريطانية محرومة من البكاء بسبب الدموع الحارقة ! <span></span>.</div>
+                </a> </div>
+
+</div><div id="tabs-3">              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">3:59<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/09/05/%d9%87%d9%84-%d8%aa%d8%b9%d9%88%d8%af-%d8%a8%d8%b4%d8%b1%d8%a7%d8%b3%d8%a9-%d8%a3%d9%86%d9%81%d9%84%d9%88%d9%86%d8%b2%d8%a7-%d8%a7%d9%84%d8%b7%d9%8a%d9%88%d8%b1-%d8%aa%d8%b8%d9%87%d8%b1-%d9%85%d9%86/" class="boxnews">
+                <div class="boxnewstx">هل تعود بشراسة.. أنفلونزا الطيور تظهر من جديد <span>بانوراما العلم</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">1:13<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/09/11/%d8%ac%d9%86%d8%a7%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9-%d8%aa%d8%a4%d8%ac%d9%84-%d8%b3%d9%85%d8%a7%d8%b9-%d8%b4%d9%87%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d9%85%d8%b4%d9%8a%d8%b1/" class="boxnews">
+                <div class="boxnewstx">جنايات القاهرة تؤجل سماع شهادة المشير طنطاوي وعنان الى جلسة 24 و25 سبتمبر <span>العالم العربي</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">11:41<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/09/05/%d8%a8%d8%a7%d9%84%d9%81%d9%8a%d8%af%d9%8a%d9%88-%d9%84%d8%a7%d8%b9%d8%a8-%d8%af%d9%88%d9%84%d9%8a-%d9%8a%d8%ae%d8%aa%d9%84-%d8%aa%d9%88%d8%a7%d8%b2%d9%86%d9%87-%d8%a7%d9%85%d8%a7%d9%85-%d8%a7%d9%84/" class="boxnews">
+                <div class="boxnewstx">بالفيديو..لاعب دولي يختل توازنه امام الكاميرات ويسقط ارضاً نتيجة شد عضلي!! <span>شئون دولية</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">5:05<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/03/15/%d8%a7%d9%84%d8%a8%d9%88%d8%b1%d8%b5%d8%a7%d8%aa-%d8%a7%d9%84%d8%ae%d9%84%d9%8a%d8%ac%d9%8a%d8%a9-%d8%aa%d8%ba%d9%84%d9%82-%d8%af%d8%a7%d8%ae%d9%84-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%a7/" class="boxnews">
+                <div class="boxnewstx">البورصات الخليجية تغلق داخل المنطقة الحمراء باستثناء البحرين <span>أسواق المال</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:18<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/05/20/%d9%85%d9%88%d8%a7%d9%86%d8%a6-%d8%af%d8%a8%d9%8a-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85%d9%8a%d8%a9-%d8%aa%d9%86%d8%ac%d8%b2-%d8%b9%d9%85%d9%84%d9%8a%d8%a9-%d8%af%d9%85%d8%ac-%d8%a7%d9%84%d8%a3%d8%b3/" class="boxnews">
+                <div class="boxnewstx">"موانئ دبي العالمية" تنجز عملية دمج الأسهم <span>أسواق المال</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">10:50<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/07/12/%d8%a7%d9%84%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d8%b9%d8%b3%d9%83%d8%b1%d9%8a-%d9%8a%d8%a4%d9%83%d8%af-%d8%a7%d9%84%d8%aa%d8%b2%d8%a7%d9%85%d9%87-%d8%a8%d8%ae%d8%b7%d8%a9-%d8%a7%d8%af%d8%a7%d8%b1/" class="boxnews">
+                <div class="boxnewstx">المجلس العسكري يؤكد التزامه بخطة ادارة شئون البلاد في الفترة الانتقالية <span>العالم العربي</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">11:42<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/05/25/%d9%8a%d8%a8%d8%b3%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d9%84-%d8%a7%d9%84%d8%a5%d9%8a%d8%b7%d8%a7%d9%84%d9%8a-%d8%b9%d9%84%d9%89-%d8%b7%d8%b1%d9%8a%d9%82%d8%a9-%d9%81%d9%8a/" class="boxnews">
+                <div class="boxnewstx">"يبسليون" .. الجمال الإيطالي على طريقة "فيات" <span>سوق السيارات</span>.</div>
+                </a> </div>
+
+</div><div id="tabs-4">              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">4:10<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/07/31/%d9%85%d8%a7-%d8%b1%d8%a3%d9%8a%d9%83-%d9%81%d9%89-%d9%85%d8%ad%d9%8a%d8%b7-%d8%a7%d9%84%d8%ac%d8%af%d9%8a%d8%af-%d8%9f/" class="boxnews">
+                <div class="boxnewstx">ما رأيك فى محيط الجديد ؟ <span>أخبار هامة</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">2:33<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2010/09/25/%d8%af%d8%b9%d8%a7%d8%a9-%d8%b7%d8%b9%d9%86-%d8%a8%d9%8a%d8%b4%d9%88%d9%8a-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d8%b1%d8%a2%d9%86-%d9%8a%d9%86%d9%85-%d8%b9%d9%86-%d8%ac%d9%87%d9%84%d9%87-%d8%a8%d8%b7/" class="boxnews">
+                <div class="boxnewstx">دعاة : طعن بيشوي في القرآن ينم عن جهله بطريقة جمعه وتدوينه <span>أخبار</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">3:48<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/10/05/%d9%81%d9%8a%d8%b3-%d8%a8%d9%88%d9%83-%d9%8a%d9%87%d9%86%d8%a6-%c2%ab-%d8%a3%d8%a8%d9%86%d8%a7%d8%a1-%d9%85%d8%a8%d8%a7%d8%b1%d9%83-%c2%bb-%d8%b9%d9%84%d9%89-%d8%ac%d8%a7%d8%a6%d8%b2%d8%a9-%d8%b4/" class="boxnews">
+                <div class="boxnewstx">فيس بوك يهنئ « أبناء مبارك » على جائزة شخصية العام في إسرائيل <span>محليات</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">12:22<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/11/02/%d9%86%d9%86%d8%b4%d8%b1-%d8%a8%d9%86%d9%88%d8%af-%d9%88%d8%ab%d9%8a%d9%82%d8%a9-%d8%a7%d9%84%d8%b3%d9%84%d9%85%d9%8a-%d8%a7%d9%84%d9%85%d8%ab%d9%8a%d8%b1%d8%a9-%d9%84%d9%84%d8%ac%d8%af%d9%84/" class="boxnews">
+                <div class="boxnewstx"> ننشر بنود وثيقة "السلمي" المثيرة للجدل عن الدستور <span>التقارير والملفات</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">6:38<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/10/16/%d8%a8%d9%84%d8%a7%d9%84-%d9%81%d8%b6%d9%84-%d9%84%d9%84%d8%b4%d9%8a%d8%ae-%d9%8a%d8%b9%d9%82%d9%88%d8%a8-%d8%b9%d9%8a%d8%a8-%d9%81%d9%88%d8%b6%d8%aa-%d8%a3%d9%85%d8%b1%d9%8a-%d8%a5%d9%84%d9%89/" class="boxnews">
+                <div class="boxnewstx">بلال فضل للشيخ يعقوب : "عيب .. فوضت أمري إلى الله" !! <span>مباشر</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">8:02<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/10/09/%d9%86%d9%88%d8%a7%d8%b1%d8%a9-%d9%86%d8%ac%d9%85-%d8%aa%d9%82%d9%88%d8%af-%d9%85%d8%b8%d8%a7%d9%87%d8%b1%d8%a9-%d8%a3%d9%85%d8%a7%d9%85-%d9%85%d8%a7%d8%b3%d8%a8%d9%8a%d8%b1%d9%88-%d9%88%d8%aa%d8%b7/" class="boxnews">
+                <div class="boxnewstx">نوارة نجم تقود مظاهرة أمام ماسبيرو وتطالب بسقوط المشير <span>مباشر</span>.</div>
+                </a> </div>
+
+              <div class="akhbar">
+                <div class="boxtime">
+                  <div class="boxtimetx">4:05<span> م </span></div>
+                </div>
+                <a href="http://www.moheet.com/2011/09/15/%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%aa%d8%ad%d8%ab-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%aa%d8%b5%d9%88%d9%8a%d8%aa-%d9%84%d9%85%d8%ba%d8%a7%d8%b1%d8%a9-%d8%ac%d8%b9%d9%8a%d8%aa%d8%a7-%d9%84%d8%aa%d9%86/" class="boxnews">
+                <div class="boxnewstx">لبنان تحث على التصويت لمغارة جعيتا لتنضم لعجائب الدنيا  <span>أخبار</span>.</div>
+                </a> </div>
+
+</div>					</div>
+
+
+
+            <div class="allcontain2">
+              <div class="qlmthrir">
+                <div class="hdtab">
+                  <div class="tabing bg3 bg4">
+                    <div class="txttab">رئيس التحرير يكتب</div>
+                    <div class="rwo rwo60"/>
+                  </div>
+                </div>
+                <!--hdtab--></div>
+              <!--hdtab-->
+              <div class="salahright">
+			  <a href="http://www.moheet.com/author/%d8%b5%d9%84%d8%a7%d8%ad-%d8%a8%d8%af%d9%8a%d9%88%d9%8a/">
+                <div class="salah"> <img src="http://50.57.36.232/images/11/med/117331.jpg" width="78" height="98"/> </div>
+                <div class="salahtx">صلاح بديوي</div>
+			  </a>
+			 </div>
+              <div class="salahleft"> <a href="http://www.moheet.com/2011/12/18/%d9%88%d8%b3%d9%82%d8%b7-%d8%a7%d9%84%d9%82%d9%86%d8%a7%d8%b9/" class="salahtx1">.. وسقط القناع </a>
+                <div class="salahtx2">بداية، نعلنها بوضوح شديد جدًّا للجميع، أن الفقير لله كاتب تلك السطور يزعم أننا فوق مستوى الشبهات<br/> </div>
+              </div>
+            </div>
+            <div class="morebox">
+              <div class="morebx"> <a href="http://www.moheet.com/2011/12/18/%d9%88%d8%b3%d9%82%d8%b7-%d8%a7%d9%84%d9%82%d9%86%d8%a7%d8%b9/" class="moretxt">المزيد +</a> </div>
+              <!--morebx--> 
+            </div>
+            <div class="qlmthrir seyase">
+              <div class="hdtab">
+                <div class="tabing bg3 bg4">
+                  <div class="txttab">التحليل الإخباري</div>
+                  <div class="rwo rwo60"/>
+                </div>
+              </div>
+              <!--hdtab--></div>
+            <!--hdtab-->
+              <div class="salahleft"> <div class="boxnewstx">المحرر السياسي يكتب...</div> <a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%b4%d8%a8%d9%8a%d8%ad%d8%a9-%d9%8a%d8%b8%d9%87%d8%b1%d9%88%d9%86-%d8%a8%d9%88%d8%b3%d8%b7-%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9/" class="salahtx1">الشبيحة يظهرون بوسط القاهرة </a>
+                <div class="salahtx2">تصدرت صحف العالم ومواقع الإنترنت والفضائيات، صور عناصر من الجيش، تضرب متظاهرة، وتسحلها على الإسفلت بعد أن جردتها من ملابسها<br/> </div>
+              </div>
+          </div>
+          <div class="morebox">
+            <div class="morebx"> <a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%b4%d8%a8%d9%8a%d8%ad%d8%a9-%d9%8a%d8%b8%d9%87%d8%b1%d9%88%d9%86-%d8%a8%d9%88%d8%b3%d8%b7-%d8%a7%d9%84%d9%82%d8%a7%d9%87%d8%b1%d8%a9/" class="moretxt">المزيد +</a> </div>
+            <!--morebx--> 
+          </div>
+          </div>
+          <div class="allcontain3">
+            <div class="hdtab">
+              <div class="tabing bg3 bg4">
+                <div class="txttab">كاريكاتير</div>
+                <div class="rwo rwo60"/>
+              </div>
+            </div>
+            <!--hdtab--></div>
+            
+      
+          <a href="http://image.moheet.com/images/11/big/119626.jpg"  title="بريشة ـ عصام الشرقاوى" class="mcms_gallery"><img  src="http://image.moheet.com/images/11/big/119626.jpg" class="caricature" alt="بريشة ـ عصام الشرقاوى"/></a>
+          <div class="caricature1">
+            <div class="caricature1tx">بريشة ـ عصام الشرقاوى</div>
+          </div>
+          <div class="bx-all-caricature"> 
+          <a href="http://image.moheet.com/images/11/big/119626.jpg" class="mcms_gallery"  title="بريشة ـ عصام الشرقاوى"> <img src="http://image.moheet.com/images/11/med/119626.jpg" alt="بريشة ـ عصام الشرقاوى" width="66px" height="50px"></a> 
+          <a href="http://image.moheet.com/images/11/big/119522.jpg" class="mcms_gallery"  title="بريشة ـ عصام الشرقاوى"> <img src="http://image.moheet.com/images/11/med/119522.jpg" alt="بريشة ـ عصام الشرقاوى" width="66px" height="50px"></a> 
+          <a href="http://image.moheet.com/images/11/big/119393.jpg" class="mcms_gallery"  title="بريشة ـ عصام الشرقاوى"> <img src="http://image.moheet.com/images/11/med/119393.jpg" alt="بريشة ـ عصام الشرقاوى" width="66px" height="50px"></a> 
+          <a href="http://image.moheet.com/images/11/big/119083.jpg" class="mcms_gallery"  title="بريشة ـ عصام الشرقاوى"> <img src="http://image.moheet.com/images/11/med/119083.jpg" alt="بريشة ـ عصام الشرقاوى" width="66px" height="50px"></a> 
+       
+		  </div>
+          </div>
+          </div>
+        </section>
+        <section class="part20">
+          <div class="boxallcontain2">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%a7%d9%84%d8%aa%d9%82%d8%a7%d8%b1%d9%8a%d8%b1-%d9%88%d8%a7%d9%84%d9%85%d9%84%d9%81%d8%a7%d8%aa/">
+                  <div class="txttab2">تقارير و ملفات</div>
+                  </a> </div>
+              </div>
+            </div>
+            <div class="conttqarer">
+                            <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d9%85%d9%8a%d9%84%d8%a7%d8%af-%d8%ad%d9%86%d8%a7-%d9%84%d9%80%d9%85%d8%ad%d9%8a%d8%b7-%d8%b5%d8%b9%d9%88%d8%af-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d9%8a%d9%86-%d8%a3%d9%85%d8%b1/"><img src="http://image.moheet.com/images/11/med/119630.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d9%85%d9%8a%d9%84%d8%a7%d8%af-%d8%ad%d9%86%d8%a7-%d9%84%d9%80%d9%85%d8%ad%d9%8a%d8%b7-%d8%b5%d8%b9%d9%88%d8%af-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d9%8a%d9%86-%d8%a3%d9%85%d8%b1/" class="boxtqarertext1">ميلاد حنا لـ"محيط" : صعود الإسلاميين أمر طبيعي وربنا يستر على مصر</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d8%a5%d8%b3%d8%af%d8%a7%d9%84-%d8%a7%d9%84%d8%b3%d8%aa%d8%a7%d8%b1-%d8%b9%d9%84%d9%89-%d8%b5%d9%81%d9%82%d8%a9-%d8%aa%d8%a8%d8%a7%d8%af%d9%84-%d8%a7%d9%84%d8%a3%d8%b3%d8%b1%d9%89-%d8%a7%d9%84%d9%81/"><img src="http://image.moheet.com/images/11/med/111895.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d8%a5%d8%b3%d8%af%d8%a7%d9%84-%d8%a7%d9%84%d8%b3%d8%aa%d8%a7%d8%b1-%d8%b9%d9%84%d9%89-%d8%b5%d9%81%d9%82%d8%a9-%d8%aa%d8%a8%d8%a7%d8%af%d9%84-%d8%a7%d9%84%d8%a3%d8%b3%d8%b1%d9%89-%d8%a7%d9%84%d9%81/" class="boxtqarertext1">إسدال الستار على صفقة تبادل الأسرى الفلسطينيين (فيديو)</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%ae%d9%84%d9%8a%d9%81%d8%a9-%d8%a7%d9%84%d8%a3%d8%b9%d8%b8%d9%85-%d9%8a%d8%b9%d8%aa%d9%84%d9%8a-%d8%b9%d8%b1%d8%b4-%d9%83%d9%88%d8%b1%d9%8a%d8%a7-%d8%a7%d9%84%d8%b4%d9%85%d8%a7%d9%84/"><img src="http://image.moheet.com/images/11/med/119624.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%ae%d9%84%d9%8a%d9%81%d8%a9-%d8%a7%d9%84%d8%a3%d8%b9%d8%b8%d9%85-%d9%8a%d8%b9%d8%aa%d9%84%d9%8a-%d8%b9%d8%b1%d8%b4-%d9%83%d9%88%d8%b1%d9%8a%d8%a7-%d8%a7%d9%84%d8%b4%d9%85%d8%a7%d9%84/" class="boxtqarertext1">"الخليفة الأعظم" يعتلي عرش كوريا الشمالية عقب رحيل قائد "محور الشر"(فيديو)</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d8%aa%d8%ad%d8%b0%d9%8a%d8%b1-%d9%85%d9%86-%d8%ad%d8%b1%d8%a7%d8%a6%d9%82-%d9%82%d8%a7%d8%af%d9%85%d8%a9-%d9%88%d8%af%d8%a7%d8%b1-%d8%a7%d9%84%d9%83%d8%aa%d8%a8-%d8%aa%d9%85%d8%aa%d9%84%d9%83/"><img src="http://image.moheet.com/images/11/med/119618.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d8%aa%d8%ad%d8%b0%d9%8a%d8%b1-%d9%85%d9%86-%d8%ad%d8%b1%d8%a7%d8%a6%d9%82-%d9%82%d8%a7%d8%af%d9%85%d8%a9-%d9%88%d8%af%d8%a7%d8%b1-%d8%a7%d9%84%d9%83%d8%aa%d8%a8-%d8%aa%d9%85%d8%aa%d9%84%d9%83/" class="boxtqarertext1">تحذير من حرائق قادمة..ودار الكتب تمتلك نسخا أصلية من مقتنيات المجمع (فيديو)</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d8%b5%d8%ad%d9%81-%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9-%d9%85%d9%86-%d8%aa%d8%ac%d8%b1%d8%a3-%d8%b9%d9%84%d9%89-%d8%a5%d8%ad%d8%b1%d8%a7%d9%82-%d8%a7%d9%84%d9%85%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%b9/"><img src="http://image.moheet.com/images/11/med/119608.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d8%b5%d8%ad%d9%81-%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9-%d9%85%d9%86-%d8%aa%d8%ac%d8%b1%d8%a3-%d8%b9%d9%84%d9%89-%d8%a5%d8%ad%d8%b1%d8%a7%d9%82-%d8%a7%d9%84%d9%85%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%b9/" class="boxtqarertext1">صحف عربية : من تجرأ على إحراق المجمع العلمي لن يتورع عن إحراق مصر</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d8%b5%d8%ad%d9%81-%d8%a7%d9%84%d8%a7%d8%ab%d9%86%d9%8a%d9%86-%d9%85%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%a5%d8%b8%d9%87%d8%a7%d8%b1-%d8%a7%d9%84%d9%85%d8%aa%d9%88%d8%b1%d8%b7-%d8%a7%d9%84%d8%ad%d9%82/"><img src="http://image.moheet.com/images/11/med/113178.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d8%b5%d8%ad%d9%81-%d8%a7%d9%84%d8%a7%d8%ab%d9%86%d9%8a%d9%86-%d9%85%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%a5%d8%b8%d9%87%d8%a7%d8%b1-%d8%a7%d9%84%d9%85%d8%aa%d9%88%d8%b1%d8%b7-%d8%a7%d9%84%d8%ad%d9%82/" class="boxtqarertext1">صحف الاثنين: مطالب بإظهار المتورط الحقيقي في أحداث الفوضى وإحراق مصر</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/19/%d8%a3%d9%86%d8%a8%d8%a7%d8%a1-%d8%b9%d9%86-%d8%aa%d9%88%d9%82%d9%8a%d8%b9-%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d9%85%d8%a8%d8%a7%d8%af%d8%b1%d8%a9-%d8%a7%d9%84%d8%b9%d8%b1/"><img src="http://image.moheet.com/images/10/med/105031.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/19/%d8%a3%d9%86%d8%a8%d8%a7%d8%a1-%d8%b9%d9%86-%d8%aa%d9%88%d9%82%d9%8a%d8%b9-%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d9%85%d8%a8%d8%a7%d8%af%d8%b1%d8%a9-%d8%a7%d9%84%d8%b9%d8%b1/" class="boxtqarertext1">أنباء عن توقيع سوريا على المبادرة العربية وسط استمرار أعمال العنف (فيديو)</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%b3%d9%84%d9%85%d9%8a-%d9%8a%d9%83%d8%b4%d9%81-%d9%83%d9%88%d8%a7%d9%84%d9%8a%d8%b3-%d9%85%d9%88%d9%82%d8%b9%d9%87-%d9%85%d8%ad%d9%85%d8%af-%d9%85%d8%ad%d9%85%d9%88%d8%af-%d9%88/"><img src="http://image.moheet.com/images/11/med/117924.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%b3%d9%84%d9%85%d9%8a-%d9%8a%d9%83%d8%b4%d9%81-%d9%83%d9%88%d8%a7%d9%84%d9%8a%d8%b3-%d9%85%d9%88%d9%82%d8%b9%d9%87-%d9%85%d8%ad%d9%85%d8%af-%d9%85%d8%ad%d9%85%d9%88%d8%af-%d9%88/" class="boxtqarertext1">"السلمي" يكشف كواليس موقعه "محمد محمود" ويقول : أنا ضحية "الوثيقة" و "العسكري"</a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/18/%d9%85%d9%86%d8%b8%d9%85%d9%88-%d9%88%d9%82%d9%81%d8%a9-%d8%a7%d9%84%d8%a5%d8%b9%d9%84%d8%a7%d9%85-%d8%a7%d9%84%d8%b9%d8%b3%d9%83%d8%b1%d9%8a-%d9%88%d8%a7%d9%84%d8%ac%d9%86%d8%b2%d9%88%d8%b1%d9%8a/"><img src="http://image.moheet.com/images/11/med/119558.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/18/%d9%85%d9%86%d8%b8%d9%85%d9%88-%d9%88%d9%82%d9%81%d8%a9-%d8%a7%d9%84%d8%a5%d8%b9%d9%84%d8%a7%d9%85-%d8%a7%d9%84%d8%b9%d8%b3%d9%83%d8%b1%d9%8a-%d9%88%d8%a7%d9%84%d8%ac%d9%86%d8%b2%d9%88%d8%b1%d9%8a/" class="boxtqarertext1">منظمو وقفة الإعلام : العسكري والجنزوري وراء تهديد الصحفيين (فيديو) </a> </div>
+              </div>
+              <div class="boxtqarer">
+                <div class="boxtqarerimg"><a href="http://www.moheet.com/2011/12/18/%d9%88%d9%82%d9%81%d8%a9-%d8%a7%d8%ad%d8%aa%d8%ac%d8%a7%d8%ac%d9%8a%d8%a9-%d9%84%d8%a2%d8%b3%d8%b1-%d8%a7%d9%84%d8%b3%d8%ac%d9%86%d8%a7%d8%a1-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d9%8a%d9%8a%d9%86/"><img src="http://image.moheet.com/images/11/med/119555.jpg" width="154px" height="116px"/></a></div>
+                <div class="boxtqarertext"> <a href="http://www.moheet.com/2011/12/18/%d9%88%d9%82%d9%81%d8%a9-%d8%a7%d8%ad%d8%aa%d8%ac%d8%a7%d8%ac%d9%8a%d8%a9-%d9%84%d8%a2%d8%b3%d8%b1-%d8%a7%d9%84%d8%b3%d8%ac%d9%86%d8%a7%d8%a1-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d9%8a%d9%8a%d9%86/" class="boxtqarertext1">وقفة احتجاجية لآسر السجناء السياسيين أمام دار القضاء العالي (فيديو وصور)</a> </div>
+              </div>
+			  
+			 <div class="morebox">
+                <div class="morebx"> <a href="http://www.moheet.com/category/%d8%a7%d9%84%d8%aa%d9%82%d8%a7%d8%b1%d9%8a%d8%b1-%d9%88%d8%a7%d9%84%d9%85%d9%84%d9%81%d8%a7%d8%aa/" class="moretxt">المزيد +</a> </div>
+                <!--morebx--> 
+              </div>
+              <!--morebox--> 
+              
+            </div>
+            <!--conttqarer--> 
+            
+          </div>
+        </section>
+        <section class="part3">
+          <div class="boxallcontainflags">
+            <div class="morebox bgmore">
+              <div class="bxgoctg flagimg bgmore2">
+                <div class="innews edit txtsub">العالم العربي</div>
+                <div class="box-allfalg">
+                <!--txtsub--> 
+                <a title="مصر" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d9%85%d8%b5%d8%b1/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_egypt.png"/> </a> 
+                <a title="العراق" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_iraq.png"/> </a>
+                 <a title="الأردن" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%a3%d8%b1%d8%af%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_jordan.png"/> </a> 
+                 <a title="الكويت" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d9%83%d9%88%d9%8a%d8%aa/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_kuwait.png"/> </a>
+                  <a title="لبنان" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d9%84%d8%a8%d9%86%d8%a7%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_lebanon.png"/> </a> 
+                  <a title="البحرين" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%a8%d8%ad%d8%b1%d9%8a%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_bahrain.png"/> </a> 
+                  <a title="ليبيا" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d9%84%d9%8a%d8%a8%d9%8a%d8%a7/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_libya.png"/> </a>
+                   <a title="موريتانيا" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d9%85%d9%88%d8%b1%d9%8a%d8%aa%d8%a7%d9%86%d9%8a%d8%a7/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_mauretania.png"/> </a> 
+                   <a title="عمان" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%b3%d9%84%d8%b7%d9%86%d8%a9-%d8%b9%d9%85%d8%a7%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_oman.png"/> </a> 
+                   <a title="قطر" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d9%82%d8%b7%d8%b1/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_qatar.png"/> </a> 
+                   <a title="السعودية" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a%d8%a9/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_saudi_arabia.png"/> </a> 
+                   <a title="الصومال" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%b5%d9%88%d9%85%d8%a7%d9%84/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_somalia.png"/> </a> 
+                   <a title="السودان" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%b3%d9%88%d8%af%d8%a7%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_sudan.png"/> </a> 
+                   <a title="سوريا" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%b3%d9%88%d8%b1%d9%8a%d8%a7/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_syria.png"/> </a>
+				   <a title="تونس" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%aa%d9%88%d9%86%d8%b3/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_tunisia.png"/> </a> <a title="الإمارات" href="#"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_united_arab_emirates.png"/> </a>
+				   <a title="اليمن" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d9%8a%d9%85%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/flag_yemen.png"/> </a>
+				   <a title="فلسطين" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d9%81%d9%84%d8%b3%d8%b7%d9%8a%d9%86/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/plsten.png"/> </a> 
+				   <a title="الجزائر" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d8%ac%d8%b2%d8%a7%d8%a6%d8%b1/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/jzaer.png"/> </a>
+				   <a title="المغرب" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%a7%d9%84%d9%85%d8%ba%d8%b1%d8%a8/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/morco.png"/> </a> 
+				   <a title="جيبوتي" href="http://www.moheet.com/category/%d8%a7%d9%84%d8%af%d9%88%d9%84/%d8%ac%d9%8a%d8%a8%d9%88%d8%aa%d9%8a/"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-flg/goboty.png"/> </a> 
+				   </div>
+              <!--bxgoctg--> 
+              </div><!--box-allfalg-->
+            </div>
+          </div>
+        </section>
+        <section class="part0">
+          <div class="bxright">
+            <div class="qloo vote">
+              <div class="hdtab">
+                <div class="tabing bg3 bg4">
+                  <div class="txttab">جاليرى محيط</div>
+                  <div class="rwo rwo60"/>
+                </div>
+              </div>
+              <!--hdtab--></div>
+            <!--hedqalo-->
+            
+      
+            <div class="cntqaloo cnt12">
+              <div class="golo2">
+                <div class="golo21">
+
+                <a href="http://image.moheet.com/images/11/big/119638.jpg" title="اوراق انتخاب عثر عليها الاهالى فى القمامة" class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119638.jpg" alt="اوراق انتخاب عثر عليها الاهالى فى القمامة"/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119637.jpg" title="اوراق انتخاب عثر عليها الاهالى فى القمامة" class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119637.jpg" alt="اوراق انتخاب عثر عليها الاهالى فى القمامة"/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119636.jpg" title="احد اهالى اطفيح يمسك باوراق انتخاب كانت ملقاة فى القمامة " class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119636.jpg" alt="احد اهالى اطفيح يمسك باوراق انتخاب كانت ملقاة فى القمامة "/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119635.jpg" title="جنود الجيش يمسكون بأحدى المتظاهرات" class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119635.jpg" alt="جنود الجيش يمسكون بأحدى المتظاهرات"/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119634.jpg" title="فرحة اهالى الضفة بالافراج عن ذويهم" class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119634.jpg" alt="فرحة اهالى الضفة بالافراج عن ذويهم"/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119633.jpg" title="لمجمع العلمى .. احتراق تاريخ مصر" class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119633.jpg" alt="لمجمع العلمى .. احتراق تاريخ مصر"/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119632.jpg" title="صورة تظهر بعض المتظاهرين وهم يمسكون بجراكن قيل انها تحتوى على بنزين " class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119632.jpg" alt="صورة تظهر بعض المتظاهرين وهم يمسكون بجراكن قيل انها تحتوى على بنزين "/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119631.jpg" title="فرحة اهالى الاسري المحررين بعودتهم " class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119631.jpg" alt="فرحة اهالى الاسري المحررين بعودتهم "/>  </a>
+
+                <a href="http://image.moheet.com/images/11/big/119543.jpg" title="بيان تركه محاولو تفجير خط الغاز بالعريش اليوم " class="golo21pic mcms_gallery"> <img src="http://image.moheet.com/images/11/med/119543.jpg" alt="بيان تركه محاولو تفجير خط الغاز بالعريش اليوم "/>  </a>
+                
+                
+                </div>
+                <a href="http://image.moheet.com/images/11/big/119543.jpg" title="بيان تركه محاولو تفجير خط الغاز بالعريش اليوم " class="golobig mcms_gallery"> <img src="http://image.moheet.com/images/11/big/119543.jpg" alt="بيان تركه محاولو تفجير خط الغاز بالعريش اليوم " width="308" height="228"/> </a>
+                <div class="bigpictx">
+                  <div class="bigpictx2">بيان تركه محاولو تفجير خط الغاز بالعريش اليوم </div>
+                </div>
+              </div>
+              
+            </div>
+      
+            <!--cntqaloo-->
+            <div class="morebox">
+              <div class="morebx"> <a class="moretxt" href="# "></a> </div>
+              <!--morebx--> 
+            </div>
+          </div>
+   
+		  
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/">
+                  <div class="txttab2">أخبار</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a-%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d9%84%d8%b9%d9%82%d9%88%d8%a8%d8%a7%d8%aa-%d8%b9%d9%84%d9%89-%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d8%ad%d8%aa%d8%a7%d8%ac/" title="العربي : تعليق العقوبات على سوريا يحتاج لقرار المجلس الوزاري العربي  " class="newsgallery1tx00">العربي : تعليق العقوبات على سوريا يحتاج لقرار المجلس الوزاري العربي   </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/118717.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx"> أكد الدكتور نبيل العربي الأمين العام لجامعة الدول العربية أن توقيع دمشق على البروتوكول المتعلق ببعثة الجامعة العربية إلى سوريا لايعني تعليق العقوبات فورا</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a-%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d9%84%d8%b9%d9%82%d9%88%d8%a8%d8%a7%d8%aa-%d8%b9%d9%84%d9%89-%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d8%ad%d8%aa%d8%a7%d8%ac/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="عنان يلتقي المجلس الاستشاري صباح غد لمناقشة أحداث مجلس الوزراء" href="http://www.moheet.com/2011/12/19/%d8%b9%d9%86%d8%a7%d9%86-%d9%8a%d9%84%d8%aa%d9%82%d9%8a-%d8%a7%d9%84%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%b4%d8%a7%d8%b1%d9%8a-%d8%b5%d8%a8%d8%a7%d8%ad-%d8%ba%d8%af-%d9%84%d9%85/">عنان يلتقي المجلس الاستشاري صباح غد لمناقشة أحداث مجلس الوزراء</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="عمارة : أحداث مجلس الوزراء أثبتت منهجية التخطيط لهدم الدولة (فيديو)" href="http://www.moheet.com/2011/12/19/%d8%b9%d9%85%d8%a7%d8%b1%d8%a9-%d8%a3%d8%ad%d8%af%d8%a7%d8%ab-%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a3%d8%ab%d8%a8%d8%aa%d8%aa-%d9%85%d9%86%d9%87%d8%ac%d9%8a%d8%a9/">عمارة : أحداث مجلس الوزراء أثبتت منهجية التخطيط لهدم الدولة (فيديو)</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="سوريا توقع على بروتوكول بعثة المراقبين العرب  " href="http://www.moheet.com/2011/12/19/%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%aa%d9%88%d9%82%d8%b9-%d8%b9%d9%84%d9%89-%d8%a8%d8%b1%d9%88%d8%aa%d9%88%d9%83%d9%88%d9%84-%d8%a8%d8%b9%d8%ab%d8%a9-%d8%a7%d9%84%d9%85%d8%b1%d8%a7%d9%82%d8%a8%d9%8a/">سوريا توقع على بروتوكول بعثة المراقبين العرب  </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="موسى يطالب بإجراء تحقيقات فورية بالأحداث وإعلان نتائجها على الشعب" href="http://www.moheet.com/2011/12/19/%d9%85%d9%88%d8%b3%d9%89-%d9%8a%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%a5%d8%ac%d8%b1%d8%a7%d8%a1-%d8%aa%d8%ad%d9%82%d9%8a%d9%82%d8%a7%d8%aa-%d9%81%d9%88%d8%b1%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d8%a3%d8%ad/">موسى يطالب بإجراء تحقيقات فورية بالأحداث وإعلان نتائجها على الشعب</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a3%d9%82%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d8%b5%d8%ad%d8%a7%d9%81%d8%a9/">أقوال الصحافة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d8%aa%d8%ad%d9%84%d9%8a%d9%84-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d9%89/">التحليل السياسى</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d8%ab%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9/">الثورة السورية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a/">العالم الإسلامي</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a/">العالم العربي</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d9%85%d9%84%d9%81-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a-%d8%a7%d9%84%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a/">الملف العربي الإسرائيلي</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%a7%d9%84%d9%8a%d9%85%d9%86-%d8%ab%d9%88%d8%b1%d8%a9-%d9%85%d8%b3%d8%aa%d9%85%d8%b1%d8%a9/">اليمن .. ثورة مستمرة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%aa%d9%88%d9%86%d8%b3-%d8%a7%d9%84%d8%ad%d8%b1%d8%a9/">تونس الحرة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%ab%d9%88%d8%b1%d8%a9-%d8%b9%d9%84%d9%89-%d8%b6%d9%81%d8%a7%d9%81-%d8%a7%d9%84%d9%86%d9%8a%d9%84/">ثورة على ضفاف النيل</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%ad%d9%82%d9%88%d9%82-%d8%a7%d9%84%d8%a5%d9%86%d8%b3%d8%a7%d9%86/">حقوق الإنسان</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%ad%d9%88%d8%a7%d8%b1%d8%a7%d8%aa-%d9%85%d8%ad%d9%8a%d8%b7/">حوارات محيط</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d8%b4%d8%a6%d9%88%d9%86-%d8%af%d9%88%d9%84%d9%8a%d8%a9/">شئون دولية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d9%84%d9%8a%d8%a8%d9%8a%d8%a7-%d8%a7%d9%84%d8%ac%d8%af%d9%8a%d8%af%d8%a9/">ليبيا الجديدة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d9%85%d8%a8%d8%a7%d8%b4%d8%b1/">مباشر</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/%d9%85%d8%ad%d9%84%d9%8a%d8%a7%d8%aa/">محليات</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/">
+                  <div class="txttab2">توك شو</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/19/%d8%b4%d9%87%d8%a7%d8%af%d8%a9-%d8%a3%d9%85%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%ad%d8%b1%d9%8a%d9%82-%d8%a7%d9%84/" title="شهادة أمين المجمع العلمي على الحريق الذي قضى على التراث المصري " class="newsgallery1tx00">شهادة أمين المجمع العلمي على الحريق الذي قضى على التراث المصري  </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/119592.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">قال محمد عبد الرحمن الشرنوبي، أمين عام المجمع العلمي المصري، إن المجمع مؤمن من الحريق من الداخل ولكن الحريق أتي من الخارج من جميع الجهات، موضحا انه كان من المستحيل</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/19/%d8%b4%d9%87%d8%a7%d8%af%d8%a9-%d8%a3%d9%85%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%ad%d8%b1%d9%8a%d9%82-%d8%a7%d9%84/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="استاذة جامعية تطالب الحكومة بعدم الاستجابة للمظاهرات الفئوية (فيديو)" href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%af%d9%83%d8%aa%d9%88%d8%b1%d9%87-%d9%81%d9%81%d9%8a%d8%a7%d9%86-%d8%a7%d9%86%d8%a7-%d9%84%d8%b3%d8%aa-%d8%b6%d8%af-%d8%a7%d9%84%d8%a7%d8%b9%d8%aa%d8%b5%d8%a7%d9%85-%d9%88%d9%84%d9%83/">استاذة جامعية تطالب الحكومة بعدم الاستجابة للمظاهرات الفئوية (فيديو)</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="أبو العز الحريري: الجنود الذين قمعوا المتظاهرين لم يتعلموا الانسانية " href="http://www.moheet.com/2011/12/19/%d8%a3%d8%a8%d9%88-%d8%a7%d9%84%d8%b9%d8%b2-%d8%a7%d9%84%d8%ad%d8%b1%d9%8a%d8%b1%d9%8a-%d8%a7%d9%84%d8%ac%d9%86%d9%88%d8%af-%d8%a7%d9%84%d8%b0%d9%8a%d9%86-%d9%82%d9%85%d8%b9%d9%88%d8%a7-%d8%a7%d9%84/">أبو العز الحريري: الجنود الذين قمعوا المتظاهرين لم يتعلموا الانسانية </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="الخضيري: أنصار الحزب الوطني "المنحل" أشعلوا أحداث مجلس الوزراء - فيديو" href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%ae%d8%b6%d9%8a%d8%b1%d9%8a-%d8%a3%d9%86%d8%b5%d8%a7%d8%b1-%d8%a7%d9%84%d9%88%d8%b7%d9%86%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%ad%d9%84-%d8%a3%d8%b4%d8%b9%d9%84%d9%88%d8%a7-%d8%a3%d8%ad/">الخضيري: أنصار الحزب الوطني "المنحل" أشعلوا أحداث مجلس الوزراء - فيديو</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="ممدوح حمزة: الجيش يشوه صورة "الثورة" - فيديو" href="http://www.moheet.com/2011/12/19/%d9%85%d9%85%d8%af%d9%88%d8%ad-%d8%ad%d9%85%d8%b2%d8%a9%d8%a7%d9%84%d8%ac%d9%8a%d8%b4-%d9%8a%d8%b4%d9%88%d9%87-%d8%b5%d9%88%d8%b1%d8%a9-%d8%a7%d9%84%d8%ab%d9%88%d8%b1%d8%a9-%d9%84%d8%af%d9%89-%d8%a7/">ممدوح حمزة: الجيش يشوه صورة "الثورة" - فيديو</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a-%d8%aa%d9%88%d9%83-%d8%b4%d9%88/">العالم العربي</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/%d9%81%d9%8a%d8%af%d9%8a%d9%88-%d9%85%d8%ad%d9%8a%d8%b7/">فيديو محيط</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/%d9%85%d8%b5%d8%b1-%d8%aa%d9%88%d9%83-%d8%b4%d9%88/">مصر</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/%d9%85%d9%86%d9%88%d8%b9%d8%a7%d8%aa/">منوعات</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%aa%d9%88%d9%83-%d8%b4%d9%88/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/">
+                  <div class="txttab2">اقتصاد</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%a8%d9%88%d8%b1%d8%b5%d8%a9-%d8%aa%d8%b3%d8%aa%d8%b1%d8%af-3-%d9%85%d9%84%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa-%d8%ac%d9%86%d9%8a%d9%87-%d9%85%d9%86-%d8%ae%d8%b3%d8%a7%d8%a6%d8%b1%d9%87%d8%a7/" title="البورصة تسترد 3 مليارات جنيه من خسائرها خلال تعاملات اليوم " class="newsgallery1tx00">البورصة تسترد 3 مليارات جنيه من خسائرها خلال تعاملات اليوم  </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/117059.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">نجحت البورصة المصرية فى تعويض نحو 3 مليارات جنيه من خسائرها خلال تعاملات اليوم وسط عمليات شراء من المستثمرين المصريين والعرب على الأسهم استغلالا لفرص الهبوط الحاد الذي سجلته خلال جلسة تعاملات الأمس بسبب الأحداث.</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%a8%d9%88%d8%b1%d8%b5%d8%a9-%d8%aa%d8%b3%d8%aa%d8%b1%d8%af-3-%d9%85%d9%84%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa-%d8%ac%d9%86%d9%8a%d9%87-%d9%85%d9%86-%d8%ae%d8%b3%d8%a7%d8%a6%d8%b1%d9%87%d8%a7/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="8.6 مليار جنيه حصيلة اكتتاب "الأهلى" فى سندات حكومية خلال خمس شهور" href="http://www.moheet.com/2011/12/19/8-6-%d9%85%d9%84%d9%8a%d8%a7%d8%b1-%d8%ac%d9%86%d9%8a%d9%87-%d8%ad%d8%b5%d9%8a%d9%84%d8%a9-%d8%a7%d9%83%d8%aa%d8%aa%d8%a7%d8%a8-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%89-%d9%81%d9%89-%d8%b3%d9%86%d8%af/">8.6 مليار جنيه حصيلة اكتتاب "الأهلى" فى سندات حكومية خلال خمس شهور</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="البورصة تتجه لتحقيق مكاسب فى منتصف تعاملات اليوم بعد هدوء قصر العينى" href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%a8%d9%88%d8%b1%d8%b5%d8%a9-%d8%aa%d8%aa%d8%ac%d9%87-%d9%84%d8%aa%d8%ad%d9%82%d9%8a%d9%82-%d9%85%d9%83%d8%a7%d8%b3%d8%a8-%d9%81%d9%89-%d9%85%d9%86%d8%aa%d8%b5%d9%81-%d8%aa%d8%b9%d8%a7/">البورصة تتجه لتحقيق مكاسب فى منتصف تعاملات اليوم بعد هدوء قصر العينى</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="غدا..هشام رامز يباشر عمله فى منصب العضو المنتدب لـ"التجاري الدولي"" href="http://www.moheet.com/2011/12/19/%d8%ba%d8%af%d8%a7-%d9%87%d8%b4%d8%a7%d9%85-%d8%b1%d8%a7%d9%85%d8%b2-%d9%8a%d8%a8%d8%a7%d8%b4%d8%b1-%d8%b9%d9%85%d9%84%d9%87-%d9%81%d9%89-%d9%85%d9%86%d8%b5%d8%a8-%d8%a7%d9%84%d8%b9%d8%b6%d9%88/">غدا..هشام رامز يباشر عمله فى منصب العضو المنتدب لـ"التجاري الدولي"</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="برنت يهبط دون 103 دولارات بعد أنباء وفاة زعيم كوريا الشمالية" href="http://www.moheet.com/2011/12/19/%d8%a8%d8%b1%d9%86%d8%aa-%d9%8a%d9%87%d8%a8%d8%b7-%d8%af%d9%88%d9%86-103-%d8%af%d9%88%d9%84%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a8%d8%b9%d8%af-%d8%a3%d9%86%d8%a8%d8%a7%d8%a1-%d9%88%d9%81%d8%a7%d8%a9-%d8%b2/">برنت يهبط دون 103 دولارات بعد أنباء وفاة زعيم كوريا الشمالية</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d9%85%d8%a7%d9%84/">أسواق المال</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/%d8%a7%d8%b3%d8%aa%d8%ab%d9%85%d8%a7%d8%b1-%d9%88%d8%a3%d8%b9%d9%85%d8%a7%d9%84/">استثمار وأعمال</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/%d8%a8%d8%aa%d8%b1%d9%88%d9%84-%d9%88%d8%b7%d8%a7%d9%82%d8%a9/">بترول وطاقة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/%d8%a8%d9%86%d9%88%d9%83-%d9%88%d8%aa%d8%a3%d9%85%d9%8a%d9%86/">بنوك وتأمين</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/%d8%b4%d8%b1%d9%83%d8%a7%d8%aa/">شركات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/%d9%85%d8%b9%d8%a7%d8%b1%d8%b6-%d9%88%d9%85%d8%a4%d8%aa%d9%85%d8%b1%d8%a7%d8%aa/">معارض ومؤتمرات</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/">
+                  <div class="txttab2">دين</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/19/%d8%ad%d8%b1%d9%83%d8%a9-%d8%a3%d8%b2%d9%87%d8%b1%d9%8a%d9%88%d9%86-%d8%a8%d9%84%d8%a7-%d8%ad%d8%af%d9%88%d8%af-%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%b6%d8%b1%d9%88%d8%b1%d8%a9-%d8%a7%d8%b1/" title="حركة "أزهريون بلا حدود" تطالب بضرورة ارتداء "المايوه الإسلامى"" class="newsgallery1tx00">حركة "أزهريون بلا حدود" تطالب بضرورة ارتداء "المايوه الإسلامى" </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/119642.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">أكدت حركة "أزهريون بلا حدود" إن الأزهر والأزهريين لن يصمتوا بعد اليوم وإن سكت قادته القابعون على </div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/19/%d8%ad%d8%b1%d9%83%d8%a9-%d8%a3%d8%b2%d9%87%d8%b1%d9%8a%d9%88%d9%86-%d8%a8%d9%84%d8%a7-%d8%ad%d8%af%d9%88%d8%af-%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%b6%d8%b1%d9%88%d8%b1%d8%a9-%d8%a7%d8%b1/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="الزغبي: من خرج إلي المظاهرات فهو آثم" href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%b2%d8%ba%d8%a8%d9%8a-%d9%85%d9%86-%d8%ae%d8%b1%d8%ac-%d8%a5%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b8%d8%a7%d9%87%d8%b1%d8%a7%d8%aa-%d9%81%d9%87%d9%88-%d8%a2%d8%ab%d9%85/">الزغبي: من خرج إلي المظاهرات فهو آثم</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="غدا..الإعلان عن الفائزين بجائزة الأمير نايف في السنة" href="http://www.moheet.com/2011/12/19/%d8%ba%d8%af%d8%a7-%d8%a7%d9%84%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d8%b9%d9%86-%d8%a7%d9%84%d9%81%d8%a7%d8%a6%d8%b2%d9%8a%d9%86-%d8%a8%d8%ac%d8%a7%d8%a6%d8%b2%d8%a9-%d8%a7%d9%84%d8%a3%d9%85%d9%8a%d8%b1/">غدا..الإعلان عن الفائزين بجائزة الأمير نايف في السنة</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="بالفيديو....بكاء المفتي علي "حمامة المسجد"" href="http://www.moheet.com/2011/12/19/%d8%a8%d8%a7%d9%84%d9%81%d9%8a%d8%af%d9%8a%d9%88-%d8%a8%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d9%85%d9%81%d8%aa%d9%8a-%d8%b9%d9%84%d9%8a-%d8%ad%d9%85%d8%a7%d9%85%d8%a9-%d8%a7%d9%84%d9%85%d8%b3%d8%ac/">بالفيديو....بكاء المفتي علي "حمامة المسجد"</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=" الإيسيسكو تعتمد مشروع التصدي لظاهرة الإسلاموفوبيا" href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%a5%d9%8a%d8%b3%d9%8a%d8%b3%d9%83%d9%88-%d8%aa%d8%b9%d8%aa%d9%85%d8%af-%d9%85%d8%b4%d8%b1%d9%88%d8%b9-%d8%a7%d9%84%d8%aa%d8%b5%d8%af%d9%8a-%d9%84%d8%b8%d8%a7%d9%87%d8%b1%d8%a9-%d8%a7/"> الإيسيسكو تعتمد مشروع التصدي لظاهرة الإسلاموفوبيا</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d8%af%d9%8a%d9%86/">أخبار</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d8%a7%d9%84%d8%a7%d8%b3%d8%b1%d8%a9-%d8%a7%d9%84%d9%85%d8%b3%d9%84%d9%85%d8%a9/">الاسرة المسلمة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d8%a7%d9%84%d8%ad%d9%88%d8%a7%d8%b1%d8%a7%d8%aa-%d9%88%d8%a7%d9%84%d9%85%d8%b4%d8%a7%d8%b1%d9%83%d8%a7%d8%aa/">الحوارات والمشاركات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d8%ab%d9%85-%d8%a7%d9%87%d8%aa%d8%af%d9%8a%d8%aa/">ثم اهتديت</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d9%81%d8%aa%d8%a7%d9%88%d9%89/">فتاوى</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d9%85%d9%86-%d8%a7%d9%84%d8%a5%d8%b9%d8%ac%d8%a7%d8%b2-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a/">من الإعجاز العلمي</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/%d9%85%d9%86-%d8%ad%d9%8a%d8%a7%d8%a9-%d8%a7%d9%84%d8%b1%d8%b3%d9%88%d9%84/">من حياة الرسول</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%af%d9%8a%d9%86/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/">
+                  <div class="txttab2">حوادث</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/19/%d8%ba%d8%af%d8%a3%d9%8b-%d8%a3%d9%88%d9%84%d9%8a-%d8%ac%d9%84%d8%b3%d8%a7%d8%aa-%d9%85%d8%ad%d8%a7%d9%83%d9%85%d8%a9-%d9%82%d8%aa%d9%84%d8%a9-%d8%b3%d9%8a%d8%af-%d8%a8%d9%84%d8%a7%d9%84-%d8%a8%d8%a7/" title="غدأً أولي جلسات محاكمة قتلة السيد بلال بالإسكندرية " class="newsgallery1tx00">غدأً أولي جلسات محاكمة قتلة السيد بلال بالإسكندرية  </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/114505.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx"> 
+تنظر محكمة جنايات الإسكندرية غدا الثلاثاء أولي جلسات محاكمة قتلة السيد بلال ، والمتهم فيها خمسة من ضباط أمن الدولة  .</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/19/%d8%ba%d8%af%d8%a3%d9%8b-%d8%a3%d9%88%d9%84%d9%8a-%d8%ac%d9%84%d8%b3%d8%a7%d8%aa-%d9%85%d8%ad%d8%a7%d9%83%d9%85%d8%a9-%d9%82%d8%aa%d9%84%d8%a9-%d8%b3%d9%8a%d8%af-%d8%a8%d9%84%d8%a7%d9%84-%d8%a8%d8%a7/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="تأجيل قضية قتل متظاهري الجيزة لجلسة 18 فبراير القادم" href="http://www.moheet.com/2011/12/19/%d8%aa%d8%a3%d8%ac%d9%8a%d9%84-%d9%82%d8%b6%d9%8a%d8%a9-%d9%82%d8%aa%d9%84-%d9%85%d8%aa%d8%b8%d8%a7%d9%87%d8%b1%d9%8a-%d8%a7%d9%84%d8%ac%d9%8a%d8%b2%d8%a9-%d9%84%d8%ac%d9%84%d8%b3%d8%a9-18-%d9%81/">تأجيل قضية قتل متظاهري الجيزة لجلسة 18 فبراير القادم</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="انقلاب سيارة نقل من أعلى كوبرى السيدة عائشة  " href="http://www.moheet.com/2011/12/19/%d8%a5%d9%86%d9%82%d9%84%d8%a7%d8%a8-%d8%b3%d9%8a%d8%a7%d8%b1%d8%a9-%d9%86%d9%82%d9%84-%d9%85%d9%86-%d8%a3%d8%b9%d9%84%d9%89-%d9%83%d9%88%d8%a8%d8%b1%d9%89-%d8%a7%d9%84%d8%b3%d9%8a%d8%af%d8%a9-%d8%b9/">انقلاب سيارة نقل من أعلى كوبرى السيدة عائشة  </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="النيابة العامة تقرر حبس 123 متهما فى أحداث قصر العينى " href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%86%d9%8a%d8%a7%d8%a8%d8%a9-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d8%aa%d9%82%d8%b1%d8%b1-%d8%ad%d8%a8%d8%b3-123-%d9%85%d8%aa%d9%87%d9%85%d8%a7-%d8%a3%d8%b1%d8%a8%d8%b9%d8%a9-%d8%a3/">النيابة العامة تقرر حبس 123 متهما فى أحداث قصر العينى </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="العثور على 15 شخصا من ضحايا المركب الغارق قبالة سواحل جاوا الشرقية  " href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%b9%d8%ab%d9%88%d8%b1-%d8%b9%d9%84%d9%89-15-%d8%b4%d8%ae%d8%b5%d8%a7-%d9%85%d9%86-%d8%b6%d8%ad%d8%a7%d9%8a%d8%a7-%d8%a7%d9%84%d9%85%d8%b1%d9%83%d8%a8-%d8%a7%d9%84%d8%ba%d8%a7%d8%b1/">العثور على 15 شخصا من ضحايا المركب الغارق قبالة سواحل جاوا الشرقية  </a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/%d8%a7%d9%84%d8%ac%d8%b1%d9%8a%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d9%86%d8%a7%d8%b3/">الجريمة والناس</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/%d8%ad%d9%88%d8%a7%d8%af%d8%ab-%d8%b7%d8%b1%d9%8a%d9%81%d8%a9/">حوادث طريفة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/%d8%ad%d9%88%d8%a7%d8%af%d8%ab-%d8%b9%d8%a7%d9%84%d9%85%d9%8a%d8%a9/">حوادث عالمية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/%d8%ad%d9%88%d8%a7%d8%af%d8%ab-%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9/">حوادث عربية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/%d8%af%d8%a7%d8%ae%d9%84-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d9%83%d9%85/">داخل المحاكم</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%ad%d9%88%d8%a7%d8%af%d8%ab/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/">
+                  <div class="txttab2">ثقافة</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%84%d8%a7%d8%a1-%d8%a7%d9%84%d8%a3%d8%b3%d9%88%d8%a7%d9%86%d9%8a-%d9%8a%d9%86%d9%81%d9%8a-%d8%aa%d8%b9%d8%b1%d8%b6%d9%87-%d9%84%d9%85%d8%ad%d8%a7%d9%88%d9%84%d8%a9-%d8%a7%d8%b9%d8%aa%d8%af/" title="علاء الأسواني ينفي تعرضه لمحاولة اعتداء" class="newsgallery1tx00">علاء الأسواني ينفي تعرضه لمحاولة اعتداء </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/112406.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">أصدر الدكتور علاء الأسوانى بيانا عبر حسابه على موقعي التواصل الاجتماعي "فيس بوك" و"تويتر" نفى فيه خبر محاولة الاعتداء عليه، الذي تداولته وسائل الإعلام مؤخراً.</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/19/%d8%b9%d9%84%d8%a7%d8%a1-%d8%a7%d9%84%d8%a3%d8%b3%d9%88%d8%a7%d9%86%d9%8a-%d9%8a%d9%86%d9%81%d9%8a-%d8%aa%d8%b9%d8%b1%d8%b6%d9%87-%d9%84%d9%85%d8%ad%d8%a7%d9%88%d9%84%d8%a9-%d8%a7%d8%b9%d8%aa%d8%af/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=" الآثار تعد مشروعاً لإنقاذ سور مجرى العيون وابن طولون " href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d8%a2%d8%ab%d8%a7%d8%b1-%d8%aa%d8%b9%d8%af-%d9%85%d8%b4%d8%b1%d9%88%d8%b9%d8%a7%d9%8b-%d9%84%d8%a5%d9%86%d9%82%d8%a7%d8%b0-%d8%b3%d9%88%d8%b1-%d9%85%d8%ac%d8%b1%d9%89-%d8%a7%d9%84%d8%b9/"> الآثار تعد مشروعاً لإنقاذ سور مجرى العيون وابن طولون </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="تحذير من حرائق قادمة..ودار الكتب تمتلك نسخا أصلية من مقتنيات المجمع (فيديو)" href="http://www.moheet.com/2011/12/19/%d8%aa%d8%ad%d8%b0%d9%8a%d8%b1-%d9%85%d9%86-%d8%ad%d8%b1%d8%a7%d8%a6%d9%82-%d9%82%d8%a7%d8%af%d9%85%d8%a9-%d9%88%d8%af%d8%a7%d8%b1-%d8%a7%d9%84%d9%83%d8%aa%d8%a8-%d8%aa%d9%85%d8%aa%d9%84%d9%83/">تحذير من حرائق قادمة..ودار الكتب تمتلك نسخا أصلية من مقتنيات المجمع (فيديو)</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="جمعية الدراسات التاريخية تدين إحراق المجمع العلمي " href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%ac%d9%85%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a%d8%a9-%d9%84%d9%84%d8%af%d8%b1%d8%a7%d8%b3%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%a7%d8%b1%d9%8a%d8%ae%d9%8a%d8%a9-%d8%aa/">جمعية الدراسات التاريخية تدين إحراق المجمع العلمي </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="مثقفون يعرضون على الوزير ترميم مكتبة المجمع المحترقة" href="http://www.moheet.com/2011/12/18/%d9%85%d8%ab%d9%82%d9%81%d9%88%d9%86-%d9%8a%d8%b9%d8%b1%d8%b6%d9%88%d9%86-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d9%88%d8%b2%d9%8a%d8%b1-%d8%aa%d8%b1%d9%85%d9%8a%d9%85-%d9%85%d9%83%d8%aa%d8%a8%d8%a9-%d8%a7/">مثقفون يعرضون على الوزير ترميم مكتبة المجمع المحترقة</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/%d8%a2%d8%aa%d9%8a%d9%84%d9%8a%d8%a9-%d8%a7%d9%84%d9%81%d9%86/">آتيلية الفن</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/%d8%aa%d8%ad%d8%aa-%d8%a7%d9%84%d8%b6%d9%88%d8%a1/">تحت الضوء</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/%d8%ad%d8%b6%d8%a7%d8%b1%d8%a7%d8%aa-%d9%88%d8%b4%d8%b9%d9%88%d8%a8/">حضارات وشعوب</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/%d9%85%d9%86-%d9%87%d9%86%d8%a7-%d9%88%d9%87%d9%86%d8%a7%d9%83/">من هنا وهناك</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/%d9%86%d8%a8%d8%b6%d8%a7%d8%aa-%d8%b4%d8%b9%d8%b1%d9%8a%d8%a9/">نبضات شعرية</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%ab%d9%82%d8%a7%d9%81%d8%a9/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/">
+                  <div class="txttab2">عالم الكتاب</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/18/%d8%a8%d9%8a%d9%84-%d9%83%d9%84%d9%8a%d9%86%d8%aa%d9%88%d9%86-%d9%84%d8%a3%d9%88%d8%a8%d8%a7%d9%85%d8%a7-%d9%84%d8%a7-%d8%aa%d8%af%d8%b9%d9%87%d9%85-%d9%8a%d9%87%d8%a7%d8%ac%d9%85%d9%88%d9%86-%d8%a7/" title="بيل كلينتون لأوباما : لا تدعهم يهاجمون الحكومة !" class="newsgallery1tx00">بيل كلينتون لأوباما : لا تدعهم يهاجمون الحكومة ! </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/10/med/107384.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">كتاب رئيس الولايات المتحدة الأمريكية الأسبق بيل كلينتون بعنوان "العودة إلى العمل" هو محور مقال الناقد جيف مادرك بالملحق الثقافي لصحيفة "نيويورك تايمز" ، والمنشور مؤخرا ليشير لخطة كلينتون لخلق وظائف للأمريكيين، وأنه يجب القضاء </div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/18/%d8%a8%d9%8a%d9%84-%d9%83%d9%84%d9%8a%d9%86%d8%aa%d9%88%d9%86-%d9%84%d8%a3%d9%88%d8%a8%d8%a7%d9%85%d8%a7-%d9%84%d8%a7-%d8%aa%d8%af%d8%b9%d9%87%d9%85-%d9%8a%d9%87%d8%a7%d8%ac%d9%85%d9%88%d9%86-%d8%a7/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="قائمة الأكثر مبيعاً خلال الأسبوع الأخير في نيويورك   " href="http://www.moheet.com/2011/12/19/%d9%82%d8%a7%d8%a6%d9%85%d8%a9-%d8%a7%d9%84%d8%a3%d9%83%d8%ab%d8%b1-%d9%85%d8%a8%d9%8a%d8%b9%d8%a7%d9%8b-%d8%ae%d9%84%d8%a7%d9%84-%d8%a7%d9%84%d8%a3%d8%b3%d8%a8%d9%88%d8%b9-%d8%a7%d9%84%d8%a3%d8%ae/">قائمة الأكثر مبيعاً خلال الأسبوع الأخير في نيويورك   </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="وزير التموين يحضر مناقشة كتاب "موجز علم الاقتصاد"" href="http://www.moheet.com/2011/12/19/%d9%88%d8%b2%d9%8a%d8%b1-%d8%a7%d9%84%d8%aa%d9%85%d9%88%d9%8a%d9%86-%d9%8a%d8%ad%d8%b6%d8%b1-%d9%85%d9%86%d8%a7%d9%82%d8%b4%d8%a9-%d9%83%d8%aa%d8%a7%d8%a8-%d9%85%d9%88%d8%ac%d8%b2-%d8%b9%d9%84%d9%85/">وزير التموين يحضر مناقشة كتاب "موجز علم الاقتصاد"</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=""كلمة" تترجم "العمارة والأسطورة والروحانيات"" href="http://www.moheet.com/2011/12/18/%d9%83%d9%84%d9%85%d8%a9-%d8%aa%d8%aa%d8%b1%d8%ac%d9%85-%d8%a7%d9%84%d8%b9%d9%85%d8%a7%d8%b1%d8%a9-%d9%88%d8%a7%d9%84%d8%a3%d8%b3%d8%b7%d9%88%d8%b1%d8%a9-%d9%88%d8%a7%d9%84%d8%b1%d9%88%d8%ad/">"كلمة" تترجم "العمارة والأسطورة والروحانيات"</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="عزمي بشارة: هل من مسألة قبطية في مصر؟" href="http://www.moheet.com/2011/12/18/%d8%b9%d8%b2%d9%85%d9%8a-%d8%a8%d8%b4%d8%a7%d8%b1%d8%a9-%d9%87%d9%84-%d9%85%d9%86-%d9%85%d8%b3%d8%a3%d9%84%d8%a9-%d9%82%d8%a8%d8%b7%d9%8a%d8%a9-%d9%81%d9%8a-%d9%85%d8%b5%d8%b1%d8%9f/">عزمي بشارة: هل من مسألة قبطية في مصر؟</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/%d8%a7%d8%a8%d8%af%d8%a7%d8%b9/">ابداع</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/%d8%a7%d9%84%d9%85%d9%83%d8%aa%d8%a8%d8%a9-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85%d9%8a%d8%a9/">المكتبة العالمية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/%d9%82%d8%b1%d8%a3%d8%aa-%d9%84%d9%83/">قرأت لك</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/%d9%83%d8%aa%d8%a7%d8%a8-%d8%ac%d8%af%d9%8a%d8%af/">كتاب جديد</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/">
+                  <div class="txttab2">علوم وتكنولوجيا</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%a3%d8%b7%d8%a8%d8%a7%d8%a1-%d9%8a%d8%ad%d8%b0%d8%b1%d9%88%d9%86-%d8%a7%d9%84%d8%ac%d9%84%d8%b7%d8%a7%d8%aa-%d8%a7%d9%84%d8%b1%d8%a6%d9%88%d9%8a%d8%a9-%d8%aa%d8%b2%d8%af%d8%a7%d8%af/" title="الأطباء يحذرون: الجلطات الرئوية تزداد بعد عمليات العظام (فيديو)" class="newsgallery1tx00">الأطباء يحذرون: الجلطات الرئوية تزداد بعد عمليات العظام (فيديو) </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/112178.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">الدكتور جمال حسني يؤكد أن الجلطات الوريدية خطيرة وتهدد الحياة وتشمل الجلطات الوريدية العميقة وغالباً ما تكون في الساق، والجلطات الرئوية</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%a3%d8%b7%d8%a8%d8%a7%d8%a1-%d9%8a%d8%ad%d8%b0%d8%b1%d9%88%d9%86-%d8%a7%d9%84%d8%ac%d9%84%d8%b7%d8%a7%d8%aa-%d8%a7%d9%84%d8%b1%d8%a6%d9%88%d9%8a%d8%a9-%d8%aa%d8%b2%d8%af%d8%a7%d8%af/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="تحديد عدد السعرات يحد من استهلاك المشروبات المحلاة  " href="http://www.moheet.com/2011/12/18/%d8%aa%d8%ad%d8%af%d9%8a%d8%af-%d8%b9%d8%af%d8%af-%d8%a7%d9%84%d8%b3%d8%b9%d8%b1%d8%a7%d8%aa-%d9%8a%d8%ad%d8%af-%d9%85%d9%86-%d8%a7%d8%b3%d8%aa%d9%87%d9%84%d8%a7%d9%83-%d8%a7%d9%84%d9%85%d8%b4%d8%b1/">تحديد عدد السعرات يحد من استهلاك المشروبات المحلاة  </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="الاختلافات الهرمونية تعرض النساء للإصابة بسرطان الجلد" href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%a7%d8%ae%d8%aa%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d9%87%d8%b1%d9%85%d9%88%d9%86%d9%8a%d8%a9-%d8%aa%d8%b9%d8%b1%d8%b6-%d8%a7%d9%84%d9%86%d8%b3%d8%a7%d8%a1-%d9%84%d9%84%d8%a5/">الاختلافات الهرمونية تعرض النساء للإصابة بسرطان الجلد</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="عقاقير خفض الكوليسترول تقلل الوفيات الناجمة عن الأنفلونزا" href="http://www.moheet.com/2011/12/18/%d8%b9%d9%82%d8%a7%d9%82%d9%8a%d8%b1-%d8%ae%d9%81%d8%b6-%d8%a7%d9%84%d9%83%d9%88%d9%84%d9%8a%d8%b3%d8%aa%d8%b1%d9%88%d9%84-%d8%aa%d9%82%d9%84%d9%84-%d8%a7%d9%84%d9%88%d9%81%d9%8a%d8%a7%d8%aa-%d8%a7/">عقاقير خفض الكوليسترول تقلل الوفيات الناجمة عن الأنفلونزا</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="نقص الحديد يزيد مخاطر الإصابة بالجلطات" href="http://www.moheet.com/2011/12/18/%d9%86%d9%82%d8%b5-%d8%a7%d9%84%d8%ad%d8%af%d9%8a%d8%af-%d9%8a%d8%b2%d9%8a%d8%af-%d9%85%d8%ae%d8%a7%d8%b7%d8%b1-%d8%a7%d9%84%d8%a5%d8%b5%d8%a7%d8%a8%d8%a9-%d8%a8%d8%a7%d9%84%d8%ac%d9%84%d8%b7%d8%a7/">نقص الحديد يزيد مخاطر الإصابة بالجلطات</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%a3%d9%81%d9%83%d8%a7%d8%b1-%d9%85%d8%a8%d8%aa%d9%83%d8%b1%d8%a9/">أفكار مبتكرة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%a8%d8%a7%d9%86%d9%88%d8%b1%d8%a7%d9%85%d8%a7-%d8%a7%d9%84%d8%b9%d9%84%d9%85/">بانوراما العلم</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%ad%d9%8a%d8%a7%d8%aa%d9%83-%d8%a7%d9%84%d8%ac%d9%86%d8%b3%d9%8a%d8%a9/">حياتك الجنسية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%b1%d9%83%d9%86-%d8%a7%d9%84%d8%a8%d9%8a%d8%a6%d8%a9/">ركن البيئة</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%b3%d9%84%d8%a7%d9%85%d8%aa%d9%83/">سلامتك</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%b5%d8%ad%d8%a9-%d9%88%d8%aa%d8%ba%d8%b0%d9%8a%d8%a9/">صحة وتغذية</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%b7%d8%a8-%d8%a8%d8%af%d9%8a%d9%84/">طب بديل</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d8%ad%d9%8a%d9%88%d8%a7%d9%86/">عالم الحيوان</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%81%d8%b6%d8%a7%d8%a1/">عالم الفضاء</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%b9%d9%84%d9%88%d9%85-%d9%88%d8%aa%d9%83%d9%86%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/">
+                  <div class="txttab2">كمبيوتر واتصالات</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/18/%d9%85%d8%a7%d9%8a%d9%83%d8%b1%d9%88%d8%b3%d9%88%d9%81%d8%aa-%d8%aa%d8%b7%d9%84%d9%82-%d8%a7%d9%84%d9%86%d8%b3%d8%ae%d8%a9-%d8%a7%d9%84%d8%aa%d8%ac%d8%b1%d9%8a%d8%a8%d9%8a%d8%a9-%d9%85%d9%86/" title=""مايكروسوفت" تطلق النسخة التجريبية من "ويندوز 8" أواخر فبراير" class="newsgallery1tx00">"مايكروسوفت" تطلق النسخة التجريبية من "ويندوز 8" أواخر فبراير </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/118063.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">شركة "مايكروسوفت" الأمريكية، عملاق صناعة البرمجيات في العالم، تؤكد أنها ستطلق نسخة تجريبية عامة من نظام تشغيل "ويندوز 8"</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/18/%d9%85%d8%a7%d9%8a%d9%83%d8%b1%d9%88%d8%b3%d9%88%d9%81%d8%aa-%d8%aa%d8%b7%d9%84%d9%82-%d8%a7%d9%84%d9%86%d8%b3%d8%ae%d8%a9-%d8%a7%d9%84%d8%aa%d8%ac%d8%b1%d9%8a%d8%a8%d9%8a%d8%a9-%d9%85%d9%86/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=""ريسيرش إن موشن" تغير اسم نظام تشغيل "بي بي إكس" لـ" بلاك بيري 10"" href="http://www.moheet.com/2011/12/18/%d8%b1%d9%8a%d8%b3%d9%8a%d8%b1%d8%b4-%d8%a5%d9%86-%d9%85%d9%88%d8%b4%d9%86-%d8%aa%d8%ba%d9%8a%d8%b1-%d8%a7%d8%b3%d9%85-%d9%86%d8%b8%d8%a7%d9%85-%d8%aa%d8%b4%d8%ba%d9%8a%d9%84-%d8%a8%d9%8a/">"ريسيرش إن موشن" تغير اسم نظام تشغيل "بي بي إكس" لـ" بلاك بيري 10"</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=""آي بي إم" تطلق تطبيقات للحاسبات اللوحية لعملائها من الشركات" href="http://www.moheet.com/2011/12/18/%d8%a2%d9%8a-%d8%a8%d9%8a-%d8%a5%d9%85-%d8%aa%d8%b7%d9%84%d9%82-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%84%d9%84%d8%ad%d8%a7%d8%b3%d8%a8%d8%a7%d8%aa-%d8%a7%d9%84%d9%84%d9%88%d8%ad%d9%8a/">"آي بي إم" تطلق تطبيقات للحاسبات اللوحية لعملائها من الشركات</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=""أوبرا" تصدر نسخة "أوبرا "6.11 المؤقتة" href="http://www.moheet.com/2011/12/18/%d8%a3%d9%88%d8%a8%d8%b1%d8%a7-%d8%aa%d8%b5%d8%af%d8%b1-%d9%86%d8%b3%d8%ae%d8%a9-%d8%a3%d9%88%d8%a8%d8%b1%d8%a7-6-11-%d8%a7%d9%84%d9%85%d8%a4%d9%82%d8%aa%d8%a9/">"أوبرا" تصدر نسخة "أوبرا "6.11 المؤقتة</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title=""جوجل" تمنح 40 مليون دولار لمجموعة من المؤسسات غير الربحية" href="http://www.moheet.com/2011/12/18/%d8%ac%d9%88%d8%ac%d9%84-%d8%aa%d9%85%d9%86%d8%ad-40-%d9%85%d9%84%d9%8a%d9%88%d9%86-%d8%af%d9%88%d9%84%d8%a7%d8%b1-%d9%84%d9%85%d8%ac%d9%85%d9%88%d8%b9%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d8%a4/">"جوجل" تمنح 40 مليون دولار لمجموعة من المؤسسات غير الربحية</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/%d8%a3%d8%ac%d9%87%d8%b2%d8%a9-%d9%88%d8%b4%d8%a8%d9%83%d8%a7%d8%aa/">أجهزة وشبكات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/%d8%ac%d8%af%d9%8a%d8%af-%d8%a7%d9%84%d8%a8%d8%b1%d8%a7%d9%85%d8%ac/">جديد البرامج</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/%d8%ac%d9%88%d8%a7%d9%84%d9%83/">جوالك</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1/">عالم الكمبيوتر</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/%d9%86%d8%aa-%d9%83%d8%a7%d9%81%d9%8a%d9%87/">نت كافيه</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d9%83%d9%85%d8%a8%d9%8a%d9%88%d8%aa%d8%b1-%d9%88%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/">
+                  <div class="txttab2">سيارات</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/18/%d8%a3%d8%b2%d9%85%d8%a9-%d8%af%d9%88%d9%84-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d9%88-%d8%aa%d8%ae%d9%8a%d9%85-%d8%b9%d9%84%d9%89-%d9%85%d8%a8%d9%8a%d8%b9%d8%a7%d8%aa-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b1/" title="أزمة دول اليورو تخيم على مبيعات السيارات بأسواقها خلال نوفمبر" class="newsgallery1tx00">أزمة دول اليورو تخيم على مبيعات السيارات بأسواقها خلال نوفمبر </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/10/med/103827.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">أعلن صناع السيارات عن تراجع مبيعات الشركات الكبيرة فى شهر نوفمبر فى الأسواق الأوروبية، نظراً لحالة الركود الاقتصادى التى أثرت سلباً على المبيعات بما فى ذلك شركات فيات وفورد وجنرال موتورز وبيجو سيتروين.</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/18/%d8%a3%d8%b2%d9%85%d8%a9-%d8%af%d9%88%d9%84-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d9%88-%d8%aa%d8%ae%d9%8a%d9%85-%d8%b9%d9%84%d9%89-%d9%85%d8%a8%d9%8a%d8%b9%d8%a7%d8%aa-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b1/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="شيفروليه تسجل زيادة فى مبيعاتها بالمنطقة تصل22% بنهاية نوفمبر" href="http://www.moheet.com/2011/12/15/%d8%b4%d9%8a%d9%81%d8%b1%d9%88%d9%84%d9%8a%d9%87-%d8%aa%d8%b3%d8%ac%d9%84-%d8%b2%d9%8a%d8%a7%d8%af%d8%a9-%d9%81%d9%89-%d9%85%d8%a8%d9%8a%d8%b9%d8%a7%d8%aa%d9%87%d8%a7-%d8%a8%d8%a7%d9%84%d9%85%d9%86/">شيفروليه تسجل زيادة فى مبيعاتها بالمنطقة تصل22% بنهاية نوفمبر</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="سكودا تحتفل بإنتاج 1.5 مليون وحدة من الجيل الثانى من أوكتافيا" href="http://www.moheet.com/2011/12/15/%d8%b3%d9%83%d9%88%d8%af%d8%a7-%d8%aa%d8%ad%d8%aa%d9%81%d9%84-%d8%a8%d8%a5%d9%86%d8%aa%d8%a7%d8%ac-1-5-%d9%85%d9%84%d9%8a%d9%88%d9%86-%d9%88%d8%ad%d8%af%d8%a9-%d9%85%d9%86-%d8%a7%d9%84%d8%ac%d9%8a/">سكودا تحتفل بإنتاج 1.5 مليون وحدة من الجيل الثانى من أوكتافيا</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="كوريا تتوقع تصدير 3.2 مليون سيارة العام المقبل" href="http://www.moheet.com/2011/12/14/%d9%83%d9%88%d8%b1%d9%8a%d8%a7-%d8%aa%d8%aa%d9%88%d9%82%d8%b9-%d8%aa%d8%b5%d8%af%d9%8a%d8%b1-3-2-%d9%85%d9%84%d9%8a%d9%88%d9%86-%d8%b3%d9%8a%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%b9%d8%a7%d9%85-%d8%a7/">كوريا تتوقع تصدير 3.2 مليون سيارة العام المقبل</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="اختيار "فيلوستر" إحدى السيارات العشر الجديدة الجديرة بالاقتناء فى أمريكا" href="http://www.moheet.com/2011/12/14/%d8%a7%d8%ae%d8%aa%d9%8a%d8%a7%d8%b1-%d9%81%d9%8a%d9%84%d9%88%d8%b3%d8%aa%d8%b1-%d8%a5%d8%ad%d8%af%d9%89-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%b4%d8%b1-%d8%a7/">اختيار "فيلوستر" إحدى السيارات العشر الجديدة الجديرة بالاقتناء فى أمريكا</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/%d8%af%d9%84%d9%8a%d9%84-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/">دليل السيارات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/%d8%b1%d8%a7%d9%84%d9%8a%d8%a7%d8%aa/">راليات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/%d8%b3%d9%88%d9%82-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/">سوق السيارات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%ba%d8%af/">سيارات الغد</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/%d8%b7%d8%b1%d8%a7%d8%a6%d9%81/">طرائف</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/%d9%86%d8%ac%d9%88%d9%85-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/">نجوم السيارات</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%b1%d8%a7%d8%aa/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+
+	   <div class="qloo vote">
+            <div class="widget-head hedboxho">
+              <div class="titlebx">
+                <div class="tabing" > <a href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/">
+                  <div class="txttab2">سياحة</div>
+                  </a> </div>
+              </div>
+            </div>
+					
+
+            <div class="rightside">
+              <div class="newsgallery100"> <a href="http://www.moheet.com/2011/12/18/%d8%a5%d9%86%d8%aa%d8%b9%d8%a7%d8%b4-%d8%ad%d8%b1%d9%83%d8%a9-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9-%d8%a7%d9%84%d8%af%d9%8a%d9%86%d9%8a%d8%a9-%d9%85%d9%86-%d9%86%d9%8a%d8%ac%d9%8a%d8%b1%d9%8a/" title="إنتعاش حركة السياحة الدينية من نيجيريا إلى مصر وفلسطين  " class="newsgallery1tx00">إنتعاش حركة السياحة الدينية من نيجيريا إلى مصر وفلسطين   </a> </div>
+              <div class="gallerycont10"> <img src="http://image.moheet.com/images/11/med/118138.jpg" class="imggallery00" />
+                <div class="newsgallery00">
+                  <div class="newsgallery200">
+                    <div class="newsgallery2tx">قالت صحيفة "ذي نيشن" النيجيرية إن عشرات الحافلات الفاخرة بدأت فى نقل السياح النيجيريين ودول أخرى إلى مطار أبوجا الدولى للتوجه إلى مصر وفلسطين لزيارة أماكن مقدسة مسيحية هناك.</div>
+                  </div>
+                  <div class="tfasel0"><a href="http://www.moheet.com/2011/12/18/%d8%a5%d9%86%d8%aa%d8%b9%d8%a7%d8%b4-%d8%ad%d8%b1%d9%83%d8%a9-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9-%d8%a7%d9%84%d8%af%d9%8a%d9%86%d9%8a%d8%a9-%d9%85%d9%86-%d9%86%d9%8a%d8%ac%d9%8a%d8%b1%d9%8a/" class="tfaseltx0">التفاصيل</a></div>
+                </div>
+              </div>
+            </div>								
+			
+				<div class="leftside">
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="وزير الطيران: مصممون على تنفيذ الخطة الاستراتيجية للدولة   " href="http://www.moheet.com/2011/12/18/%d9%88%d8%b2%d9%8a%d8%b1-%d8%a7%d9%84%d8%b7%d9%8a%d8%b1%d8%a7%d9%86-%d9%85%d8%b5%d9%85%d9%85%d9%88%d9%86-%d8%b9%d9%84%d9%89-%d8%aa%d9%86%d9%81%d9%8a%d8%b0-%d8%a7%d9%84%d8%ae%d8%b7%d8%a9-%d8%a7%d9%84/">وزير الطيران: مصممون على تنفيذ الخطة الاستراتيجية للدولة   </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="عبد النور: السياحة تواجه تحديين أولهما الأمن وثانيهما الفتاوى " href="http://www.moheet.com/2011/12/12/%d8%b9%d8%a8%d8%af-%d8%a7%d9%84%d9%86%d9%88%d8%b1-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9-%d8%aa%d9%88%d8%a7%d8%ac%d9%87-%d8%aa%d8%ad%d8%af%d9%89-%d8%a7%d9%84%d8%a3%d9%85%d9%86-%d9%88%d8%aa%d8%ad/">عبد النور: السياحة تواجه تحديين أولهما الأمن وثانيهما الفتاوى </a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="ميناء الاسكندرية يستقبل 1052 سائحا" href="http://www.moheet.com/2011/12/10/%d9%85%d9%8a%d9%86%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b3%d9%83%d9%86%d8%af%d8%b1%d9%8a%d8%a9-%d9%8a%d8%b3%d8%aa%d9%82%d8%a8%d9%84-1052-%d8%b3%d8%a7%d8%a6%d8%ad%d8%a7/">ميناء الاسكندرية يستقبل 1052 سائحا</a> </div>
+                </div>
+              </div>
+
+
+              <div class="newctgr">
+                <div class="reltedn">
+                  <div class="bxthnews hvr">
+                    <div class="bxrow bx14"></div>
+                    <a class="innews edit xt" title="العوضي: 666 سائحا مصريا وأجنبيا زاروا المتحف المصري" href="http://www.moheet.com/2011/12/09/%d8%a7%d9%84%d8%b9%d9%88%d8%b6%d9%8a-666-%d8%b3%d8%a7%d8%a6%d8%ad%d8%a7-%d9%85%d8%b5%d8%b1%d9%8a%d8%a7-%d9%88%d8%a3%d8%ac%d9%86%d8%a8%d9%8a%d8%a7-%d8%b2%d8%a7%d8%b1%d9%88%d8%a7-%d8%a7%d9%84%d9%85/">العوضي: 666 سائحا مصريا وأجنبيا زاروا المتحف المصري</a> </div>
+                </div>
+              </div>
+
+			
+					</div>
+
+			
+			
+            <div class="morebox bgmore">
+              <div class="bxgoctg">
+                <div class="innews edit txtsub">أبواب فرعية ::</div>
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/">أخبار</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/%d8%b4%d8%b1%d9%83%d8%a7%d8%aa-%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/">شركات</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/%d8%b7%d9%8a%d8%b1%d8%a7%d9%86/">طيران</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/%d9%81%d9%86%d8%a7%d8%af%d9%82/">فنادق</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/%d9%85%d8%aa%d8%a7%d8%ad%d9%81-%d9%88%d8%a2%d8%ab%d8%a7%d8%b1/">متاحف وآثار</a> |
+					
+	
+			<a class="innews cl556" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/%d9%85%d8%af%d9%86/">مدن</a> |
+					
+		</div>
+         <div class="morebx"> <a class="moretxt" href="http://www.moheet.com/category/%d8%b3%d9%8a%d8%a7%d8%ad%d8%a9/">المزيد +</a> </div>
+
+
+            </div>
+          </div>
+
+		  </div>
+          <aside class="left">
+		  
+
+            <div class="qloo vote">
+              <div class="hdboxing">
+                <div class="hdtab">
+                  <div class="tabing bg3 bg4">
+                    <div class="txttab">استطلاع</div>
+                    <div class="rwo rwo60">
+					</div>
+                  </div>
+                </div>
+                <!--hdtab--> 
+                
+              </div>
+              <!--hdboxing-->
+
+			  <div class="cntqaloo cnt12">
+			  
+										<div id="polls-31" class="wp-polls">
+	<form id="polls_form_31" class="wp-polls-form" action="/?fresh=true" method="post">
+		<p style="display: none;"><input type="hidden" name="poll_id" value="31" /></p>
+		<p style="text-align: center;"><strong  class="wp-polls-ans  texttile2 siz25"  >هل تتوقع ان يكتسح الاسلاميون المرحلة الثانية من الانتخابات البرلمانية ؟</strong></p><div id="polls-31-ans" class="wp-polls-ans  txtlable size40"><ul class="wp-polls-ul txtlable size40">
+		<li><input type="radio" id="poll-answer-101" name="poll_31" value="101" /> <label for="poll-answer-101">نعم</label></li>
+		<li><input type="radio" id="poll-answer-102" name="poll_31" value="102" /> <label for="poll-answer-102">لا</label></li>
+		<li><input type="radio" id="poll-answer-103" name="poll_31" value="103" /> <label for="poll-answer-103">غير مهتم</label></li>
+		</ul><p style="text-align: center;"><input type="button" name="Vote" value="   " class="Buttons bottvote" onclick="poll_vote(31);" /></p><p style="text-align: center;"><a href="#ViewPollResults" class="innews edit txtv lft clr30" onclick="poll_result(31); return false;" title="مشاهدة نتائج الاستفتاء">عرض النتائج</a></p></div>
+	</form>
+</div>
+<div id="polls-31-loading" class="wp-polls-loading"><img src="http://www.moheet.com/wp-content/plugins/wp-polls/images/loading.gif" width="16" height="16" alt="Loading ..." title="Loading ..." class="wp-polls-image" />&nbsp;Loading ...</div>
+									   
+			  
+			  </div><!--cntqaloo-->
+              <!--cntqaloo--> 
+            </div>
+            <!--qloo-->
+
+			
+            <div class="qloo vote">
+              <div class="hdboxing">
+                <div class="hdtab">
+                  <div class="tabing bg3 bg4">
+                    <div class="txttab">اوتار القلوب</div>
+                    <div class="rwo rwo60"></div>
+                  </div>
+                </div>
+                <!--hdtab--> 
+                
+              </div>
+              <!--hdboxing-->
+              
+              <div class="cntboxr">
+                <div class="2news">
+			
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"><a href="http://www.moheet.com/author/%d8%b9%d9%88%d8%a7%d8%b7%d9%81-%d8%b9%d8%a8%d8%af%d8%a7%d9%84%d8%ad%d9%85%d9%8a%d8%af/"> <img  src="http://50.57.36.232/images/11/med/111071.jpg" width="67" height="89"></a> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/18/%d8%a3%d8%b1%d9%8a%d8%af-%d8%a7%d9%84%d8%b7%d9%84%d8%a7%d9%82-%d9%81%d9%83%d9%8a%d9%81-%d8%a3%d8%b6%d9%85%d9%86-%d8%b2%d9%88%d8%ac%d8%a7%d9%8b-%d8%a2%d8%ae%d8%b1-%d8%9f/"  class="texttile2 lates">أريد الطلاق .. فكيف أضمن زوجاً آخر ؟ </a><!--texttile2siz25-->
+                      <h1>السلام عليكم ورحمه الله وبركاته أنا متزوجة منذ 4سنوات في بداية مرحله الخطوبة كنت سعيدة وهذه السعادة لم تتجاوز الشهرين لان ظروف عائلتي وقدري لم يسمح لي بالسعادة اكتر من ذلك كان أبي  </h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d8%b9%d9%88%d8%a7%d8%b7%d9%81-%d8%b9%d8%a8%d8%af%d8%a7%d9%84%d8%ad%d9%85%d9%8a%d8%af/" class="texttile2 tx35 rclr">عواطف عبدالحميد</a></div>
+                    </div>
+                    <!--bxnewstxt--> 
+                  </div>
+        
+                  <div class="morebox">
+              <div class="morebx"> <a href="http://lahona.moheet.com/hearts.aspx?pg=64&gp=108&cpg=5" target="_blank" class="moretxt">المزيد +</a> </div>
+              <!--morebx--> 
+            </div>
+                  
+                  
+                </div>
+                <!--2news-->
+                
+                <div class="txtnesss">
+                  <div class="morenes mor30"><a href="#" class="more mrg30"> </a></div>
+                  <!--morenes--> 
+                </div>
+                <!--txtnesss--> 
+                
+              </div>
+              <!--cntboxr--> 
+            </div>
+            <div class="qloo vote">
+              <div class="hdboxing">
+                <div class="hdtab">
+                  <div class="tabing bg3 bg4">
+                    <div class="txttab">آراء وأقلام</div>
+                    <div class="rwo rwo60"></div>
+                  </div>
+                </div>
+                <!--hdtab--> 
+                
+              </div>
+              <!--hdboxing-->
+              
+              <div class="cntboxr">
+                <div class="2news">
+                  <!--<div class="kotab">
+                    <div class="kotabtx">كتاب محيط</div>
+                  </div>-->
+					                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://50.57.36.232/images/11/med/113960.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%84%d9%87%d9%88-%d8%a7%d9%84%d8%ae%d9%81%d9%8a/"  class="texttile2 lates">اللهو الخفي</a><!--texttile2siz25-->
+                      <h1>في كل مرة يقال لنا إن هناك طرفا ثالثا أطلق الرصاص علي المتظاهرين وأن قوات الجيش والشرطة لم تستخدم الرصاص‏.</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%81%d8%a7%d8%b1%d9%88%d9%82-%d8%ac%d9%88%d9%8a%d8%af%d8%a9-2/" class="texttile2 tx35 rclr">فاروق جويدة </a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://image.moheet.com/images/11/med/113433.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%81%d8%b6%d9%8a%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%ac%d8%b1%d9%8a%d9%85%d8%a9-%d8%a8%d8%a7%d9%84%d8%b5%d9%88%d8%b1/"  class="texttile2 lates">الفضيحة والجريمة بالصور</a><!--texttile2siz25-->
+                      <h1>درجة الغل والقسوة التي تبدت في سلوك الجنود الذين ارتدوا الثياب العسكرية.</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%81%d9%87%d9%85%d9%89-%d9%87%d9%88%d9%8a%d8%af%d9%8a/" class="texttile2 tx35 rclr">فهمى هويدي</a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://50.57.36.232/images/11/med/114000.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%86%d8%aa%d9%81%d8%a7%d8%b6%d8%a9-%d8%a7%d9%84%d8%a8%d9%84%d8%b7%d8%ac%d9%8a%d8%a9-%d9%88%d8%a7%d9%86%d8%ad%d8%b1%d8%a7%d9%81-%d8%a7%d9%84%d8%ab%d9%88%d8%b1%d8%a9/"  class="texttile2 lates">انتفاضة البلطجية  .. وانحراف الثورة</a><!--texttile2siz25-->
+                      <h1>الكارثة الأخيرة المدبرة بفعل فاعلين محترفين بشارع قصر العيني هي إمتداد لكارثة ش محمد محمود</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%83%d9%85%d8%a7%d9%84-%d8%a7%d9%84%d9%82%d8%a7%d8%b6%d9%89/" class="texttile2 tx35 rclr">كمال القاضى </a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://50.57.36.232/images/11/med/114797.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/19/%d8%a7%d9%84%d9%8a%d8%b3-%d9%85%d9%86%d9%83%d9%85-%d8%b1%d8%ac%d9%84-%d8%b1%d8%b4%d9%8a%d8%af%d8%9f/"  class="texttile2 lates">اليس منكم رجل رشيد؟</a><!--texttile2siz25-->
+                      <h1>تساؤلات كثيرة ترد على أذهان المصريين لماذا كلما اقتربنا من الاستقرار </h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d8%ac%d9%85%d8%a7%d9%84-%d8%ad%d8%b4%d9%85%d8%aa/" class="texttile2 tx35 rclr">جمال حشمت </a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://image.moheet.com/images/11/med/118066.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/18/%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ac%d8%b1%d9%8a%d9%85-%d8%b9%d9%86%d8%af-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d9%8a%d9%86-2/"  class="texttile2 lates">التحريم والتجريم عند  الإسلاميين ( 2 )</a><!--texttile2siz25-->
+                      <h1>يخلط  بعض الإسلاميين بين المشروع  الفقهي  والمشروع  الحضاري</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%8a%d8%a7%d8%b3%d8%b1-%d8%a7%d9%86%d9%88%d8%b1/" class="texttile2 tx35 rclr">ياسر انور</a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://image.moheet.com/images/11/med/116409.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/17/%d9%84%d8%ba%d8%b2%d8%a7%d9%84%d8%a7%d9%86%d8%b0%d8%a7%d8%b1-%d8%a7%d9%84%d8%b1%d9%88%d8%b3%d9%8a-%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a7-%d8%9f/"  class="texttile2 lates">لغزالانذار الروسي لسوريا ؟</a><!--texttile2siz25-->
+                      <h1>نعم... لكل شيء علاج ودواء... ما عدا الغباء... فهو داء ماله من سبيل شفاء... فماذا لو تفاعل بعمى الجهالة</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d8%a7%d9%84%d9%84%d9%88%d8%a7%d8%a1-%d9%85%d8%ad%d9%85%d9%88%d8%af-%d8%b2%d8%a7%d9%87%d8%b1/" class="texttile2 tx35 rclr">اللواء محمود زاهر</a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://50.57.36.232/images/11/med/112523.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/17/%d9%82%d8%b1%d8%a7%d8%a1%d8%a9-%d8%a3%d9%88%d9%84%d9%89-%d9%84%d9%82%d8%a7%d9%86%d9%88%d9%86-%d8%a7%d9%84%d8%aa%d9%85%d9%8a%d9%8a%d8%b2/"  class="texttile2 lates">قراءة أولى لقانون التمييز </a><!--texttile2siz25-->
+                      <h1>في قراءة أولى لتعديل بعض أحكام قانون العقوبات والمعروف بقانون التمييز يمكننا أن نستشف عدة محددات منها الزج بنقاط لا علاقة لها بقضايا التمييز وخاصة بالاتفاقية الدولية للقضاء</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%85%d8%ad%d9%85%d8%af-%d9%8a%d9%88%d9%86%d8%b3-%d8%a7%d9%84%d8%ad%d9%85%d9%84%d8%a7%d9%88%d9%89/" class="texttile2 tx35 rclr">محمد يونس الحملاوى </a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://image.moheet.com/images/no_user_image.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/17/%d8%a8%d8%b1%d8%ba%d9%85-%d8%a3%d9%86-%d8%a7%d9%84%d8%ad%d8%a7%d9%84%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%a8%d8%af%d9%88-%d8%a7%d9%84%d8%a2%d9%86-%d8%b9%d8%b5%d9%8a%d8%a9-%d8%a7/"  class="texttile2 lates">برغم أن الحالة السورية تبدو الآن عصية الحل .. غير أن سقوط نظام "الأسدين" بات وشيكا (1)</a><!--texttile2siz25-->
+                      <h1>الوضع الكارثي في سوريا ما زال على حاله، وليس هناك </h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%85%d9%88%d8%b3%d9%8a-%d8%b1%d8%a7%d8%ba%d8%a8-2/" class="texttile2 tx35 rclr">موسي راغب</a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://image.moheet.com/images/11/med/113433.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/16/%d8%ac%d9%88%d9%84%d8%a7%d8%aa-%d8%a7%d9%84%d9%88%d8%b2%d8%b1%d8%a7%d8%a1-%d8%a7%d9%84%d8%aa%d9%84%d9%8a%d9%81%d8%b2%d9%8a%d9%88%d9%86%d9%8a%d9%87/"  class="texttile2 lates">جولات الوزراء التليفزيونيه</a><!--texttile2siz25-->
+                      <h1>لم يكن وزير الداخلية الجديد مضطرا لأن ينزل بنفسه إلى واحد من أكبر ميادين القاهرة لكى يقنعنا بأن الشرطة استعادت دورها</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%81%d9%87%d9%85%d9%89-%d9%87%d9%88%d9%8a%d8%af%d9%8a/" class="texttile2 tx35 rclr">فهمى هويدي</a></div>
+                    </div>
+                  </div>
+                  <div class="onnews onnewsrit">
+                    <div class="pict4"> <img  src="http://50.57.36.232/images/11/med/113960.jpg"> </div>
+                    <div class="bxnewstxt"> <a href="http://www.moheet.com/2011/12/16/%d8%b9%d8%af%d8%a7%d9%84%d8%a9-%d8%a7%d9%84%d9%88%d8%b7%d9%86-%d9%88%d8%ad%d8%b1%d9%8a%d8%a9-%d8%a7%d9%84%d8%a5%d9%86%d8%b3%d8%a7%d9%86/"  class="texttile2 lates">عدالة الوطن وحرية الإنسان</a><!--texttile2siz25-->
+                      <h1>هناك فارق كبير بين أن تملك فكرا أو أن تملك قرارا‏..‏ هناك مساحات واسعة للأفكار‏,يسبح فيها البشر تبدأ بآخر نقطة في سماء الخيال وتنتهي بأول نقطة في أرض الحقيقة..</h1>
+                      <div class="namerighter"><a href="http://www.moheet.com/author/%d9%81%d8%a7%d8%b1%d9%88%d9%82-%d8%ac%d9%88%d9%8a%d8%af%d8%a9-2/" class="texttile2 tx35 rclr">فاروق جويدة </a></div>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="txtnesss">
+                  <div class="morenes mor30"><a href="#" class="more mrg30"> </a></div>
+                  <!--morenes--> 
+                </div>
+                <!--txtnesss--> 
+                
+              </div>
+              <!--cntboxr--> 
+            </div>
+          </aside>
+        </section>
+  </section>
+
+  <footer  class="footer" >
+    <div class="bxlogos"> <a href="#"> <img src="http://www.moheet.com/wp-content/themes/moheet_theme/new-img/logo.png"/> </a>
+      <div class="fotcntleft"></div>
+      <!--fotcntleft--> 
+    </div>
+    <!--bxlogos-->
+    <div class="fotrcntright">
+<!--
+      <div class="bxfooter">
+        <div class="colmn1"> <a href="#">من نحن </a> <a href="#">اعلن معنا</a> <a href="#">اتصل بنا </a> </div>
+        <div class="colmn1"> <a href="#">حقوق النشر </a> <a href="#">نشرات اعلامية </a> <a href="#">شروط الخدمة </a> </div>
+        
+      </div>
+      -->
+      <!--bxfooter--> 
+      
+    </div>
+    <!--fotrcntright-->
+      <div class="sites">
+        <div class="bxsite"> <a class="txtbxsite" href="http://www.korabia.com/" target="_blank">رياضة </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr1"> <a class="txtbxsite" href="http://alfanonline.moheet.com/" target="_blank">فن </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr2"> <a class="txtbxsite" href="http://shoghlanty.moheet.com/" target="_blank">وظائف </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr3"> <a class="txtbxsite" href="http://lahona.moheet.com/" target="_blank">مرأه </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr4"> <a class="txtbxsite" href="http://www.bayanonline.com/" target="_blank">تعليم </a> </div>
+        <!--bxsite-->
+        <div class="bxsite clr5"> <a class="txtbxsite" href="http://shamlola.com/" target="_blank">أكلات</a> </div>
+      </div>
+    <div class="info">
+      <div class="footerbott">
+        <div class="txtbxsite" >جميع الحقوق محفوظة إرابيا إنفورم ©</div>
+      </div>
+    </div>
+    <!--info--> 
+    
+  </footer>
+</section>
+<!--mster-->
+
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Intromercial - 1 x 1 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="95"; 
+
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Intromercial - 1 x 1 -->
+</body>
+</html>
+<script type='text/javascript' src='http://www.moheet.com/wp-content/plugins/comment-rating/ck-karma.js?ver=3.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {
+	ajax_url: "http://www.moheet.com/wp-content/plugins/wp-polls/wp-polls.php",
+	text_wait: "Your last request is still being processed. Please wait a while ...",
+	text_valid: "Please choose a valid poll answer.",
+	text_multiple: "Maximum number of choices allowed: ",
+	show_loading: "1",
+	show_fading: "1"
+};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.moheet.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.50'></script>
+<SCRIPT language= "Javascript"> setTimeout('location.href="http://www.moheet.com/"', 120000); </SCRIPT>

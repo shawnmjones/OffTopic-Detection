@@ -1,0 +1,28 @@
+Tweet
+Al Jazeera staff and correspondents update you on important developments in Cairo and elsewhere, as protesters take to the streets to voice their dissatisfaction with the slow pace of a military-led transition following an uprising that began in January.
+45 min 8 sec ago - Egypt
+One activist tells Al Jazeera that the body of the man killed in Cairo this morning has been taken to a morgue and activists  are awaiting the arrival of lawyers.
+51 min 8 sec ago - Egypt
+More than 100,000 Egyptians living abroad have voted in parliamentary elections by casting their ballots at embassies and consulates, the government says. This year's election is the first in which expats are allowed to vote.
+According to Ahram Online, only 300,000 Egyptians living abroad - out of an estimated eight million - had registered to vote. Egypt has a total population of 80 million.
+According to the report, Egyptians abroad could download a ballot paper from a government website and mail it or deliver it in person to embassies in their country of residence. [AFP]
+1 hour 1 min ago - Egypt
+Egyptian medical officials say one demonstrator has been killed outside the Cabinet building, where protesters have camped overnight to prevent the entrance of the country's newly-appointed prime minister.
+1 hour 19 min ago - Egypt
+This video is said to show the aftermath of clashes near Tahrir Square on Saturday morning. An injured man is carried away and protesters are pelting an army vehicle with rocks.
+2 hours 2 min ago - Egypt
+Hundreds of demonstrators camped through the night and one group marched to the parliament building early in the morning to protest against the army's appointment of Kamal el-Ganzouri to form a cabinet. 
+3 hours 45 min ago - Egypt
+Two of three American students arrested during a protest in Cairo have left Egypt, according to an airport official and an attorney for one of the trio.
+The three men were arrested on the roof of a university building near Tahrir Square last Sunday. Officials accused them of throwing firebombs at security forces fighting with protesters.
+6 hours 8 sec ago - Egypt
+UN leader Ban Ki-moon has renewed calls for the military council to ensure a "peaceful transition" after talks on Friday with the head of the military council, a spokesman said.
+In telephone talks with Field Marshal Hussein Tantawi, the UN leader renewed a plea "for an inclusive, orderly and peaceful transition that meets the legitimate aspirations of the Egyptian people through transparent and credible elections leading to the establishment of civilian rule," his spokesman Martin Nesirky said.
+"The secretary-general remains deeply concerned by the violence in Egypt over the last few days. He deplores the loss of life and the high number of injured.
+"He reiterates his call for the transitional authorities to guarantee the protection of human rights and civil liberties for all Egyptians."
+14 hours 35 min ago - Egypt
+Tens of thousands of demonstrators have packed Cairo's Tahrir Square after days of deadly clashes, demanding Egypt's military rulers step down and rejecting their choice of new prime minister.
+And in a city like Cairo, with its 20 million people, there are cities within cities. And often the voice of so many are drowned out by the incidents happening at the epicentre of events in Tahrir Square.
+homs gaza refugees Sanaa Saudi Arabia London Riots Libya Barack Obama citizen media European Union Israel United Nations tunisia September 11 police London NATO The911Decade SCAF Bashar al Assad violence Libya rebels UN iran Taiz Occupy Protests Tahrir clashes Germany Misurata EU Phone Hacking Norway Attacks Palestine Muammar Gaddafi Hamas al nahda Oil reuters US image Bani Walid Video David Cameron Hosni Mubarak Italy Occupy Wall Street Gaddafi Al Jazeera Mahmoud Jibril Turkey Libya's National Transitional Council (NTC) zinjibar NTC protest Rupert Murdoch idlib Mubarak Trial Looting libyan rebels Tripoli egypt Deraa USA Tunisia election South Africa Turkish elections Latakia Tahrir Square Sirte protests Libya in Images United States Benghazi tweet freedom flotilla Hama tunis oslo bombing Ali Abdullah Saleh National Transitional Council UK Russia Arab League lebanon Deir ez-Zor Gilad Shalit Al Qaeda Bashar al Assad Syria protests syria Qatar Cairo Oslo sanctions rebels France damascus prisoner swap China
+Cairo protesters hold their ground
+Fatal error:  Uncaught exception 'Exception' with message 'Request failed with message: Insufficient quota to proceed.' in /var/www/labs/sites/default/blogsga.php:98 Stack trace: #0 {main}   thrown in /var/www/labs/sites/default/blogsga.php on line 98

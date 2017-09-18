@@ -1,0 +1,46 @@
+Notice:  Undefined index:  HTTP_ACCEPT_LANGUAGE in /home/afaprede/afapredesa.org/mambots/system/jfdatabase.systembot.php on line 115
+AFAPREDESA - Noticias
+Inicio
+�Qu� es AFAPREDESA?
+Historia y sucesos
+Contacto
+Donativos
+Enlaces
+ 
+Nuevo libro
+Men�
+Noticias
+Desaparecidos
+Prisioneros Pol�ticos
+Galer�a de fotos
+Galer�a de Videos
+Publicaciones
+Hazte socio
+Adopci�n desaparecidos
+Bolet�n: CHAILA
+arabe.afapredesa.org
+Antigua web
+Administrador/a
+�ltimas noticias
+Represi�n policial en recibimiento de tres presos pol�ticos saharauis en el Aai�n
+Salen de la c�rcel tres de los seis saharauis pendientes de juicio militar
+Preso pol�tico saharaui trasladado en coma al hospital de Taroudant
+Contra el suministro de armamento a Marruecos (Luis Mangran�)
+Delegaci�n saharaui ante comisi�n derechos humanos congreso colombiano
+Premio Amnistia Internacional al documental "El Problema"
+Comunicado ASVDH
+Fin de la huelga de hambre de los seis presos pol�ticos saharauis en Sal�
+Delegaci�n de AFAPREDESA en Colombia
+AFAPREDESA denuncia la grave situaci�n de los presos pol�ticos saharauis
+Noticias
+Noticias de AFAPREDESA
+Selección de noticias  de AFAPREDESA
+Chaila  ( 1 art�culos )
+Informes y Archivo  ( 25 art�culos )
+Actividades  ( 49 art�culos )
+Peticiones urgentes  ( 61 art�culos )
+Noticias en general  ( 189 art�culos )
+Desaparecidos saharauis  ( 2 art�culos )
+[Volver]
+© 2010 AFAPREDESA
+Joomla! is Free Software released under the GNU/GPL License.

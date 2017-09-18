@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title> 3arabawy</title>
+
+<link rel="stylesheet" href="http://www.arabawy.org/wp-content/themes/arabawy/scripts/reset.css" />
+<link rel="stylesheet" href="http://www.arabawy.org/wp-content/themes/arabawy/scripts/text.css" />
+<link rel="stylesheet" href="http://www.arabawy.org/wp-content/themes/arabawy/scripts/960.css" />
+<link rel="pingback" href="http://www.arabawy.org/xmlrpc.php" />
+
+<script type="text/javascript" src="http://www.arabawy.org/wp-content/themes/arabawy/scripts/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="http://www.arabawy.org/wp-content/themes/arabawy/scripts/jquery.qtip-1.0.0.min.js"></script> 
+<script type="text/javascript" src="http://www.arabawy.org/wp-content/themes/arabawy/scripts/ui.core.js"></script>
+<script type="text/javascript" src="http://www.arabawy.org/wp-content/themes/arabawy/scripts/ui.tabs.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#tabs").tabs();
+  });
+</script>
+<script type="text/javascript">	
+	$(document).ready(function(){
+	// By suppling no content attribute, the library uses each elements title attribute by default
+   $('#content a[href][title]').qtip({
+      content: {
+         text: false // Use each elements title attribute
+      },
+	  position: {
+		  corner: {
+			 target: 'bottomMiddle',
+			 tooltip: 'topMiddle'
+      		}
+	  },
+	  style: { 
+      	tip: 'topMiddle', // Notice the corner value is identical to the previously mentioned positioning corners
+		name: 'dark',
+		border: {
+         width: 2,
+         radius: 5
+      	}
+	  }
+   	});
+   	});
+</script>
+<script type="text/javascript">
+$(function(){
+    $('a.new-window').click(function(){
+        window.open(this.href);
+        return false;
+    });
+});
+</script>
+<script type="text/javascript">
+var active_color = '#aaa'; // Colour of user provided text
+var inactive_color = '#999'; // Colour of default text
+
+$(document).ready(function() {
+  $("input.default-value").css("color", inactive_color);
+  var default_values = new Array();
+  $("input.default-value").focus(function() {
+    if (!default_values[this.id]) {
+      default_values[this.id] = this.value;
+    }
+    if (this.value == default_values[this.id]) {
+      this.value = '';
+      this.style.color = active_color;
+    }
+    $(this).blur(function() {
+      if (this.value == '') {
+        this.style.color = inactive_color;
+        this.value = default_values[this.id];
+      }
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link rel="alternate" type="application/rss+xml" title="3arabawy &raquo; Feed" href="http://www.arabawy.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="3arabawy &raquo; Comments Feed" href="http://www.arabawy.org/comments/feed/" />
+<script type='text/javascript' src='http://www.arabawy.org/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://www.arabawy.org/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.1.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.arabawy.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.arabawy.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='3arabawy' href='http://www.arabawy.org/' />
+<meta name="generator" content="WordPress 3.0.4" />
+<script language="JavaScript" type="text/javascript" src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/description_selection.js"></script><link rel="stylesheet" type="text/css" media="screen" href="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/sociable.css" /><!-- Google Analytics Tracking by Google Analyticator 6.1.1: http://ronaldheft.com/code/analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-3706448-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<link rel="stylesheet" href="http://www.arabawy.org/wp-content/themes/arabawy/style.css" type="text/css" media="screen" />
+
+</head>
+<body>
+<div class="container_12 main_container">
+	<div class="grid_12 header">
+    	<div class="follow_icons title" id="content">
+        	<ul>
+        		<li><a href="http://twitter.com/3arabawy" title="twitter" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/twitter.png" alt="Twitter" /></a></li>
+        		<li><a href="http://www.facebook.com/3arabawy" title="Facebook" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/facebook.png" alt="Facebook" /></a></li>
+        		<li><a href="http://www.flickr.com/photos/elhamalawy/" title="Flickr" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/flickr.png" alt="Flickr" /></a></li>
+        		<li><a href="http://www.youtube.com/user/3arabawy" title="YouTube" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/youtube.png" alt="YouTube" /></a></li>
+        		<li><a href="http://www.vimeo.com/elhamalawy" title="Vimeo" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/vimeo.png" alt="Vimeo" /></a></li>
+        		<li><a href="http://www.scribd.com/el-Hamalawy" title="Scribd" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/scribd.png" alt="Scribd" /></a></li>
+        		<li><a href="http://bambuser.com/channel/3arabawy" title="Bambuser" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/bambuser.png" alt="Bambuser" /></a></li>
+            </ul>
+        </div>
+        <div class="search_form">
+    <form method="get" class="search-form" id="search-form" action="http://www.arabawy.org/" />
+    <input class="search-text default-value" type="text" name="s" id="search-text" value="search..." />&nbsp;<button type="submit" name="submit" id="search-submit">&nbsp;</button>
+    </form>
+</div>        <div class="rss_icon">
+        	<a href="http://www.arabawy.org/feed/" title="RSS feed"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/social_icons/follow/rss.png" alt="RSS Feed" /></a>
+        </div>
+	</div>
+	<!-- end .grid_12 -->
+	<div class="clear"></div>
+    <div class="navigation">
+    	<ul>
+             <li class="current_page_item"><a href=" 
+http://www.arabawy.org">Home</a></li>
+			<li class="page_item page-item-46"><a href="http://www.arabawy.org/blog/" title="Blog">Blog</a></li>
+<li class="page_item page-item-60"><a href="http://www.arabawy.org/highlights/" title="Highlights">Highlights</a></li>
+<li class="page_item page-item-61"><a href="http://www.arabawy.org/photos/" title="Photos">Photos</a></li>
+<li class="page_item page-item-64"><a href="http://www.arabawy.org/music/" title="Music">Music</a></li>
+<li class="page_item page-item-67"><a href="http://www.arabawy.org/bookmarx/" title="BookMarx">BookMarx</a></li>
+						<div class="clear"></div>
+		</ul>
+		<div class="clear"></div>
+    </div>
+	<div class="clear"></div>
+	<div class="grid_5">
+    	<div id="tabs">
+            <ul>
+                <li><a href="#fragment-1"><span>latest</span></a></li>
+                <li><a href="#fragment-2"><span>most read</span></a></li>
+                <li><a href="#fragment-3"><span>highlights</span></a></li>
+            </ul>
+            <div id="fragment-1" class="post_listing">
+            	<ul>
+					            		               		    
+                		<li><a href="http://www.arabawy.org/2011/02/04/3arabawy-bookmarx-02042011-a-m/">3arabawy BookMarx 02/04/2011 (a.m.)</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/revolt-11/">#Jan25 Revolution ثورة</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/usa_cairo/">#Jan25 Solidarity تضامن</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/tahrir-9/">#Jan25 Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/clinic-2/">#Jan25 Treating the injured علاج الجرحى</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/jan25-9/">#Jan25 Preparing for battle التسلح بالحجارة لمواجهة البلطجية</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/jan25-diplomatic-car-runs-over-pro-democracy-protesters-28-jan/">#Jan25 Diplomatic car runs over pro-democracy protesters (28 Jan)</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/tahrir-8/">#Jan25 Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/barricades-4/">#Jan25 Barricades متاريس لحماية الاعتصام</a><br />
+						<small>February 4th, 2011</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2011/02/04/revolt-10/">#Jan25 Barricades متاريس ولجان أمن شعبي لحماية الاعتصام</a><br />
+						<small>February 4th, 2011</small></li>
+					        			        			                </ul>
+            </div>
+            <div id="fragment-2" class="post_listing">
+            	<ul>
+            		<ul><li><a href="http://www.arabawy.org/2011/01/27/jan25-mosques-and-churches-in-cairo-and-alexandria-were-protests-are-planned-tomorrow/" rel="bookmark" title="January 27, 2011">#Jan25 Mosques and churches in Cairo and Alexandria where protests are planned tomorrow</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/sidibouzid-%d8%a5%d8%b3%d8%aa%d9%85%d8%b1%d8%a7%d8%b1-%d8%a7%d9%84%d9%85%d8%b3%d9%8a%d8%b1%d8%a7%d8%aa-%d9%81%d9%8a-%d8%b9%d8%af%d8%af-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d9%81%d8%b8%d8%a7/" rel="bookmark" title="January 27, 2011">#SidiBouzid إستمرار المسيرات في عدد من المحافظات التونسية</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/suez-6/" rel="bookmark" title="January 27, 2011">#Jan25 Suez protesters set NDP office on fire حريق مبنى الحزب الوطنى بالسويس</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/jan25-union-calls-for-dissolving-the-parliament-cabinet/" rel="bookmark" title="January 27, 2011">#Jan25 Union calls for dissolving the parliament, cabinet</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/protests_omraniya/" rel="bookmark" title="January 27, 2011">جماهير العمرانية: إنزل يا مصري .. إرحل يا حسني  #Jan25</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/damietta-2/" rel="bookmark" title="January 27, 2011">أمين شباب الحزب الوطنى في دمياط يحرق الكارنيه #Jan25</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/protests-3/" rel="bookmark" title="January 27, 2011">تواصل المظاهرات والاشتباكات بالمدن المصرية  #Jan25</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/jan25-protesters-call-on-citizens-to-join-the-marches-in-ismailia/" rel="bookmark" title="January 27, 2011">#Jan25 Protesters chant againt Mubarak, call on citizens to join the marches in Ismailia</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/ismailia/" rel="bookmark" title="January 27, 2011">#Jan25 Protests in Ismailia مظاهرات الإسماعيلية</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/28/3arabawy-bookmarx-01282011-a-m/" rel="bookmark" title="January 28, 2011">3arabawy BookMarx 01/28/2011 (a.m.)</a><br />
+<small>January 28, 2011</small></li>
+</ul><!-- popular Posts took 76.128 ms -->                </ul>
+            </div>
+            <div id="fragment-3" class="post_listing">
+            	<ul>
+					            		               		    
+                		<li><a href="http://www.arabawy.org/2010/12/01/when-reporting-becomes-activism/">When reporting becomes activism</a><br />
+						<small>December 1st, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/10/31/something-in-the-air/">Something in the air</a><br />
+						<small>October 31st, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/08/24/flickr_manual/">The Activist Guide to Flickr (Arabic) دليل المدون الناشط للتصوير وخدمة فلكر</a><br />
+						<small>August 24th, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/06/04/politicization_workers/">Egyptian workers honor Freedom Flotilla martyrs</a><br />
+						<small>June 4th, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/06/02/media-ethics-101-almasryalyoum_e/">Media Ethics 101 @AlMasryAlYoum_E</a><br />
+						<small>June 2nd, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/06/01/ethics_lackofprofessionalism/">Editor&#8217;s resignation from @AlMasryAlYoum_E</a><br />
+						<small>June 1st, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/05/31/privatelyowned_not_independentmedia/">My resignation from @AlMasryAlYoum_E</a><br />
+						<small>May 31st, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/05/25/amonsito_police/">Police cracks down on textile workers in downtown Cairo فيديو: الشرطة تفض اعتصام عمال أمونسيتو</a><br />
+						<small>May 25th, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/05/21/elbaradei/">ElBaradei</a><br />
+						<small>May 21st, 2010</small></li>
+					    
+                		<li><a href="http://www.arabawy.org/2010/04/05/dont-be-afraid-egyworkers/">&#8216;Don&#8217;t be afraid&#8217;</a><br />
+						<small>April 5th, 2010</small></li>
+					        			        			                </ul>
+            </div>
+        </div>
+	</div>
+	<!-- end .grid_5 -->
+	<div class="grid_7">
+    	<div class="featured_multimedia">
+        	<!-- <h2>Featured Multimedia</h2> -->
+					            		               		    
+            <div class="multimedia_container">
+            	
+        	<object width="480" height="360" type="application/x-shockwave-flash" data="http://vimeo.com/moogaloop.swf?clip_id=7522987"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7522987" /></object>        	
+        	</div>
+        	        	<p>In a dictatorship, independent journalism by default becomes a form of activism, and the spread of information is essentially an act of agitation.</p>
+
+<div class="sociable">
+<span class="sociable_tagline">
+
+	<span>These icons link to social bookmarking sites where readers can share and discover new web pages.</span>
+</span>
+<ul>
+	<li><a href="http://twitter.com/home?status=http%3A%2F%2Fwww.arabawy.org%2F2009%2F12%2F20%2Ffeatured-multimedia%2F" title="TwitThis" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/twitter.png" title="TwitThis" alt="TwitThis" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.arabawy.org%2F2009%2F12%2F20%2Ffeatured-multimedia%2F" title="Facebook" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/facebook.png" title="Facebook" alt="Facebook" class="sociable-hovers" /></a></li>
+	<li><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.arabawy.org%2F2009%2F12%2F20%2Ffeatured-multimedia%2F&amp;title=Featured%20Mutimedia" title="del.icio.us" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/delicious.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers" /></a></li>
+	<li><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.arabawy.org%2F2009%2F12%2F20%2Ffeatured-multimedia%2F&amp;title=Featured%20Mutimedia" title="Digg" onfocus="sociable_description_link(this, 'bodytext')" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/digg.png" title="Digg" alt="Digg" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.stumbleupon.com/submit.php?url=http://www.arabawy.org/2009/12/20/featured-multimedia/" title="StumbleUpon" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers" /></a></li>
+	<li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.arabawy.org%2F2009%2F12%2F20%2Ffeatured-multimedia%2F&amp;title=Featured%20Mutimedia" title="Reddit" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/reddit.png" title="Reddit" alt="Reddit" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+					        			        			
+        			<!--<img src="'get_post_meta(149, flickr_photo, true);'" alt="photo from flickr" />-->
+        </div>
+	</div>
+	<!-- end .grid_7 -->
+	<div class="clear"></div>
+	<div class="grid_8">
+			            
+	    	<div class="entry" id="post-24089">
+            <div class="date_comments">
+                <div class="date_block">
+                    <span class="month">Feb</span><br />
+                    4                </div>
+                <div class="comment_bubble">
+                    <a href="http://www.arabawy.org/2011/02/04/3arabawy-bookmarx-02042011-a-m/#comments">1</a>
+                </div>
+            </div>
+            <div class="entry_text">
+                <h2><a href="http://www.arabawy.org/2011/02/04/3arabawy-bookmarx-02042011-a-m/">3arabawy BookMarx 02/04/2011 (a.m.)</a></h2>
+                <div class="tags_categories">
+                    <small><strong>Categories:</strong> <a href="http://www.arabawy.org/category/media/" title="View all posts in Media" rel="category tag">Media</a></small>
+				</div>
+                <ul class="diigo-linkroll">
+<li>
+<p class="diigo-link">                <a href="http://www.nytimes.com/2011/02/04/world/middleeast/04diplomacy.html?_r=1&#038;pagewanted=print">White House, Egypt Discuss Plan for Mubarak’s Exit &#8211; NYTimes.com</a>      </p>
+<p class="diigo-tags">          <span>tags:</span>                      <a href="http://www.diigo.com/user/elhamalawy/Egypt">Egypt</a>            <a href="http://www.diigo.com/user/elhamalawy/Dictatorship">Dictatorship</a>            <a href="http://www.diigo.com/user/elhamalawy/USA">USA</a>            <a href="http://www.diigo.com/user/elhamalawy/Mubarak">Mubarak</a>            <a href="http://www.diigo.com/user/elhamalawy/Revolution">Revolution</a></p>
+</li>
+<li>
+<p class="diigo-link">                <a href="http://abcnews.go.com/Blotter/egypts-torture-victims-describe-beatings-electroshock-rape-threats/story?id=12821831">Egypt&#8217;s Torture Victims Describe Beatings, Electroshock, Rape Threats &#8211; ABC News</a>      </p>
+<p class="diigo-tags">          <span>tags:</span>                      <a href="http://www.diigo.com/user/elhamalawy/Egypt">Egypt</a>            <a href="http://www.diigo.com/user/elhamalawy/Dictatorship">Dictatorship</a>            <a href="http://www.diigo.com/user/elhamalawy/HumanRights">HumanRights</a>            <a href="http://www.diigo.com/user/elhamalawy/Police">Police</a>            <a href="http://www.diigo.com/user/elhamalawy/Torture">Torture</a>            <a href="http://www.diigo.com/user/elhamalawy/USA">USA</a></p>
+</li>
+<li>
+<p class="diigo-link">                <a href="http://amnesty.org/en/news-and-updates/amnesty-international-representative-detained-cairo-2011-02-03">Amnesty International representatives detained in Cairo | Amnesty International</a>      </p>
+<p class="diigo-tags">          <span>tags:</span>                      <a href="http://www.diigo.com/user/elhamalawy/Egypt">Egypt</a>            <a href="http://www.diigo.com/user/elhamalawy/Dictatorship">Dictatorship</a>            <a href="http://www.diigo.com/user/elhamalawy/Protests">Protests</a>            <a href="http://www.diigo.com/user/elhamalawy/Revolution">Revolution</a>            <a href="http://www.diigo.com/user/elhamalawy/Police">Police</a>            <a href="http://www.diigo.com/user/elhamalawy/Military">Military</a>            <a href="http://www.diigo.com/user/elhamalawy/HumanRights">HumanRights</a></p>
+</li>
+</ul>
+<p class="diigo-ps">Posted from <a href='http://www.diigo.com'>Diigo</a>. The rest of my favorite links are <a href='http://www.diigo.com/user/elhamalawy'>here</a>.</p>
+
+<div class="sociable">
+<span class="sociable_tagline">
+
+	<span>These icons link to social bookmarking sites where readers can share and discover new web pages.</span>
+</span>
+<ul>
+	<li><a href="http://twitter.com/home?status=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2F3arabawy-bookmarx-02042011-a-m%2F" title="TwitThis" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/twitter.png" title="TwitThis" alt="TwitThis" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2F3arabawy-bookmarx-02042011-a-m%2F" title="Facebook" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/facebook.png" title="Facebook" alt="Facebook" class="sociable-hovers" /></a></li>
+	<li><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2F3arabawy-bookmarx-02042011-a-m%2F&amp;title=3arabawy%20BookMarx%2002%2F04%2F2011%20%28a.m.%29" title="del.icio.us" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/delicious.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers" /></a></li>
+	<li><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2F3arabawy-bookmarx-02042011-a-m%2F&amp;title=3arabawy%20BookMarx%2002%2F04%2F2011%20%28a.m.%29" title="Digg" onfocus="sociable_description_link(this, 'bodytext')" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/digg.png" title="Digg" alt="Digg" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.stumbleupon.com/submit.php?url=http://www.arabawy.org/2011/02/04/3arabawy-bookmarx-02042011-a-m/" title="StumbleUpon" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers" /></a></li>
+	<li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2F3arabawy-bookmarx-02042011-a-m%2F&amp;title=3arabawy%20BookMarx%2002%2F04%2F2011%20%28a.m.%29" title="Reddit" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/reddit.png" title="Reddit" alt="Reddit" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+            </div>
+            <div class="clear"></div>
+		</div>
+		    	<div class="entry" id="post-24087">
+            <div class="date_comments">
+                <div class="date_block">
+                    <span class="month">Feb</span><br />
+                    4                </div>
+                <div class="comment_bubble">
+                    <a href="http://www.arabawy.org/2011/02/04/revolt-11/#comments">2</a>
+                </div>
+            </div>
+            <div class="entry_text">
+                <h2><a href="http://www.arabawy.org/2011/02/04/revolt-11/">#Jan25 Revolution ثورة</a></h2>
+                <div class="tags_categories">
+                    <small><strong>Categories:</strong> <a href="http://www.arabawy.org/category/photos-%d8%b5%d9%88%d8%b1/" title="View all posts in Photos صور" rel="category tag">Photos صور</a></small>
+				</div>
+                <p><a href="http://www.flickr.com/photos/elhamalawy/5414850674/" title="Revolution ثورة by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm5.static.flickr.com/4079/5414850674_33f129685b.jpg" width="500" height="333" alt="Revolution ثورة" /></a></p>
+<p>Tahrir Square&#8230;</p>
+
+<div class="sociable">
+<span class="sociable_tagline">
+
+	<span>These icons link to social bookmarking sites where readers can share and discover new web pages.</span>
+</span>
+<ul>
+	<li><a href="http://twitter.com/home?status=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Frevolt-11%2F" title="TwitThis" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/twitter.png" title="TwitThis" alt="TwitThis" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Frevolt-11%2F" title="Facebook" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/facebook.png" title="Facebook" alt="Facebook" class="sociable-hovers" /></a></li>
+	<li><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Frevolt-11%2F&amp;title=%23Jan25%20Revolution%20%D8%AB%D9%88%D8%B1%D8%A9" title="del.icio.us" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/delicious.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers" /></a></li>
+	<li><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Frevolt-11%2F&amp;title=%23Jan25%20Revolution%20%D8%AB%D9%88%D8%B1%D8%A9" title="Digg" onfocus="sociable_description_link(this, 'bodytext')" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/digg.png" title="Digg" alt="Digg" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.stumbleupon.com/submit.php?url=http://www.arabawy.org/2011/02/04/revolt-11/" title="StumbleUpon" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers" /></a></li>
+	<li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Frevolt-11%2F&amp;title=%23Jan25%20Revolution%20%D8%AB%D9%88%D8%B1%D8%A9" title="Reddit" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/reddit.png" title="Reddit" alt="Reddit" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+            </div>
+            <div class="clear"></div>
+		</div>
+		    	<div class="entry" id="post-24085">
+            <div class="date_comments">
+                <div class="date_block">
+                    <span class="month">Feb</span><br />
+                    4                </div>
+                <div class="comment_bubble">
+                    <a href="http://www.arabawy.org/2011/02/04/usa_cairo/#comments">1</a>
+                </div>
+            </div>
+            <div class="entry_text">
+                <h2><a href="http://www.arabawy.org/2011/02/04/usa_cairo/">#Jan25 Solidarity تضامن</a></h2>
+                <div class="tags_categories">
+                    <small><strong>Categories:</strong> <a href="http://www.arabawy.org/category/photos-%d8%b5%d9%88%d8%b1/" title="View all posts in Photos صور" rel="category tag">Photos صور</a></small>
+				</div>
+                <p><a href="http://www.flickr.com/photos/elhamalawy/5414165907/" title="US national protesting in solidarity, Tahrir Square by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm6.static.flickr.com/5216/5414165907_c919f0b8ba.jpg" width="500" height="333" alt="US national protesting in solidarity, Tahrir Square" /></a></p>
+<p>US national protesting in solidarity, Tahrir Square</p>
+
+<div class="sociable">
+<span class="sociable_tagline">
+
+	<span>These icons link to social bookmarking sites where readers can share and discover new web pages.</span>
+</span>
+<ul>
+	<li><a href="http://twitter.com/home?status=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fusa_cairo%2F" title="TwitThis" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/twitter.png" title="TwitThis" alt="TwitThis" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fusa_cairo%2F" title="Facebook" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/facebook.png" title="Facebook" alt="Facebook" class="sociable-hovers" /></a></li>
+	<li><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fusa_cairo%2F&amp;title=%23Jan25%20Solidarity%20%D8%AA%D8%B6%D8%A7%D9%85%D9%86" title="del.icio.us" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/delicious.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers" /></a></li>
+	<li><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fusa_cairo%2F&amp;title=%23Jan25%20Solidarity%20%D8%AA%D8%B6%D8%A7%D9%85%D9%86" title="Digg" onfocus="sociable_description_link(this, 'bodytext')" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/digg.png" title="Digg" alt="Digg" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.stumbleupon.com/submit.php?url=http://www.arabawy.org/2011/02/04/usa_cairo/" title="StumbleUpon" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers" /></a></li>
+	<li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fusa_cairo%2F&amp;title=%23Jan25%20Solidarity%20%D8%AA%D8%B6%D8%A7%D9%85%D9%86" title="Reddit" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/reddit.png" title="Reddit" alt="Reddit" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+            </div>
+            <div class="clear"></div>
+		</div>
+		    	<div class="entry" id="post-24082">
+            <div class="date_comments">
+                <div class="date_block">
+                    <span class="month">Feb</span><br />
+                    4                </div>
+                <div class="comment_bubble">
+                    <a href="http://www.arabawy.org/2011/02/04/tahrir-9/#comments">2</a>
+                </div>
+            </div>
+            <div class="entry_text">
+                <h2><a href="http://www.arabawy.org/2011/02/04/tahrir-9/">#Jan25 Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام</a></h2>
+                <div class="tags_categories">
+                    <small><strong>Categories:</strong> <a href="http://www.arabawy.org/category/photos-%d8%b5%d9%88%d8%b1/" title="View all posts in Photos صور" rel="category tag">Photos صور</a></small>
+				</div>
+                <p><a href="http://www.flickr.com/photos/elhamalawy/5414773292/" title="Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm6.static.flickr.com/5172/5414773292_f440f0103e.jpg" width="500" height="333" alt="Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام" /></a></p>
+<p><a href="http://www.flickr.com/photos/elhamalawy/5414154217/" title="Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm6.static.flickr.com/5139/5414154217_10497e4770.jpg" width="500" height="333" alt="Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام" /></a></p>
+<p><a href="http://www.flickr.com/photos/elhamalawy/5414760264/" title="Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm5.static.flickr.com/4094/5414760264_dae5c84495.jpg" width="500" height="333" alt="Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام" /></a></p>
+<p>The entrance to Tahrir Square blocked by burnt down police trucks, to protect the occupation from attacks by Mubarak&#8217;s thugs&#8230;</p>
+
+<div class="sociable">
+<span class="sociable_tagline">
+
+	<span>These icons link to social bookmarking sites where readers can share and discover new web pages.</span>
+</span>
+<ul>
+	<li><a href="http://twitter.com/home?status=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Ftahrir-9%2F" title="TwitThis" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/twitter.png" title="TwitThis" alt="TwitThis" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Ftahrir-9%2F" title="Facebook" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/facebook.png" title="Facebook" alt="Facebook" class="sociable-hovers" /></a></li>
+	<li><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Ftahrir-9%2F&amp;title=%23Jan25%20Barricades%20at%20Tahrir%20Sq%20entrance%20%D9%85%D8%AA%D8%A7%D8%B1%D9%8A%D8%B3%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A5%D8%B9%D8%AA%D8%B5%D8%A7%D9%85" title="del.icio.us" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/delicious.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers" /></a></li>
+	<li><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Ftahrir-9%2F&amp;title=%23Jan25%20Barricades%20at%20Tahrir%20Sq%20entrance%20%D9%85%D8%AA%D8%A7%D8%B1%D9%8A%D8%B3%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A5%D8%B9%D8%AA%D8%B5%D8%A7%D9%85" title="Digg" onfocus="sociable_description_link(this, 'bodytext')" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/digg.png" title="Digg" alt="Digg" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.stumbleupon.com/submit.php?url=http://www.arabawy.org/2011/02/04/tahrir-9/" title="StumbleUpon" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers" /></a></li>
+	<li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Ftahrir-9%2F&amp;title=%23Jan25%20Barricades%20at%20Tahrir%20Sq%20entrance%20%D9%85%D8%AA%D8%A7%D8%B1%D9%8A%D8%B3%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A5%D8%B9%D8%AA%D8%B5%D8%A7%D9%85" title="Reddit" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/reddit.png" title="Reddit" alt="Reddit" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+            </div>
+            <div class="clear"></div>
+		</div>
+		    	<div class="entry" id="post-24079">
+            <div class="date_comments">
+                <div class="date_block">
+                    <span class="month">Feb</span><br />
+                    4                </div>
+                <div class="comment_bubble">
+                    <a href="http://www.arabawy.org/2011/02/04/clinic-2/#comments">0</a>
+                </div>
+            </div>
+            <div class="entry_text">
+                <h2><a href="http://www.arabawy.org/2011/02/04/clinic-2/">#Jan25 Treating the injured علاج الجرحى</a></h2>
+                <div class="tags_categories">
+                    <small><strong>Categories:</strong> <a href="http://www.arabawy.org/category/photos-%d8%b5%d9%88%d8%b1/" title="View all posts in Photos صور" rel="category tag">Photos صور</a></small>
+				</div>
+                <p><a href="http://www.flickr.com/photos/elhamalawy/5414134885/" title="IMG_6967 by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm5.static.flickr.com/4074/5414134885_36724bd4b7.jpg" width="500" height="333" alt="IMG_6967" /></a></p>
+<p><a href="http://www.flickr.com/photos/elhamalawy/5414140361/" title="IMG_6968 by 3arabawy - صَحـَـفي مِصـْـري, on Flickr"><img src="http://farm5.static.flickr.com/4097/5414140361_145bd8caf5.jpg" width="500" height="333" alt="IMG_6968" /></a></p>
+<p>Volunteers set up a number of emergency clinics in Tahrir Square to treat protesters injured in clashes with Mubarak&#8217;s thugs.</p>
+
+<div class="sociable">
+<span class="sociable_tagline">
+
+	<span>These icons link to social bookmarking sites where readers can share and discover new web pages.</span>
+</span>
+<ul>
+	<li><a href="http://twitter.com/home?status=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fclinic-2%2F" title="TwitThis" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/twitter.png" title="TwitThis" alt="TwitThis" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fclinic-2%2F" title="Facebook" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/facebook.png" title="Facebook" alt="Facebook" class="sociable-hovers" /></a></li>
+	<li><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fclinic-2%2F&amp;title=%23Jan25%20Treating%20the%20injured%20%D8%B9%D9%84%D8%A7%D8%AC%20%D8%A7%D9%84%D8%AC%D8%B1%D8%AD%D9%89" title="del.icio.us" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/delicious.png" title="del.icio.us" alt="del.icio.us" class="sociable-hovers" /></a></li>
+	<li><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fclinic-2%2F&amp;title=%23Jan25%20Treating%20the%20injured%20%D8%B9%D9%84%D8%A7%D8%AC%20%D8%A7%D9%84%D8%AC%D8%B1%D8%AD%D9%89" title="Digg" onfocus="sociable_description_link(this, 'bodytext')" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/digg.png" title="Digg" alt="Digg" class="sociable-hovers" /></a></li>
+	<li><a href="http://www.stumbleupon.com/submit.php?url=http://www.arabawy.org/2011/02/04/clinic-2/" title="StumbleUpon" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/stumbleupon.png" title="StumbleUpon" alt="StumbleUpon" class="sociable-hovers" /></a></li>
+	<li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.arabawy.org%2F2011%2F02%2F04%2Fclinic-2%2F&amp;title=%23Jan25%20Treating%20the%20injured%20%D8%B9%D9%84%D8%A7%D8%AC%20%D8%A7%D9%84%D8%AC%D8%B1%D8%AD%D9%89" title="Reddit" rel="nofollow" target="_blank"><img src="http://www.arabawy.org/wp-content/plugins/sociable-zyblog-edition/images/reddit.png" title="Reddit" alt="Reddit" class="sociable-hovers" /></a></li>
+</ul>
+</div>
+            </div>
+            <div class="clear"></div>
+		</div>
+		        
+                
+                <div class="pagination">
+             <div class="read_more">
+                <a href="blog">Blog posts</a>
+             </div>
+		</div>
+	</div>
+	<!-- end .grid_8 -->
+		<div class="grid_4" id="sidebar">
+		<ul>
+			<li id="twitter-tools" class="widget aktt_widget">Twitter<div class="aktt_tweets">
+	<ul>
+		<li>Tahrir - LIVE at <a href="http://bambuser.com/v/1383594" rel="nofollow">http://bambuser.com/v/1383594</a> <a href="http://twitter.com/3arabawy/statuses/33502926353727488" class="aktt_tweet_time">12 mins ago</a></li>
+		<li>Tahrir - LIVE at <a href="http://bambuser.com/v/1383495" rel="nofollow">http://bambuser.com/v/1383495</a> <a href="http://twitter.com/3arabawy/statuses/33496555017207809" class="aktt_tweet_time">37 mins ago</a></li>
+		<li>Barricades - LIVE at <a href="http://bambuser.com/v/1383495" rel="nofollow">http://bambuser.com/v/1383495</a> <a href="http://twitter.com/3arabawy/statuses/33496344060502016" class="aktt_tweet_time">38 mins ago</a></li>
+		<li>Barricades - LIVE at <a href="http://bambuser.com/v/1383493" rel="nofollow">http://bambuser.com/v/1383493</a> <a href="http://twitter.com/3arabawy/statuses/33496233624477696" class="aktt_tweet_time">38 mins ago</a></li>
+		<li>السعودية‏ ‏خسارة‏ ‏فيك‏ ‏..‏ ‏تل‏ ‏أبيب‏ ‏بتناديك..‏ ‏من‏ ‏هتافات‏ ‏الجماهير‏ ‏ <a href="http://twitter.com/3arabawy/statuses/33487029622800384" class="aktt_tweet_time">1 hr ago</a></li>
+		<li>come to Tahrir if u r in cairo and watch history in the making. #<a href="http://search.twitter.com/search?q=%23jan25" class="aktt_hashtag">jan25</a> <a href="http://twitter.com/3arabawy/statuses/33483543132770304" class="aktt_tweet_time">1 hr ago</a></li>
+		<li>people r still flocking to the square. We r increasing rapidly in numbers. Long live the #<a href="http://search.twitter.com/search?q=%23jan25" class="aktt_hashtag">jan25</a> revolution. <a href="http://twitter.com/3arabawy/statuses/33481025191411712" class="aktt_tweet_time">1 hr ago</a></li>
+		<li>there must b at least half a million protesters in the square and we haven&#039;t even started! #<a href="http://search.twitter.com/search?q=%23jan25" class="aktt_hashtag">jan25</a> <a href="http://twitter.com/3arabawy/statuses/33480063542362113" class="aktt_tweet_time">1 hr ago</a></li>
+		<li>in Tahrir. #<a href="http://search.twitter.com/search?q=%23jan25" class="aktt_hashtag">jan25</a> #fb <a href="http://twitter.com/3arabawy/statuses/33469048477982720" class="aktt_tweet_time">2 hrs ago</a></li>
+		<li>lol <a href="http://www.youtube.com/watch?v=estApiBAIN4" rel="nofollow">http://www.youtube.com/watch?v=estApiBAIN4</a> The Daily Show on Hosni Mubarak #<a href="http://search.twitter.com/search?q=%23Jan25" class="aktt_hashtag">Jan25</a> <a href="http://twitter.com/3arabawy/statuses/33339341317079040" class="aktt_tweet_time">11 hrs ago</a></li>
+		<li class="aktt_more_updates"><a href="http://twitter.com/3arabawy">More updates...</a></li>
+</ul></div></li><li id="text-3" class="widget widget_text">Latest BookMarx			<div class="textwidget"><div id="diigo_linkroll" ><script type="text/javascript" src="http://www.diigo.com/roll2/linkrolls?v=3&username=Elhamalawy&count=10&style=customize&icon=false&desc=0&l_type=0&t_color=0000FF&t_fam=default&t_size=default&t_bold=false&t_italic=false&t_underline=false&i_fam=Trebuchet MS,sans-serif&i_color=CB2027&i_size=12&i_bold=true&i_italic=false&i_underline=false&title=&tags=&bg_img=" ></script></div>
+<div class="read_more">
+<a href="http://www.arabawy.org/bookmarx/">BookMarx page</a>
+</div>
+</div>
+		</li>		</ul>
+	</div>	<div class="clear"></div>
+		<div class="grid_12">
+    	<div class="footer">
+        	<div class="footer_column footer_navigation">
+                <ul>
+                	<li class="current_page_item"><a href=" 
+http://www.arabawy.org">Home</a></li>
+                    <li class="page_item page-item-46"><a href="http://www.arabawy.org/blog/" title="Blog">Blog</a></li>
+<li class="page_item page-item-60"><a href="http://www.arabawy.org/highlights/" title="Highlights">Highlights</a></li>
+<li class="page_item page-item-61"><a href="http://www.arabawy.org/photos/" title="Photos">Photos</a></li>
+<li class="page_item page-item-64"><a href="http://www.arabawy.org/music/" title="Music">Music</a></li>
+<li class="page_item page-item-67"><a href="http://www.arabawy.org/bookmarx/" title="BookMarx">BookMarx</a></li>
+                </ul>
+                <div class="credits">
+                    <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/creative_commons.png" alt="Creative Commons" /></a>
+                    <a href="http://www.wordpress.org/" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/wordpress.png" alt="Built with WordPress" /></a>
+                    Designed and developed by <a href="http://www.tarekshalaby.com/" class="new-window">Tarek Shalaby</a>
+                </div>
+			</div>
+					<div class="footer_column footer_post_list">		<h6>recent posts</h6>		<ul>
+				<li><a href="http://www.arabawy.org/2011/02/04/3arabawy-bookmarx-02042011-a-m/" title="3arabawy BookMarx 02/04/2011 (a.m.)">3arabawy BookMarx 02/04/2011 (a.m.)</a></li>
+				<li><a href="http://www.arabawy.org/2011/02/04/revolt-11/" title="#Jan25 Revolution ثورة">#Jan25 Revolution ثورة</a></li>
+				<li><a href="http://www.arabawy.org/2011/02/04/usa_cairo/" title="#Jan25 Solidarity تضامن">#Jan25 Solidarity تضامن</a></li>
+				<li><a href="http://www.arabawy.org/2011/02/04/tahrir-9/" title="#Jan25 Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام">#Jan25 Barricades at Tahrir Sq entrance متاريس لحماية الإعتصام</a></li>
+				<li><a href="http://www.arabawy.org/2011/02/04/clinic-2/" title="#Jan25 Treating the injured علاج الجرحى">#Jan25 Treating the injured علاج الجرحى</a></li>
+				<li><a href="http://www.arabawy.org/2011/02/04/jan25-9/" title="#Jan25 Preparing for battle التسلح بالحجارة لمواجهة البلطجية">#Jan25 Preparing for battle التسلح بالحجارة لمواجهة البلطجية</a></li>
+				<li><a href="http://www.arabawy.org/2011/02/04/jan25-diplomatic-car-runs-over-pro-democracy-protesters-28-jan/" title="#Jan25 Diplomatic car runs over pro-democracy protesters (28 Jan)">#Jan25 Diplomatic car runs over pro-democracy protesters (28 Jan)</a></li>
+				</ul>
+		</div><div class="footer_column footer_post_list"><h6>Popular posts</h6><ul><li><a href="http://www.arabawy.org/2011/01/27/jan25-mosques-and-churches-in-cairo-and-alexandria-were-protests-are-planned-tomorrow/" rel="bookmark" title="January 27, 2011">#Jan25 Mosques and churches in Cairo and Alexandria where protests are planned tomorrow</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/sidibouzid-%d8%a5%d8%b3%d8%aa%d9%85%d8%b1%d8%a7%d8%b1-%d8%a7%d9%84%d9%85%d8%b3%d9%8a%d8%b1%d8%a7%d8%aa-%d9%81%d9%8a-%d8%b9%d8%af%d8%af-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d9%81%d8%b8%d8%a7/" rel="bookmark" title="January 27, 2011">#SidiBouzid إستمرار المسيرات في عدد من المحافظات التونسية</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/suez-6/" rel="bookmark" title="January 27, 2011">#Jan25 Suez protesters set NDP office on fire حريق مبنى الحزب الوطنى بالسويس</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/jan25-union-calls-for-dissolving-the-parliament-cabinet/" rel="bookmark" title="January 27, 2011">#Jan25 Union calls for dissolving the parliament, cabinet</a><br />
+<small>January 27, 2011</small></li>
+
+<li><a href="http://www.arabawy.org/2011/01/27/protests_omraniya/" rel="bookmark" title="January 27, 2011">جماهير العمرانية: إنزل يا مصري .. إرحل يا حسني  #Jan25</a><br />
+<small>January 27, 2011</small></li>
+</ul><!-- popular Posts took 55.592 ms --></div>            <div class="footer_column footer_about">
+            	<div>
+                	<h6>ABOUT 3ARABAWY</h6>
+                    <a href="http://www.flickr.com/photos/elhamalawy/sets/72157594390856192/" class="new-window"><img src="http://www.arabawy.org/wp-content/themes/arabawy/images/footer_portrait.jpg" alt="About 3arabawy" /></a>
+                    <p>Hossam el-Hamalawy is an Egyptian journalist from Cairo</p>
+                    <strong>hossam [at] arabawy [dot] org</strong>
+                </div>
+            </div>
+		<div class="clear"></div>
+		</div>
+    </div>
+	<!-- end .grid_12 -->
+	<div class="clear"></div>
+</div>
+<!-- end .container_12 -->
+</body>
+</html><!-- WP Super Cache is installed but broken. The path to wp-cache-phase1.php in wp-content/advanced-cache.php must be fixed! -->

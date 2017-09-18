@@ -1,0 +1,695 @@
+<HTML>
+<HEAD>
+<TITLE>OMAL Observatorio de Multinacionales en Am&eacute;rica Latina</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<style type="text/css">
+body {
+	background-image:   url(IMG/imgbasico/bgrallas_trans.gif);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color: #FF9900;
+}
+.contenedor{
+		border-left:1px solid #333333;
+		border-right:1px solid #333333;
+}
+
+	html{
+		height:100%;
+	}
+	.clear{
+		clear:both;
+	}
+	
+	#mainContainer{
+		width:100%;
+		text-align:left;
+		//margin:0 auto;
+		//height:100%;
+	}
+	
+	#leftMenu{
+		width:120px;
+		padding-left:7px;
+		padding-right:7px;
+		float:left;
+	}
+	#mainContent{
+	width:635;
+	padding-left:7px;
+	padding-right:7px;
+	float:left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #ffffff;
+	background-image:   url(IMG/imgbasico/bglogogris2.png);
+	//background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: right top;
+	}
+
+
+a.noticias:link {
+	color: #FF9900;
+	text-decoration: none;
+}
+a.noticias:visited {
+	color: #FF9900;
+	text-decoration: none;
+}
+a.noticias:hover {
+	color: #FF6600;
+	text-decoration: none;
+	background-color: #CCCCCC;
+	}
+
+a:link {
+	color: #555555;
+	text-decoration: none;
+}
+a:active {
+	color: #FF3300;
+	text-decoration: none;
+}
+a:hover {
+	color: #333333;
+	text-decoration: none;
+	background-color: #CCCCCC;
+}
+a:visited {
+	color: #555555;
+	text-decoration: none;
+}
+
+
+/*
+ * Formulaires
+ */
+
+.formrecherche {
+	width:150px;
+	background-color: #f2f2f2;
+	color: #505030;
+	margin: 0px;
+	padding: 2px;
+	border: solid 1px #909090;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.formulaire {
+	color: black;
+	margin: 0px;
+	margin-bottom: 16px;
+	padding: 4px;
+	border: 1px solid #a0a0a0;
+	background-color: #f6f6f6;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+}
+.forml {
+	background-color: #ececec;
+	margin: 4px;
+	padding: 1px;
+	border: dashed 1px #909090;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+}
+.spip_bouton {
+	border: 2px solid #404040;
+	padding: 3px;
+	background: #d0d0d0;
+	font-family: "Trebuchet MS", Tahoma, Arial, Helvetica, sans-serif;
+}
+.spip-admin {
+	position: fixed;
+	bottom: 0px;
+	font-size: 90%;
+	padding: 2px;
+	line-height: 1.4em;
+}
+
+	/*
+	General rules
+	*/
+
+	#dhtmlgoodies_slidedown_menu li{
+		list-style-type:none;
+		position:relative;
+	}
+	#dhtmlgoodies_slidedown_menu ul{
+		margin:0px;
+		padding:0px;
+		position:relative;
+
+	}
+
+	#dhtmlgoodies_slidedown_menu div{
+		margin:0px;
+		padding:0px;
+	}
+	/* 	Layout CSS */
+	#dhtmlgoodies_slidedown_menu{		
+		width:130px;	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#FF3300;
+	}
+
+	/* All A tags - i.e menu items. */
+	#dhtmlgoodies_slidedown_menu a{
+		color: #000;
+		text-decoration:none;	
+		display:block;
+		clear:both;
+		width:110px;	
+		padding-left:2px;	
+
+	}
+	
+	/*
+	A tags 
+	*/
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth1{	/* Main menu items */
+		margin-top:1px;
+		border-bottom:1px solid #000;
+		font-weight:bold;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth2{	/* Sub menu items */
+		margin-top:1px;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth3{	/* Sub menu items */
+		margin-top:1px;
+		font-style:italic;
+		color:blue;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth4{	/* Sub menu items */
+		margin-top:1px;
+		color:red;
+	}	
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth5{	/* Sub menu items */
+		margin-top:1px;
+	}
+
+	/* UL tags, i.e group of menu utems. 
+	It's important to add style to the UL if you're specifying margins. If not, assign the style directly
+	to the parent DIV, i.e. 
+	
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1
+	
+	instead of 
+	
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1 ul
+	*/
+	
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv1 ul{
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv2 ul{
+		margin-left:5px;
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slideMenuDiv3 ul{
+		margin-left:10px;
+		padding:1px;
+	}
+	#dhtmlgoodies_slidedown_menu .slMenuItem_depth4 ul{
+		margin-left:15px;
+		padding:1px;
+	}
+
+</style>
+	
+<SCRIPT LANGUAGE="JavaScript" SRC="menudesplegable.js"></SCRIPT>
+
+</HEAD>
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<TABLE class="contenedor" WIDTH=790 BORDER=0 align="center" CELLPADDING=0 CELLSPACING=0>
+  <TR>
+    <TD colspan="2" background="IMG/imgbasico/bgrallas_trans.gif" bgcolor="#CCCCCC">
+	
+	<img src="IMG/imgbasico/top1.png"><br>
+	  <img src="IMG/imgbasico/top2.png" width="790" height="12"><br>
+	  <a href="sommaire.php3"><img src="IMG/imgbasico/topimagen.jpg" border="0"></a><br>
+	  <img src="IMG/imgbasico/top3.png" border="0" usemap="#pazcondignidad">
+	  <table width="100%"  border="0" cellspacing="0" cellpadding="9">
+        <tr>
+          <td width="70%" background="IMG/imgbasico/bgrallahorizontal.png" bgcolor="#660000"><span align="left" style="font-size:9pt;color:#333333;"><b>
+		   
+
+			  
+
+	    </b>
+		&nbsp;&nbsp;&nbsp;
+		</span></td>
+          <td width="30%" align="center" valign="middle" background="IMG/imgbasico/bgrallahorizontal.png" bgcolor="#660000">
+		  <form action="recherche.php3" method="get" class="formrecherche">
+	<div>
+		<input type="text"
+			id="formulaire_recherche"
+			class="formrecherche"
+			name="recherche"
+			value="Buscar" />
+	</div>
+</form>
+ </td>
+        </tr>
+      </table>	   		 
+			
+	
+	<!--  menudesplegable -->
+	
+	<div id="mainContainer">
+	<div id="leftMenu">
+	  <div id="dhtmlgoodies_slidedown_menu">
+	  
+	  <ul>
+	  
+<li>
+<a href="#" title="Presentación, líneas de trabajo, publicaciones y contacto">Quiénes somos</a>
+<ul>
+       <li><a href="article.php3?id_article=2" style="color:#990000;font-weight:300">- Presentación</a></li>
+	
+       <li><a href="article.php3?id_article=3" style="color:#990000;font-weight:300">- Líneas de trabajo</a></li>
+	
+       <li><a href="article.php3?id_article=9" style="color:#990000;font-weight:300">- Publicaciones</a></li>
+	
+       <li><a href="article.php3?id_article=275" style="color:#990000;font-weight:300">- Contacto</a></li>
+	
+       <li><a href="article.php3?id_article=1870" style="color:#990000;font-weight:300">- Convenio con la UPV/EHU</a></li>
+	
+       <li><a href="article.php3?id_article=1897" style="color:#990000;font-weight:300">- Entidades colaboradoras</a></li>
+	
+       <li><a href="article.php3?id_article=3231" style="color:#990000;font-weight:300">- Memoria</a></li>
+	
+       <li><a href="article.php3?id_article=3232" style="color:#990000;font-weight:300">- Mapa web</a></li>
+	</ul></li>
+
+<li>
+<a href="#" title="Información sobre empresas multinacionales según los países donde realizan actividades">Países</a>
+		<ul><li>
+	   <a href="rubrique.php3?id_rubrique=55"  style="color:#990000;font-weight:300">-	África</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=30"  style="color:#990000;font-weight:300">-	América Latina</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=11" title="Argentina" style="color:#990000;font-weight:300">-	Argentina</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=54"  style="color:#990000;font-weight:300">-	Asia</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=14" title="Bolivia" style="color:#990000;font-weight:300">-	Bolivia</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=12" title="Brasil" style="color:#990000;font-weight:300">-	Brasil</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=33"  style="color:#990000;font-weight:300">-	Chile</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=13" title="Colombia" style="color:#990000;font-weight:300">-	Colombia</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=40"  style="color:#990000;font-weight:300">-	Costa Rica</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=42"  style="color:#990000;font-weight:300">-	Cuba</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=32"  style="color:#990000;font-weight:300">-	Ecuador</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=39"  style="color:#990000;font-weight:300">-	El Salvador</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=49" title="Estado español" style="color:#990000;font-weight:300">-	España</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=48" title="Estados Unidos" style="color:#990000;font-weight:300">-	Estados Unidos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=47" title="Europa" style="color:#990000;font-weight:300">-	Europa</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=44"  style="color:#990000;font-weight:300">-	Guatemala</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=60"  style="color:#990000;font-weight:300">-	Haití</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=38"  style="color:#990000;font-weight:300">-	Honduras</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=31"  style="color:#990000;font-weight:300">-	México</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=43"  style="color:#990000;font-weight:300">-	Nicaragua</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=37"  style="color:#990000;font-weight:300">-	Panamá</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=41"  style="color:#990000;font-weight:300">-	Paraguay</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=34"  style="color:#990000;font-weight:300">-	Perú</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=45"  style="color:#990000;font-weight:300">-	República Dominicana</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=46"  style="color:#990000;font-weight:300">-	Trinidad y Tobago</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=36"  style="color:#990000;font-weight:300">-	Uruguay</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=35"  style="color:#990000;font-weight:300">-	Venezuela</a>
+       	</li></ul></li>
+
+<li>
+<a href="todo.php3?id_groupe=2" title="Información de las empresas multinacionales">Empresas</a>
+</li>
+
+<li>
+<a href="todo.php3?id_groupe=4" title="Información sobre multinacionales según los temas de análisis">Temas</a>
+</li>
+
+<li>
+<a href="#" title="Campañas en la que participa OMAL">Campañas</a>
+		<ul><li>
+	   <a href="rubrique.php3?id_rubrique=24" title="Campaña Tribunal permanente de los pueblos" style="color:#990000;font-weight:300">-	TPP - Colombia</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=25" title="Campaña ¿Quién debe a quién?" style="color:#990000;font-weight:300">-	¿Quién debe a Quién?</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=26" title="Campaña contra Repsol" style="color:#990000;font-weight:300">-	Afectados por Repsol y otras petroleras</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=29"  style="color:#990000;font-weight:300">-	Enlazando Alternativas</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=51" title="Unión Penosa" style="color:#990000;font-weight:300">-	Unión Penosa</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=58" title="Contra el BBVA" style="color:#990000;font-weight:300">-	Contra el BBVA</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=69" title="Foro Social Mundial" style="color:#990000;font-weight:300">-	Foro Social Mundial</a>
+       	</li></ul></li>
+
+<li>
+<a href="#" title="Nuestras publicaciones y materiales">Publicaciones y materiales</a>
+		<ul><li>
+	   <a href="rubrique.php3?id_rubrique=15" title="Boletines OMAL" style="color:#990000;font-weight:300">-	Boletines</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=53" title="Libros" style="color:#990000;font-weight:300">-	Libros</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=56" title="Cuadernos" style="color:#990000;font-weight:300">-	Cuadernos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=57" title="Artículos" style="color:#990000;font-weight:300">-	Artículos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=59" title="Videos" style="color:#990000;font-weight:300">-	Videos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=61" title="Audios" style="color:#990000;font-weight:300">-	Audios</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=62" title="Cursos" style="color:#990000;font-weight:300">-	Cursos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=63" title="Entrevistas" style="color:#990000;font-weight:300">-	Entrevistas</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=64" title="Charlas, paneles y presentaciones" style="color:#990000;font-weight:300">-	Exposiciones</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=66" title="Trípticos" style="color:#990000;font-weight:300">-	Trípticos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=67" title="Referencias a OMAL en medios de comunicación" style="color:#990000;font-weight:300">-	Sala de prensa</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=68" title="Reseñas de libros" style="color:#990000;font-weight:300">-	Reseñas</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=70" title="Documentales" style="color:#990000;font-weight:300">-	Documentales</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=71" title="Informes de investigación elaborados por OMAL" style="color:#990000;font-weight:300">-	Informes</a>
+       	</li></ul></li>
+
+<li>
+<a href="#" title="Otros recursos y enlaces">Recursos</a>
+		<ul><li>
+	   <a href="rubrique.php3?id_rubrique=16" title="Revista Pueblos" style="color:#990000;font-weight:300">-	Revista Pueblos</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=17" title="Libros" style="color:#990000;font-weight:300">-	Libros</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=18" title="Enlaces a otras páginas" style="color:#990000;font-weight:300">-	Enlaces</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=19" title="Revistas" style="color:#990000;font-weight:300">-	Revistas</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=21" title="Informes" style="color:#990000;font-weight:300">-	Informes</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=22" title="Material videográfico" style="color:#990000;font-weight:300">-	Video</a>
+       	</li><li>
+	   <a href="rubrique.php3?id_rubrique=23" title="Educación" style="color:#990000;font-weight:300">-	Educación</a>
+       	</li></ul></li>
+
+<li>
+<a href="rubrique.php3?id_rubrique=9" title="Agenda de actividades">Agenda</a>
+</li>
+
+
+			</ul>
+			<br>
+			<img src="IMG/imgbasico/americalatina_izq.png" width="121" height="354">
+		</div>
+		<!-- final MENU -->
+		</div>
+	<div id="mainContent"><br>
+
+<div>
+
+ 
+
+
+      <table width="100%"  border="0" cellspacing="0" cellpadding="7">
+        <tr>
+          <td width="60%" align="left" valign="top">
+		  <!-- lado izquierdo -->
+		  <p><img src="IMG/imgbasico/marca_ultimasnoticias2.jpg" width="293" height="15"><br>
+		      <br>
+		      	<a href="article.php3?id_article=4190" title="Pocos consumidores de atún enlatado alrededor del mundo saben que la mayor parte del pescado que consumen es importado de Colombia. En la paradisíaca Cartagena opera una planta de Seatech International Inc., una de las empresas líderes en el mundo del procesamiento y venta de atún enlatado y recientemente objeto de demandas judiciales de parte de ex trabajadores colombianos.">
+      </a>
+         
+            <img src="IMG/imgbasico/flechanaranja.png" width="12" height="11"> 
+		      <a href="article.php3?id_article=4190" class="titulares" title="Pocos consumidores de atún enlatado alrededor del mundo saben que la mayor parte del pescado que consumen es importado de Colombia. En la paradisíaca Cartagena opera una planta de Seatech International Inc., una de las empresas líderes en el mundo del procesamiento y venta de atún enlatado y recientemente objeto de demandas judiciales de parte de ex trabajadores colombianos.">
+              <span style="font-size: 13px;font-weight: 500;"><b>Empresa de Colombia es acusada de trabajo semiesclavo en la producción de atún enlatado. Un atún sabroso hecho con lágrimas y sufrimiento</b> </span>
+              </a>
+              <br>        
+              <span style="font-size:8pt;color:#990000">Giorgio Trucchi</span>
+		      <span style="font-size:8pt;color:#555555">(2/09/2011)</span>
+		      <br>
+		      <span style="font-size:9pt;color:#333333">
+		  Pocos consumidores de atún enlatado alrededor del mundo saben que la mayor parte del pescado que consumen es importado de Colombia. En la paradisíaca Cartagena opera una planta de Seatech International Inc., una de las empresas líderes en el mundo del procesamiento y venta de atún enlatado y recientemente objeto de demandas judiciales de parte de ex trabajadores colombianos.<br>
+		  		</span>
+              <br>
+	          	<a href="article.php3?id_article=4189" title="La investigación &#8220;Capitales Brasileños en el Exterior&#8221; es realizada anualmente, desde 2001 por el Banco Central de Brasil. Su objetivo es dimensionar los stocks de activos en el exterior que detienen residentes de la economía brasileña a la fecha de 31 de diciembre de cada año. Este artículo hace un resumen de los datos más relevantes.">
+      </a>
+         
+            <img src="IMG/imgbasico/flechanaranja.png" width="12" height="11"> 
+		      <a href="article.php3?id_article=4189" class="titulares" title="La investigación &#8220;Capitales Brasileños en el Exterior&#8221; es realizada anualmente, desde 2001 por el Banco Central de Brasil. Su objetivo es dimensionar los stocks de activos en el exterior que detienen residentes de la economía brasileña a la fecha de 31 de diciembre de cada año. Este artículo hace un resumen de los datos más relevantes.">
+              <span style="font-size: 13px;font-weight: 500;"><b>Resumen de la investigación "Capitales brasileños en el exterior" del Banco Central de Brasil</b> </span>
+              </a>
+              <br>        
+              <span style="font-size:8pt;color:#990000">Ricardo Bergamini</span>
+		      <span style="font-size:8pt;color:#555555">(1ro/09/2011)</span>
+		      <br>
+		      <span style="font-size:9pt;color:#333333">
+		  La investigación &#8220;Capitales Brasileños en el Exterior&#8221; es realizada anualmente, desde 2001 por el Banco Central de Brasil. Su objetivo es dimensionar los stocks de activos en el exterior que detienen residentes de la economía brasileña a la fecha de 31 de diciembre de cada año. Este artículo hace un resumen de los datos más relevantes.<br>
+		  		</span>
+              <br>
+	          	<a href="article.php3?id_article=4174" title="Con un llamado a un cambio profundo de las macro-políticas de la globalización neoliberal y propuestas para afianzar los derechos indígenas, como principales soluciones para salvar los bosques, culminó la 1ra Cumbre Regional Amazónica: Saberes Ancestrales, Pueblos y Vida Plena en Armonía con los Bosques (Manaus, 15-18 agosto 2011).">
+      </a>
+         
+            <img src="IMG/imgbasico/flechanaranja.png" width="12" height="11"> 
+		      <a href="article.php3?id_article=4174" class="titulares" title="Con un llamado a un cambio profundo de las macro-políticas de la globalización neoliberal y propuestas para afianzar los derechos indígenas, como principales soluciones para salvar los bosques, culminó la 1ra Cumbre Regional Amazónica: Saberes Ancestrales, Pueblos y Vida Plena en Armonía con los Bosques (Manaus, 15-18 agosto 2011).">
+              <span style="font-size: 13px;font-weight: 500;"><b>I Cumbre Regional Amazónica de la COICA: Derechos indígenas amazónicos, clave para salvar los bosques</b> </span>
+              </a>
+              <br>        
+              <span style="font-size:8pt;color:#990000">Sally Burch</span>
+		      <span style="font-size:8pt;color:#555555">(1ro/09/2011)</span>
+		      <br>
+		      <span style="font-size:9pt;color:#333333">
+		  Con un llamado a un cambio profundo de las macro-políticas de la globalización neoliberal y propuestas para afianzar los derechos indígenas, como principales soluciones para salvar los bosques, culminó la 1ra Cumbre Regional Amazónica: Saberes Ancestrales, Pueblos y Vida Plena en Armonía con los Bosques (Manaus, 15-18 agosto 2011).<br>
+		  		</span>
+              <br>
+	          	<a href="article.php3?id_article=4167" title="&#8220;¿Hasta cuando los países del Sur vamos a financiar las economías del Norte? -sostuvo Chávez-, quien informó que en la banca de EE.UU. hay mas de 18 mil millones de dólares en oro venezolano, en Inglaterra, desde 1980, 4.595 millones; en Canadá (Toronto), 381 millones de dólares desde 1992 y en Francia 184 millones de dólares.">
+      </a>
+         
+            <img src="IMG/imgbasico/flechanaranja.png" width="12" height="11"> 
+		      <a href="article.php3?id_article=4167" class="titulares" title="&#8220;¿Hasta cuando los países del Sur vamos a financiar las economías del Norte? -sostuvo Chávez-, quien informó que en la banca de EE.UU. hay mas de 18 mil millones de dólares en oro venezolano, en Inglaterra, desde 1980, 4.595 millones; en Canadá (Toronto), 381 millones de dólares desde 1992 y en Francia 184 millones de dólares.">
+              <span style="font-size: 13px;font-weight: 500;"><b>Oro: principio y fin del camino</b> </span>
+              </a>
+              <br>        
+              <span style="font-size:8pt;color:#990000">Jorge Luis Ubertalli</span>
+		      <span style="font-size:8pt;color:#555555">(31/08/2011)</span>
+		      <br>
+		      <span style="font-size:9pt;color:#333333">
+		  &#8220;¿Hasta cuando los países del Sur vamos a financiar las economías del Norte? -sostuvo Chávez-, quien informó que en la banca de EE.UU. hay mas de 18 mil millones de dólares en oro venezolano, en Inglaterra, desde 1980, 4.595 millones; en Canadá (Toronto), 381 millones de dólares desde 1992 y en Francia 184 millones de dólares.<br>
+		  		</span>
+              <br>
+	          
+  
+	
+	          <span style="font-size:7pt;font-weight:500;">
+	          <img src="IMG/imgbasico/mastexto3.png" width="17" height="14" border="0">
+	          <a href="todo.php3?id_mot=13|14"> MÁS ARTÍCULOS RECIENTES >
+	          </a>
+	          </span>
+	  
+	        <br>
+	          </p>
+		  <img src="IMG/imgbasico/prxeventos.png" width="146" height="20"><br>
+		  <table width="100%"  border="0" cellspacing="0" cellpadding="7" style="border: thin dashed #FF9900">
+		            <tr>
+		              <td scope="row" background="IMG/imgbasico/bgrallas_trans.gif" bgcolor="#F7E2CC">
+
+            <br><img src="IMG/imgbasico/ivalidar.gif" width="12" height="11">
+			  <b><span style="font-size: 11px;color:#FF9900">
+			  8/10/2011</span>
+			  <span style="font-size: 11px;color:#333333">::
+			  <a href="article.php3?id_article=4144" class="titulares" title="El viernes 7 y el sábado 8 de octubre, en Madrid">
+               Encuentros «Viviendo en deudocracia. La deuda en los países del Norte: Aprendiendo del Sur»</a></b> </span>
+			   <span style="font-size:8pt;color:#555555">El viernes 7 y el sábado 8 de octubre, en Madrid</span>
+		      <br>
+		      
+			  <div align="right" style="font-size:7pt;color:#555555">
+			  <a href="rubrique.php3?id_rubrique=9"><b>AGENDA</b></a> ></div>			  </td>
+		            </tr></table>		  
+
+		  
+		  </td>
+          <td width="40%" align="left" valign="top" background="IMG/imgbasico/bg_ralla_separa.png">
+		  <!-- lado derecho -->
+		  <img src="IMG/imgbasico/marca_ultimasnoticias3.jpg" width="225" height="15"><br>
+		  	<a href="article.php3?id_article=4179" title="Unas 2.500 personas endeudadas y afectadas por un megadeslizamiento, que dejó sin casa a 1.374 familias, se impusieron ante el gobierno boliviano y las entidades financieras y microfinancieras, al lograr la negociación de sus préstamos con miras a la condonación total.&#65279;">
+    </a>
+       
+        <img src="IMG/imgbasico/puntonaranja.png" width="6" height="6"> 
+		 <a href="article.php3?id_article=4179" class="noticias" title="Unas 2.500 personas endeudadas y afectadas por un megadeslizamiento, que dejó sin casa a 1.374 familias, se impusieron ante el gobierno boliviano y las entidades financieras y microfinancieras, al lograr la negociación de sus préstamos con miras a la condonación total.&#65279;">
+  <span style="font-size: 12px;font-weight: 500;"><b>Mujeres endeudadas le ganan una batalla a la banca en Bolivia</b>
+  </span>
+         </a>
+        <br>
+        <span style="font-size:8pt;color:#990000">Fuente: Bolpress (2/09/2011)
+		</span>
+		
+		<br>
+		<span style="font-size:8pt;color:#333333">
+		Unas 2.500 personas endeudadas y afectadas por un megadeslizamiento, que dejó sin casa a 1.374 familias, se impusieron ante el gobierno boliviano y las entidades financieras y microfinancieras, al lograr la negociación de sus préstamos con miras a la condonación total.&#65279;<br>
+		</span>
+<br>
+		<a href="article.php3?id_article=4182" title="La Asamblea Legislativa de São Paulo ha citado a Zara para participar en la investigación sobre las denuncias que acusan a la firma gallega de emplear en Brasil mano de obra en situación análoga a la esclavitud.">
+    </a>
+       
+        <img src="IMG/imgbasico/puntonaranja.png" width="6" height="6"> 
+		 <a href="article.php3?id_article=4182" class="noticias" title="La Asamblea Legislativa de São Paulo ha citado a Zara para participar en la investigación sobre las denuncias que acusan a la firma gallega de emplear en Brasil mano de obra en situación análoga a la esclavitud.">
+  <span style="font-size: 12px;font-weight: 500;"><b>Zara, citada en Brasil por la investigación del trabajo esclavo</b>
+  </span>
+         </a>
+        <br>
+        <span style="font-size:8pt;color:#990000">Fuente: Público (1ro/09/2011)
+		</span>
+		
+		<br>
+		<span style="font-size:8pt;color:#333333">
+		La Asamblea Legislativa de São Paulo ha citado a Zara para participar en la investigación sobre las denuncias que acusan a la firma gallega de emplear en Brasil mano de obra en situación análoga a la esclavitud.<br>
+		</span>
+<br>
+		<a href="article.php3?id_article=4171" title="Cobros por mantenimiento de cuenta, de tarjeta de crédito y débito, transferencias, etcétera. Todo le cuesta al cliente, de media, 178 euros al año.">
+    </a>
+       
+        <img src="IMG/imgbasico/puntonaranja.png" width="6" height="6"> 
+		 <a href="article.php3?id_article=4171" class="noticias" title="Cobros por mantenimiento de cuenta, de tarjeta de crédito y débito, transferencias, etcétera. Todo le cuesta al cliente, de media, 178 euros al año.">
+  <span style="font-size: 12px;font-weight: 500;"><b>Las comisiones bancarias se disparan hasta un 60% en la crisis</b>
+  </span>
+         </a>
+        <br>
+        <span style="font-size:8pt;color:#990000">Fuente: Expansión (31/08/2011)
+		</span>
+		
+		<br>
+		<span style="font-size:8pt;color:#333333">
+		Cobros por mantenimiento de cuenta, de tarjeta de crédito y débito, transferencias, etcétera. Todo le cuesta al cliente, de media, 178 euros al año.<br>
+		</span>
+<br>
+		<a href="article.php3?id_article=4173" title="&quot;Si alguien tenía alguna duda de que la guerra en Libia no tenía un trasfondo económico, se equivoca&quot;. Así se expresa un antiguo colaborador del Ministerio francés de Asuntos Exteriores en París consultado por La Vanguardia.com para analizar la posición de Francia ante el nuevo escenario que se abrirá en Libia cuando Muanmar el Gadafi abandone el poder vivo o muerto.">
+    </a>
+       
+        <img src="IMG/imgbasico/puntonaranja.png" width="6" height="6"> 
+		 <a href="article.php3?id_article=4173" class="noticias" title="&quot;Si alguien tenía alguna duda de que la guerra en Libia no tenía un trasfondo económico, se equivoca&quot;. Así se expresa un antiguo colaborador del Ministerio francés de Asuntos Exteriores en París consultado por La Vanguardia.com para analizar la posición de Francia ante el nuevo escenario que se abrirá en Libia cuando Muanmar el Gadafi abandone el poder vivo o muerto.">
+  <span style="font-size: 12px;font-weight: 500;"><b>Francia e Italia pugnarán por repartirse el &#8217;tesoro&#8217; libio</b>
+  </span>
+         </a>
+        <br>
+        <span style="font-size:8pt;color:#990000">Fuente: La Vanguardia (30/08/2011)
+		</span>
+		
+		<br>
+		<span style="font-size:8pt;color:#333333">
+		"Si alguien tenía alguna duda de que la guerra en Libia no tenía un trasfondo económico, se equivoca". Así se expresa un antiguo colaborador del Ministerio francés de Asuntos Exteriores en París consultado por La Vanguardia.com para analizar la posición de Francia ante el nuevo escenario que se abrirá en Libia cuando Muanmar el Gadafi abandone el poder vivo o muerto.<br>
+		</span>
+<br>
+		<a href="article.php3?id_article=4161" title="El País Negocios del día 14/08/2011 publicó un reportaje sobre la internacionalización de las constructoras españolas. Los datos que proporciona la noticia muestran cómo la crisis del ladrillo no les ha afectado.">
+    </a>
+       
+        <img src="IMG/imgbasico/puntonaranja.png" width="6" height="6"> 
+		 <a href="article.php3?id_article=4161" class="noticias" title="El País Negocios del día 14/08/2011 publicó un reportaje sobre la internacionalización de las constructoras españolas. Los datos que proporciona la noticia muestran cómo la crisis del ladrillo no les ha afectado.">
+  <span style="font-size: 12px;font-weight: 500;"><b>La expansión internacional de las constructoras españolas</b>
+  </span>
+         </a>
+        <br>
+        <span style="font-size:8pt;color:#990000">Fuente: El País (29/08/2011)
+		</span>
+		
+		<br>
+		<span style="font-size:8pt;color:#333333">
+		<i class="spip">El País Negocios</i> del día 14/08/2011 publicó un reportaje sobre la internacionalización de las constructoras españolas. Los datos que proporciona la noticia muestran cómo la crisis del ladrillo no les ha afectado.<br>
+		</span>
+<br>
+	
+	
+	<img src="IMG/imgbasico/mastexto3.png" width="17" height="14" border="0">
+	<a href="todo.php3?id_mot=15">
+	<span style="font-size:7pt;font-weight:500;">
+	 M&Aacute;S NOTICIAS >
+	</span>
+	</a></td>
+        </tr>
+      </table>	
+	
+	<p>&nbsp;</p>
+	</div>
+	
+
+
+<p class="spip">
+<center>
+<embed src="http://blip.tv/play/hdF8AqO3Zg" type="application/x-shockwave-flash" width="620" height="310" allowscriptaccess="always" allowfullscreen="true"></embed>
+</center></p>
+<p class="spip"><center><a href="article.php3?id_article=3065" class="spip_in"><span class='spip_documents spip_documents_'  style='float: ; width: 619px;'><img src='IMG/jpg/Banner_El_Segundo_Desembarco3-2.jpg'
+			width='619'
+			height='74'
+			style='border-width: 0px;' alt="(JPG)" /></span>
+</a></center></p>
+<p class="spip"><center><a href="http://listas.nodo50.org/cgi-bin/mailman/listinfo/omal" class="spip_out"><span class='spip_documents spip_documents_'  style='float: ; width: 620px;'><img src='IMG/jpg/baner_suscripcion_boletin.jpg'
+			width='620'
+			height='37'
+			style='border-width: 0px;' alt="(JPG)" /></span>
+</a></center></p>
+<p class="spip"><center><a href="http://www.pazcondignidad.org/moodle/" class="spip_out"><span class='spip_documents spip_documents_'  style='float: ; width: 620px;'><img src='IMG/jpg/BANNERTELEFORMACION_copia.jpg'
+			width='620'
+			height='50'
+			style='border-width: 0px;' alt="(JPG)" /></span>
+</a></center></p>
+<p class="spip"><center><a href="http://www.pazcondignidad.org/index.php?option=com_content&amp;view=article&amp;id=159&amp;Itemid=156" class="spip_out"><span class='spip_documents spip_documents_'  style='float: ; width: 620px;'><img src='IMG/jpg/banner-participa-omal.jpg'
+			width='620'
+			height='37'
+			style='border-width: 0px;' alt="(JPG)" /></span>
+</a></center></p> 
+
+
+	
+	
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+	
+	
+	<br><br>    
+    <a href="mailto:observa.empresas@omal.info" target="_blank"><img src="IMG/imgbasico/cierre_txt.png" width="790" height="55" border="0"></a>
+
+    <map name="pazcondignidad" id="pazcondignidad">
+    <area shape="rect" coords="594,1,771,18" href="http://www.pazcondignidad.org" target="_blank">
+  </map>	
+	</TD>
+  </TR>
+</TABLE>
+
+   
+    <div align="center"><b><a href="http://www.omal.info/www/spip_redirect.php3?id_article=401"><img src="IMG/imgbasico/Rss.gif" width="36" height="14" border="0"></a>&nbsp;&nbsp; SINDICACI&Oacute;N DE CONTENIDOS &nbsp;&nbsp;&nbsp;&nbsp;:::: &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.spip.net" target="_blank">SISTEMA SPIP&nbsp;&nbsp;</a> :::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="ecrire" target="_blank">GESTOR CONTENIDOS</a></b></div>
+    </div>
+    <p><br>
+</p>
+    <p>&nbsp;        </p>
+</BODY>
+</HTML>

@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head">
+<!--**********************************************************************************-->
+<!-- DotNetNuke� - http://www.dotnetnuke.com                                          -->
+<!-- Copyright (c) 2002-2010                                                          -->
+<!-- by DotNetNuke Corporation                                                        -->
+<!--**********************************************************************************-->
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaDescription" name="DESCRIPTION" content="Raddho: accueil" /><meta id="MetaKeywords" name="KEYWORDS" content="Raddho: accueil,DotNetNuke,DNN" /><meta id="MetaCopyright" name="COPYRIGHT" content="Powered by afrikonline.com" /><meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " /><meta id="MetaAuthor" name="AUTHOR" content="Raddho" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link id="APortals__default_" rel="stylesheet" type="text/css" href="/Portals/_default/default.css" /><link id="APortals__default_Skins_Go_" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/Go/skin.css" /><link id="APortals__default_Containers_Go_" rel="stylesheet" type="text/css" href="/Portals/_default/Containers/Go/container.css" /><link id="APortals_1_" rel="stylesheet" type="text/css" href="/Portals/1/portal.css" /><!--[if LT IE 7]><link id="IE6Minus" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/Go/ie6skin.css" /><![endif]--><script type="text/javascript" src="/Resources/Shared/Scripts/jquery/jquery.min.js" ></script><title>
+	Raddho: accueil
+</title></head>
+<body id="Body">
+    <form name="Form" method="post" action="/Default.aspx" id="Form" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NDIyOTEzMjkPZBYGZg8WAh4EVGV4dAV5PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRyYW5zaXRpb25hbC5kdGQiPmQCAQ9kFg4CBA8WAh4HVmlzaWJsZWhkAgUPFgIeB2NvbnRlbnQFD1JhZGRobzogYWNjdWVpbGQCBg8WAh8CBR5SYWRkaG86IGFjY3VlaWwsRG90TmV0TnVrZSxETk5kAgcPFgIfAgUaUG93ZXJlZCBieSBhZnJpa29ubGluZS5jb21kAggPFgIfAgULRG90TmV0TnVrZSBkAgkPFgIfAgUGUmFkZGhvZAIMDxYCHwIFDUlOREVYLCBGT0xMT1dkAgIPZBYCAgEPZBYGZg9kFgJmDxYCHwFoFgJmD2QWAmYPZBYGAgMPEGRkFgBkAg8PZBYCZg8PFgYeCEltYWdlVXJsBRQvaW1hZ2VzL2NvbGxhcHNlLmdpZh4NQWx0ZXJuYXRlVGV4dAUITWluaW1pemUeB1Rvb2xUaXAFCE1pbmltaXplFgoeB3VzZXJjdHIFCVVzYWJpbGl0eR4HdXNlcmtleQUUQ29udHJvbFBhbmVsVmlzaWJsZTEeB29uY2xpY2sFTWlmIChfX2Rubl9TZWN0aW9uTWF4TWluKHRoaXMsICAnSWNvbkJhci5hc2N4X3Jvd0NvbnRyb2xQYW5lbCcpKSByZXR1cm4gZmFsc2U7HghtYXhfaWNvbgUSL2ltYWdlcy9leHBhbmQuZ2lmHghtaW5faWNvbgUUL2ltYWdlcy9jb2xsYXBzZS5naWZkAhEPZBYCAgEPZBYCAgEPZBYQAgEPEGRkFgBkAgUPEGRkFgBkAgcPEGRkFgBkAgsPEGRkFgBkAg8PEGRkFgBkAhUPEGRkFgBkAhkPEGRkFgFmZAIdDxBkZBYAZAIFD2QWAmYPZBYgAgEPFgIeBWNsYXNzBRVIZWFkUGFuZSBETk5FbXB0eVBhbmVkAgMPZBYEZg9kFgYCAQ8QDxYKHghDc3NDbGFzcwUGc2VhcmNoHwAFA1dlYh8FBRFHb29nbGUgV2ViIFNlYXJjaB4EXyFTQgICHwFoZGRkZAIDDxAPFgofDAUGc2VhcmNoHwAFBFNpdGUfBQULU2l0ZSBTZWFyY2gfDQICHwFoZGRkZAIHDw8WBh8MBQZzZWFyY2gfAAUGU2VhcmNoHw0CAmRkAgIPZBYEZg8PFgQfBAUWU2VsZWN0IHRoZSBzZWFyY2ggdHlwZR8FBRZTZWxlY3QgdGhlIHNlYXJjaCB0eXBlZGQCAg8PFgYfDAUGc2VhcmNoHwAFBlNlYXJjaB8NAgJkZAIFD2QWAmYPDxYEHwUFBlJhZGRobx4LTmF2aWdhdGVVcmwFL2h0dHA6Ly9yYWRkaG8ub3JnL0FjY3VlaWwvdGFiaWQvOTYvRGVmYXVsdC5hc3B4ZGQCBw9kFgJmDxYCHwsFKkRubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTUxMxYCAgEPZBYMAgEPDxYCHwFoZGQCAw9kFgICAQ8PZBYCHwsFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTEMWAgIBD2QWAgICDxYCHwFoZAIFD2QWAmYPDxYCHwFoZGQCBg9kFgJmDw8WAh8BaGRkAgcPZBYCZg8PFgIfAWhkZAIID2QWAmYPDxYCHwFoZGQCCw9kFgRmDxYCHwsFNkRubk1vZHVsZSBEbm5Nb2R1bGUtTGl2ZUNvbnRlbnRTbGlkZVNob3cgRG5uTW9kdWxlLTUxOBYCAgEPZBYMAgEPDxYCHwFoZGQCAw9kFgICAQ8PZBYCHwsFKUROTk1vZHVsZUNvbnRlbnQgTW9kTGl2ZUNvbnRlbnRTbGlkZVNob3dDFgICAQ9kFgJmDxYCHwAFuAk8ZGl2IGlkPSJMQ1NsaWRlU2hvdzUxOCI+PGEgaHJlZj0iaHR0cDovL3d3dy5tYWNyb21lZGlhLmNvbS9nby9nZXRmbGFzaHBsYXllciI+R2V0IExhdGVzdCBGbGFzaCBQbGF5ZXI8L2E+PC9kaXY+IA0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KdmFyIExDU1M1MTggPSBuZXcgU1dGT2JqZWN0KCIvZGVza3RvcG1vZHVsZXMvbGl2ZWNvbnRlbnRzbGlkZXNob3cvaW1hZ2Vyb3RhdG9yLnN3ZiIsIlJvdGF0b3I1MTgiLCI5MTEiLCIyMDAiLCI3Iik7DQpMQ1NTNTE4LmFkZFZhcmlhYmxlKCJmaWxlIixlc2NhcGUoIi9kZXNrdG9wbW9kdWxlcy9saXZlY29udGVudHNsaWRlc2hvdy94bWxwcm92aWRlci5hc3B4P3RhYklkPTk2Jm1vZElkPTUxOCZIb21lUGF0aD0vUG9ydGFscy8xLyIpKTsNCkxDU1M1MTguYWRkVmFyaWFibGUoImJhY2tjb2xvciIsIjB4RkZGRkZGIik7DQpMQ1NTNTE4LmFkZFZhcmlhYmxlKCJ0eXBlIiwieG1sIik7DQpMQ1NTNTE4LmFkZFBhcmFtKCJ3bW9kZSIsICJ0cmFuc3BhcmVudCIpOw0KTENTUzUxOC5hZGRQYXJhbSgibWVudSIsICJmYWxzZSIpOw0KTENTUzUxOC5hZGRWYXJpYWJsZSgibGlua3RhcmdldCIsIl9zZWxmIik7DQpMQ1NTNTE4LmFkZFZhcmlhYmxlKCJyb3RhdGV0aW1lIiwiNyIpOw0KTENTUzUxOC5hZGRWYXJpYWJsZSgidHJhbnNpdGlvbiIsImJ1YmJsZXMiKTsNCkxDU1M1MTguYWRkVmFyaWFibGUoInNodWZmbGUiLCJ0cnVlIik7DQpMQ1NTNTE4LmFkZFZhcmlhYmxlKCJrZW5idXJucyIsImZhbHNlIik7DQpMQ1NTNTE4LmFkZFZhcmlhYmxlKCJzaG93bmF2aWdhdGlvbiIsImZhbHNlIik7DQpMQ1NTNTE4LmFkZFZhcmlhYmxlKCJzaG93aWNvbnMiLCJmYWxzZSIpOw0KTENTUzUxOC5hZGRWYXJpYWJsZSgic2hvd2Rvd25sb2FkIiwiZmFsc2UiKTsNCkxDU1M1MTguYWRkVmFyaWFibGUoInNob3dzdG9wIiwiZmFsc2UiKTsNCkxDU1M1MTguYWRkVmFyaWFibGUoImxhcmdlY29udHJvbHMiLCJmYWxzZSIpOw0KTENTUzUxOC5hZGRWYXJpYWJsZSgibGlua2Zyb21kaXNwbGF5IiwidHJ1ZSIpOw0KTENTUzUxOC5hZGRWYXJpYWJsZSgib3ZlcnN0cmV0Y2giLCJmYWxzZSIpOw0KTENTUzUxOC5hZGRWYXJpYWJsZSgid2lkdGgiLCI5MTEiKTsNCkxDU1M1MTguYWRkVmFyaWFibGUoImhlaWdodCIsIjIwMCIpOw0KTENTUzUxOC53cml0ZSgiTENTbGlkZVNob3c1MTgiKTsNCjwvc2NyaXB0PmQCBQ9kFgJmDw8WAh8BaGRkAgYPZBYCZg8PFgIfAWhkZAIHD2QWAmYPDxYCHwFoZGQCCA9kFgJmDw8WAh8BaGRkAgEPFgIfCwUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNTMyFgICAQ9kFgJmD2QWAgIBDw9kFgIfCwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQxYCAgEPZBYCAgIPFgIfAWhkAg8PFgIfCwUYTGVmdE91dFBhbmUgRE5ORW1wdHlQYW5lZAIRDxYCHwsFFFRvcFBhbmUgRE5ORW1wdHlQYW5lZAITD2QWAmYPFgIfCwU5RG5uTW9kdWxlIERubk1vZHVsZS1Ebm5Gb3JnZS1MYXRlc3RBcnRpY2xlcyBEbm5Nb2R1bGUtNTIyFgICAQ9kFgwCAQ8PFgIfAWhkZAIDD2QWAgIBDw9kFgIfCwUrRE5OTW9kdWxlQ29udGVudCBNb2REbm5Gb3JnZUxhdGVzdEFydGljbGVzQ2QCBQ9kFgJmDw8WAh8BaGRkAgYPZBYCZg8PFgIfAWhkZAIHD2QWAmYPDxYCHwFoZGQCCA9kFgJmDw8WAh8BaGRkAhUPFgIfAWcWAmYPFgIfCwUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNTExFgICAQ9kFgwCAQ8PFgIfAWhkZAIDD2QWAgIBDw9kFgIfCwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQxYCAgEPZBYCAgIPFgIfAWhkAgUPZBYCZg8PFgIfAWhkZAIGD2QWAmYPDxYCHwFoZGQCBw9kFgJmDw8WAh8BaGRkAggPZBYCZg8PFgIfAWhkZAIXDxYCHwsFFUxlZnRQYW5lIEROTkVtcHR5UGFuZWQCGQ8WAh8LBRhDb250ZW50UGFuZSBETk5FbXB0eVBhbmVkAhsPFgIfCwUWUmlnaHRQYW5lIEROTkVtcHR5UGFuZWQCHQ8WAh8LBRtCb3R0b21MZWZ0UGFuZSBETk5FbXB0eVBhbmVkAh8PFgIfCwUcQm90dG9tUmlnaHRQYW5lIEROTkVtcHR5UGFuZWQCIQ9kFghmDxYCHwsFKkRubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTQyMRYCAgEPZBYCZg8WAh8LBQxETk5BbGlnbmxlZnQWAgIBDw9kFgIfCwUcRE5OTW9kdWxlQ29udGVudCBNb2RETk5IVE1MQxYCAgEPZBYCAgIPFgIfAWhkAgEPFgIfCwUqRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNDIyFgICAQ9kFgJmDxYCHwsFDEROTkFsaWdubGVmdBYCAgEPD2QWAh8LBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDFgICAQ9kFgICAg8WAh8BaGQCAg8WAh8LBSpEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS00MjMWAgIBD2QWDgIBD2QWAgICDxYCHwFoFgZmDxYCHwUFBEVkaXRkAgEPFgIfBQUGVXBkYXRlZAICDxYCHwUFBkNhbmNlbGQCAw8PFgIfAWhkZAIFDxYCHwsFGmNvbnRlbnRwYW5lIEROTkFsaWduY2VudGVyFgICAQ8PZBYCHwsFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTEMWAgIBD2QWAgICDxYCHwFoZAIHD2QWAmYPDxYCHwFoZGQCCA9kFgJmDw8WAh8BaGRkAgkPZBYCZg8PFgIfAWhkZAIKD2QWAmYPDxYCHwFoZGQCAw8WAh8LBS1Ebm5Nb2R1bGUgRG5uTW9kdWxlLUxpdmVDb250ZW50IERubk1vZHVsZS01MTcWAgIBD2QWDAIBDw8WAh8BaGRkAgMPZBYCAgEPD2QWAh8LBSBETk5Nb2R1bGVDb250ZW50IE1vZExpdmVDb250ZW50QxYCAgEPZBYIZg88KwAJAgAPFgoeD1JlcGVhdERpcmVjdGlvbgsqKVN5c3RlbS5XZWIuVUkuV2ViQ29udHJvbHMuUmVwZWF0RGlyZWN0aW9uAB4NUmVwZWF0Q29sdW1ucwIEHgxSZXBlYXRMYXlvdXQLKiZTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLlJlcGVhdExheW91dAAeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgNkCBYIHgtDZWxsU3BhY2luZ2YeD0hvcml6b250YWxBbGlnbgsqKVN5c3RlbS5XZWIuVUkuV2ViQ29udHJvbHMuSG9yaXpvbnRhbEFsaWduAh4LQ2VsbFBhZGRpbmdmHw0CgIBYFgZmD2QWAmYPFQGXBDxhIGlkPSI1MTdMQ0VsZW1lbnQxIiBocmVmPSIjIiBjbGFzcz0iaGlnaHNsaWRlIiBvbmNsaWNrPSJyZXR1cm4gaHMuaHRtbEV4cGFuZCh0aGlzLCB7Y2FwdGlvbklkOiAnNTE3Q2FwdGlvbjEnLGNvbnRlbnRJZDogJzUxN0NvbnRlbnQxJyxvdXRsaW5lVHlwZTogJ1JvdW5kZWQtV2hpdGUnLGFsaWduOiAnYXV0bycscHJlc2VydmVDb250ZW50OiBmYWxzZSxzbGlkZXNob3dHcm91cDogJ0xpdmVDb250ZW50NTE3J30se01vZHVsZUlkOiAnNTE3JywgVGFiSWQ6ICc5NicsIEVsZW1lbnRJZDogJzEnLCBDbGllbnRTZXNzaW9uVVJMOiAnaHR0cDovL3JhZGRoby5vcmcvZGVza3RvcG1vZHVsZXMvbGl2ZWNvbnRlbnQvY2xpZW50c2Vzc2lvbi5hc3B4J30gICkiPiA8aW1nIHNyYz0iL2Rlc2t0b3Btb2R1bGVzL2xpdmVjb250ZW50L1RodW1ibmFpbC5hc3B4P0hvbWVEaXI9JTJmUG9ydGFscyUyZjElMmYmTW9kdWxlSWQ9NTE3JlNpemU9NSZJbWFnZT0yMDExXzA5XzI3X3NlbmVnYWwuanBnIiB0aXRsZT0ic2VuZWdhbCIgYm9yZGVyPSIwIiAvPjwvYT5kAgEPZBYCZg8VAYQEPGEgaWQ9IjUxN0xDRWxlbWVudDAiIGhyZWY9IiMiIGNsYXNzPSJoaWdoc2xpZGUiIG9uY2xpY2s9InJldHVybiBocy5odG1sRXhwYW5kKHRoaXMsIHtjb250ZW50SWQ6ICc1MTdDb250ZW50MCcsb3V0bGluZVR5cGU6ICdSb3VuZGVkLVdoaXRlJyxhbGlnbjogJ2F1dG8nLHByZXNlcnZlQ29udGVudDogZmFsc2Usc2xpZGVzaG93R3JvdXA6ICdMaXZlQ29udGVudDUxNyd9LHtNb2R1bGVJZDogJzUxNycsIFRhYklkOiAnOTYnLCBFbGVtZW50SWQ6ICcwJywgQ2xpZW50U2Vzc2lvblVSTDogJ2h0dHA6Ly9yYWRkaG8ub3JnL2Rlc2t0b3Btb2R1bGVzL2xpdmVjb250ZW50L2NsaWVudHNlc3Npb24uYXNweCd9ICApIj4gPGltZyBzcmM9Ii9kZXNrdG9wbW9kdWxlcy9saXZlY29udGVudC9UaHVtYm5haWwuYXNweD9Ib21lRGlyPSUyZlBvcnRhbHMlMmYxJTJmJk1vZHVsZUlkPTUxNyZTaXplPTUmSW1hZ2U9MjAxMV8wOV8yOF9tYXVyaXRhbmllLmpwZyIgdGl0bGU9Im1hdXJpdGFuaWUiIGJvcmRlcj0iMCIgLz48L2E+ZAICD2QWAmYPFQGuBDxhIGlkPSI1MTdMQ0VsZW1lbnQyIiBocmVmPSIjIiBjbGFzcz0iaGlnaHNsaWRlIiBvbmNsaWNrPSJyZXR1cm4gaHMuaHRtbEV4cGFuZCh0aGlzLCB7Y2FwdGlvbklkOiAnNTE3Q2FwdGlvbjInLGNvbnRlbnRJZDogJzUxN0NvbnRlbnQyJyxvdXRsaW5lVHlwZTogJ1JvdW5kZWQtV2hpdGUnLGFsaWduOiAnYXV0bycscHJlc2VydmVDb250ZW50OiBmYWxzZSxzbGlkZXNob3dHcm91cDogJ0xpdmVDb250ZW50NTE3J30se01vZHVsZUlkOiAnNTE3JywgVGFiSWQ6ICc5NicsIEVsZW1lbnRJZDogJzInLCBDbGllbnRTZXNzaW9uVVJMOiAnaHR0cDovL3JhZGRoby5vcmcvZGVza3RvcG1vZHVsZXMvbGl2ZWNvbnRlbnQvY2xpZW50c2Vzc2lvbi5hc3B4J30gICkiPiA8aW1nIHNyYz0iL2Rlc2t0b3Btb2R1bGVzL2xpdmVjb250ZW50L1RodW1ibmFpbC5hc3B4P0hvbWVEaXI9JTJmUG9ydGFscyUyZjElMmYmTW9kdWxlSWQ9NTE3JlNpemU9NSZJbWFnZT0yMDExXzA5XzA1X2VsZWN0aW9uc19zZW5lZ2FsLmpwZyIgdGl0bGU9IsOJbGVjdGlvbnMgU8OpbsOpZ2FsIiBib3JkZXI9IjAiIC8+PC9hPmQCAQ8WAh8ABZwBPCEtLUxpdmUgQ29udGVudCAtIERvdE5ldE51a2UgTW9kdWxlIEJ5IE1hbmRlZXBzLmNvbQ0KTW9yZSBJbmZvcm1hdGlvbiBhdCBodHRwOi8vZG5uLm1hbmRlZXBzLmNvbS9saXZlK2NvbnRlbnQuYXNweA0KNjE5ZTI2NzU4YTE1OWFiNmZhZmRhNGU2YWM4MWRjZjMtLT4NCg0KZAICDxYCHwAF2wE8ZGl2IHN0eWxlPSJwb3NpdGlvbjphYnNvbHV0ZTsgZGlzcGxheTpub25lOyB2aXNpYmlsaXR5OmhpZGRlbiI+DQo8ZGl2IGlkPSI1MTdDYXB0aW9uMSIgY2xhc3M9ImhpZ2hzbGlkZS1jYXB0aW9uIiA+IHNlbmVnYWwgPC9kaXY+DQo8ZGl2IGlkPSI1MTdDYXB0aW9uMiIgY2xhc3M9ImhpZ2hzbGlkZS1jYXB0aW9uIiA+IMOJbGVjdGlvbnMgU8OpbsOpZ2FsIDwvZGl2Pg0KPC9kaXY+DQpkAgMPFgIfAAWHWDxkaXYgY2xhc3M9ImhpZ2hzbGlkZS1odG1sLWNvbnRlbnQiIGlkPSI1MTdDb250ZW50MSIgIHN0eWxlPSJ3aWR0aDogOTExcHg7IGJvcmRlcjogbm9uZSI+ICA8ZGl2IHN0eWxlPSJoZWlnaHQ6MjBweDsgcGFkZGluZz0ycHgiPiA8YSBocmVmPSIjIiBvbmNsaWNrPSJyZXR1cm4gaHMuY2xvc2UodGhpcykiIGNsYXNzPSJjb250cm9sIj5GRVJNRVI8L2E+IDxhIGhyZWY9IiMiIG9uY2xpY2s9InJldHVybiBmYWxzZSIgY2xhc3M9ImhpZ2hzbGlkZS1tb3ZlIGNvbnRyb2wiPkRFUExBQ0VSPC9hPiAgPC9kaXY+ICAgPGRpdiBjbGFzcz0iaGlnaHNsaWRlLWJvZHkiPiA8cD48aW1nIGhlaWdodD0iMTk4IiB3aWR0aD0iNzAwIiBzcmM9Ii9Qb3J0YWxzLzEvcmFkZGhvX2xzZGhfYWkuanBnIiBhbHQ9IiIgLz48L3A+CjxwPiYjMTYwOzwvcD4KPGgzIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48c3Ryb25nPkNPTU1VTklRVUUgREUgUFJFU1NFPC9zdHJvbmc+PC9oMz4KPHAgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPjxzdHJvbmc+TGUgU8OpbsOpZ2FsIHZpb2xlIGzigJlvYmxpZ2F0aW9uIGRlIHByb3TDqWdlciBlbiBtYXRpw6hyZSBkZSB0b3J0dXJlIGV0IGRlIHBlaW5lcyBvdSB0cmFpdGVtZW50IGNydWVscywgaW5odW1haW5zIGV0IGTDqWdyYWRhbnRzPC9zdHJvbmc+PC9wPgo8cD5MYSBSZW5jb250cmUgQWZyaWNhaW5lIHBvdXIgbGEgRMOpZmVuc2UgZGVzIERyb2l0cyBkZSBs4oCZSG9tbWUgKFJBRERITyksIGxhIExpZ3VlIFPDqW7DqWdhbCBkZXMgRHJvaXRzIGRlIGzigJlIb21tZShMU0RIKSBldCBBbW5lc3R5IEludGVybmF0aW9uYWwvIFPDqW7DqWdhbCBzb250IHByb2ZvbmTDqW1lbnQgaW5kaWduw6llcyBwYXIgbGVzIHRyYWl0ZW1lbnRzIGluaHVtYWlucyBldCBkw6lncmFkYW50cyBjb21taXMgcGFyIGNpbnEgw6lsw6ltZW50cyBkZSBsYSBicmlnYWRlIGRlIGdlbmRhcm1lcmllIGRlIFRoaWFyb3llIHN1ciBNb3IgVGFsbGEgU293IGV0IEJhYmFjYXIgU2FraG8uIDxiciAvPgo8YnIgLz4KRGVzIGpldW5lcyBkdSBxdWFydGllciBIYW1kYWxsYXllIDQgZGUgVGhpYXJveWUgc+KAmcOpdGFpZW50IG9yZ2FuaXPDqXMsIGxlIDE2IHNlcHRlbWJyZSAyMDExLCBwb3VyIGzigJnDqXZhY3VhdGlvbiBkZXMgZWF1eCBkZSBwbHVpZXMgw6AgbGEgc3VpdGUgZGUgbOKAmWlub25kYXRpb24gZGUgbGV1ciBxdWFydGllciA7IHVuIHZvaXNpbiBxdWkgcHLDqXRlbmQgw6p0cmUgcG9ydMOpIHByw6lqdWRpY2UsIHPigJllc3QgcGxhaW50IMOgIGxhIGJyaWdhZGUgZGUgZ2VuZGFybWVyaWUgZGUgVGhpYXJveWUgZXQmIzE2MDsgY2lucSg1KSBnZW5kYXJtZXMgZGFucyBsYSBicmlnYWRlIGRlIFRoaWFyb3llJiMxNjA7IHNvbnQgdmVudXMgY2hlcmNoZXIgTW9yIFRhbGxhIFNvdyDDomfDqSBkZSAyOSBhbnMgbWFyacOpIGV0IHDDqHJlIGTigJl1bmUgcGV0aXRlIGZpbGxlJiMxNjA7IGV0JiMxNjA7IEJhYmFjYXIgU2FraG8gw6Jnw6kgZGUgMTcgYW5zLjxiciAvPgo8YnIgLz4KU2Vsb24mIzE2MDsgbGVzIGRldXggamV1bmVzIGPigJllc3QgZGFucyBsZSB0YXhpIGNsYW5kbyBxdWkgbGVzIGFtZW5haXQgcXXigJlpbHMgb250IGNvbW1lbmPDqSDDoCBmYWlyZSBs4oCZb2JqZXQgZGUgbWF1dmFpcyB0cmFpdGVtZW50cy4gVW5lIGZvaXMgZGFucyBs4oCZZW5jZWludGUgZGUgbGEgYnJpZ2FkZSBkZSBsYSBHZW5kYXJtZXJpZSwgTW9yIFRhbGxhIFNvdyBldCBsZSBtaW5ldXIgQmFiYWNhciBTYWtobyBvbnQgY29tbWVuY8OpIMOgIHJlY2V2b2lyIGluc3VsdGVzIGFjY29tcGFnbsOpcyBkZSBjb3VwcyBkZSBib3R0ZSwgZGUgbWF0cmFxdWUsIGV0IGRlIGLDonRvbiwgYXZhbnQgw6p0cmUgamV0w6lzIGRhbnMgdmlvbG9uIHRvdXMgbnVzIHNhbnMgYXVjdW4gc291cyB2w6p0ZW1lbnQuIElsIGZhdXQgcmFwcGVsZXIgcXVlIGxlIGpldW5lIEJhYmFjYXIgU2FraG8gYSDDqXTDqSDDqWzDqHZlIGRlIE1vciBUYWxsYSBTb3cuICYjMTYwOzxiciAvPgo8YnIgLz4KRmFjZSDDoCBjZXR0ZSBpbmp1c3RpY2UsIGxlcyBwb3B1bGF0aW9ucyBzZSBzb250IG1vYmlsaXPDqWVzIGRldmFudCBsYSBicmlnYWRlIHBvdXIgZXhpZ2VyIGxldXIgbGliw6lyYXRpb24gOyBj4oCZZXN0IGFpbnNpLCB0csOocyBtYWwgYXUgcG9pbnQsIGlscyBmdXJlbnQgw6l2YWN1w6lzIMOgIGzigJlow7RwaXRhbCBkZSBQaWtpbmUgcGFyIGxlIENvbW1hbmRhbnQgZGUgbGEgQnJpZ2FkZSBxdWkgYSBwcmlzIGVuIGNoYXJnZSB0b3VzIGxlcyBmcmFpcyBtw6lkaWNhdXguIDxiciAvPgpNb3IgVGFsbGEgU293IHPigJllc3QgcmV0cm91dsOpIGF2ZWMgdW5lIGPDtHRlbGV0dGUgY2Fzc8OpZSwgbGUgZ2Vub3UgZMOpYm9pdMOpIGV0IGzigJnFk2lsIGluZmVjdMOpIGFsb3JzIHF1ZSBqZXVuZSBCYWJhY2FyJiMxNjA7IFNha2hvIHNvdWZmcmUgZGUgY29udHVzaW9ucyBzdXIgbGV0b3V0IGxlIGNvcnBzIGV0IHBhcnRpY3VsacOocmVtZW50IMOgJiMxNjA7IGxhIGhhbmNoZSBnYXVjaGUuPGJyIC8+ClVuZSBwbGFpbnRlIGEgw6l0w6kgZMOpcG9zw6llIHBhciBsZXMgdmljdGltZXMgbGUgbWVyY3JlZGkgMjEgc2VwdGVtYnJlIDIwMTEuPGJyIC8+CjxiciAvPgpMYSBSQURESE8sIGxhIExTREggZXQgQUkvIFPDqW7DqWdhbCA6PC9wPgo8dWw+CiAgICA8bGk+RXhpZ2VudCBxdeKAmXVuZSBlbnF1w6p0ZSBqdWRpY2lhaXJlIHNvaXQgb3V2ZXJ0ZSYjMTYwOyBpbW3DqWRpYXRlbWVudCBldCBxdeKAmWVsbGUgc29pdCBlZmZpY2FjZSwgZXhoYXVzdGl2ZSBhZmluIHF1ZSBsZXMgcmVzcG9uc2FibGVzIGRlIGNlcyBhY3RlcyBkZSBtYXV2YWlzIHRyYWl0ZW1lbnRzIHNvaWVudCBhcnLDqnTDqXMgZXQgc2FuY3Rpb25uw6lzIGNvbmZvcm3DqW1lbnQgw6AgbGEgbG9pIDs8L2xpPgogICAgPGxpPlJhcHBlbGxlbnQgcXVlIGxlIFPDqW7DqWdhbCBlc3QgcGFydGllIMOgIGxhIENvbnZlbnRpb24gZGVzIE5hdGlvbnMgVW5pZXMgY29udHJlIGxhIHRvcnR1cmUgZXQgYXV0cmVzIHBlaW5lcyBvdSB0cmFpdGVtZW50cyBjcnVlbHMsIGluaHVtYWlucyBvdSBkw6lncmFkYW50cywgYXUgUGFjdGUgaW50ZXJuYXRpb25hbCByZWxhdGlmIGF1eCBkcm9pdHMgY2l2aWxzIGV0IHBvbGl0aXF1ZXMgKFBJRENQKSBldCDDoCBsYSBDaGFydGUgYWZyaWNhaW5lIGRlcyBkcm9pdHMgZGUgbOKAmWhvbW1lIGV0IGRlcyBwZXVwbGVzIHF1aSBwcm9oaWJlbnQgbGEgdG9ydHVyZSBldCBsZXMgbWF1dmFpcyB0cmFpdGVtZW50cyA7PC9saT4KICAgIDxsaT5Sw6ktZXhwcmltZW50JiMxNjA7IGxldXIgcHLDqW9jY3VwYXRpb24gcXVhbnQgYXUgbm9uIHJlc3BlY3QgcGFyIGxlIFPDqW7DqWdhbCBkZSBs4oCZT2JsaWdhdGlvbiBkZSBwcm90w6lnZXIgZW4gbWF0acOocmUgZGUgdG9ydHVyZSBldCBkZSB0cmFpdGVtZW50cyBjcnVlbHMsIGluaHVtYWlucyBldCBkw6lncmFkYW50cyBhdmVjIGxlcyBjYXMgZMOpasOgIGNvbm51cyBkZSBBbGlvdW5lIEJhZGFyYSBNYmVuZ3VlLCBEb21pbmlxdWUgTG9weSwgYWxpb3VuZSBCYWRhcmEgRGlvcCwgQWlkYSBDYW1hcmEsIE1hbWFkb3UgQmFraG91bSwgQWJvdWxheWUgV2FkZSBZaW5naG91ICYjMTYwOzwvbGk+CjwvdWw+CjxwPkZhaXQgw6AgRGFrYXIgbGUgMjcgc2VwdGVtYnJlIDIwMTEgJiMxNjA7PGJyIC8+Ci0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTxiciAvPgomIzE2MDtTZXlkaSBHYXNzYW1hJiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7IE1lIEFzc2FuZSBEaW9tYSBOZGlheWUmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsmIzE2MDsgQWxpb3VuZSBUaW5lIDxiciAvPgpEaXJlY3RldXIgRXjDqWN1dGlmIEFtbmVzdHkvU8OpbsOpZ2FsJiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7JiMxNjA7IFByw6lzaWRlbnQgZGUgbGEgTFNESCYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyYjMTYwOyBQcsOpc2lkZW50IGRlIGxhIFJBREQ8L3A+CjxwPiYjMTYwOzwvcD4gPC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iaGlnaHNsaWRlLWh0bWwtY29udGVudCIgaWQ9IjUxN0NvbnRlbnQwIiAgc3R5bGU9IndpZHRoOiA5MTFweDsgYm9yZGVyOiBub25lIj4gIDxkaXYgc3R5bGU9ImhlaWdodDoyMHB4OyBwYWRkaW5nPTJweCI+IDxhIGhyZWY9IiMiIG9uY2xpY2s9InJldHVybiBocy5jbG9zZSh0aGlzKSIgY2xhc3M9ImNvbnRyb2wiPkZFUk1FUjwvYT4gPGEgaHJlZj0iIyIgb25jbGljaz0icmV0dXJuIGZhbHNlIiBjbGFzcz0iaGlnaHNsaWRlLW1vdmUgY29udHJvbCI+REVQTEFDRVI8L2E+ICA8L2Rpdj4gICA8ZGl2IGNsYXNzPSJoaWdoc2xpZGUtYm9keSI+IDxwPjxpbWcgaGVpZ2h0PSI5MiIgd2lkdGg9IjY1MCIgc3JjPSIvUG9ydGFscy8xL2NvbW11bmlxdWVfbG9nby5naWYiIGFsdD0iIiAvPjwvcD4KPHA+JiMxNjA7PC9wPgo8cD48c3Ryb25nPk1BVVJJVEFOSUUgOiBTdG9wcGVyIGxhIHZpb2xlbmNlIGTigJlFdGF0JiMxNjA7IGV0IHByw7RuZXIgbGEgY29uY2VydGF0aW9uIGluY2x1c2l2ZSA8L3N0cm9uZz48L3A+CjxwPjxiciAvPgpMYSBSZW5jb250cmUgQWZyaWNhaW5lIHBvdXIgbGEgRMOpZmVuc2UgZGVzIERyb2l0cyBkZSBs4oCZSG9tbWUgKFJBRERITykgZXN0IHRyw6hzIHByw6lvY2N1cMOpZSBwYXIgbGVzIGFmZnJvbnRlbWVudHMgZW50cmUgbGVzIGZvcmNlcyBkZSBzw6ljdXJpdMOpJiMxNjA7IG1hdXJpdGFuaWVubmVzIGV0IGxlcyBtYW5pZmVzdGFudHMgbsOpZ3JvLW1hdXJpdGFuaWVucyBkdSBtb3V2ZW1lbnQgwqsmIzE2MDsgdG91Y2hlIHBhcyDDoCBuYXRpb25hbGl0w6kgwrsuPGJyIC8+CjxiciAvPgpFbiBlZmZldCDDoCBLYcOpZGkgLCA0MzAga20gYXUgc3VkLWVzdCBkZSBOb3Vha2Nob3R0IGEgw6l0w6kgbGUgdGjDqcOidHJlIGRlIHZpb2xlbnRlcyBtYW5pZmVzdGF0aW9ucyBzdWl2aWVzIGRlIGzigJlhcnJlc3RhdGlvbiBkZSBwbHVzIHRyZW50ZSgzMCkgcGVyc29ubmVzLCBsZSBzYW1lZGkgZXQgZGltYW5jaGUgcGFzc8OpcyBlbiBndWlzZSBkZSBwcm90ZXN0YXRpb24mIzE2MDsgY29udHJlIGwnb3DDqXJhdGlvbiBkZSByZWNlbnNlbWVudCBpbml0acOpZSBwYXIgbGUgZ291dmVybmVtZW50IGRlcHVpcyBsZSA2IG1haSAyMDExLCBxdWkgdmlzZSDDoCBtZXR0cmUgZW4gc2VydmljZSB1biBzeXN0w6htZSBiaW9tw6l0cmlxdWUgZGUgZMOpZmluaXRpb24gZOKAmWlkZW50aXTDqSBzw6ljdXJpc8OpZSBlbiB2dWUgZGUgbHV0dGVyIGNvbnRyZSBsYSBmYWxzaWZpY2F0aW9uIGRlcyBkb2N1bWVudHMgZOKAmWlkZW50aXTDqSwgbOKAmWltbWlncmF0aW9uIGNsYW5kZXN0aW5lLCBsZSB0cmFmaWMgZGUgc3R1cMOpZmlhbnRzIGV0IGxlIGNyaW1lIG9yZ2FuaXPDqSAuPGJyIC8+CjxiciAvPgpDZSBwcm9qZXQgZXN0IGTDqW5vbmPDqSBwYXIgbGUgTW91dmVtZW50IMKrJiMxNjA7IHRvdWNoZSBwYXMgw6AgbmF0aW9uYWxpdMOpIMK7IHF1aSBsZSBqdWdlJiMxNjA7IGNvbW1lIHVuZSYjMTYwOyBzdGlnbWF0aXNhdGlvbiBldCB1bmUmIzE2MDsgZGlzY3JpbWluYXRpb24gZGUgbGEgY29tbXVuYXV0w6kmIzE2MDsgbsOpZ3JvLW1hdXJpdGFuaWVubmUuJiMxNjA7JiMxNjA7IDxiciAvPgpMZSBtYXJkaSAyNyBzZXB0ZW1icmUgMjAxMSwgZGVzIGFmZnJvbnRlbWVudHMgZW50cmUgZm9yY2UgZGUgbCdvcmRyZSBldCBtYW5pZmVzdGFudHMsIGRhbnMgbGEgdmlsbGUgZGUgTWFnYW0sIMOgIGwnZXN0IGRlIEthw6lkaSBvbnQgZmFpdCB1biBtb3J0IGV0IHBsdXNpZXVycyBibGVzc8Opcy48YnIgLz4KPGJyIC8+CkxlIDI0IHNlcHRlbWJyZSDDoCBOb3Vha2Nob3R0LCBkZXMgbWFuaWZlc3RhbnRzIG9udCBldSBkZXMgYWZmcm9udGVtZW50cyBhdmVjIGRlcyDDqWzDqW1lbnRzIGRlcyBmb3JjZXMgZGUgcG9saWNlLCDDoCBs4oCZb2NjYXNpb24gZOKAmXVuZSBtYXJjaGUgY29udHJlIGzigJllbnLDtGxlbWVudCBxdSdpbHMgY29uc2lkw6hyZW50IGNvbW1lICJ1bmUgbWFuxZN1dnJlIHZpc2FudCDDoCBkw6ljaG9pciBsZXMgbsOpZ3JvLW1hdXJpdGFuaWVucyBkZSBsZXVyIG5hdGlvbmFsaXTDqSIuIElsIHkgYSBldSBkZXMgcGVyc29ubmVzIGFycsOqdMOpZXMgZXQvb3UgYmxlc3PDqWVzLjxiciAvPgo8YnIgLz4KTGEgUmVuY29udHJlIEFmcmljYWluZSBwb3VyIGxhIETDqWZlbnNlIGRlcyBEcm9pdHMgZGUgbOKAmUhvbW1lIChSQURESE8pIDo8L3A+Cjx1bD4KICAgIDxsaT5Db25kYW1uZSBjZXR0ZSB2aW9sZW5jZSBwb2xpY2nDqHJlIGF2ZXVnbGUgcXVpIHJhcHBlbGxlIGxlcyBtYXV2YWlzIHNvdXZlbmlycyBkdSByw6lnaW1lIGTigJlPdWxkIFRheWEsJiMxNjA7JiMxNjA7PC9saT4KICAgIDxsaT5FeGlnZSBsYSBsaWLDqXJhdGlvbiBzYW5zIGNvbmRpdGlvbiBkZSB0b3V0ZXMgbGVzJiMxNjA7IHBlcnNvbm5lcyBhcnLDqnTDqWVzJiMxNjA7JiMxNjA7IGRhbnMgbGUgY2FkcmUgZGUgY2V0dGUgbWFuaWZlc3RhdGlvbiBjb250cmUgbGUgcHJvamV0IGRlIHJlY2Vuc2VtZW50IDs8L2xpPgogICAgPGxpPkludml0ZSBsZSBHb3V2ZXJuZW1lbnQgbWF1cml0YW5pZW4gw6AgcHJpdmlsw6lnaWVyIGxlIGRpYWxvZ3VlIGluY2x1c2lmIGNvbW1lIGlsIGzigJlhdmFpdCBmYWl0IGRhbnMgcmVjaGVyY2hlciBk4oCZdW5lIHNvbHV0aW9uIGF1IHBhc3NpZiBodW1hbml0YWlyZSBtYXVyaXRhbmllbiA7JiMxNjA7PC9saT4KPC91bD4KPHA+JiMxNjA7JiMxNjA7JiMxNjA7IDxiciAvPgpGYWl0IMOgIERha2FyIGxlIDI4IHNlcHRlbWJyZSAyMDExPC9wPgo8cD48YnIgLz4KTGUgUHLDqXNpZGVudCA8YnIgLz4KQWxpb3VuZSBUaW5lIDwvcD4KPHA+JiMxNjA7IDwvcD4gPC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0iaGlnaHNsaWRlLWh0bWwtY29udGVudCIgaWQ9IjUxN0NvbnRlbnQyIiAgc3R5bGU9IndpZHRoOiA5MTFweDsgYm9yZGVyOiBub25lIj4gIDxkaXYgc3R5bGU9ImhlaWdodDoyMHB4OyBwYWRkaW5nPTJweCI+IDxhIGhyZWY9IiMiIG9uY2xpY2s9InJldHVybiBocy5jbG9zZSh0aGlzKSIgY2xhc3M9ImNvbnRyb2wiPkZFUk1FUjwvYT4gPGEgaHJlZj0iIyIgb25jbGljaz0icmV0dXJuIGZhbHNlIiBjbGFzcz0iaGlnaHNsaWRlLW1vdmUgY29udHJvbCI+REVQTEFDRVI8L2E+ICA8L2Rpdj4gICA8ZGl2IGNsYXNzPSJoaWdoc2xpZGUtYm9keSI+IDxwIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48c3Ryb25nPkNvbW11bmlxdcOpIGRlIFByZXNzZTwvc3Ryb25nPjwvcD4KPHA+TGUgQ29sbGVjdGlmIGRlcyBPcmdhbmlzYXRpb25zIGRlIGxhIFNvY2nDqXTDqSBDaXZpbGUgcsOpdW5pIGxlIDUgU2VwdGVtYnJlIDIwMTEgw6Agc29uIHNpw6hnZSDDoCBFbmRhIEdyYWYgU2FoZWwgYSBleGFtaW7DqSBs4oCZw6l2b2x1dGlvbiBkdSBwcm9jZXNzdXMgw6lsZWN0b3JhbCBhdSBTw6luw6lnYWwuPGJyIC8+CjxiciAvPgpBcHLDqHMgc+KAmcOqdHJlIGbDqWxpY2l0w6kgZHUgdHJhdmFpbCBjb25zdHJ1Y3RpZiBkdSBDb21pdMOpIGRlIFZlaWxsZSBldCBkZSBTdWl2aSBkZXMgcmVjb21tYW5kYXRpb25zIGRlIGzigJlhdWRpdCBkdSBmaWNoaWVyIMOpbGVjdG9yYWwsIGxlIENvbGxlY3RpZiByw6lpdMOocmUgc2Egc2F0aXNmYWN0aW9uIHBvdXIgbOKAmWFwcG9ydCBjb25zw6lxdWVudCBldCBsZSByw7RsZSBkZSByw6lndWxhdGlvbiBqb3XDqWUgcGFyIHNlcyByZXByw6lzZW50YW50cyBhdSBzZWluIGR1ZGl0IENvbWl0w6kuIDxiciAvPgo8YnIgLz4KRW4gZXhhbWluYW50IGxlIHBvaW50IHJlbGF0aWYgw6AgbGEgY2F1dGlvbiBleGlnw6llIHBvdXIgbGVzIGNhbmRpZGF0dXJlcyBhdXggw6lsZWN0aW9ucyBwcsOpc2lkZW50aWVsbGVzLCBpbCB0aWVudCDDoCBtYXJxdWVyIHNvbiBkw6lzYWNjb3JkIHRvdGFsIHN1ciBsZSBtb250YW50IGZpeMOpIHBhciBsZSBnb3V2ZXJuZW1lbnQuIExhIGNhdXRpb24gcXVpIHPigJnDqWxldmFpdCDDoCAyNSBtaWxsaW9ucyBsb3JzIGRlIGzigJnDqWxlY3Rpb24gcHLDqXNpZGVudGllbGxlIGRlIDIwMDcsIHZpZW50IGTigJnDqnRyZSBwb3J0w6llIMOgIDY1IG1pbGxpb25zLiBDZXR0ZSBhdWdtZW50YXRpb24gdHJhZHVpdCBzZWxvbiBsdWksIHVuIHJlY3VsIGTDqW1vY3JhdGlxdWUmIzE2MDsgZXQgbmUgcGV1dCBlbiBhdWN1bmUgZmHDp29uIMOqdHJlIGp1c3RpZmnDqWUgcGFyIGxlcyBhcmd1bWVudHMgYXZhbmPDqXMgcGFyIGzigJlhdXRvcml0w6kuPGJyIC8+CjxiciAvPgpVbiB0b3VyIGTigJlob3Jpem9uIGRhbnMgbGVzIHBheXMgZGUgbGEgc291cyByw6lnaW9uIGxlIGNvbmZvcnRlIGRhbnMgc29uIGludGltZSBjb252aWN0aW9uIGRlIGxhIGZhaWJsZXNzZSBkZXMganVzdGlmaWNhdGlvbnMgYXZhbmPDqWVzLiBBdWN1biBwYXlzIGRlIGxhIHNvdXMgcsOpZ2lvbiBu4oCZYXR0ZWludCBjZSBuaXZlYXUgZXhvcmJpdGFudCBkZSBjYXV0aW9uLiBMZSBjaGlmZnJlIHNhdmFtbWVudCBkaXN0aWxsw6llIHBhciBjZXJ0YWlucyBzZWxvbiBsYXF1ZWxsZSBlbGxlIHPigJnDqWzDqHZlcmFpdCDDoCAxMDAgbWlsbGlvbiBhdSBCw6luaW4gZXN0IHRvdGFsZW1lbnQgZmFudGFpc2lzdGUuIExlIG1vbnRhbnQgZGUgbGEgY2F1dGlvbiBhdSBCw6luaW4gZXN0IGRlMTUgTWlsbGlvbnMgZGUgRnJhbmNzIENGQS4gPGJyIC8+CjxiciAvPgpJbCBlbnRyZSBjZXJ0ZXMgZGFucyBsZXMgcHLDqXJvZ2F0aXZlcyBkZSBs4oCZYXV0b3JpdMOpIGNoYXJnw6llIGRlcyDDqWxlY3Rpb25zIGRlIGZpeGVyIGxhIGNhdXRpb24sIG1haXMgZWxsZSBu4oCZYSBwYXMgbGUgZHJvaXQgZGUgcHJpdmVyIGxlcyBzw6luw6lnYWxhaXMgcXVpIGxlIGTDqXNpcmVudCBkZSBjb25jb3VyaXIgYXV4IHN1ZmZyYWdlcyBkZSBsZXVycyBjb25jaXRveWVucy4gTGUgcHJlbWllciBuaXZlYXUgZHUgY2hvaXggZGVzIGNhbmRpZGF0cyBhdXggw6lsZWN0aW9ucyBwcsOpc2lkZW50aWVsbGVzIG5lIHBldXQgYXZvaXIgY29tbWUgZm9uZGVtZW50IGRlcyBiYXNlcyBww6ljdW5pYWlyZXMuIExlIG1vbnRhbnQgZGUgbGEgY2F1dGlvbiBhcnLDqnTDqSBlc3QgdW5lIG1hbmnDqHJlIGTigJlpbnN0aXR1ZXIgdW4gc3VmZnJhZ2UgY2Vuc2l0YWlyZSBjb250cmFpcmUgYXV4IHZhbGV1cnMgZXQgaWTDqWF1eCBkw6ltb2NyYXRpcXVlcyBhdXhxdWVsbGVzIG5vdHJlIHBheXMgYSB0b3Vqb3VycyByw6lhZmZpcm3DqSBzb24gYXR0YWNoZW1lbnQuPGJyIC8+CjxiciAvPgpFbiBjb25zw6lxdWVuY2UgbGUgQ29sbGVjdGlmIGRlcyBPU0MgZMOpbm9uY2UgYXZlYyBmb3JjZSBjZXR0ZSBkw6ljaXNpb24gcXVpIG5lIHJlcG9zZSBzdXIgYXVjdW4gZm9uZGVtZW50IGTDqW1vY3JhdGlxdWUgZXQgcmVsw6h2ZSBk4oCZdW5lIHZpb2xhdGlvbiBkZXMgZHJvaXRzIGh1bWFpbnMgZXQgZGVzIHZhbGV1cnMgc29jaW9sb2dpcXVlcyBkdSBTw6luw6lnYWwsIGV0IGRlbWFuZGUgw6AgbOKAmWF1dG9yaXTDqSBkZSByZWNvbnNpZMOpcmVyIHNhIGTDqWNpc2lvbiBwb3VyIHVuIHByb2Nlc3N1cyDDqWxlY3RvcmFsIGFwYWlzw6ksIGp1c3RlIGV0IMOpcXVpdGFibGUuJiMxNjA7IDxiciAvPgo8YnIgLz4KQWJvcmRhbnQgbGEgcXVlc3Rpb24gZHUgZMOpY291cGFnZSBhZG1pbmlzdHJhdGlmLCBsZSBDb2xsZWN0aWYgZMOpcGxvcmUgZXQgY29uZGFtbmUgYXZlYyBmb3JjZSBsYSBkw6ljaXNpb24gcHJpc2UgcGFyIGxlIGdvdXZlcm5lbWVudCBxdWkgYSBhYm91dGkgw6AgbOKAmWluc3RhbGxhdGlvbiBkZSBkw6lsw6lnYXRpb25zIHNww6ljaWFsZXMgZW4gbGlldSBldCBwbGFjZSBkZXMgUHLDqXNpZGVudHMgZGUgY29tbXVuYXV0w6lzIHJ1cmFsZXMgZMOpbW9jcmF0aXF1ZXMgw6lsdXMsIHRyYWR1aXNhbnQgbWFuaWZlc3RlbWVudCB1biBkw6l0b3VybmVtZW50IGluYWRtaXNzaWJsZSBkZSBsYSB2b2xvbnTDqSBwb3B1bGFpcmUuIDxiciAvPgo8YnIgLz4KU3VyIGxhIHF1ZXN0aW9uIGRlIGxhIGNhbmRpZGF0dXJlIGNvbnRyb3ZlcnPDqWUgZHUgUHLDqXNpZGVudCBXYWRlIMOgIHVuIHRyb2lzacOobWUgbWFuZGF0LCBsZSBDb2xsZWN0aWYgZXhob3J0ZSBsZSBQcsOpc2lkZW50IMOgIHJldGlyZXIgc2EgY2FuZGlkYXR1cmUgY29uc2lkw6lyw6llIGNvbW1lIGluY29uc3RpdHV0aW9ubmVsbGUgZXQgaW52YWxpZGUgcGFyIGzigJnDqWNyYXNhbnRlIG1ham9yaXTDqSBkZXMgY29uc3RpdHV0aW9ubmFsaXN0ZXMgZHUgU8OpbsOpZ2FsIHBvdXIgcHLDqXNlcnZlciBsYSBwYWl4IGV0IGxhIHN0YWJpbGl0w6kgZHUgU8OpbsOpZ2FsIGV0IMOpdml0ZXIgcXVlIGxlIHBheXMgbmUgc29tYnJlIGRhbnMgbGUgY2hhb3MuPGJyIC8+CjxiciAvPgpFbmZpbiByw6lhZmZpcm1lIGF2ZWMgZm9yY2Ugc29uIHNvdXRpZW4gZXQgc29uIGFwcHVpJiMxNjA7IGF1IFByw6lzaWRlbnQgZGUgbGEgUkFEREhPIEFsaW91bmUgVGluZSBmYWNlIGF1eCB0ZW50YXRpdmVzIGRlIGRpYWJvbGlzYXRpb24gZXQgZGUgc3RpZ21hdGlzYXRpb24gZG9udCBpbCBlc3QgbOKAmW9iamV0IHBhciBkZXMgZ3JvdXB1c2N1bGVzIHBvbGl0aXF1ZXMuJiMxNjA7JiMxNjA7IDxiciAvPgo8YnIgLz4KRmFpdCDDoCBEYWthciwgbGUgMDYgc2VwdGVtYnJlIDIwMTE8YnIgLz4KPGJyIC8+CjxiciAvPgpPbnQgc2lnbsOpIGxlcyBPcmdhbmlzYXRpb25zIE1lbWJyZXMgZHUgQ29sbGVjdGlmOjwvcD4KPHA+QUpFRCDigJMgQU5BRkEgLSBFTkRBIEdSQUYgU0FIRUwgLSBPTkcgM0QgLSBGT1JVTSBDSVZJTCAtIExJR1VFIENJVklRVUUgU0VORUdBTCDigJMgT05ESCDigJMgUkFEREhPIOKAkyBSQURJIC0gUkFESU8gT1hZSkVVTkVTIC0gUkVTRUFVIFNJR0dJTCBKSUdHRU48L3A+IDwvZGl2PjwvZGl2PmQCBQ9kFgJmDw8WAh8BaGRkAgYPZBYCZg8PFgIfAWhkZAIHD2QWAmYPDxYCHwFoZGQCCA9kFgJmDw8WAh8BaGRkAiMPFgIfCwUZUmlnaHRPdXRQYW5lIEROTkVtcHR5UGFuZWQCCw8UKwACFCsAA2RkZGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRRkbm4kZG5uTkFWJGN0bGRubk5BVkP6sgu7p8LU+FwJk5gSaows1cp6" />
+
+
+<script src="/js/dnncore.js" type="text/javascript"></script><script type="text/javascript" src="/desktopmodules/LiveContent/js/swfobject.js"></script>
+<script type="text/javascript">
+ function LCSlideShowCallBack(elementid) 
+ {	
+ document.getElementById(elementid).onclick(); 
+ } 
+ </script><script type="text/javascript" src="/desktopmodules/LiveContent/js/livecontent.js"></script>
+<link rel="stylesheet" href="/desktopmodules/LiveContent/themes/default/default.css" type="text/css" media="screen" /><script type="text/javascript" > hs.graphicsDir = "/desktopmodules/LiveContent/Graphics/";  hs.creditsText = "Powered By <em>Live Content</em>"; hs.creditsHref = "http://dnn.mandeeps.com/live+content.aspx"; hs.creditsTitle = "Visit Live Content HomePage"; hs.fullExpandTitle = "Expand to actual size"; hs.restoreTitle = "Click to close image, click and drag to move. Use arrow keys for next and previous."; hs.focusTitle = "Click to bring to front"; hs.loadingText = "Loading..."; hs.loadingTitle = ""; hs.hideThumbOnExpand = true; hs.allowMultipleInstances = true; hs.showCredits = true;</script><script type="text/javascript">
+ var LiveContent = new Array();
+ </script> 
+<script type="text/javascript">
+ var LiveContentAL = new Array();
+ </script> 
+
+<script src="/ScriptResource.axd?d=zV7iA2Xftny6U1nQwfoRvDOxFhb6r5pNxeVJVg-ECUebS6pWlYVnuL5etYGldvrRSr7SAgGf12gPfLK-hVlVgKSCf9B2QYTxPWW8clrQh5NtRbtpIXsporUqWpGnk1s6E27K_OQSg5pBqYxJAfMCMOFcIlc1&amp;t=fffffffff9d85fa6" type="text/javascript"></script>
+<script src="/js/dnn.js" type="text/javascript"></script>
+<script src="/js/dnn.xml.js" type="text/javascript"></script>
+<script src="/js/dnn.xmlhttp.js" type="text/javascript"></script>
+<script src="/js/dnn.dom.positioning.js" type="text/javascript"></script>
+<script src="/js/dnn.controls.js" type="text/javascript"></script>
+<script src="/js/dnn.controls.dnnmenu.js" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQK1k+HpCQLDqsLUAgLs1ZiABAL+5PGyAgLR9YnYDor+E5zUrwXBblpDVjIIn/jbOPry" />
+
+        
+        
+
+<div id="stylebg-blue">
+<div id="dnn_wrapper">
+  <div id="dnn_HeadPane" class="HeadPane DNNEmptyPane"></div>
+    <div class="search_bg"><span id="dnn_dnnSEARCH_ClassicSearch">
+  
+  
+  <input name="dnn$dnnSEARCH$txtSearch" type="text" maxlength="255" size="20" id="dnn_dnnSEARCH_txtSearch" class="NormalTextBox" onkeydown="return __dnn_KeyDown('13', 'javascript:__doPostBack(%27dnn$dnnSEARCH$cmdSearch%27,%27%27)', event);" />&nbsp;
+  <a id="dnn_dnnSEARCH_cmdSearch" class="search" href="javascript:__doPostBack('dnn$dnnSEARCH$cmdSearch','')">Search</a>
+</span>
+
+
+</div>
+    <div class="dnn_top_left">
+    	<div class="dnn_top_right">
+        	<div class="dnn_top_bg"></div>   
+        </div>
+    </div>
+    <div class="content_left">
+    	<div class="content_right">
+        	<div class="dnn_content">
+            	<div class="dnn_logo"><a id="dnn_dnnLOGO_hypLogo" title="Raddho" href="http://raddho.org/Accueil/tabid/96/Default.aspx"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/1/logo.gif" alt="Raddho" border="0" /></a></div>
+                <div class="dnn_top_p">
+                	<div id="dnn_LogoRightPane" class="LogoRightPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-513"><a name="513"></a>
+<div class="White">
+     <div ></div>
+     <div id="dnn_ctr513_ContentPane" class="contentpane"><!-- Start_Module_513 --><div id="dnn_ctr513_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr513_HtmlModule_lblContent" class="Normal">
+	<table align="right">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a target="_blank" href="http://www.facebook.com/pages/Raddho/173285462717000"><img src="/Portals/1/facebook.png" style="width: 50px; float: right; height: 50px; border: 0px solid;" alt="" /></a></td>
+            <td><a target="_blank" href="http://twitter.com/raddho"><img src="/Portals/1/twitter.jpg" style="width: 50px; float: right; height: 50px; border: 0px solid;" alt="" /></a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</div><!-- End_Module_513 --></div>
+     <div class="c_footer_1"></div>
+</div>
+</div></div>	
+                </div>
+                <div class="clear"></div>
+                <div class="dnn_menu"><div>
+	<ul class="" id="dnn_dnnNAV_ctldnnNAV">
+		<li id="dnn_dnnNAV_ctldnnNAVctr96"><a href="http://raddho.org/Accueil/tabid/96/Default.aspx"><span>Accueil</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr117"><a><span>L'Ong</span></a><ul id="dnn_dnnNAV_ctldnnNAVsub117">
+			<li id="dnn_dnnNAV_ctldnnNAVctr118"><a href="http://raddho.org/LOng/Identit%c3%a9/tabid/118/Default.aspx"><span>Identité</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr119"><a href="http://raddho.org/LOng/Nosactions/tabid/119/Default.aspx"><span>Nos actions</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr120"><a href="http://raddho.org/LOng/Organisation/tabid/120/Default.aspx"><span>Organisation</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr147"><a href="http://raddho.org/LOng/Departements/tabid/147/Default.aspx"><span>Departements</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr121"><a href="http://raddho.org/LOng/Observatoires/tabid/121/Default.aspx"><span>Observatoires</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr122"><a href="http://raddho.org/LOng/Management/tabid/122/Default.aspx"><span>Management</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr123"><a href="http://raddho.org/LOng/Adh%c3%a9sion/tabid/123/Default.aspx"><span>Adhésion</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr124"><a href="http://raddho.org/LOng/Partenaires/tabid/124/Default.aspx"><span>Partenaires</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr125"><a href="http://raddho.org/LOng/Contacts/tabid/125/Default.aspx"><span>Contacts</span></a></li>
+		</ul></li><li id="dnn_dnnNAV_ctldnnNAVctr126"><a href="http://raddho.org/Actualit%c3%a9/tabid/126/Default.aspx"><span>Actualité</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr127"><a><span>Programmes</span></a><ul id="dnn_dnnNAV_ctldnnNAVsub127">
+			<li id="dnn_dnnNAV_ctldnnNAVctr128"><a href="http://raddho.org/Programmes/Encours/tabid/128/Default.aspx"><span>En cours</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr129"><a href="http://raddho.org/Programmes/R%c3%a9alis%c3%a9s/tabid/129/Default.aspx"><span>Réalisés</span></a></li>
+		</ul></li><li id="dnn_dnnNAV_ctldnnNAVctr130"><a><span>Ressources</span></a><ul id="dnn_dnnNAV_ctldnnNAVsub130">
+			<li id="dnn_dnnNAV_ctldnnNAVctr131"><a href="http://raddho.org/Ressources/Communiqu%c3%a9s/tabid/131/Default.aspx"><span>Communiqués</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr132"><a href="http://raddho.org/Ressources/Rapports/tabid/132/Default.aspx"><span>Rapports</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr133"><a href="http://raddho.org/Ressources/Publications/tabid/133/Default.aspx"><span>Publications</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr135"><a href="http://raddho.org/Ressources/Audio/tabid/135/Default.aspx"><span>Audio</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr175"><a href="http://raddho.org/Ressources/Vid%c3%a9os/tabid/175/Default.aspx"><span>Vidéos</span></a></li>
+		</ul></li><li id="dnn_dnnNAV_ctldnnNAVctr144"><a href="http://raddho.org/Impliquezvous/tabid/144/Default.aspx"><span>Impliquez vous</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr145"><a href="http://raddho.org/Votresoutien/tabid/145/Default.aspx"><span>Votre soutien</span></a></li><li id="dnn_dnnNAV_ctldnnNAVctr146"><a href="http://raddho.org/Noussaisir/tabid/146/Default.aspx"><span>Nous saisir</span></a></li>
+	</ul>
+</div></div>                
+                <div class="banner">
+                	<div id="dnn_BannerPane" class="BannerPane"><div class="DnnModule DnnModule-LiveContentSlideShow DnnModule-518"><a name="518"></a>
+<div class="White">
+     <div ></div>
+     <div id="dnn_ctr518_ContentPane" class="contentpane"><!-- Start_Module_518 --><div id="dnn_ctr518_ModuleContent" class="DNNModuleContent ModLiveContentSlideShowC">
+	<div id="LCSlideShow518"><a href="http://www.macromedia.com/go/getflashplayer">Get Latest Flash Player</a></div> 
+<script type="text/javascript">
+var LCSS518 = new SWFObject("/desktopmodules/livecontentslideshow/imagerotator.swf","Rotator518","911","200","7");
+LCSS518.addVariable("file",escape("/desktopmodules/livecontentslideshow/xmlprovider.aspx?tabId=96&modId=518&HomePath=/Portals/1/"));
+LCSS518.addVariable("backcolor","0xFFFFFF");
+LCSS518.addVariable("type","xml");
+LCSS518.addParam("wmode", "transparent");
+LCSS518.addParam("menu", "false");
+LCSS518.addVariable("linktarget","_self");
+LCSS518.addVariable("rotatetime","7");
+LCSS518.addVariable("transition","bubbles");
+LCSS518.addVariable("shuffle","true");
+LCSS518.addVariable("kenburns","false");
+LCSS518.addVariable("shownavigation","false");
+LCSS518.addVariable("showicons","false");
+LCSS518.addVariable("showdownload","false");
+LCSS518.addVariable("showstop","false");
+LCSS518.addVariable("largecontrols","false");
+LCSS518.addVariable("linkfromdisplay","true");
+LCSS518.addVariable("overstretch","false");
+LCSS518.addVariable("width","911");
+LCSS518.addVariable("height","200");
+LCSS518.write("LCSlideShow518");
+</script>
+
+</div><!-- End_Module_518 --></div>
+     <div class="c_footer_1"></div>
+</div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-532"><a name="532"></a><div id="dnn_ctr532_ContentPane"><!-- Start_Module_532 --><div id="dnn_ctr532_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr532_HtmlModule_lblContent" class="Normal">
+	<script language="JavaScript1.2">
+
+/*
+Cross browser Marquee script- © Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and Terms Of Use, visit http://www.dynamicdrive.com
+Credit MUST stay intact
+*/
+
+//Specify the marquee's width (in pixels)
+var marqueewidth="900px"
+//Specify the marquee's height
+var marqueeheight="20px"
+//Specify the marquee's marquee speed (larger is faster 1-10)
+var marqueespeed=2
+//configure background color:
+var marqueebgcolor="#ffffff"
+//Pause marquee onMousever (0=no. 1=yes)?
+var pauseit=1
+
+//Specify the marquee's content (don't delete <nobr> tag)
+//Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+
+var marqueecontent='<nobr><font face="Arial">Dans le cadre de l\'exécution du Programme d\'appui à l\'application et au suivi des instruments et de cadres de politique de l\'Union africaine au Sénégal en partenariat avec Oxfam Novib, un atelier de renforcement des capacités en technique d\'animation  pour la vulgarisation des instruments africains des droits humains sera organisé les 26 et 27 novembre 2011 au Siège de la RADDHO.Cet atelier est destiné aux enseignant (e)s et membres de la RADDHO des observatoires de Dakar, Saint Louis, Thiès, Diourbel, Kaolack et Kédougou.</font></nobr>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+marqueespeed=(document.all)? marqueespeed : Math.max(1, marqueespeed-1) //slow speed down by 1 for NS
+var copyspeed=marqueespeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+marqueecontent+'</span>')
+var actualwidth=''
+var cross_marquee, ns_marquee
+
+function populate(){
+if (iedom){
+cross_marquee=document.getElementById? document.getElementById("iemarquee") : document.all.iemarquee
+cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+cross_marquee.innerHTML=marqueecontent
+actualwidth=document.all? temp.offsetWidth : document.getElementById("temp").offsetWidth
+}
+else if (document.layers){
+ns_marquee=document.ns_marquee.document.ns_marquee2
+ns_marquee.left=parseInt(marqueewidth)+8
+ns_marquee.document.write(marqueecontent)
+ns_marquee.document.close()
+actualwidth=ns_marquee.document.width
+}
+lefttime=setInterval("scrollmarquee()",20)
+}
+window.onload=populate
+
+function scrollmarquee(){
+if (iedom){
+if (parseInt(cross_marquee.style.left)>(actualwidth*(-1)+8))
+cross_marquee.style.left=parseInt(cross_marquee.style.left)-copyspeed+"px"
+else
+cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+
+}
+else if (document.layers){
+if (ns_marquee.left>(actualwidth*(-1)+8))
+ns_marquee.left-=copyspeed
+else
+ns_marquee.left=parseInt(marqueewidth)+8
+}
+}
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+marqueewidth+';height:'+marqueeheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+marqueewidth+';height:'+marqueeheight+';background-color:'+marqueebgcolor+'" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">')
+write('<div id="iemarquee" style="position:absolute;left:0px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+marqueewidth+' height='+marqueeheight+' name="ns_marquee" bgColor='+marqueebgcolor+'>')
+write('<layer name="ns_marquee2" left=0 top=0 onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+</script>
+</div>
+
+</div><!-- End_Module_532 --></div>
+</div></div>
+                </div>
+                <div class="dnn_brea">
+                	<div class="brea_left"><span id="dnn_dnnBREADCRUMB_lblBreadCrumb"><a href="http://raddho.org/Accueil/tabid/96/Default.aspx" class="breadcrumb">Accueil</a></span>
+</div>
+                    <div class="login_right"></div>
+                </div>
+                <div class="dnn_container">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="dnn_LeftOutPane" align="left" valign="top" class="LeftOutPane DNNEmptyPane"></td>
+
+    <td align="left" valign="top" width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="dnn_TopPane" valign="top" class="TopPane DNNEmptyPane"></td>
+
+  </tr>
+  <tr>
+    <td valign="top" width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+     <td id="dnn_TopLeftPane" valign="top" class="TopLeftPane"><div class="DnnModule DnnModule-DnnForge-LatestArticles DnnModule-522"><a name="522"></a>
+<div class="White">
+     <div ></div>
+     <div id="dnn_ctr522_ContentPane" class="contentpane"><!-- Start_Module_522 --><div id="dnn_ctr522_ModuleContent" class="DNNModuleContent ModDnnForgeLatestArticlesC">
+	<table cellpadding=0 cellspacing=4><TR><TD><span class=normal><a href="http://raddho.org/Actualité/tabid/126/articleType/ArticleView/articleId/15/Default.aspx"><strong>Déclaration du Comité de Pilotage du Comité International pour le Jugement Équitable de Hissène Habré</strong></a></span></TD></TR><TR><TD><span class=normal><p>Les victimes de l’ancien dictateur tchadien Hissène Habré luttent depuis plus de vingt ans pour le traduire devant un tribunal, dans le cadre d’un procès équitable, afin qu’il réponde des crimes commis par son régime, de 1982 à 1990.</p></span></TD></TR><TR><TD><span class=normal><a href="http://raddho.org/Actualité/tabid/126/articleType/ArticleView/articleId/14/Default.aspx"><strong>Alioune Tine aux sociétés civiles africaines : « EMPÊCHONS LE PRÉSIDENT WADE D’ÊTRE CANDIDAT »</strong></a></span></TD></TR><TR><TD><span class=normal><p><img hspace="5" height="64" border="0" align="left" width="100" vspace="5" alt="" src="/Portals/1/0. alioune tine.jpg" />Après avoir sensibilisé la quasi-totalité des Sénégalais sur l’anti-constitutionnalité et l’irrecevabilité de la candidature de Me Wade à la prochaine élection présidentielle de 2012, le M 23 a décidé de porter le combat au niveau international.</p></span></TD></TR></table>
+
+
+
+</div><!-- End_Module_522 --></div>
+     <div class="c_footer_1"></div>
+</div>
+</div></td>
+
+     <td id="dnn_TopRightPane" valign="top" class="TopRightPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-511"><a name="511"></a>
+<div class="White">
+     <div ></div>
+     <div id="dnn_ctr511_ContentPane" class="contentpane"><!-- Start_Module_511 --><div id="dnn_ctr511_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr511_HtmlModule_lblContent" class="Normal">
+	<div id="LoginInfo">
+<div class="LoginBlock">
+<h3 class="NormalBold">Touche pas a ma constitution</h3>
+<p><img alt="" style="width: 200px; height: 100px; margin-right: 5px" src="/Portals/1/touchepas.jpg" /><br />
+Après un point de presse d’alerte réussie au siège de la RADDHO où différents responsables de la société Civile ( en leur nom personnel ou au nom de leurs  structures respectives)se sont exprimés sur l’affaire de la Loi instituant un «&#160;ticket&#160;» (Président-Vice-président) pour la présidentielle de 2012.  <br />
+<span style="color: #ff0000"><em><span style="font-size: 10px"><strong><a href="/LinkClick.aspx?fileticket=VjuT4IpztZE%3d&amp;tabid=96">Lire la suite</a><br />
+</strong></span></em></span></p>
+</div>
+<div class="LoginBlock">
+<h3 class="NormalBold">Alioune Tine interview</h3>
+<p class="LoginNotes"><a href="/AliouneTineagress%C3%A9pardeshommesdeFarbaSengh/tabid/175/Default.aspx"><img height="107" width="200" alt="" style="float: left; margin-right: 5px;" src="/Portals/1/23_juillet_2011_alioune_tine.jpg" /></a></p>
+<p>&#160;</p>
+<a href="/AliouneTineagress%C3%A9pardeshommesdeFarbaSengh/tabid/175/Default.aspx"> <span style="color: rgb(255, 0, 0);"><span style="font-size: large;">Manifestations du 23 Juillet 2011 :&#160; Interview de Alioune Tine president de la Raddho par Walf TV</span></span></a>
+<p>&#160;</p>
+</div>
+</div>
+</div>
+
+</div><!-- End_Module_511 --></div>
+     <div class="c_footer_1"></div>
+</div>
+</div></td>
+
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    
+    <td id="dnn_ContentPane" valign="top" class="ContentPane DNNEmptyPane"></td>
+
+    
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+     <td id="dnn_BottomLeftPane" valign="top" class="BottomLeftPane DNNEmptyPane"></td>
+
+     
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td id="dnn_BottomPane" valign="top" class="BottomPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-421"><a name="421"></a><div id="dnn_ctr421_ContentPane" class="DNNAlignleft"><!-- Start_Module_421 --><div id="dnn_ctr421_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr421_HtmlModule_lblContent" class="Normal">
+	<div id="LoginInfo">
+<table cellspacing="1" cellpadding="1" border="0" width="100%">
+    <tbody>
+        <tr>
+            <td width="200">
+            <p><a href="/CélébrationdesvingtansdelaRADDHO/tabid/169/Default.aspx">La célébration des vingt (20) ans de la RADDHO, intervient dans un contexte africain marqué par des crises multiformes</a><br />
+            <br />
+            <a href="/Editorialdelacelebrationdes20ans/tabid/174/Default.aspx"><span style="color: rgb(255, 0, 0);">Lire l’éditorial du Vice Président Alassane Seck</span></a></p>
+            </td>
+            <td>
+            <p style="text-align: center;"><span style="font-size: xx-small;"><span style="font-family: Verdana;">Mouvement 23 Juin</span></span><br />
+            <a href="/Ressources/Vidéos/tabid/175/Default.aspx"><img height="100" width="100" src="/Portals/1/alioune_23_juin_2011.jpg" alt="" /></a></p>
+            </td>
+            <td>
+            <p style="text-align: center;"><span style="font-size: xx-small;"><span style="font-family: Verdana;">Interview France24</span></span><br />
+            <a href="/Ressources/Vidéos/tabid/175/Default.aspx"><img height="100" width="100" src="/Portals/1/alassane_23_juin_2011.jpg" alt="" /></a></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="LoginBlock">
+<h3 class="NormalBold">Publications</h3>
+<p>• De l’indépendance du Pouvoir Judiciaire Bonne gouvernance et développement <br />
+• De la nature juridique du régime politique sénégalais <br />
+• Essai d'analyse d'un concept d'usage courant: La République <br />
+• De la Démocratie <br />
+• Police et Maintien de l'ordre en Afrique de l'ouest <br />
+• Entretenir la Flamme de la Paix <br />
+• Role des parlements et de la societe civile <br />
+<span style="color: #ff0000; font-size: 10px"><strong><em><a href="/Ressources/Publications/tabid/133/Default.aspx">Lire la suite</a></em></strong></span></p>
+</div>
+<div class="LoginBlock">
+<h3 class="NormalBold">Rapports</h3>
+<p>• Troisieme Congres Ordinaire de la Raddho <br />
+• Rapport Final sur l'election presidentielle du 27 Fevrier au Senegal <br />
+• Declaration sur les elections legislatives du 13 Juin 2007 au Senegal <br />
+• 11e Sommet des Chefs d’États de l’Union africaine <br />
+• Elections Presidentielles au Burkina Faso<br />
+• Elections presidentielles du 24 Avril 2005 au Togo <br />
+• Rapport sur l'election presidentielle du 19 Juin 2005 en Guinee Bissao<br />
+<span style="color: #ff0000; font-size: 10px"><strong><em><a href="/Ressources/Rapports/tabid/132/Default.aspx">Lire la suite</a></em></strong></span></p>
+</div>
+</div>
+<div id="RightColumnInfo">
+<div id="TelerikInside">
+<h2 class="Head">Publications 2011</h2>
+Introspection, Rétrospection et Prospection, 50 ans après les indépendances de l’Afrique de l’Ouest<br />
+<a href="/Noussaisir/tabid/146/Default.aspx" target="_blank">Commander le livre</a>.</div>
+<div id="QuickLinks">
+<h2 class="Head">Réalisations 2010</h2>
+<p><span style="font-family: verdana; font-size: 12px">Durant l'annee 2010 des activites ont ete menees dans le cadre de notre mission de promotion et de protection des droits de l'homme.</span></p>
+<ul>
+    <li><span style="font-family: verdana; font-size: 12px">Participation à l’élaboration et à la vulgarisation du rapport de Human Rights Watch </span></li>
+    <li><span style="font-family: verdana; font-size: 12px">Etude sur ressources minières et droits humains </span></li>
+    <li><span style="font-family: verdana; font-size: 12px">Justice pénale internationale et lutte contre l’impunité<br />
+    <a href="/PaixetSécurité/tabid/173/Default.aspx"><strong><span style="color: #ff0000"><em>Lire la suite</em></span></strong></a></span></li>
+</ul>
+</div>
+</div>
+<div class="hr"><hr />
+</div>
+<div class="boxcontent"><a href="/Ressources/Communiqués/tabid/131/Default.aspx"><img height="158" border="0" width="210" src="/Portals/1/communique.png" alt="realisations2010" /></a>&#160;&#160;&#160;&#160;<a href="/Noussaisir/tabid/146/Default.aspx"><img height="158" border="0" width="210" src="/Portals/1/saisir.png" alt="saisir" /></a>&#160;&#160;&#160;&#160;<a href="/Adhesion/tabid/170/Default.aspx"><img height="158" border="0" width="210" src="/Portals/1/adherer.gif" alt="adherer" /></a>&#160;&#160;&#160;&#160;<a href="/Votresoutien/tabid/145/Default.aspx"><img height="158" border="0" width="210" src="/Portals/1/nous_soutenir.gif" alt="nous_soutenir" /></a></div>
+</div>
+
+</div><!-- End_Module_421 --></div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-422"><a name="422"></a><div id="dnn_ctr422_ContentPane" class="DNNAlignleft"><!-- Start_Module_422 --><div id="dnn_ctr422_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr422_HtmlModule_lblContent" class="Normal">
+	
+</div>
+
+</div><!-- End_Module_422 --></div>
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-423"><a name="423"></a>
+<div class="Container-6">
+	<div class="c_top_left">
+    	<div class="c_top_right">
+        	<div class="c_top_bg"></div>
+        </div>	
+    </div>
+   <div class="contentmain1">
+                <div class="dnntitle"><span id="dnn_ctr423_dnnTITLE6_lblTitle" class="title6">CEUX QUI S'IMPLIQUENT POUR NOUS DONNER NOTRE POTENTIEL DE REFLEXION, D'ANALYSE ET D'ACTION</span>
+
+
+</div>
+                <div class="actions"></div>      
+                <div id="dnn_ctr423_ContentPane" class="contentpane DNNAligncenter"><!-- Start_Module_423 --><div id="dnn_ctr423_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr423_HtmlModule_lblContent" class="Normal">
+	<table cellspacing="0" style="width: 100%">
+    <tbody>
+        <tr>
+            <td align="center"><strong>Departements</strong></td>
+            <td align="center"><strong>Observatoires</strong></td>
+            <td align="center" colspan="2"><strong>Partenaires</strong></td>
+        </tr>
+        <tr>
+            <td align="center">
+            <div style="text-align: justify"><span style="font-size: 12px">Genre et droits humains<br />
+            Bonne Gouvernance <br />
+            Alerte d’Urgence et Assistance Juridique<br />
+            Droits de l’Enfant<br />
+            Jeunes défenseurs<br />
+            Éducation, Formation et&#160; Recherche<br />
+            Réfugiés,&#160; personnes déplacées et migrants<br />
+            Décentralisation et vulgarisation des droits humains<br />
+            Promotion et protection des droits des minorités<br />
+            <br />
+            <br />
+            </span></div>
+            </td>
+            <td align="center">
+            <div style="text-align: justify"><span style="font-size: 12px">Dakar &#160;<br />
+            Diourbel &#160;<br />
+            Fatick &#160;<br />
+            Guinee &#160;<br />
+            Kolda &#160;<br />
+            Louga &#160;<br />
+            Lyon &#160;<br />
+            Matam &#160;<br />
+            Mauritanie &#160;<br />
+            Nations Unis &#160;<br />
+            Saint Louis &#160;<br />
+            Tambacounda &#160;<br />
+            Thies<br />
+            <br />
+            </span></div>
+            </td>
+            <td align="center">
+            <div style="text-align: justify"><span style="font-size: 12px"><strong>Les ambassades</strong><br />
+            Etats Unis<br />
+            Suede<br />
+            Pays Bas<br />
+            Grande Bretagne<br />
+            Allemagne<br />
+            Union Europeenne<br />
+            <br />
+            <strong>Organismes</strong><br />
+            Francophonie<br />
+            Us Aid Senegal<br />
+            <br />
+            </span></div>
+            </td>
+            <td align="center">
+            <div style="text-align: justify"><span style="font-size: 12px">&#160;<strong>ONG</strong></span><br />
+            <span style="font-size: 12px">Human Rights Watch</span><br />
+            <span style="font-size: 12px">Friedrich Ebert Foundation</span><br />
+            <span style="font-size: 12px">Diakonia Suede</span><br />
+            <span style="font-size: 12px">Oxfam America</span><br />
+            <span style="font-size: 12px">Tides Foundation</span><br />
+            <span style="font-size: 12px">Trust Africa</span><br />
+            <span style="font-size: 12px">Ford Fondation</span><br />
+            <span style="font-size: 12px">Save Darfur</span><br />
+            <span style="font-size: 12px">FMDH</span><br />
+            <span style="font-size: 12px">AEDH</span><br />
+            <span style="font-size: 12px">OSIWA</span><br />
+            <span style="font-size: 12px">NED<br />
+            </span></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</div><!-- End_Module_423 --></div>
+                <div class="c_footer_1"></div>
+	</div>
+    <div class="c_bot_left">
+    	<div class="c_bot_right">
+        	<div class="c_bot_bg"></div>
+        </div>
+    </div>
+</div>
+</div><div class="DnnModule DnnModule-LiveContent DnnModule-517"><a name="517"></a>
+<div class="White">
+     <div ></div>
+     <div id="dnn_ctr517_ContentPane" class="contentpane"><!-- Start_Module_517 --><div id="dnn_ctr517_ModuleContent" class="DNNModuleContent ModLiveContentC">
+	<table id="dnn_ctr517_LiveContent_dlElements" cellspacing="0" cellpadding="0" align="Center" border="0">
+		<tr>
+			<td>
+		<a id="517LCElement1" href="#" class="highslide" onclick="return hs.htmlExpand(this, {captionId: '517Caption1',contentId: '517Content1',outlineType: 'Rounded-White',align: 'auto',preserveContent: false,slideshowGroup: 'LiveContent517'},{ModuleId: '517', TabId: '96', ElementId: '1', ClientSessionURL: 'http://raddho.org/desktopmodules/livecontent/clientsession.aspx'}  )"> <img src="/desktopmodules/livecontent/Thumbnail.aspx?HomeDir=%2fPortals%2f1%2f&ModuleId=517&Size=5&Image=2011_09_27_senegal.jpg" title="senegal" border="0" /></a>
+	</td><td>
+		<a id="517LCElement0" href="#" class="highslide" onclick="return hs.htmlExpand(this, {contentId: '517Content0',outlineType: 'Rounded-White',align: 'auto',preserveContent: false,slideshowGroup: 'LiveContent517'},{ModuleId: '517', TabId: '96', ElementId: '0', ClientSessionURL: 'http://raddho.org/desktopmodules/livecontent/clientsession.aspx'}  )"> <img src="/desktopmodules/livecontent/Thumbnail.aspx?HomeDir=%2fPortals%2f1%2f&ModuleId=517&Size=5&Image=2011_09_28_mauritanie.jpg" title="mauritanie" border="0" /></a>
+	</td><td>
+		<a id="517LCElement2" href="#" class="highslide" onclick="return hs.htmlExpand(this, {captionId: '517Caption2',contentId: '517Content2',outlineType: 'Rounded-White',align: 'auto',preserveContent: false,slideshowGroup: 'LiveContent517'},{ModuleId: '517', TabId: '96', ElementId: '2', ClientSessionURL: 'http://raddho.org/desktopmodules/livecontent/clientsession.aspx'}  )"> <img src="/desktopmodules/livecontent/Thumbnail.aspx?HomeDir=%2fPortals%2f1%2f&ModuleId=517&Size=5&Image=2011_09_05_elections_senegal.jpg" title="Élections Sénégal" border="0" /></a>
+	</td><td></td>
+		</tr>
+	</table><!--Live Content - DotNetNuke Module By Mandeeps.com
+More Information at http://dnn.mandeeps.com/live+content.aspx
+619e26758a159ab6fafda4e6ac81dcf3-->
+
+<div style="position:absolute; display:none; visibility:hidden">
+<div id="517Caption1" class="highslide-caption" > senegal </div>
+<div id="517Caption2" class="highslide-caption" > Élections Sénégal </div>
+</div>
+<div class="highslide-html-content" id="517Content1"  style="width: 911px; border: none">  <div style="height:20px; padding=2px"> <a href="#" onclick="return hs.close(this)" class="control">FERMER</a> <a href="#" onclick="return false" class="highslide-move control">DEPLACER</a>  </div>   <div class="highslide-body"> <p><img height="198" width="700" src="/Portals/1/raddho_lsdh_ai.jpg" alt="" /></p>
+<p>&#160;</p>
+<h3 style="text-align: center;"><strong>COMMUNIQUE DE PRESSE</strong></h3>
+<p style="text-align: center;"><strong>Le Sénégal viole l’obligation de protéger en matière de torture et de peines ou traitement cruels, inhumains et dégradants</strong></p>
+<p>La Rencontre Africaine pour la Défense des Droits de l’Homme (RADDHO), la Ligue Sénégal des Droits de l’Homme(LSDH) et Amnesty International/ Sénégal sont profondément indignées par les traitements inhumains et dégradants commis par cinq éléments de la brigade de gendarmerie de Thiaroye sur Mor Talla Sow et Babacar Sakho. <br />
+<br />
+Des jeunes du quartier Hamdallaye 4 de Thiaroye s’étaient organisés, le 16 septembre 2011, pour l’évacuation des eaux de pluies à la suite de l’inondation de leur quartier ; un voisin qui prétend être porté préjudice, s’est plaint à la brigade de gendarmerie de Thiaroye et&#160; cinq(5) gendarmes dans la brigade de Thiaroye&#160; sont venus chercher Mor Talla Sow âgé de 29 ans marié et père d’une petite fille&#160; et&#160; Babacar Sakho âgé de 17 ans.<br />
+<br />
+Selon&#160; les deux jeunes c’est dans le taxi clando qui les amenait qu’ils ont commencé à faire l’objet de mauvais traitements. Une fois dans l’enceinte de la brigade de la Gendarmerie, Mor Talla Sow et le mineur Babacar Sakho ont commencé à recevoir insultes accompagnés de coups de botte, de matraque, et de bâton, avant être jetés dans violon tous nus sans aucun sous vêtement. Il faut rappeler que le jeune Babacar Sakho a été élève de Mor Talla Sow. &#160;<br />
+<br />
+Face à cette injustice, les populations se sont mobilisées devant la brigade pour exiger leur libération ; c’est ainsi, très mal au point, ils furent évacués à l’hôpital de Pikine par le Commandant de la Brigade qui a pris en charge tous les frais médicaux. <br />
+Mor Talla Sow s’est retrouvé avec une côtelette cassée, le genou déboité et l’œil infecté alors que jeune Babacar&#160; Sakho souffre de contusions sur letout le corps et particulièrement à&#160; la hanche gauche.<br />
+Une plainte a été déposée par les victimes le mercredi 21 septembre 2011.<br />
+<br />
+La RADDHO, la LSDH et AI/ Sénégal :</p>
+<ul>
+    <li>Exigent qu’une enquête judiciaire soit ouverte&#160; immédiatement et qu’elle soit efficace, exhaustive afin que les responsables de ces actes de mauvais traitements soient arrêtés et sanctionnés conformément à la loi ;</li>
+    <li>Rappellent que le Sénégal est partie à la Convention des Nations Unies contre la torture et autres peines ou traitements cruels, inhumains ou dégradants, au Pacte international relatif aux droits civils et politiques (PIDCP) et à la Charte africaine des droits de l’homme et des peuples qui prohibent la torture et les mauvais traitements ;</li>
+    <li>Ré-expriment&#160; leur préoccupation quant au non respect par le Sénégal de l’Obligation de protéger en matière de torture et de traitements cruels, inhumains et dégradants avec les cas déjà connus de Alioune Badara Mbengue, Dominique Lopy, alioune Badara Diop, Aida Camara, Mamadou Bakhoum, Aboulaye Wade Yinghou &#160;</li>
+</ul>
+<p>Fait à Dakar le 27 septembre 2011 &#160;<br />
+---------------------------------------------------------------------------------------------------------------------------<br />
+&#160;Seydi Gassama&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Me Assane Dioma Ndiaye&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Alioune Tine <br />
+Directeur Exécutif Amnesty/Sénégal&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Président de la LSDH&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Président de la RADD</p>
+<p>&#160;</p> </div></div><div class="highslide-html-content" id="517Content0"  style="width: 911px; border: none">  <div style="height:20px; padding=2px"> <a href="#" onclick="return hs.close(this)" class="control">FERMER</a> <a href="#" onclick="return false" class="highslide-move control">DEPLACER</a>  </div>   <div class="highslide-body"> <p><img height="92" width="650" src="/Portals/1/communique_logo.gif" alt="" /></p>
+<p>&#160;</p>
+<p><strong>MAURITANIE : Stopper la violence d’Etat&#160; et prôner la concertation inclusive </strong></p>
+<p><br />
+La Rencontre Africaine pour la Défense des Droits de l’Homme (RADDHO) est très préoccupée par les affrontements entre les forces de sécurité&#160; mauritaniennes et les manifestants négro-mauritaniens du mouvement «&#160; touche pas à nationalité ».<br />
+<br />
+En effet à Kaédi , 430 km au sud-est de Nouakchott a été le théâtre de violentes manifestations suivies de l’arrestation de plus trente(30) personnes, le samedi et dimanche passés en guise de protestation&#160; contre l'opération de recensement initiée par le gouvernement depuis le 6 mai 2011, qui vise à mettre en service un système biométrique de définition d’identité sécurisée en vue de lutter contre la falsification des documents d’identité, l’immigration clandestine, le trafic de stupéfiants et le crime organisé .<br />
+<br />
+Ce projet est dénoncé par le Mouvement «&#160; touche pas à nationalité » qui le juge&#160; comme une&#160; stigmatisation et une&#160; discrimination de la communauté&#160; négro-mauritanienne.&#160;&#160; <br />
+Le mardi 27 septembre 2011, des affrontements entre force de l'ordre et manifestants, dans la ville de Magam, à l'est de Kaédi ont fait un mort et plusieurs blessés.<br />
+<br />
+Le 24 septembre à Nouakchott, des manifestants ont eu des affrontements avec des éléments des forces de police, à l’occasion d’une marche contre l’enrôlement qu'ils considèrent comme "une manœuvre visant à déchoir les négro-mauritaniens de leur nationalité". Il y a eu des personnes arrêtées et/ou blessées.<br />
+<br />
+La Rencontre Africaine pour la Défense des Droits de l’Homme (RADDHO) :</p>
+<ul>
+    <li>Condamne cette violence policière aveugle qui rappelle les mauvais souvenirs du régime d’Ould Taya,&#160;&#160;</li>
+    <li>Exige la libération sans condition de toutes les&#160; personnes arrêtées&#160;&#160; dans le cadre de cette manifestation contre le projet de recensement ;</li>
+    <li>Invite le Gouvernement mauritanien à privilégier le dialogue inclusif comme il l’avait fait dans rechercher d’une solution au passif humanitaire mauritanien ;&#160;</li>
+</ul>
+<p>&#160;&#160;&#160; <br />
+Fait à Dakar le 28 septembre 2011</p>
+<p><br />
+Le Président <br />
+Alioune Tine </p>
+<p>&#160; </p> </div></div><div class="highslide-html-content" id="517Content2"  style="width: 911px; border: none">  <div style="height:20px; padding=2px"> <a href="#" onclick="return hs.close(this)" class="control">FERMER</a> <a href="#" onclick="return false" class="highslide-move control">DEPLACER</a>  </div>   <div class="highslide-body"> <p style="text-align: center;"><strong>Communiqué de Presse</strong></p>
+<p>Le Collectif des Organisations de la Société Civile réuni le 5 Septembre 2011 à son siège à Enda Graf Sahel a examiné l’évolution du processus électoral au Sénégal.<br />
+<br />
+Après s’être félicité du travail constructif du Comité de Veille et de Suivi des recommandations de l’audit du fichier électoral, le Collectif réitère sa satisfaction pour l’apport conséquent et le rôle de régulation jouée par ses représentants au sein dudit Comité. <br />
+<br />
+En examinant le point relatif à la caution exigée pour les candidatures aux élections présidentielles, il tient à marquer son désaccord total sur le montant fixé par le gouvernement. La caution qui s’élevait à 25 millions lors de l’élection présidentielle de 2007, vient d’être portée à 65 millions. Cette augmentation traduit selon lui, un recul démocratique&#160; et ne peut en aucune façon être justifiée par les arguments avancés par l’autorité.<br />
+<br />
+Un tour d’horizon dans les pays de la sous région le conforte dans son intime conviction de la faiblesse des justifications avancées. Aucun pays de la sous région n’atteint ce niveau exorbitant de caution. Le chiffre savamment distillée par certains selon laquelle elle s’élèverait à 100 million au Bénin est totalement fantaisiste. Le montant de la caution au Bénin est de15 Millions de Francs CFA. <br />
+<br />
+Il entre certes dans les prérogatives de l’autorité chargée des élections de fixer la caution, mais elle n’a pas le droit de priver les sénégalais qui le désirent de concourir aux suffrages de leurs concitoyens. Le premier niveau du choix des candidats aux élections présidentielles ne peut avoir comme fondement des bases pécuniaires. Le montant de la caution arrêté est une manière d’instituer un suffrage censitaire contraire aux valeurs et idéaux démocratiques auxquelles notre pays a toujours réaffirmé son attachement.<br />
+<br />
+En conséquence le Collectif des OSC dénonce avec force cette décision qui ne repose sur aucun fondement démocratique et relève d’une violation des droits humains et des valeurs sociologiques du Sénégal, et demande à l’autorité de reconsidérer sa décision pour un processus électoral apaisé, juste et équitable.&#160; <br />
+<br />
+Abordant la question du découpage administratif, le Collectif déplore et condamne avec force la décision prise par le gouvernement qui a abouti à l’installation de délégations spéciales en lieu et place des Présidents de communautés rurales démocratiques élus, traduisant manifestement un détournement inadmissible de la volonté populaire. <br />
+<br />
+Sur la question de la candidature controversée du Président Wade à un troisième mandat, le Collectif exhorte le Président à retirer sa candidature considérée comme inconstitutionnelle et invalide par l’écrasante majorité des constitutionnalistes du Sénégal pour préserver la paix et la stabilité du Sénégal et éviter que le pays ne sombre dans le chaos.<br />
+<br />
+Enfin réaffirme avec force son soutien et son appui&#160; au Président de la RADDHO Alioune Tine face aux tentatives de diabolisation et de stigmatisation dont il est l’objet par des groupuscules politiques.&#160;&#160; <br />
+<br />
+Fait à Dakar, le 06 septembre 2011<br />
+<br />
+<br />
+Ont signé les Organisations Membres du Collectif:</p>
+<p>AJED – ANAFA - ENDA GRAF SAHEL - ONG 3D - FORUM CIVIL - LIGUE CIVIQUE SENEGAL – ONDH – RADDHO – RADI - RADIO OXYJEUNES - RESEAU SIGGIL JIGGEN</p> </div></div><br>
+
+
+</div><!-- End_Module_517 --></div>
+     <div class="c_footer_1"></div>
+</div>
+</div></td>
+
+  </tr>
+</table></td>
+    <td id="dnn_RightOutPane" align="left" valign="top" class="RightOutPane DNNEmptyPane"></td>
+
+  </tr>
+</table>
+                </div>
+                <div class="dnn_bottom"><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="footer">Powered by afrikonline.com</span>
+&nbsp;&nbsp;|&nbsp;&nbsp;<a id="dnn_dnnPRIVACY_hypPrivacy" class="terms" rel="nofollow" href="http://raddho.org/Accueil/tabid/96/ctl/Privacy/Default.aspx">Privacy Statement</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="dnn_dnnTERMS_hypTerms" class="terms" rel="nofollow" href="http://raddho.org/Accueil/tabid/96/ctl/Terms/Default.aspx">Terms Of Use</a>&nbsp;&nbsp;<a class="w3c" href="http://validator.w3.org/check?uri=referer" target="_blank">Xhtml 1.0</a>&nbsp;&nbsp;<a class="w3c" href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS 2.0</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="dnn_bot_left">
+    	<div class="dnn_bot_right">
+        	<div class="dnn_bot_bg"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" value="`{`__scdoff`:`1`,`dnn_dnnNAV_ctldnnNAV_json`:`{nodes:[{bcrumb:\`1\`,selected:\`1\`,id:\`96\`,key:\`96\`,txt:\`Accueil\`,ca:\`3\`,url:\`http://raddho.org/Accueil/tabid/96/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[]},{enabled:\`0\`,id:\`117\`,key:\`117\`,txt:\`L\\\u0027Ong\`,ca:\`3\`,url:\`http://raddho.org/LOng/tabid/117/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[{id:\`118\`,key:\`118\`,txt:\`Identité\`,ca:\`3\`,url:\`http://raddho.org/LOng/Identité/tabid/118/Default.aspx\`,img:\`\`,nodes:[]},{id:\`119\`,key:\`119\`,txt:\`Nos actions\`,ca:\`3\`,url:\`http://raddho.org/LOng/Nosactions/tabid/119/Default.aspx\`,img:\`\`,nodes:[]},{id:\`120\`,key:\`120\`,txt:\`Organisation\`,ca:\`3\`,url:\`http://raddho.org/LOng/Organisation/tabid/120/Default.aspx\`,img:\`\`,nodes:[]},{id:\`147\`,key:\`147\`,txt:\`Departements\`,ca:\`3\`,url:\`http://raddho.org/LOng/Departements/tabid/147/Default.aspx\`,img:\`\`,nodes:[]},{id:\`121\`,key:\`121\`,txt:\`Observatoires\`,ca:\`3\`,url:\`http://raddho.org/LOng/Observatoires/tabid/121/Default.aspx\`,img:\`\`,nodes:[]},{id:\`122\`,key:\`122\`,txt:\`Management\`,ca:\`3\`,url:\`http://raddho.org/LOng/Management/tabid/122/Default.aspx\`,img:\`\`,nodes:[]},{id:\`123\`,key:\`123\`,txt:\`Adhésion\`,ca:\`3\`,url:\`http://raddho.org/LOng/Adhésion/tabid/123/Default.aspx\`,img:\`\`,nodes:[]},{id:\`124\`,key:\`124\`,txt:\`Partenaires\`,ca:\`3\`,url:\`http://raddho.org/LOng/Partenaires/tabid/124/Default.aspx\`,img:\`\`,nodes:[]},{id:\`125\`,key:\`125\`,txt:\`Contacts\`,ca:\`3\`,url:\`http://raddho.org/LOng/Contacts/tabid/125/Default.aspx\`,img:\`\`,nodes:[]}]},{id:\`126\`,key:\`126\`,txt:\`Actualité\`,ca:\`3\`,url:\`http://raddho.org/Actualité/tabid/126/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[]},{enabled:\`0\`,id:\`127\`,key:\`127\`,txt:\`Programmes\`,ca:\`3\`,url:\`http://raddho.org/Programmes/tabid/127/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[{id:\`128\`,key:\`128\`,txt:\`En cours\`,ca:\`3\`,url:\`http://raddho.org/Programmes/Encours/tabid/128/Default.aspx\`,img:\`\`,nodes:[]},{id:\`129\`,key:\`129\`,txt:\`Réalisés\`,ca:\`3\`,url:\`http://raddho.org/Programmes/Réalisés/tabid/129/Default.aspx\`,img:\`\`,nodes:[]}]},{enabled:\`0\`,id:\`130\`,key:\`130\`,txt:\`Ressources\`,ca:\`3\`,url:\`http://raddho.org/Ressources/tabid/130/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[{id:\`131\`,key:\`131\`,txt:\`Communiqués\`,ca:\`3\`,url:\`http://raddho.org/Ressources/Communiqués/tabid/131/Default.aspx\`,img:\`\`,nodes:[]},{id:\`132\`,key:\`132\`,txt:\`Rapports\`,ca:\`3\`,url:\`http://raddho.org/Ressources/Rapports/tabid/132/Default.aspx\`,img:\`\`,nodes:[]},{id:\`133\`,key:\`133\`,txt:\`Publications\`,ca:\`3\`,url:\`http://raddho.org/Ressources/Publications/tabid/133/Default.aspx\`,img:\`\`,nodes:[]},{id:\`135\`,key:\`135\`,txt:\`Audio\`,ca:\`3\`,url:\`http://raddho.org/Ressources/Audio/tabid/135/Default.aspx\`,img:\`\`,nodes:[]},{id:\`175\`,key:\`175\`,txt:\`Vidéos\`,ca:\`3\`,url:\`http://raddho.org/Ressources/Vidéos/tabid/175/Default.aspx\`,img:\`\`,nodes:[]}]},{id:\`144\`,key:\`144\`,txt:\`Impliquez vous\`,ca:\`3\`,url:\`http://raddho.org/Impliquezvous/tabid/144/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[]},{id:\`145\`,key:\`145\`,txt:\`Votre soutien\`,ca:\`3\`,url:\`http://raddho.org/Votresoutien/tabid/145/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[]},{id:\`146\`,key:\`146\`,txt:\`Nous saisir\`,ca:\`3\`,url:\`http://raddho.org/Noussaisir/tabid/146/Default.aspx\`,img:\`\`,cssIcon:\` \`,nodes:[]}]}`}" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script><script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('6 9=l.m(\'j\');k(6 i=0;i<9.h;i++){6 1=9[i];6 8=f(1.e(\'8\',2));7(/(.*)#5\\[([^\\,]+)(\\,.+)?\\]/.g(8)){1.v="t";1.s=4.$2;u{7(4.$3==\',b\')1.b=5[4.$2];c 7(4.$3==\',a\')1.a=5[4.$2];c{1.a=5[4.$2]}}n(p){}}}r q(d){o(d)}',32,32,'|link|||RegExp|LiveContent|var|if|href|links|onclick|onmouseover|else|data|getAttribute|decodeURIComponent|exec|length||A|for|document|getElementsByTagName|catch|eval|err|LCLaunchCallTag|function|id|highslide|try|className'.split('|'),0,{}))
+ </script>
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('e(3.4.2.5(\'#6[\',0)>-1){c(\'b://d.8/a/9/7.k\',\'j=l&i=\'+3.4.2.f(3.4.2.5(\'#6[\',0)),g,h)}',22,22,'||href|window|location|indexOf|LiveContent|clientsession|org|livecontent|desktopmodules|http|LCAjax|raddho|if|substring|LCLaunchCallTag|null|calltag|modId|aspx|517'.split('|'),0,{}))
+ </script>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+<script type="text/javascript">dnn.setVar('dnn_dnnNAV_ctldnnNAV_p', '{anim:\'0\',suborient:\'1\',postback:\'__doPostBack(\\\'dnn$dnnNAV$ctldnnNAV\\\',\\\'[NODEID]~|~Click\\\')\',sysimgpath:\'/images/\',easeDir:\'0\',mbcss:\'mainMenu\',rmode:\'2\',easeType:\'3\',orient:\'0\'}');dnn.controls.initMenu($get('dnn_dnnNAV_ctldnnNAV'));</script></form>
+</body>
+</html>

@@ -1,0 +1,651 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="/templates/cdn/css/rtl-style.css" />
+		<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/templates/cdn/css/rtl-IE7-style.css" /><![endif]-->
+		<!--<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery-1.5.min.js"></script>-->
+		<script type="text/javascript" src="/templates/cdn/js/jquery-1.7.1.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.easing.1.3.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.kwicks.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/coinslider.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/swfobject.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/galleria-1.2.6.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.bxSlider.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.vticker.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.zrssfeed.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.youtubeChannel.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/fancybox/jquery.fancybox.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/shadowbox-3.0.3/shadowbox.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/fancybox/helpers/jquery.fancybox-buttons.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.tools.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.flash.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/jquery.jqplugin.1.0.2.min.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/imageflow/imageflow.js"></script>
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/latest.js"></script>		
+
+
+		<script language="javascript" type="text/javascript" src="/templates/cdn/js/rtl-scripts.js"></script>
+
+		
+		<script type="text/javascript" >
+var g_smarty_templatepath = "/templates";
+</script>
+		<title>Awwa :: الرئيسية</title>
+		
+    </head>
+
+<body>
+
+<style>
+.layout{ position:absolute; left:0px; top:0px; width:100%; height:100%; background:#999; z-index:9999 ;}
+</style>
+
+<script type="text/javascript">
+//var g_smarty_templatepath="/templates";
+Shadowbox.init({skipSetup: true});
+
+window.onload = function() {
+	 
+	Shadowbox.setup("#newsletter-btn",{
+			width:550,
+			height:250,
+			options:{modal:true}
+		});
+
+	//Shadowbox.open($("#newsletter-btn"));
+	
+	$('#fblikeiframe').attr('src','https://www.facebook.com/plugins/like.php?href=' + location.href +'&layout=box_count&show_faces=false')
+
+	url=location.href;
+	$('link[rel=canonical]').attr('href',url);
+	$('.twitter-share-button').attr('data-url',url);
+	$('#twttrHubFrame').hide();
+
+	var sb = new SWFObject('/templates/cdn/swf/home-text.swf','bannerflash','523','280','9');
+	sb.addParam('allowscriptaccess','always');
+	sb.addParam('wmode','transparent');
+	sb.addParam('scale','noscale');
+	sb.addParam('loop','true');
+	sb.write('main-banner-flash-holder');
+	
+	$("#main-banner-flash-holder").hide();
+	$("#main-banner-flash-holder-noflash").hide();
+	if ($.browser.flash == true)
+		$("#main-banner-flash-holder").show();
+	else
+		$("#main-banner-flash-holder-noflash").show();
+		
+	$('#pageshare').css('left',( $(window).width - $('#pageWrapper').width )/2);
+/*
+	$(window).scroll(function() {
+		if( $(window).scrollTop() > 520 ){
+			$('#pageshare').attr('class', "floating");
+		}else{
+			$('#pageshare').attr('class', "fixed");
+		}
+	});
+*/
+	   var po = document.createElement('script');
+	   po.type = 'text/javascript'; po.async = true;
+	   po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(po, s);
+};
+
+</script>
+<link rel="canonical">
+
+	<div id="pageWrapper">
+		<div id="headerContainer">
+			<a href="/ar/newsletter/plain/" id="newsletter-btn"></a>
+			<div id="searchContainer" style="background-image: url(/templates/cdn/images/rtl/home_search.png)">
+				<form action='/ar/search/' method="get">
+					<input type="submit" class="search-btn" value="" id="search-btn-home" />
+					<input type="text" name="keyword" value="" class="txt-input" />
+				</form>
+				<div id="media-icons-holder">
+					<a target="_blank" href="https://twitter.com/#!/Selimelawa" id="media-link-tw"></a>
+					<a target="_blank" href="http://www.youtube.com/el3wwa" id="media-link-yt"></a>
+					<a target="_blank" href="http://www.facebook.com/el3wwa" id="media-link-fb"></a>
+					<a target="_blank" href="https://plus.google.com/114632528801972706981/posts" id="media-link-gplus"></a>
+					<img src="/templates/cdn/images/shared/call_header.jpg" style="margin-top: 30px;" />
+				</div>
+			</div>
+
+			<span id="logo">
+				<a href="/ar/">
+					<img src="/templates/cdn/images/rtl/logo.png" />
+				</a>
+			</span>
+			<div id="menuContainer">
+				<div id="menu-left-shaddow"></div>
+				<div id="menu-right-shaddow"></div>
+
+				<ul id="sp-home-menu" ><li class="active " id="mainmenuitem-1"><a href='/ar/homepage/page/179'  >  </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="" id="mainmenuitem-2"><a href='/ar/page/page/249'  >  </a><ul id="sp-home-menu-subs" ><li class="" id="mainmenuitem-none"><a href='/ar/page/page/249'  > لماذا العوَّا </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/279'  > البرنامج السياسى </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/274'  > قالوا عن العوا </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/193'  > إنجازات دكتور العوَّا </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/190'  > النشاطات السياسية </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/188'  > الخبرات و النشاطات العلميه </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/187'  > عضوية المجامع والمؤسسات </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/191'  > مؤلفات باللغه العربيه </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/page/page/192'  > مؤلفات باللغه الانجليزبه </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/articles-articles/page/219/cat/6'  > اقوال مأثوره </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="last " id="mainmenuitem-none"><a href='/ar/page/page/185'  > البيانات الشخصية </a></li></ul></li>
+<li class="" id="mainmenuitem-3"><a href='/ar/news-categories/page/247'  >  </a><ul id="sp-home-menu-subs" ><li class="" id="mainmenuitem-none"><a href='/ar/news-categories/page/247'  > اخر الاخبار </a></li>
+<li class="last " id="mainmenuitem-none"><a href='/ar/calendar/page/199'  > تحركات الدكتور </a></li></ul></li>
+<li class="" id="mainmenuitem-4"><a href='/ar/gallery-imagegal/page/273'  >  </a><ul id="sp-home-menu-subs" ><li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/273'  > صور </a><ul id="sp-home-menu-subs" ><li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/291'  > تصويت المصريين بالخارج للدكتور العوا </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/300'  > قالوا عن العوا </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/292'  > جولة الدكتور العوا بقرية صول حجر-بسيون-الغربية </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/293'  > جولة الدكتور العوا فى مصانع توشيبا العربى </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/294'  > جولة و مؤتمر الدكتور العوا بالشرقية </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/295'  > زيارة الدكتور العوا لكنيسة مارى جرجس بكوم حمادة البحيرة </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/296'  > صور الدكتور العوا فى مؤتمر دمنهور الجماهيرى بالبحيرة </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/297'  > صور جولة الدكتور العوا بمصنع الأسلامية للورق الغربية </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/298'  > صور جولة الدكتور العوا بمصنع أيجيبت فوود الغربية </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/299'  > صور جولة الدكتور العوا فى ايتاى البارود البحيرة </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/301'  > لقاء الدكتور العوا بأهالى السنطة الغربية </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/302'  > مؤتمر اطلاق البرنامج السياسى بقلعة صلاح الدين الايوبى </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/272'  > الترشح للرئاسة </a></li>
+<li class="last " id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/194'  > العوا </a></li></ul></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-videogallery/page/195'  > فيديو </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/articles-articles/page/233'  > مقالات </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/265'  > أنشطة الحملة </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/267'  > زيارات الدكتور </a><ul id="sp-home-menu-subs" ></ul></li>
+<li class="last " id="mainmenuitem-none"><a href='/ar/gallery-imagegal/page/269'  > الحورات الصحفية </a><ul id="sp-home-menu-subs" ></ul></li></ul></li>
+<li class="" id="mainmenuitem-5"><a href='/ar/contact-donate/page/183'  >  </a><ul id="sp-home-menu-subs" ><li class="" id="mainmenuitem-none"><a href='/ar/contact-donate/page/248'  > للمشاركة والتطوع </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/support_f/page/271'  > للدعم المادى </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/contact-contactinfo/page/246'  > فى المحافظات  </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/download/page/232'  > مطبوعات الحملة </a></li>
+<li class="" id="mainmenuitem-none"><a href='/ar/contact-custom_form/page/257'  > شارك فى بناء مصر </a></li>
+<li class="last " id="mainmenuitem-none"><a href='/ar/page/page/278'  > تعليمات من الإدارة المركزية </a></li></ul></li>
+<li class="last " id="mainmenuitem-6"><a href='/ar/contact-contact/page/184'  >  </a></li></ul>
+
+				<!--<div id="coin-slider-overlay">
+				<img src="/templates/cdn/images/shared/text_overlay/t1.png" >
+				<img src="/templates/cdn/images/shared/text_overlay/t2.png" >
+				<img src="/templates/cdn/images/shared/text_overlay/t3.png" >
+				</div>-->
+								<div id='coin-slider-holder'>
+					<div id='coin-slider'>
+						<img src="/templates/cdn/images/shared/inner_banner/b1.jpg">
+						<img src="/templates/cdn/images/shared/inner_banner/b2.jpg">
+						<img src="/templates/cdn/images/shared/inner_banner/b3.jpg">
+						<img src="/templates/cdn/images/shared/inner_banner/b4.jpg">
+						<img src="/templates/cdn/images/shared/inner_banner/b5.jpg">
+						<img src="/templates/cdn/images/shared/inner_banner/b6.jpg">
+						<img src="/templates/cdn/images/shared/inner_banner/b7.jpg">
+					</div>
+				</div>
+				<div id="middle-links-holder"><ul><li id ='link-1' >
+	   			<a href='/ar/gallery-videogallery/page/195/cat/7'></a></li>
+<li id ='link-2' >
+	   			<a href='/ar/page/page/290'></a></li>
+<li id ='link-3' >
+	   			<a href='/ar/contact-donate/page/258'></a></li>
+<li id ='link-4' >
+	   			<a href='javascript:;'></a></li>
+</ul></div>
+			</div>
+		</div>
+		<div id="pageContainer">
+			<div id="htmlContent">
+				<div id='homepage_container'>
+	<div id="homepage-upper">
+       <div id="home-image-holder">
+		  <a class="home-image-link" href="/ar/contact-books/page/289"></a>
+	   </div>
+	   <div id="home-video-holder">
+         <h2 class="title">قالوا عن العوا</h2>
+		 	<div id="homevideoSlider" class="imageflow">
+													<img class="homeSliderThumb"
+					     data ="/ar/gallery-videogallery/cat/6/page/195"
+					     src="http://www.awa4egypt.com/sitefiles/mediacenter_images/mc_image_31.jpg" 
+					     rel="http://www.awa4egypt.com/sitefiles/mediacenter_videos/video_31.flv" 
+					     alt="أبو العلا ماضي" />
+																		<img class="homeSliderThumb"
+					     data ="/ar/gallery-videogallery/cat/6/page/195"
+					     src="http://www.awa4egypt.com/sitefiles/mediacenter_images/mc_image_32.jpg" 
+					     rel="http://www.awa4egypt.com/sitefiles/mediacenter_videos/video_32.flv" 
+					     alt="الفنان محمد صبحي" />
+																		<img class="homeSliderThumb"
+					     data ="/ar/gallery-videogallery/cat/6/page/195"
+					     src="http://www.awa4egypt.com/sitefiles/mediacenter_images/mc_image_33.jpg" 
+					     rel="http://www.awa4egypt.com/sitefiles/mediacenter_videos/video_33.flv" 
+					     alt="طارق الملط" />
+												</div>
+	   </div>
+	</div>
+<div style="margin: 0px 0 0 0;width: 965px; clear:right; float:right; height:460px;">
+  <div class="video-Container"  style="float:right;width:625px;border: 1px solid #ccc;float:right;width:611px;padding:6px;">
+     <h2 class="title">الأقوال المأثورة</h2>
+     <!-- <div id="video"></div> -->
+     							<div class="news-item" style="height: 77px;padding: 1px 9px;">
+						<a class="main-link" href="/ar/articles-item/item/17/page/233">
+							<div class="news-data" style="text-align: right;">
+								<h2 class="news-title">الفنان محمد صبحى</h2>
+								<div class="news-details">
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+&nbsp;أشكرك جدا لأنك لم تغازل الشارع كبرنامج انتخابي قلت الحق و قلت أنك لن تجامل أحدا و ستطبق العدل و القانون أنا أثق أنه لو قدر الله لك أن تكون رئيسا لكل المصريين...</div>
+								<div class="link-more">للمزيد</div>
+				
+							</div>
+						</a>
+					</div>
+					<div class='cleardiv'></div>
+									<div class="news-item" style="height: 77px;padding: 1px 9px;">
+						<a class="main-link" href="/ar/articles-item/item/16/page/233">
+							<div class="news-data" style="text-align: right;">
+								<h2 class="news-title">عن الشيخ ياسر برهامى (نائب الرئيس العام للدعوة السلفية)</h2>
+								<div class="news-details">
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+&nbsp;
+
+&nbsp; &nbsp;أفضل المرشحين الإسلاميين من حيث الشخصية و الكفاءة الدكتور محمد سليم العوا و هو ليس شيعيا و تربي على المذهب السنى السلفى&nbsp;
+
+&nbsp;...</div>
+								<div class="link-more">للمزيد</div>
+				
+							</div>
+						</a>
+					</div>
+					<div class='cleardiv'></div>
+									<div class="news-item" style="height: 77px;padding: 1px 9px;">
+						<a class="main-link" href="/ar/articles-item/item/15/page/233">
+							<div class="news-data" style="text-align: right;">
+								<h2 class="news-title">عن المستشار الخضيرى</h2>
+								<div class="news-details">
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+&nbsp;
+العوا هو الرئيس الذى اذا نجح فى الانتخابات الرئاسية القادمة ستكتمل فرحتنا لاننا بحاجة إلى رئيس يتقى الله فى شعب مصر
+&nbsp;
+
+
+&nbsp;
+&nbsp;
+&nbsp;...</div>
+								<div class="link-more">للمزيد</div>
+				
+							</div>
+						</a>
+					</div>
+					<div class='cleardiv'></div>
+									<div class="news-item" style="height: 77px;padding: 1px 9px;">
+						<a class="main-link" href="/ar/articles-item/item/14/page/233">
+							<div class="news-data" style="text-align: right;">
+								<h2 class="news-title">عن المستشار أحمد مكى</h2>
+								<div class="news-details">
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+&nbsp;
+
+مقولة صحيحة. الوطن هو الذي يصنع هوية الإنسان، ويمنحه نعمة الانتماء، ويصنع له علاقة بالآخرين ثابتة فيه يرسخها&nbsp;
+أؤيد د/العوا عملا بحديث الرسول صلى...</div>
+								<div class="link-more">للمزيد</div>
+				
+							</div>
+						</a>
+					</div>
+					<div class='cleardiv'></div>
+									<div class="news-item" style="height: 77px;padding: 1px 9px;">
+						<a class="main-link" href="/ar/articles-item/item/13/page/233">
+							<div class="news-data" style="text-align: right;">
+								<h2 class="news-title">نقلا عن د.سليم العوا </h2>
+								<div class="news-details">&nbsp;
+
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+
+أنا &nbsp;سأنصر الضعيف ليس على القوى و انما على الضعف نفسة. و &nbsp;سأنصر الفقير ليس على الغنى و لكن على الفقر نفسة، و سأنصر الخائف على خوفة . و سأنصر...</div>
+								<div class="link-more">للمزيد</div>
+				
+							</div>
+						</a>
+					</div>
+					<div class='cleardiv'></div>
+						
+  </div>
+  <div class="stuff-Container" style="float:right; margin-right:25px;">
+   <div id="small-video-holder" style="margin-top:-60px;">
+      <h2 class="title">انطلاق البرنامج الانتخابى</h2>
+      <div id="small-video" style="width:280px; height:200px;"></div>
+   </div>
+   <div id="calendar-Container">
+      <h2 class="title">متابعة الاحداث</h2>
+      <div id="calendar-holder"></div>
+   </div>
+  </div> 
+</div>    
+<div style="margin: 0px 0 0 0;width: 965px;clear:right; float:right;">
+ <div id="home-twitter-container">
+				
+				<script type="text/javascript" src="/templates/cdn/js/twitter.js"></script>
+				<script>
+					new TWTR.Widget({
+					  version: 2,
+					  type: 'profile',
+					  rpp: 6,
+					  interval: 30000,
+					  width: 'auto',
+					  height: 340,
+					  theme: {
+					    shell: {
+					      background: '#0c6b83',
+					      color: '#ffffff'
+					    },
+					    tweets: {
+					      background: '#ffffff',
+					      color: '#3b5998',
+					      links: '#000000'
+					    }
+					  },
+					  features: {
+					    scrollbar: false,
+					    loop: true,
+					    live: false,
+					    behavior: 'default'
+					  }
+					}).render().setUser('Selimelawa').start();
+					$('#home-twitter-container a.twtr-reply').css({'display':'inline'});
+				</script>
+				
+			</div>
+	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fel3wwa&amp;width=304&amp;height=383&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23CCCCCC&amp;stream=true&amp;header=false&amp;appId=243767452313209" scrolling="no" frameborder="0" style="float: right; border:none; overflow:hidden; margin-right:15px; width:304px; height:383px;" allowTransparency="true"></iframe>
+
+    
+   
+     <a href="/ar/page/page/288"  id="egyptianAccrossBorders"></a>       
+</div>
+
+
+
+</div>
+
+		<div id='homepage-lowwer-left-col'>
+
+			
+		</div>
+		<div class='cleardiv'></div>
+	</div>
+
+</div>
+<div class='cleardiv' style="height:20px;"></div>
+
+
+<style>
+h2.title{ color:#085B7D; text-align:right; font-size:20px;}
+</style>
+<script type="text/javascript">
+
+window.onload = function() {
+	var imageflowimg = new ImageFlow();
+	var imageflowvid = new ImageFlow();
+	var settings = {
+		animationSpeed 	: 	50,
+		aspectRatio 	: 	1.7,//1.964 	Aspect ratio of the ImageFlow container (width divided by height)
+		buttons 		: 	true,
+		captions 		: 	true ,
+		circular 		: 	true,
+		glideToStartID 	: 	false,
+		imageCursor 	: 	'pointer',
+		imageFocusM 	: 	2.0,
+		imageFocusMax 	: 	4,// 	Maximum number of images on each side of the focussed one 	imageFocusMax
+		imagePath 		: 	'',// 	Path to the images relative to the reflect_.php script
+		imageScaling 	: 	true,// 	Toggle image scaling 	No image scaling
+		imagesHeight 	: 	0.50,// 	Height of the images div container in percent 	21:9 (Cinemascope)
+		imagesM 		: 	1.0,//	Multiplicator for all images in percent 	Extreme portrait format
+		//onClick 		: 	function() { document.location = this.url; },// 	Function that is called onclick of the focussed image 	New window
+		opacity 		: 	false,// 	Disables / enables image opacity 	Enable image opacity
+		opacityArray 	:	[10,8,6,4,2],// 	Image opacity range - first value is for the focussed image (0 = 100% opacity, 10 = 0% opacity) 	Change opacity strength
+		percentLandscape: 	100,// 	Scale landscape format 	Extreme portrait format
+		percentOther 	: 	100,// 	Scale portrait and square format 	Extreme portrait format
+		preloadImages 	: 	true,//	Disables / enables the loading bar and image preloading
+		reflections 	: 	false,// 	Disables / enables the reflections 	No reflections
+		reflectionGET 	: 	'' ,//	Passes variables via the GET method to the reflect2.php and reflect3.php script 	Reflection background color
+		reflectionP 	: 	0.5,// 	Reflection height in % of the source image (1.0 = 100%, 0 = 0%) 	Image alignment
+		reflectionPNG 	: 	false,// 	Switches from the reflect2.php to the reflect3.php for PNG transparency support 	Transparent reflections
+		reflectPath 	: 	'', //	Path to the reflect_.php script
+		scrollbarP 		: 	0.75 ,	//Width of the scrollbar in percent
+		slider 			: 	true 	,//Disables  enables the scrollbar 	No reflections and no scrollbar
+		sliderCursor 	: 	'e-resize', //	Cursor type for the slider (try 'default')
+		sliderWidth 	: 	10, //	Width of the slider in px
+		slideshow 		: 	false, //	Toggle slideshow 	Slideshow
+		slideshowSpeed 	: 	1500,// 	Time between slides in ms 	Speed, circular and no scrollbar
+		slideshowAutoplay 	: 	false,// 	Toggle automatic slideshow play on startup 	Autoplay
+		startID 		: 	1 ,//	Glide to this image number on startup 	startID
+		startAnimation 	: 	false,// 	Animate images moving in from the right on startup 	startAnimation
+		xStep 			: 	150// 	Step width on the x-axis in px 	xStep
+};
+	settings.ImageFlowID = 'homeimageSlider';
+	settings.onClick = function() {
+		window.open($(this).attr('rel'));
+		/*
+		Shadowbox.open({
+        content: "<a href='" + $(this).attr('rel')+"'><img style='max-width:570px;max-height:350px;' src='" + $(this).attr('src')+"' /></a>",
+        player:  "html",
+        width:600,
+        height:350
+		});
+		*/
+    };
+	
+	imageflowimg.init(settings);
+
+	settings.ImageFlowID = 'homevideoSlider';
+	settings.onClick = function() {
+
+		window.open($(this).attr('data'));
+		/*
+		Shadowbox.open({
+			content: '<embed height="350" width="600" flashvars="file='+ $(this).attr('rel')+'&amp;image='+$(this).attr('src')+'"'+
+				 'wmode="transparent" allowscriptaccess="always" allowfullscreen="true" quality="high"'+
+				 'name="player" id="player" style=""'+'src="/templates/cdn/mediaplayer/flvplayer.swf" type="application/x-shockwave-flash">'+
+				 
+				 '<a href="' + $(this).attr('data')+'" style="color:white;text-align:center;">Open Gallery</a>',
+				 
+			player:     "html",
+			handleOversize:"resize",
+			width:600,
+			height:380
+		});
+		*/
+    };
+	imageflowvid.init(settings);
+
+	//Shadowbox.setup(".image-item",{gallery:"imggal"});
+	//Shadowbox.setup(".media-item",{gallery:"vidgal"});
+
+	drawcalendar(0,0);
+
+	if($('#homePageSlider').length)
+		$('#homePageSlider').homePageSlider();
+	if($('#homeArticle1').length)
+		$('#homeArticle1').homePageSlider();
+	if($('#homeArticle2').length)
+		$('#homeArticle2').homePageSlider();
+
+	 /*
+	 if($('#homeSlider').length)
+			$('#homeSlider').bxSlider({displaySlideQty : 4, moveSlideQty : 1 , infiniteLoop : true , prevText : '' , nextText : ''})
+	*/
+
+
+var slider = $('#news-slider').bxSlider({
+	    mode: 'vertical',
+	    auto:true,
+	    pause:5000,
+	    controls: false,
+	    autoHover:true,
+	    displaySlideQty:4,
+	    ticker:true,
+	    onAfterSlide:function(n, q, o){
+	    	$('#home-news-image').css({'background':'url('+o.find('a.home-news-link').eq(0).attr("rel")+') no-repeat 1px 1px'});
+	  	  }
+	  });
+
+	  $('#news-u').click(function(){
+	    slider.goToPreviousSlide();
+	    return false;
+	  });
+
+	  $('#news-d').click(function(){
+	    slider.goToNextSlide();
+	    return false;
+	  });
+
+
+/*
+		var s1 = new SWFObject('/templates/cdn/mediaplayer/flvplayer.swf','player','625','400','9');
+			s1.addParam('allowfullscreen','true');
+			s1.addParam('allowscriptaccess','always');
+			s1.addParam('wmode','transparent');
+			s1.addParam('flashvars','file=http://www.awa4egypt.com/sitefiles/mediacenter_videos/video_38.flv&image=http://www.awa4egypt.com/sitefiles/mediacenter_images/mc_image_38.jpg');
+			s1.write('video');
+*/
+	var s2 = new SWFObject('/templates/cdn/mediaplayer/flvplayer.swf','player','280','190','9');
+			s2.addParam('allowfullscreen','true');
+			s2.addParam('allowscriptaccess','always');
+			s2.addParam('wmode','transparent');
+			s2.addParam('flashvars','file=http://www.awa4egypt.com/sitefiles/mediacenter_videos/video_42.flv&image=http://www.awa4egypt.com/sitefiles/mediacenter_images/mc_image_42.jpg');
+			s2.write('small-video');
+
+
+
+
+			 $('.home-news-link').mouseover(function(e){
+				    //alert($(this).attr('rel')) ;
+					 e.stopPropagation();
+					 e.preventDefault();
+				     $('#home-news-image').css({'background':'url('+$(this).attr("rel")+') no-repeat 1px 1px'});
+				 });
+				 
+				/*
+				setInterval(function() {
+					slider.goToNextSlide();
+				}, 4000);
+				*/
+				var poptest=true ;
+				if(poptest){
+					 Shadowbox.open({
+						content: "/ar/newsletter/plain/",
+						width: 460,
+						height: 300,
+						player: "iframe",
+						options:{modal:true}
+						//title:      title
+					});
+				}
+				 //Shadowbox.open($('#newsletter-btn'));
+};
+
+function drawcalendar(m,y,link) {
+	$.ajax({
+		url: '/ar/draw_calendar/plain/',
+		type:"POST",
+		async: true,
+		data: {
+			m:m,
+			y:y,
+			link:link
+		},
+		beforeSend: function(XMLHttpRequest) {
+		},
+		success: function(html){
+			//alert(html);
+			$('#calendar-holder').html(html).find('td.has-event').hover(
+					function(){
+						$(this).find('.tooltip').fadeIn(500);
+					},function(){
+						$(this).find('.tooltip').fadeOut(50);
+					});
+			},
+		error: function (XMLHttpRequest, textStatus, errorThrown) {
+			alert(XMLHttpRequest + ' status: ' + textStatus + ' error: ' + errorThrown);
+		}
+	});
+}
+
+</script>
+
+
+				<div class='cleardiv'></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footerWrapper">
+  
+		<div id="footerInnerWrap">
+                        <div style="position:absolute; left:100px;bottom:20px;">
+                <img src="/templates/cdn/images/shared/call_footer.jpg" />
+            </div>
+            			<span class="copyright">جميع الحقوق محفوظة</span>
+			<ul id="footerlinks">
+				<li><a href='/ar/sitemap/page/256'>خريطة الموقع</a></li>
+
+			</ul>
+			<a class="websiteby" target="_blank" href="http://www.e-motionegypt.com/">
+				<span>Website by</span>
+			</a>
+			<span id="beta">            		<a target="_blank" href="https://twitter.com/#!/Selimelawa" id="media-link-tw"></a>
+					<a target="_blank" href="http://www.youtube.com/el3wwa" id="media-link-yt"></a>
+					<a target="_blank" href="http://www.facebook.com/el3wwa" id="media-link-fb"></a>
+					<a target="_blank" href="https://plus.google.com/114632528801972706981/posts" id="media-link-gplus"></a>
+            </span>
+</div>
+	</div>
+
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28277845-1']);
+_gaq.push(['_setDomainName', 'awa4egypt.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+
+</body>
+
+ 
+
+</html>

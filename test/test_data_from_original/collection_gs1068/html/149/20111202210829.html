@@ -1,0 +1,1773 @@
+<HTML>
+<HEAD>
+<TITLE>ABUELAS DE PLAZA DE MAYO</TITLE>
+
+<LINK  rel="stylesheet" type="text/css" href="scripts/mi_style.css" />
+<link rel="stylesheet" type="text/css" href="scripts/menu_styles.css" />
+
+<script type="text/javascript" src="slideShow/scripts/yahoo-dom-event.js"></script> 
+<script type="text/javascript" src="slideShow/scripts/utilities.js"></script>
+<script type="text/javascript" src="slideShow/scripts/dragdrop-min.js"></script>
+<script type="text/javascript" src="slideShow/scripts/container_core-min.js"></script>
+<script type="text/javascript" src="slideShow/scripts/carousel.js"></script>
+<script type="text/javascript" src="slideShow/scripts/slideShow2010.js"></script>
+
+<link rel="stylesheet" type="text/css" href="slideShow/css/reset-fonts-grids.css">
+<link rel="stylesheet" type="text/css" href="slideShow/css/carousel.css">
+<link rel="stylesheet" type="text/css" href="slideShow/css/yui.css">
+<link rel="stylesheet" type="text/css" href="slideShow/css/slideShow.css">
+
+<script type="text/javascript" src="scripts/coolmenu.js"></script>
+<script type="text/javascript" src="scripts/menu_abuelas.js"></script>
+
+<script type='text/javascript' src='/scripts/swfobject.js'></script>
+
+<script type="text/javascript">
+
+function MuestraNoticia(noticia, volverList)
+{
+   ajaxpage(noticia, 'noticia')
+   ajaxpage(volverList, 'volverList')
+
+   window.scrollTo(0,0);
+   return false;
+}
+
+</script>
+
+
+<script type="text/javascript">
+
+function MuestraTres(noticia, volverList, der1)
+{
+   ajaxpage(noticia, 'noticia')
+   ajaxpage(volverList, 'volverList')
+   ajaxpage(der1, 'der1')
+
+   window.scrollTo(0,0);
+   return false;
+}
+
+</script>
+
+<script type="text/javascript">
+
+function MuestraCuatro(noticia, volverList, der1, der2)
+{
+   ajaxpage(noticia, 'noticia')
+   ajaxpage(volverList, 'volverList')
+   ajaxpage(der1, 'der1')
+   ajaxpage(der2, 'der2')
+
+   window.scrollTo(0,0);
+   return false;
+}
+
+</script>
+
+<script type="text/javascript">
+
+function MuestraArea(info, der1)
+{
+   ajaxpage(info, 'info')
+   ajaxpage(der1, 'der1')
+
+   window.scrollTo(0,0);
+   return false;
+}
+
+</script>
+
+
+<script type="text/javascript">
+
+function MuestraUno(info)
+{
+   ajaxpage(info, 'info')
+
+   window.scrollTo(0,0);
+   return false;
+}
+
+</script>
+
+
+<script type="text/javascript">
+
+function MuestraDos(info, menu_der)
+{
+   ajaxpage(info, 'info')
+   ajaxpage(menu_der, 'menu_der')
+
+   window.scrollTo(0,0);
+   return false;
+}
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+/***********************************************
+* Dynamic Ajax Content- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var bustcachevar=1 //bust potential caching of external pages after initial request? (1=yes, 0=no)
+var loadedobjects=""
+var rootdomain="http://"+window.location.hostname
+var bustcacheparameter=""
+
+function ajaxpage(url, containerid){
+var page_request = false
+if (window.XMLHttpRequest) // if Mozilla, Safari etc
+page_request = new XMLHttpRequest()
+else if (window.ActiveXObject){ // if IE
+try {
+page_request = new ActiveXObject("Msxml2.XMLHTTP")
+}
+catch (e){
+try{
+page_request = new ActiveXObject("Microsoft.XMLHTTP")
+}
+catch (e){}
+}
+}
+else
+return false
+document.getElementById(containerid).innerHTML='<div align="center"><img src="/imagenes/ajax-loader.gif"></img></div>';
+page_request.onreadystatechange=function(){
+loadpage(page_request, containerid)
+}
+if (bustcachevar) //if bust caching of external page
+bustcacheparameter=(url.indexOf("?")!=-1)? "&"+new Date().getTime() : "?"+new Date().getTime()
+page_request.open('GET', url+bustcacheparameter, true)
+page_request.send(null)
+}
+
+function loadpage(page_request, containerid){
+if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1))
+document.getElementById(containerid).innerHTML=page_request.responseText
+}
+
+function loadobjs(){
+if (!document.getElementById)
+return
+for (i=0; i<arguments.length; i++){
+var file=arguments[i]
+var fileref=""
+if (loadedobjects.indexOf(file)==-1){ //Check to see if this object has not already been added to page before proceeding
+if (file.indexOf(".js")!=-1){ //If object is a js file
+fileref=document.createElement('script')
+fileref.setAttribute("type","text/javascript");
+fileref.setAttribute("src", file);
+}
+else if (file.indexOf(".css")!=-1){ //If object is a css file
+fileref=document.createElement("link")
+fileref.setAttribute("rel", "stylesheet");
+fileref.setAttribute("type", "text/css");
+fileref.setAttribute("href", file);
+}
+}
+if (fileref!=""){
+document.getElementsByTagName("head").item(0).appendChild(fileref)
+loadedobjects+=file+" " //Remember this object as being already added to page
+}
+}
+}
+
+</script>
+
+<SCRIPT>
+<!--
+var miWin1;
+function abreVentana(URL,ancho,alto,x,y){
+	if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+	var features ="toolbar=no,location=no,directories=no,status=no,menubar=no," +
+	      "scrollbars=yes,resizable=no,width="+ancho+",height="+alto+",dependent=no,screenX=x,screenY=y"+
+          ",left="+x+",top="+y;
+
+	miWin1 = open(URL,'ayuda',features);}
+}
+
+
+
+//-->
+
+
+</SCRIPT>
+
+</HEAD>
+
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<div id="top" style="position:absolute; top:0px; left:10px; height:308px; 965px; padding-left:10; z-index:9999">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<SCRIPT>
+
+<!--
+var miWin1;
+function abreVentana(URL,ancho,alto,x,y){
+	if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+	var features ="toolbar=no,location=no,directories=no,status=no,menubar=no," +
+	      "scrollbars=yes,resizable=no,width="+ancho+",height="+alto+",dependent=no,screenX=x,screenY=y"+
+          ",left="+x+",top="+y;
+
+	miWin1 = open(URL,'ayuda',features);}
+}
+
+
+//-->
+
+</SCRIPT>
+<script type="text/javascript" src="/scripts/dw_loader.js"></script> 
+<script language=javaScript>
+<!-- 
+var miWin1;
+function CargaSelected(formName) {
+   var issue = document.forms[formName].list.options[document.forms[formName].list.selectedIndex].value;
+   if (issue != ""){
+		if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+        miWin1 = open(issue,'titulo');}}
+}
+
+//-->
+</script>
+
+<script>
+BLANK_IMAGE = 'scripts/b.gif';
+
+var MENU_ITEMS = [
+	{pos:[10,217], itemoff:[0,120], leveloff:[27,4], style:STYLE, size:[22,140]},
+
+	{code:"&iquest;qui&eacute;nes somos?&nbsp;&nbsp;&nbsp;", url:"/institucional.php?institucional=historia.htm&der1=der1_hist.php&der2=der2_inst.php", format:{size:[22,120], itemoff:[0,100]},
+
+		sub:[
+			{itemoff:[21,0]},
+			{code:"historia", url:"/institucional.php?institucional=historia.htm&der1=der1_hist.php&der2=der2_inst.php", format:{style:STYLEsub}},
+			{code:"filiales", url:"/institucional.php?institucional=filiales.htm&der1=der1_fil.php&der2=der2_inst.php", format:{style:STYLEsub}},
+			{code:"comisi&oacute;n directiva", url:"/institucional.php?institucional=comision.htm&der1=der1_hist.php&der2=der2_inst.php", format:{style:STYLEsub}},
+			{code:"finaciamiento", url:"/institucional.php?institucional=financiamiento.htm&der1=der1_hist.php&der2=der2_inst.php", format:{style:STYLEsub}}
+
+  		] 
+
+	},
+
+	{code:"&iquest;dud&aacute;s de tu identidad?", url:"/institucional.php?institucional=dudas.htm&der1=der1_dudas.php&der2=der2_areas.php" , format:{size:[22,150], itemoff:[0,110]}
+
+	},
+
+	{code:"prensa y difusi&oacute;n", url:"/comunicados.php?comunicados=varios2008.php&der1=der1_varios.php&der2=der2_dif.php", format:{size:[22,120], itemoff:[0,150]},
+
+		sub:[
+			{itemoff:[21,0]},
+			{code:"comunicados", url:"/comunicados.php?comunicados=varios2011.php&der1=der1_varios.php&der2=der2_dif.php", format:{style:STYLEsub}},
+			{code:"mensuario", url:"/comunicados.php?comunicados=mensuario.htm&der1=der1_mens.php&der2=der2_dif.php", format:{style:STYLEsub}},
+			{code:"prensa", url:"/comunicados.php?comunicados=prensa2011.php&der1=der1_prensa.php&der2=der2_dif.php", format:{style:STYLEsub}},
+			{code:"cartelera red x i", url:"/comunicados.php?comunicados=carteleraRed2008.php&der1=der1_red.php&der2=der2_dif.php", format:{style:STYLEsub}},
+			{code:"radio / audio", url:"/comunicados.php?comunicados=radio.php&der1=der1_radio.php&der2=der2_rad.php", format:{style:STYLEsub}},
+			{code:"tv / video", url:"/comunicados.php?comunicados=tv.php&der1=der1_tv.php&der2=der2_rad.php", format:{style:STYLEsub}},
+			{code:"gr&aacute;fica", url:"/comunicados.php?comunicados=muestras.php&der1=der1_muest.php&der2=der2_rad.php", format:{style:STYLEsub}}
+			<!-- {code:"campa&ntilde;as", format:{style:STYLEsub}}//-->
+
+
+  		] 
+
+	},
+	{code:"&aacute;reas de Abuelas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", 
+           url:"/areas.php?area=presentacion.php&der1=der1_pe.php&der2=der2_areas.php", format:{size:[22,166], itemoff:[0,120]},
+
+		sub:[
+			{itemoff:[21,0]},
+			{code:"presentaci&oacute;n espont&aacute;nea", url:"/areas.php?area=presentacion.php&der1=der1_pe.php&der2=der2_areas.php", format:{style:STYLEsub}},
+			{code:"jur&iacute;dica", url:"/areas.php?area=juridica.htm&der1=der1_jur.php&der2=der2_areas.php", format:{style:STYLEsub}},
+			{code:"psicol&oacute;gica", url:"/areas.php?area=psicologica.htm&der1=der1_psi.php&der2=der2_areas.php", format:{style:STYLEsub}},
+			<!-- {code:"investigaci&oacute;n", url:"/areas.php?area=investigacion.htm&der1=der1_inv.php&der2=der2_areas.php", format:{style:STYLEsub}},//-->
+			{code:"difusi&oacute;n", url:"/areas.php?area=difusion.php&der1=der1_dif.php&der2=der2_areas.php", format:{style:STYLEsub}},
+			{code:"gen&eacute;tica", url:"/areas.php?area=genetica.htm&der1=der1_gen.php&der2=der2_areas.php", format:{style:STYLEsub}},
+			{code:"archivo biogr&aacute;fico", url:"/areas.php?area=archivo.htm&der1=der1_arch.php&der2=der2_areas.php", format:{style:STYLEsub}}
+			<!-- {code:"casa hist&oacute;rica", url:"/areas.php?area=casa.htm&der1=der1_casa.php&der2=der2_areas.php", format:{style:STYLEsub}}//-->
+
+
+  		] 
+
+	},
+	{code:"material de consulta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", url:"/areas.php?area=bibliografia.php&der1=der1_mat.php&der2=der2_mat.php", format:{size:[22,150], itemoff:[0,118]},
+
+		sub:[
+			{itemoff:[21,0]},
+			{code:"bibliograf&iacute;a", url:"/areas.php?area=bibliografia.php&der1=der1_mat.php&der2=der2_mat.php", format:{style:STYLEsub}},
+			{code:"historias de abuelas", url:"/areas.php?area=historias_abu.php&der1=der1_mat.php&der2=der2_mat.php", format:{style:STYLEsub}},
+			{code:"testimonios de abuelas", url:"/areas.php?area=testimoniosAbuelas.php&der1=der1_mat.php&der2=der2_mat.php", format:{style:STYLEsub}},
+			{code:"testimonios de nietos", url:"/areas.php?area=testimoniosNietos.php&der1=der1_mat.php&der2=der2_mat.php", format:{style:STYLEsub}},
+			{code:"notas prensa a nietos", url:"/areas.php?area=prensaNietos.php&der1=der1_mat.php&der2=der2_mat.php", format:{style:STYLEsub}},
+			{code:"pel&iacute;culas", url:"/areas.php?area=peliculas.php&der1=der1_mat.php&der2=der2_mat.php", format:{style:STYLEsub}},
+
+  		] 
+
+	},
+
+	{code:"educaci&oacute;n y formaci&oacute;n", url:"/areas.php?area=seminarios.php&der1=der1_edu.php&der2=der2_mat.php", format:{size:[22,140], itemoff:[0,136]},
+		sub:[
+			{itemoff:[21,0]},
+			{code:"material educativo", url:"/areas.php?area=educacion.php&der1=der1_edu.php&der2=der2_edu.php", format:{style:STYLEsub}},
+			{code:"videos educativos", url:"/areas.php?area=videosEducativos.php&der1=der1_edu.php&der2=der2_edu.php", format:{style:STYLEsub}},
+			{code:"notas educaci&oacute;n", url:"/areas.php?area=notas_edu.php&der1=der1_edu.php&der2=der2_edu.php", format:{style:STYLEsub}},
+			{code:"seminarios", url:"/areas.php?area=seminarios.php&der1=der1_semi.php&der2=der2_edu.php", format:{style:STYLEsub}},
+
+  		] 
+
+
+	}
+
+
+];
+
+</script>
+
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<script type="text/javascript">
+var dw_loadURL;
+var dw_loadBUFFER;
+var dw_loadDIV;
+var dw_loadURL2;
+var dw_loadBUFFER2;
+var dw_loadDIV2;
+</script>
+
+<iframe id="buffer" name="buffer" src="/comunicados/c000.htm"
+onload="dw_displayExternal(dw_loadURL,dw_loadBUFFER,dw_loadDIV)" width="0" height="0" scrolling="no" frameborder="no">
+</iframe>
+
+<iframe id="buffer2" name="buffer2" src="/comunicados/c000.htm"
+onload="dw_displayExternal(dw_loadURL2,dw_loadBUFFER2,dw_loadDIV2)" width="0" height="0" scrolling="no" frameborder="no">
+</iframe>
+
+<div id="display"></div>
+
+		<script type="text/javascript">
+		var m1 = new COOLjsMenu("menu1", MENU_ITEMS)
+		</script>
+
+
+
+<div style="position:absolute; top:0px; left:10px; height:108px; width:510px; padding-left:10">
+
+<table cellpadding="0" cellspacing="0" border="0" width="480" height="105">
+<tr>
+<td>
+<img src="imagenes/top_abuelas.jpg" border="0">
+</td>
+</tr>
+</table>
+</div>
+
+<div style="position:absolute; top:0px; left:520px; height:40px; width:250px; padding-left:10">
+<table cellpadding="0" cellspacing="0" border="0" width="230" height="40">
+<tr>
+<td valign="bottom" align="center">
+<p class="info">
+Viernes, 2 de Diciembre de 2011
+
+
+</p>
+
+</td>
+</tr>
+</table>
+</div>
+
+
+<div style="position:absolute; top:10px; left:865px; height:40px; width:100px; padding-left:10">
+<table border="0" cellpadding="0" cellspacing="0" border="0" width="100" height="40">
+<tr>
+<td valign="top" align="left" height="20">
+<a class="area" href="" onClick="javascript:abreVentana('/english/history.htm',810,620,5,5);return false;"><img src="imagenes/english.jpg" border="0" hspace="4" align="left">english</a>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="left" height="20">
+<a class="area" href="" onClick="javascript:abreVentana('/italiano/storia.htm',810,620,5,5);return false;"><img src="imagenes/italia.jpg" border="0" hspace="4" align="left">italiano</a>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="left" height="20">
+<a class="area" href="" onClick="javascript:abreVentana('/portugues/PremioUNESCOp.htm',810,620,5,5);return false;"><img src="imagenes/portugues.jpg" border="0" hspace="4" align="left">portugu&ecirc;s</a>
+</td>
+</tr>
+
+<!-- <tr>
+<td valign="top" align="left" height="20">
+<a class="area" href="index.php"><img src="imagenes/espaniol.jpg" border="0" hspace="4" align="left">espa&ntilde;ol</a>
+</td>
+</tr> -->
+</table>
+</div>
+
+<div style="position:absolute; top:80px; left:500px; height:28px; width:475px; padding-left:5; background-color:#34977F">
+<p class="top"><a class="contacto" href="mailto:abuelas@abuelas.org.ar">abuelas@abuelas.org.ar</a>&nbsp; |&nbsp;
+<a class="contacto" href="mailto:dudas@abuelas.org.ar">dudas@abuelas.org.ar</a>&nbsp; |&nbsp;
+<a class="contacto" href="mailto:denuncias@abuelas.org.ar">denuncias@abuelas.org.ar</a> &nbsp;
+</p>
+</div>
+
+<div style="position:absolute; top:110px; left:10px; height:102px; width:955px; padding-left:10; padding-right:10; background-color:#D0DFD9">
+
+<!-- empieza el slideShow -->
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="945" height="100">
+<tr>
+<td align="left" valign="middle" height="90">
+
+<!-- empieza el slideShow -->
+
+<div id="dhtml-carousel" class="carousel-component">
+   <div><img id="next-arrow" class="right-button-image"  onClick="carousel.setProperty('scrollInc',3);carousel.setProperty('animationSpeed',0.7);" src="/slideShow/img/right-enabled.gif" alt="siguiente"/>
+    </div>
+    <div><img id="prev-arrow" class="left-button-image" onClick="carousel.setProperty('scrollInc',3);carousel.setProperty('animationSpeed',0.7);" src="/slideShow/img/left-enabled.gif" alt="anterior"/>
+    </div>
+
+    <div class="carousel-clip-region">
+        <ul class="carousel-list">
+            
+        </ul>
+    </div>
+</div>
+
+<!-- termina el slideShow -->
+
+</td>
+<td width="10">&nbsp;
+</td>
+<td valign="middle" align="left">
+<p class="info2">Si naciste entre <b>1975 y 1980</b> y ten&eacute;s <br>dudas sobre tu origen, 
+consult&aacute; la <br><a class="area2" href="" onClick="javascript:abreVentana('Libro2010/index.php',800,600,0,0);return false;"><b>Lista de nietos que estamos buscando <br>y de casos resueltos a la fecha</b></a>
+</p>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+
+
+<div style="position:absolute; top:214px; left:10px; height:30px; width:778px; background-color:#419CB9">
+<!-- Menu -->
+</div>
+
+<div style="position:absolute; top:214px; left:790px; height:30px; width:185px; padding-left:10; background-color:#ACCF63">
+<p class="menu" align="right"><a class="area" href="index.php">inicio</a>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+</div>
+
+
+
+</BODY>
+</HTML>
+</div>
+
+<div id="info" style="position:absolute; top:270px; left:10px; height:500px; width:550px; padding-left:10">
+   <table width="520">
+     <tr>
+     <td align="left" style="border-bottom:1px solid; border-color:#67B0C7;">
+       <p class="titulo4">Testimonios</p> 
+           &nbsp;
+    </td>
+     </tr>
+    </table> 
+
+    <div id="noticia" name="noticia" align="left" style="width:520px; padding-left:11">
+      <HTML>
+<HEAD>
+<TITLE>ABUELAS DE PLAZA DE MAYO</TITLE>
+<LINK  rel="stylesheet" type="text/css" href="/scripts/mi_style.css" />
+<link rel="stylesheet" type="text/css" href="/scripts/menu_styles.css" />
+
+<META name="description" content="">
+<META name="keywords" content="">
+<META name="generator" content="CuteHTML">
+<SCRIPT>
+<!--
+var miWin1;
+function abreVentana(URL,ancho,alto,x,y){
+	if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+	var features ="toolbar=no,location=no,directories=no,status=no,menubar=no," +
+	      "scrollbars=yes,resizable=no,width="+ancho+",height="+alto+",dependent=no,screenX=x,screenY=y"+
+          ",left="+x+",top="+y;
+
+	miWin1 = open(URL,'ayuda',features);}
+}
+
+var player     =  null;      
+var bufferFlag =  true;      
+
+function playerReady(obj)    
+{ 
+   player = gid(obj.id);        
+   addListeners();  
+};      
+
+function addListeners()      
+{        
+   // I suppose this should really should be checking the property to see if it's type "object'
+
+   if(player.getPlaylist())     
+   { 
+      player.addModelListener('TIME', 'timeMonitor');
+   }        
+   else        
+   {          
+      setTimeout("addListeners()", 100);        
+   }      
+};      
+
+function timeMonitor(obj)      
+{        
+   if((obj.position > 0) && (bufferFlag))        
+   {          
+      player.sendEvent('PLAY', 'false');          
+      bufferFlag = false;      
+   } 
+};      
+
+function gid(name)      
+{      
+    return document.getElementById(name);      
+};    
+
+
+
+//-->
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<table width="520">
+<tr>
+<td align="left">
+<br>
+
+<p class="titulo1">"Fui a Abuelas con dudas de todo tipo"
+</p>
+<p class="subtitulo1">Leonardo Fossati conoció su origen en agosto de 2005</p>
+
+<p class="info">
+<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='288' height='172' id='single3' name='single3' align="left" hspace="12" vspace="6">
+<param name='movie' value='player.swf'>
+<param name='allowfullscreen' value='true'>
+<param name='allowscriptaccess' value='always'>
+<param name='wmode' value='transparent'>
+<param name='flashvars' value='file=/material/testimonios/videos/nietos/LeonardoFossati.mp4&image=/material/testimonios/videos/nietos/LeonardoFossati.jpg'>
+<embed
+  id='single4'
+  name='single4'
+  src='player.swf'
+  width='288'
+  height='172'
+  bgcolor='#ffffff'
+  allowscriptaccess='always'
+  allowfullscreen='true'
+  flashvars='file=/material/testimonios/videos/nietos/LeonardoFossati.mp4'
+/>
+</object>
+</p>
+<!-- <img src="/Libro2010/fichas/R/imagenes/FOSSATI_Leonardo.jpg" align="left" vspace="8" hspace="22">
+ -->
+<p class="info">&quot;Cuando me enteré que no era hijo biológico de mis padres, estuve un tiempo pensando que era un chico abandonado&quot;, explica Leonardo Fossati, restituido el 11 de agosto de 2005. &quot;A mí me fueron a buscar a la casa de una partera en La Plata, así fue que mejor cerré la historia por ahí, porque no había forma de seguir indagando: la partera había fallecido, ya no existía ese lugar&quot;. Leonardo, como muchos jóvenes con su identidad falseada, no fue adoptado legalmente sino inscripto como hijo propio de quienes lo criaron.
+</p>
+<p class="info">&quot;Un día una amiga me comentó que en La Plata había una oficina de Abuelas, me sugirió que fuera, que preguntara, porque más allá de que se dedicaban a la búsqueda de familiares de desaparecidos, también me podían asesorar en el tema&quot;, recuerda acerca de sus pocas sospechas de ser hijo de desaparecidos. &quot;Fui con dudas de todo, hasta dudas de con quién me iba a encontrar, porque yo tenía una buena imagen de Abuelas pero conocía  muy poco de eso. Me acerqué, tuvimos un par de entrevistas, me dijeron que iban a buscar con los datos que yo les había dejado, que cualquiera cosita me avisaban, y que como último elemento me harían un estudio de ADN en el Banco Nacional de Datos Genéticos. Finalmente me hice este estudio y la verdad es que seguía con muy pocas expectativas, lo que yo quería era transitar este camino y agotar toda las instancias, pero con pocas expectativas&quot;, asegura. Finalmente &quot;En agosto supe los resultados, y la verdad que fue una puerta que se abrió, no solamente porque era algo que no esperaba, sino porque creo que aquel que se lo espera tampoco se imagina todo lo que esto te puede generar en lo personal y en los demás también. No dejo de sorprenderme día, día... sobre todo con la familia que me buscó durante 28 años.&quot;
+</p>
+
+
+</td>
+</tr>
+</table>
+
+
+</BODY>
+</HTML>
+    </div>
+
+  <table width="520">
+     <tr>
+     <td align="right" style="padding:11">
+     <p class="info">
+      Ver m&aacute;s testimonios de Nietos <a class="area2" href="/areas.php?area=testimoniosNietos.php&der1=der1_mat.php&der2=der2_mat.php"><b>[+]</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Ver m&aacute;s testimonios de Abuelas <a class="area2" href="/areas.php?area=testimoniosAbuelas.php&der1=der1_mat.php&der2=der2_mat.php"><b>[+]</b></a>
+     </p>  
+  
+     </td>
+     </tr>
+    </table>   
+
+ 
+ 
+ 	<div id="listado" name="listado" style="width:520px; padding-left:10">
+	<HTML>
+<HEAD>
+<TITLE>ABUELAS DE PLAZA DE MAYO</TITLE>
+<LINK  rel="stylesheet" type="text/css" href="scripts/mi_style.css" />
+<link rel="stylesheet" type="text/css" href="scripts/menu_styles.css" />
+
+<META name="description" content="">
+<META name="keywords" content="">
+<META name="generator" content="CuteHTML">
+<SCRIPT>
+<!--
+var miWin1;
+function abreVentana(uRL,ancho,alto,x,y){
+	if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+	var features ="toolbar=no,location=no,directories=no,status=no,menubar=no," +
+	      "scrollbars=yes,resizable=no,width="+ancho+",height="+alto+",dependent=no,screenX=x,screenY=y"+
+          ",left="+x+",top="+y;
+
+	miWin1 = open(uRL,'ayuda',features);}
+}
+
+
+
+//-->
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<table width="520">
+<br>
+
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7;">
+<p class="titulo4">Novedades</p>
+</td>
+</tr>
+
+<!--ULTIMO COMUNICADO-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=varios2011.php&der1=der1_varios.php&der2=der2_dif.php">
+VARIOS</a> | Buenos Aires, 2 de diciembre de 2011</p>
+<p class="titulo5">Verdades Verdaderas, la historia de Estela</p>
+<br>
+<p class="info-inicial">
+<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='360' height='200' id='single1' name='single1'>
+<param name='movie' value='player.swf'>
+<param name='allowfullscreen' value='true'>
+<param name='allowscriptaccess' value='always'>
+<param name='wmode' value='transparent'>
+<param name='flashvars' value='file=/material/video/VerdadesVerdaderas.mp4&image=/material/video/spotVerdades.jpg'>
+<embed
+  id='single2'
+  name='single2'
+  src='player.swf'
+  width='360'
+  height='200'
+  bgcolor='#ffffff'
+  allowscriptaccess='always'
+  allowfullscreen='true'
+  flashvars='file=/material/video/VerdadesVerdaderas.mp4'
+/>
+</object>
+</p>
+
+<br>
+</td>
+</tr>
+
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<a class="info2" href="/imagenes/MarchaResistencia2011.jpg" target="_blank"><img src="imagenes/MarchaResistencia2011.jpg" width="200" align="left" hspace="6" vspace="6" border="0">
+</a>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=varios2011.php&der1=der1_varios.php&der2=der2_dif.php">
+ANIVERSARIOS</a> | Buenos Aires, 2 de diciembre de 2011</p>
+<a class="info2" href="/imagenes/MarchaResistencia2011.jpg" target="_blank">
+31&deg; Marcha de la Resistencia</a>
+<p class="info-inicial">Mi&eacute;rcoles 7 de diciembre de 12 a 24hs. en Plaza de Mayo
+<br>
+</td>
+</tr>
+
+<!--var111130_1136-1.htm La titular de Abuelas recibi&oacute; el Honoris Causa de la UNS START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<img src="imagenes/honorisBahiaBlanca.jpg" width="200" align="left" hspace="6" vspace="6">
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=varios2011.php&der1=der1_varios.php&der2=der2_dif.php">
+VARIOS</a> | Bah&iacute;a Blanca, 30 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/varios2011/var111130_1136-1.htm',480,440,20,100);return false;">
+La titular de Abuelas recibi&oacute; el Honoris Causa de la UNS</a>
+<p class="info-inicial">Estela de Carlotto recibi&oacute; el t&iacute;tulo en Bah&iacute;a Blanca y se convirti&oacute; en la primera mujer en la historia de la Universidad Nacional del Sur en recibir un doctorado Honoris Causa.
+La distinción fue propuesta por la Red por la Identidad local y la Juventud Universitaria Peronista (JUP)...</p>
+<br>
+</td>
+</tr>
+<!--var111130_1136-1.htm END-->
+
+<!--pre111130_1128-1.htm La Justicia le deneg&oacute; la prisi&oacute;n domiciliaria a un m&eacute;dico acusado de robo de beb&eacute;s en la dictadura START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Telam, 29 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111130_1128-1.htm',480,440,20,100);return false;">
+La Justicia le deneg&oacute; la prisi&oacute;n domiciliaria a un m&eacute;dico acusado de robo de beb&eacute;s en la dictadura</a>
+<p class="info-inicial">La C&aacute;mara Federal deneg&oacute; el beneficio de la prisi&oacute;n domiciliaria al m&eacute;dico Norberto Bianco, acusado de robo de beb&eacute;s durante la &uacute;ltima dictadura militar y extraditado desde el Paraguay, al sostener que la Unidad Penitenciaria de Marcos Paz, donde est&aacute; alojado, cuenta &quot;con los elementos necesarios para la asistencia del paciente&quot;...</p>
+<br>
+</td>
+</tr>
+<!--pre111130_1128-1.htm END-->
+
+<!--var111123_1857-1.htm Manifestamos nuestra profunda tristeza START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=varios2011.php&der1=der1_varios.php&der2=der2_dif.php">
+VARIOS</a> | Buenos Aires, 23 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/varios2011/var111123_1857-1.htm',480,440,20,100);return false;">
+Manifestamos nuestra profunda tristeza</a>
+<p class="info-inicial">Las Abuelas de Plaza de Mayo queremos manifestar nuestra profunda tristeza por la muerte de Danielle Mitterrand, querida y solidaria mujer que acompa&ntilde;&oacute; nuestra lucha a favor de la Verdad, la Memoria, y la Justicia, desde los primeros momentos.
+En nuestro peregrinaje por el mundo buscando comprensi&oacute;n y ayuda, fuimos recibidas por ella en su papel de primera dama en varias oportunidades, en el Palacio Presidencial...</p>
+<br>
+</td>
+</tr>
+<!--var111123_1857-1.htm END-->
+
+<!--jud111123_1106-1.htm Declarar&aacute; Anah&iacute; Marocchi en el juicio conocido como Base Naval II. START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Mar del Plata, 23 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111123_1106-1.htm',480,440,20,100);return false;">
+Declarar&aacute; Anah&iacute; Marocchi en el juicio conocido como Base Naval II.</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo Filial Mar del Plata informa que en el d&iacute;a de ma&ntilde;ana, <b>Jueves 24 de Noviembre , a las 10.00hs declar&aacute; Anah&iacute; Marocchi</b> en el jucio que se est&aacute; siguiendo en nuestra ciudad por los cr&iacute;menes cometidos en los centros clandestinos de detenci&oacute;n Base Naval, Esim y Prefectura de Mar del Plata y en el cual nuestra Asociaci&oacute;n se constituye como parte querellante...
+</p>
+<p class="info-inicial"> 
+Segu&iacute; las novedades del juicio en: <a class="area2" href="http://basenaval2mardelplata.blogspot.com/" target="_blank"><b>http://basenaval2mardelplata.blogspot.com/</b></a></p></p>
+<br>
+</td>
+</tr>
+<!--jud111123_1106-1.htm END-->
+
+<!--jud111118_1614-1.htm Repudiamos el crimen de Cristian Ferreyra y exigimos justicia START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Buenos Aires, 18 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111118_1614-1.htm',480,440,20,100);return false;">
+Repudiamos el crimen de Cristian Ferreyra y exigimos justicia</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo repudia en&eacute;rgicamente el crimen de Cristian Ferreyra, militante del Movimiento Campesino de Santiago del Estero (Mocase) y miembro de la comunidad originaria lule-vilela de San Antonio. Asimismo, exigimos que la justicia act&uacute;e r&aacute;pidamente para esclarecer el asesinato a sangre fr&iacute;a de este joven,...</p>
+<br>
+</td>
+</tr>
+<!--jud111118_1614-1.htm END-->
+
+<!--pre111116_1543-1.htm Pruebas del plan sistem&aacute;tico START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 16 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111116_1543-1.htm',480,440,20,100);return false;">
+Pruebas del plan sistem&aacute;tico</a>
+<p class="info-inicial">La periodista de P&aacute;gina/12 Victoria Ginzberg declar&oacute; en el Juicio sobre robo de beb&eacute;s. Fue convocada por una nota escrita en 2002 referida a los documentos desclasificados por el Departamento de Estado de Estados Unidos. Uno de los papeles revela que el dictador Reynaldo Bignone reconoc&iacute;a en 1982 la apropiaci&oacute;n de beb&eacute;s y se negaba a devolver a los ni&ntilde;os a sus familias...</p>
+<br>
+</td>
+</tr>
+<!--pre111116_1543-1.htm END-->
+
+<!--pre111116_1538-1.htm "Cumpli&oacute; un rol en un sistema de represi&oacute;n" START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Tiempo Argentino, 16 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111116_1538-1.htm',480,440,20,100);return false;">
+"Cumpli&oacute; un rol en un sistema de represi&oacute;n"</a>
+<p class="info-inicial">Otilio Romano cerca de la destituci&oacute;n. El juez de la Corte mendocina, Mario Adaro, declar&oacute; en el juicio pol&iacute;tico contra el camarista acusado de delitos de lesa humanidad...</p>
+<br>
+</td>
+</tr>
+<!--pre111116_1538-1.htm END-->
+
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/imagenes/ConferenciaUBA.jpg" target="_blank">
+<img src="/imagenes/ConferenciaUBA.jpg" width="200" align="left" hspace="6" vspace="6">
+VARIOS</a> | Buenos Aires, 16 de noviembre de 2011</p>
+<a class="info2" href="/imagenes/ConferenciaUBA.jpg" target="_blank">
+Estela de Carlotto debatir&aacute; con Granovsky y Rangugni en la UBA</a>
+<p class="info-inicial">La presidenta de Abuelas participar&aacute; de la conferencia 
+"Seguridad, Democracia y Derechos Humanos: el rol de los medios de comunicaci&oacute;n 
+en las sociedades post-genocidas y dictatoriales", el lunes 21 de noviembre, 
+a las 18.30, en el Auditorio de la Facultad de Derecho de la UBA.
+</p>
+<br>
+</td>
+</tr>
+<!--pre111115_1004-1.htm "Un proceso dif&iacute;cil, pero liberador" START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 15 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111115_1004-1.htm',480,440,20,100);return false;">
+"Un proceso dif&iacute;cil, pero liberador"</a>
+<p class="info-inicial">El testimonio de Mariana Zaffaroni Islas, secuestrada y apropiada cuando ten&iacute;a un a&ntilde;o. Sus padres, uruguayos, fueron secuestrados en Automotores Orletti. De all&iacute; la apropi&oacute; Miguel Angel Furci, quien lleg&oacute; a llev&aacute;rsela a Paraguay. En la audiencia de ayer tambi&eacute;n declar&oacute; su t&iacute;a, Luc&iacute;a, quien dio detalles del secuestro...</p>
+<br>
+</td>
+</tr>
+<!--pre111115_1004-1.htm END-->
+
+<!--pre111111_1051-1.htm Beb&eacute;s Nacidos en La Escuelita. El Caso Metz en el Juicio de la UNS START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | solo local - Bah&iacute;a Blanca, 11 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111111_1051-1.htm',480,440,20,100);return false;">
+Beb&eacute;s Nacidos en La Escuelita. El Caso Metz en el Juicio de la UNS</a>
+<p class="info-inicial">Adriana Elisa Metz ten&iacute;a, como ella misma precis&oacute;, un a&ntilde;o, un mes y dieciseis d&iacute;as cuando vio a sus padres por &uacute;ltima vez. Fue en Cutral C&oacute;, en diciembre de 1976, minutos antes de que se los llevaran secuestrados de su propia casa y a ella la dejaran all&iacute;, abandonada a su suerte. Su madre estaba embarazada y algunos a&ntilde;os despu&eacute;s supo que,...</p>
+<br>
+</td>
+</tr>
+<!--pre111111_1051-1.htm END-->
+
+<!--pre111110_1418-1.htm M&eacute;xico crea la c&aacute;tedra de Derechos Humanos Abuelas de Plaza de Mayo START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Tiempo Argentino, 9 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111110_1418-1.htm',480,440,20,100);return false;">
+M&eacute;xico crea la c&aacute;tedra de Derechos Humanos Abuelas de Plaza de Mayo</a>
+<p class="info-inicial">Estela de Carlotto recibi&oacute; la m&aacute;xima distinci&oacute;n de la Universidad del Claustro de Sor Juana. La titular del organismo fue ovacionada en el auditorio de la UCSJ. La materia se dictar&aacute; dentro de la licenciatura de Derechos Humanos y Gesti&oacute;n de Paz de esa casa de estudios. Promover&aacute;n la creaci&oacute;n de un Banco de Datos Gen&eacute;ticos mexicano....</p>
+<br>
+</td>
+</tr>
+<!--pre111110_1418-1.htm END-->
+
+<!--pre111110_1414-1.htm Pas&oacute; la escoba por la C&aacute;mara mendocina START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 10 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111110_1414-1.htm',480,440,20,100);return false;">
+Pas&oacute; la escoba por la C&aacute;mara mendocina</a>
+<p class="info-inicial">Renunci&oacute; el camarista julio Petra, denunciado por favorecer a sus colegas y represores. Se fue despu&eacute;s de haber sido procesado. Estaba acusado de favorecer a jueces y represores. Todav&iacute;a resta definir si le aceptan la renuncia o se mantiene el proceso de juicio pol&iacute;tico. Es el tercer juez mendocino que deja su cargo por el mismo motivo....</p>
+<br>
+</td>
+</tr>
+<!--pre111110_1414-1.htm END-->
+
+<!--pre111108_1650-1.htm La C&aacute;mara Federal confirm&oacute; el procesamiento de la exesposa de un represor START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 8 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111108_1650-1.htm',480,440,20,100);return false;">
+La C&aacute;mara Federal confirm&oacute; el procesamiento de la exesposa de un represor</a>
+<p class="info-inicial">La Sala II del Tribunal de apelaciones ratific&oacute; el enjuiciamiento, sin prisi&oacute;n preventiva, de In&eacute;s Graciela Lugones, exesposa del fallecido represor Guillermo Minicucci, que est&aacute; acusada de haber entregado un beb&eacute; nacido en el centro clandestino de detenci&oacute;n que funcionaba en la ESMA, durante la &uacute;ltima dictadura militar, al matrimonio integrado por Jorge Ernesto Bacca y Cristina Mari&ntilde;elarena...</p>
+<br>
+</td>
+</tr>
+<!--pre111108_1650-1.htm END-->
+
+
+<!--pre111107_1043-1.htm Parir en la ESMA START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Lunes, 7 de noviembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111107_1043-1.htm',480,440,20,100);return false;">
+Parir en la ESMA</a>
+<p class="info-inicial">Acompa&ntilde;&oacute; a quince embarazadas en la Escuela de Mec&aacute;nica de la Armada. Relata cada uno de esos partos y cuenta c&oacute;mo se acondicion&oacute; un lugar espec&iacute;fico para la "maternidad clandestina", a la que derivaban prisioneras de otros campos....</p>
+<br>
+</td>
+</tr>
+<!--pre111107_1043-1.htm END-->
+
+<!--jud111031_1612-1.htm Se reanudaron las audiencias por el juicio Base Naval 2 en el Tribunal Oral Federal Nro. 1 de Mar del Plata. START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Mar del Plata, 31 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111031_1612-1.htm',480,440,20,100);return false;">
+Se reanudaron las audiencias por el juicio Base Naval 2 en el Tribunal Oral Federal Nro. 1 de Mar del Plata.</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo informa que el pasado Miercoles 26 de Octubre se reanudaron las audiencias  del juicio oral y p&uacute;blico que se est&aacute; siguiendo en nuestra ciudad con motivo de investigar los delitos de Lesa Humanidad perpetrados en los centros Clandestinos de Detencion: Base Naval, Esim y Prefectura del Mar del Plata. Esta semanas las audiencias est&aacute;n previstas para los d&iacute;a miercoles 2 y jueves 3 a las 10hs en el Tribunal Oral Federal N&deg; 1. Av. Luro entre Santiago del estero y Santa Fe.
+</p>
+<p class="info-inicial">
+Para seguir las novedades del juicio ingresa en:
+<a class="info2" href="http://basenaval2mardelplata.blogspot.com/" target="_blank"><b>http://basenaval2mardelplata.blogspot.com/</b></a></p>
+<br>
+</td>
+</tr>
+<!--jud111031_1612-1.htm END-->
+
+<!--pre111027_1043-1.htm PERPETUA START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 26 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111027_1043-1.htm',480,440,20,100);return false;">
+PERPETUA</a>
+<p class="info-inicial">Tras 22 meses de debate y de escuchar a m&aacute;s de 250 testigos, fueron condenados a prisi&oacute;n perpetua 12 ex marinos, entre ellos Alfredo Astiz y Jorge "Tigre" Acosta, que integraron el grupo de tareas de la ESMA, s&iacute;mbolo del horror durante la dictadura. Otros dos represores deber&aacute;n cumplir penas de 20 y 18 a&ntilde;os....</p>
+<br>
+</td>
+</tr>
+<!--pre111027_1043-1.htm END-->
+
+<!--jud111026_1856-1.htm Abuelas de Plaza de Mayo denunci&oacute; al TOCF 5 START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Buenos Aires, 26 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111026_1856-1.htm',480,440,20,100);return false;">
+Abuelas de Plaza de Mayo denunci&oacute; al TOF N&deg;5</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo solicit&oacute; al Consejo de la Magistratura de la Naci&oacute;n que investigue si los jueces Daniel Obligado, Germ&aacute;n Castelli y Ricardo Luis Far&iacute;as, miembros del Tribunal Oral Criminal Federal N&deg; 5 de la Capital Federal al frente del juicio por los delitos cometidos en la ESMA, incurrieron en la causal de mal desempe&ntilde;o o cometieron alg&uacute;n delito en el ejercicio de sus funciones que amerite una sanci&oacute;n disciplinaria....</p>
+<br>
+</td>
+</tr>
+<!--jud111026_1856-1.htm END-->
+
+<!--pre111026_1215-1.htm Las Abuelas festejaron los 34 a&ntilde;os rodeadas de juventud y reivindicando a N&eacute;stor y Cristina START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Telam, 26 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111026_1215-1.htm',480,440,20,100);return false;">
+Las Abuelas festejaron los 34 a&ntilde;os rodeadas de juventud y reivindicando a N&eacute;stor y Cristina</a>
+<p class="info-inicial">Las Abuelas de Plaza de Mayo festejaron esta noche los 34 a&ntilde;os de su creaci&oacute;n en un acto organizado por los nietos, que tuvo como principales protagonistas a &quot;la juventud y el recambio generacional&quot; y tambi&eacute;n las figuras de la presidenta Cristina Fern&aacute;ndez de Kirchner y de N&eacute;stor Kirchner, con quienes &quot;Abuelas envejecen viendo a dos hijos ejemplares que nos eligieron y elegimos&quot;, seg&uacute;n sostuvo Estela de Carlotto....</p>
+<br>
+</td>
+</tr>
+<!--pre111026_1215-1.htm END-->
+
+<!--pre111025_1122-1.htm "Le sorprendi&oacute; que no aparec&iacute;an padres" START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 25 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111025_1122-1.htm',480,440,20,100);return false;">
+"Le sorprendi&oacute; que no aparec&iacute;an padres"</a>
+<p class="info-inicial">En la audiencia tambi&eacute;n declar&oacute; Anatole Julien, el ni&ntilde;o que a los cuatro a&ntilde;os vio el operativo contra sus padres, que pas&oacute; con su hermana Victoria de Automotores Orletti a Uruguay y luego a una plaza de Valpara&iacute;so en Chile en la que fueron abandonados con un cartel, en el marco del Plan C&oacute;ndor....</p>
+<br>
+</td>
+</tr>
+<!--pre111025_1122-1.htm END-->
+
+<!--pre111025_1100-1.htm Una b&uacute;squeda que todav&iacute;a no termin&oacute; START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 25 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111025_1100-1.htm',480,440,20,100);return false;">
+Una b&uacute;squeda que todav&iacute;a no termin&oacute;</a>
+<p class="info-inicial">La nieta del poeta Juan Gelman detall&oacute; ante el tribunal que nunca hab&iacute;a sospechado que no fuera hija del polic&iacute;a que la cri&oacute;. Reci&eacute;n en 2000 conoci&oacute; su historia. Desde entonces reconstruy&oacute; el cautiverio de su madre y su nacimiento....</p>
+<br>
+</td>
+</tr>
+<!--pre111025_1100-1.htm END-->
+
+<!--pre111024_1211-1.htm El crimen de la apropiaci&oacute;n START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 24 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111024_1211-1.htm',480,440,20,100);return false;">
+El crimen de la apropiaci&oacute;n</a>
+<p class="info-inicial">Dif&iacute;cilmente haya causas que muestren de forma m&aacute;s expl&iacute;cita la presencia actual de las consecuencias del terrorismo de Estado que las que investigan y juzgan casos de apropiaci&oacute;n de ni&ntilde;os y ni&ntilde;as secuestrados con sus madres o que nacieron durante el cautiverio de &eacute;stas, en la &uacute;ltima dictadura militar....</p>
+<br>
+</td>
+</tr>
+<!--pre111024_1211-1.htm END-->
+
+<!--pre111021_1919-1.htm Hospital Militar: el Tribunal Oral Federal conden&oacute; a cinco de los seis acusados de robo de beb&eacute;s START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | UNO Entre R&iacute;os, 21 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111021_1919-1.htm',480,440,20,100);return false;">
+Hospital Militar: el Tribunal Oral Federal conden&oacute; a cinco de los seis acusados de robo de beb&eacute;s</a>
+<p class="info-inicial">La sentencia fue de 14 a&ntilde;os para Guerrieri, 13 para Fari&ntilde;a y Amelong, 11 para Pagano y cinco para Zaccar&iacute;a. En tanto, absolvi&oacute; a Gonz&aacute;lez. Frente a los Tribunales federales se movilizaron organizaciones de derechos humanos....</p>
+<br>
+</td>
+</tr>
+<!--pre111021_1919-1.htm END-->
+
+<!--pre111021_1848-1.htm Carlotto: &quot;El derecho a la identidad no tiene retorno&quot; START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Telam, 21 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111021_1848-1.htm',480,440,20,100);return false;">
+Carlotto: &quot;El derecho a la identidad no tiene retorno&quot;</a>
+<p class="info-inicial">Estela de Carlotto asegur&oacute; este viernes que no puede pensarse en vivir sin identidad y que ese concepto se profundiz&oacute; con la presencia de los poderes del Estado que responden en honor a un derecho, al conmemorarse el s&aacute;bado el D&iacute;a Nacional por el Derecho a la Identidad, en homenaje al 34 aniversario del nacimiento de Abuelas de Plaza de Mayo....</p>
+<br>
+</td>
+</tr>
+<!--pre111021_1848-1.htm END-->
+
+
+<!--jud111021_1757-1.htm La C&aacute;mara confirm&oacute; la condena contra Luis Falco pero redujo su pena START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Buenos Aires, 21 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111021_1757-1.htm',480,440,20,100);return false;">
+La C&aacute;mara confirm&oacute; la condena contra Luis Falco pero redujo su pena</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo comunica que la Sala 2 de la C&aacute;mara Nacional en lo Criminal Correccional Federal confirm&oacute; la condena al ex oficial de inteligencia Luis Antonio Falco, apropiador del nieto restituido Juan Cabandi&eacute;. Sin embargo, atento a la gravedad de las atrocidades cometidas por el represor, lamentamos ...</p>
+<br>
+</td>
+</tr>
+<!--jud111021_1757-1.htm END-->
+
+<!--pre111021_1031-1.htm Tomada, con las Abuelas START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | P&aacute;gina12, 21 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111021_1031-1.htm',480,440,20,100);return false;">
+Tomada, con las Abuelas</a>
+<p class="info-inicial">El ministro de Trabajo, Carlos Tomada, asegur&oacute; que en Argentina "se ha construido una nueva mayor&iacute;a", en un acto del que participaron las Abuelas de Plaza de Mayo, donde se rindi&oacute; homenaje al militante popular Jos&eacute; Poblete, ...</p>
+<br>
+</td>
+</tr>
+<!--pre111021_1031-1.htm END-->
+
+<!--jud111020_1624-1.htm El ex m&eacute;dico militar Norberto Bianco ir&aacute; a juicio oral por sustracci&oacute;n de beb&eacute;s en Campo de Mayo START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Buenos Aires, 20 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111020_1624-1.htm',480,440,20,100);return false;">
+El ex m&eacute;dico militar Norberto Bianco ir&aacute; a juicio oral por sustracci&oacute;n de beb&eacute;s en Campo de Mayo</a>
+<p class="info-inicial">El ex mayor del Ej&eacute;rcito y m&eacute;dico Norberto Bianco ir&aacute; a juicio oral por su nefasta actuaci&oacute;n en la maternidad clandestina de Campo de Mayo durante la &uacute;ltima dictadura. En el prontuario de Bianco consta, adem&aacute;s, la apropiaci&oacute;n del hijo de Norma Tato y Jorge Casariego, que naci&oacute; en 1977 en ese centro clandestino de detenci&oacute;n y recuper&oacute; su identidad en febrero de 2007...</p>
+<br>
+</td>
+</tr>
+<!--jud111020_1624-1.htm END-->
+
+
+<!--pre111019_1142-1.htm "La restituci&oacute;n de mi identidad no es un punto de llegada, sino de partida" START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Tiempo Argentino, 19 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111019_1142-1.htm',480,440,20,100);return false;">
+"La restituci&oacute;n de mi identidad no es un punto de llegada, sino de partida"</a>
+<p class="info-inicial">Leonardo Fossati brind&oacute; su testimonio en el juicio que investiga los cr&iacute;menes del Circuito Camps y reclam&oacute; conocer el destino de sus padres y la aparici&oacute;n de los cerca de 400 chicos que Abuelas sigue buscando....</p>
+<br>
+</td>
+</tr>
+<!--pre111019_1142-1.htm END-->
+
+<!--pre111018_1113-1.htm ESMA: Las mujeres embarazadas tambi&eacute;n eran sometidas a torturas START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Tiempo Argentino, 18 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111018_1113-1.htm',480,440,20,100);return false;">
+ESMA: Las mujeres embarazadas tambi&eacute;n eran sometidas a torturas</a>
+<p class="info-inicial">La sobreviviente de la ESMA Sara Solarz de Osatinsky declar&oacute; ayer en el juicio oral por el plan sistem&aacute;tico de Robo de Beb&eacute;s como testigo del nacimiento de la actual diputada Victoria Donda. Por videoconferencia desde Suiza, la mujer record&oacute; la convivencia con varias mujeres embarazadas en ese centro de detenci&oacute;n clandestino....</p>
+<br>
+</td>
+</tr>
+<!--pre111018_1113-1.htm END-->
+
+<!--jud111018_1047-1.htm Declara el nieto Leonardo Fossati en la causa Circuito Camps, en La Plata START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | La Plata, 17 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111018_1047-1.htm',480,440,20,100);return false;">
+Declara el nieto Leonardo Fossati en la causa Circuito Camps, en La Plata</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo informa que ma&ntilde;ana martes (18/10), en el juicio oral y p&uacute;blico por el denominado "Circuito Camps", brindar&aacute; su testimonio el nieto restituido Leonardo Fossati. En la causa por los campos de concentraci&oacute;n que comand&oacute; el entonces general y jefe de la Polic&iacute;a Bonaerense Ram&oacute;n Camps, est&aacute;n imputados 26 represores en perjuicio de 281 v&iacute;ctimas ...</p>
+<br>
+<p class="info-inicial">
+Segui las novedades de la causa en el blog <a class="area2" href="http://juiciocircuitocampsquerellaabuelas.blogspot.com" target="_blank"><b>http://juiciocircuitocampsquerellaabuelas.blogspot.com</b></a></p>
+<br>
+</td>
+</tr>
+<!--jud111018_1047-1.htm END-->
+
+<!--jud111018_1012-1.htm Sara Osatinsky declarar&aacute; el lunes START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=judiciales.php&der1=der1_varios.php&der2=der2_dif.php">
+JUDICIALES</a> | Buenos Aires, 14 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/judiciales/jud111018_1012-1.htm',480,440,20,100);return false;">
+Sara Osatinsky declarar&aacute; el lunes</a>
+<p class="info-inicial">Abuelas de Plaza de Mayo convoca a la pr&oacute;xima audiencia del juicio por Plan sistem&aacute;tico de apropiaci&oacute;n de menores, en los tribunales de Comodoro Py. El pr&oacute;ximo lunes 17 de octubre, a las 9, declarar&aacute; por videoconferencia Sara Osatinsky, sobreviviente del centro clandestino de detenci&oacute;n que funcion&oacute; en la Escuela de Mec&aacute;nica de la Armada (ESMA) ...</p>
+<br>
+</td>
+</tr>
+<!--jud111018_1012-1.htm END-->
+
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | The New York Times, 8 de octubre de 2011</p>
+<a class="info2" href="http://www.nytimes.com/2011/10/09/world/americas/argentinas-daughter-of-dirty-war-raised-by-man-who-killed-her-parents.html?pagewanted=1&_r=1&emc=eta1" target="_blank">
+Victoria Montenegro: "Esto es un proceso, no hay un momento en que borres todo lo que eras y empieces de nuevo"</a>
+<p class="info-inicial">La historia de la nieta restituida por Abuelas, que cobr&oacute; notoriedad luego de su testimonio 
+en la causa Plan Sistem&aacute;tico, mereci&oacute; una nota en profundidad del New York Times 
+<a class="area2" href="http://www.nytimes.com/2011/10/09/world/americas/argentinas-daughter-of-dirty-war-raised-by-man-who-killed-her-parents.html?pagewanted=1&_r=1&emc=eta1" target="_blank"><b>(leer art&iacute;culo en ingl&eacute;s).</b></a>
+
+</p>
+<br>
+</td>
+</tr>
+
+<!--pre111011_1824-1.htm Una nieta recuperada ratific&oacute; los v&iacute;nculos de la Triple A con el centro Automotores Orletti START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Telam, 11 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111011_1824-1.htm',480,440,20,100);return false;">
+Una nieta recuperada ratific&oacute; los v&iacute;nculos de la Triple A con el centro Automotores Orletti</a>
+<p class="info-inicial">La nieta recuperada Carla Rutila Art&eacute;s record&oacute; la "infancia infeliz" que pas&oacute; a manos de su apropiador, Eduardo Ruffo, al ratificar los v&iacute;nculos del represor con jefes de la Triple A y con el centro clandestino de detenci&oacute;n que funcion&oacute; en Automotores Orletti en la &uacute;ltima dictadura militar ...</p>
+<br>
+</td>
+</tr>
+<!--pre111011_1824-1.htm END-->
+
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/imagenes/Elsa_Sanchez_Oesterheld.jpg" target="_blank">
+<img src="/imagenes/Elsa_Sanchez_Oesterheld.jpg" width="140" align="left" hspace="6" vspace="6">
+<br>HOMENAJE</a> | Buenos Aires, 4 de octubre de 2011</p>
+<a class="info2" href="/imagenes/Elsa_Sanchez_Oesterheld.jpg" target="_blank">
+Homenaje a Elsa S&aacute;nchez de Oesterheld en la Legislatura porte&ntilde;a</a>
+<br><p class="info-inicial">La Abuela Elsa S&aacute;nchez de Oesterheld fue declarada Personalidad Destacada de los 
+Derechos Humanos de la Ciudad de Buenos Aires y ser&aacute; homenajeada el mi&eacute;rcoles 5 de octubre, a las 14, en 
+la Legislatura porte&ntilde;a (Per&uacute; 160). Estela de Carlotto, Juan Sasturain, Miguel Rep, Mar&iacute;a Elena Naddeo y 
+An&iacute;bal Ibarra participarán del acto. 
+</p>
+
+<br>
+</td>
+</tr>
+
+<!--pre111004_1218-1.htm Homenaje a Elsa Oesterheld en la Legislatura START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Noticias Urbanas, 3 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111004_1218-1.htm',480,440,20,100);return false;">
+Homenaje a Elsa Oesterheld en la Legislatura</a>
+<p class="info-inicial">La integrante de Abuelas de Plaza de Mayo ser&aacute; reconocida en un acto que se realizar&aacute; este mi&eacute;rcoles a las 14. Participar&aacute;n diferentes figuras, entre ellas, Estela De Carloto. Organiza la diputada Mar&iacute;a Elena Naddeo...</p>
+<br>
+</td>
+</tr>
+<!--pre111004_1218-1.htm END-->
+
+<!--pre111004_1213-1.htm &quot;Los juicios tienen todo un valor social&quot; START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | La Capital de Rosario, 2 de octubre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre111004_1213-1.htm',480,440,20,100);return false;">
+&quot;Los juicios tienen todo un valor social&quot;</a>
+<p class="info-inicial">Los juicios no s&oacute;lo tienen una funci&oacute;n de reivindicaci&oacute;n desde el punto de vista de v&iacute;ctimas y familiares, sino que poseen todo un valor social, el de tener la posibilidad de reconstruir la verdad hist&oacute;rica, de hablar de las cosas que no se hablaban", plantea Sabrina Gullino, nieta recuperada, hija de los militantes montoneros Raquel Negro y Tulio Valenzuela, ambos desaparecidos...</p>
+<br>
+</td>
+</tr>
+<!--pre111004_1213-1.htm END-->
+
+<!--pre110916_1223-1.htm Patrimonio de la humanidad START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Veintitres, 16 de septiembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre110916_1223-1.htm',640,520,20,100);return false;">
+Patrimonio de la humanidad</a>
+<p class="info-inicial">El dolor transformado en amor. Los hitos de Abuelas de Plaza de Mayo.
+<br>
+Ellas, sin propon&eacute;rselo, escribieron las p&aacute;ginas m&aacute;s tristes y m&aacute;s dignas de la historia argentina. La tragedia, personificada con un traje verde oliva, se les present&oacute; durante la &uacute;ltima dictadura militar y parti&oacute; sus vidas en dos: de un d&iacute;a para el otro, les arrancaron a sus hijos y a sus nietos. Pero las Abuelas de Plaza de Mayo, en un ejemplo de dignidad, trabajaron para recuperar lo que les hab&iacute;an sustra&iacute;do y jam&aacute;s reclamaron venganza. As&iacute;, en casi 34 a&ntilde;os de lucha, lograron restituir la identidad de 105 nietos...</p>
+<br>
+</td>
+</tr>
+<!--pre110916_1223-1.htm END-->
+
+<!--pre110914_1234-1.htm "¡Felicidades Abuelas de Plaza de Mayo!" START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/imagenes/SolicitadaPremioTA.jpg" target="_blank">
+<img src="/imagenes/SolicitadaPremioTA1.jpg" align="left" hspace="6" vspace="6">
+<br>
+PRENSA</a> | Tiempo Argentino, 14 de septiembre de 2011</p>
+<a class="info2" href="/imagenes/SolicitadaPremioTA.jpg" target="_blank">
+"¡Felicidades Abuelas de Plaza de Mayo!"<br>Premio de la Paz UNESCO 2011</a>
+<p class="info-inicial">Personalidades como Joan Manuel Serrat, Isabel Allende, Ernesto Laclau, Adri&aacute;n Paenza, Baltazar Garz&oacute;n y Le&oacute;n Gieco, entre otros, felicitaron a las Abuelas por la obtenci&oacute;n del Premio de la Paz Unesco 2011...</p>
+<br>
+</td>
+</tr>
+<!--pre110914_1234-1.htm END-->
+
+<!--var110914_1129-1.htm Agradecemos el Premio de Fomento de La Paz que nos entregar&aacute; la Unesco START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=varios2011.php&der1=der1_varios.php&der2=der2_dif.php">
+VARIOS</a> | Buenos Aires, 13 de septiembre de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/varios2011/var110914_1129-1.htm',480,440,20,100);return false;">
+Agradecemos el Premio de Fomento de La Paz que nos entregar&aacute; la Unesco</a>
+<p class="info-inicial">Las Abuelas de Plaza de Mayo agradecemos el Premio de Fomento de La Paz  que nos otorgar&aacute; ma&ntilde;ana la Organizaci&oacute;n de las Naciones Unidas para la Educaci&oacute;n, la Ciencia y la Cultura (Unesco), en su sede de Par&iacute;s. Este importante galard&oacute;n nos honra y nos da a&uacute;n m&aacute;s fuerzas para continuar con nuestra lucha por la verdad, la memoria y la justicia...</p>
+<br>
+</td>
+</tr>
+<!--var110914_1129-1.htm END-->
+
+<!-- <tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=muestras.php&der1=der1_muest.php&der2=der2_rad.php">
+HISTORIETAS</a> | Buenos Aires, 10 de septiembre 2011</p>
+<a class="info2" href="/comunicados.php?comunicados=muestras.php&der1=der1_muest.php&der2=der2_rad.php">
+Ya sali&oacute; la nueva historieta de la serie "Historietas x la Identidad"</a>
+<br>
+<p class="info-inicial">
+<img src="/material/historietas/NicolasPlacciGarofalo1.jpg" align="left" hspace="6" vspace="6">
+<br>En esta oportunidad se trata de la historia de Nicol&aacute;s Placci Gar&oacute;falo 
+que busca un/a hermano/a, realizada por Fernando Calvi. 
+</p>    
+<p class="info-inicial">"Historietas x la identidad" es una serie de historietas que ir&aacute;n saliendo publicadas en la revista Fierro, 
+a partir del s&aacute;bado 14 de mayo. Cada una de esas historias incluye las fotos del grupo familiar, 
+relatada desde la voz de un familiar generacionalmente pr&oacute;ximo (el hermano). 
+El fin de esta iniciativa es ampliar el alcance de las campa&ntilde;as hacia nuevos 
+destinatarios y seguir promoviendo el acercamiento de m&aacute;s j&oacute;venes. 
+</p>
+<br>
+</td>
+</tr> -->
+
+<!--pre110809_1432-1.htm La restituci&oacute;n de la nieta 105 dio la vuelta al mundo START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=prensa2011.php&der1=der1_varios.php&der2=der2_dif.php">
+PRENSA</a> | Medios del Mundo, 9 de agosto de 2011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/prensa2011/pre110809_1432-1.htm',480,440,20,100);return false;">
+La restituci&oacute;n de la nieta 105 dio la vuelta al mundo</a>
+<p class="info-inicial">Medios de todo el globo reflejaron la feliz noticia anunciada ayer por Abuelas de Plaza de Mayo. <a class="area2" href="http://www.lefigaro.fr/flash-actu/2011/08/08/97001-20110808FILWWW00453-un-105e-bebe-vole-identifie-en-argentine.php" target="_blank"><b>Le Figaro</b> (Francia)</a>, <a class="area2" href="http://timesofindia.indiatimes.com/world/rest-of-world/105th-baby-stolen-by-Argentina-regime-identified/articleshow/9536449.cms"  target="_blank"><b>The Times of India</b></a>, <a class="area2" href="http://www.afpbb.com/article/life-culture/life/2819181/7619592?utm_source=afpbb&utm_medium=topics&utm_campaign=txt_topics" target="_blank"><b>AFPBB News</b> (Jap&oacute;n)</a>  y <a class="area2" href="http://www.123recht.net/Argentinische-Aktivisten-identifizieren-105.-gestohlenes-Baby-__a98531.html" target="_blank"><b>123recht</b> (Dinamarca)</a>, entre otros, se hicieron eco de la historia de la nieta Laura Reinhold Siver...</p>
+<br>
+</td>
+</tr>
+<!--pre110809_1432-1.htm END-->
+
+<!--res110808_1633-1.htm Otra nieta a la que se le restituye su identidad y su historia START-->
+<tr>
+<td style="border-bottom:1px solid; border-color:#67B0C7">
+<br>
+<p class="info-inicial"><a class="area3" href="/comunicados.php?comunicados=restituciones.php&der1=der1_varios.php&der2=der2_dif.php">
+RESTITUCIONES</a> | Buenos Aires, 8 de agosto de 20011</p>
+<a class="info2" href="" onClick="javascript:abreVentana('comunicados/restituciones/res110808_1633-1.htm',580,540,20,100);return false;">
+Otra nieta a la que se le restituye su identidad y su historia</a>
+<br><br><img src="/imagenes/ReinholdSiver2.jpg" hspace="8" align="left">
+<br>
+<p class="info-inicial">Las Abuelas de Plaza de Mayo queremos compartir nuestra enorme felicidad por la restituci&oacute;n de la identidad a otra de nuestras nietas. Se trata de Laura Reinhold Siver, la hija de Susana Leonor Siver y Marcelo Carlos Reinhold, nacida en febrero de 1978, por ces&aacute;rea, en el Hospital Naval. Con ella, suman 105 los casos que hemos resuelto.</p>
+<br><br><br>
+<p class="info">
+<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='480' height='270' id='single1' name='single1'>
+<param name='movie' value='player.swf'>
+<param name='allowfullscreen' value='true'>
+<param name='allowscriptaccess' value='always'>
+<param name='wmode' value='transparent'>
+<param name='flashvars' value='file=/material/video/Conf_105Comunicado.mp4&image=/material/video/Conf_105Comunicado.jpg'>
+<embed
+  id='single2'
+  name='single2'
+  src='player.swf'
+  width='480'
+  height='270'
+  bgcolor='#ffffff'
+  allowscriptaccess='always'
+  allowfullscreen='true'
+  flashvars='file=/material/video/Conf_105Comunicado.mp4'
+/>
+</object>
+</p>
+<p class="info"><b>"Estela de Carlotto lee el comunicado de la restituci&oacute;n de Laura Reinhold Siver"</b>
+</p>
+<br>
+</td>
+</tr>
+<!--res110808_1633-1.htm END-->
+
+
+
+</table>
+
+</BODY>
+</HTML>
+	</div>
+
+</div>
+
+<div id="der1" style="position:absolute; top:270px; left:565px; width:220px; background-color:#EFEFEF; padding-left:4; padding-right:4">
+<HTML>
+<HEAD>
+<TITLE>ABUELAS DE PLAZA DE MAYO</TITLE>
+<LINK  rel="stylesheet" type="text/css" href="scripts/mi_style.css" />
+<link rel="stylesheet" type="text/css" href="scripts/menu_styles.css" />
+
+<META name="description" content="">
+<META name="keywords" content="">
+<META name="generator" content="CuteHTML">
+<SCRIPT>
+<!--
+var miWin1;
+function abreVentana(URL,ancho,alto,x,y){
+	if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+	var features ="toolbar=no,location=no,directories=no,status=no,menubar=no," +
+	      "scrollbars=yes,resizable=no,width="+ancho+",height="+alto+",dependent=no,screenX=x,screenY=y"+
+          ",left="+x+",top="+y;
+
+	miWin1 = open(URL,'ayuda',features);}
+}
+
+
+
+//-->
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<table cellpadding="0" cellspacing="0" border="0" width="210">
+<tr>
+<td>
+<p class="titulo-der">ABUELAS</p>
+<p class="regla"></p>
+<p class="info2">Virrey Cevallos 592 PB 1<br> 
+(C1077AAJ) C.A.B.A.</p>
+<p class="titulo-der">(011) 4384-0983
+</p>
+<br>
+</td>
+</tr>
+
+<!-- <tr>
+<td>
+<p class="titulo-der">ESPECIAL BICENTENARIO</p>
+<p class="regla"></p>
+<center>
+<a class="area2" href="/material/muestras/bicentenario.htm" target="_blank">
+<img src="/imagenes/bicente_stand3.jpg" border="0"></a>
+</center>
+<p class="info2">Te contamos todo lo que pas&oacute; durante el Bicentenario en el 
+Stand de Abuelas. La muestra, Fotos, audios, videos... 
+<a class="area2" href="/material/muestras/bicentenario.htm" target="_blank">
+[+]</a>
+
+</p>
+<br>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p class="titulo-der">EDICI&Oacute;N ESPECIAL JUICIOS</p>
+<p class="regla"></p>
+<center>
+<a class="area2" href="/mensuario/DiarioJUICIOS.pdf" target="_blank">
+<img src="/imagenes/DiarioJUICIOS.jpg" border="0"></a>
+<br>
+<p class="info2"><a class="area2" href="/mensuario/DiarioJUICIOS.pdf" target="_blank">Consult&aacute; el diario especial sobre los Juicios en curso, de causas en las que interviene Abuelas</a>
+</center>
+</p>
+<br>
+</td>
+</tr> 
+
+<tr>
+<td>
+<p class="titulo-der">MENSUARIO</p>
+<p class="regla"></p>
+<center>
+<p class="info2"><a class="area2" href="" onClick="javascript:abreVentana('mensuario/Diario106.pdf',900,598,0,0);return false;">
+<img src="imagenes/mensuario72.jpg" border="0">
+Consult&aacute; el &uacute;ltimo mensuario de Abuelas</a> </p>
+</center>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">JUICIOS</p>
+<p class="regla"></p>
+<p class="info2"><b>Mapa de Juicios a Genocidas</b> - Argentina 2010
+<a class="area2" href="" onClick="javascript:abreVentana('/imagenes/mapaJuiciosAgo2011.jpg',1200,798,0,0);return false;">[+]</a></p>
+</p>
+<br>
+<!--  <p class="info2"><b>Cronograma</b> de Juicios a Genocidas 
+<a class="area2" href="/material/documentos/CronogramaJuicios.pdf" target="_blank">[+]</a></p>
+</p>
+<br> -->
+<p class="info2"><b>Consult&aacute; las cr&oacute;nicas de los juicios del a&ntilde;o a trav&eacute;s de los blogs: 
+</b></p>
+<br>
+
+<p class="info2">Juicio Plan Sistem&aacute;tico de Apropiaci&oacute;n de Menores
+<a class="area2" href="http://plansistematico.blogspot.com/" target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio por el Circuito Camps 
+<a class="area2" href="http://juiciocircuitocampsquerellaabuelas.blogspot.com/" target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio Hospital Militar de Paran&aacute; 
+<a class="area2" href="http://mesajuicioycastigo.com.ar/causahospitalmilitar/" target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio Base Naval II de Mar del Plata
+<a class="area2" href="http://basenaval2mardelplata.blogspot.com/" target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio V Cuerpo Ej&eacute;rcito Bah&iacute;a Blanca
+<a class="area2" href=" http://juiciobahiablanca.wordpress.com/" target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio por apropiaci&oacute;n en San Juan 
+<a class="area2" href=" http://juicioporapropiacionensanjuan.blogspot.com/" target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio Luis Ricchiuti y &Eacute;lida Hermann por apropiaci&oacute;n
+<a class="area2" href="http://juicioaricchutiyhermannporapropiacion.blogspot.com/" target="_blank">[+]</a></p>
+</p>
+
+<!-- <p class="info2">Juicio Cr&iacute;menes cometidos en ESMA
+<a class="area2" href="http://causaesma.blogspot.com/" target="_blank">[+]</a></p>
+</p> -->
+
+<p class="info2">Juicio Cr&iacute;menes cometidos en Campo de Mayo
+<a class="area2" href="http://www.juiciocampodemayo.blogspot.com/ " target="_blank">[+]</a></p>
+</p>
+
+<!-- <p class="info2">Juicio Cr&iacute;menes cometidos por el 1er Cuerpo de Ej&eacute;rcito
+<a class="area2" href="http://www.juicioprimercuerpodeejercito.blogspot.com/ " target="_blank">[+]</a></p>
+</p> -->
+
+<p class="info2">Juicio Luis Antonio Falco, apropiador de Juan Cabandi&eacute;
+<a class="area2" href="http://www.juicioporapropiacionjuancabandie.blogspot.com/ " target="_blank">[+]</a></p>
+</p>
+
+<p class="info2">Juicio por apropiaci&oacute;n a Omar Alonso y Juan Carlos Herzberg 
+<a class="area2" href="http://www.juicioalonsoherzberg.blogspot.com/" target="_blank">[+]</a></p>
+</p>
+
+<!-- <p class="info2">Juicio a los Genocidas en Rosario - El diario del Juicio
+<a class="area2" href="http://www.diariodeljuiciorosario.blogspot.com/ " target="_blank">[+]</a></p>
+</p> -->
+
+<!-- <p class="info2">Primer Juicio x Cr&iacute;menes de Lesa Humanidad - Santiago del Estero 
+<a class="area2" href="http://juicioycastigosgo.blogspot.com/2010/08/primer-juicio-por-crimenes-de-lesa.html" target="_blank">[+]</a></p>
+</p> -->
+
+
+<br>
+
+<!-- <p class="regla"></p>
+<p class="info2"><b>Cronograma de juicios en curso 
+</b> <a href="" class="area2" onClick="javascript:abreVentana('/comunicados/judiciales/c111.htm',620,500,10,10);return false;">[+]</a>
+</p>
+<p class="info2"><b>Agenda Audiencias 28/06 - 2/07
+</b> <a href="" class="area2" onClick="javascript:abreVentana('/comunicados/judiciales/c118.htm',320,500,10,10);return false;">[+]</a>
+</p>
+ -->
+<br>
+
+<p class="regla"></p>
+<p class="info2"><b>Consult&aacute; las cr&oacute;nicas de los juicios de a&ntilde;os pasados: 
+</b></p>
+<br>
+<p class="info2">Juicio a ex comandante de Gendarmer&iacute;a V&iacute;ctor Rei 
+<a class="area2" href="http://www.juicioavictorrei.blogspot.com " target="_blank">[+]</a></p>
+</p>
+<!-- <p class="info2">Juicio a Luciano Benjam&iacute;n Men&eacute;ndez 
+<a class="area2" href="http://www.eldiariodeljuicio.com.ar/cronica.shtml" target="_blank">[+]</a></p>
+</p> -->
+<p class="info2">Juicio apropiaci&oacute;n Sampallo Barrag&aacute;n
+<a class="area2" href="http://www.juiciosampallobarragan.blogspot.com" target="_blank">[+]</a></p>
+</p>
+<p class="info2">1&deg; Juicio genocidas del Alto Valle
+<a class="area2" href="http://www.hijosaltovalle.com" target="_blank">[+]</a></p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">FILIALES de ABUELAS</p>
+<p class="regla"></p>
+<p class="info2">La Plata | Mar del Plata | 
+<br>C&oacute;rdoba | Rosario | Ayacucho
+<a class="area2" href="/institucional.php?institucional=filiales.htm&der1=der1_fil.php&der2=der2_inst.php">[+]</a>
+</p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">RED x la IDENTIDAD</p>
+<p class="regla"></p>
+<p class="info2">Funciona en 30 ciudades argentinas. 
+Si dud&aacute;s de tu origen o quer&eacute;s colaborar comunicate 
+con el <a class="area2" href="/contactoRed.htm" onclick="return MuestraUno(this.href)">NODO de tu PROVINCIA</a>
+</p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">CONADI
+</p>
+<p class="regla"></p>
+<p class="info2">Es la entidad p&uacute;blica encargada de buscar y localizar a 
+los ni&ntilde;os desaparecidos durante la dictadura 
+<a class="area2" href="/conadi.htm" onclick="return MuestraUno(this.href)">[+]</a>
+</p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">CENTRO de Atenci&oacute;n por el Derecho a la Identidad
+</p>
+<p class="regla"></p>
+<p class="info2">Presta atenci&oacute;n a j&oacute;venes restituidos, familiares y personas 
+con su derecho a la identidad vulnerado... 
+<a class="area2" href="/areas.php?area=centro_psi.htm&der1=der1_psi.php&der2=der2_areas.php">[+]</a><br><br>
+<b>4899-2228 / 2223 </b> <a class="area2" href="mailto:identidadpsi@abuelas.org.ar">identidadpsi@abuelas.org.ar</a> <br>
+</p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">MATERNIDADES Clandestinas
+</p>
+<p class="regla"></p>
+<p class="info2">Investigaci&oacute;n sobre la represi&oacute;n ejercida en los Centros Clandestinos de 
+Detenci&oacute;n que alojaban embarazadas.
+<a class="area2" href="http://www.laplata.abuelas.org.ar/index.php?option=com_content&task=category&sectionid=4&id=15&Itemid=50" target="_blank">[+]</a>
+</p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="titulo-der">LINKS Ongs
+</p>
+<p class="regla"></p>
+<p class="info2">Organismos e instituciones ligadas a Abuelas 
+<a class="area2" href="/ong.htm" onclick="return MuestraUno(this.href)">[+]</a>
+</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="info2">&nbsp;</p>
+</td>
+</tr>
+
+</table>
+
+</BODY>
+</HTML>
+</div>
+
+<div id="der2" style="position:absolute; top:270px; left:795px; width:180px; padding-left:4">
+<HTML>
+<HEAD>
+<TITLE>ABUELAS DE PLAZA DE MAYO</TITLE>
+<LINK  rel="stylesheet" type="text/css" href="scripts/mi_style.css" />
+<link rel="stylesheet" type="text/css" href="scripts/menu_styles.css" />
+
+<META name="description" content="">
+<META name="keywords" content="">
+<META name="generator" content="CuteHTML">
+<SCRIPT>
+<!--
+var miWin1;
+function abreVentana(URL,ancho,alto,x,y){
+	if (miWin1 != null && !miWin1.closed)miWin1.focus();
+	else{
+	var features ="toolbar=no,location=no,directories=no,status=no,menubar=no," +
+	      "scrollbars=yes,resizable=no,width="+ancho+",height="+alto+",dependent=no,screenX=x,screenY=y"+
+          ",left="+x+",top="+y;
+
+	miWin1 = open(URL,'ayuda',features);}
+}
+
+
+
+//-->
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080">
+
+<table cellpadding="0" cellspacing="0" border="0" width="170">
+
+<tr>
+<td style="border-top-width:1px; border-top-style:dotted; border-top-color:#000000">
+<p class="titulo-der">MATERIAL DE DIFUSI&Oacute;N</p>
+<p class="regla"></p>
+<p class="info2">Audiovisuales <a class="area2" href="/comunicados.php?comunicados=tv.php&der1=der1_tv.php&der2=der2_dif.php">[+]</a>
+<br>Muestras gr&aacute;ficas <a class="area2" href="/comunicados.php?comunicados=muestras.php&der1=der1_muest.php&der2=der2_rad.php">[+]</a>
+<br>Historietas <a class="area2" href="/comunicados.php?comunicados=muestras.php&der1=der1_muest.php&der2=der2_rad.php">[+]</a>
+<br>Spots de radio <a class="area2" href="/comunicados.php?comunicados=radio.php&der1=der1_radio.php&der2=der2_dif.php">[+]</a>
+<br>Programas de radio <a class="area2" href="/comunicados.php?comunicados=radio.php&der1=der1_radio.php&der2=der2_dif.php">[+]</a>
+<br>Spots de TV <a class="area2" href="/comunicados.php?comunicados=tv.php&der1=der1_tv.php&der2=der2_dif.php">[+]</a>
+</p>
+<br>
+
+<p class="regla"></p>
+<a class="area2" href="http://www.teatroxlaidentidad.net" target="_blank"><img src="/imagenes/lg_txi.jpg" border="0"></a>
+<center>
+<a class="area2" href="http://www.teatroxlaidentidad.net" target="_blank">www.teatroxlaidentidad.net</a>
+</center>
+<br>
+
+<p class="regla"></p>
+<img src="/imagenes/twitter.gif" hspace="4" align="center"> <b>@abuelasdifusion</b> 
+<br><br>
+<a class="area2" href="http://www.facebook.com/pages/Abuelas-de-Plaza-de-Mayo-Sitio-oficial/178051892255167" target="_blank"><img src="/imagenes/facebook.gif" border="0" hspace="4" align="left">Abuelas-de-Plaza-de-Mayo-Sitio-oficial</a> 
+<br><br>
+
+<p class="regla"></p>
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+<p class="titulo-der">BLOGS</p>
+<p class="regla"></p>
+
+<p class="info2"><b>Visit&aacute; blogs de nuestros amigos que colaboran con 
+la b&uacute;squeda de los nietos desaparecidos.</b>
+<br>
+<br>Tus hermanas te buscan <a class="area2" href="http://www.tushermanastebuscan.blogspot.com" target="_blank">[+]</a>
+<br>Te buscamos primis <a class="area2" href="http://elrinconmaslindo.blogspot.com/2011/11/te-buscamos-primis.html" target="_blank">[+]</a>
+
+<br>T&iacute;os te buscan <a class="area2" href="http://tiostebuscan.blogspot.com/ " target="_blank">[+]</a>
+<br>Mis padres, tus padres <a class="area2" href="http://ponchodelana.wordpress.com/" target="_blank">[+]</a>
+<br>Abuelasplazademayo <a class="area2" href="http://www.youtube.com/abuelasplazademayo" target="_blank">[+]</a>
+<br>TxI - Catalunya <a class="area2" href="http://txicatalunya.blogspot.com/ " target="_blank">[+]</a>
+<br>Red Fiske Menuco <a class="area2" href="http://identidadfiskemenuco.blogspot.com/2009/04/que-dijo-estela.html" target="_blank">[+]</a>
+<br>
+</p>
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#E3F0F4" style="padding-left:4px">
+<p class="info2">Visit&aacute; un blog que reproduce las noticias de Abuelas <b>en franc&eacute;s </b><br>
+Actualit&eacute; du Abuelas <a class="area2" href="http://barrio-de-tango.blogspot.com/search/label/Abuelas" target="_blank">[+]</a>
+<br>
+</p>
+<br>
+</td>
+</tr>
+
+<!-- <tr>
+<td>
+<p class="titulo-der">M&Uacute;SICA</p>
+<p class="regla"></p>
+<p class="info2">Entr&aacute; y hacete amigo en el myspace de Abuelas 
+<a class="area2" href="http://www.myspace.com/abuelas" target="_blank">www.myspace.com/abuelas</a>
+</p>
+<!-- <br>
+<p class="info2"><b>M&uacute;sica x la identidad</b></p>
+</p>
+<p class="info2"><b>Jazz x la Identidad</b> <br>todos los mi&eacute;rcoles de octubre en el Caf&eacute; Vinilo (Gorriti 3780), ...
+<a class="area2" href="" onClick="javascript:abreVentana('comunicados/varios2008/c209.htm',380,440,20,100);return false;">[+]</a>
+</p>
+
+</td>
+</tr> -->
+
+<tr>
+<td>
+<p class="info">&nbsp;</p>
+</td>
+</tr>
+
+</table>
+
+</BODY>
+</HTML>
+</div>
+
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,33 @@
+Tweet
+Al Jazeera staff and correspondents update you on important developments in Egypt as a new political landscape is shaped after a popular uprising forced Hosni Mubarak from power.
+3 min 56 sec ago - Egypt
+RawyaRageh
+Sheer insanity at Qasr Aini & Tahrir, military police tearing everything apart, chairs, cars, sidewalks #occupycabinet #Egypt Sat Dec 17 09:52:31
+Egypt's prime minister, Kamal el-Ganzouri, addressed the violence in a news  conference on Saturday, saying the fighting was an attack on the country's  revolution.
+"This is not a revolution, but a counter-revolution," he said. "Those who are  in Tahrir Square are not the youth of the revolution."
+He added that his government would not confront peaceful demonstrations with  any force, but he said protesters "threw rocks and destroyed everything they  came across".
+Al Jazeera's Rawya Rageh, reporting from Cairo, said the "overall impression  that came out from the prime minister was that he was blaming the  protesters".
+33 min 56 sec ago - Egypt
+The Egyptian Prime Minister Kamal el- Ganzouri, speaking at a press  conference refused to blame any any sides for the country by saying "we  do not confront peaceful protests",
+Yet his press conference  implied the military were blameless, by saying "protesters threw rocks and destroyed  everything they came across in government building, they destroyed  everything in their way."
+Al Jazeera's Rawya Rageh, reporting from Cairo, who was at the press  conference said the "overall impression that came out from the prime  minister was that he was blaming the protesters."
+1 hour 36 min ago - Egypt
+According to Egyptian state TV and the country's health ministry, eight people have died and more than 300 people have been  injured since the clashes began in Cairo early on Friday morning.
+1 hour 54 min ago - Egypt
+SherineT
+2 hours 20 min ago - Egypt
+Egyptian soldiers are clashing with protesters in central Cairo for a second consecutive day .
+Hundreds of protesters threw stones early Saturday at security forces that have sealed off the streets around the country's parliament building with barbed wire.
+The violence erupted a day earlier after soldiers stormed an anti-military protest camp outside the Cabinet building near Tahrir Square, sparking clashes that left at least seven protesters dead. [AP]
+8 hours 8 min ago - Egypt
+US Secretary of State Hillary Clinton said  Friday that women were being sidelined in the hoped-for transition to democracy in Egypt, including during the current parliamentary elections.
+"In Egypt, women have been largely excluded from the transition process and even harassed in the street," Clinton said in prepared remarks for a speech on women, peace and security.
+"The best-organised political parties supported few women candidates in the  recent elections," she added, referring to the Muslim Brotherhood's Freedom and Justice Party.
+10 hours 20 min ago - Egypt
+At least three people were killed and 257 wounded in Friday's clashes between  protesters and security forces, the AFP news agency, citing Egyptian state TV, reported. 
+12 hours 58 min ago - Egypt
+The statement from SCAF on today's violence claimed that soldiers acted with "maximum restraint", and had only been responding to protesters attacking "vital institutions". It said that the military only reacted to an officer being attacked near the cabinet offices.
+It re-emphasised the right of peaceful protest, and said that the Egyptian prosecutor's office would be opening investigations into the violence today.
+freedom flotilla Tunisia election citizen media Bani Walid Deraa Libya in Images Libya United Nations Gilad Shalit oslo bombing UK Oslo tweet US Muslim Brotherhood Tahrir Square Al Jazeera Video EU Saudi Arabia Ali Abdullah Saleh Qatar NTC Mubarak Trial Sirte Tahrir Syria protests Manama idlib Looting EgyElections Cairo European Union Hamas Muammar Gaddafi tunis protests tunisia sanctions NATO France police David Cameron homs refugees prisoner swap UN Turkish elections Elections protest Arab League libyan rebels image damascus China violence Tripoli Gaddafi syria Misurata The911Decade Oil Italy Occupy Wall Street Israel clashes egypt Hosni Mubarak SCAF Bashar al Assad rebels Taiz Occupy Protests London Norway Attacks Libya rebels Phone Hacking Russia Palestine reuters National Transitional Council United States al nahda Sanaa Bashar al Assad gaza Egypt elections zinjibar Hama September 11 iran lebanon Rupert Murdoch Turkey Barack Obama Deir ez-Zor Latakia Benghazi USA Al Qaeda
+Yemen Live Blog
+Fatal error:  Uncaught exception 'Exception' with message 'Request failed with message: Insufficient quota to proceed.' in /var/www/labs/sites/default/blogsga.php:98 Stack trace: #0 {main}   thrown in /var/www/labs/sites/default/blogsga.php on line 98

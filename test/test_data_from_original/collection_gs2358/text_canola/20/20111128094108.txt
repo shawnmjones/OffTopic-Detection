@@ -1,0 +1,35 @@
+Tweet
+Al Jazeera staff and correspondents update you on important developments in Cairo and elsewhere, as protesters take to the streets to voice their dissatisfaction with the slow pace of a military-led transition following an uprising that began in January.
+5 min 9 sec ago - Egypt
+One of the interesting questions today is whether the Muslim Brotherhood's Freedom and Justice Party (FJP) will lose any seats because of its behavior over the last few weeks.
+Before the violence in Tahrir Square this month, the electoral narrative was more or less fixed: The FJP would win big because of its impressive organisation and street-level campaigning.
+But the group seems to have alienated some voters through its initial refusal to join the Tahrir protests ; the party didn't want to do anything to obstruct elections. Some Egyptians criticised it for seeming to side with SCAF, rather than the people being shot and tear-gassed in downtown Cairo. It's unclear, though, whether that frustration will cost the FJP votes.
+"I expect the Salafis to win, mainly because of people's recent enmity to the FJP. People started to hate them because they see that their goals ... have to do with parliamentary seats," said Ayman Soliman, 35, a tour operator in Damietta. "I think that the Brotherhood has lost more in the past three months than it built in the last three decades."
+9,841 judges monitoring;
+168 members of parliament will be chosen, 56 of them from two-member majoritarian districts, 112 elected from party lists in proportional representation districts.
+22 min 9 sec ago - Egypt
+More illegal last-minute campaigning, this time in Assiut, via Al Jazeera's Rawya Rageh . This seems to be one of the main themes today across Egypt, along with high turnout and lengthy queues.
+56 min 9 sec ago - Egypt
+Al Jazeera's Adam Makary tweeted this photo of a long line of women waiting outside a polling station in Assiut, in Upper Egypt.
+1 hour 3 min ago - Egypt
+Egyptians are reporting on Twitter that a number of polling stations across Cairo seem to have been shut down, mostly because their ballots were not properly stamped. (This was also a problem during the constitutional referendum in March.)
+In some polling stations, judges are apparently suspending the vote until proper ballots can be found; at others, judges are signing the individual ballots, which (according to the law) will validate them.
+1 hour 16 min ago - Egypt
+Al Jazeera spoke with Emad Mohsen, a member of the so-called "silent majority" group which is trying to organise a massive rally on Friday in support of the Supreme Council of the Armed Forces, the current military junta in Egypt.
+“SCAF at the moment is spinal cord of Egypt and they are leading the transitional process. There are other people in Egypt that do not support what Tahrir thinks... At this moment there is no other civilian authority or otherwise to give authority to.  Tahrir itself is divided among each other."
+1 hour 25 min ago - Egypt
+Speaking of The Guardian, they've pulled together a nice interactive graphic showing how Egypt's political parties relate to each other ( based on a graphic designed by Jacopo Carbonari).
+It's worth pointing out, though, how difficult it can be to plot some of these parties on a single graphic. The Democratic Front party, for example, is plotted as a "secular right" party. Some of its economic policies are left-of-center - it was founded by breakaway elements of the Tagammu party, after all - but it has also chosen to participate in the drafting of the "supra-constitutional principles" document, which aligns it somewhat with SCAF and the former regime.
+You almost need a third axis on these graphics, so that you can represent whether a party is religious/secular, economically left/right, and progressive or reactionary in its relationship to SCAF.
+1 hour 41 min ago - Egypt
+Jack Shenker, the Guardian's correspondent in Cairo, on an amusing (and illegal) scene outside a polling station in the capital's Bulaq neighbourhood:
+hackneylad
+One guy in Bulaq handing out leaflets for rival candidates - shrugged when I asked him why, said he needed the work #Egypt Mon Nov 28 07:57:54
+1 hour 44 min ago - Egypt
+RawyaRageh
+Elex staff in 1 station in #Assiut didn't realize ink was powder & needed to be mixed w water, didn't have water on them. #Egyelex #Egypt Mon Nov 28 07:56:30
+1 hour 54 min ago - Egypt
+To give you a sense of how complicated this election is, Al Jazeera's Evan Hill sent in this photo of the individual candidate ballot from one district in Alexandria.
+David Cameron Libya in Images freedom flotilla France sanctions Muammar Gaddafi Libya rebels China Deir ez-Zor syria Gaddafi Libya's National Transitional Council (NTC) violence United Nations egypt Barack Obama citizen media Occupy Wall Street London USA image Syria protests NTC lebanon European Union gaza UK police National Transitional Council idlib Tahrir Tahrir Square protest Turkey Occupy Protests clashes Sanaa prisoner swap EU Tunisia election al nahda iran oslo bombing Italy Hamas Hosni Mubarak homs Qatar Sirte Egypt elections zinjibar Turkish elections Bashar al Assad US tunis SCAF UN Oslo Al Jazeera United States Ali Abdullah Saleh tunisia Misurata Arab League Gilad Shalit September 11 Rupert Murdoch rebels Al Qaeda Bashar al Assad protests damascus Deraa Norway Attacks Benghazi Bani Walid Saudi Arabia NATO Video Mahmoud Jibril Cairo Hama Russia Taiz Israel Looting libyan rebels Tripoli Mubarak Trial reuters Palestine Libya Germany Oil Phone Hacking tweet refugees Elections The911Decade Latakia
+Occupy Protests Live Blog
+Fatal error:  Uncaught exception 'Exception' with message 'Request failed with message: Insufficient quota to proceed.' in /var/www/labs/sites/default/blogsga.php:98 Stack trace: #0 {main}   thrown in /var/www/labs/sites/default/blogsga.php on line 98

@@ -1,0 +1,2762 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script src='/_Scripts/_JavaScript/jquery-1.6.1.min.js' type="text/javascript"></script>
+    <script src='/_Scripts/_JavaScript/menu.js' type="text/javascript"></script>
+    <script src='/_Scripts/_JavaScript/jquery.infinite-carousel.js'
+        type="text/javascript"></script>
+        <script src='/_Scripts/_JavaScript/slider.js' type="text/javascript"></script>
+  <script src='/_Scripts/_JavaScript/jquery.idTabs.min.js' type="text/javascript"></script>
+   <script src='/_Scripts/_JavaScript/ServiceManager-2.0.js' type="text/javascript"></script>
+     <script src='/_Scripts/_JavaScript/json2.min.js' type="text/javascript"></script>
+
+     <script type="text/javascript">
+         var _sf_startpt = (new Date()).getTime()
+     </script>
+
+    <script type='text/javascript'>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+</script>
+
+<script type='text/javascript'>
+    googletag.cmd.push(function () {
+        googletag.defineSlot('/12740106/ShorouknewsV3_160x600', [160, 600], 'div-gpt-ad-1335958273687-0').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/ShorouknewsV3_250x250', [250, 250], 'div-gpt-ad-1335958273687-1').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/ShorouknewsV3_468x60', [468, 60], 'div-gpt-ad-1335958273687-2').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/ShorouknewsV3_728x90', [728, 90], 'div-gpt-ad-1335958273687-3').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/Shorouknewsv3_top_250x100', [250, 100], 'div-gpt-ad-1336995454504-0').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/shorouknewsv3_top_250x250', [250, 250], 'div-gpt-ad-1336995454504-1').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/Shorouknews_Takeover_left', [150, 563], 'div-gpt-ad-1340283759877-0').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/shorouknews_TakeOver_right', [150, 563], 'div-gpt-ad-1340283759877-1').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/Bassem_showcase', [250, 250], 'div-gpt-ad-1362587130948-0').addService(googletag.pubads());
+        googletag.defineSlot('/12740106/Bassem_leaderboard', [728, 90], 'div-gpt-ad-1362586992997-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
+</script>
+
+
+
+    <script type="text/javascript">
+        function highlightMenu(urlKey) {
+            var found = false;
+            $('#nav a').each(function () {
+                if (found == false) {
+                    if (urlKey.match($(this).attr("href"))) {
+                        if ($(this).children('b').length > 0) {
+                            $(this).children('b').first().mouseover();
+                            found = true;
+                        }
+                        else { //click element under other sports
+                            $(this).parent().parent().parent().children('a').first().children('b').first().mouseover();
+                            found = true;
+                        }
+                    }
+                }
+            });
+            if (found == false)
+                $('#nav li a b').first().mouseover();
+        }
+    </script>
+    
+  
+  
+    <style type="text/css">
+        /* The container for the module */
+        #twitter
+        {
+            width: 600px; /* Up to you but remember to change the div width below as well if you change it */
+            padding: 0 10px;
+            overflow: hidden; /* clearfix */
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            width: 890px;
+            direction: ltr;
+        }
+        
+        #twitter h2
+        {
+            float: left; /* We'll make the heading sit on its own line next to the tweets */
+            width: 85px; /* Might wanna change this depending on the text in the heading */
+            margin: 0;
+            padding: 6px 0; /* I'll set the top and bottom padding here rather than in the container so as not to cut off any text */
+            font-size: 12px;
+            color: #FFFFFF;
+            line-height: 1;
+        }
+        
+        /* The marquee plug-in turns a marquee element into a div */
+        #twitter p, #twitter marquee, #twitter div
+        {
+            float: Right;
+            width: 670px; /* Container width - heading width - 10px (for some right padding) */
+            margin: 0;
+            margin-top: 0px;
+            padding: 6px 0; /* Again we set the padding in here so as not to cut text */
+            line-height: 1;
+        }
+        
+        /* All the tweets will be links pointing to your page on twitter */
+        #twitter marquee a, #twitter div a
+        {
+            margin: 0 10px 0 0;
+            color: #000;
+            text-decoration: none;
+            padding-left: 5px;
+            border-left: 1px solid #f67b09;
+            font-size: 12px;
+            font-weight: normal;
+            font-family: Tahoma;
+        }
+        
+        /* The i is used to display the date of the tweet */
+        #twitter marquee a i, #twitter div a i
+        {
+            font-style: normal;
+            color: #fff;
+        }
+    </style>
+      <script type="text/javascript">
+          (function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) { return; }
+              js = d.createElement(s); js.id = id;
+              js.src = "http://connect.facebook.net/ar_AR/all.js#xfbml=1&appId=300970513306659";
+              fjs.parentNode.insertBefore(js, fjs);
+          } (document, 'script', 'facebook-jssdk'));
+                        </script>
+
+<meta name="keyWords" content="الشروق, جريدة الشروق, ,arabic news paper اخبار مصر, أخبار مصر, ثورة 25 يناير, المجلس العسكري, عصام شرف, 6 أبريل, الإخوان, الدستور, الانتخابات البرلمانية 2011, انتخابات مجلس الشعب, انتخابات مجلس الشورى, انتخابات الرئاسة, محمد البرادعي, حازم ابو اسماعيل, أحمد شفيق, حمدين صباحي, عمر سليمان, محمد سليم العوا, المشير طنطاوي, عمرو موسى, محاكمة مبارك, معركة الجمل, استقلال القضاء, المحاكمات العسكرية, فيديو, يوتيوب, مبارك, جمال مبارك, اخبار حوادث, مواقيت الصلاة, عمرو حمزاوي, ضياء رشوان, فهمي هويدي, حسن المستكاوي, بورصة مصر, اسعار العملات, مقالات, درجة الحرارة, كاريكاتير, حوادث" /><meta name="description" content="بوابة  الشروق المصرية، أحدث اخبار مصر والعالم، اخبار الرياضة والبورصة والفن والثقافة، ومقالات لكبار الكتاب" /><title>
+	بوابة الشروق
+</title><link href="App_Themes/Site_Blue/caricature.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/gallery.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/inner8.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/innerSlider.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/jquery-ui-1.8.2.custom.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/main7.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/reset.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/section.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/tvBanner.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Site_Blue/video.css" type="text/css" rel="stylesheet" /></head>
+<body id="Body1">
+    <form method="post" action="" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzQyODQ4MTQzZGQkPlSXjIk0DQcZIypH5Tt7iXE/j0SoLlAfr8IbYicuzQ==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCAKYubGEAgKG5P75AQLE6Js1Au2J1pUMAoab3PMNAsSN6uMFAo6gqJ0CAv6glKIILoTTP8Z6IQ1Wr+j6jqYH5K3yXYjaeJ1Hl5sZQoHpb54=" />
+</div>
+
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript">
+        _atrk_opts = { atrk_acct: "RaMVf1a8n5000a", domain: "shorouknews.com" }; atrk();
+    </script>
+    <noscript>
+        <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=RaMVf1a8n5000a" style="display:none" height="1" width="1" alt="" />
+    </noscript>
+    <!-- End Alexa Certify Javascript -->
+    <div class="bodyOut">
+    
+
+    <div>
+        <!-- Wrapper -->
+        <div class="wrapper">
+            <!-- HEADER -->
+            <div class="headerMain">
+                <div class="headerTop">
+                    
+                    <!-- Search -->
+                    <div class="search">
+                        
+<script type="text/javascript">
+    function clickButton(e, buttonid) {
+        //    debugger;
+        var bt = document.getElementById(buttonid);
+        if (typeof (bt) == 'object') {
+            if (navigator.appName.indexOf("Netscape") > -1) {
+                if (e.keyCode == 13) {
+                    if (bt && typeof (bt.click) == 'undefined') {
+                        bt.click = addClickFunction1(bt);
+                    }
+                }
+            }
+            if (navigator.appName.indexOf("Microsoft Internet Explorer") > -1) {
+                if (event.keyCode == 13) {
+                    bt.click();
+                    return false;
+                }
+            }
+        }
+    }
+
+    function addClickFunction1(bt) {
+        //    debugger;
+        var result = true;
+        if (bt.onclick) result = bt.onclick();
+        if (typeof (result) == 'undefined' || result) {
+            eval(bt.href);
+        }
+    }
+  
+  
+
+</script>
+<div id="SearchControl1_Panel1">
+	
+    <input type="submit" name="ctl00$ctl00$SearchControl1$lbtn_Search" value="" id="SearchControl1_lbtn_Search" class="searchButton" />
+    <input name="ctl00$ctl00$SearchControl1$TextBox1" type="text" id="SearchControl1_TextBox1" class="searchInput" onkeypress="javascript:return clickButton(event,&#39;SearchControl1_lbtn_Search&#39;);" />
+
+</div>
+
+                    </div>
+                    <!-- Search -->
+                    <!-- Date -->
+                    <div class="Date">
+                        <span id="_WimageDiv"><img src='/i32x32/32.png' border='0' alt='الطقس في القاهرة ، مصر' height='32px' width='32px' /></span><span>
+                            الإثنين 11 مارس 2013 - 10:51 ص 
+                            | القاهرة
+                            26° </span>
+                    </div>
+                    <!-- Date -->
+                    <div class="clear">
+                    </div>
+                    <div id="DivTopAds" class="topAd">
+                                      <!-- ShorouknewsV3_728x90 -->
+                        <div id='div-gpt-ad-1335958273687-3' >
+                        <script type='text/javascript'>
+                            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1335958273687-3'); });
+                        </script>
+                        </div>
+                    </div>
+                    <div class="shorouknewsLogo">
+                        <a href='/'>
+                            <img src="App_Themes/images/shorouknewsLogo.png" id="Img1" />
+                        </a>
+                    </div>
+                    
+                    <div class="clear">
+                    </div>
+                </div>
+                <!-- end of header top -->
+                <div id="DivheaderContentOrtopNav" class="headerContent">
+                    <div class="shorouknewsPDF">
+                        <a href='/pdf'></a>
+                    </div>
+                    <!-- menuMain -->
+                    <div class="menuMain">
+                        <div id="container">
+                            <ul id="nav">
+                                
+                                        <li class="sub topMenu"><a href='/egypt'><b>
+                                            مصر</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/egypt/Eg-Politics'><i class="">
+                                                            سياسة</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/egypt/accidents'><i class="">
+                                                            حوادث وقضايا</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/egypt/parliament-rev'><i class="">
+                                                            برلمان الثورة</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/local'><i class="">
+                                                            محليات</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/Politics'><b>
+                                            شئون خارجية</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/Politics/Syria-Revolution'><i class="">
+                                                            سوريا الثورة</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Politics/arab'><i class="">
+                                                            عالم عربي</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Politics/world'><i class="">
+                                                            العالم</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Politics/press'><i class="">
+                                                            صحافة</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/Economy'><b>
+                                            اقتصاد</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/Economy/bourse'><i class="">
+                                                            بورصة ومال</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Economy/market'><i class="">
+                                                            أسواق وشركات</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/art'><b>
+                                            فنون</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/art/cinema'><i class="">
+                                                            سينما</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/art/Radio-TV'><i class="">
+                                                            راديو وتليفزيون</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/art/music'><i class="">
+                                                            موسيقى</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/Culture'><b>
+                                            ثقافة</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/Culture/fine-art'><i class="">
+                                                            فن تشكيلي</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Culture/books'><i class="">
+                                                            كتب ونشر</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Culture/thinkers - events'><i class="">
+                                                            فكر وندوات</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/people-life'><b>
+                                            ناس و حياة</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/people-life/family-relations'><i class="">
+                                                            أسرة وعلاقات</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/people-life/Youth-Edu'><i class="">
+                                                            شباب وتعليم</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/people-life/Food-Health'><i class="">
+                                                            صحة وغذاء</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/Sci-Tech'><b>
+                                            علوم وتكنولوجيا</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/Sci-Tech/Hardware'><i class="">
+                                                            محمول وأجهزة</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Sci-Tech/Internet-Comm'><i class="">
+                                                            إنترنت واتصالات</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Sci-Tech/Games-Software'><i class="">
+                                                            ألعاب وبرامج</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/Sci-Tech/Sci-Environment'><i class="">
+                                                            علوم وبيئة</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                        <li class="sub topMenu"><a href='/columns'><b>
+                                            مقالات وأعمدة</b></a>
+                                            <ul style="display: none;">
+                                                
+                                                        <li class="subMenu"><a href='/menbar'><i class="">
+                                                            منبر الشروق</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/complaints'><i class="">
+                                                            ديوان المظالم</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/caricature'><i class="">
+                                                            كاريكاتير</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/masara'><i class="">
+                                                             المعصرة</i></a></li>
+                                                    
+                                                        <li class="subMenu"><a href='/box'><i class="">
+                                                             بوكس</i></a></li>
+                                                    
+                                            </ul>
+                                        </li>
+                                    
+                                <li class="sub topMenu"><a target="_blank" href="http://sports.shorouknews.com"><b
+                                    style="color: #F97300">رياضة</b></a>
+                                    <ul style="display: none;">
+                                    </ul>
+                                </li>
+                                   
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- menuMain -->
+                    <div class="clear">
+                    </div>
+                    <!-- headerContentBottom -->
+                    
+  
+    <div class="headerContentBottom">
+        <iframe src="_controls/TwitterGadget.aspx" class="orangeStripIframe" scrolling="no" frameborder="0" width="100%" height="29px"></iframe>
+        
+        
+        <div class="headerLeftad">
+            <div class="largeAd">
+                <!-- shorouknewsv3_top_250x250 -->
+                <div id='div-gpt-ad-1336995454504-1' style='width: 250px; height: 250px;'>
+                    <script type='text/javascript'>
+                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1336995454504-1'); });
+                    </script>
+                </div>
+            </div>
+            <div class="smallAd">
+                <!-- Shorouknewsv3_top_250x100 -->
+                <div id='div-gpt-ad-1336995454504-0' style='width: 250px; height: 100px;'>
+                    <script type='text/javascript'>
+                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1336995454504-0'); });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- lastNews -->
+        <div class="lastNews">
+            <h1>
+                أهم الأخبار
+            </h1>
+            <ul>
+                
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=911b5956-fc2d-4f49-97fe-c16380fd341c">
+                                    صحف العالم: احتضان نجاد لامرأة يثير غضب إيران</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=ed2bc928-c9c1-4eb5-a092-38b475280d12">
+                                    بالفيديو والصور.. لحظة خروج روح عريس الـ7 شهور آخر شهيد بمجزرة بورسعيد</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=a9f3b626-61fa-4ade-b1ea-cc279e3dbe46">
+                                    سميرة إبراهيم:أمريكا طالبتني بالاعتذار وتمجيد إسرائيل.. والسفارة لم تساندني</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=c8cd5366-f264-422f-b9e3-268a076588b5">
+                                    أستاذ القانون الدستوري بالشرطة: الضبطية يجب أن تكون مشروطة بـ«الملاءمة»</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=ce758b19-0a48-419b-8b80-7acd7f216c10">
+                                    ناصر أمين: «الضبطية» للمواطنين جهل بتفسير القانون وتحول البلاد لحرب أهلية</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=d6037fd1-b4d2-4717-a613-5ca9f0af9cf4">
+                                    «الشورى»:صمت الرئيس وحكومته عما يقع من أحداث لا يصح.. ويجب الكشف عن فاعليها</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+                        <li>
+                            
+                            <div class="left">
+                                <a href="/news/view.aspx?cdate=11032013&id=f19be041-ec10-43d7-b55b-f85f61138018">
+                                    قائد الجيش الثاني: بورسعيد بحاجة للعمل والإنتاج.. والمشاركة بالعصيان اختيارية</a></div>
+                            <div class="clear">
+                            </div>
+                        </li>
+                    
+            </ul>
+            <div class="latestBottomLink">
+                <a href="news">أحدث الأخبار »</a>
+            </div>
+        </div>
+        <!-- end of lastNews -->
+        <!-- featuredNews start -->
+        
+<div class="featured">
+    <div id="slider">
+        <ul>
+            
+                    <li>
+                        <h1>
+                            <a href='/news/view.aspx?cdate=11032013&id=2458be60-a39b-456b-b002-a16416c5ae90'>
+                                «الشرطة» تنسحب من ميدان الحرية بدمياط بسبب أولتراس أهلاوي
+                            </a>
+                        </h1>
+                        <a class="aOfAnimate" href='/news/view.aspx?cdate=11032013&id=2458be60-a39b-456b-b002-a16416c5ae90'>
+                            <p>
+                                نظم أولتراس أهلاوي، مساء يوم الأحد، مسيرة جابت شوارع دمياط، وانسحبت قوات الشرطة من الميدان بمجرد وصول الأولتراس، خشية الاشتباك معهم.
+                            </p>
+                            <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_rptrMainNews_Image1_0" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/original/ultras_L_201236163350_s4.jpg" style="height:233px;width:330px;" />
+                        </a></li>
+                
+                    <li>
+                        <h1>
+                            <a href='/news/view.aspx?cdate=11032013&id=7517a1d6-0254-432f-95fe-4b3c7049d3f4'>
+                                قائد الجيش الثالث بالسويس يتفقد القوات المكلفة بتأمين مبنى المحافظة
+                            </a>
+                        </h1>
+                        <a class="aOfAnimate" href='/news/view.aspx?cdate=11032013&id=7517a1d6-0254-432f-95fe-4b3c7049d3f4'>
+                            <p>
+                                قام اللواء أسامة عسكر، قائد الجيش الثالث الميداني بالسويس، بتفقد قوات تأمين السويس التابعة للجيش الثالث الميداني؛
+                            </p>
+                            <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_rptrMainNews_Image1_1" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/original/Osama-Askar-1436.jpg" style="height:233px;width:330px;" />
+                        </a></li>
+                
+                    <li>
+                        <h1>
+                            <a href='/news/view.aspx?cdate=11032013&id=2c43480b-9bcf-4567-83c9-525c380b355d'>
+                                قطر تستبعد تقديم المزيد من المساعدات المالية لمصر فى الوقت الحالى
+                            </a>
+                        </h1>
+                        <a class="aOfAnimate" href='/news/view.aspx?cdate=11032013&id=2c43480b-9bcf-4567-83c9-525c380b355d'>
+                            <p>
+                                قال يوسف كمال وزير مالية قطر، اليوم الاثنين، إن قطر لا تتوقع تقديم المزيد من المساعدات المالية لمصر على الفور. 
+                            </p>
+                            <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_rptrMainNews_Image1_2" src="http://shorouknews.com/uploadedimages/Sections/Economy/Market/original/yousef-kamal.jpg" style="height:233px;width:330px;" />
+                        </a></li>
+                
+                    <li>
+                        <h1>
+                            <a href='/news/view.aspx?cdate=11032013&id=7ad2d56d-121a-4088-8201-ef5b9f10e7a8'>
+                                الغارديان: الشرطة المصرية تضرب عن العمل
+                            </a>
+                        </h1>
+                        <a class="aOfAnimate" href='/news/view.aspx?cdate=11032013&id=7ad2d56d-121a-4088-8201-ef5b9f10e7a8'>
+                            <p>
+                                تناولت الصحافة البريطانية الصادرة الاثنين عدة موضوعات متنوعة تتعلق بملفات الشرق الاوسط ومنها صحيفةالغارديان
+                            </p>
+                            <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_rptrMainNews_Image1_3" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/original/GATDYAN.jpg" style="height:233px;width:330px;" />
+                        </a></li>
+                
+                    <li>
+                        <h1>
+                            <a href='/news/view.aspx?cdate=11032013&id=29a3f94f-a16f-443a-bf69-c17117dd8265'>
+                                مخيون لـ«مستشار الرئيس»: مستعدون لتسليم ملف «الأخونة» للرئاسة مرة أخرى
+                            </a>
+                        </h1>
+                        <a class="aOfAnimate" href='/news/view.aspx?cdate=11032013&id=29a3f94f-a16f-443a-bf69-c17117dd8265'>
+                            <p>
+                                أكد الدكتور يونس مخيون رئيس حزب النور، أنه قام بعد جلسة الحوار الوطنى الأخيرة بتسليم الرئيس محمد مرسى الملف الخاص باستحواذ فصيل على مفاصل الدولة وقام الرئيس بدوره بإعطائه للسكرتارية.
+                            </p>
+                            <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_rptrMainNews_Image1_4" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/original/younes.jpg" style="height:233px;width:330px;" />
+                        </a></li>
+                
+        </ul>
+    </div>
+    <div class="sliderArrows">
+        <div class="sliderbutton" id="slideleft" onclick="slideshow.move(1)">
+        </div>
+        <div class="sliderbutton" id="slideright" onclick="slideshow.move(-1)">
+        </div>
+    </div>
+    <ul id="pagination" class="pagination">
+        
+                <li onclick='slideshow.pos(0)'>
+                    <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_RptrMainNewsImages_Image1_0" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/ultras_L_201236163350_s4.jpg" style="height:42px;width:60px;" />
+                </li>
+            
+                <li onclick='slideshow.pos(1)'>
+                    <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_RptrMainNewsImages_Image1_1" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/Osama-Askar-1436.jpg" style="height:42px;width:60px;" />
+                </li>
+            
+                <li onclick='slideshow.pos(2)'>
+                    <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_RptrMainNewsImages_Image1_2" src="http://shorouknews.com/uploadedimages/Sections/Economy/Market/thumb/yousef-kamal.jpg" style="height:42px;width:60px;" />
+                </li>
+            
+                <li onclick='slideshow.pos(3)'>
+                    <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_RptrMainNewsImages_Image1_3" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/GATDYAN.jpg" style="height:42px;width:60px;" />
+                </li>
+            
+                <li onclick='slideshow.pos(4)'>
+                    <img id="HeaderContentBottom_HeaderContentBottom_MainNews1_RptrMainNewsImages_Image1_4" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/younes.jpg" style="height:42px;width:60px;" />
+                </li>
+            
+    </ul>
+</div>
+<script language="javascript" type="text/javascript">
+    $('.aOfAnimate').hover(function () {
+            $(this).find('p').animate({ top: 213 }, 'fast');
+    }, function () {
+            $(this).find('p').animate({ top: 340 }, 'fast');
+    });
+</script>
+
+        <!-- featuredNews end -->
+        <div class="clear">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="headerContentFooter">
+    </div>
+
+
+                    <!-- headerContentBottom END -->
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <!-- HEADER end -->
+            <div class="clear">
+            </div>
+            <!-- ContentMain -->
+            
+  
+
+        <div class="Shorouknews_TakeOver_left">
+    <!-- Shorouknews_Takeover_left -->
+
+<div id='div-gpt-ad-1340283759877-0' style='width:150px; height:563px;'>
+
+<script type='text/javascript'>
+
+    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1340283759877-0'); });
+
+</script>
+
+</div>
+</div>
+
+
+<div class="shorouknews_TakeOver_right">
+    <!-- shorouknews_TakeOver_right -->
+
+<div id='div-gpt-ad-1340283759877-1' style='width:160px; height:600px;'>
+
+<script type='text/javascript'>
+
+    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1340283759877-1'); });
+
+</script>
+
+</div>
+</div>
+    <div class="contentMain">
+        <!-- LeftArea -->
+        <div class="leftArea">
+            <!-- TodayArticles -->
+            <div class="todayArticles">
+                <h1>
+                    <span>مقالات اليوم</span> <a href='/columns'>المزيد »</a>
+                </h1>
+                <div class="todayArticlesContent">
+                    <ul>
+                        
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_0" href="/columns/fahmy-howaidy">فهمي هويدي</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=fd0ba80d-3bd2-4e0e-8426-dbecbe533165'>
+                                                عسكرة الشرطة
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_0" href="/columns/fahmy-howaidy"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_0" src="http://shorouknews.com/uploadedimages/Columnist/original/Fahmy-Howaidy.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_1" href="/columns/hassan-el-mestekawy">حسن المستكاوي</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=fec3ee32-def0-48de-ac8f-2daabc52db70'>
+                                                جريمة على النيل
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_1" href="/columns/hassan-el-mestekawy"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_1" src="http://shorouknews.com/uploadedimages/Columnist/original/mestekawy.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_2" href="/columns/amr-khafaga">عمرو خفاجى</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=df99f185-4816-43e5-8a0f-6dae826a71a5'>
+                                                كفاية
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_2" href="/columns/amr-khafaga"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_2" src="http://shorouknews.com/uploadedimages/Columnist/original/Amr-Khafagy.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_3" href="/columns/emad-el-din-hussein">عماد الدين حسين</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=764bae32-0d0d-4cf0-9e3e-0cb2a25458c9'>
+                                                تكسير الشرطة والجيش معًا
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_3" href="/columns/emad-el-din-hussein"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_3" src="http://shorouknews.com/uploadedimages/Columnist/original/emad-eldin-hussein.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_4" href="/columns/wael-kandiel">وائل قنديل</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=84440517-66fd-4e6b-aa98-c7373a8130f1'>
+                                                الثورة المضادة برعاية هنرى كيسنجر
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_4" href="/columns/wael-kandiel"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_4" src="http://shorouknews.com/uploadedimages/Columnist/original/wael-kandil.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_5" href="/columns/emad-el-ghazaly">عماد الغزالي</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=7fe86c66-89ff-4250-b20c-abde38513c1e'>
+                                                دولة الألتراس
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_5" href="/columns/emad-el-ghazaly"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_5" src="http://shorouknews.com/uploadedimages/Columnist/original/emad-el-ghazaly(3).jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_6" href="/columns/abd-allah-el-sinawy">عبد الله السناوى</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=046fd60d-30c3-446d-8752-26591cdf0c86'>
+                                                سؤال الترنح الأمنى
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_6" href="/columns/abd-allah-el-sinawy"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_6" src="http://shorouknews.com/uploadedimages/Columnist/original/Abdullah-Sinawi.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_7" href="/columns/BilalFadl">بلال فضل</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=64478249-52b0-4b1b-9370-604b35fcc01a'>
+                                                رسائل إلى ثائر حائر  «1»
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_7" href="/columns/BilalFadl"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_7" src="http://shorouknews.com/uploadedimages/Columnist/original/bilal.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_8" href="/columns/Muhammad-Ali-Khearer">محمد علي خير</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=5ccd7c55-701c-43a5-a150-7b403225feea'>
+                                                الطريق إلى الخطر
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_8" href="/columns/Muhammad-Ali-Khearer"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_8" src="/App_Themes/Images/no-image.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_9" href="/columns/mohamed-ashraf-bayoumy">محمد أشرف بيومي</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=2c1e6c8b-d3f6-460c-bec0-bf11e0019406'>
+                                                ذكريات مع رشدى سعيد
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_9" href="/columns/mohamed-ashraf-bayoumy"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_9" src="http://shorouknews.com/uploadedimages/Columnist/original/Mohammed-Ashraf-Bayoumi.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_10" href="/columns/wesam-basendwah">وسام باسندوه</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=a1dd5a17-850b-418e-857a-d90f3617ee7d'>
+                                                اليوم الموعود فى الشهر المشهود
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_10" href="/columns/wesam-basendwah"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_10" src="http://shorouknews.com/uploadedimages/Columnist/original/wesam-Basendwah.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_11" href="/columns/mohammed-mahmoud-elimam">محمد محمود الإمام</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=686c3dff-76b3-4cc2-82b0-21c4f4a831cd'>
+                                                غباء.. أم استغباء؟
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_11" href="/columns/mohammed-mahmoud-elimam"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_11" src="http://shorouknews.com/uploadedimages/Columnist/original/Muhammad-Imam.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_12" href="/columns/samir-morkos">سمير مرقص</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=b3bd0b72-98a9-4dd3-9bba-721c9ecae4f6'>
+                                                المستقبل بين ثقافتى «الميدان» و«الديوان»
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_12" href="/columns/samir-morkos"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_12" src="http://shorouknews.com/uploadedimages/Columnist/original/Samir-Morcos.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_13" href="/columns/laila-ebrahim-shalaby">ليلى إبراهيم شلبي</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=482d067f-960b-434e-aa55-a23890949f7d'>
+                                                هل يتغير العلم أم يتطور؟
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_13" href="/columns/laila-ebrahim-shalaby"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_13" src="http://shorouknews.com/uploadedimages/Columnist/original/Laila-Ibrahim-Shalaby-2.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_14" href="/columns/Leonardo-Afritz">ليوناردو افريتز</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=6e0786ef-f6fb-4dee-82fd-b21c40f4aca5'>
+                                                التجربة البرازيلية فى الديمقراطية المباشرة
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_14" href="/columns/Leonardo-Afritz"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_14" src="/App_Themes/Images/no-image.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="left">
+                                        <h3>
+                                            <a id="Body_Body_RptrSelectedColumns_HLColumnist_15" href="/columns/Luiz-Inacio-Lula-da-Silva">لويز إناشيو لولا دا سيلفا</a>
+                                        </h3>
+                                        <h2>
+                                            <a href='/columns/view.aspx?cdate=11032013&id=a08ac544-1b08-4a98-9ced-91cede38b993'>
+                                                أمريكا اللاتينية بعد شافيز
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="right">
+                                        <a id="Body_Body_RptrSelectedColumns_HLimgColumnist_15" href="/columns/Luiz-Inacio-Lula-da-Silva"><img id="Body_Body_RptrSelectedColumns_ImgColumnist_15" src="/App_Themes/Images/no-image.jpg" style="height:50px;width:50px;" /></a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <!-- TodayArticles -->
+            <div class="leftAd">
+                <!-- ShorouknewsV3_250x250 -->
+                <div id='div-gpt-ad-1335958273687-1'>
+                    <script type='text/javascript'>
+                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1335958273687-1'); });
+                    </script>
+                </div>
+            </div>
+        <div id="Body_Body_bbcGadget" class="bbcGadget">
+                <div class="title"> 
+                    <a href='http://www.bbcarabic.com/' target="_blank">
+                        <img src="App_Themes/Images/bbcHeader.jpg" />
+                    </a>
+                </div>
+                <div class="content">
+                    <ul>
+                        
+                               <li> <a href='news/view.aspx?id=29af2785-c979-499d-bf11-0c2790ccb9c3&cdate=11032013&provider=bbc'>بدء مناورات امريكية-كورية جنوبية وغضب في بيونغيانغ  </a></li>
+                            
+                               <li> <a href='news/view.aspx?id=7ad2d56d-121a-4088-8201-ef5b9f10e7a8&cdate=11032013&provider=bbc'>الغارديان: الشرطة المصرية تضرب عن العمل  </a></li>
+                            
+                               <li> <a href='news/view.aspx?id=aa1bec0e-6465-4266-801d-c9186f4ef793&cdate=09032013&provider=bbc'>بريطانيا تعتقل أبو قتادة لخرقه شروط الكفالة  </a></li>
+                            
+                               <li> <a href='news/view.aspx?id=067ef645-fb2a-4e82-8c7b-08eed1d00b8f&cdate=09032013&provider=bbc'>فنزويلا: مادورو بعد أدائه اليمين يدعو لانتخابات رئاسية مبكرة  </a></li>
+                            
+                               <li> <a href='news/view.aspx?id=9888c588-5057-4e34-a627-942f9cc843fe&cdate=09032013&provider=bbc'>فوز كينياتا بانتخابات الرئاسة في كينيا  </a></li>
+                            
+                    </ul>
+                    <a class="more" href='provider/bbc'>المزيد من أخبار بي بي سي</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="footer"> <img src="App_Themes/Images/bbcFooter.jpg" /> </div>
+            </div>
+
+
+            <!-- vote -->
+            <div id="Body_Body_Poll1_DivPollResult" style="display: none">
+</div>
+
+<div id="Body_Body_Poll1_DivVote" class="vote">
+    <h1>
+        شارك برأيك</h1>
+    <div class="voting">
+       <div class="votingContent">
+         <h2>  هل ترجح إقامة انتخابات مجلس النواب في موعدها؟</h2>
+        <ul>
+            <span id="Body_Body_Poll1_RblAnswers"><input id="Body_Body_Poll1_RblAnswers_0" type="radio" name="ctl00$ctl00$Body$Body$Poll1$RblAnswers" value="f52d1bd0-6549-45db-94d4-be826acd9dcf" /><label for="Body_Body_Poll1_RblAnswers_0">نعم</label><br /><input id="Body_Body_Poll1_RblAnswers_1" type="radio" name="ctl00$ctl00$Body$Body$Poll1$RblAnswers" value="6848cefb-6b37-4a0c-975c-54c46c18d042" /><label for="Body_Body_Poll1_RblAnswers_1">لا</label><br /><input id="Body_Body_Poll1_RblAnswers_2" type="radio" name="ctl00$ctl00$Body$Body$Poll1$RblAnswers" value="1e7a0607-933d-4a2d-9dcd-524dade2603a" /><label for="Body_Body_Poll1_RblAnswers_2">لا أهتم</label></span>
+        </ul>
+        <br />
+         <span class="votesubmit">
+             <a href="javascript:void(0)"  onclick="result()">النتائج</a>
+             <a href="javascript:void(0)" onclick="vote()" class="voteSubmitButton">شارك</a>
+      </span>
+        <div class="clear">
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" language="javascript">
+    function vote() {
+        var pollDetailsID = $("#Body_Body_Poll1_DivVote").find("input:checked[type='radio']").val();
+        if (pollDetailsID) {
+           
+            var manager = new serviceManager();
+            manager.serviceUrl = '/_Services/PollManagement.asmx/Vote';
+            manager.data = '{pollDetailsID:' + JSON.stringify(pollDetailsID) + ',pollID:' + JSON.stringify("f2c99eb5-a7ac-4e72-bd49-204aadd0364e") + '}';
+     
+            manager.run("DivPollResult", function () {
+                result(true);
+                $("#Body_Body_Poll1_DivVote").remove();
+            });
+        }
+        else
+            alert("لم تقم بتسجيل أي اختيار");
+    }
+
+   
+
+    function result(voted) {
+
+        $("#Body_Body_Poll1_DivVote").hide();
+        var manager = new serviceManager();
+        manager.serviceUrl = '/_Services/ControlsManagement.asmx/GetPollResult';
+        manager.data = '{pollID:' + JSON.stringify('f2c99eb5-a7ac-4e72-bd49-204aadd0364e') + '}';
+        manager.run("Body_Body_Poll1_DivPollResult", function () {
+            if (!voted)
+                $("#Body_Body_Poll1_DivPollResult").append('<br /><a id="backA" href="javascript:void(0)" onclick="back();" style="color:#217DC6;font-weight:bold;font-size:11px">رجوع</a>');
+
+            $("#Body_Body_Poll1_DivPollResult").show("slow");
+        });
+    }
+
+    function back() {
+        $("#Body_Body_Poll1_DivPollResult").hide();
+        $("#Body_Body_Poll1_DivPollResult").html("");
+        $("#Body_Body_Poll1_DivVote").show("slow");
+    }
+</script>
+
+
+            <!-- vote -->
+            
+<!-- tvBanner -->
+<div id="Body_Body_TvBanner1_DivTvBanner" class="tvBanner">
+    <div id="tvBannerSlider">
+        <ul class="carousel-ul">
+            
+                    <li><a href="http://shorouknews.com/sites/republicII/" target="_blank">
+                        <img id="Body_Body_TvBanner1_RptrTvBanner_ImgTvBanner_0" src="http://shorouknews.com/uploadedimages/TVBannar/original/123.jpg" style="height:152px;width:242px;" />
+                    </a><span>
+                        الجمهورية الثانية في مصر
+                    </span></li>
+                
+                    <li><a href="http://shorouknews.com/news/view.aspx?cdate=01102012&id=b3fb5888-ce2d-4222-a0a6-d12b584c0a85" target="_blank">
+                        <img id="Body_Body_TvBanner1_RptrTvBanner_ImgTvBanner_1" src="http://shorouknews.com/uploadedimages/TVBannar/original/feel.jpg" style="height:152px;width:242px;" />
+                    </a><span>
+                        رواية الفيل الأزرق
+                    </span></li>
+                
+        </ul>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="carouselArrows">
+        <a id="simpleNext"></a><a id="simplePrevious"></a>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<!-- tvBanner END-->
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('#tvBannerSlider').carousel('#simpleNext', '#simplePrevious');
+    });
+</script>
+
+            <div class="subsBanners">
+                <ul class="subs">
+                    
+                </ul>
+            </div>
+            <!-- karikater -->
+            
+    <div class="karikater">
+                <h1>
+                    كاريكاتير الشروق
+                </h1>
+            </div>
+            
+                    <div class="karikater">
+                        <h2>
+                                كاريكاتير
+                                وليد طاهر
+                        </h2>
+                        <span>
+                            <a id="Body_Body_Caricature1_RptrTopCaricaturist_HLimgCaricature_0" href="caricature/waleed"><img id="Body_Body_Caricature1_RptrTopCaricaturist_ImgCaricature_0" src="http://shorouknews.com/uploadedimages/Caricature/waleed%20taher/original/walid-taher-1498.jpg" /></a>
+                        </span>
+                    </div>
+                
+                    <div class="karikater">
+                        <h2>
+                                كاريكاتير
+                                عمرو سليم
+                        </h2>
+                        <span>
+                            <a id="Body_Body_Caricature1_RptrTopCaricaturist_HLimgCaricature_1" href="caricature/amr"><img id="Body_Body_Caricature1_RptrTopCaricaturist_ImgCaricature_1" src="http://shorouknews.com/uploadedimages/Caricature/Amr%20Sleem/original/amr-selim-1498-(2).jpg" /></a>
+                        </span>
+                    </div>
+                
+<div class="tvBanner2" >
+    <div id="CaricatureSlider">
+        <ul class="carousel-ul">
+            
+                       
+                       
+                    <li>
+                           <span>
+                            محمود السعيد
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_0" href="caricature/saeed"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_0" src="http://shorouknews.com/uploadedimages/Caricature/Mahmoud%20Saeed/original/Mahmoud-Al-Saeed-1498.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            حلمي التوني
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_1" href="caricature/helmy-tuni"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_1" src="http://shorouknews.com/uploadedimages/Caricature/Hemly%20Tuni/original/Helmi-al-Tuni-1124.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            توفيق
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_2" href="caricature/tawfik"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_2" src="http://shorouknews.com/uploadedimages/Caricature/Tawfik/original/Tawfiq-1496.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            نجم الدين
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_3" href="caricature/najmeddin"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_3" src="http://shorouknews.com/uploadedimages/Caricature/Najmeddin/original/Najm-al-Din-1220.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            محمود عبده
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_4" href="caricature/mahmoud-abdou"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_4" src="http://shorouknews.com/uploadedimages/Caricature/Mahmoud%20Abdou/original/Mahmoud-Abdo-1459.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            محمد صلاح
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_5" href="caricature/mohamed-salah"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_5" src="http://shorouknews.com/uploadedimages/Caricature/Mohamed%20Salah/original/Mohammed-Salah-1424.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            عوض
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_6" href="caricature/awad"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_6" src="http://shorouknews.com/uploadedimages/Caricature/Awad/original/awad-1496.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            ياسمين
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_7" href="caricature/yasmine"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_7" src="http://shorouknews.com/uploadedimages/Caricature/Yasmine/original/Yasmin-1489.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            كاريكاتير عالمي
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_8" href="caricature/intl-caricature"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_8" src="http://shorouknews.com/uploadedimages/Caricature/Intl%20Caricature/original/Comics-The-New-York-Times-1491.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            منى عبد الرحمن
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_9" href="caricature/Mona_Abdel_Rahman"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_9" src="http://shorouknews.com/uploadedimages/Caricature/Mona%20Abdel%20Rahman/original/Mona-Abdel-Rahman-1495.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            رمضان
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_10" href="caricature/Ramadan"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_10" src="http://shorouknews.com/uploadedimages/Caricature/Ramadan/original/Ramadan-1482.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+                       
+                       
+                    <li>
+                           <span>
+                            ليلى شريف
+                        </span>
+                        <a id="Body_Body_Caricature1_RptrCaricaturist_HLimgCaricature_11" href="caricature/Laila_Sherif"><img id="Body_Body_Caricature1_RptrCaricaturist_ImgCaricature_11" src="http://shorouknews.com/uploadedimages/Caricature/Laila%20Sherif/original/Laila-Sharif-1492.jpg" style="height:152px;width:242px;" /></a>
+                        </li>
+                
+        </ul>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="CaricaturecarouselArrows" class="CaricaturecarouselArrows">
+        <a id="CaricaturesimpleNext"></a>
+        <a id="CaricaturesimplePrevious"></a>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('#CaricatureSlider').carousel('#CaricaturesimpleNext', '#CaricaturesimplePrevious');
+    });
+</script>
+
+            
+            <!-- karikater -->
+            <a target="_blank" href="http://www.akhbarak.net/">
+        <img src="ads/akhbarak_banner.jpg" alt="" />
+      </a>
+            <div id="Body_Body_DvGallery" class="karikater">
+                <h1>
+                    معرض الصور</h1>
+                <span>
+                    <a id="Body_Body_lnkGallery" href="/gallery"><img id="Body_Body_imgGallery" src="http://shorouknews.com/uploadedimages/Gallery/original/03.jpg" style="height:165px;width:174px;" /></a>
+                </span>
+            </div>
+            <br />
+            <!-- Facebook -->
+            <div class="facebookwidget">
+                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fshorouknews&amp;width=243&amp;connections=12&amp;stream=false&amp;header=true&amp;height=285"
+                    scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 245px;
+                    height: 329px;"></iframe>
+            </div>
+            <!-- Facebook -->
+            <div class="clear">
+            </div>
+        </div>
+        <!-- LeftArea end -->
+        <!-- rightArea -->
+        <div class="rightArea">
+            <!-- SootBelady -->
+            
+            <!-- Sport -->
+            <div class="clear">
+            </div>
+            <div class="v4themeGroup">
+                <div id="Div1" class="v4theme" style="float: right; margin-left: 23px;">
+                    <h1 style="border-bottom-color:#CC0033">
+                        <span style="color: #CC0033">أحدث أخبار
+                            مصر</span> <a style="color: #CC0033"
+                                href="/egypt">المزيد »</a>
+                        <br class="clear" />
+                    </h1>
+                    <ul style="border: 1px solid #CC0033; background-image: url('App_Themes/Images/egyptStrip2.jpg');
+                        background-repeat: no-repeat; background-position: top center; padding-top: 100px">
+                        
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=11032013&id=44b44af1-eb09-4a2d-9b24-9b8d87d330a8'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/Administrative-Court-in-Alexandria-1484.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=11032013&id=44b44af1-eb09-4a2d-9b24-9b8d87d330a8'>
+                                            «القضاء الإداري»: لا يجوز فصل الموظف أثناء التحقيق معه لتغيبه عن العمل
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=11032013&id=a0bb7c84-7292-43b0-b11d-9a995cd39842'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/Accidents/thumb/13.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=11032013&id=a0bb7c84-7292-43b0-b11d-9a995cd39842'>
+                                            مصرع وإصابة 7 أشخاص فى حادث انقلاب سيارة بالمنوفية
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=11032013&id=ecc13dcb-1029-4807-831b-fd2c165c9407'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/thumb/solar.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=11032013&id=ecc13dcb-1029-4807-831b-fd2c165c9407'>
+                                            ضبط محطة وقود تبيع حصتها فى السوق السوداء بالبحيرة
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=11032013&id=fe5c688f-ef5e-4643-ab89-b8aeacfc8b16'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/Suez-Security-Directorate-1471.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=11032013&id=fe5c688f-ef5e-4643-ab89-b8aeacfc8b16'>
+                                            مصدر أمني بالسويس: نقل «قناص الشهداء» إلى مديرية أمن القاهرة
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                    </ul>
+                </div>
+                <div id="DivStyle1" class="v4theme" style="float: right;">
+                    <h1 style="border-bottom-color:#FF0000">
+                        <span style="color: #FF0000">أحدث أخبار
+                            سوريا الثورة</span> <a style="color: #FF0000"
+                                href="/politics/Syria-Revolution">المزيد »</a>
+                        <br class="clear" />
+                    </h1>
+                    <ul style="border: 1px solid #FF0000; background-image: url('App_Themes/Images/syrianrevolution.jpg');
+                        background-repeat: no-repeat; background-position: top center; padding-top: 100px">
+                        
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=11032013&id=1e37dc47-854f-4cf6-947b-e3539fb04490'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/Syria Revolution/thumb/Suicide-bombing-in-Damascus-1481.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=11032013&id=1e37dc47-854f-4cf6-947b-e3539fb04490'>
+                                            اشتباكات عنيفة بين قوات الأسد والجيش السوري الحر في ريف دمشق
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=11032013&id=c799b1b6-9cb7-49ca-9cde-a4fe0a50ece7'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/Syria Revolution/thumb/Clashes-in-Syria1479.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=11032013&id=c799b1b6-9cb7-49ca-9cde-a4fe0a50ece7'>
+                                            اشتباكات دموية بين الجيشين السورى والحر بريف دمشق  
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=10032013&id=174a1a2b-6bf5-4807-9cc2-853f1a8e422a'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/thumb/Opposition-fighters-in-Homs.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=10032013&id=174a1a2b-6bf5-4807-9cc2-853f1a8e422a'>
+                                            المعارضة السورية: المقاتلون يخترقون حصار حمص
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                                <li class="firstHome">
+                                    <div class="firstHomeImg">
+                                        <a href='/news/view.aspx?cdate=10032013&id=af87070b-468e-400d-957d-b0e157cae904'>
+                                            <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/thumb/syria-12489.jpg' />
+                                        </a>
+                                    </div>
+                                    <div class="firstHomeLink">
+                                        <a href='/news/view.aspx?cdate=10032013&id=af87070b-468e-400d-957d-b0e157cae904'>
+                                            القوات السورية تخلي فرع الأمن السياسي  بحمص و«الحر» يسيطر على «بابا عمرو»
+                                        </a>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </li>
+                            
+                    </ul>
+                </div>
+            </div>
+            <div class="v4theme videos" style="margin-top: 15px;">
+                <h1>
+                    <span>فيديو الشروق</span> <a href="/video">المزيد »</a>
+                    <br class="clear" />
+                </h1>
+                <div class="videosContent">
+                    <div class="videosLeft">
+                        <ul>
+                            
+                                    <li>
+                                        <h3>
+                                            <a href='/news/view.aspx?cdate=11032013&id=ed2bc928-c9c1-4eb5-a092-38b475280d12'>
+                                                بالفيديو والصور.. لحظة خروج روح عريس الـ7 شهور آخر شهيد بمجزرة بورسعيد</a></h3>
+                                    </li>
+                                
+                                    <li>
+                                        <h3>
+                                            <a href='/news/view.aspx?cdate=11032013&id=c8cd5366-f264-422f-b9e3-268a076588b5'>
+                                                أستاذ القانون الدستوري بالشرطة: الضبطية يجب أن تكون مشروطة بـ«الملاءمة»</a></h3>
+                                    </li>
+                                
+                                    <li>
+                                        <h3>
+                                            <a href='/news/view.aspx?cdate=11032013&id=a9f3b626-61fa-4ade-b1ea-cc279e3dbe46'>
+                                                سميرة إبراهيم:أمريكا طالبتني بالاعتذار وتمجيد إسرائيل.. والسفارة لم تساندني</a></h3>
+                                    </li>
+                                
+                                    <li>
+                                        <h3>
+                                            <a href='/news/view.aspx?cdate=11032013&id=3afcc328-f7c9-4113-b664-419abc2f0f21'>
+                                                عزازي: الضبطية للمواطن اعتداء على القضاء وتحويل الدولة لـ«ميليشيات قانونية» </a></h3>
+                                    </li>
+                                
+                                    <li>
+                                        <h3>
+                                            <a href='/news/view.aspx?cdate=11032013&id=2ad62f77-4baa-439f-94c4-7d7083d59468'>
+                                                الديب: مبارك يرى من يخرب بلطجية لا ثوارا.. ويدعو المواطنين للالتفاف حول مرسي</a></h3>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                    <div id="Body_Body_DivYoutube" class="videosRight">
+                        <div class="mainVideo">
+                            <embed allowfullscreen="true" allowscriptaccess="always" width="432" height="260"
+                                  src='http://www.youtube.com/v/0I46xHLBv4w' type="application/x-shockwave-flash" />
+             
+                        </div>
+                        <div class="videosThumbs">
+                            
+                                    <div class="videoThumb">
+                                        <a href="/video/default.aspx?id=85nl397qYV4">
+                                            <img src='http://i.ytimg.com/vi/85nl397qYV4/default.jpg' title="أجواء الاشتباكات اليوم بكورنيش النيل" alt="أجواء الاشتباكات اليوم بكورنيش النيل"
+                                                width="100" height="70" />
+                                        </a>
+                                    </div>
+                                
+                                    <div class="videoThumb">
+                                        <a href="/video/default.aspx?id=HbKq_Rzgs3A">
+                                            <img src='http://i.ytimg.com/vi/HbKq_Rzgs3A/default.jpg' title="مقتل أحد المتظاهرين فى الاشتباكات قصر النيل" alt="مقتل أحد المتظاهرين فى الاشتباكات قصر النيل"
+                                                width="100" height="70" />
+                                        </a>
+                                    </div>
+                                
+                                    <div class="videoThumb">
+                                        <a href="/video/default.aspx?id=G0yAL5EORZw">
+                                            <img src='http://i.ytimg.com/vi/G0yAL5EORZw/default.jpg' title="دفن اجزاء من (مخ) أحد الشهداء اليوم فى ميدان التحرير" alt="دفن اجزاء من (مخ) أحد الشهداء اليوم فى ميدان التحرير"
+                                                width="100" height="70" />
+                                        </a>
+                                    </div>
+                                
+                                    <div class="videoThumb">
+                                        <a href="/video/default.aspx?id=xN-ys6rCvp8">
+                                            <img src='http://i.ytimg.com/vi/xN-ys6rCvp8/default.jpg' title="اشتعال النيران في اتحاد الكرة المصري وتفحمه من الداخل" alt="اشتعال النيران في اتحاد الكرة المصري وتفحمه من الداخل"
+                                                width="100" height="70" />
+                                        </a>
+                                    </div>
+                                
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="v4themeGroup">
+                
+                        <div id="DivStyle" class="v4theme" style="float: right; margin-left:23px;">
+                            <h1 style="border-bottom-color:#0066FF">
+                                <span style="color: #0066FF">
+                                    شئون خارجية</span> <a style="color: #0066FF" href="/Politics">
+                                        المزيد »</a>
+                                <br class="clear" />
+                            </h1>
+                            <ul style="border: 1px solid #0066FF">
+                                
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=3db22dcc-a5de-43a1-a687-9d50bf3b0e7d'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/World/thumb/Plane-crash-UN-1499.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=3db22dcc-a5de-43a1-a687-9d50bf3b0e7d'>
+                                                    الأمم المتحدة تعلن تحطم طائرة بعثتها في الكونغو وفقدان أربعة من طاقمها
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=738e3149-8a13-469e-929f-a26186c63bf3'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/Arabic World/thumb/A-car-bomb-explosion-in-Iraq1451.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=738e3149-8a13-469e-929f-a26186c63bf3'>
+                                                    مقتل 5 أشخاص في هجوم بأسلحة رشاشة في صلاح الدين بالعراق 
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=758f7739-b25b-42a4-b21b-f861628d9e01'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/Bangladesh-factory-fire-1397.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=758f7739-b25b-42a4-b21b-f861628d9e01'>
+                                                    مدارس كاثوليكية تغلق أبوابها بعد إحراق مدينة مسيحية بباكستان
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=cbca5ac5-2e4c-4004-8aee-efe6266901b6'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/Syria Revolution/thumb/officers-dissidents.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=cbca5ac5-2e4c-4004-8aee-efe6266901b6'>
+                                                    تنظيم القاعدة فى العراق يتبنى قتل 48 جنديا سوريا فى الأنبار
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=5254ebc2-a133-47e3-8616-27509d8136b3'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/World/thumb/Sergei-Shoigu.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=5254ebc2-a133-47e3-8616-27509d8136b3'>
+                                                    وزير الدفاع الروسى: لدينا كل الإمكانيات لتشكيل أسطول حربى بشكل دائم 
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    
+                        <div id="DivStyle" class="v4theme" style="float: right;">
+                            <h1 style="border-bottom-color:#FF9900">
+                                <span style="color: #FF9900">
+                                    اقتصاد</span> <a style="color: #FF9900" href="/Economy">
+                                        المزيد »</a>
+                                <br class="clear" />
+                            </h1>
+                            <ul style="border: 1px solid #FF9900">
+                                
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=f21c9624-f17d-40ff-96d0-cacbed2253fb'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/microbus-strike.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=f21c9624-f17d-40ff-96d0-cacbed2253fb'>
+                                                    حكومات ما بعد الربيع غير قادرة على إرضاء الصندوق
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=95e7d4db-c6e7-473d-9220-393dfbbc0db7'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Economy/thumb/Hussein-Kazaz.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=95e7d4db-c6e7-473d-9220-393dfbbc0db7'>
+                                                    مستشار مرسى يواجه هجومًا حادًا فى مؤتمر اقتصادى بالكويت
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=e370dd2a-1612-4f0e-9508-082d534e6a9b'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Economy/Market/thumb/Mohammed-bin-Saleh-Al-Sada1499.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=e370dd2a-1612-4f0e-9508-082d534e6a9b'>
+                                                    قطر تعلن اكتشاف حقل غاز جديد تبلغ احتياطاته 2.5 تريليون قدم
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=4f303f38-da5e-4752-8530-4d487c595e56'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Economy/thumb/boursa-eg.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=4f303f38-da5e-4752-8530-4d487c595e56'>
+                                                    البورصة تتماسك أمام أحداث بورسعيد
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=7eb31f41-0598-49e4-8118-454211eadbd4'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/osama-kamal.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=7eb31f41-0598-49e4-8118-454211eadbd4'>
+                                                    المجلس الأعلى للطاقة يوافق على استخدام الشبكة القومية للغاز فى الاستيراد
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    
+                        <div id="DivStyle" class="v4theme" style="float: right; margin-left:23px;">
+                            <h1 style="border-bottom-color:#009900">
+                                <span style="color: #009900">
+                                    فنون</span> <a style="color: #009900" href="/art">
+                                        المزيد »</a>
+                                <br class="clear" />
+                            </h1>
+                            <ul style="border: 1px solid #009900">
+                                
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=6781529e-1226-4ad5-94ba-ef6e81865e2a'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Egypt/thumb/said-eldin-elshazaly.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=6781529e-1226-4ad5-94ba-ef6e81865e2a'>
+                                                    الجزيرة الوثائقية تكشف أسرار الفريق «سعد الدين الشاذلى»
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=df466ae1-14a7-46bf-bf8b-f0c1fa0e8430'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/ART/Cinema/thumb/loxor[1].jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=df466ae1-14a7-46bf-bf8b-f0c1fa0e8430'>
+                                                    «سحر السينما الإفريقية» شعار الدورة الثانية لمهرجان الأقصر
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=d4b6ca10-605e-4f6d-ba3a-eaeb7a3560b0'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/ART/Radio-TV/thumb/dalia-behiry-angam.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=d4b6ca10-605e-4f6d-ba3a-eaeb7a3560b0'>
+                                                    داليا البحيري تلجأ للقضاء لتصدر أنغام تتر «غمضة عين»
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=c0fecbf5-5b68-41ce-a60f-d82083d7c344'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/ART/thumb/amr-adel-meged-1498.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=c0fecbf5-5b68-41ce-a60f-d82083d7c344'>
+                                                    عمرو عبد الجليل يخوض سباق رمضان بـ«شحاتة عايش عريان»
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=d1f16db4-60e3-4ee0-a198-39f1f8aeaa92'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/ART/Radio-TV/thumb/ahmed-wafik33.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=d1f16db4-60e3-4ee0-a198-39f1f8aeaa92'>
+                                                    أحمد وفيق يبدأ تصوير «الركين» الأسبوع الحالى
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    
+                        <div id="DivStyle" class="v4theme" style="float: right;">
+                            <h1 style="border-bottom-color:#990099">
+                                <span style="color: #990099">
+                                    ثقافة</span> <a style="color: #990099" href="/Culture">
+                                        المزيد »</a>
+                                <br class="clear" />
+                            </h1>
+                            <ul style="border: 1px solid #990099">
+                                
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=255de851-650a-4be9-9bd8-6072c335be5d'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Culture/Thinkers - Events/thumb/nagla-mahfouz.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=255de851-650a-4be9-9bd8-6072c335be5d'>
+                                                    نجلاء محفوظ: تشافيز مثقف حقيقى وتحدى طوال حياته كل ألوان الاستعمار
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=31d747a8-767a-491f-af4a-48f4daedc17b'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Culture/Books/thumb/Foad Kandil.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=31d747a8-767a-491f-af4a-48f4daedc17b'>
+                                                    فؤاد قنديل: تشافيز كان صاحب نظرة مختلفة للثقافة
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=423bda38-f737-4cf9-82b3-936adf9cb7c1'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Culture/Thinkers - Events/thumb/abu-elgeet.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=423bda38-f737-4cf9-82b3-936adf9cb7c1'>
+                                                    مجلس الشئون الخارجية ينظم ندوة غدًا حول كتاب «شهادتي» لأحمد أبو الغيط
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=ab39420f-1279-4c34-848f-6ba5642d20d1'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Culture/thumb/ahmed-shafik-bashaa-1248.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=ab39420f-1279-4c34-848f-6ba5642d20d1'>
+                                                    هيئة قصور الثقافة تصدر مجموعة «مذكراتي في نصف قرن» لأحمد شفيق باشا
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=0196ae47-bab2-4827-8019-ae34e9c6b825'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Culture/Thinkers - Events/thumb/docktorisiko.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=0196ae47-bab2-4827-8019-ae34e9c6b825'>
+                                                    «الإيسيسكو» تصف اختيار المدينة المنورة عاصمة للثقافة الإسلامية بـ«الحكيم»
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    
+            </div>
+            <!-- v4ThemeGroup END -->
+            <!-- Sport -->
+            
+<script type="text/javascript">
+
+    $(document).ready(function () { LoadLatestNews(); LoadMainStory() });
+
+
+    function LoadMainStory() {
+
+        $.ajax({
+            type: "POST",
+            url: '/_Services/ShoroukSportsClient.asmx/GetMainStoryNews',
+            data: "{icludeImagePath:'true'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            beforeSend: function () {//loader
+                var load = $('#sportsSlides');
+                load.html('<center><img alt="" src="/App_Themes/images/ajax-loader.gif" /></center>');
+            },
+
+            success: function (response) {
+                var Content = (typeof response.d) == 'string' ? eval('(' + response.d + ')') : response.d;
+                $('#sportsSlides').empty();
+                $('#sportsSlides').append(" <ul id='MainItems' class='carousel-ul'>")
+
+                for (var i = 0; i < Content.length; i++) {
+                    $('#MainItems').append("<li><span><a target='_blank' href=http://sports.shorouknews.com/news/view.aspx?id=" + Content[i].ID + ">" + Content[i].Title + "</a> </span> <a target='_blank' href=http://sports.shorouknews.com/news/view.aspx?id=" + Content[i].ID + ">"
+                                          + "<img alt='' Width='330' Height='232' src=" + encodeURI(Content[i].ImagePath) + ">"
+                                          + "</a></li>")
+                }
+
+
+            },
+            //complete event
+            complete: function () {
+                $('#sportsSlides').carousel('#sportsimpleNext', '#sportsimplePrevious');
+
+            }
+        });
+    }
+
+
+    function LoadLatestNews() {
+
+        $.ajax({
+            type: "POST",
+            url: '/_Services/ShoroukSportsClient.asmx/GetLatestNews',
+            data: "{icludeImagePath:'false',maxResult:'" + document.getElementById('Body_Body_SportGadget1_Hdn_LatestMaxResult').value + "' }",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            beforeSend: function () {//loader
+                var load = $('#SportLatest');
+                load.html('<center><img alt="" src="/App_Themes/images/ajax-loader.gif" /></center>');
+            },
+            success: function (response) {
+                var Content = (typeof response.d) == 'string' ? eval('(' + response.d + ')') : response.d;
+                $('#SportLatest').empty();
+                $('#SportLatest').append(" <h1> أحدث الأخبار</h1>")
+                $('#SportLatest').append(" <ul id='LatestItems'>")
+                for (var i = 0; i < Content.length; i++) {
+
+                    $('#LatestItems').append("<li><h3><a target='_blank' href=http://sports.shorouknews.com/news/view.aspx?id=" + Content[i].ID + ">" + Content[i].Title + "</a></h3></li>");
+
+                  }
+
+            },
+            //complete event
+            complete: function () {
+            
+
+            }
+        });
+    }
+
+
+</script>
+
+     <div class="v4theme sport">
+                <h1>
+
+<span>  رياضه</span>
+  
+                     <a href="http://sports.shorouknews.com/">
+                            المزيد »</a>
+                    <br class="clear" />
+                </h1>
+                <div class="sportContent" id="sportContent">
+                    <div id="SportLatest" class="sportContentList">
+                      
+                    </div>
+                    <div class="sportContentSlider">
+                        <div id="sportsSlides">
+                           
+                        </div>
+                       <div class="clear">
+                        </div>
+                        <div id="sportcarouselArrows">
+                            <a id="sportsimpleNext"></a><a id="sportsimplePrevious"></a>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+
+              <input type="hidden" name="ctl00$ctl00$Body$Body$SportGadget1$Hdn_LatestMaxResult" id="Body_Body_SportGadget1_Hdn_LatestMaxResult" value="7" />
+
+            <!-- Sport -->
+            <div class="clear">
+            </div>
+            <div class="v4themeGroup">
+                
+                        <div class="v4theme" style="float: right; margin-left:23px;">
+                            <h1 style="border-bottom-color:#3399FF">
+                                <span style="color: #3399FF">
+                                    ناس و حياة</span> <a style="color: #3399FF" href="/people-life">
+                                        المزيد »</a>
+                                <br class="clear" />
+                            </h1>
+                            <ul style="border: 1px solid #3399FF">
+                                
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=dbf4cef8-ae62-4890-9416-026abb59f56b'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/People - Life/Food-Health/thumb/LABAN.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=dbf4cef8-ae62-4890-9416-026abb59f56b'>
+                                                    مضغ اللبان يساعد على التركيز والتفكير بهدوء
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=e4cb732a-7f1d-46ed-968e-29beba7451ae'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/People - Life/Food-Health/thumb/Cancer-cells.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=e4cb732a-7f1d-46ed-968e-29beba7451ae'>
+                                                    دراسة طبية حديثة تؤكد إمكانية الكشف عن سرطان المعدة باختبار للتنفس
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=f838c073-f76f-433e-8df2-7e7d56946781'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/People - Life/thumb/mogh-elens-an.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=f838c073-f76f-433e-8df2-7e7d56946781'>
+                                                    دراسة: الحب يعمل على زيادة نمو الخلايا العصبية المسئولة عن الذاكرة بالمخ
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=8abdc1f1-8460-4f04-aad8-3164679bef31'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/People - Life/thumb/bat-man.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=8abdc1f1-8460-4f04-aad8-3164679bef31'>
+                                                    أزياء بات مان فى متحف التاريخ الوطنى الأمريكى
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=3a0bfc8a-1eb9-4bf6-a686-cc4f6a619cac'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/People - Life/Food-Health/thumb/meat-maker.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=3a0bfc8a-1eb9-4bf6-a686-cc4f6a619cac'>
+                                                    اللحوم المصنعة ترفع نسب الإصابة بسرطان البنكرياس
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    
+                        <div class="v4theme" style="float: right;">
+                            <h1 style="border-bottom-color:#006600">
+                                <span style="color: #006600">
+                                    علوم وتكنولوجيا</span> <a style="color: #006600" href="/Sci-Tech">
+                                        المزيد »</a>
+                                <br class="clear" />
+                            </h1>
+                            <ul style="border: 1px solid #006600">
+                                
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=11032013&id=cbb65d16-e075-4754-ab81-35b9d853caff'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Politics/World/thumb/ahmdy_negad-16-10.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=11032013&id=cbb65d16-e075-4754-ab81-35b9d853caff'>
+                                                    إيران تحجب بعض الشبكات الافتراضية لمنع الالتفاف على رقابة الإنترنت
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=0acb3af4-187b-4ef7-8215-f33cba607315'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/People - Life/Food-Health/thumb/human-heart.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=0acb3af4-187b-4ef7-8215-f33cba607315'>
+                                                    دراسة: الأنماط الغذائية ونوعيات الطعام ليست سبب «تصلب الشرايين»
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=24c76c96-7378-4fe6-ba4d-34d4be3c9b21'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Sci - Tech/Sci - Environment/thumb/collision-satellites.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=24c76c96-7378-4fe6-ba4d-34d4be3c9b21'>
+                                                    تصادم فضائي بين حطام قمر صيني وآخر روسي
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=1d22f11f-3caf-479b-a26b-6c599717b616'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Sci - Tech/Sci - Environment/thumb/Locust-1498.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=1d22f11f-3caf-479b-a26b-6c599717b616'>
+                                                      مديرية الزراعة بسوهاج تنجح فى القضاء على تجمعات كبيرة للجراد
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="firstHome">
+                                            <div class="firstHomeImg">
+                                                <a href='/news/view.aspx?cdate=10032013&id=19f0dbce-f33b-4b19-84ce-83cbe8e0b688'>
+                                                    <img alt="" src='http://shorouknews.com/uploadedimages/Sections/Sci - Tech/Sci - Environment/thumb/03-CD09-Cairo-day.jpg' />
+                                                </a>
+                                            </div>
+                                            <div class="firstHomeLink">
+                                                <a href='/news/view.aspx?cdate=10032013&id=19f0dbce-f33b-4b19-84ce-83cbe8e0b688'>
+                                                    «الأرصاد»: الطقس غدا مائل للحرارة شمالا حار على الوجه البحرى والقاهرة 
+                                                </a>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    
+            </div>
+            <!-- v4ThemeGroup END -->
+            <div class="clear">
+            </div>
+            <!-- forum -->
+            <div class="v4theme forum">
+                <h1>
+                    <span>منتدى الشروق</span> <a href="/forums">المزيد »</a>
+                    <div class="clear">
+                    </div>
+                </h1>
+                <blockquote>
+                    
+                            <div class="forumItem" style=margin-left:25px>
+                                <h5>
+                                    <a href='/news/view.aspx?cdate=09022013&id=4980191f-dc5c-4cc0-b0c1-c273736e7292'>
+                                         كرامة المواطن...كيف تراها في مصر؟؟
+                                    </a>
+                                </h5>
+                                <h3 class="commentCount">
+                                   <strong> تعليقات</strong>
+                                    <fb:comments-count href='http://shorouknews.com/news/view.aspx?cdate=09022013&id=4980191f-dc5c-4cc0-b0c1-c273736e7292'></fb:comments-count>
+                                
+                                </h3>
+                                <a href='/news/view.aspx?cdate=09022013&id=4980191f-dc5c-4cc0-b0c1-c273736e7292'>
+                                    <img id="Body_Body_RptrForum_imgNews_0" src="http://shorouknews.com/uploadedimages/Sections/Egypt/Eg-Politics/thumb/sahlhamada234.jpg" style="height:70px;width:100px;" />
+                                </a><span>
+                                    أثارت واقعة سحل &quot;حمادة صابر&quot; أمام قصر الاتحادية، جدلا واسعا بالشارع المصري، خاصة بعد قيام حمادة &quot;المواطن المسحول&quot; كما بات يعرف بوسائل الإعلام
+                                </span>
+                            </div>
+                        
+                            <div class="forumItem" >
+                                <h5>
+                                    <a href='/news/view.aspx?cdate=09022013&id=30a55a6d-af98-4675-a254-bb2e45fb37dd'>
+                                        ظاهرة.. (التحرش الجماعي)
+                                    </a>
+                                </h5>
+                                <h3 class="commentCount">
+                                   <strong> تعليقات</strong>
+                                    <fb:comments-count href='http://shorouknews.com/news/view.aspx?cdate=09022013&id=30a55a6d-af98-4675-a254-bb2e45fb37dd'></fb:comments-count>
+                                
+                                </h3>
+                                <a href='/news/view.aspx?cdate=09022013&id=30a55a6d-af98-4675-a254-bb2e45fb37dd'>
+                                    <img id="Body_Body_RptrForum_imgNews_1" src="http://shorouknews.com/uploadedimages/Sections/People%20-%20Life/Youth-Edu/thumb/taharosh.jpg" style="height:70px;width:100px;" />
+                                </a><span>
+                                    انتشرت حوادث التحرش الجماعي خلال مليونيات الأحداث الأخيرة، بل وصل الأمر في بعض الحوادث إلى حالات اغتصاب، وهو ما أثار جدلا بالمجتمع المصر
+                                </span>
+                            </div>
+                        
+                    <div class="clear">
+                    </div>
+                </blockquote>
+            </div>
+            <!-- forum -->
+            <div class="clear">
+            </div>
+            <!-- readersArticles -->
+            <div class="v4theme readersArticles">
+                <h1>
+                    <span>مقالات القراء</span> <a href="/menbar">المزيد »</a>
+                    <br class="clear" />
+                </h1>
+                <blockquote class="RA">
+                    <div class="readersArticlesLeft">
+                        
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=11032013&id=442f5094-73c0-426f-bb5f-1d5971bbc6f2'>
+                                        محمود البدري يكتب: قاضي الثورة
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=11032013&id=84060b54-d0c3-44c4-be5f-cb650820ce1a'>
+                                        طه يوسف يكتب: ومازالت تعاني
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=10032013&id=9a4125de-3dbc-49b2-9d46-3ee82d8740b5'>
+                                        حسن محمد موسى يكتب: مفترق الطرق
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=10032013&id=17bd8c64-4835-4da4-afec-ecbd99864384'>
+                                        نصر فتحي اللوزي يكتب: ربي زدني صبرا
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=10032013&id=1a8dedb6-7594-4dd0-b168-dc0492d54ad9'>
+                                        أحمد يونس شاهين يكتب: زيارة أوباما الفاشلة
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=10032013&id=35412e5b-cf82-4071-8ef6-090a4e0f3024'>
+                                        إبراهيم الغيطاني يكتب: خريطة ثورة الجياع
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=10032013&id=691f918c-c15e-48a2-8f17-d4cd39d24fb7'>
+                                        عمرو وجدي يكتب: ولاية الفقيه الملهمة
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/menbar/view.aspx?cdate=10032013&id=02600def-23db-43fb-81a3-182bc7ca5f82'>
+                                        عبد الرازق أحمد الشاعر يكتب: أجران التاريخ المقدسة
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                    </div>
+                    <div class="clear">
+                    </div>
+                </blockquote>
+            </div>
+            <!-- readersArticles -->
+            <!-- readersArticles -->
+            <div class="v4theme readersArticles diwanmzalem">
+                <h1>
+                    <span>ديوان المظالم</span> <a href="/complaints">المزيد »</a>
+                    <br class="clear" />
+                </h1>
+                <blockquote class="DM">
+                    <div class="readersArticlesLeft">
+                        
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=15022013&id=fa149ed1-8f18-4ccc-8d19-85930a37499d'>
+                                        أغيثونا من ملاك عقار رقم 20 بشارع محمد صالح حبيب
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=16012013&id=3c738cde-82c6-4883-aa77-2cc11eeed2a6'>
+                                        نائب رئيس جامعة المنوفية يرفض تعيين أوائل كلية التمريض كمعيدين
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=16012013&id=10404446-0ed5-4f32-a470-edc6162e781d'>
+                                        العمرانية تستغيث.. ارحمونا من الوعود الكذابة
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=16012013&id=1b720bbc-4e27-4d3f-a6b6-fa40fb17da58'>
+                                        مخالفات بالجملة في منطقة المعادي
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=07012013&id=7554bb02-6dc9-4cc5-9057-1d0227d4da94'>
+                                        فصل تعسفي من العمل.. أرجو المساعدة
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=07012013&id=65626967-15a7-4c48-83da-21f9e51e795d'>
+                                        أنقذوا قريتنا.. قرية الضهرية
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=29112012&id=6f5fb206-d27a-40c4-9fa7-ae33195fd28a'>
+                                        شكوى طالبة بآثار القاهرة لرسوبها مرتين ظلما
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                                <h3>
+                                    <a href='/complaints/view.aspx?cdate=29112012&id=ad48fc71-322f-4185-a808-69cc97693fa5'>
+                                        في انتظار كارثة أخرى من كوارث القطارات
+                                    </a>
+                                </h3>
+                                
+                                <div class="clear">
+                                </div>
+                            
+                    </div>
+                    <div class="clear">
+                    </div>
+                </blockquote>
+            </div>
+            <!-- readersArticles -->
+            <div class="clear">
+            </div>
+        </div>
+        <!-- rightArea -->
+        <div class="clear">
+        </div>
+    </div>
+
+  
+
+            <!-- ContentMain end -->
+            <div class="clear">
+            </div>
+        </div>
+        <!-- footerMain -->
+        <div class="footerMain">
+            <div class="footerAd">
+            <!-- ShorouknewsV3_468x60 -->
+<div id='div-gpt-ad-1335958273687-2'>
+<script type='text/javascript'>
+    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1335958273687-2'); });
+</script>
+</div>
+            </div>
+            <div class="footerArea">
+                <div class="footer">
+                    <div class="right">
+                        <div class="logo">
+                            <a href='/'>
+                                <img src="App_Themes/images/logofooter.gif" id="Img4" width="103" height="56" /></a>
+                        </div>
+                        <div class="sitemap">
+                            
+                                    <ul>
+                                        <li><a href='/egypt'>
+                                            <h1>
+                                                مصر</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/egypt/Eg-Politics'>
+                                                    سياسة
+                                                </a></li>
+                                            
+                                                <li><a href='/egypt/accidents'>
+                                                    حوادث وقضايا
+                                                </a></li>
+                                            
+                                                <li><a href='/egypt/parliament-rev'>
+                                                    برلمان الثورة
+                                                </a></li>
+                                            
+                                                <li><a href='/local'>
+                                                    محليات
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                                    <ul>
+                                        <li><a href='/Politics'>
+                                            <h1>
+                                                شئون خارجية</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/Politics/Syria-Revolution'>
+                                                    سوريا الثورة
+                                                </a></li>
+                                            
+                                                <li><a href='/Politics/arab'>
+                                                    عالم عربي
+                                                </a></li>
+                                            
+                                                <li><a href='/Politics/world'>
+                                                    العالم
+                                                </a></li>
+                                            
+                                                <li><a href='/Politics/press'>
+                                                    صحافة
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                                    <ul>
+                                        <li><a href='/Economy'>
+                                            <h1>
+                                                اقتصاد</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/Economy/bourse'>
+                                                    بورصة ومال
+                                                </a></li>
+                                            
+                                                <li><a href='/Economy/market'>
+                                                    أسواق وشركات
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                                    <ul>
+                                        <li><a href='/art'>
+                                            <h1>
+                                                فنون</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/art/cinema'>
+                                                    سينما
+                                                </a></li>
+                                            
+                                                <li><a href='/art/Radio-TV'>
+                                                    راديو وتليفزيون
+                                                </a></li>
+                                            
+                                                <li><a href='/art/music'>
+                                                    موسيقى
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                                    <ul>
+                                        <li><a href='/Culture'>
+                                            <h1>
+                                                ثقافة</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/Culture/fine-art'>
+                                                    فن تشكيلي
+                                                </a></li>
+                                            
+                                                <li><a href='/Culture/books'>
+                                                    كتب ونشر
+                                                </a></li>
+                                            
+                                                <li><a href='/Culture/thinkers - events'>
+                                                    فكر وندوات
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                        </div>
+                        <div class="sitemap">
+                            
+                                    <ul>
+                                        <li><a href='/people-life'>
+                                            <h1>
+                                                ناس و حياة</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/people-life/family-relations'>
+                                                    أسرة وعلاقات
+                                                </a></li>
+                                            
+                                                <li><a href='/people-life/Youth-Edu'>
+                                                    شباب وتعليم
+                                                </a></li>
+                                            
+                                                <li><a href='/people-life/Food-Health'>
+                                                    صحة وغذاء
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                                    <ul>
+                                        <li><a href='/Sci-Tech'>
+                                            <h1>
+                                                علوم وتكنولوجيا</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/Sci-Tech/Hardware'>
+                                                    محمول وأجهزة
+                                                </a></li>
+                                            
+                                                <li><a href='/Sci-Tech/Internet-Comm'>
+                                                    إنترنت واتصالات
+                                                </a></li>
+                                            
+                                                <li><a href='/Sci-Tech/Games-Software'>
+                                                    ألعاب وبرامج
+                                                </a></li>
+                                            
+                                                <li><a href='/Sci-Tech/Sci-Environment'>
+                                                    علوم وبيئة
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                                    <ul>
+                                        <li><a href='/columns'>
+                                            <h1>
+                                                مقالات وأعمدة</h1>
+                                        </a></li>
+                                        
+                                                <li><a href='/menbar'>
+                                                    منبر الشروق
+                                                </a></li>
+                                            
+                                                <li><a href='/complaints'>
+                                                    ديوان المظالم
+                                                </a></li>
+                                            
+                                                <li><a href='/caricature'>
+                                                    كاريكاتير
+                                                </a></li>
+                                            
+                                                <li><a href='/masara'>
+                                                     المعصرة
+                                                </a></li>
+                                            
+                                                <li><a href='/box'>
+                                                     بوكس
+                                                </a></li>
+                                            
+                                    </ul>
+                                
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="left">
+                        <a href="http://www.clipsolutions.com/" target="_blank" class="clipSolutions">CLIP Solutions
+                            تصميم و تطوير </a><a href="http://www.weather.com/" target="_blank" class="weatherDotCom">
+                                Weather.com خدمة الطقس بدعم من</a> <strong><a href='/contact'>
+                                    اتصل بنا</a> | <a href='/terms'>شروط الاستخدام</a> | <a href='/about'>
+                                        عن الموقع</a> 
+                                        <br />
+                                        <a href='/careers'>وظائف</a> 
+                                         |
+                                           <a href='/mobile-alerts.aspx'>خدمة الرسائل</a> 
+                                        <em>بوابة الشروق
+                                            2013
+                                            - جميع الحقوق محفوظة</em> </strong>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footerMain -->
+        <!-- Wrapper -->
+        
+  
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('#newsSlides').carousel('#newsSlidesArrowsNext', '#newsSlidesArrowsPrevious');
+        });
+        var slideshow = new TINY.slider.slide('slideshow', {
+            id: 'slider',
+            auto: 6,
+            resume: false,
+            vertical: false,
+            navid: 'pagination',
+            activeclass: 'current',
+            position: 0,
+            rewind: false,
+            elastic: true,
+            left: 'slideleft',
+            right: 'slideright'
+        });
+        $(document).ready(function () {
+            //highlight Menu
+            highlightMenu('');
+        });
+
+    </script>
+
+
+    </div>
+    
+    </div>
+    </form>
+
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7099737-1']);
+        _gaq.push(['_setDomainName', 'shorouknews.com']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+
+    <!-- BEGIN EFFECTIVE MEASURE CODE -->
+    <!-- COPYRIGHT EFFECTIVE MEASURE -->
+    <script type="text/javascript">
+        (function () {
+            var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+            em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+        })();
+    </script>
+    <noscript>
+        <img src="//me.effectivemeasure.net/em_image" alt="" style="position: absolute; left: -5px;" />
+    </noscript>
+    <!--END EFFECTIVE MEASURE CODE -->
+
+
+    <!-- (C)2000-2012 Gemius SA - gemiusAudience / shorouknews.com / Homepage -->
+<script type="text/javascript">
+<!--    //--><![CDATA[//><!--
+    var pp_gemius_identifier = new String('1vNFzScimSpmry.fNTWHP7cdfUoYKDsIrpQwo3lzm1D.k7');
+    //--><!]]>
+</script>
+<script type="text/javascript" src="http://www.shorouknews.com/_Scripts/_JavaScript/xgemius.js"></script>
+    <!--END Gemius CODE -->
+
+
+</body>
+
+
+
+<script type="text/javascript">
+
+    var _sf_async_config = { uid: 43590, domain: 'shorouknews.com' };
+
+    (function () {
+
+        function loadChartbeat() {
+
+            window._sf_endpt = (new Date()).getTime();
+
+            var e = document.createElement('script');
+
+            e.setAttribute('language', 'javascript');
+
+            e.setAttribute('type', 'text/javascript');
+
+            e.setAttribute('src',
+
+        (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+
+        "js/chartbeat.js");
+
+            document.body.appendChild(e);
+
+        };
+
+        var oldonload = window.onload;
+
+        window.onload = (typeof window.onload != 'function') ?
+
+      loadChartbeat : function () { oldonload(); loadChartbeat(); };
+
+    })();
+
+</script>
+
+
+
+
+</html>

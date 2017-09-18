@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+
+
+<html lang="ar">
+	<head>
+
+	
+
+	
+
+<meta charset="utf-8" />
+
+	<title>العربية.نت | الصفحة الرئيسية</title>
+
+<meta name="keywords" content="العربية.نت | الصفحة الرئيسية" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="robots" content="index, follow" />
+<meta name="aa:contenttype" content="" />
+<meta name="aa:contentid" content="a9b9d94f-a804-4aca-a0f6-7e103952fda1" />
+<meta name="aa:created" content="1347191714625" />
+<meta name="aa:modified" content="1362600773657" />
+
+<meta property="videoURL" content=""/>
+
+
+
+
+<link rel="shortcut icon" href="/docroot/aa-templating/gfx/favicon.ico" type="image/x-icon" />
+
+
+<link rel="stylesheet" href="/docroot/aa-templating/css/structure.css" type="text/css" />
+<link rel="stylesheet" href="/docroot/aa-templating/css/theme.css" type="text/css" />
+<link rel="stylesheet" href="/docroot/aa-templating/css/theme_extended.css" type="text/css" />
+<link rel="stylesheet" href="/docroot/aa-templating/css/lightbox.css" type="text/css" />
+
+<script type="text/javascript" src="/docroot/aa-templating/js/jquery-1.8.0.min.js"></script>
+<!-- START ADV -->
+<script type="text/javascript">
+var advZone = "Arabic/Home";
+</script>
+<script type="text/javascript" src="/ar/resources/aa-templating/adStat/adStat.js"></script>
+<script type="text/javascript" language="javascript">
+	serveIncludedScripts("head");
+</script>
+<!-- END ADV -->
+
+<script type="text/javascript" src="/docroot/aa-templating/js/forms/jquery.validate.js"></script>
+<script type="text/javascript" src="/docroot/aa-templating/js/forms/localization/messages_ar.js"></script>
+
+<script type="text/javascript" src="/docroot/aa-templating/js/jquery.tooltip.pack.js"></script>
+
+
+
+				<link type="text/css" href="/dms/social-media/ar-site/overwrite.css" rel="stylesheet" />
+
+
+
+<script type="text/javascript" src="/docroot/aa-core-resources/pages/jquery-smartupdater/smartupdater.4.0.js"></script>
+
+		
+<script type="text/javascript" src="/docroot/aa-templating/js/scripts.jsp"></script>
+<script type="text/javascript" src="/docroot/aa-templating/js/scripts_extended.jsp"></script>
+<script type="text/javascript" src="/docroot/aa-templating/reuters/reuters.jsp"></script>
+
+
+
+<script type="text/javascript">
+function startBreakingNewsPoller() {
+	$("#breaking-news").smartupdater({
+		url : '/servlet/aa/breakingNews?ajaxMode=true&ajaxAction=refresh-breaking-news&site=ar',
+		dataType: "json",
+		minTimeout: 60000 // 5 seconds
+		}, function (data) {
+		
+			if (data.error) {
+				fallbackBreakingNews();
+				$("#breaking-news").parent().hide();
+			} else {
+				if (data.result.text != null && data.result.text != "") {
+					$("header .frequencies").hide();
+					$("#breaking-news").parent().show();
+					$("#breaking-news").html(data.result.text);
+				} else {
+					fallbackBreakingNews();
+					$("#breaking-news").html("");
+					$("#breaking-news").parent().hide();
+				}
+			}
+		}
+	);
+}
+
+function fallbackBreakingNews() {
+	fallbackEnabled = false;
+	if (fallbackEnabled) {
+		$("header .frequencies").show();
+	}
+}
+
+$(function() {
+	
+	// try to synchronize different browsers
+	var time = new Date().getTime();
+	var millisToWait = 60000 - (time % 60000);
+	window.setTimeout(startBreakingNewsPoller, millisToWait);
+});
+</script>
+
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 7]>
+	<script src="/docroot/aa-templating/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+<script type='text/javascript' src='/docroot/aa-templating/js/weather/weather.jsp' ></script>
+<script type='text/javascript' src="/docroot/aa-templating/js/weather/jquery.cookie.js"></script>
+<script type='text/javascript' src="/docroot/aa-templating/js/weather/jquery.autocomplete.js"></script>
+<link type='text/css' rel="stylesheet" href="/docroot/aa-templating/css/weather/weather.css" />
+<link type="text/css" rel="stylesheet" href="/docroot/aa-templating/css/weather/jquery.autocomplete.css" />
+	
+    <link rel="stylesheet" type="text/css" href="/resources/aa-templating/themes/cssSelect/icons.css" media="screen, print" />
+    <link rel="stylesheet" type="text/css" href="/resources/aa-templating/themes/cssSelect/structure.css" media="screen, print" />
+
+
+<link rel="stylesheet" href="/docroot/aa-templating/css/print.css" type="text/css" media="print" />
+
+
+	</head>
+	<body class="home_tem">
+		<!-- AdvStat BODY BLOCK 1 -->
+<script type="text/javascript" language="javascript">
+	serveIncludedScripts("body1");
+</script>
+		<!-- AdvStat BODY BLOCK 1 End -->
+
+
+	
+	
+	
+	
+	
+	
+	<div class="modal-bar" rel="edit-bar-1" style="display:none;">
+		<input type="hidden" class="url" name="url" value="/.magnolia/dialogs/aa-templating-home-properties.html?mgnlPath=/ar&mgnlParagraph=aa-templating-home-properties&mgnlRepository=website&mgnlLocale=ar" />
+		<input type="hidden" class="refreshAfterClosing" name="refreshAfterClosing" value="" />
+	</div>
+		<div id="modal-bar-dialog" style="display: none;">
+			<div class="iframeContainer" style="position: relative; margin: 0; padding: 0; border: 0; height: 480px;"></div>
+		</div>
+	
+		<script type="text/javascript">
+	
+			(function() {
+			    var ev = new $.Event('remove'),
+			        orig = $.fn.remove;
+			    $.fn.remove = function() {
+			        $(this).trigger(ev);
+			        return orig.apply(this, arguments);
+			    }
+			})();
+				
+			var modalBarIFramePath = "";
+			var modalBarRefreshAfterClosing = false;
+			
+			jQuery(function(){
+			
+				// INTERCEPT MGNL BUTTONS, but not delete / move
+				var triggers = [];
+				$(".modal .mgnlControlBar .mgnlControlButton").each(function(index, item){triggers.push(item)});
+				$(".modal .mgnlControlBarSmall .mgnlControlButtonSmall").each(function(index, item){triggers.push(item)});
+				$(triggers).each(function(index, item){
+				
+					if ($(item).attr("onclick") != null && ($(item).attr("onclick").indexOf("mgnlDeleteNode") >= 0 || $(item).attr("onclick").indexOf("mgnlMoveNode") >= 0 || $(item).attr("onclick").indexOf("mgnlPreview") >= 0)){
+						return;
+					} else {
+						$(item).attr("onclick", "");
+						$(item).click(function(){
+							modalBarIFramePath = $(this).parents("table").siblings(".modal-bar").find("input.url").val();
+							if (null == modalBarIFramePath){
+								// main bar uses a custom div
+								modalBarIFramePath = $(this).parents("div.mgnlMainbar").siblings(".modal-bar").find("input.url").val();
+							}
+							modalBarRefreshAfterClosing = $(this).parents("table").siblings(".modal-bar").find("input.refreshAfterClosing").val();
+							
+							var agent = navigator.userAgent.toLowerCase();
+							var richE="false";
+							var richEPaste="";
+    						var richESupported=false;
+
+   							if (document.designMode) {
+        						//safari has designMode...
+        						if (agent.indexOf("safari") == -1) {
+        							richESupported=true;
+        						}
+        					}
+
+    						if (richESupported) {
+        						// richedit
+        						richE="true";
+        						if (agent.indexOf("mac")!=-1) richEPaste="false";
+        						else if (agent.indexOf("msie")!=-1)  richEPaste="button";
+        						else richEPaste="textarea";
+        					}
+        					
+        					modalBarIFramePath += "&mgnlRichE=" + richE + "&mgnlRichEPaste=" + richEPaste;
+							
+							$("#modal-bar-dialog").dialog({
+								resizable: true,
+								height: 540,
+								width: 1088,
+								modal: true,
+								title: "Content Edit Dialog",
+								open: function(){
+									
+									$("#modal-bar-dialog div.iframeContainer").html('<iframe src="'+ encodeURI(modalBarIFramePath) +'" frameBorder="0" height="100" style="width: 100%;"></iframe>');
+									$("#modal-bar-dialog div.iframeContainer iframe").load(function(){
+									
+										var mgnlIFrame = $("#modal-bar-dialog div.iframeContainer iframe");
+										
+										mgnlIFrame.css("height", "480px");
+										
+										mgnlIFrame.contents().find("div.mgnlDialogTab").css("top", "8px");
+										mgnlIFrame.contents().find(".mgnlDialogTabsetButtonBar").css("top", "-45px");
+										
+										mgnlIFrame.contents().find("#mgnlCancelButton").remove();
+										var count = 0;
+										setTimeout(function() {
+											count++;
+											var l = $("#modal-bar-dialog div.iframeContainer iframe").contents().find("#mgnlFormMain").length;
+											if (l == 0) {
+												$("#modal-bar-dialog div.iframeContainer").html('');
+												$("#modal-bar-dialog").dialog('close');
+													
+												// FIX mgnl interceptors
+												var href = window.location.href;
+												if (href.indexOf("?") > 0){
+													href = href.substr(0, href.indexOf("?"));
+												}
+												
+												if (href == window.location.href) {
+													window.location.reload();
+												} else {
+													window.location.href = href;
+												}
+												
+											}
+											
+											if (count < 2) {
+												mgnlIFrame.contents().find(".mgnlDialogTab").css("height", "430px");
+											}
+											
+											
+										}, 200);
+									});
+								},
+								buttons: {}
+							});
+						});
+					} // end if
+				});
+				
+			});
+		</script>
+	
+	
+	
+			<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+			
+		<div class="page_wrapper">
+		
+<!-- Start Photo Layer Box -->
+<div class="box popupLayer photo_layer">
+	<div class="head">
+		<h2></h2>
+		<a class="close popupLayerClose" href="#">Close</a>
+	</div>
+	<div class="content">
+		<div class="arena">
+		</div>
+	</div>
+	<div class="foot">
+<div class="copyrights">
+	&copy; &#1580;&#1605;&#1610;&#1593; &#1575;&#1604;&#1581;&#1602;&#1608;&#1602; &#1605;&#1581;&#1601;&#1608;&#1592;&#1577; &#1604;&#1602;&#1606;&#1575;&#1577; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; 
+	2013	
+</div>
+	</div>
+</div>
+<div class="backgroundPopup"></div>
+<!-- End Photo Layer Box --><div class="box popupLayer2 email_article">
+	
+	<script>
+	var mainContentUUID = "a9b9d94f-a804-4aca-a0f6-7e103952fda1";
+	var mainContentTitle = "&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;.&#1606;&#1578; | &#1575;&#1604;&#1589;&#1601;&#1581;&#1577; &#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;";
+	
+	function processError(error){
+	
+		var extraMsg = "";
+	
+		if (error.code < 10) {
+			extraMsg = error.data.fields;	  
+		} else if (error.code < 100){
+		} else if (error.code < 1000) {
+		} else if (error.code < 10000) {
+			extraMsg = "controlCode";			
+		} 
+	 
+	 	reloadCaptcha();	 	
+		//alert(error.message + "(" + extraMsg + ")");
+		$('.email_article .error_msg').html(error.message);
+		$('.email_article .error_msg').show();
+	}
+
+	function resetForm() {
+		
+		//disablePopup();
+		$("input.txt_box").val("");
+		reloadCaptcha();
+		//alert("Your message is successfull send");
+		$('.email_article .error_msg').hide();	
+		$('.email_article .thanku_msg').show();		
+	}
+	
+	function sendToFriend(jsonObject) { 
+   
+		$.post("/servlet/aa/sendEmail", jsonObject, function(data, message, xhr) {
+			
+			if (data.error) {
+				processError(data.error);
+			} else {
+				resetForm();
+			}
+			
+		}, "json");
+	}
+
+	jQuery(document).ready(function(){
+	
+		reloadCaptcha();
+		jQuery(function(){
+			jQuery("#send-to-friend-form").validate({
+			
+				submitHandler: function(form) {
+					sendToFriend($('#send-to-friend-form').serializeObject());
+				}
+				
+			});
+		});
+	});
+	</script>
+
+	<div class="head">
+		<h2>Send to a friend</h2>
+		<a class="close popupLayerClose" href="#">Close</a>
+	</div>
+	<div class="content">
+		<div class="arena">			
+			<div class="highline" id="emailTitle">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;.&#1606;&#1578; | &#1575;&#1604;&#1589;&#1601;&#1581;&#1577; &#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;</div>
+			<div class="aa_form" id="container-send-to-friend-form">
+				<form id="send-to-friend-form" name="send-to-friens-form" action="#" method="post">					
+					<input type="hidden" name="mgnlUuid" id="mgnlUuid" value="a9b9d94f-a804-4aca-a0f6-7e103952fda1" />
+					<div class="row">
+						<div class="lbl">Friend's name:</div>
+						<div class="fld">
+							<input name="friendName" type="text" class="txt_box">
+						</div>
+					</div>
+					<div class="row">
+						<div class="lbl">Friend's Email:</div>
+						<div class="fld">
+							<input name="friendEmail" type="text" class="txt_box required email">
+						</div>
+					</div>
+					<div class="row">
+						<div class="lbl">Sender's name:</div>
+						<div class="fld">
+							<input name="yourName" type="text" class="txt_box">
+						</div>
+					</div>
+					<div class="row">
+						<div class="lbl">Sender's Email:</div>
+						<div class="fld">
+							<input name="yourEmail" type="text" class="txt_box email">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="lbl"></div>
+						<div class="fld">
+							<img class="captcha-image" src="http://ugc.alarabiya.net/aa-captcha/captcha?token=1430004362929480704" alt="Click to refresh"/>
+							<input id="captchaToken" name="captchaToken" class="captcha-token" type="hidden" value="8137162219172169728" />
+							<a class="captcha-refresh" href="#">Refresh</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="lbl">Captcha Code</div>
+						<div class="fld">
+							<input id="captchaAnswer" name="captchaAnswer" type="text" class="required captcha-answer txt_box" />
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="fld">
+							<input id="sumbitBtn" name="sumbitBtn" class="btn" type="submit" value="Send">
+						</div>
+					</div>
+				</form>
+				<h5 class="thanku_msg" style="display:none;">Sent successfully</h5>
+				<h5 class="error_msg" style="display:none;">Error, please try again</h5>
+			</div>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+<div class="backgroundPopup2"></div>			
+			
+<!-- Social Icons -->
+<div class="social_icons">
+	
+<!-- Social Icons -->
+<ul class="">
+	
+
+<li class="fb">
+    
+    <a href="https://www.facebook.com/AlArabiya" title="https://www.facebook.com/AlArabiya" target="_blank">&nbsp;</a>
+</li>
+<li class="twitter">
+    
+    <a href="https://www.facebook.com/AlArabiya" title="https://www.facebook.com/AlArabiya" target="_blank">&nbsp;</a>
+</li>
+<li class="yt">
+    
+    <a href="http://www.youtube.com/alarabiya" title="http://www.youtube.com/alarabiya" target="_blank">&nbsp;</a>
+</li>
+<li class="feeds">
+    
+    <a href="http://www.alarabiya.net/tools/mrss.html" title="http://www.alarabiya.net/tools/mrss.html" target="_blank">&nbsp;</a>
+</li></ul>
+	
+	
+</div>						
+<!-- Page Header -->
+<header>
+	<!-- Language and Date -->
+	<div class="lang">
+				<ul>
+			
+			<li><a href="http://farsi.alarabiya.net" title="فارسي">فارسي</a></li>
+			<li><a href="http://urdu.alarabiya.net" title="أوردو">أوردو</a></li>
+			<li><a class="en" href="http://english.alarabiya.net" title="English">English</a></li>
+		</ul>
+		<span class="date">الخميس 24 ربيع الثاني 1434هـ - 7 مارس 2013م</span>
+	</div>
+
+<div class="branding">
+	<h1><a href="#" title="العربية.نت | الصفحة الرئيسية">&nbsp;</a></h1>
+	<!-- Leaderboard banner (Ad Slot 1) -->
+	<div class="leaderboard">
+	
+<!-- adZone: 728x90 - Top - All WEB pages -->
+<div id="adSlot-inPage-728x90-top" style="width:728px;height:90px;">
+<script type='text/javascript'>
+writeAdv("adSlot-inPage-728x90-top");
+</script>
+</div>
+<!-- adZone: Theme Ad - Target :All WEB pages, Location : After 728x90 ad slot code, (it is used to display background image according to Geo-location) -->
+<div id="adSlot-inPage-1x1-theme">
+<script type='text/javascript'>
+writeAdv("adSlot-inPage-1x1-theme");
+</script>
+</div>
+<!-- adZone: Floating Ad Slot (out of Page) Target :All WEB pages, Location : After 728x90 ad slot code, (it is used to display overlay-floating banner -->
+<div id="adSlot-outPage-1x1-floating">
+<script type='text/javascript'>
+writeAdv("adSlot-outPage-1x1-floating");
+</script>
+</div>
+		
+	</div>
+</div>
+
+	
+		<nav>
+			<ul>
+			<li class="active">
+				<a href="/" title="الرئيسية"><span>الرئيسية</span></a>
+			</li>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li>
+				<a href="/arab-and-world.html" title="العرب والعالم"><span>العرب والعالم</span></a>
+			<div><ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li>
+				<a href="/arab-and-world/egypt.html" title="مصر"><span>مصر</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/arab-and-world/syria.html" title="سوريا"><span>سوريا</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/arab-and-world/sudan.html" title="السودان"><span>السودان</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/arab-and-world/yemen.html" title="اليمن"><span>اليمن</span></a>
+			</li>
+			</ul></div>
+			</li>
+			
+			
+			<li>
+				<a href="/saudi-today.html" title="السعودية"><span>السعودية</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/north-africa.html" title="شمال إفريقيا"><span>شمال إفريقيا</span></a>
+			<div><ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li>
+				<a href="/north-africa/libya.html" title="ليبيا"><span>ليبيا</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/north-africa/tunisia.html" title="تونس"><span>تونس</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/north-africa/morocco.html" title="المغرب"><span>المغرب</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/north-africa/algeria.html" title="الجزائر"><span>الجزائر</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/north-africa/mauritania.html" title="موريتانيا"><span>موريتانيا</span></a>
+			</li>
+			</ul></div>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq.html" title="الأسواق العربية"><span>الأسواق العربية</span></a>
+			<div><ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li>
+				<a href="/aswaq/oil-and-gas.html" title="النفط والغاز"><span>النفط والغاز</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/travel-and-tourism.html" title="سياحة و سفر"><span>سياحة و سفر</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/economy.html" title="إقتصاد"><span>إقتصاد</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/special-interviews.html" title="مقابلات خاصة"><span>مقابلات خاصة</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/companies.html" title="الشركات"><span>الشركات</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/financial-markets.html" title="أسواق المال"><span>أسواق المال</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/realestate.html" title="العقارات"><span>العقارات</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/banks.html" title="بنوك وصيرفة اسلامية"><span>بنوك وصيرفة اسلامية</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/aswaq/opinions.html" title="آراء"><span>آراء</span></a>
+			</li>
+			</ul></div>
+			</li>
+			
+			
+			<li>
+				<a href="/sport.html" title="الرياضة"><span>الرياضة</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/medicine-and-health.html" title="طب وصحة"><span>طب وصحة</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/culture-and-art.html" title="ثقافة وفن"><span>ثقافة وفن</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/technology.html" title="تكنولوجيا"><span>تكنولوجيا</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/last-page.html" title="الأخيرة"><span>الأخيرة</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views.html" title="آراء"><span>آراء</span></a>
+			<div><ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<li>
+				<a href="/views/politics.html" title="سياسة"><span>سياسة</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views/aswaq.html" title="الاسواق"><span>الاسواق</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views/sport.html" title="الرياضة"><span>الرياضة</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views/medicine-and-health.html" title="صحة و طب"><span>صحة و طب</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views/culture-and-art.html" title="ثقافة و فن"><span>ثقافة و فن</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views/technology.html" title="تكنولوجيا"><span>تكنولوجيا</span></a>
+			</li>
+			
+			
+			<li>
+				<a href="/views/last-page.html" title="الصفحة الاخيرة"><span>الصفحة الاخيرة</span></a>
+			</li>
+			</ul></div>
+			</li>
+			
+			
+			<li>
+				<a href="/programs.html" title="برامج العربية"><span>برامج العربية</span></a>
+			</li>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</ul>
+
+		</nav>
+	
+<nav class="subnav">
+	<ul>
+
+	<li class="bath">
+            <a href="/live-stream.html" title="البث المباشر">البث المباشر</a>
+            
+            	<div>
+	            	<ul>
+		            		<li><a href="/live-stream.html" title="العربية">العربية</a></li>
+		            		<li><a href="/live-stream-hadath.html" title="العربية الحدث">العربية الحدث</a></li>
+	            	</ul>
+            	</div>
+    </li>
+	
+	<li class="aa_vid">
+            <a href="/alarabiya-videos.html" title="&#1601;&#1610;&#1583;&#1610;&#1608; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;">&#1601;&#1610;&#1583;&#1610;&#1608; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+            
+    </li>
+	
+	<li class="latest_news">
+            <a href="/latest-news.html" title="&#1570;&#1582;&#1585; &#1575;&#1604;&#1571;&#1582;&#1576;&#1575;&#1585;">&#1570;&#1582;&#1585; &#1575;&#1604;&#1571;&#1582;&#1576;&#1575;&#1585;</a>
+            
+    </li>
+	
+	<li class="aa_hadath">
+            <a href="/alhadath.html" title="&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; &#1575;&#1604;&#1581;&#1583;&#1579;">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; &#1575;&#1604;&#1581;&#1583;&#1579;</a>
+            
+    </li>
+	
+	<li class="aa_frequencies">
+            <a href="/alarabiya-frequencies.html" title="&#1578;&#1585;&#1583;&#1583;&#1575;&#1578; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;">&#1578;&#1585;&#1583;&#1583;&#1575;&#1578; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+            
+    </li>
+	
+	<li class="studies">
+            <a href="/arabic-studies.html" title="دراسات العربية">دراسات العربية</a>
+            
+    </li>
+	
+	<li class="nawafeth">
+            <a href="/nawafeth.html" title="&#1606;&#1608;&#1575;&#1601;&#1584;">&#1606;&#1608;&#1575;&#1601;&#1584;</a>
+            
+    </li>
+			
+	</ul>
+</nav>
+	
+	<!-- Frequencies -->	
+	<div class="frequencies" style="display:none"><a class="icon" href="#" title=""></a> </span> </div>
+	<!-- Breaking News -->
+	<div class="breaking_news" style="display:none"><a title="" href="#" class="icon"></a><span id="breaking-news"></span></div>
+	
+	
+</header>
+			<!-- Page Content -->
+			<div class="page_content">			
+			
+				
+				
+				
+<!-- Area_100 -->
+<div class="area_100">
+	<div class="head100"></div>
+	
+	
+		
+
+	<div class="foot100"></div>
+</div>						
+<div class="area_66">
+
+	
+	<div class="head66"></div>
+	
+				
+
+
+
+<!-- Main Slider -->
+<div class="box news_headlines" auto_news_headlines="9000">
+	
+	<div class="head"></div>
+	<div class="content">
+		<div class="arena">			
+					<div class="wrapper">
+						<div class="headline"><a href="/ar/arab-and-world/syria/2013/03/07/مجلس-الأمن-يدين-احتجاز-20-من-مراقبي-الأمم-المتحدة-في-الجولان.html" title="مجلس الأمن يدين احتجاز 20 من مراقبي الأمم المتحدة في الجولان">مجلس الأمن يدين احتجاز 20 من مراقبي الأمم المتحدة في الجولان</a></div>						
+						<div class="img_teaser">
+
+	
+	
+	
+
+
+							
+								<span class="LimelightEmbeddedPlayer"><script src="http://assets.delvenetworks.com/player/embed.js"></script><object type="application/x-shockwave-flash" id="limelight_player_873814" name="limelight_player_873814" class="LimelightEmbeddedPlayerFlash" width="395" height="296" data="http://assets.delvenetworks.com/player/loader.swf"><param name="movie" value="http://assets.delvenetworks.com/player/loader.swf"/><param name="wmode" value="transparent"/><param name="autoplay" value="true" /><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="flashVars" value="playerForm=ea7e57c676204954996a067f4934bb7a&mediaId=01245b36a98f46abb57b60656553e4e1"/></object><script>LimelightPlayerUtil.initEmbed('limelight_player_873814');</script></span>
+							<p class="caption"><span class="source">دبي </span> - دان مجلس الأمن الدولي بشدة احتجاز 20 مراقباً من الأمم المتحدة في الجولان، وطالب المجلس مقاتلي المعارضة السورية بالإفراج عنهم، وقال رئيس قوات حفظ السلا ... <a href="/ar/arab-and-world/syria/2013/03/07/مجلس-الأمن-يدين-احتجاز-20-من-مراقبي-الأمم-المتحدة-في-الجولان.html" title="مجلس الأمن يدين احتجاز 20 من مراقبي الأمم المتحدة في الجولان">المزيد</a></p>
+						</div>	
+					</div>				
+					<div class="wrapper" style="display:none;">
+						<div class="headline"><a href="/ar/arab-and-world/syria/2013/03/07/رئيس-هيئة-أركان-الجيش-الحر-أكد-أن-رحيل-الأسد-عن-السلطة-سيضع-حداً-لسفك-الدماء.html" title="اللواء إدريس: نحن بحاجة إلى صواريخ مضادة للطائرات">اللواء إدريس: نحن بحاجة إلى صواريخ مضادة للطائرات</a></div>						
+						<div class="img_teaser">
+
+	
+	
+	
+
+
+							
+								<span class="LimelightEmbeddedPlayer"><script src="http://assets.delvenetworks.com/player/embed.js"></script><object type="application/x-shockwave-flash" id="limelight_player_873814" name="limelight_player_873814" class="LimelightEmbeddedPlayerFlash" width="395" height="296" data="http://assets.delvenetworks.com/player/loader.swf"><param name="movie" value="http://assets.delvenetworks.com/player/loader.swf"/><param name="wmode" value="transparent"/><param name="autoplay" value="true" /><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="flashVars" value="playerForm=ea7e57c676204954996a067f4934bb7a&mediaId=7fa80864b8b940a388531bd616152061"/></object><script>LimelightPlayerUtil.initEmbed('limelight_player_873814');</script></span>
+							<p class="caption"><span class="source">دبي </span> - أكد رئيس هيئة أركان الجيش الحر اللواء سليم إدريس حاجة الثوار إلى صواريخ مضادة للطائرات وأسلحة وذخيرة، وذلك وفي مقابلة خاصة مع قناة &quot;العربية&quot; ... <a href="/ar/arab-and-world/syria/2013/03/07/رئيس-هيئة-أركان-الجيش-الحر-أكد-أن-رحيل-الأسد-عن-السلطة-سيضع-حداً-لسفك-الدماء.html" title="اللواء إدريس: نحن بحاجة إلى صواريخ مضادة للطائرات">المزيد</a></p>
+						</div>	
+					</div>				
+					<div class="wrapper" style="display:none;">
+						<div class="headline"><a href="/ar/arab-and-world/syria/2013/03/06/نبيل-العربي-ينفي-تسليم-مقعد-سوريا-للائتلاف-السوري-الوطني.html" title="ضوء أخضر من الجامعة العربية لأعضائها لتسليح الثوار في سوريا">ضوء أخضر من الجامعة العربية لأعضائها لتسليح الثوار في سوريا</a></div>						
+						<div class="img_teaser">
+							
+								<a href="/ar/arab-and-world/syria/2013/03/06/نبيل-العربي-ينفي-تسليم-مقعد-سوريا-للائتلاف-السوري-الوطني.html" title="ضوء أخضر من الجامعة العربية لأعضائها لتسليح الثوار في سوريا">					
+									<img src="http://dam.alarabiya.net/images/214b2d77-1e89-4e78-9ad8-9e9b4d791159/395/296/1?x=0&y=0" width="395" height="296" alt="" />
+									<span>الأمين العام لجامعة الدول العربية نبيل العربي</span>
+								</a>
+							<p class="caption"><span class="source">دبي </span> - سمح مجلس الجامعة العربية للدول الأعضاء بتزويد المعارضة السورية بالسلاح. وأكد نبيل العربي، الأمين العام للجامعة، أنه لا يوجد أمل في حل سياسي حتى الآن،  ... <a href="/ar/arab-and-world/syria/2013/03/06/نبيل-العربي-ينفي-تسليم-مقعد-سوريا-للائتلاف-السوري-الوطني.html" title="ضوء أخضر من الجامعة العربية لأعضائها لتسليح الثوار في سوريا">المزيد</a></p>
+						</div>	
+					</div>				
+					<div class="wrapper" style="display:none;">
+						<div class="headline"><a href="/ar/arab-and-world/egypt/2013/03/06/القضاء-الإداري-المصري-يوقف-انتخابات-مجلس-النواب.html" title="القضاء الإداري المصري يوقف انتخابات مجلس النواب">القضاء الإداري المصري يوقف انتخابات مجلس النواب</a></div>						
+						<div class="img_teaser">
+							
+								<a href="/ar/arab-and-world/egypt/2013/03/06/القضاء-الإداري-المصري-يوقف-انتخابات-مجلس-النواب.html" title="القضاء الإداري المصري يوقف انتخابات مجلس النواب">					
+									<img src="http://dam.alarabiya.net/images/e272ad6a-fd66-41bf-a52d-c6b966d7f189/395/296/1?x=0&y=0" width="395" height="296" alt="" />
+									
+								</a>
+							<p class="caption"><span class="source">القاهرة </span> - أصدرت المحكمة الإدارية المصرية، الأربعاء، أمراً بوقف انتخابات مجلس النواب المقررة في 22 نيسان/إبريل، والتي قالت المعارضة إنها ستقاطعها. وأحالت المحكمة ... <a href="/ar/arab-and-world/egypt/2013/03/06/القضاء-الإداري-المصري-يوقف-انتخابات-مجلس-النواب.html" title="القضاء الإداري المصري يوقف انتخابات مجلس النواب">المزيد</a></p>
+						</div>	
+					</div>				
+					<div class="wrapper" style="display:none;">
+						<div class="headline"><a href="/ar/saudi-today/2013/03/06/رئيس-الأمر-بالمعروف-التعامل-مع-المحتسبين-ليس-من-اختصاصنا.html" title="رئيس الأمر بالمعروف: التعامل مع "المحتسبين" ليس من اختصاصنا">رئيس الأمر بالمعروف: التعامل مع "المحتسبين" ليس من اختصاصنا</a></div>						
+						<div class="img_teaser">
+							
+								<a href="/ar/saudi-today/2013/03/06/رئيس-الأمر-بالمعروف-التعامل-مع-المحتسبين-ليس-من-اختصاصنا.html" title="رئيس الأمر بالمعروف: التعامل مع "المحتسبين" ليس من اختصاصنا">					
+									<img src="http://dam.alarabiya.net/images/8609db5c-e706-4328-9155-94a4c5206645/395/296/1?x=0&y=0" width="395" height="296" alt="" />
+									<span>الشيخ عبداللطيف آل الشيخ</span>
+								</a>
+							<p class="caption"><span class="source">دبي</span> - أكد رئيس &quot;هيئة الأمر بالمعروف والنهي عن المنكر&quot;، الشيخ عبداللطيف آل الشيخ، أن الذين يجتهدون داخل معرض الكتاب الدولي في الرياض بالنصح والحسبة ... <a href="/ar/saudi-today/2013/03/06/رئيس-الأمر-بالمعروف-التعامل-مع-المحتسبين-ليس-من-اختصاصنا.html" title="رئيس الأمر بالمعروف: التعامل مع "المحتسبين" ليس من اختصاصنا">المزيد</a></p>
+						</div>	
+					</div>				
+					<div class="wrapper" style="display:none;">
+						<div class="headline"><a href="/ar/arab-and-world/syria/2013/03/06/مصطفى-طلاس-نظام-الأسد-عقد-صفقات-سرية-مع-إسرائيل.html" title="فراس طلاس: نظام الأسد عقد صفقات سرية مع إسرائيل">فراس طلاس: نظام الأسد عقد صفقات سرية مع إسرائيل</a></div>						
+						<div class="img_teaser">
+
+	
+	
+	
+
+
+							
+								<span class="LimelightEmbeddedPlayer"><script src="http://assets.delvenetworks.com/player/embed.js"></script><object type="application/x-shockwave-flash" id="limelight_player_873814" name="limelight_player_873814" class="LimelightEmbeddedPlayerFlash" width="395" height="296" data="http://assets.delvenetworks.com/player/loader.swf"><param name="movie" value="http://assets.delvenetworks.com/player/loader.swf"/><param name="wmode" value="transparent"/><param name="autoplay" value="true" /><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="flashVars" value="playerForm=ea7e57c676204954996a067f4934bb7a&mediaId=8280f779424e42bf9e98902dc703d44f"/></object><script>LimelightPlayerUtil.initEmbed('limelight_player_873814');</script></span>
+							<p class="caption">كشف رجال الأعمال السوري المعارض فراس طلاس أن نظام الأسد لم يكن ممانعاً تماماً تجاه إسرائيل، بل كان ممانعاً شكلياً، وهناك صفقات سياسية واقتصادية أبرمت  ... <a href="/ar/arab-and-world/syria/2013/03/06/مصطفى-طلاس-نظام-الأسد-عقد-صفقات-سرية-مع-إسرائيل.html" title="فراس طلاس: نظام الأسد عقد صفقات سرية مع إسرائيل">المزيد</a></p>
+						</div>	
+					</div>				
+				<ul class="news_list">
+							<li class="active"><a href="/ar/arab-and-world/syria/2013/03/07/مجلس-الأمن-يدين-احتجاز-20-من-مراقبي-الأمم-المتحدة-في-الجولان.html" title="مجلس الأمن يدين احتجاز 20 من مراقبي الأمم المتحدة في الجولان">
+								
+								مجلس الأمن يدين احتجاز 20 من مراقبي الأمم المتحدة في الجولان
+							</a></li>
+							<li><a href="/ar/arab-and-world/syria/2013/03/07/رئيس-هيئة-أركان-الجيش-الحر-أكد-أن-رحيل-الأسد-عن-السلطة-سيضع-حداً-لسفك-الدماء.html" title="اللواء إدريس: نحن بحاجة إلى صواريخ مضادة للطائرات">
+								
+								اللواء إدريس: نحن بحاجة إلى صواريخ مضادة للطائرات
+							</a></li>
+							<li><a href="/ar/arab-and-world/syria/2013/03/06/نبيل-العربي-ينفي-تسليم-مقعد-سوريا-للائتلاف-السوري-الوطني.html" title="ضوء أخضر من الجامعة العربية لأعضائها لتسليح الثوار في سوريا">
+								
+								ضوء أخضر من الجامعة العربية لأعضائها لتسليح الثوار في سوريا
+							</a></li>
+							<li><a href="/ar/arab-and-world/egypt/2013/03/06/القضاء-الإداري-المصري-يوقف-انتخابات-مجلس-النواب.html" title="القضاء الإداري المصري يوقف انتخابات مجلس النواب">
+								
+								القضاء الإداري المصري يوقف انتخابات مجلس النواب
+							</a></li>
+							<li><a href="/ar/saudi-today/2013/03/06/رئيس-الأمر-بالمعروف-التعامل-مع-المحتسبين-ليس-من-اختصاصنا.html" title="رئيس الأمر بالمعروف: التعامل مع "المحتسبين" ليس من اختصاصنا">
+								
+								رئيس الأمر بالمعروف: التعامل مع "المحتسبين" ليس من اختصاصنا
+							</a></li>
+							<li><a href="/ar/arab-and-world/syria/2013/03/06/مصطفى-طلاس-نظام-الأسد-عقد-صفقات-سرية-مع-إسرائيل.html" title="فراس طلاس: نظام الأسد عقد صفقات سرية مع إسرائيل">
+								
+								فراس طلاس: نظام الأسد عقد صفقات سرية مع إسرائيل
+							</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+				
+
+
+
+<!-- News Crawler -->
+<div class="news_ticker">
+	
+	<div class="title"><a href="#" title="&#1571;&#1582;&#1576;&#1575;&#1585; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;">&#1571;&#1582;&#1576;&#1575;&#1585; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a></div>
+	<div class="ticker">
+		<div class="wrapper">
+			<div class="ticker_feeds">الأميرعلي بن الحسين يدعو المرشحين العرب الثلاثة لرئاسة الاتحاد الآسيوي إلى اجتماع ثان للتوافق على مرشح واحد
+كأس الاتحاد الآسيوي لكرة القدم:الفيصلي الأردني يخسر أمام ظفار العماني 3-2 والشرطة السوري يفوز على القادسية الكويتي 1-0
+كأس الاتحاد الآسيوي لكرة القدم: الرمثا الأردني يفوزعلى رافشان من طاجاكستان 3-0 ودهوك العراقي يتغلب على شعب آب اليمني 3-1 
+دوري أبطال أوروبا لكرة القدم : يوفنتوس الإيطالي يتغلب على سيلتيك الأسكتلندي 3-0  
+كأس الليبرتادوريس لكرة القدم: جيريميو البرازيلي يتغلب على كراكاس الفنزويلي 4-1 ضمن المجموعة الثامنة 
+لمزيد من أخبار الرياضة زوروا موقعنا www.alarabiya.net</div>
+		</div>
+		<div class="controls"><a class="prev" href="#" title=""></a><a class="pause" href="#" title=""></a><a class="next" href="#" title=""></a></div>
+	</div>
+</div>				
+
+	<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=6419238&PluID=0&w=600&h=90&ord=%n&ucm=true&ncu=$$%c$$"></script>
+<noscript>
+<a href="%chttp%3A//bs.serving-sys.com/BurstingPipe/adServer.bs%3Fcn%3Dbrd%26FlightID%3D6419238%26Page%3D%26PluID%3D0%26Pos%3D5475" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=6419238&Page=&PluID=0&Pos=5475" border=0 width=600 height=90></a>
+</noscript>
+				
+
+<!-- News Sections -->
+<div class="box news_sections countries">
+	
+	<div class="head">
+				<h2><a href="/archive.news.html" title="">&#1575;&#1604;&#1571;&#1582;&#1576;&#1575;&#1585;</a></h2>	
+	</div>
+	<div class="content">
+		<div class="arena">
+				
+
+
+<ul class="teasers_mod01">
+	
+			
+	
+			<li><a href="/ar/last-page/2013/03/07/-روبن-هود-المغربي-للعربية-نت-لا-يزال-لدي-أشرطة-لتورط-مسؤولين-أمنيين-.html" title=""روبن هود" المغربي للعربية نت: لا يزال لدي أشرطة لتورط مسؤولين أمنيين "><img src="/docroot/aa-templating/images/pic_thumb.jpg" width="186" height="139" alt="" /><span>"روبن هود" المغربي للعربية نت: لا يزال لدي أشرطة لتورط مسؤولين أمنيين </span></a></li>
+			
+	
+			<li><a href="/ar/arab-and-world/egypt/2013/03/06/تطرق-في-حديثه-الى-الاخوات-المسلمات-الى-ضرورة-التعامل-مع-المعارضة-بالحسنى.html" title="مرشد الإخوان ينصح المصريين بالصبر إلى حين تطبيق الخلافة"><img src="http://dam.alarabiya.net/images/307c87bb-e860-487d-a4c6-ec35c667a842/186/139/1?x=0&y=0" width="186" height="139" alt="" /><span>مرشد الإخوان ينصح المصريين بالصبر إلى حين تطبيق الخلافة</span></a></li>
+			
+	
+			<li><a href="/ar/aswaq/2013/03/06/-السجن-37-سنة-لرجل-الأعمال-المصري-أحمد-عز-وتغريمه-ملياري-جنيه.html" title=" السجن 37 سنة لأحمد عز وتغريمه ملياري جنيه"><img src="http://dam.alarabiya.net/images/6740a939-c133-4e78-a0e9-17af7165ae0c/186/139/1?x=0&y=0" width="186" height="139" alt="" /><span> السجن 37 سنة لأحمد عز وتغريمه ملياري جنيه</span></a></li>
+			
+	
+			<li><a href="/ar/north-africa/2013/03/06/لبنان-يطالب-بالغاء-تعليق-عضوية-سوريا-في-الجامعة-العربية.html" title="لبنان يطالب بإلغاء تعليق عضوية سوريا في الجامعة العربية"><img src="http://dam.alarabiya.net/images/f1901b83-13f6-44c6-b53e-24859fd0b61b/186/139/1?x=0&y=0" width="186" height="139" alt="" /><span>لبنان يطالب بإلغاء تعليق عضوية سوريا في الجامعة العربية</span></a></li>
+			
+	
+			<li><a href="/ar/2013/03/06/رئيس-هيئة-أركان-الجيش-الحر-نريد-وقف-النزاع-لكن-النظام-يرفض.html" title="رئيس أركان الجيش الحر: نريد وقف النزاع لكن النظام يرفض"><img src="http://dam.alarabiya.net/images/671bf281-df61-4d69-a6ae-43217e2caa2f/186/139/1?x=0&y=0" width="186" height="139" alt="" /><span>رئيس أركان الجيش الحر: نريد وقف النزاع لكن النظام يرفض</span></a></li>
+			
+	
+			<li><a href="/ar/aswaq/economy/aswaq/economy/2013/03/06/-وريث-تشافيز-في-رئاسة-فنزويلا-سائق-يدير-ثروة-نفطية-ضخمة.html" title=" وريث تشافيز في رئاسة فنزويلا "سائق" يدير ثروة نفطية ضخمة"><img src="http://dam.alarabiya.net/images/f895d3d1-16d2-427d-9b34-71469fd93991/186/139/1?x=0&y=0" width="186" height="139" alt="" /><span> وريث تشافيز في رئاسة فنزويلا "سائق" يدير ثروة نفطية ضخمة</span></a></li>
+</ul>				
+	<a class="more" href="/archive.news.html" title="&#1570;&#1582;&#1585; &#1575;&#1604;&#1571;&#1582;&#1576;&#1575;&#1585;">المزيد</a>
+				
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+				
+
+<!-- News Sections -->
+<div class="box ksa_today">
+	
+	<div class="head">
+		<h2><a href="/saudi-today.html" title="&#1575;&#1604;&#1587;&#1593;&#1608;&#1583;&#1610;&#1577;">&#1575;&#1604;&#1587;&#1593;&#1608;&#1583;&#1610;&#1577;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/saudi-today/2013/03/07/مشروع-يحول-وسط-الرياض-إلى-مركز-تاريخي-وإداري-وثقافي.html" title="مشروع يحول وسط الرياض إلى مركز تاريخي وإداري وثقافي"><img src="http://dam.alarabiya.net/images/2de17134-398e-4675-adcb-63ecc932e6ae/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">مشروع يحول وسط الرياض إلى مركز تاريخي وإداري وثقافي</span></a>
+				</div>
+				<p>اعتمدت الهيئة العليا لمدينة الرياض خطة تطوير وسط العاصمة السعودية والتي تهدف إلى تحويل المنطقة إلى مركز تاريخي وإداري واقتصادي وثقافي على المستوى الوطني. وأقر اجتماع الهيئة الذي عقد مساء أمس ورأسه أمير منطقة الرياض ورئيس الهيئة العليا لتطوير مدينة الرياض الأمير خالد بن بندر بن عبدالعزيز، المشروع الذ ... <a href="/ar/saudi-today/2013/03/07/مشروع-يحول-وسط-الرياض-إلى-مركز-تاريخي-وإداري-وثقافي.html" title="مشروع يحول وسط الرياض إلى مركز تاريخي وإداري وثقافي">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/saudi-today/2013/03/07/عجمان-تكريم-الأميرة-الجوهرة-البراهيم-في-يوم-العلم-.html" title="عجمان: تكريم الأميرة الجوهرة البراهيم في "يوم العلم""><img src="http://dam.alarabiya.net/images/567c3d45-c0a7-4999-a10e-4bef23907a0f/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>عجمان: تكريم الأميرة الجوهرة البراهيم في "يوم العلم"</span></a></li>
+			
+				<li><a href="/ar/saudi-today/2013/03/06/وزير-العمل-السعودي-يجتمع-مع-نظيره-الاندونيسي.html" title="وزير العمل السعودي يجتمع مع نظيره الإندونيسي"><img src="http://dam.alarabiya.net/images/5527efa0-6ce6-4177-ac27-e0bcf35863ee/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>وزير العمل السعودي يجتمع مع نظيره الإندونيسي</span></a></li>
+			
+				<li><a href="/ar/saudi-today/2013/03/06/استخدام-بطاقة-الأحوال-كبطاقة-صرّاف-آلي-قريبا.html" title="استخدام بطاقة الأحوال كبطاقة صرّاف آلي قريباً"><img src="http://dam.alarabiya.net/images/33df4f5a-94eb-4c2b-94b2-50c76f4d42fa/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>استخدام بطاقة الأحوال كبطاقة صرّاف آلي قريباً</span></a></li>
+			
+				<li><a href="/ar/saudi-today/2013/03/06/افتتاح-الطرق-العابرة-للقاعدة-الجوية-في-الرياض-الأسبوع-المقبل.html" title="افتتاح الطرق العابرة للقاعدة الجوية في الرياض الأسبوع المقبل"><img src="http://dam.alarabiya.net/images/d6412e37-9ee2-43a3-b827-4d6e792d8571/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>افتتاح الطرق العابرة للقاعدة الجوية في الرياض الأسبوع المقبل</span></a></li>
+		</ul>
+	<a class="more" href="/saudi-today.html" title="&#1575;&#1604;&#1587;&#1593;&#1608;&#1583;&#1610;&#1577;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/arab-and-world/egypt.html" title="&#1605;&#1589;&#1585;">&#1605;&#1589;&#1585;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/arab-and-world/egypt/2013/03/06/صحيفة-مصر-تبحث-عن-أصدقاء-جدد-في-الصين-والهند-وإيران.html" title="صحيفة: مصر تبحث عن أصدقاء جدد في الصين والهند وإيران"><img src="http://dam.alarabiya.net/images/ddb4aff5-2735-4bd6-b356-d2476a8898a9/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">صحيفة: مصر تبحث عن أصدقاء جدد في الصين والهند وإيران</span></a>
+				</div>
+				<p>&nbsp;<br /> ذكر الكاتب الهندي أتول أنيجا، في مقاله بصحيفة &quot;الهندو&quot;، الصادرة اليوم الأربعاء، أن مصر تبذل جهداً كبيراً للتقرب إلى بعض دول الجوار مثل إيران، والاقتصاديات الناشئة مثل الصين والهند والبرازيل. جاء ذلك في مقاله تحت عنوان &quot;مصر تبحث عن أصدقاء جدد&quot; بسبب الركود الاقتصادي وعدم حصو ... <a href="/ar/arab-and-world/egypt/2013/03/06/صحيفة-مصر-تبحث-عن-أصدقاء-جدد-في-الصين-والهند-وإيران.html" title="صحيفة: مصر تبحث عن أصدقاء جدد في الصين والهند وإيران">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/arab-and-world/egypt/2013/03/06/الإخوان-يخسرون-معظم-الانتخابات-الطلابية-في-جامعات-مصر.html" title="الإخوان يخسرون معظم الانتخابات الطلابية في جامعات مصر"><img src="http://dam.alarabiya.net/images/13ea7b04-20ad-4d21-8bc4-742f67db82f1/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>الإخوان يخسرون معظم الانتخابات الطلابية في جامعات مصر</span></a></li>
+			
+				<li><a href="/ar/arab-and-world/egypt/2013/03/06/ضباط-وجنود-قطاع-القناة-للأمن-المركزي-يعلنون-الاعتصام.html" title="ضباط وجنود قطاع القناة للأمن المركزي يعلنون الاعتصام"><img src="http://dam.alarabiya.net/images/85d6fa9f-54f5-47f4-be9c-00dfeabe2f25/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>ضباط وجنود قطاع القناة للأمن المركزي يعلنون الاعتصام</span></a></li>
+			
+				<li><a href="/ar/arab-and-world/egypt/2013/03/06/ساويرس-فضلتُ-مغادرة-مصر-لعلمي-أن-الجماعة-تريد-الانتقام.html" title="ساويرس: فضلتُ مغادرة مصر لعلمي أن "الجماعة" تريد الانتقام"><img src="http://dam.alarabiya.net/images/a0b91fb3-41b8-4a62-8e99-32befbfc9931/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>ساويرس: فضلتُ مغادرة مصر لعلمي أن "الجماعة" تريد الانتقام</span></a></li>
+			
+				<li><a href="/ar/arab-and-world/egypt/2013/03/06/إسحاق-الوضع-في-بورسعيد-مُحزن-والدولة-غائبة-عن-المشهد.html" title="إسحاق: الوضع في بورسعيد مُحزن والدولة غائبة عن المشهد"><img src="http://dam.alarabiya.net/images/4bd3862d-464f-4455-b128-0d2bf09e9ccf/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>إسحاق: الوضع في بورسعيد مُحزن والدولة غائبة عن المشهد</span></a></li>
+		</ul>
+	<a class="more" href="/arab-and-world/egypt.html" title="&#1605;&#1589;&#1585;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/north-africa.html" title="&#1588;&#1605;&#1575;&#1604; &#1573;&#1601;&#1585;&#1610;&#1602;&#1610;&#1575;">&#1588;&#1605;&#1575;&#1604; &#1573;&#1601;&#1585;&#1610;&#1602;&#1610;&#1575;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/north-africa/2013/03/06/نجاة-رئيس-البرلمان-الليبي-من-محاولة-اغتيال-في-طرابلس.html" title="نجاة رئيس البرلمان الليبي من محاولة اغتيال في طرابلس"><img src="http://dam.alarabiya.net/images/14524850-8c13-47b2-ad38-65d6b1317211/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">نجاة رئيس البرلمان الليبي من محاولة اغتيال في طرابلس</span></a>
+				</div>
+				<p>تعرضت سيارة رئيس المؤتمر الوطني العام الليبي محمد المقريف لإطلاق نار مساء الثلاثاء في طرابلس، فيما كان يغادر قاعة اجتماعات حاصرها متظاهرون وسط الفوضى، على ما أعلن وزير الأربعاء.<br /> <br /> وأعلن وزير الداخلية عاشور شوايل في مؤتمر صحافي بطرابلس أن المقريف خرج من الهجوم سالما. وأكد شوايل أن المحتجين كانوا مسلحي ... <a href="/ar/north-africa/2013/03/06/نجاة-رئيس-البرلمان-الليبي-من-محاولة-اغتيال-في-طرابلس.html" title="نجاة رئيس البرلمان الليبي من محاولة اغتيال في طرابلس">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/north-africa/algeria/2013/03/06/قائمة-بـ10-أمراء-للقاعدة-أهداف-لحملة-فرنسا-العسكرية-في-شمال-مالي.html" title="قائمة بـ10 أمراء للقاعدة أهداف لحملة فرنسا العسكرية في شمال مالي"><img src="http://dam.alarabiya.net/images/e02aa3c9-39fc-4b05-87af-7750a50c071c/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>قائمة بـ10 أمراء للقاعدة أهداف لحملة فرنسا العسكرية في شمال مالي</span></a></li>
+			
+				<li><a href="/ar/north-africa/tunisia/2013/03/06/الرئيس-التونسي-سنقاوم-التيار-السلفي-المسلح-.html" title="الرئيس التونسي: سنقاوم التيار السلفي المسلح "><img src="http://dam.alarabiya.net/images/83a05de7-0a85-4a0f-8b52-e4f6010c466a/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>الرئيس التونسي: سنقاوم التيار السلفي المسلح </span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/06/قوات-الأمن-الليبية-تنجح-في-فك-الحصار-عن-مقر-المؤتمر-الوطني.html" title="قوات الأمن الليبية تنجح في فكّ الحصار عن مقر المؤتمر الوطني"><img src="http://dam.alarabiya.net/images/953ada0e-2744-4a5e-bf14-7e09a0707b78/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>قوات الأمن الليبية تنجح في فكّ الحصار عن مقر المؤتمر الوطني</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/05/مصادر-للعربية-استقالة-وزير-الدفاع-التونسي-ومطالبات-بعودته.html" title="وزير الدفاع التونسي يؤكد تقديم استقالته بعد بث العربية الخبر"><img src="http://dam.alarabiya.net/images/8dfc3c31-5883-4412-87d4-ae2038cc6464/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>وزير الدفاع التونسي يؤكد تقديم استقالته بعد بث العربية الخبر</span></a></li>
+		</ul>
+	<a class="more" href="/north-africa.html" title="&#1588;&#1605;&#1575;&#1604; &#1573;&#1601;&#1585;&#1610;&#1602;&#1610;&#1575;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box aswaq">
+	
+	<div class="head">
+		<h2><a href="/aswaq.html" title="&#1575;&#1604;&#1571;&#1587;&#1608;&#1575;&#1602; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;">&#1575;&#1604;&#1571;&#1587;&#1608;&#1575;&#1602; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/aswaq/2013/03/07/شركات-اتصالات-سعودية-تعترض-على-إلغاء-مجانية-التجوال-الدولي.html" title="شركات اتصالات سعودية "ترفض" إلغاء مجانية التجوال الدولي"><img src="http://dam.alarabiya.net/images/13bdb647-d422-4c96-af6a-68cc50ff2c3d/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">شركات اتصالات سعودية "ترفض" إلغاء مجانية التجوال الدولي</span></a>
+				</div>
+				<p>كشف مسؤول رفيع المستوى في إحدى شركات الاتصالات المشغلة للهاتف الجوال في السوق السعودية عن رفض معظم شركات الاتصالات المشغلة لقرار إلغاء مجانية التجوال الدولي، وعدم توافقها معه. ومن شأن رفض شركات الاتصالات السعودية إلغاء خدمة التجوال المجاني إحداث مزيد من التعقيدات في ملف قرار هيئة الاتصالات، وتقنية ا ... <a href="/ar/aswaq/2013/03/07/شركات-اتصالات-سعودية-تعترض-على-إلغاء-مجانية-التجوال-الدولي.html" title="شركات اتصالات سعودية "ترفض" إلغاء مجانية التجوال الدولي">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/aswaq/economy/2013/03/07/-النواب-الامريكي-يوافق-على-تمويل-الحكومة-حتى-نهاية-سبتمبر.html" title=""النواب" الأمريكي يوافق على تمويل الحكومة حتى نهاية سبتمبر"><img src="http://dam.alarabiya.net/images/f097683f-f2ab-4831-a41c-e7ececc99d02/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>"النواب" الأمريكي يوافق على تمويل الحكومة حتى نهاية سبتمبر</span></a></li>
+			
+				<li><a href="/ar/aswaq/2013/03/06/مستثمر-سعودي-يشتري-يخت-ماجستي-135-بـ17-مليون-دولار.html" title="مستثمر سعودي يشتري يخت "ماجستي 135" بـ17 مليون دولار"><img src="http://dam.alarabiya.net/images/b3c4c1b1-833d-40bd-b5e3-3c8a1af05d5d/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>مستثمر سعودي يشتري يخت "ماجستي 135" بـ17 مليون دولار</span></a></li>
+			
+				<li><a href="/ar/aswaq/2013/03/06/-الإسكان-السعودية-أسعار-وحداتنا-ستكون-أقل-بـ40-عن-السوق.html" title=""الإسكان" السعودية: أسعار وحداتنا ستكون أقل بـ40% عن السوق"><img src="http://dam.alarabiya.net/images/deee0b51-303b-4ef9-96da-d840378ac1c9/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>"الإسكان" السعودية: أسعار وحداتنا ستكون أقل بـ40% عن السوق</span></a></li>
+			
+				<li><a href="/ar/aswaq/2013/03/06/-خبزنا-لسوريا-حملة-بريطانية-لإغاثة-ضحايا-الأسد.html" title=""خبزنا لسوريا".. حملة بريطانية لإغاثة ضحايا الأسد"><img src="http://dam.alarabiya.net/images/5c516b23-ae91-48b7-85e1-4e6bc5c05b76/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>"خبزنا لسوريا".. حملة بريطانية لإغاثة ضحايا الأسد</span></a></li>
+		</ul>
+	<a class="more" href="/aswaq.html" title="&#1575;&#1604;&#1571;&#1587;&#1608;&#1575;&#1602; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box sports">
+	
+	<div class="head">
+		<h2><a href="/sport.html" title="&#1575;&#1604;&#1585;&#1610;&#1575;&#1590;&#1577; ">&#1575;&#1604;&#1585;&#1610;&#1575;&#1590;&#1577; </a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/north-africa/2013/03/06/مورينهو-ريال-مدريد-لا-يستحق-الفوز-على-مانشستر-يونايتد.html" title="مورينهو : ريال مدريد لا يستحق الفوز على مانشستر يونايتد"><img src="http://dam.alarabiya.net/images/cebc6136-4e15-4452-a5ac-e1b8aa0006e2/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">مورينهو : ريال مدريد لا يستحق الفوز على مانشستر يونايتد</span></a>
+				</div>
+				<p>&nbsp;أقرَّ المدير الفني لفريق ريال مدريد الإسباني، البرتغالي جوزيه مورينهو، بعدم أحقية فريقه في التأهل إلى ربع نهائي بطولة دوري أبطال أوروبا على حساب فريق مانشستر يونايتد الإنكليزي بعد أن فاز عليه البارحة في عقر داره ملعب &quot;أولدترافورد&quot; 2-1 في إياب دورالـ16 للمسابقة. <br /> وأظهر المدرب البرتغال ... <a href="/ar/north-africa/2013/03/06/مورينهو-ريال-مدريد-لا-يستحق-الفوز-على-مانشستر-يونايتد.html" title="مورينهو : ريال مدريد لا يستحق الفوز على مانشستر يونايتد">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/north-africa/2013/03/06/إنكليزيون-يهاجمون-الحكم-التركي-طرد-ناني-قرار-مقزز-و-نتن-.html" title="إنكليزيون يهاجمون الحكم التركي: طرد ناني قرار "مقزز" و"نتن""><img src="http://dam.alarabiya.net/images/dda6628b-acfc-4b02-8631-e3aacc77168d/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>إنكليزيون يهاجمون الحكم التركي: طرد ناني قرار "مقزز" و"نتن"</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/06/مارادونا-كريستيانو-رونالدو-حيوان-لا-يتعب.html" title="مارادونا: كريستيانو رونالدو "حيوان" .. لا يتعب"><img src="http://dam.alarabiya.net/images/a5b00662-5281-49d7-8551-c5171a59e870/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>مارادونا: كريستيانو رونالدو "حيوان" .. لا يتعب</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/06/ريال-مدريد-يواصل-الإبادة-رصاصتان-قاتلتان.html" title="ريال مدريد يواصل "الإبادة".. رصاصتان قاتلتان"><img src="http://dam.alarabiya.net/images/e9624e78-3024-4f47-8865-2fae9b8902cc/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>ريال مدريد يواصل "الإبادة".. رصاصتان قاتلتان</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/06/وشهد-شاهد-من-أهله-ماركا-المدريدية-الحكم-ظلم-مانشستر.html" title="وشهد شاهد من أهلها.. "ماركا" المدريدية: الحكم ظلم مانشستر"><img src="http://dam.alarabiya.net/images/157940ab-3542-4eb9-9ac6-1015ad949012/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>وشهد شاهد من أهلها.. "ماركا" المدريدية: الحكم ظلم مانشستر</span></a></li>
+		</ul>
+	<a class="more" href="/sport.html" title="&#1575;&#1604;&#1585;&#1610;&#1575;&#1590;&#1577; ">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/arab-and-world.html" title="&#1575;&#1604;&#1593;&#1585;&#1576; &#1608;&#1575;&#1604;&#1593;&#1575;&#1604;&#1605;">&#1575;&#1604;&#1593;&#1585;&#1576; &#1608;&#1575;&#1604;&#1593;&#1575;&#1604;&#1605;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/north-africa/2013/03/06/الترابي-يدعو-المعارضة-إلى-التأسيس-لمرحلة-انتقالية-في-السودان.html" title="الترابي يدعو المعارضة إلى التأسيس لمرحلة انتقالية في السودان"><img src="http://dam.alarabiya.net/images/13fed61a-1cf9-4517-b355-808271e38122/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">الترابي يدعو المعارضة إلى التأسيس لمرحلة انتقالية في السودان</span></a>
+				</div>
+				<p>قال حسن الترابي، زعيمُ حزب المؤتمر الشعبي المعارض، إن النظام الحاكم في السودان &quot;معتل ويتهاوى من أصوله&quot;، وأنه وعلى المعارضة أن تستعد لتأسيس مرحلة انتقالية تبسط الحرية للشعب وتتجنب الفوضى التي أعقبت الثورات في المنطقة العربية. وأضاف الترابي أن المعارضة يجب أن تعمل لما بعد إسقاط النظام الحالي ... <a href="/ar/north-africa/2013/03/06/الترابي-يدعو-المعارضة-إلى-التأسيس-لمرحلة-انتقالية-في-السودان.html" title="الترابي يدعو المعارضة إلى التأسيس لمرحلة انتقالية في السودان">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/north-africa/2013/03/06/وزير-الدفاع-الأمريكي-يطمئن-إسرائيل-بشأن-المساعدات-العسكرية.html" title="وزير الدفاع الأمريكي يطمئن إسرائيل بشأن المساعدات العسكرية"><img src="http://dam.alarabiya.net/images/4c5fd1bf-2e42-47c5-9bdf-cfa0f714249d/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>وزير الدفاع الأمريكي يطمئن إسرائيل بشأن المساعدات العسكرية</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/06/العرب-وسر-التنقل-بين-النساء-في-حياة-هوغو-تشافيس.html" title="العرب وسر التنقل بين النساء في حياة هوغو تشافيز"><img src="http://dam.alarabiya.net/images/827ee65a-a069-4aab-b1fa-90c5d994c19e/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>العرب وسر التنقل بين النساء في حياة هوغو تشافيز</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/06/وفاة-تشافيز-الرئيس-الفنزويلي-بعد-معاناة-مع-السرطان.html" title="وفاة تشافيز الرئيس الفنزويلي بعد معاناة مع السرطان"><img src="http://dam.alarabiya.net/images/526d1ffb-87c1-4315-9e3f-4111b4409a3c/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>وفاة تشافيز الرئيس الفنزويلي بعد معاناة مع السرطان</span></a></li>
+			
+				<li><a href="/ar/north-africa/2013/03/05/مسلحون-يطوقون-البرلمان-الليبي-ويهددون-أعضاءه-بالقتل.html" title="مسلحون يطوقون البرلمان الليبي ويهددون أعضاءه بالقتل"><img src="http://dam.alarabiya.net/images/4b49c02f-715c-4200-8585-b4e6a271b4f3/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>مسلحون يطوقون البرلمان الليبي ويهددون أعضاءه بالقتل</span></a></li>
+		</ul>
+	<a class="more" href="/arab-and-world.html" title="&#1575;&#1604;&#1593;&#1585;&#1576; &#1608;&#1575;&#1604;&#1593;&#1575;&#1604;&#1605;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/arab-and-world/syria.html" title="&#1587;&#1608;&#1585;&#1610;&#1575;">&#1587;&#1608;&#1585;&#1610;&#1575;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/arab-and-world/syria/2013/03/06/النائب-الوائلي-يجب-عدم-زج-العراق-بالأزمة-السورية.html" title="النائب الوائلي: يجب عدم زج العراق بالأزمة السورية"><img src="http://dam.alarabiya.net/images/75787f8f-4f8e-470a-8f46-ddfd9efe58e5/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">النائب الوائلي: يجب عدم زج العراق بالأزمة السورية</span></a>
+				</div>
+				<p>حذر رئيس كتلة الوفاء الوطني، النائب شروان الوائلي، من تداعيات الصراع السوري على الساحة العراقية وانعكاساته السلبية على مجمل الأوضاع فيه.<br /> <br /> وشدد الوائلي على خطورة ما يجري على الحدود العراقية - السورية، ومخاوفه من انتقالها إلى العراق الذي يعاني من الإرهاب وعصابات الجريمة المنظمة أصلاً، مستشهداً بما حصل ... <a href="/ar/arab-and-world/syria/2013/03/06/النائب-الوائلي-يجب-عدم-زج-العراق-بالأزمة-السورية.html" title="النائب الوائلي: يجب عدم زج العراق بالأزمة السورية">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/arab-and-world/syria/2013/03/06/الجيش-الحر-يطلق-تحذيراً-جديداً-من-تدخل-حزب-الله-بسوريا.html" title="الجيش الحر يطلق تحذيراً جديداً من تدخل حزب الله بسوريا"><img src="http://dam.alarabiya.net/images/15a52282-40b0-46c5-8364-36a68989a5b9/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>الجيش الحر يطلق تحذيراً جديداً من تدخل حزب الله بسوريا</span></a></li>
+			
+				<li><a href="/ar/arab-and-world/syria/2013/03/06/مفوضية-شؤون-اللاجئين-مليون-لاجئ-فرّوا-من-سوريا.html" title="مفوضية شؤون اللاجئين: مليون لاجئ فرّوا من سوريا"><img src="http://dam.alarabiya.net/images/ccacaedf-608d-4518-9359-9a0571840cd5/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>مفوضية شؤون اللاجئين: مليون لاجئ فرّوا من سوريا</span></a></li>
+			
+				<li><a href="/ar/arab-and-world/syria/2013/03/06/جون-كيري-نراقب-عملية-نقل-الأسلحة-إلى-المعارضة-السورية.html" title="كيري: نراقب عملية نقل الأسلحة للمعارضة السورية"><img src="http://dam.alarabiya.net/images/14e6a1fc-954b-4df7-9979-b7e4237f23f7/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>كيري: نراقب عملية نقل الأسلحة للمعارضة السورية</span></a></li>
+			
+				<li><a href="/ar/arab-and-world/syria/2013/03/06/أرصفة-دمشق-تغصّ-بمفترشيها-و-زادك-بإيدك-لاقتسام-المعاناة.html" title="أرصفة دمشق تغصّ بمفترشيها.. و"زادك بإيدك" لاقتسام المعاناة"><img src="http://dam.alarabiya.net/images/c1b87852-e2ec-41b0-b2c5-bb82124a1259/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>أرصفة دمشق تغصّ بمفترشيها.. و"زادك بإيدك" لاقتسام المعاناة</span></a></li>
+		</ul>
+	<a class="more" href="/arab-and-world/syria.html" title="&#1587;&#1608;&#1585;&#1610;&#1575;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/medicine-and-health.html" title="&#1591;&#1576; &#1608; &#1589;&#1581;&#1577; ">&#1591;&#1576; &#1608; &#1589;&#1581;&#1577; </a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/medicine-and-health/2013/03/06/الكشف-عن-الجين-المسبب-للبدانة-وسرطان-الجلد.html" title="الكشف عن الجين المسبب للبدانة وسرطان الجلد"><img src="http://dam.alarabiya.net/images/6892ac0b-f4d0-4cc6-b7b2-09e8f4792af4/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">الكشف عن الجين المسبب للبدانة وسرطان الجلد</span></a>
+				</div>
+				<p>اكتشف باحثون بريطانيون أن الجين المسؤول عن السمنة، قد يكون أيضاً مسؤولاً عن زيادة مخاطر الإصابة بنوع خطير من سرطان الجلد. وقد اعتمدت هذه الدراسة التي قام بها باحثون من جامعة ليدز البريطانية على تحليل بيانات 73 ألف شخص. فتبين أن هناك نوعاً من جين السمنة يرتبط بمرض سرطان الجلد الأسود أو الميلانيني. وق ... <a href="/ar/medicine-and-health/2013/03/06/الكشف-عن-الجين-المسبب-للبدانة-وسرطان-الجلد.html" title="الكشف عن الجين المسبب للبدانة وسرطان الجلد">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/medicine-and-health/2013/03/06/الشعور-بالقلق-مشكلة-تواجه-الأم-بعد-الوضع.html" title="الشعور بالقلق.. مشكلة تواجه الأم بعد الوضع"><img src="http://dam.alarabiya.net/images/9d8b2d5c-68da-4518-a139-c519e33869fa/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>الشعور بالقلق.. مشكلة تواجه الأم بعد الوضع</span></a></li>
+			
+				<li><a href="/ar/medicine-and-health/2013/03/05/تسجيل-أول-حالة-شفاء-لطفل-ولد-مصاباً-بالإيدز.html" title="تسجيل أول حالة شفاء لطفل ولد مصاباً بالإيدز"><img src="http://dam.alarabiya.net/images/a7252dbb-6b33-4830-ab0e-27d3a9667c5c/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>تسجيل أول حالة شفاء لطفل ولد مصاباً بالإيدز</span></a></li>
+			
+				<li><a href="/ar/medicine-and-health/2013/03/05/طلاء-الجل-قد-يسبّب-هشاشة-وتكسير-الأظافر.html" title="طلاء "الجل" قد يسبّب هشاشة وتكسير الأظافر"><img src="http://dam.alarabiya.net/images/387928d1-0a81-4cfc-8fe2-2d75f8f704f9/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>طلاء "الجل" قد يسبّب هشاشة وتكسير الأظافر</span></a></li>
+			
+				<li><a href="/ar/medicine-and-health/2013/03/05/خبراء-ينصحون-باستخدام-الرضاعات-الزجاجية-بدلاً-من-البلاستيكية.html" title="خبراء ينصحون باستخدام الرضاعات الزجاجية بدلاً من البلاستيكية"><img src="http://dam.alarabiya.net/images/29de32a2-5b46-419e-ac64-985c2439b8d5/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>خبراء ينصحون باستخدام الرضاعات الزجاجية بدلاً من البلاستيكية</span></a></li>
+		</ul>
+	<a class="more" href="/medicine-and-health.html" title="&#1591;&#1576; &#1608; &#1589;&#1581;&#1577; ">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/culture-and-art.html" title="&#1579;&#1602;&#1575;&#1601;&#1577; &#1608; &#1601;&#1606; ">&#1579;&#1602;&#1575;&#1601;&#1577; &#1608; &#1601;&#1606; </a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/culture-and-art/2013/03/07/معرض-الرياض-للكتاب-يشهد-توزيع-نسخ-مجانية-وإقبال-كبير-للنساء-.html" title="معرض الرياض للكتاب يشهد توزيع نسخ مجانية.. وإقبال كبير للنساء "><img src="http://dam.alarabiya.net/images/be5f3d54-63ec-403b-b4fd-645003754810/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">معرض الرياض للكتاب يشهد توزيع نسخ مجانية.. وإقبال كبير للنساء </span></a>
+				</div>
+				<p>انطلق معرض الرياض الدولي للكتاب 2013 بحضور جماهيري كبير في اليوم الأول المخصص للزوار، بعد أن كان المعرض افتتح رسمياً أمس تحت رعاية خادم الحرمين الشريفين الملك عبدالله بن عبدالعزيز. وشهد مقر وكالة وزارة للثقافة والإعلام إقبالاً كبيراً من الزائرين، الذين حضروا للحصول على نسخ من الكتب المجانية التي توز ... <a href="/ar/culture-and-art/2013/03/07/معرض-الرياض-للكتاب-يشهد-توزيع-نسخ-مجانية-وإقبال-كبير-للنساء-.html" title="معرض الرياض للكتاب يشهد توزيع نسخ مجانية.. وإقبال كبير للنساء ">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/culture-and-art/2013/03/06/خالد-خليفة-العربي-الوحيد-المرشح-لنيل-جائزة-الإندبندنت-.html" title="خالد خليفة.. العربي الوحيد المرشح لنيل جائزة "الإندبندنت""><img src="http://dam.alarabiya.net/images/9eb0aadb-c2d3-48d0-afaf-4ecb36a2770d/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>خالد خليفة.. العربي الوحيد المرشح لنيل جائزة "الإندبندنت"</span></a></li>
+			
+				<li><a href="/ar/culture-and-art/2013/03/06/-المغضوب-عليهم-فيلم-سينمائي-مغربي-يثير-جدلاً-بين-النقاد.html" title=""المغضوب عليهم".. فيلم سينمائي مغربي يثير جدلاً بين النقاد"><img src="http://dam.alarabiya.net/images/c7182c5d-bee7-456c-b0fc-83faf2a65554/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>"المغضوب عليهم".. فيلم سينمائي مغربي يثير جدلاً بين النقاد</span></a></li>
+			
+				<li><a href="/ar/culture-and-art/2013/03/05/فايز-السعيد-مطربات-الخليج-مغرورات-وفشلن-في-التغيير.html" title="فايز السعيد: مطربات الخليج "مغرورات" وفشلن في التغيير"><img src="http://dam.alarabiya.net/images/d499008c-028b-4ebe-81bf-3a83382f9454/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>فايز السعيد: مطربات الخليج "مغرورات" وفشلن في التغيير</span></a></li>
+			
+				<li><a href="/ar/culture-and-art/2013/03/06/أحمد-راتب-في-العناية-المركزة-إثر-أزمة-في-الرئة.html" title="أحمد راتب في العناية المركزة إثر أزمة في الرئة"><img src="http://dam.alarabiya.net/images/5eb9df8b-1804-42aa-b9b5-c6b747fbaf23/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>أحمد راتب في العناية المركزة إثر أزمة في الرئة</span></a></li>
+		</ul>
+	<a class="more" href="/culture-and-art.html" title="&#1579;&#1602;&#1575;&#1601;&#1577; &#1608; &#1601;&#1606; ">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/technology/archive.news.html" title="&#1578;&#1603;&#1606;&#1608;&#1604;&#1608;&#1580;&#1610;&#1575; ">&#1578;&#1603;&#1606;&#1608;&#1604;&#1608;&#1580;&#1610;&#1575; </a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/technology/2013/03/06/العرب-يفضلون-المنزل-وأجهزة-آبل-للاتصال-بالإنترنت.html" title="العرب يفضلون "المنزل" وأجهزة آبل للاتصال بالإنترنت"><img src="http://dam.alarabiya.net/images/9bb87c25-95e1-4a2b-8aa7-34e1d1dda22c/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">العرب يفضلون "المنزل" وأجهزة آبل للاتصال بالإنترنت</span></a>
+				</div>
+				<p>كشفت الأرقام الصادرة عن مؤسسة Ipsos البحثية أن المنزل هو أكثر الأماكن التي يتم الاتصال منها بشبكة الإنترنت في المنطقة العربية. وبلغت نسبة الاتصال بشبكة الإنترنت من المنزل 87%، فيما كان العمل هو المكان المفضل الثاني للاتصال بالشبكة العنكبوتية بنسبة 34%. وأضافت الدراسة التي كشفت عنها Ipsos مؤخراً أن 1 ... <a href="/ar/technology/2013/03/06/العرب-يفضلون-المنزل-وأجهزة-آبل-للاتصال-بالإنترنت.html" title="العرب يفضلون "المنزل" وأجهزة آبل للاتصال بالإنترنت">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/technology/2013/03/05/-تويتر-ينهي-عمل-تطبيقات-TweetDeck-للأجهزة-الذكية.html" title=""تويتر" ينهي عمل تطبيقات "TweetDeck" للأجهزة الذكية"><img src="http://dam.alarabiya.net/images/bff556e4-1809-4ba4-88f9-4d54dd4e8791/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>"تويتر" ينهي عمل تطبيقات "TweetDeck" للأجهزة الذكية</span></a></li>
+			
+				<li><a href="/ar/technology/2013/03/05/سامسونغ-تعتزم-تزويد-غالاكسي-إس-4-بتقنية-التحكم-عبر-العين-.html" title="سامسونغ تعتزم تزويد غالاكسي إس 4 بتقنية "التحكم عبر العين""><img src="http://dam.alarabiya.net/images/80fa0c5e-e2ee-4fe1-a66e-38c34eba5a3e/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>سامسونغ تعتزم تزويد غالاكسي إس 4 بتقنية "التحكم عبر العين"</span></a></li>
+			
+				<li><a href="/ar/technology/2013/03/05/جوجل-تدعم-لغة-الإشارة-في-خدمة-Hangouts.html" title="جوجل تدعم “لغة الإشارة” في خدمة Hangouts"><img src="http://dam.alarabiya.net/images/094f0b95-d7ac-4126-900a-ad1c0f0bbbeb/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>جوجل تدعم “لغة الإشارة” في خدمة Hangouts</span></a></li>
+			
+				<li><a href="/ar/technology/2013/03/05/خدمة-Evernote-تخترق-وتطالب-مستخدميها-بتغيير-كلمات-المرور.html" title="خدمة Evernote تخترق وتطالب مستخدميها بتغيير كلمات المرور"><img src="http://dam.alarabiya.net/images/023c9a90-4c45-4853-9bd7-3eb445cb2915/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>خدمة Evernote تخترق وتطالب مستخدميها بتغيير كلمات المرور</span></a></li>
+		</ul>
+	<a class="more" href="/technology/archive.news.html" title="&#1578;&#1603;&#1606;&#1608;&#1604;&#1608;&#1580;&#1610;&#1575; ">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>				
+
+<!-- Al Arabiya Today -->
+<div class="box aa_today aa_hadath">
+	
+	<div class="head">
+				<h2><a href="/alhadath.html" title="">&#1588;&#1575;&#1588;&#1577; </a></h2>	
+	</div>
+	<div class="content">
+		<div class="arena">
+			<div class="slider_mod01">
+				<a class="prev off" href="#" title=""></a>
+					<div class="wrapper">
+
+	
+	<div class="slider">
+		<ul class="teasers_mod02">
+				<li> <a title="كتاب وشخصيات أدبية ينشئون مجلة "دمشق"" href="/ar/north-africa/2013/03/06/كتاب-وشخصيات-أدبية-ينشئون-مجلة-دمشق-.html"><img src="http://dam.alarabiya.net/images/20a4ec97-9c8b-462e-8b44-aa44474f5d10/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">كتاب وشخصيات أدبية ينشئون مجلة "دمشق"</span> </a> </li>
+				<li> <a title="الأزمة السورية تتمدد خارج الحدود إلى دول الجوار" href="/ar/north-africa/2013/03/06/الأزمة-السورية-تتمدد-خارج-الحدود-إلى-دول-الجوار.html"><img src="http://dam.alarabiya.net/images/a0a4526e-5f86-4239-bf5d-9f6f28a8d1bd/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">الأزمة السورية تتمدد خارج الحدود إلى دول الجوار</span> </a> </li>
+				<li> <a title="سجناء سابقون أصبحوا حراسا لسجون ما بعد القذافي" href="/ar/north-africa/2013/03/05/سجناء-سابقون-أصبحوا-حراسا-لسجون-ما-بعد-القذافي.html"><img src="http://dam.alarabiya.net/images/5a705ad9-2234-483e-b7af-29530d3653a0/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">سجناء سابقون أصبحوا حراسا لسجون ما بعد القذافي</span> </a> </li>
+				<li> <a title="قرارات الهدم مازالت تطال البلدة القديمة في القدس" href="/ar/north-africa/2013/03/05/قرارات-الهدم-مازالت-تطال-البلدة-القديمة-في-القدس.html"><img src="http://dam.alarabiya.net/images/3cb97f12-b5b8-466c-b159-2c5e9af5364d/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">قرارات الهدم مازالت تطال البلدة القديمة في القدس</span> </a> </li>
+				<li> <a title="في ذكرى رحيل مبارك .. تظاهرات مؤيدة لمبارك ومعارضة لمرسي" href="/ar/north-africa/2013/02/12/في-ذكرى-رحيل-مبارك-تظاهرات-مؤيدة-لمبارك-ومعارضة-لمرسي.html"><img src="http://dam.alarabiya.net/images/5b94f9a8-463f-465b-9101-f129032ccdaa/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">في ذكرى رحيل مبارك .. تظاهرات مؤيدة لمبارك ومعارضة لمرسي</span> </a> </li>
+				<li> <a title="نشرة حدث اليوم: الثلاثاء 12-02-2013" href="/ar/north-africa/2013/02/13/نشرة-حدث-اليوم-الثلاثاء-12-02-2013.html"><img src="http://dam.alarabiya.net/images/0a68c56a-5a97-4bb4-9b5e-b3833e0bbf97/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">نشرة حدث اليوم: الثلاثاء 12-02-2013</span> </a> </li>
+				</ul>
+				<ul class="teasers_mod02">
+				<li> <a title="علم الثورة السورية يسافر في سماء كندا" href="/ar/north-africa/2013/02/12/علم-الثورة-السورية-يسافر-في-سماء-كندا.html"><img src="http://dam.alarabiya.net/images/ec1e2110-ae78-42b3-8d06-a99cf6058531/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">علم الثورة السورية يسافر في سماء كندا</span> </a> </li>
+				<li> <a title=""نهاية اللعبة سوريا" لعبة فيديو تتحدث عن الصراع السوري" href="/ar/north-africa/2013/02/11/-نهاية-اللعبة-سوريا-لعبة-فيديو-تتحدث-عن-الصراع-السوري.html"><img src="http://dam.alarabiya.net/images/3e51df5e-80a8-4616-97ce-c45e43c7f85a/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">"نهاية اللعبة سوريا" لعبة فيديو تتحدث عن الصراع السوري</span> </a> </li>
+		</ul>
+	</div>
+					</div>			
+				<a class="next" href="#" title=""></a>
+				
+					<ul class="pager">	
+
+			<li ><a href="#" title=""></a></li>
+			<li ><a href="#" title=""></a></li>
+					</ul>			
+				
+						<a  class="more" href="/alhadath.html" title="&#1588;&#1575;&#1588;&#1577; ">المزيد</a>
+			</div> 
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+				
+
+<!-- Al Arabiya Today -->
+<div class="box aa_today">
+	
+	<div class="head">
+				<h2><a href="/alarabiya-today.html" title="">&#1588;&#1575;&#1588;&#1577; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; &#1575;&#1604;&#1610;&#1608;&#1605; </a></h2>	
+	</div>
+	<div class="content">
+		<div class="arena">
+			<div class="slider_mod01">
+				<a class="prev off" href="#" title=""></a>
+					<div class="wrapper">
+
+	
+	<div class="slider">
+		<ul class="teasers_mod02">
+				<li> <a title="وتيرة حركة اللجوء تسارعت مع مطلع عام 2013" href="/ar/alarabiya-today/2013/03/06/وتيرة-حركة-اللجوء-تسارعت-مع-مطلع-عام-2013.html"><img src="http://dam.alarabiya.net/images/4a1a8312-06a7-42ec-a651-865e530d8ff1/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">وتيرة حركة اللجوء تسارعت مع مطلع عام 2013</span> </a> </li>
+				<li> <a title="راغب علامة في مقابلة خاصة مع صباح العربية" href="/ar/alarabiya-today/2013/03/06/راغب-علامة-في-مقابلة-خاصة-مع-صباح-العربية.html"><img src="http://dam.alarabiya.net/images/322fe577-7f54-4d45-90bf-41fb256d8c91/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">راغب علامة في مقابلة خاصة مع صباح العربية</span> </a> </li>
+				<li> <a title="كارمن سليمان نجمة أراب آيدول في ضيافة صباح العربية" href="/ar/alarabiya-today/2013/03/06/كارمن-سليمان-نجمة-أراب-آيدول-في-ضيافة-صباح-العربية.html"><img src="http://dam.alarabiya.net/images/194cd663-00a5-48a4-a70a-1c0bafca7eb1/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">كارمن سليمان نجمة أراب آيدول في ضيافة صباح العربية</span> </a> </li>
+				<li> <a title="فحص القولون يقلل خطر الإصابة بالسرطانات الحادة" href="/ar/alarabiya-today/2013/03/06/فحص-القولون-يقلل-خطر-الإصابة-بالسرطانات-الحادة.html"><img src="http://dam.alarabiya.net/images/5b40ffe8-c022-42dc-9d17-79ad8afaa7b9/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">فحص القولون يقلل خطر الإصابة بالسرطانات الحادة</span> </a> </li>
+				<li> <a title=""الحديقة المعجزة" في دبي.. أكبر حديقة زهور بالعالم" href="/ar/alarabiya-today/2013/03/05/-الحديقة-المعجزة-في-دبي-أكبر-حديقة-زهور-بالعالم.html"><img src="http://dam.alarabiya.net/images/ace9886b-9df0-4ca2-abbe-a00b8ae2c6f2/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">"الحديقة المعجزة" في دبي.. أكبر حديقة زهور بالعالم</span> </a> </li>
+				<li> <a title="طلاء الـ "جل" قد يسبب هشاشة وتكسير الأظافر" href="/ar/alarabiya-today/2013/03/05/طلاء-الـ-جل-قد-يسبب-هشاشة-وتكسير-الأظافر.html"><img src="http://dam.alarabiya.net/images/17a5b806-da38-4972-8ed8-a461126ba5d6/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">طلاء الـ "جل" قد يسبب هشاشة وتكسير الأظافر</span> </a> </li>
+				</ul>
+				<ul class="teasers_mod02">
+				<li> <a title="9 سعوديين يفقدون أطرافهم يومياً في مستشفيات الصحة" href="/ar/alarabiya-today/2013/02/13/9-سعوديين-يفقدون-أطرافهم-يومياً-في-مستشفيات-الصحة-1600.html"><img src="http://dam.alarabiya.net/images/fe45b40a-b460-4050-9522-0ceef5aeaaac/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">9 سعوديين يفقدون أطرافهم يومياً في مستشفيات الصحة</span> </a> </li>
+				<li> <a title="اختتام جلسة الحوار الأولى بين المعارضة والحكومة" href="/ar/alarabiya-today/2013/02/12/اختتام-جلسة-الحوار-الأولى-بين-المعارضة-والحكومة.html"><img src="http://dam.alarabiya.net/images/60babbe9-75fd-4cb7-b7c3-e7fed2c7f514/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">اختتام جلسة الحوار الأولى بين المعارضة والحكومة</span> </a> </li>
+				<li> <a title="اربعيني يستبدل صحبة البشر بصحبة الحيوانات" href="/ar/alarabiya-today/2013/02/13/اربعيني-يستبدل-صحبة-البشر-بصحبة-الحيوانات.html"><img src="http://dam.alarabiya.net/images/0da8269f-006b-4da7-91d2-34256e3aa17c/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">اربعيني يستبدل صحبة البشر بصحبة الحيوانات</span> </a> </li>
+				<li> <a title="آل الشيخ: اقفال المحلات في عيد الحب ليس من اختصاصنا" href="/ar/alarabiya-today/2013/02/13/آل-الشيخ-اقفال-المحلات-في-عيد-الحب-ليس-من-اختصاصنا.html"><img src="http://dam.alarabiya.net/images/88004de2-a073-4e19-abe3-c7545901da68/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">آل الشيخ: اقفال المحلات في عيد الحب ليس من اختصاصنا</span> </a> </li>
+				<li> <a title="موسيقيون يحولون منازلهم لاستديوهات في العراق" href="/ar/alarabiya-today/2013/02/11/موسيقيون-يحولون-منازلهم-لاستديوهات-في-العراق.html"><img src="http://dam.alarabiya.net/images/1588877d-1f27-4cb8-8256-e8b8ecfcfd1a/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">موسيقيون يحولون منازلهم لاستديوهات في العراق</span> </a> </li>
+				<li> <a title="وجوه بمعالم جغرافية يخطها فنان بريطاني" href="/ar/alarabiya-today/2013/02/11/وجوه-بمعالم-جغرافية-يخطها-فنان-بريطاني.html"><img src="http://dam.alarabiya.net/images/26aa17b2-38e7-494d-ab48-e401e89e08bc/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span class="vid_ico"></span><span class="title">وجوه بمعالم جغرافية يخطها فنان بريطاني</span> </a> </li>
+		</ul>
+	</div>
+					</div>			
+				<a class="next" href="#" title=""></a>
+				
+					<ul class="pager">	
+
+			<li ><a href="#" title=""></a></li>
+			<li ><a href="#" title=""></a></li>
+					</ul>			
+				
+						<a  class="more" href="/alarabiya-today.html" title="&#1588;&#1575;&#1588;&#1577; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; &#1575;&#1604;&#1610;&#1608;&#1605; ">المزيد</a>
+			</div> 
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+				
+
+<!-- News Sections -->
+<div class="box news_sections">
+	
+	<div class="head">
+		<h2><a href="/last-page.html" title="&#1575;&#1604;&#1571;&#1582;&#1610;&#1585;&#1577;">&#1575;&#1604;&#1571;&#1582;&#1610;&#1585;&#1577;</a></h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+			<div class="teaser">
+				<div class="img_teaser">
+				
+					<a href="/ar/last-page/2013/03/07/أسد-يفترس-عاملاً-في-حديقة-للحيوانات-بكاليفورنيا.html" title="أسد يفترس عاملاً في حديقة للحيوانات بكاليفورنيا"><img src="http://dam.alarabiya.net/images/079101af-81a0-4593-b09b-8a9e7c37d562/252/190/1?x=0&y=0" width="252" height="190" alt="" /><span class="title">أسد يفترس عاملاً في حديقة للحيوانات بكاليفورنيا</span></a>
+				</div>
+				<p>أعلن مسؤولو إنفاذ القانون في مقاطعة فريسنو، أن أسداً من نوع إفريقي هاجم موظفاً وقتله في حديقة خاصة للحياة البرية بوسط كاليفورنيا. وقال المقدم روبرت ميلر، المتحدث باسم قائد شرطة مقاطعة فريسنو، إن رجال الشرطة الذين استجابوا لبلاغات عن إصابة شخص في حديقة كات هيفن في منطقة دانلاب بكاليفورنيا، عثروا على  ... <a href="/ar/last-page/2013/03/07/أسد-يفترس-عاملاً-في-حديقة-للحيوانات-بكاليفورنيا.html" title="أسد يفترس عاملاً في حديقة للحيوانات بكاليفورنيا">التتمة</a></p>
+			</div>
+		<ul class="teasers_mod02">
+			
+				<li><a href="/ar/last-page/2013/03/06/ناشطات-مصريات-يخضن-حرباً-ضد-الإرهاب-الجنسي-.html" title="ناشطات مصريات يخضن حرباً ضد "الإرهاب الجنسي""><img src="http://dam.alarabiya.net/images/d45b6406-0c4d-4f36-b5f2-4ab4e8f95a29/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>ناشطات مصريات يخضن حرباً ضد "الإرهاب الجنسي"</span></a></li>
+			
+				<li><a href="/ar/last-page/2013/03/06/سعود-الفيصل-زار-المقر-الجديد-والقطاع-القنصلي-مبدياً-إعجابه-بالتصميم-الفني-والمعماري.html" title="أكبر مبنى دبلوماسي في العالم.. السفارة السعودية بالقاهرة"><img src="http://dam.alarabiya.net/images/b1cbfe2a-a98e-40c0-9393-1a085107166d/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>أكبر مبنى دبلوماسي في العالم.. السفارة السعودية بالقاهرة</span></a></li>
+			
+				<li><a href="/ar/last-page/2013/03/06/باتمان-البريطاني-كان-مجرد-مزحة.html" title="باتمان" البريطاني.. كان مجرد مزحة"><img src="http://dam.alarabiya.net/images/fcdde3d9-2a05-4da5-ae68-2ce1c324115e/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>باتمان" البريطاني.. كان مجرد مزحة</span></a></li>
+			
+				<li><a href="/ar/last-page/2013/03/05/جريمة-وهمية-في-مصعد-تكشف-الشجعان-والجبناء.html" title="جريمة "وهمية" في مصعد.. تكشف الشجعان والجبناء"><img src="http://dam.alarabiya.net/images/a9ca05ef-eb5f-47e6-a6ef-554091ef8fa0/162/122/1?x=0&y=0" width="162" height="122" alt="" /><span>جريمة "وهمية" في مصعد.. تكشف الشجعان والجبناء</span></a></li>
+		</ul>
+	<a class="more" href="/last-page.html" title="&#1575;&#1604;&#1571;&#1582;&#1610;&#1585;&#1577;">المزيد</a>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>	
+	
+	
+	
+	<div class="foot66"></div>
+	
+</div>
+
+				
+<div class="area_33">
+	
+	<div class="head33"></div>	
+	
+	
+	
+	
+
+<!-- Search -->
+<div class="box search">
+	<form class="searchResults" action="/tools/search-results.html" name="searchResults" method="get">
+		<input type="hidden" name="lang" value="ar">
+		<input name="q" type="text">
+		<a href="#" title="البحث">البحث</a>
+	</form>
+</div>
+<!-- Killer banner (Ad Slot 2) -->
+<div class="box killer">
+<!-- adZone: 300x250 - Left - Target: Arabic, Urdu, Farsi WEB Pages -->
+<div id="adSlot-inPage-300x250-left" style="width:300px;height:250px;">
+<script type='text/javascript'>
+writeAdv("adSlot-inPage-300x250-left");
+</script>
+</div>
+</div>		
+	
+<!-- Readers Selections -->
+<div class="box selections">
+	
+	<div class="head">
+			<h2>&#1575;&#1582;&#1578;&#1610;&#1575;&#1585;&#1575;&#1578; &#1575;&#1604;&#1602;&#1585;&#1575;&#1569;</h2>		
+		<ul class="filter">
+			<li class="active"><a href="#" title="">اليوم</a></li>
+			<li><a href="#" title="">الاسبوع</a></li>
+			<li><a href="#" title="">الشهر</a></li>
+		</ul>			
+	</div>
+	
+	
+	<div class="content">
+		<div class="arena">
+		<ul class="tabs">
+			<li class="active"> <a href="#" title="">الأكثر قراءة</a> </li>
+			<li> <a href="#" title="">الأكثر تعليقا</a> </li>
+			<li> <a href="#" title="">الأكثر مشاركة</a> </li>
+		</ul>
+			<ul class="items most_read">
+			</ul>
+			<!-- Most Commented -->
+			<ul style="display:none;" class="items most_commented">
+			</ul>
+			<!-- Most Shared -->
+			<ul style="display:none;" class="items most_shared">
+			</ul>	
+		</div>
+	</div>
+	<div class="content"style="display:none;">
+		<div class="arena">
+		<ul class="tabs">
+			<li class="active"> <a href="#" title="">الأكثر قراءة</a> </li>
+			<li> <a href="#" title="">الأكثر تعليقا</a> </li>
+			<li> <a href="#" title="">الأكثر مشاركة</a> </li>
+		</ul>
+			<ul class="items most_read">
+			</ul>
+			<!-- Most Commented -->
+			<ul style="display:none;" class="items most_commented">
+			</ul>
+			<!-- Most Shared -->
+			<ul style="display:none;" class="items most_shared">
+			</ul>	
+		</div>
+	</div>
+	<div class="content"style="display:none;">
+		<div class="arena">
+		<ul class="tabs">
+			<li class="active"> <a href="#" title="">الأكثر قراءة</a> </li>
+			<li> <a href="#" title="">الأكثر تعليقا</a> </li>
+			<li> <a href="#" title="">الأكثر مشاركة</a> </li>
+		</ul>
+			<ul class="items most_read">
+			</ul>
+			<!-- Most Commented -->
+			<ul style="display:none;" class="items most_commented">
+			</ul>
+			<!-- Most Shared -->
+			<ul style="display:none;" class="items most_shared">
+			</ul>	
+		</div>
+	</div>
+		
+	<div class="foot"></div>
+</div>
+
+
+<!-- Readers Selections -->
+<div class="box selections">
+	
+	<div class="head">
+			<h2>&#1575;&#1582;&#1578;&#1610;&#1575;&#1585;&#1575;&#1578; &#1575;&#1604;&#1602;&#1585;&#1575;&#1569;</h2>		
+		<ul class="filter">
+			<li class="active"><a href="#" title="">اليوم</a></li>
+			<li><a href="#" title="">الاسبوع</a></li>
+			<li><a href="#" title="">الشهر</a></li>
+		</ul>			
+	</div>
+	
+	
+	<div class="content">
+		<div class="arena">
+		<ul class="tabs">
+			<li class="active"> <a href="#" title="">الأكثر قراءة</a> </li>
+			<li> <a href="#" title="">الأكثر تعليقا</a> </li>
+			<li> <a href="#" title="">الأكثر مشاركة</a> </li>
+		</ul>
+			<ul class="items most_read">
+			</ul>
+			<!-- Most Commented -->
+			<ul style="display:none;" class="items most_commented">
+			</ul>
+			<!-- Most Shared -->
+			<ul style="display:none;" class="items most_shared">
+			</ul>	
+		</div>
+	</div>
+	<div class="content"style="display:none;">
+		<div class="arena">
+		<ul class="tabs">
+			<li class="active"> <a href="#" title="">الأكثر قراءة</a> </li>
+			<li> <a href="#" title="">الأكثر تعليقا</a> </li>
+			<li> <a href="#" title="">الأكثر مشاركة</a> </li>
+		</ul>
+			<ul class="items most_read">
+			</ul>
+			<!-- Most Commented -->
+			<ul style="display:none;" class="items most_commented">
+			</ul>
+			<!-- Most Shared -->
+			<ul style="display:none;" class="items most_shared">
+			</ul>	
+		</div>
+	</div>
+	<div class="content"style="display:none;">
+		<div class="arena">
+		<ul class="tabs">
+			<li class="active"> <a href="#" title="">الأكثر قراءة</a> </li>
+			<li> <a href="#" title="">الأكثر تعليقا</a> </li>
+			<li> <a href="#" title="">الأكثر مشاركة</a> </li>
+		</ul>
+			<ul class="items most_read">
+			</ul>
+			<!-- Most Commented -->
+			<ul style="display:none;" class="items most_commented">
+			</ul>
+			<!-- Most Shared -->
+			<ul style="display:none;" class="items most_shared">
+			</ul>	
+		</div>
+	</div>
+		
+	<div class="foot"></div>
+</div>
+<!-- Opinions -->
+<div class="box opinions">
+	
+	<div class="head">
+			<h2>&#1570;&#1585;&#1575;&#1569;</h2>		
+	</div>
+	<div class="content">
+		<div class="arena">
+				<ul class="tabs">
+						<li class=" active"><a href="/politics/archive.view.html" title="سياسي">سياسي</a></li>
+						<li><a href="/sport/archive.view.html" title="رياضي">رياضي</a></li>
+						<li><a href="/aswaq/archive.view.html" title="إقتصادي">إقتصادي</a></li>
+				</ul>
+
+
+<div class="slider_mod02">
+	
+	<a class="prev off" href="#" title=""></a>
+	<div class="wrapper">
+		<div class="slider">
+			<ul>
+				<li>
+				
+					<a href="/ar/politics/2013/03/07/لا-حلول-سياسية-بعد-حديث-بشار-الأسد-لـ-الصنداي-البريطانية-.html" title="لا حلول سياسية بعد حديث بشار الأسد لـ«الصنداي» البريطانية!!"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/f2c9c2f4-2c92-4c9d-92f3-581919b75cda/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/politics/2013/03/07/لا-حلول-سياسية-بعد-حديث-بشار-الأسد-لـ-الصنداي-البريطانية-.html" title="لا حلول سياسية بعد حديث بشار الأسد لـ«الصنداي» البريطانية!!">لا حلول سياسية بعد حديث بشار الأسد لـ«الصنداي» البريطانية!!</a>					
+						<a class="writer" href="/authors/ص/صا/صالح-القلاب.html" title="صالح القلاب">صالح القلاب</a>
+				</li>
+				<li>
+				
+					<a href="/ar/politics/2013/03/07/إيران-أكثر-من-مجرد-فيلم.html" title="إيران أكثر من مجرد فيلم"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/b71b193f-b276-43c2-9c87-7b1741793f25/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/politics/2013/03/07/إيران-أكثر-من-مجرد-فيلم.html" title="إيران أكثر من مجرد فيلم">إيران أكثر من مجرد فيلم</a>					
+						<a class="writer" href="/authors/ع/عب/عبد-الرحمن-الراشد.html" title="عبد الرحمن الراشد">عبد الرحمن الراشد</a>
+				</li>
+				<li>
+				
+					<a href="/ar/politics/2013/03/07/الأسد-حين-انتصر-لبنان-حين-نأى-عن-نفسه.html" title="الأسد حين «انتصر» لبنان حين نأى عن نفسه"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/8d89025a-9c31-4208-9a49-140e60952b55/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/politics/2013/03/07/الأسد-حين-انتصر-لبنان-حين-نأى-عن-نفسه.html" title="الأسد حين «انتصر» لبنان حين نأى عن نفسه">الأسد حين «انتصر» لبنان حين نأى عن نفسه</a>					
+						<a class="writer" href="/authors/ز/زه/زهير-قصيباتي.html" title="زهير قصيباتي">زهير قصيباتي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/politics/2013/03/07/سوريا-وحدها-الأرض-تفرض-التغيير.html" title="سوريا: وحدها الأرض تفرض التغيير"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/ce578cf3-aeec-41c4-a7d1-9dcd8ba09bc9/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/politics/2013/03/07/سوريا-وحدها-الأرض-تفرض-التغيير.html" title="سوريا: وحدها الأرض تفرض التغيير">سوريا: وحدها الأرض تفرض التغيير</a>					
+						<a class="writer" href="/authors/ع/عل/علي-حماده.html" title="علي حماده">علي حماده</a>
+				</li>
+				<li>
+				
+					<a href="/ar/politics/2013/03/07/هوغو-تشافيز-دخل-صراعاتنا-.html" title="هوغو تشافيز دخل صراعاتنا "><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/d3d86eee-ff50-43a4-965a-2d872aab6729/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/politics/2013/03/07/هوغو-تشافيز-دخل-صراعاتنا-.html" title="هوغو تشافيز دخل صراعاتنا ">هوغو تشافيز دخل صراعاتنا </a>					
+						<a class="writer" href="/authors/غ/غس/غسان-حجار.html" title="غسان حجار">غسان حجار</a>
+				</li>
+				<li>
+				
+					<a href="/ar/politics/2013/03/06/-حزب-الله-والتدخّل-العلني-في-سوريا-115.html" title=""حزب الله" والتدخّل العلني في سوريا"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/385d38e9-1ecf-4106-b0fd-86894755c21a/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/politics/2013/03/06/-حزب-الله-والتدخّل-العلني-في-سوريا-115.html" title=""حزب الله" والتدخّل العلني في سوريا">"حزب الله" والتدخّل العلني في سوريا</a>					
+						<a class="writer" href="/authors/ع/عب/عبد-الوهاب-بدرخان.html" title="عبد الوهاب بدرخان">عبد الوهاب بدرخان</a>
+				</li>
+				<li>
+				
+					<a href="/ar/views/2013/03/06/أوباما-والفشل-في-العراق.html" title="أوباما والفشل في العراق"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/a5090e33-630b-481f-982e-0d952649ca10/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/views/2013/03/06/أوباما-والفشل-في-العراق.html" title="أوباما والفشل في العراق">أوباما والفشل في العراق</a>					
+						<a class="writer" href="/authors/ر/رن/رندة-تقي-الدين.html" title="رندة تقي الدين">رندة تقي الدين</a>
+				</li>
+				<li>
+				
+					<a href="/ar/arab-and-world/egypt/2013/03/06/أيتهـــا-المعارضـــة-تمــــردي-ولاتســـــتكيني.html" title="أيتهـــا المعارضـــة تمــــردي ولاتســـــتكيني"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/4f8f6c8d-2540-47c0-a9cb-97837b1fdbef/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/arab-and-world/egypt/2013/03/06/أيتهـــا-المعارضـــة-تمــــردي-ولاتســـــتكيني.html" title="أيتهـــا المعارضـــة تمــــردي ولاتســـــتكيني">أيتهـــا المعارضـــة تمــــردي ولاتســـــتكيني</a>					
+						<a class="writer" href="/authors/ن/نو/نوال-السعداوي.html" title="نوال السعداوي">نوال السعداوي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/arab-and-world/egypt/2013/03/06/هل-يزور-قنديل-الأسد؟.html" title="هل يزور قنديل الأسد؟"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/38622c94-65c5-4d50-a2c1-4dfa60ace61c/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/arab-and-world/egypt/2013/03/06/هل-يزور-قنديل-الأسد؟.html" title="هل يزور قنديل الأسد؟">هل يزور قنديل الأسد؟</a>					
+						<a class="writer" href="/authors/ط/طا/طارق-الحميد.html" title="طارق الحميد">طارق الحميد</a>
+				</li>
+				<li>
+				
+					<a href="/ar/2013/03/06/-حزب-الله-والتدخّل-العلني-في-سوريا.html" title=""حزب الله" والتدخّل العلني في سوريا"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/385d38e9-1ecf-4106-b0fd-86894755c21a/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/2013/03/06/-حزب-الله-والتدخّل-العلني-في-سوريا.html" title=""حزب الله" والتدخّل العلني في سوريا">"حزب الله" والتدخّل العلني في سوريا</a>					
+						<a class="writer" href="/authors/ع/عب/عبد-الوهاب-بدرخان.html" title="عبد الوهاب بدرخان">عبد الوهاب بدرخان</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<a class="next" href="#" title=""></a>
+					
+		<a class="more" href="/politics/archive.view.html" title="&#1587;&#1610;&#1575;&#1587;&#1610;">المزيد</a>
+</div>
+
+<div class="slider_mod02" style="display:none;">
+	
+	<a class="prev off" href="#" title=""></a>
+	<div class="wrapper">
+		<div class="slider">
+			<ul>
+				<li>
+				
+					<a href="/ar/sport/2013/03/06/12-إقالة-في-دوري-محترفين-ماذا-يعني؟-.html" title="12 إقالة في دوري محترفين ماذا يعني؟‏"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/3069815e-09b4-4b43-b023-b6390de865fe/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/sport/2013/03/06/12-إقالة-في-دوري-محترفين-ماذا-يعني؟-.html" title="12 إقالة في دوري محترفين ماذا يعني؟‏">12 إقالة في دوري محترفين ماذا يعني؟‏</a>					
+						<a class="writer" href="/authors/ح/حم/حمد-الدبيخي.html" title="حمد الدبيخي">حمد الدبيخي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/معهد-البحث-العلمي-الرياضي.html" title="معهد «البحث العلمي» الرياضي"><img width="44" height="59" alt="" src="/docroot/aa-templating/images/pic_thumb.jpg"></a>
+					<a class="title" href="/ar/sport/2013/03/05/معهد-البحث-العلمي-الرياضي.html" title="معهد «البحث العلمي» الرياضي">معهد «البحث العلمي» الرياضي</a>					
+						<a class="writer" href="/authors/ح/حم/حمد-الدبيخي.html" title="حمد الدبيخي">حمد الدبيخي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/مصائب-الأندية-عند-الجبلاية-فوائد-.html" title="مصائب الأندية عند الجبلاية.. فوائد!!"><img width="44" height="59" alt="" src="/docroot/aa-templating/images/author_185x142.jpg"></a>
+					<a class="title" href="/ar/sport/2013/03/05/مصائب-الأندية-عند-الجبلاية-فوائد-.html" title="مصائب الأندية عند الجبلاية.. فوائد!!">مصائب الأندية عند الجبلاية.. فوائد!!</a>					
+						<a class="writer" href="/authors/ج/جم/جمال-هليل.html" title="جمال هليل">جمال هليل</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/سلمان-بن-إبراهيم-خط-أحمر.html" title="سلمان بن إبراهيم.. خط أحمر"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/a1c2bcdc-4d7f-483b-a611-1d5ad1079bce/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/sport/2013/03/05/سلمان-بن-إبراهيم-خط-أحمر.html" title="سلمان بن إبراهيم.. خط أحمر">سلمان بن إبراهيم.. خط أحمر</a>					
+						<a class="writer" href="/authors/م/ما/ماجد-سلطان.html" title="ماجد سلطان">ماجد سلطان</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/لماذا-نخشى-الانتخابات؟.html" title="لماذا نخشى الانتخابات؟"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/b6133515-7e3d-47b0-beff-6ccf61472ea4/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/sport/2013/03/05/لماذا-نخشى-الانتخابات؟.html" title="لماذا نخشى الانتخابات؟">لماذا نخشى الانتخابات؟</a>					
+						<a class="writer" href="/authors/م/مس/مساعد-العبدلي.html" title="مساعد العبدلي">مساعد العبدلي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/يستاهلك.html" title="يستاهلك"><img width="44" height="59" alt="" src="/docroot/aa-templating/images/author_185x142.jpg"></a>
+					<a class="title" href="/ar/sport/2013/03/05/يستاهلك.html" title="يستاهلك">يستاهلك</a>					
+						<a class="writer" href="/authors/ع/عب/عبد-الله-العجلان.html" title="عبد الله العجلان">عبد الله العجلان</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/الفتح-خال-من-البهرجة-والفساد.html" title="الفتح خال من البهرجة والفساد"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/adf50c99-c30c-4d92-aaf3-56b95f04f5df/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/sport/2013/03/05/الفتح-خال-من-البهرجة-والفساد.html" title="الفتح خال من البهرجة والفساد">الفتح خال من البهرجة والفساد</a>					
+						<a class="writer" href="/authors/أ/أح/أحمد-المصيبيح1.html" title="أحمد المصيبيح">أحمد المصيبيح</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/إياكم-أن-تذهب-ريحكم.html" title="إياكم أن تذهب ريحكم"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/def440f0-f4d6-467b-86b4-f1518cd9be90/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/sport/2013/03/05/إياكم-أن-تذهب-ريحكم.html" title="إياكم أن تذهب ريحكم">إياكم أن تذهب ريحكم</a>					
+						<a class="writer" href="/authors/ب/بد/بدرالدين-الإدريسي.html" title="بدرالدين الإدريسي">بدرالدين الإدريسي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/-ضربتين-بالرأس-توجع-يا-مدريد-.html" title="«ضربتين بالرأس توجع يا مدريد»!"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/a03a944d-824e-4fbf-9cca-bd9b50bfa082/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/sport/2013/03/05/-ضربتين-بالرأس-توجع-يا-مدريد-.html" title="«ضربتين بالرأس توجع يا مدريد»!">«ضربتين بالرأس توجع يا مدريد»!</a>					
+						<a class="writer" href="/authors/ع/عب/عبدالله-الكعبي.html" title="عبدالله الكعبي">عبدالله الكعبي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/sport/2013/03/05/الأوهام-السوداء.html" title="الأوهام السوداء"><img width="44" height="59" alt="" src="/docroot/aa-templating/images/author_185x142.jpg"></a>
+					<a class="title" href="/ar/sport/2013/03/05/الأوهام-السوداء.html" title="الأوهام السوداء">الأوهام السوداء</a>					
+						<a class="writer" href="/authors/أ/أح/أحمد-صادق-دياب.html" title="أحمد صادق دياب">أحمد صادق دياب</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<a class="next" href="#" title=""></a>
+					
+		<a class="more" href="/sport/archive.view.html" title="&#1585;&#1610;&#1575;&#1590;&#1610;">المزيد</a>
+</div>
+
+<div class="slider_mod02" style="display:none;">
+	
+	<a class="prev off" href="#" title=""></a>
+	<div class="wrapper">
+		<div class="slider">
+			<ul>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/06/-مستقبل-الأجيال-واستثمارات-الداخل-والخارج.html" title=" مستقبل الأجيال .. واستثمارات الداخل والخارج"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/170dfb9c-8704-46f8-ad0e-970213c5ce01/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/06/-مستقبل-الأجيال-واستثمارات-الداخل-والخارج.html" title=" مستقبل الأجيال .. واستثمارات الداخل والخارج"> مستقبل الأجيال .. واستثمارات الداخل والخارج</a>					
+						<a class="writer" href="/authors/م/مح/محمد-بن-ناصر-الجديد.html" title="محمد بن ناصر الجديد">محمد بن ناصر الجديد</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/06/-الحلم-الأوروبي-ـ-الأمريكي.html" title=" الحلم الأوروبي ـ الأمريكي"><img width="44" height="59" alt="" src="/docroot/aa-templating/images/pic_thumb.jpg"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/06/-الحلم-الأوروبي-ـ-الأمريكي.html" title=" الحلم الأوروبي ـ الأمريكي"> الحلم الأوروبي ـ الأمريكي</a>					
+						<a class="writer" href="/authors/م/مح/محمد-بن-ناصر-الجديد.html" title="محمد بن ناصر الجديد">محمد بن ناصر الجديد</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/بسبب-القرض-لا-تكفير-اقتصادي-في-مصر.html" title="بسبب القرض .. لا «تكفير اقتصادي» في مصر"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/f743759d-a261-4dd5-97e6-841f69ae5d42/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/بسبب-القرض-لا-تكفير-اقتصادي-في-مصر.html" title="بسبب القرض .. لا «تكفير اقتصادي» في مصر">بسبب القرض .. لا «تكفير اقتصادي» في مصر</a>					
+						<a class="writer" href="/authors/م/مح/محمد-كركوتي.html" title="محمد كركوتي">محمد كركوتي</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/أرصدة-تصل-375-بليون-ريال.html" title="أرصدة تصل 375 بليون ريال"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/14e605b1-1746-473a-9089-ba583f8a7d8e/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/أرصدة-تصل-375-بليون-ريال.html" title="أرصدة تصل 375 بليون ريال">أرصدة تصل 375 بليون ريال</a>					
+						<a class="writer" href="/authors/ر/را/راشد-الفوزان.html" title="راشد الفوزان">راشد الفوزان</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/-نطاقات-لوزارة-التجارة-وعلى-طريقة-بيل-جيتس.html" title="«نطاقات» لوزارة التجارة وعلى طريقة.. بيل جيتس"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/7edfc4c2-e8ef-4570-9de1-d0ad2a654fd3/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/-نطاقات-لوزارة-التجارة-وعلى-طريقة-بيل-جيتس.html" title="«نطاقات» لوزارة التجارة وعلى طريقة.. بيل جيتس">«نطاقات» لوزارة التجارة وعلى طريقة.. بيل جيتس</a>					
+						<a class="writer" href="/authors/ب/بن/بندر-بن-عبد-العزيز-الضبعان.html" title="بندر بن عبد العزيز الضبعان">بندر بن عبد العزيز الضبعان</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/تحسن-الأسواق-في-المنطقة-وصدمة-السوق-السعودية.html" title="تحسن الأسواق في المنطقة وصدمة السوق السعودية"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/064c5052-33b9-41d5-b08e-15ca2001a710/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/تحسن-الأسواق-في-المنطقة-وصدمة-السوق-السعودية.html" title="تحسن الأسواق في المنطقة وصدمة السوق السعودية">تحسن الأسواق في المنطقة وصدمة السوق السعودية</a>					
+						<a class="writer" href="/authors/ي/يا/ياسين-الجفري.html" title="ياسين الجفري">ياسين الجفري</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/في-مستقبل-دخلنا-النفطي.html" title="في مستقبل دخلنا النفطي"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/8a777fd4-605e-4acf-94ba-90edd841a9af/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/في-مستقبل-دخلنا-النفطي.html" title="في مستقبل دخلنا النفطي">في مستقبل دخلنا النفطي</a>					
+						<a class="writer" href="/authors/ص/صا/صالح-السلطان.html" title="صالح السلطان">صالح السلطان</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/التضخم-الناتج-عن-رفع-رسوم-رخص-العمل.html" title="التضخم الناتج عن رفع رسوم رخص العمل"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/525cfeed-33a8-42cc-a691-b972216adf64/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/التضخم-الناتج-عن-رفع-رسوم-رخص-العمل.html" title="التضخم الناتج عن رفع رسوم رخص العمل">التضخم الناتج عن رفع رسوم رخص العمل</a>					
+						<a class="writer" href="/authors/ف/فه/فهد-بن-عبد-الله-الحويماني.html" title="فهد بن عبد الله الحويماني">فهد بن عبد الله الحويماني</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/هذه-الأموال-المسمومة-من-الأحق-بها؟-.html" title="هذه الأموال المسمومة: من الأحق بها؟!"><img width="44" height="59" alt="" src="/docroot/aa-templating/images/pic_thumb.jpg"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/هذه-الأموال-المسمومة-من-الأحق-بها؟-.html" title="هذه الأموال المسمومة: من الأحق بها؟!">هذه الأموال المسمومة: من الأحق بها؟!</a>					
+						<a class="writer" href="/authors/ف/فه/فهد-بن-عبد-الله-الحويماني.html" title="فهد بن عبد الله الحويماني">فهد بن عبد الله الحويماني</a>
+				</li>
+				<li>
+				
+					<a href="/ar/aswaq/economy/2013/03/05/لماذا-الاستعجال-في-استخراج-المعادن-.html" title="لماذا الاستعجال في استخراج المعادن!"><img width="44" height="59" alt="" src="http://dam.alarabiya.net/images/901b11fb-7d56-42ea-ae1d-3ad777b06944/44/59/1?x=0&y=0"></a>
+					<a class="title" href="/ar/aswaq/economy/2013/03/05/لماذا-الاستعجال-في-استخراج-المعادن-.html" title="لماذا الاستعجال في استخراج المعادن!">لماذا الاستعجال في استخراج المعادن!</a>					
+						<a class="writer" href="/authors/ع/عب/عبد-الرحمن-الخريف.html" title="عبد الرحمن الخريف">عبد الرحمن الخريف</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<a class="next" href="#" title=""></a>
+					
+		<a class="more" href="/aswaq/archive.view.html" title="&#1573;&#1602;&#1578;&#1589;&#1575;&#1583;&#1610;">المزيد</a>
+</div>		 
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+<!-- Al Arabiya Programs -->
+<div class="box aa_programs">
+	<div class="head">
+		<h2>&#1576;&#1585;&#1575;&#1605;&#1580; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+			<div class="slider_mod02">
+				<a class="prev off" href="#" title=""></a>
+				<div class="wrapper">
+					<div class="slider">
+						<ul>
+								<li><a title="الحدث المصري" href="/ar/programs/hadath-egypt/2013/03/07/الحدث-المصري-الأربعاء-06-03-2013.html"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/8ec756d3-b72f-433b-ae8f-a55125817dea/130/98/1?x=0&y=0"><span class="title">الحدث المصري</span><span></span></a></li>
+								<li><a title="بانوراما" href="/ar/programs/panorama/2013/03/07/بانوراما-مصر-أزمة-الانتخابات-البرلمانية.html"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/65de17c6-9d82-4db1-ae0a-312a37f286ab/130/98/1?x=0&y=0"><span class="title">بانوراما</span><span></span></a></li>
+								<li><a title="مقابلة خاصة" href="/ar/programs/special-interview/2013/02/15/مقابلة-خاصة-لوران-فابيوس.html"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/a83848f4-33ea-48a1-8dc1-7d26c317f748/130/98/1?x=0&y=0"><span class="title">مقابلة خاصة</span><span></span></a></li>
+								<li><a title="أفلام وثائقية" href="/ar/programs/documentaries/2013/01/26/الفيلم-الوثائقي-عمو-نشأت-2.html"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/ff9825e5-d837-4361-990b-d7d69b26d278/130/98/1?x=0&y=0"><span class="title">أفلام وثائقية</span><span></span></a></li>
+								<li><a title="صباح العربية" href="/ar/programs/sabah-alarabiya/2013/03/06/صباح-العربية-الأربعاء-06-03-2013-.html"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/3cbd1cac-6d47-46b2-a213-cbccba8d1eef/130/98/1?x=0&y=0"><span class="title">صباح العربية</span><span>&nbsp;صباح العربية</span></a></li>
+								<li><a title="السلطة الرابعة" href="/ar/programs/fourth-power/2013/03/07/السلطة-الرابعة-الأربعاء-06-03-2013.html"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/ad20612b-f20b-4f45-8374-a263a7ab0331/130/98/1?x=0&y=0"><span class="title">السلطة الرابعة</span><span></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<a class="next" href="#" title=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div><!-- Al Arabiya Programs -->
+<div class="box aa_programs">
+	
+	<div class="head">
+			<h2>&#1583;&#1585;&#1575;&#1587;&#1575;&#1578; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</h2>		
+	</div>
+	<div class="content">
+		<div class="arena">
+
+
+<div class="slider_mod02">
+	
+	<a class="prev off" href="#" title=""></a>
+	<div class="wrapper">
+		<div class="slider">
+			<ul>
+				<li><a href="/ar/arabic-studies/2013/03/05/أنفاق-سيناء-بين-مصر-وغزة-وإسرائيل-.html" title="أنفاق سيناء.. بين مصر وغزة وإسرائيل!"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/ff853feb-7cbb-47ce-820b-b00c8630810e/130/98/1?x=0&y=0"><span class="title">أنفاق سيناء.. بين مصر وغزة وإسرائيل!</span><span>تواصل الجرافات المصرية صباح مساء حملتها الأمنية المتواصلة ضد الأنفاق الواصلة بين ...</span></a></li>
+				<li><a href="/ar/arabic-studies/2013/02/08/اغتيال-بلعيد-لحظة-فارقة-في-مسار-الثورة-التونسية.html" title="اغتيال بلعيد.. لحظة فارقة في مسار الثورة التونسية"><img width="130" height="98" alt="" src="http://dam.alarabiya.net/images/e08338ba-3377-496e-94c7-ea03c38737a9/130/98/1?x=0&y=0"><span class="title">اغتيال بلعيد.. لحظة فارقة في مسار الثورة التونسية</span><span>&nbsp;<br /> استفاق التونسيون صبيحة يوم الأربعاء، 6 فبراير/شباط 2013، على حادثة لم يسب ...</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<a class="next off" href="#" title=""></a>
+					
+		<a class="more" href="/arabic-studies/archive.news.html" title="&#1583;&#1585;&#1575;&#1587;&#1575;&#1578; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;">المزيد</a>
+</div>		 
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+
+
+<!-- Carecature Corner -->
+<div class="box carecature">
+	<div class="head">
+		<h2>&#1586;&#1575;&#1608;&#1610;&#1577; &#1575;&#1604;&#1603;&#1575;&#1585;&#1610;&#1603;&#1575;&#1578;&#1610;&#1585;</h2>
+	</div>
+	<div class="content">
+		<div class="arena">
+			<div class="slider_mod02" id="slider_mod02_1">
+				<a class="prev off" href="#" title=""></a>
+				<div class="wrapper">
+					<div class="slider">
+						<ul>
+								<li><a class="layer" rel="5e7f6f95-d8c8-4a53-9b6c-7424be5b5405" href="/ar/caricature/2013/03/06/عامر-الزعبي-البيان-.html" title="عامر الزعبي - البيان "><img width="296" height="222" alt="" src="http://dam.alarabiya.net/images/39b5ae7e-d64d-4bcb-847a-ed1098837011/296/222/1?x=0&y=0" /></a></li>
+								<li><a class="layer" rel="f7ca8a52-a162-4d55-829b-cfb5aa2ccf83" href="/ar/caricature/2013/03/06/جهاد-عورتاني-الوطن-أون-لاين-.html" title="جهاد عورتاني - الوطن أون لاين "><img width="296" height="222" alt="" src="http://dam.alarabiya.net/images/4684bbea-0573-4503-8114-940f3823c853/296/222/1?x=0&y=0" /></a></li>
+								<li><a class="layer" rel="fe2faa46-e6d2-42b8-99ca-510eec84accf" href="/ar/caricature/2013/03/06/شريف-عرفة-الاتحاد-.html" title="شريف عرفة - الاتحاد "><img width="296" height="222" alt="" src="http://dam.alarabiya.net/images/50ea5358-8777-4c72-9b9c-385a5c85ac48/296/222/1?x=0&y=0" /></a></li>
+								<li><a class="layer" rel="7e130397-44a5-4326-b653-a2e5805e52e0" href="/ar/caricature/2013/03/05/علي-خليل-الخليج-.html" title="علي خليل - الخليج "><img width="296" height="222" alt="" src="http://dam.alarabiya.net/images/14f7bdbd-a3e8-43fd-a02b-dd0d7c0e7887/296/222/1?x=0&y=0" /></a></li>
+								<li><a class="layer" rel="be707396-da8a-4689-8401-a3894d742521" href="/ar/caricature/2013/03/05/الأهرام-.html" title="الأهرام "><img width="296" height="222" alt="" src="http://dam.alarabiya.net/images/e08bbe49-c30e-463b-abf4-cb839725cddc/296/222/1?x=0&y=0" /></a></li>
+								<li><a class="layer" rel="e8404321-d0e6-4cd7-93e6-181c0d7422f5" href="/ar/caricature/2013/03/05/أمجد-رسمي-الشرق-الأوسط.html" title="أمجد رسمي - الشرق الأوسط"><img width="296" height="222" alt="" src="http://dam.alarabiya.net/images/475446e8-698f-4af4-9c09-87d39a972ed4/296/222/1?x=0&y=0" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<a class="next" href="#" title=""></a> 				
+					<a class="more" href="/caricature.html" title="&#1586;&#1575;&#1608;&#1610;&#1577; &#1575;&#1604;&#1603;&#1575;&#1585;&#1610;&#1603;&#1575;&#1578;&#1610;&#1585;">المزيد</a>
+			</div>
+		</div>
+	</div>
+	<div class="foot"></div>
+</div>
+
+<script>
+jQuery(document).ready(function(){
+	$('#slider_mod02_1').initPhotoGalleryWidget({counter:1});	
+});
+</script>	<!-- Facebook Plugin -->
+						<div class="box fb_plug">
+								<div class="head">
+										<h2>العربية فيسبوك</h2>
+								</div>
+								<div class="content">
+										<div class="arena">
+												<div class="fb-feed-container" >
+														<div class="fb-activity" data-site="http://www.alarabiya.net/" data-width="320" data-height="340" data-header="false" data-recommendations="false"></div>
+												</div>
+										</div>
+								</div>
+								<div class="foot"></div>
+						</div>
+							<!-- Twitter Plugin -->
+						<link rel="stylesheet" href="http://api.mediasphere.alarabiya.net/assets/css/twitter.css" type="text/css" />
+						
+						<div id="twtr_widg" class="box twtr_plug">
+								<div class="head">
+										<h2>العربية تويتر</h2>
+								</div>
+								
+										
+
+                                                
+                                                <!-- BEGIN TWITTER WIDGET -->
+                                        
+                                        
+                                                
+										 <script src="http://api.mediasphere.alarabiya.net/assets/js/jquery.min.js"></script>
+                                         <script src="http://api.mediasphere.alarabiya.net/assets/js/jquery.xdr-transport.js"></script>
+                            <div class="twtr-hd">
+                                <a class="twtr-profile-img-anchor" href="https://twitter.com/intent/user?screen_name=AlArabiya" target="_blank">
+                                    <img src="http://a0.twimg.com/profile_images/1677948476/aa_4__normal.jpg" class="twtr-profile-img" alt="profile">
+                                </a>
+                                <h3>
+                                    Al Arabiya Channel
+                                </h3>
+                                <h4>
+                                    <a href="https://twitter.com/intent/user?screen_name=AlArabiya" target="_blank">
+                                        AlArabiya
+                                    </a>
+                                </h4>
+                            </div>
+                                         <div id="twitter_widget">
+
+                                         </div>
+                            <div class="twtr-ft">
+                                <div>
+                                    <a href="https://twitter.com" target="_blank">
+                                        <img src="http://widgets.twimg.com/i/widget-bird.png" alt="">
+                                    </a>
+            <span>
+                <a href="https://twitter.com/AlArabiya" style="color:#641964" class="twtr-join-conv" target="_blank">
+                    Join the conversation
+                </a>
+            </span>
+                                </div>
+                            </div>
+                                         <script>
+                                            $.ajax({
+                                                url: 'http://api.mediasphere.alarabiya.net/twitter/',
+                                                success: function(data) {
+                                                    $('#twitter_widget').html(data);
+                                                },
+                                                error: function(data) {
+                                                }
+                                            });
+                                         </script>
+                                                 
+                                                
+                                                <!-- END TWITTER WIDGET -->
+                                                
+												
+										
+							
+							
+						</div>
+						<div class="foot33"></div>
+						<!-- End Twitter Plugin --> 
+	
+	<div class="foot33"></div>
+		
+</div>
+				
+
+
+
+			</div>
+			
+			<footer>
+	<div class="content_area">
+					
+
+<ul class="home home">
+	
+		<li class="title">&#1575;&#1604;&#1589;&#1601;&#1581;&#1577; &#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;</li>
+	
+	
+
+	
+
+</ul>
+	
+
+<ul class="aa_news">
+	
+		<li class="title">&#1571;&#1582;&#1576;&#1575;&#1585; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</li>
+	
+	<li><ul>
+	
+
+	<li class="">
+            <a href="/arab-and-world.html" title="الشرق الأوسط">الشرق الأوسط</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/arab-and-world.html" title="العرب والعالم">العرب والعالم</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/aswaq.html" title="الأسواق العربية">الأسواق العربية</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/sport.html" title="الرياضة">الرياضة</a>
+            
+    </li>
+			</ul></li>
+		<li><ul>
+
+	<li class="">
+            <a href="/medicine-and-health.html" title="طب وصحة">طب وصحة</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/culture-and-art.html" title="ثقافة وفن">ثقافة وفن</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/views.html" title="آراء">آراء</a>
+            
+    </li>
+	
+	</ul></li>
+	
+
+</ul>
+	
+
+<ul class="aa_programs">
+	
+		<li class="title">&#1576;&#1585;&#1575;&#1605;&#1580; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</li>
+	
+	<li><ul>
+	
+
+	<li class="">
+            <a href="/programs.html" title="برامج العربية">برامج العربية</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/alarabiya-videos.html" title="فيديوالعربية">فيديوالعربية</a>
+            
+    </li>
+	
+	</ul></li>
+	
+
+</ul>
+	
+
+<ul class="aa_services">
+	
+		<li class="title">&#1582;&#1583;&#1605;&#1575;&#1578; &#1605;&#1608;&#1575;&#1602;&#1593; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</li>
+	
+	<li><ul>
+	
+
+	<li class="">
+            <a href="/tools/حول-العربية.html" title="حول العربية.نت">حول العربية.نت</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/alarabiya-frequencies.html" title="ترددات القناة">ترددات القناة</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/tools/اعلن-معنا.html" title="أعلن معنا">أعلن معنا</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="/tools/اتصل-بنا.html" title="اتصل بنا">اتصل بنا</a>
+            
+    </li>
+			</ul></li>
+		<li><ul>
+
+	<li class="rss">
+            <a href="/tools/mrss.html" title="خدمة RSS">خدمة RSS</a>
+            
+    </li>
+	
+	</ul></li>
+	
+
+</ul>
+	
+
+<ul class="aa_languages">
+	
+		<li class="title">&#1604;&#1594;&#1575;&#1578; &#1571;&#1582;&#1585;&#1609;</li>
+	
+	<li><ul>
+	
+
+	<li class="">
+            <a href="http://english.alarabiya.net/" title="English">English</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="http://urdu.alarabiya.net/" title="أردو">أردو</a>
+            
+    </li>
+	
+	<li class="">
+            <a href="http://farsi.alarabiya.net/" title="فارسي">فارسي</a>
+            
+    </li>
+	
+	</ul></li>
+	
+
+</ul>
+	
+		
+		
+	</div>
+
+<div class="copyrights">
+	&copy; &#1580;&#1605;&#1610;&#1593; &#1575;&#1604;&#1581;&#1602;&#1608;&#1602; &#1605;&#1581;&#1601;&#1608;&#1592;&#1577; &#1604;&#1602;&#1606;&#1575;&#1577; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; 
+	2013	
+</div>
+	
+
+			</footer>
+		
+		</div>
+				
+		
+				
+		<!-- AdvStat BODY BLOCK 2 -->
+<script type="text/javascript" language="javascript">
+	serveIncludedScripts("body2");
+</script>
+		<!-- AdvStat BODY BLOCK 2 End -->
+	</body>
+</html>

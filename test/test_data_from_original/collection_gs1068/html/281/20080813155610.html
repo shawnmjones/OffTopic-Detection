@@ -1,0 +1,1496 @@
+<html>
+<head>
+<title>CIMI</title>
+<link href="/estilos.css" rel="stylesheet" type="text/css">
+<style><!--
+ @media print {
+ .notprint { display: none }
+ }
+ --></style>
+
+<SCRIPT language="JavaScript" TYPE="text/JavaScript">
+days = new Array(7)
+days[1] = "Domingo";
+days[2] = "Segunda";
+days[3] = "TerÃ§a"; 
+days[4] = "Quarta";
+days[5] = "Quinta";
+days[6] = "Sexta";
+days[7] = "Sabado";
+months = new Array(12)
+months[1] = "Janeiro";
+months[2] = "Fevereiro";
+months[3] = "MarÃ§o";
+months[4] = "Abril";
+months[5] = "Maio";
+months[6] = "Junho";
+months[7] = "Julho";
+months[8] = "Agosto";
+months[9] = "Setembro";
+months[10] = "Outubro"; 
+months[11] = "Novembro";
+months[12] = "Dezembro";
+
+today = new Date(); day = days[today.getDay() + 1]
+
+month = months[today.getMonth() + 1]
+date = today.getDate()
+year=today.getYear(); 
+
+if (year < 2000)
+	year = year + 1900;
+
+function data()
+{
+	document.write (""+ day + ", " + date + " de " + " " + month + " de " + year + "")
+}
+</SCRIPT>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> 
+<table width="770" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#000000" CLASS="notprint"><img src="/imagens/spacer.gif" width="1" height="1"></td>
+    <td valign="top"><table width="770"  border="0" cellpadding="0" cellspacing="0" class="texto10preto">
+      <tr>
+        <td height="142" valign="top" CLASS="notprint"><table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="225"><a href="/">
+    <script language=Javascript>
+			  var randimg = new Array("/imagens/rand01.gif", "/imagens/rand02.gif","/imagens/rand03.gif",
+ "/imagens/rand04.gif", "/imagens/rand05.gif", "/imagens/rand06.gif", "/imagens/rand07.gif", "/imagens/rand08.gif",
+"/imagens/rand09.gif", "/imagens/rand10.gif", "/imagens/rand11.gif", "/imagens/rand12.gif");
+
+  i = Math.floor(Math.random() * randimg.length);
+  document.write("<img src=" + randimg[i] + " width=225 height=142 border=0>");</script></a></td>
+    <td><table width="545" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td WIDTH="71"><img src="/imagens/top_01.gif" width="71" height="62"></td>
+        <td colspan="3" background="/imagens/top_04.gif"><a href=/?system=banner&action=click&url=http://www.cimi.org.br%2F%3Fsystem%3Dnews%26action%3Dread%26id%3D559%26eid%3D297&zona=18&id=55 ><img src=http://www.cimi.org.br/pub/banner/6cc073cde8ab79a59ca0482efd216998.jpg border=0></a></td>
+        </tr>
+      <tr>
+        <td COLSPAN="3" background="/imagens/top_07.jpg"><img src="/imagens/newlogo.jpg" width="319" height="68"></td>
+        <td WIDTH="153" align="right" background="/imagens/top_07.gif"><link href="/estilos.css" rel="stylesheet" type="text/css" />
+<table width="140" border="0" cellspacing="0" cellpadding="0" class=texto10branco>
+  <tr align="left" valign="middle"> 
+    <td height="10" colspan="2" class=texto10preto><img src="/imagens/tit_busca.gif" width="43" height="16" /></td>
+  </tr>
+  
+  <tr valign="middle">
+    <td height="10" class=texto10preto>&nbsp;</td>
+    <td height="10" class=texto10branco>Digite uma palavra:</td>
+  </tr>
+  
+  <tr> 
+    <form action="" method="get" name="search" id="search">
+      <input type="hidden" name="system" value="search">
+      <input type="hidden" name="action" value="busca">
+      <td width="6">&nbsp;</td>
+      <td width="168"><input name="qry" type="text" class="box" id="qry" size="6"> 
+        &nbsp; <input type="submit" name="Submit" value="Buscar" class="bto"></td>
+    </form>
+  </tr>
+</table>
+ </td>
+      </tr>
+      <tr>
+        <td background="/imagens/top_03.gif"><img src="/imagens/top_03.gif" width="71" height="12"></td>
+        <td WIDTH="197"><img src="/imagens/top_11.gif" width="197" height="12"></td>
+        <td WIDTH="124" background="/imagens/top_13.gif"><img src="/imagens/top_13.gif" width="124" height="12"></td>
+        <td><img src="/imagens/top_08.gif" width="152" height="12"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</td>
+      </tr>
+      <tr>
+        <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="151" valign="top" background="/imagens/fundo_menu.jpg" class="notprint" id="menu_esquerdo"><table width="151" border="0" cellpadding="0" cellspacing="0" class="texto10preto">
+  <tr align="center"> 
+   <td width="135"><table width="151" border="0" cellspacing="0" cellpadding="0" class="texto10preto">
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">O Cimi</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=224" target=_blank CLASS="texto_menu_h">Quem somos</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=293" target=_blank CLASS="texto_menu_h">Notas Cimi</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=225" target=_blank CLASS="texto_menu_h">Contatos Regionais</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=378" target=_blank CLASS="texto_menu_h">Centro de Formação Vicente Canhas</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=297" target=_blank CLASS="texto_menu_h">Apoio a ação missionária do Cimi</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=292"  CLASS="texto_menu_h">Povos Indígenas</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=292" target=_blank CLASS="texto_menu_h">No Brasil</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=242" target=_blank CLASS="texto_menu_h">Terras</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=243" target=_blank CLASS="texto_menu_h">Saúde</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=244" target=_blank CLASS="texto_menu_h">Educação</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=245" target=_blank CLASS="texto_menu_h">Movimento</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Canais</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=258" target=_blank CLASS="texto_menu_h">Conjuntura Nacional</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=259" target=_blank CLASS="texto_menu_h">Opinião</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=325" target=_blank CLASS="texto_menu_h">Especial MS</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=387" target=_blank CLASS="texto_menu_h">Terra Livre</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=330" target=_blank CLASS="texto_menu_h">Especial MA</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Política Indigenista</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=235" target=_blank CLASS="texto_menu_h">Estatuto</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=236" target=_blank CLASS="texto_menu_h">Congresso Nacional</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=237" target=_blank CLASS="texto_menu_h">Conselho</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Boletim "Mundo"</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=273" target=_blank CLASS="texto_menu_h">Sobre o Boletim</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=274" target=_blank CLASS="texto_menu_h">Português</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=275" target=_blank CLASS="texto_menu_h">English</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=276" target=_blank CLASS="texto_menu_h">Deutsch</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=361" target=_blank CLASS="texto_menu_h">Italiano</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Assessoria Jurídica</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=261" target=_blank CLASS="texto_menu_h">Apresentação</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=262" target=_blank CLASS="texto_menu_h">Artigos</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=263" target=_blank CLASS="texto_menu_h">Pareceres</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=265" target=_blank CLASS="texto_menu_h">Jurisprudência</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=264" target=_blank CLASS="texto_menu_h">Petições</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=266" target=_blank CLASS="texto_menu_h">Legislação</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=267" target=_blank CLASS="texto_menu_h">Representações</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Assessoria Teológica</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=368" target=_blank CLASS="texto_menu_h">Apresentação</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=369" target=_blank CLASS="texto_menu_h">Plano Pastoral e outros documentos do Cimi</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=370" target=_blank CLASS="texto_menu_h">Teologia Missionária</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=371" target=_blank CLASS="texto_menu_h">Teologia Índia</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=372" target=_blank CLASS="texto_menu_h">Teologia prático-pastoral</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=373" target=_blank CLASS="texto_menu_h">História missionária</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=374" target=_blank CLASS="texto_menu_h">Espiritualidade</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=375" target=_blank CLASS="texto_menu_h">Experiências e notícias pastorais das bases</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=376"  CLASS="texto_menu_h">V Celam (Aparecida)</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Publicações</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=255" target=_blank CLASS="texto_menu_h">Jornal Porantim</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=218" target=_blank CLASS="texto_menu_h">Semana dos Povos Indígenas</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=251" target=_blank CLASS="texto_menu_h">Livros/Subsídios</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=252" target=_blank CLASS="texto_menu_h">Mensageiro</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=254" target=_blank CLASS="texto_menu_h">Vídeos</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=253" target=_blank CLASS="texto_menu_h">Potyrõ</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=383" target=_blank CLASS="texto_menu_h">Relatório de  Violência 2003/2005</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Especiais</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=246" target=_blank CLASS="texto_menu_h">Ameríndia</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=247" target=_blank CLASS="texto_menu_h">Raposa Serra do Sol</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=341" target=_blank CLASS="texto_menu_h">Rio São Francisco</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=362" target=_blank CLASS="texto_menu_h">Sepé Tiaraju</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=385" target=_blank CLASS="texto_menu_h">Julgamento Caso Vicente Cañas</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="389"  CLASS="texto_menu_h">Povos nas cidades</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">English version</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=336" target=_blank CLASS="texto_menu_h">About Cimi</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=337" target=_blank CLASS="texto_menu_h">How Cimi works</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=338" target=_blank CLASS="texto_menu_h">The regional offices</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=339" target=_blank CLASS="texto_menu_h">Contact us</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=340" target=_blank CLASS="texto_menu_h">News</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=360" target=_blank CLASS="texto_menu_h">Indigenous people</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=364" target=_blank CLASS="texto_menu_h">Campaign</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Fóruns</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=230" target=_blank CLASS="texto_menu_h">Social Mundial</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=231" target=_blank CLASS="texto_menu_h">Social Brasileiro</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=232" target=_blank CLASS="texto_menu_h">Pan Amazônico</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=233" target=_blank CLASS="texto_menu_h">Social das Américas</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=294" target=_blank CLASS="texto_menu_h">II Encontro</A></td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase0" width="144" ALIGN="left" valign="middle">Relatos da vida missionária</td>
+  </tr>
+  
+
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+  <tr>
+    <td class="fase1" width="144" ALIGN="left" valign="middle"><A HREF="?system=news&eid=381" target=_blank CLASS="texto_menu_h">Conheça a nova seção do sítio</A></td>
+  </tr>
+  
+
+</table>
+</td>
+  <!--  <td width="135"><script src='/includes/wc_forms.js' language='javascript'></script>
+<script>
+var xmlHttp; // Objeto para comunicação com o server;
+var id_menu = "";
+var id_menu_anterior="";
+var ocupado=0;
+var strFuncaoExecutar="";
+function voidAbreMenu(valor)
+{
+
+	if(id_menu_anterior)
+	{
+		document.getElementById("lista_menu"+id_menu_anterior).innerHTML="";
+	}
+	id_menu = valor;
+	if(valor)
+		voidAbreMain("menu","menu_dinamico_subitem","&id_menu="+valor,"voidTrocaDiv","lista_menu"+valor,".styl");
+	id_menu_anterior=valor;
+}
+function voidAbreMain(system,action,parametro,strFuncao,nomeDiv,acaoDiv)
+// nomeDiv e acaoDiv não serão utilizados.
+{
+	var bufferAcao="";
+	var bufferFuncao="";
+	var strNomeDiv="";
+	var strAcaoDiv="";
+	if(ocupado==0)
+	{
+	    ocupado=1;
+		if(system=="menu")
+		{
+			if(action=="menu_dinamico_subitem")
+			{
+				strNomeDiv="lista_menu"+id_menu;
+				strAcaoDiv = ".innerHTML";
+			}else
+			{
+				if(nomeDiv == "menu_topo")
+				{
+					strNomeDiv = "menu_topo";
+				}
+				else
+					strNomeDiv = "menu_esquerdo";
+			}
+		}
+		if(system=="news" || system=='historico_ajax')
+		{
+			strNomeDiv = "div_main";
+   			strAcaoDiv = ".innerHTML";
+		}
+		if(strNomeDiv == "" || strAcaoDiv=="")
+		{
+		// chamada padrão
+			strNomeDiv = "div_main";
+   			strAcaoDiv = ".innerHTML";
+		}
+		bufferAcao="dev.php?system="+system+"&action="+action +parametro;
+  		bufferFuncao=strFuncao;
+  		strFuncaoExecutar = 'document.getElementById("'+strNomeDiv+'")'+strAcaoDiv+'=xmlHttp.responseText';
+	    iniciaRequisicao(bufferAcao,bufferFuncao);
+	}else
+		setTimeout("voidAbreMain('"+system+"','"+action+"','"+parametro+"','"+strFuncao+"','"+nomeDiv+"','"+acaoDiv+"')",1);
+
+}
+function iniciaRequisicao(acaoUrl,Funcao)
+{
+	createXMLHttpRequest();
+	xmlHttp.onreadystatechange = eval(Funcao);
+	xmlHttp.open("GET", acaoUrl, true);
+	xmlHttp.send(null);
+	ocupado=1;
+}
+
+function voidTrocaDiv()
+{
+	if(xmlHttp.readyState==4)
+	{
+	    if(xmlHttp.status==200)
+	    {
+			//alert(strFuncaoExecutar + "   -"+ xmlHttp.responseText); // modo Debug;
+			eval(strFuncaoExecutar);
+	        ocupado=0;
+		}
+	}
+}
+function voidTrocaDivHistorico()
+{
+	if(xmlHttp.readyState==4)
+	{
+	    if(xmlHttp.status==200)
+	    {
+			if(xmlHttp.responseText)
+				eval(xmlHttp.responseText);
+			else
+			    location.href='index.php';
+	    	ocupado=0;
+		}
+	}
+}
+
+</script>
+<table width="150" border="0" cellspacing="0" cellpadding="0" class="texto10preto">
+
+  <tr>
+    <td width="150" CLASS="texto11preto" ><STRONG class="texto11branco">
+	<A HREF='javascript:voidAbreMenu("1");' class="texto11branco">Cimi</a>
+	</STRONG></td>
+  </tr>
+  <tr>
+    <td COLSPAN="2" ><IMG SRC="/imagens/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+  </tr>
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+	<TR ><TD><div id='lista_menu1'>&nbsp;</div></TD></TR>
+  <tr>
+    <td><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="10"></td>
+  </tr>
+
+  <tr>
+    <td width="150" CLASS="texto11preto" ><STRONG class="texto11branco">
+	<A HREF='javascript:voidAbreMenu("4");' class="texto11branco">Povos nas cidades</a>
+	</STRONG></td>
+  </tr>
+  <tr>
+    <td COLSPAN="2" ><IMG SRC="/imagens/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+  </tr>
+  <tr>
+    <td COLSPAN="2"><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="5"></td>
+  </tr>
+	<TR ><TD><div id='lista_menu4'>&nbsp;</div></TD></TR>
+  <tr>
+    <td><IMG SRC="/imagens/spacer.gif" WIDTH="5" HEIGHT="10"></td>
+  </tr>
+
+</table>
+<script>
+   voidAbreMenu("");
+</script>
+</td>-->
+  </tr>
+  <tr align="left">
+    <td align="center"><img src="/imagens/spacer.gif" width="10" height="15"></td>
+  </tr>
+  <tr align="left">
+    <td align="center"></td>
+  </tr>
+  <tr align="left">
+    <td align="center"><img src="/imagens/spacer.gif" width="10" height="15"></td>
+  </tr>
+  <tr align="left">
+    <td align="center"></td>
+  </tr>
+  <tr align="left">
+    <td align="center"><img src="/imagens/spacer.gif" width="10" height="15"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="top"><a href="http://www.webveritas.com.br" target="_blank"><img src="/imagens/wv.gif" width="151" height="25" border="0"></a></td>
+  </tr>
+</table>
+</td>
+            <td width="6" background="/imagens/menu_sombra.jpg" CLASS="notprint">&nbsp;</td>
+            <td width="461" valign="top" class="texto10preto"><div id='div_main'><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  <td colspan="3"><i class="texto9preto">
+      <script src="/includes/scripts.js" language="JavaScript"></script>
+Bras&iacute;lia,<SCRIPT LANGUAGE="JavaScript">data()</SCRIPT></TD>    
+</i>
+</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+    <tr align="center">
+    <td valign="top">
+        <table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><strong>Destaques</strong></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" background="/imagens/bokc05.gif"><table border="0" cellspacing="0" cellpadding="0" class="texto10preto">
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3360&eid=257" CLASS="texto10preto"><STRONG>Povos indígenas e poder político - Simpósio na UnB</STRONG></A> <BR>
+            Simpósio internacional discute política indigenista de países latino americanos<br>
+            <font color="#999999">12/08/2008<br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3359&eid=355" CLASS="texto10preto"><STRONG>Outro indígena falece em Rondônia devido à demora no atendimento</STRONG></A> <BR>
+            Em 2008, quatro indígenas morreram no estado em consequência da precariedade no atendimento à saúde<br>
+            <font color="#999999">12/08/2008<br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3357&eid=236" CLASS="texto10preto"><STRONG>Câmara debaterá situação da terra indígena Raposa Serra do Sol</STRONG></A> <BR>
+            Audiência Pública acontece terça-feira, dia 12 de agosto, às 14h.<br>
+            <font color="#999999">08/08/2008<br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3356&eid=274" CLASS="texto10preto"><STRONG>Informe n. 828: Arrozeiros estão invadindo patrimônio do povo brasileiro, diz Dalmo Dallari</STRONG></A> <BR>
+            e Após incêndio, os Truká reconstroem retomada e seguem luta contra a Transposição<br>
+            <font color="#999999">07/08/2008<br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3355&eid=355" CLASS="texto10preto"><STRONG>Povo Juari retoma seu território em Rondônia</STRONG></A> <BR>
+            Funai criou grupo para identificação da terra em 2002, mas estudo não foi concluído<br>
+            <font color="#999999">07/08/2008<br>
+            <br>
+          </font></td>
+        </tr>
+        
+    </table></td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><a href="?system=news&action=news&eid=275" class="texto10llj"></a></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+<br><table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><strong>Not&iacute;cias</strong></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" background="/imagens/bokc05.gif"><table border="0" cellspacing="0" cellpadding="0" class="texto10preto">
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3350&eid=142" CLASS="texto10preto"><STRONG>Elba Ramalho e o São Francisco - artigo Roberto Malvezzi (Gogó)</STRONG></A> <BR>
+            A transposição já consumiu cerca de 600 milhões de reais sem levar água para lugar algum.<br>
+            <font color="#999999"><br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3333&eid=142" CLASS="texto10preto"><STRONG>Manifiesto contra la ley de migración europea</STRONG></A> <BR>
+            Europa debería pedir perdón al mundo, en lugar de consagrar por ley la cacería y el castigo de los...<br>
+            <font color="#999999"><br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3324&eid=142" CLASS="texto10preto"><STRONG>Pecuaristas, usineiros e carvoeiros entram para a ‘lista suja’</STRONG></A> <BR>
+            Dos 43 novos nomes incluídos, 20 exploravam mão-de-obra escrava na pecuária bovina<br>
+            <font color="#999999"><br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3323&eid=142" CLASS="texto10preto"><STRONG>Entrevista com  Gilmar Mauro, do MST</STRONG></A> <BR>
+            "Não interessa ao grande capital se ele destrói o ambiente,o ser humano. Interessa estar produzindo"<br>
+            <font color="#999999"><br>
+            <br>
+          </font></td>
+        </tr>
+        
+        <tr>
+          <td WIDTH="250" align="left" valign="top">
+             
+            <A HREF="/?system=news&action=read&id=3314&eid=142" CLASS="texto10preto"><STRONG>4ª Conferência da Paz no Brasil</STRONG></A> <BR>
+            Limite da propriedade da terra e sua função social – O uso sustentável dos recursos naturais<br>
+            <font color="#999999"><br>
+            <br>
+          </font></td>
+        </tr>
+        
+    </table></td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><a href="?system=news&action=news&eid=142" class="texto10llj"><strong>ver mais </strong></a></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+</td>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+    <td valign="top"> <BR>
+<link href="/estilos.css" rel="stylesheet" type="text/css">
+<table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><strong>Galeria de Imagens </strong></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" align="center" background="/imagens/bokc05.gif"><script src="/includes/wc_forms.js"></script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  
+  <tr> 
+    
+    <td align="center" >
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td align="center"><a href="#" onClick="openWindow('/modules/gallery/show.php?id=774','pop','width=550,height=450')"><img src="/pub/gallery/185/hili/17c870ea223d12b3267dd7bb5414b2b5.jpg" border=0 class=boxlook></a></td>
+        </tr>
+	<tr>
+	  <td height="10"></td>
+	</tr>
+      </table>
+    </td>
+    
+    <td align="center" >
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td align="center"><a href="#" onClick="openWindow('/modules/gallery/show.php?id=773','pop','width=550,height=450')"><img src="/pub/gallery/185/hili/0df9fb2f1499524c24f0a5316f62825a.jpg" border=0 class=boxlook></a></td>
+        </tr>
+	<tr>
+	  <td height="10"></td>
+	</tr>
+      </table>
+    </td>
+    
+  </tr>
+  
+</table>
+
+</td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><A HREF="/?system=gallery&action=list" CLASS="texto10llj"><STRONG>mais imagens</STRONG></A></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+
+
+<script language=javascript>
+function janela(multimidia,titulo)
+{
+
+window.open("modules/videos/ver.php?multimidia="+multimidia+"&titulo="+titulo,"my_new_window","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,copyhistory=no,width=400,height=455")
+
+}
+
+
+</script>
+<link href="/estilos.css" rel="stylesheet" type="text/css">
+
+<table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><strong>Galeria de V&iacute;deos </strong></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" align="center" background="/imagens/bokc05.gif">
+	<table width="180" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td WIDTH="180"><TABLE WIDTH="180" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+            <TR>
+              <TD><IMG SRC="/imagens/spacer.gif" WIDTH="50" HEIGHT="5"></TD>
+            </TR>
+        </TABLE></td>
+      </tr>
+      
+      <tr align="left" valign="top">
+        <td><table width="180" border="0" cellpadding="0" cellspacing="0">
+            <tr align="left" valign="top">
+              <td class="texto10preto"> <strong><IMG SRC="http://www.cimi.org.br/pub/videos/imagem/8bc0ff31bedfc9e8d679eb195b6fc77c.jpg" WIDTH="81" HEIGHT="52" ALIGN="LEFT">3º Terra Livre - Anastácio Peralta Guarani Kaiowá - Centro de Mídia Independente (GO)</strong></td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr align="left" valign="top">
+        <td><IMG SRC="/imagens/spacer.gif" WIDTH="50" HEIGHT="5"></td>
+      </tr>
+      
+    </table></td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><strong><a href="?system=videos"  class="texto10llj">ver mais</a></strong></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+
+<BR>
+<table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><SPAN CLASS="texto12azul"><STRONG><STRONG><a href="/?system=news&eid=194" CLASS="texto10laranja">Campanhas</a></STRONG></STRONG></SPAN></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" background="/imagens/bokc05.gif"><table width="182" border="0" cellspacing="0" cellpadding="0">
+      
+      <tr>
+        <td width="182" class="texto10preto">
+           
+          <a href="/?system=news&action=read&id=3340&eid=194" class="texto10preto"><strong>Basta de Genocídio: Pela Terra e Vida do Povo Kaiowá Guarani</strong></a> <br>
+      Movimento Povo Guarani! Um Grande Povo!</td>
+      </tr>
+      <tr>
+        <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+      </tr>
+      
+    </table></td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><a href="?system=news&action=news&eid=194" class="texto10llj"><strong>ver mais</strong></a></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+<BR><BR>
+
+<table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><STRONG>R&aacute;dio
+    Porantim</STRONG></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" background="/imagens/bokc05.gif"><table WIDTH="187" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+      <tr>
+        <td width="171" align="left" valign="top"><a href="/?system=album&action=musicas&aid=6"><img border=0 src="http://www.cimi.org.br/pub/album/imagem/hili/a0fb0ff65ea050234d28859bbed78f5c.jpg"><IMG BORDER=0 SRC="/imagens/ouvircd.gif" WIDTH="80" HEIGHT="20"></a></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><a class="texto10preto" href="/?system=album&action=musicas&aid=6">Clique
+          e ou&ccedil;a m&uacute;sicas e &uacute;ltimas not&iacute;cias<b><BR>
+          Campanha de apoio à ação missionária do Cimi</b></a></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><img src="/imagens/spacer.gif" width="16" height="6"></td>
+      </tr>
+    </table></td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><a href="/?system=album" class="texto10llj"><strong>ver
+          mais</strong></a></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+
+<BR><table width="221" border="0" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><SPAN CLASS="texto12azul"><STRONG><STRONG><a href="/?system=links&action=links" CLASS="texto10laranja">Recomendamos</a></STRONG></STRONG></SPAN></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" background="/imagens/bokc05.gif">
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+	
+     <td class="texto10preto" STYLE="text-align:justify "> <a href="www.brasildefato.com.br" class="texto10preto" alt="Brasil de Fato" target="_blank"><strong><img src="http://www.cimi.org.br/pub/links/imagem/e9fd53fd2ee8ef697a165de8f28977ea.gif" border="0"></a></td>
+   
+     <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.missiologia.org.br" class="texto10preto" alt="Missiologia - Instituto de Estudos Teológicos" target="_blank"><strong><img src="http://www.cimi.org.br/pub/links/imagem/b3b14e0b698da394a21ec3a09ecc5a67.gif" border="0"></a></td>
+   
+     <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.prelaziasaofelixdoaraguaia.org.br/" class="texto10preto" alt="Prelazia de São Félix do Araguaia" target="_blank"><strong><img src="http://www.cimi.org.br/pub/links/imagem/0801b53d99ef93907cf4d6afff7042b5.gif" border="0"></a></td>
+    
+   </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+   </tr>
+ </table>
+</td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><a href="/?system=links&action=links" class="texto10llj"><strong>mais recomenda&ccedil;&otilde;es</strong></a></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+<BR><LINK HREF="/estilos.css" REL="stylesheet" TYPE="text/css">
+<table width="221" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17"><img src="/imagens/bokc01.gif" width="17" height="21"></td>
+    <td colspan="2" align="right" background="/imagens/bokc02.gif" class="texto10laranja"><SPAN CLASS="texto12azul"><STRONG><STRONG><a href="/?system=news&eid={T:EDITORIA.ID}" CLASS="texto10laranja">Publica&ccedil;&otilde;es</a></STRONG></STRONG></SPAN></td>
+    <td width="15"><img src="/imagens/bokc03.gif" width="15" height="21"></td>
+  </tr>
+  <tr>
+    <td background="/imagens/bokc04.gif">&nbsp;</td>
+    <td colspan="2" background="/imagens/bokc05.gif">
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1217339102_Abaixo-Assinado Guarani-Kaiowa.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Basta de Genocídio: Pela Terra e Vida do Povo Kaiowá Guarani</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1183668907_Porantim 296.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Porantim 296 - junho/julho 2007</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1208873764_1 Relat Violencia - 2006-2007- Abertura e Cap I.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Relatório de Violência (2006-2007) - Apresentação e Cáp. I</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1217509056_fundament_demarc_areas_continuas.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Fundamentação da Demarcação das Terras Indígenas em Áreas Contínuas</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1208873977_2 Relat Violencia - 2006-2007- Cap II.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Relatório de Violência (2006-2007) - Cáp. II</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1176485904_Porantim 294.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Porantim n.294 Abril 2007</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1149026201_4.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Relatório "A Violência Contra os Povos Indígenas no Brasil" (2003-2005) - Capítulo 4</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1207766536_1 Relat Violencia - 2006-2007- Abertura e Cap I.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Relatório de Violência 2006-2007 - Capítulo I</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1207919778_Porantim 304.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Jornal Porantim - n. 304 - Abril de 2008</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+  <tr>
+    <td class="texto10preto" STYLE="text-align:justify "> <a href="http://www.cimi.org.br/pub/publicacoes/1216004427_Mensageiro169.pdf" class="texto10preto"><strong><IMG SRC="/imagens/pasta.gif" WIDTH="14" HEIGHT="12" HSPACE="3" BORDER="0" ALIGN="ABSMIDDLE">Mensageiro nº 169 - maio/junho - 2008</strong></a></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/spacer.gif" width="10" height="10"></td>
+  </tr>
+  
+</table>
+</td>
+    <td background="/imagens/bokc06.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/bokc07.gif" width="17" height="27"></td>
+    <td width="49" background="/imagens/bokc09.gif"><img src="/imagens/bokc08.gif" width="49" height="27"></td>
+    <td align="right" valign="top" background="/imagens/bokc09.gif"><a href="/?system=publicacoes&action=categorias" class="texto10llj"><strong>mais publica&ccedil;&otilde;es</strong></a></td>
+    <td><img src="/imagens/bokc10.gif" width="15" height="27"></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</div></td>
+            <td width="152" align="center" valign="top" bgcolor="E9E9E9" class="notprint"><link href="/estilos.css" rel="stylesheet" type="text/css" />
+<table width="145" border="0" cellpadding="0" cellspacing="0" class="texto10branco">
+    <tr> 
+      <td valign="top"><script>
+function email(action)
+{
+   document.boletim.action.value=action;
+   document.boletim.submit();
+}
+</script>
+<link href="/estilos.css" rel="stylesheet" type="text/css">
+
+<table width="140" border="0" cellpadding="0" cellspacing="0" class="texto10branco">
+  <tr>
+  <td><span class="texto10preto"><img src="/imagens/tit_informe.gif" width="87" height="28" /></span></td>
+  </tr>
+  <tr>
+    <td class="texto10preto">Cadastre seu e-mail: </td>
+  </tr>
+  <form name="boletim" METHOD="POST">
+    <input type="hidden" name="system" value="boletim">
+    <input type="hidden" name="action" value="inserir">
+    <tr>
+      <td><span class="texto9bco"><img src="/imagens/spacer.gif" width="1" height="5" /></span></td>
+    </tr>
+    <tr> 
+      <td WIDTH="100"><input type="Text" class="box" name="email" size="15" maxlength="45"></td>
+    </tr>
+    <tr>
+      <td class="texto9bco"><img src="/imagens/spacer.gif" width="1" height="5" /></td>
+    </tr>
+    <tr>
+      <td class="texto9bco"><a href="javascript:email('inserir')" class="texto10branco"><strong class="texto10preto">Cadastrar </strong><span class="texto10preto">|</span></a> <a href="javascript:email('remover')" class="texto10preto"> Remover</a></td>
+    </tr>
+  </form>
+</table>
+</td>
+    </tr>
+<tr> 
+    <td align="left" valign="top"><img src="/imagens/spacer.gif" width="10" height="8" /></td>
+  </tr>
+<tr>
+  <td align="left" valign="top" bgcolor="#CCCCCC"><img src="/imagens/spacer.gif" width="1" height="1"></td>
+</tr>
+<tr>
+  <td align="left" valign="top"><img src="/imagens/spacer.gif" width="10" height="5" /></td>
+</tr>
+<tr>
+  <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2"><img src="/imagens/tit_publi.gif" width="77" height="22" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="10%"><img src="/imagens/seta.jpg" width="14" height="13" /></td>
+      <td width="90%"><a href="/?system=publicacoes&amp;action=publicacoes&amp;cid=2" class="texto11preto">Jornal Porantim</a></td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="/imagens/spacer.gif" width="10" height="8" /></td>
+      </tr>
+    <tr>
+      <td><img src="/imagens/seta.jpg" width="14" height="13" /></td>
+      <td><a href="/?system=publicacoes&amp;action=publicacoes&amp;cid=9" class="texto11preto">Revista Mensageiro</a></td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="/imagens/spacer.gif" width="10" height="8" /></td>
+      </tr>
+    <tr>
+      <td><img src="/imagens/seta.jpg" width="14" height="13" /></td>
+      <td><a href="http://www.cimi.org.br/?system=album&amp;action=musicas&amp;aid=2" class="texto11preto">R&aacute;dio Potyr&ocirc;</a></td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="/imagens/spacer.gif" width="10" height="8" /></td>
+      </tr>
+    <tr>
+      <td><img src="/imagens/seta.jpg" width="14" height="13" /></td>
+      <td><a href="/?system=publicacoes&amp;action=publicacoes&amp;cid=11" class="texto11preto">Relat&oacute;rio de Viol&ecirc;ncia</a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+  </table></td>
+</tr>
+
+  
+  <tr> 
+    <td valign="top"><table width="140" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="18"><img src="/imagens/box01.jpg" width="18" height="24"></td>
+    <td width="51" background="/imagens/box03.jpg"><img src="/imagens/box02.jpg" width="51" height="24"></td>
+    <td align="right" background="/imagens/box03.jpg" class="texto10laranja"><strong>F&oacute;rum</strong></td>
+    <td width="15"><img src="/imagens/box04.jpg" width="16" height="24"></td>
+  </tr>
+  <tr>
+    <td rowspan="2" background="/imagens/box05.jpg">&nbsp;</td>
+    <td colspan="2" background="/imagens/box06.jpg">&nbsp;</td>
+    <td rowspan="2" background="/imagens/box07.jpg">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" background="/imagens/box06.jpg"><table width="100%" border="0" cellpadding="0" cellspacing="0" class=texto10preto>
+      
+      <tr align="left" valign="TOP">
+        <td width="12" height="22" class="texto10preto"><img src="/imagens/seta.jpg" width="14" height="13"></td>
+        <td height="22" class="texto10preto"><a href="?system=forum&action=participar&forum_id=56" class="texto10preto">O Estado brasileiro respeita os direitos dos povos indígenas?</a></td>
+      </tr>
+      
+      <tr>
+        <td colspan="2" align="right" class="texto10preto"><img src="/imagens/spacer.gif" width="10" height="5"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><a href="?system=forum" class="texto10llj">mais f&oacute;runs</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="/imagens/box08.jpg" width="18" height="16"></td>
+    <td colspan="2" background="/imagens/box09.jpg"><img src="/imagens/spacer.gif" width="10" height="16"></td>
+    <td><img src="/imagens/box10.jpg" width="16" height="16"></td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top"><img src="/imagens/spacer.gif" width="10" height="8"></td>
+  </tr>
+  <tr> 
+    <td valign="top"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+
+</table>
+</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#000000" CLASS="notprint"><img src="/imagens/spacer.gif" width="1" height="1"></td>
+  </tr>
+</table>
+</body>
+</html>

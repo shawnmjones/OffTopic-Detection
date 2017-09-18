@@ -1,0 +1,641 @@
+<html>
+<head>
+
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1256">
+
+<title>Al Haq</title>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+</head>
+
+<body topmargin=10 bottommargin=50 leftmargin=0 marginwidth=0 marginheight=0 bgcolor="ffffff" onload="loadon()" onresize="resizeon()" onclick="clickon()">
+<a name="top"></a>
+
+<center>
+
+<table width=780 cellpadding=0 cellspacing=0 border=0>
+<tr valign=top>
+<td rowspan=2><a href="index.php" title=" Go to Home Page "><img src="images/logo11.gif" border=0></a></td>
+<td colspan=3><img src="images/logo12.gif"></td>
+</tr>
+<tr valign=top hiegt=50>
+<!--<td width=175><img src="images/logo2.gif"></td>-->
+<td background="images/back1.gif" width=595 align=right><form method="post" name='ser' action="search1.php"><input type="hidden" name='searchkey'><font class="titl">Search Site <input type="text" name='searchkey' size=20 style={height:15px; font class="black"}></td>
+<td background="images/back1.gif" ><input type="image" src="images/go.gif"></form></td>
+<td background="images/back1.gif" valign=top align=center width=100><a href="arabic.php" class="titl"><font color="ffffff"><b> بالعربيــــــة </a></b></td>
+<td width=20 background="images/back1.gif"></td></tr></table>
+
+<table width=780 cellpadding=0 cellspacing=0 border=0>
+<tr valign=top>
+
+
+
+<td align=left width=184 bgcolor="#9E9B7B">
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr valign=top><td align="center" bgcolor="FFFFFF">
+
+<script language = "JavaScript">
+ 
+ 
+y = 0;
+
+summenu = 12;
+var mname = new Array(12);
+var mnum = new Array(12);
+mname[1] = 'menu26';
+mnum[1] = '26';
+mname[2] = 'menu1';
+mnum[2] = '1';
+mname[3] = 'menu29';
+mnum[3] = '29';
+mname[4] = 'menu4';
+mnum[4] = '4';
+mname[5] = 'menu5';
+mnum[5] = '5';
+mname[6] = 'menu38';
+mnum[6] = '38';
+mname[7] = 'menu3';
+mnum[7] = '3';
+mname[8] = 'menu6';
+mnum[8] = '6';
+mname[9] = 'menu8';
+mnum[9] = '8';
+mname[10] = 'menu9';
+mnum[10] = '9';
+mname[11] = 'menu37';
+mnum[11] = '37';
+mname[12] = 'menu10';
+mnum[12] = '10';
+var nsub = new Array(12);
+
+var m  = new Array (12);
+var ref = new Array(12);
+var id = new Array(12);
+nsub[1] = '0';
+nsub[2] = '0';
+nsub[3] = '0';
+nsub[4] = '0';
+nsub[5] = '0';
+nsub[6] = '0';
+nsub[7] = '0';
+nsub[8] = '0';
+nsub[9] = '0';
+nsub[10] = '0';
+nsub[11] = '0';
+nsub[12] = '0';
+function open26(){ 
+z = 1;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu26.style.visibility="visible";
+document.all.menu26.style.left = x ;
+document.all.menu26.style.top =  82 + (22 * z);
+document.all.menu26.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu26").style.visibility="visible";
+document.getElementById("menu26").style.left = x;
+document.getElementById("menu26").style.top=82 + (22 * z);
+document.getElementById("menu26").style.width=200;
+} 
+}
+ 
+function open1(){ 
+z = 2;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu1.style.visibility="visible";
+document.all.menu1.style.left = x ;
+document.all.menu1.style.top =  82 + (22 * z);
+document.all.menu1.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu1").style.visibility="visible";
+document.getElementById("menu1").style.left = x;
+document.getElementById("menu1").style.top=82 + (22 * z);
+document.getElementById("menu1").style.width=200;
+} 
+}
+ 
+function open29(){ 
+z = 3;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu29.style.visibility="visible";
+document.all.menu29.style.left = x ;
+document.all.menu29.style.top =  82 + (22 * z);
+document.all.menu29.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu29").style.visibility="visible";
+document.getElementById("menu29").style.left = x;
+document.getElementById("menu29").style.top=82 + (22 * z);
+document.getElementById("menu29").style.width=200;
+} 
+}
+ 
+function open4(){ 
+z = 4;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu4.style.visibility="visible";
+document.all.menu4.style.left = x ;
+document.all.menu4.style.top =  82 + (22 * z);
+document.all.menu4.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu4").style.visibility="visible";
+document.getElementById("menu4").style.left = x;
+document.getElementById("menu4").style.top=82 + (22 * z);
+document.getElementById("menu4").style.width=200;
+} 
+}
+ 
+function open5(){ 
+z = 5;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu5.style.visibility="visible";
+document.all.menu5.style.left = x ;
+document.all.menu5.style.top =  82 + (22 * z);
+document.all.menu5.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu5").style.visibility="visible";
+document.getElementById("menu5").style.left = x;
+document.getElementById("menu5").style.top=82 + (22 * z);
+document.getElementById("menu5").style.width=200;
+} 
+}
+ 
+function open38(){ 
+z = 6;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu38.style.visibility="visible";
+document.all.menu38.style.left = x ;
+document.all.menu38.style.top =  82 + (22 * z);
+document.all.menu38.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu38").style.visibility="visible";
+document.getElementById("menu38").style.left = x;
+document.getElementById("menu38").style.top=82 + (22 * z);
+document.getElementById("menu38").style.width=200;
+} 
+}
+ 
+function open3(){ 
+z = 7;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu3.style.visibility="visible";
+document.all.menu3.style.left = x ;
+document.all.menu3.style.top =  82 + (22 * z);
+document.all.menu3.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu3").style.visibility="visible";
+document.getElementById("menu3").style.left = x;
+document.getElementById("menu3").style.top=82 + (22 * z);
+document.getElementById("menu3").style.width=200;
+} 
+}
+ 
+function open6(){ 
+z = 8;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu6.style.visibility="visible";
+document.all.menu6.style.left = x ;
+document.all.menu6.style.top =  82 + (22 * z);
+document.all.menu6.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu6").style.visibility="visible";
+document.getElementById("menu6").style.left = x;
+document.getElementById("menu6").style.top=82 + (22 * z);
+document.getElementById("menu6").style.width=200;
+} 
+}
+ 
+function open8(){ 
+z = 9;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu8.style.visibility="visible";
+document.all.menu8.style.left = x ;
+document.all.menu8.style.top =  82 + (22 * z);
+document.all.menu8.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu8").style.visibility="visible";
+document.getElementById("menu8").style.left = x;
+document.getElementById("menu8").style.top=82 + (22 * z);
+document.getElementById("menu8").style.width=200;
+} 
+}
+ 
+function open9(){ 
+z = 10;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu9.style.visibility="visible";
+document.all.menu9.style.left = x ;
+document.all.menu9.style.top =  82 + (22 * z);
+document.all.menu9.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu9").style.visibility="visible";
+document.getElementById("menu9").style.left = x;
+document.getElementById("menu9").style.top=82 + (22 * z);
+document.getElementById("menu9").style.width=200;
+} 
+}
+ 
+function open37(){ 
+z = 11;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu37.style.visibility="visible";
+document.all.menu37.style.left = x ;
+document.all.menu37.style.top =  82 + (22 * z);
+document.all.menu37.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu37").style.visibility="visible";
+document.getElementById("menu37").style.left = x;
+document.getElementById("menu37").style.top=82 + (22 * z);
+document.getElementById("menu37").style.width=200;
+} 
+}
+ 
+function open10(){ 
+z = 12;
+close();
+x = (screen_width / 2) - 260;
+if (document.all) {
+
+document.all.menu10.style.visibility="visible";
+document.all.menu10.style.left = x ;
+document.all.menu10.style.top =  82 + (22 * z);
+document.all.menu10.style.width = 150;
+}
+else if (document.getElementById) { 
+
+document.getElementById("menu10").style.visibility="visible";
+document.getElementById("menu10").style.left = x;
+document.getElementById("menu10").style.top=82 + (22 * z);
+document.getElementById("menu10").style.width=200;
+} 
+}
+ 
+
+
+
+
+//Closes All Menus & SubMenu
+function close(){
+if (document.all) {
+
+document.all.menu26.style.visibility="hidden";
+
+document.all.menu1.style.visibility="hidden";
+
+document.all.menu29.style.visibility="hidden";
+
+document.all.menu4.style.visibility="hidden";
+
+document.all.menu5.style.visibility="hidden";
+
+document.all.menu38.style.visibility="hidden";
+
+document.all.menu3.style.visibility="hidden";
+
+document.all.menu6.style.visibility="hidden";
+
+document.all.menu8.style.visibility="hidden";
+
+document.all.menu9.style.visibility="hidden";
+
+document.all.menu37.style.visibility="hidden";
+
+document.all.menu10.style.visibility="hidden";
+
+}
+ 
+else if (document.getElementById){
+for (x=1; x <= summenu; x++) {
+eval ('document.getElementById("menu' + x + '").style.visibility="hidden"');
+ }
+} }
+
+
+
+function loadon() {
+if(document.all)  { screen_width=document.body.clientWidth; }
+else if (document.getElementById) { screen_width=document.documentElement.clientWidth; }
+}  
+
+function resizeon() {
+if(document.all) {  screen_width=document.body.clientWidth;}
+else if (document.getElementById) { screen_width=window.innerWidth; }
+x = (screen_width / 2) - 280;
+ close(); 
+}
+
+ 
+function clickon()
+{
+if(document.all) { screen_width=document.body.clientWidth;}
+else if (document.getElementById) { screen_width=window.innerWidth; }
+x = (screen_width / 2) - 280;
+close();
+}
+
+  
+ 
+
+</script>
+<table cellspacing=0 cellpadding=2 border=0 width=180>
+<tr valign=top><td background='images/buts.gif'><a href='http://www.alhaq.org/'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>HOME</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=3'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>ABOUT AL-HAQ</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=211'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>TRANSPARENCY</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='press.php'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>ADVOCACY</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='publication.php'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>PUBLICATIONS</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='http://library.alhaq.org/scripts/minisa.dll/144/HAQLIB?DIRECTSEARCH'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>LIBRARY CATALOG</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=61'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>DOCUMENTATION</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=57'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>INTERNATIONAL LAW</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='mailinglist.php'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>MAILING LIST</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=59'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>LINKS</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=226'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>MULTIMEDIA</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr><tr valign=top><td background='images/buts.gif'><a href='etemplate.php?id=58'  class=rtitl onmouseover="clickon();" onmouseout="clickon();"><b>CONTACT US</a></tD></tr><tr valign=top><td height=5 bgcolor=ffffff></td></tr>
+</table> 
+<script language="Javascript">
+//style
+document.write("<style> .m{ position:absolute; width:160px; height:25px;   left:70px; top:170; text-align:left; border-style:solid;    border-width:1pt; border-color:#ffffff; visibility:hidden; padding:0px; z-index:2;} </style>");
+//Divsion of Sub Menu
+for (x=1; x <= summenu; x++) {
+document.write("<div id='" + mname[x] + "' class='m'  onmouseover='open" + mnum[x] + "()' onmouseout='clickon()'>  ");
+document.write("<table cellspacing=0 cellpadding=0 border=0 width=155>");
+for (i = 1; i <= nsub[x]; i++){
+document.write("<tr height=17><td background='images/buts.gif'>&nbsp;");
+document.write("<a href='" + ref[x][i] + "' class=rtitl ");
+if (document.all)document.write("this.parentElement.bgColor='000000';");
+else if (document.getElementById) document.write("this.parentNode.style.backgroundcolor='000000';");
+document.write("this.className='titl1';this.parentElement.bgColor='000000'; >");
+document.write("<b>" + m[x][i] + "&nbsp;&nbsp;</a></td></tr>" );
+document.write("<tr valign=top><td height=5 bgcolor=ffffff></td></tr>");
+}
+document.write("</table></div>");
+}
+</script>
+
+</td></tr>
+<tr valign=top><td align="center">
+<br />
+<p align="center"></p>
+<p align="center"><a href="http://www.alhaq.org/pdfs/a5barna-english-first%20draft2.pdf" target="_self"><img border="0" hspace="0" alt="" src="http://www.alhaq.org/pics/akhbarona.jpg" /></a><br /><strong>Quarterly Newsletter <br />published by Al-Haq<br />Issue 1 - April 2010</strong>&nbsp;</p>
+<p></p>
+<hr />
+<p></p>
+<p align="center"><strong><a href="http://www.alhaq.org/etemplate.php?id=432" target="_self"><strong><font color="#000000">Al-Haq vs. UK government</font></strong></a></strong> <br /><br /><a href="http://www.alhaq.org/etemplate.php?id=432" target="_self"><img border="0" hspace="0" alt="" src="http://www.alhaq.org/pics/royal-courts-of-justice.jpg" /></a></p>
+<p align="center"></p>
+<hr />
+<p align="center"><br /><a href="http://www.alhaq.org/etemplate.php?id=440" target="_self"><strong><font color="#000000">Bil‘in v. Green Park</font></strong>&nbsp;<br /><br /></a></p>
+<p align="center"></p>
+<p align="center"><a href="http://www.youtube.com/watch?v=TySr95aKSlU" target="_new"><img border="0" hspace="0" alt="" src="http://www.alhaq.org/pics/courtroom.jpg" /></a></p>
+<hr />
+<p align="center"><a href="http://www.alhaq.org/etemplate.php?id=437" target="_self"><img border="0" hspace="0" alt="" src="http://www.alhaq.org/pics/Gazaiconpicture.jpg" /></a><br /><br /><a href="http://www.alhaq.org/etemplate.php?id=437" target="_self"><strong><font color="#000000">Operation Cast Lead and the Distortion of International Law</font></strong></a></strong /> </p>
+<p align="center"></p>
+<hr />
+<p align="center"><a href="http://www.alhaq.org/etemplate.php?id=425" target="_self"><img border="0" hspace="0" alt="" src="http://www.alhaq.org/pics/Geuzenpenning-logo.jpg" /><br /></a><strong><strong>The Geuzenpenning<br />2009<br />Dutch Prize for Human Rights Defenders<br />Al-Haq &amp; B’Tselem<br /></strong></strong></p>
+<p></p>
+<p align="center"></p>
+<hr />
+<p align="center">Where Villages Stood: Israel‘s Continuing Violations of International Law in Occupied Latroun, 1967-2007</p>
+<p align="center"><a href="http://www.alhaq.org/pdfs/Where%20Villages%20Stood.pdf" target="_new"><img border="1" hspace="0" alt="" src="http://www.alhaq.org/pics/Cover-Latroun-home.jpg" /></a></p>
+<p align="center"></p>
+<hr />
+<p align="center"><a href="http://www.alhaq.org/pdfs/Al-Numan%20Village.pdf" target="_new"><img border="1" hspace="0" alt="" src="http://www.alhaq.org/pics/Cover%20Al-Numan%20Village.JPG" /><br /></a>Al-Nu‘man Village<span style="FONT-FAMILY: MyriadPro-SemiboldCond; FONT-SIZE: 14pt; mso-bidi-font-family: MyriadPro-SemiboldCond"><font size="0" face="Arial, Helvetica, sans-serif"><br /></font></span><span style="FONT-FAMILY: MyriadPro-SemiboldCond; FONT-SIZE: 14pt; mso-bidi-font-family: MyriadPro-SemiboldCond"><font size="2" face="Arial, Helvetica, sans-serif">A Case study of Indirect<br />Forcible Transfer</font> </span></p></td></tr></table>
+
+</td>
+
+
+
+
+<td width=2 bgcolor="ffffff"></td>
+
+
+<td width=380 height=225 bgcolor=EDECE4>
+<a href="http://www.alhaq.mits.ps/" target="_blank">
+
+<img src='mainpics/mits.jpg' border='0' width=380><br></a>
+
+<!--------------------------
+<p><font class=titl1 ><a href="http://www.alhaq.org/etemplate.php?id=492">Click here</a> for more information (Al-Haq: Thirty Years Defending Human Rights
+)</font><br>
+<font class=titl1 ><a href="http://www.alhaq.org/pdfs/conference-program-english.pdf" target="new">Click here</a> for Al-Haq's 30th Anniversary Conference Program</font>
+<br>
+<font class=titl1 ><a href="http://www.alhaq.org/etemplate.php?id=495">Click here</a> for Al-Haq's 30th Anniversary Conference - Photos</font>
+<p>
+
+---------------------------->
+
+<table cellspacing=0 cellpadding=3 border=0 width=380>
+<tr valign=top><td bgcolor=B13F11><font class="titl"><b>Latest Releases</font></td></tr>
+
+<tr valign=top><td>
+
+<ul type=square>
+<li type=square><a href='etemplate.php?id=589'  class='titl1'>Al-Haq Granted the 2010 Welfare Association’s “NGO Achievement Award” </b></a><font class=titl1 >(2011-05-22)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=588'  class='titl1'>63rd Anniversary of the Nakba: the Young Will Not Forget</b></a><font class=titl1 >(2011-05-16)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=587'  class='titl1'>Al-Haq Welcomes Recent Reconciliation Agreement and Urges Respect for Human Rights and the Rule of Law</b></a><font class=titl1 >(2011-05-05)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=582'  class='titl1'>New Report: Collective Punishment in ‘Awarta
+Israel’s Response to the Killing in Itamar Settlement
+</b></a><font class=titl1 >(2011-04-22)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=580'  class='titl1'>Palestinian Human Rights Organizations Call for Investigation into the Death of Adel Rezeq inside an Internal Security Detention Center in Gaza</b></a><font class=titl1 >(2011-04-20)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=579'  class='titl1'>On Palestinian Prisoners’ Day, Palestinian Human Rights Organizations Call for Renewed Efforts to Release All Prisoners</b></a><font class=titl1 >(2011-04-17)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=578'  class='titl1'>Open letter to Richard Goldstone from 11 Palestinian Human Rights Organisations</b></a><font class=titl1 >(2011-04-06)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=577'  class='titl1'>Professor Schabas’ Expert Opinion on UN System Accountability Mechanisms for International Crimes</b></a><font class=titl1 >(2011-03-26)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=576'  class='titl1'>Human Rights Council Resolution: A Step towards Justice for Victims of the Gaza Conflict</b></a><font class=titl1 >(2011-03-26)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=575'  class='titl1'>Human Rights Council Must Pursue Accountability:<br> ‘Goldstone Process’ must go to Security Council</b></a><font class=titl1 >(2011-03-22)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=574'  class='titl1'>Human Rights Council 16th Session – “Discussing the Human rights situation in Palestine & other occupied Arab territories (Item 7)”</b></a><font class=titl1 >(2011-03-20)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=573'  class='titl1'>Condemnation and Concern over the violent dispersal of peaceful demonstrations in Gaza City</b></a><font class=titl1 >(2011-03-17)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=572'  class='titl1'>On the 100th Anniversary of International Women’s Day 
+Palestinian Women’s Rights Remain Under Siege</b></a><font class=titl1 >(2011-03-07)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=571'  class='titl1'>If not now, when?
+US Veto of the UN Security Council Draft Resolution condemning Israeli Settlements</b></a><font class=titl1 >(2011-02-24)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=570'  class='titl1'>VANISHING EAST JERUSALEM:<br>EU MUST USE ASSOCIATION COUNCIL TO ENSURE THAT ISRAEL RESPECTS INTERNATIONAL LAW</b></a><font class=titl1 >(2011-02-17)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=569'  class='titl1'>"Is the Goldstone Report Dead, High Commissioner?"<Br>
+Open Letter from 13 Palestinian and Israeli Human Rights Organisations to the United Nations High Commissioner for Human Rights, Navanetham Pillay, on her first official visit to the Occupied Palestinian Territory
+</b></a><font class=titl1 >(2011-02-06)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=568'  class='titl1'>Updates on the Killing of ‘Udayy Qadoush by a Settler in ‘Iraq Bourin</b></a><font class=titl1 >(2011-02-01)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=567'  class='titl1'>Settlers Kill a Palestinian Farmer in ‘Iraq Bourin Village: Impunity Must End</b></a><font class=titl1 >(2011-01-26)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=566'  class='titl1'>Palestinian General Intelligence: civilians will be no longer tried in military courts </b></a><font class=titl1 >(2011-01-17)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=565'  class='titl1'>Findings of Al-Haq’s Investigation of the Wilful Killing
+of Umar Qawasmi by the Israeli Occupying Forces</b></a><font class=titl1 >(2011-01-15)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=564'  class='titl1'>Forgotten: Gaza two years after Operation Cast Lead 
+Letter of Al-Haq's field researcher in the Gaza Strip 
+</b></a><font class=titl1 >(2010-12-27)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=563'  class='titl1'>Right to Democracy Upheld by Palestinian Supreme Court <br>
+Al-Haq Wins Local Elections Case against Palestinian Council of Ministers
+</b></a><font class=titl1 >(2010-12-13)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=562'  class='titl1'>EU-Israel Sub-Committee on Political Dialogue and Cooperation, 15 December 2010</b></a><font class=titl1 >(2010-12-09)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=561'  class='titl1'>Al-Haq’s Short Documentary
+Beyond Words: Palestinian Voices in Search of Justice</b></a><font class=titl1 >(2010-12-09)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=560'  class='titl1'>The Deadline for Justice is Long Overdue</b></a><font class=titl1 >(2010-11-29)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=559'  class='titl1'>Solidarity is meaningless without justice 
+Open Letter to the President of the UN General Assembly</b></a><font class=titl1 >(2010-11-28)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=558'  class='titl1'>Al-Haq’s new study
+“Legitimising the Illegitimate? The Israeli High Court of Justice and the Occupied Palestinian Territory”</b></a><font class=titl1 >(2010-11-25)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=557'  class='titl1'>Irish Centre for Human Rights confers Al-Haq’s General Director 
+Distinguished Graduate Award 
+</b></a><font class=titl1 >(2010-11-24)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=556'  class='titl1'>Al-Haq and the Women’s Centre for Legal Aid and Counseling Submit Joint Report to the UN Committee on Economic, Social and Cultural Rights </b></a><font class=titl1 >(2010-11-22)</font><br><img src='images/empty.gif' height=10 border=0><br><li type=square><a href='etemplate.php?id=555'  class='titl1'>Bil'in Seeks Permission to Appeal to the Supreme Court of Canada the dismissal of its case</b></a><font class=titl1 >(2010-11-08)</font><br><img src='images/empty.gif' height=10 border=0><br></td></tr>
+<tr valign=top><td bgcolor=B13F11><a href='press.php' class="titl"><font color=ffffff>See All Releases</a></td></tr>
+<tr valign=top><td><br></td></tr>
+</table>
+
+
+
+</td>
+
+
+
+
+
+<td width=3 bgcolor="ffffff"><img src="images/empty.gif" width=3></td>
+
+
+
+<td width=210 bgcolor="9E9B7B">
+<img src="images/empty.gif" height=5><br>
+
+<center>
+<table cellspacing=0 cellpadding=2 border=1 width=190 bordercolor="B13F11">
+<tr valign=top><td bgcolor=E2E1D4 valign=middle height=25><center><font class="rrtitl"><b>Presentations</b><br>
+Al-Haq & Adalah<br><br>
+Symposium on HSRC Report:<br>
+<a href='http://www.alhaq.org/etemplate.php?id=475' target="new">“Occupation, Apartheid, Colonialism?”</a><br><br>
+Sunday 16.8.09, Ramallah<br><p>
+</font></td></tr> 
+</table></center><br>
+
+<center>
+
+
+<table cellspacing=0 cellpadding=2 border=0 width=190>
+<tr valign=top><td bgcolor=C7C4A9 valign=middle height=25><center><font class="rrtitl"><b>Stories from Gaza</b></font></td></tr>
+
+<tr valign=top><td align=left bgcolor=9E9B7B>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr valign="top">
+<td>
+<li></li></td>
+<td>
+<p align="justify"><a href="http://www.alhaq.org/etemplate.php?id=416" target="_self"><strong><font color="#000000">The Plight of Al Samouni Family in Gaza: in their own voices </font></strong></a></p></td></tr>
+<tr valign="top">
+<td colspan="2">&nbsp;</td></tr>
+<tr valign="top">
+<td>
+<li></li></td>
+<td>
+<p align="justify"><a href="http://www.alhaq.org/etemplate.php?id=417" target="_self"><strong><font color="#000000">al-Daya: 30 Family Members Killed in their Four Story Building in Gaza<br /></font></strong></a><br /></p></td></tr>
+<tr valign="top">
+<td>
+<li><u><strong></strong></u></li></td>
+<td><u><strong>
+<p align="justify"><u><a href="http://www.alhaq.org/etemplate.php?id=421" target="_self"><strong><font color="#000000">The Untold Story: the plight of the three sisters-two killed and the other partially paralyzed</font></strong></a></u></p></strong></u></td></tr>
+<tr valign="top">
+<td colspan="2">&nbsp;</td></tr>
+<tr valign="top">
+<td>
+<li><u><strong></strong></u></li></td>
+<td>
+<p align="justify"><u><a href="http://www.alhaq.org/etemplate.php?id=422" target="_self"><strong><font color="#000000">Shurrab Family Returning Home from their Farm: Two Sons Killed</font></strong></a></u><font color="#000000"></font></p></td></tr></tbody></table>
+<p align="center"></p></td></tr>
+</table></center>
+
+
+<table cellspacing=0 cellpadding=10 border=0 width=210>
+<tr valign=top>
+<td bgcolor="C7E1EF" height=50 valign=middle><center><font class="titl7" color="B13F11"><b><a href="http://www.alhaq.org/etemplate.php?id=443">Al-Haq's Legal Questions and Answers on the OPT</a></b></font></center></td></tr>
+
+<tr valign=top>
+<td bgcolor="EDECE4" height=25 valign=middle><center><font class="titl2"><b>In The Spotlight</b></font></center></td></tr>
+
+<tr valign=top height=200>
+<td background="images/logo3.gif" align=left>
+<center><p align="left"><a href="http://www.alhaq.org/press.php" target="_self"></a></p>
+<p align="left"><a href="http://www.alhaq.org/ainside.php?catid=14" target="_self"></a></p>
+<p align="left"><a href="http://www.alhaq.org/etemplate.php?id=368" target="_self"><img alt="" hspace="0" src="http://www.alhaq.org/pics/womaneyes2.jpg" border="0" /></a><br />A documentary film revealing the true story behind Israel’s “Canada Park” – a story of dispossession, destruction and continuing displacement. Now screening worldwide. <a href="http://www.alhaq.org/etemplate.php?id=368" target="_self">&gt;&gt;&gt;</a> </p>
+<p align="left"><strong>Al-Nu‘man Village...</strong> <a href="http://www.alhaq.org/etemplate.php?id=336" target="_self">&gt;&gt;&gt;</a><br /><br /><strong>The Palestinian Villages of Latroun 40 Years After 1967</strong><br /><br />In the early hours of 6 June 1967, Israeli military forces entered the three Palestinian villages in what is known as the Latroun salient, namely ‘Imwas, Yalo and Beit Nouba.&nbsp;&nbsp;As the Jordanian army had already withdrawn from the area, the Israeli forces met with no resistance and immediately began to expel the... <a href="http://www.alhaq.org/etemplate.php?id=320" target="_self">&gt;&gt;&gt;</a> <br /></p></center><hr>
+</center></td></tr>
+
+
+
+<tr valign=center>
+<td bgcolor="EDECE4" valign=middle height=25><center><font class="titl2"><b>Campaigns</b></font></center></td></tr>
+
+<tr valign=top height=200>
+<td align=left>
+
+<center><p align="center"></p>
+<p></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">Visit Al-Haq‘s channel on YouTube:</span></span></font></span></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><a href="http://www.youtube.com/alhaqhr" target="_new"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><img alt="" hspace="0" src="http://www.alhaq.org/pics/youtubec2.jpg" border="1" /></span></span></font></span></a></span></span></font></span></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><a href="http://twitter.com/#!/AlHaq_org" target="_new"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><img alt="" hspace="0" src="http://www.alhaq.org/pics/AlHaq-Twitter.jpg" border="0" /></span></span></font></span></a></span></span></font></span></p>
+<hr />
+<p align="justify"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><strong>Capacity Building in IHL</strong></span></font></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br /><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Al-Haq</span><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"> and its partner organisation Diakonia</a /> have undertaken a joint initiative to disseminate information among Palestinian civil society organisations about the rights and duties enshrined in international humanitarian law. </span><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">The project focuses on the rights of civilians in order to highlight the..</span>. <a href="http://www.alhaq.org/etemplate.php?id=206" target="_self">Read more</a></font></span></span></font></span> </p>
+<p></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"></span></span></font></span></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"></span></span></font></span></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"></span></span></font></span></p>
+<p align="center"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial, Helvetica, sans-serif"><span lang="en" style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: ‘Times New Roman‘; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"></span></span></font></span></p>
+<hr />
+<p align="center">Diakonia‘s Easy Guide to IHL in the oPt:</p>
+<p align="center"><a href="http://www.diakonia.se/sa/site.asp?site=777" target="_new"><img style="WIDTH: 159px; HEIGHT: 111px" height="111" alt="" hspace="0" src="http://www.alhaq.org/pics/Banner_IHL_en.jpg" width="171" border="1" /></a></p>
+<p align="center"></p></center><hr>
+</center></td></tr>
+
+</table>
+
+
+
+
+</td>
+</tr>
+
+
+
+</table>
+
+
+<table width=780 cellpadding=0 cellspacing=0 border=0>
+<tr valign=top>
+<td width=15% background="images/bottom.gif"  align=left>
+<img src="images/empty.gif" height=5><br>
+<SCRIPT LANGUAGE="Javascript" SRC="phpgcount/graphcount.php?page=index.php&style=alhaq"></SCRIPT>
+</td>
+
+
+<td background="images/bottom.gif" align=center>
+ 
+ 
+ 
+<table cellspacing=0 cellpadding=2 border=0 ><tR> <td>&nbsp;|&nbsp;</td>
+<td><a href='index.php' class='mainnav'>Home</a></td><td>&nbsp;|&nbsp;</td><td><a href='etemplate.php?id=58' class='mainnav'>Contact Us</a></td><td>&nbsp;|&nbsp;</td><td><a href='sitemap.php' class='mainnav'>Site Map</a></td><td>&nbsp;|&nbsp;</td></tr></table>
+
+</td>
+<td width=15% background="images/bottom.gif"  align=right>
+<a href="#top" class='mainnav'><img src="images/top.jpg" border=0 align=middle>Top of page</a>
+</td>
+</tr></table>
+
+</body></html>
+
+

@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<title>Welcome To National Human Rights Commission</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="css/slide.css"  media="screen"/>
+
+<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="js/ddaccordion.js"></script>
+
+<script type="text/javascript" src="js/googleapis.js"></script>
+
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+
+<script src="js/lightbox.js" type="text/javascript"></script>
+
+<link rel="shortcut icon" href="images/favicon.gif" />
+
+<script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript">
+
+<!--
+
+var timeout         = 500;
+
+var closetimer		= 0;
+
+var ddmenuitem      = 0;
+
+
+
+// open hidden layer
+
+function mopen(id)
+
+{	
+
+	// cancel close timer
+
+	mcancelclosetime();
+
+
+
+	// close old layer
+
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+
+
+	// get new layer and show it
+
+	ddmenuitem = document.getElementById(id);
+
+	ddmenuitem.style.visibility = 'visible';
+
+
+
+}
+
+// close showed layer
+
+function mclose()
+
+{
+
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+}
+
+
+
+// go close timer
+
+function mclosetime()
+
+{
+
+	closetimer = window.setTimeout(mclose, timeout);
+
+}
+
+
+
+// cancel close timer
+
+function mcancelclosetime()
+
+{
+
+	if(closetimer)
+
+	{
+
+		window.clearTimeout(closetimer);
+
+		closetimer = null;
+
+	}
+
+}
+
+
+
+// close layer when click-out
+
+document.onclick = mclose; 
+
+// -->
+
+</script>
+
+</head>
+
+<body>
+
+<div id="warpper">
+
+  <div id="top_shadow"> <a href="index.html">home</a> | <a href="nhrc_about.html">about us</a> | <a href="nhrc_faqs.html">FAQs</a> | <a href="nhrc_contact.html">contact us</a> | <a href="nhrc_feedback.html">feedbacks</a>  |<a href="http://110.44.127.106/" target="_blank">Webmail</a></div>
+
+  <div id="shadow_bg">
+
+    <div id="header">
+
+      <div id="logo"><img src="images/logo.jpg" alt="NHRC LOGO" width="595" height="90" /></div>
+
+      <div id="header_right">
+
+      	<div id="search">
+        <div class="hotline">NHRC HOTLINE<br />+977-1-5010000 <br /> 
+             24x7 </div>
+        <form action="search_result.php" id="cse-search-box">
+
+  <div>
+
+    <input type="image" src="images/search.png" name="sa" width="60" height="21" align="absbottom" />
+
+    <input type="hidden" name="cx" value="partner-pub-0246269124341151:htxz2x-dcpc" />
+
+    <input type="hidden" name="cof" value="FORID:10" />
+
+
+
+    <input type="hidden" name="ie" value="UTF-8" />
+
+    <input type="text" name="q" class="text_area"/>
+
+    
+
+  </div>
+
+
+
+</form>
+
+<!--<img src="images/search.png" width="60" height="21" align="absbottom" /> <input type="text" />--></div>
+
+      </div>
+
+    </div>
+
+   <div id="menu">
+
+    <ul id="sddm">
+
+	<li><a href="#" onmouseover="mopen('activity')" onmouseout="mclosetime()">Activity</a>
+
+        <div id="activity" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+
+		<a href="nhrc_workshops.html">Workshops, Trainings, Interactions &amp; Seminars</a>
+
+		<a href="nhrc_investigations.html">Monitorings &amp; Investigations </a>
+
+		<a href="nhrc_meetings.html">Meetings &amp; Events</a>
+
+		<a href="nhrc_speeches.html">Important Speeches &amp; Correspondence</a>
+
+        <a href="nhrc_dialogues.html">Dialogue &amp; Compaigning</a>
+
+		<a href="nhrc_regionals.html">Regional &amp; Sub-regional Activities</a>
+
+		</div></li> 
+
+      <li>  <a href="#"  onmouseover="mopen('decision')" onmouseout="mclosetime()">Decisions</a>
+
+        <div id="decision" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+
+		<a href="nhrc_complaints.html">Complaint Based Recommendations</a>
+
+		<a href="nhrc_laws.html">Law / Treaty / Law Based Recommendations</a>
+
+		<a href="nhrc_settlements.html">Settlement of Complaints</a>
+
+		</div>
+
+      </li> 
+
+
+
+        
+
+      <li>  <a href="#" class="selected" onmouseover="mopen('Publications')" onmouseout="mclosetime()">Publications</a>
+
+        <div id="Publications" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+
+			<a href="nhrc_reports.html">Reports</a>
+
+		        <a href="nhrc_bulletin.html">Bulletin / Newsletters</a>
+
+		<a href="nhrc_radio.html">Radio / TV Programmes</a>
+
+		<a href="nhrc_books.html">Books</a>
+
+		<a href="nhrc_publication_others.html">Others</a>
+
+        </div>
+
+      </li> 
+
+
+
+      <li> <a href="#" onmouseover="mopen('Organization')" onmouseout="mclosetime()">Organization</a>
+
+       <div id="Organization" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+
+		<a href="nhrc_organogram.html">Organogram</a>
+
+		<a href="nhrc_members.html">Chairman, Members &amp; Secretary</a>
+
+		<a href="nhrc_outreach.html">Outreach</a>
+
+		<a href="nhrc_projects.html">Projects and Partnerships</a>
+
+        <a href="nhrc_international.html">International Relations</a>
+
+		
+
+		</div>
+
+      </li> 
+
+      
+
+        <li> <a href="#" onmouseover="mopen('Plan')" onmouseout="mclosetime()">Law, Plan &amp; Policy</a>
+
+       <div id="Plan" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+
+		<a href="nhrc_laws.html">Law</a>
+
+		<a href="nhrc_plans.html">Plan &amp; Policy</a>
+
+		<a href="nhrc_mou.html">MoUs</a>
+
+		<a href="nhrc_guidelines.html">Guidelines</a>
+
+        <a href="nhrc_instrucments.html">Human Rights Instrucments</a>
+
+		
+
+		
+
+		</div>
+
+      </li>
+
+      <li>  <a href="nhrc_gallery.html" >Gallery</a></li> 
+
+      <li style="width:194px;">  <a href="career.php">Career &amp; Announcements</a></li>
+
+      <li>  <a href="nhrc_useful.html" >Useful Links</a></li>  
+
+	  </ul>
+
+    </div>
+
+    
+
+    <div id="banner">
+
+
+
+      <div class="slider-wrapper theme-default">
+
+        <div id="slider" class="nivoSlider">
+
+			<img src='images/banner/banner_nhri.jpg' title='National and International Delegates on the International Conference on Cooperation between National Human Rights Institutions (NHRIs) for the Promotion and Protection Of the Rights of the Migrant Workers, 26-27 November 2012 with the President of Nepal Rt. Hon’ble Dr. Ram Baran Yadav.' />  <img src='images/banner/banner11.jpg' title='NHRC Main Entrance' />  <img src='images/banner/banner_babu.jpg' title='PM Dr. Baburam Bhattarai and NHRC Hon. Chairperson Kedarnath Upadhyay along with other Guests at International HR Day at NHRC' />  <img src='images/banner/banner13.jpg' title='NHRC Secretary Bishal Khanal and other NHRC staffs at \"Cleaning Campaign\"' />  <img src='images/banner/banner15.jpg' title='Exhumation Team of NHRC at the Gravesite at Godar, Janakpur' />  
+
+
+
+        </div>
+
+                 </div>
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+
+    <script type="text/javascript">
+
+    $(window).load(function() {
+
+        $('#slider').nivoSlider();
+
+    });
+
+    </script>
+
+  
+
+
+
+  
+
+</div><div id="content_left">
+
+<a href="http://110.44.121.152" class="web" target="_blank" ><img src="images/webMail.png" /></a>
+
+      <div id="box_title">Press Release</div>
+
+      <div id="box_bg"><a href="nhrc_press_release.html">नेपाल र दक्षिण कोरियाका मानव अधिकार आयुक्तहरूबीच भेटवार्ता, २०६९ मंसिर १३ गते</a><br />
+
+
+
+
+
+
+
+        <strong>2012-11-28</strong><hr style = 'color: #829BE6;'/><a href="nhrc_press_release.html">आप्रवासी कामदार हरूको हक-अधिकार सम्बन्धी अन्तर्राष्ट्रिय सम्मेलन सम्पन्न, २०६९ मंसिर १२ गते</a><br />
+
+
+
+
+
+
+
+        <strong>2012-11-27</strong><hr style = 'color: #829BE6;'/><br />
+
+        <br />
+
+        <div class="more"><a href="nhrc_press_release.html">Read More</a></div>
+
+      </div>
+
+      <div id="box_down"></div>
+
+      <div id="box_title" class="topspace">News Letter</div>
+
+      <div id="box_bg"><a href='nhrc_newsletter_details-9206.html'>NHRC Newsletter October Issue, 21 Nov 2012 <br/><strong>2012-11-21</strong></a><hr style = 'color: #829BE6;'/><a href='nhrc_newsletter_details-9205.html'>NHRC Newsletter September Issue, 5 October 2012 <br/><strong>2012-10-05</strong></a><hr style = 'color: #829BE6;'/><br />
+
+        <br />
+
+        <div class="more"><a href="nhrc_newsletter.html">Read More</a></div>
+
+      </div>
+
+      <div id="box_down"></div>
+
+      
+
+    </div>
+
+     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Untitled Document</title>
+
+</head>
+
+<body>   
+
+        
+
+        <div id="content_container">
+
+      <div id="news"><MARQUEE behavior= "scroll" align= "center" direction= "left" scrollamount= "3" onmouseover='this.stop()' onmouseout='this.start()'><a href='http://www.nhrcnepal.org/nhrc_new/doc/downloads/111020091532_Nep_Comp_Form.pdf' target=__blank>Download Nepali Complaint Form</a> ** <a href='http://www.nhrcnepal.org/nhrc_new/doc/downloads/111020091809_HotlineDetails.pdf' target=__blank>Please file your complaint at +977-(0)1-5010000 Human Rights Hotline is Open Round the Clock</a> ** </MARQUEE></div>
+
+
+
+              <div id="content">
+                	
+                    <br /><br />
+
+               <h1>Recent Activities</h1>
+
+        <!--img src="images/news_img.jpg" alt="News" width="127" height="79" align="right" /-->
+        
+
+        <ul class='activity'><li><div style='float: left;'><strong>2012-11-27<br><a href='nhrc_activities_details-57.html'>Kathmandu Resolution 2012, International Conference on Cooperation between  National Human Rights Institutions (NHRIs) for the Promotion and Protection  Of the Rights of the Migrant Workers, 26-27 Nov 2012</a></strong><p align="center">
+	<span style="font-size:16px;"><strong>KATHMANDU RESOLUTION, 2012 </strong></span></p>
+<p align="center">
+	&nbsp;</p>
+<p align="center">
+	<em>Outcome Document of the International Conference on Cooperation between </em></p>
+<p align="center">
+	<em>National Human Rights Institutions (NHRIs) for the Promotion and Protection </em></p>
+<p align="center">
+	<em>Of the Rights of the Migrant Workers </em></p>
+<p align="center">
+	&nbsp;</p>
+<p align="center">
+	<strong><em>26-27 November 2012, Kathmandu</em></strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	The <em>International Conference on Cooperation between National Human Rights Institutions (NHRIs) for the Promotion and Protection of the Rights of the Migrant Workers </em>was held in Kathmandu, Nepal on 26-27 November 2012 with an outcome document known as <em>Kathmandu Resolution, 2012. </em>The Conference organized by the National Human Rights Commission of Nepal&nbsp; with participants from NHRIs, International Organizations and National Non-Governmental Organizations (NGOs), independent experts, civil society organizations and academics from the Asia-Pacific countries discussed in-depth the prospects and opportunities for international cooperation towards the &nbsp;promotion and protection of the rights of the migrant workers. A strong need was felt towards the establishment of a relevant cooperation mechanism taking into account existing national, regional and international human rights mechanisms, including those under the mandate of the United Nations. <a href="http://www.nhrcnepal.org/nhrc_new/doc/newsletter/1309479207Migrant%20Workers%20Kathmandu%20Resolution%202012.pdf">Read more..</a></p></div><div style='float: right;'><a href = 'http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/1309479207'><img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/1309479207' height='100px' width='100px'></a></div></li><br><li><div style='float: left;'><strong>2012-08-12</strong><br><a href='nhrc_activities_details-56.html'>Formation of the Truth and Reconciliation Commission (TRC)</a></div><div style='float: right;'><a href = 'http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/37197699'><img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/37197699' height='100px' width='100px'></a></div></li><br><li><div style='float: left;'><strong>2012-07-03</strong><br><a href='nhrc_activities_details-54.html'>NHRC has lettered government to develop disabled-friendly footpaths</a></div><div style='float: right;'><a href = 'http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/449308460Disability-Letter to GoN.jpg'><img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/449308460Disability-Letter to GoN.jpg' height='100px' width='100px'></a></div></li><br><li><div style='float: left;'><strong>2012-07-01</strong><br><a href='nhrc_activities_details-55.html'>NHRC and PMO organized Iteraction on 1 year of UPR</a></div><div style='float: right;'><a href = 'http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/1736050251'><img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/1736050251' height='100px' width='100px'></a></div></li><br><li><div style='float: left;'><strong>2012-06-26</strong><br><a href='nhrc_activities_details-53.html'>15th international torture day interaction at Pokhara</a></div><div style='float: right;'><a href = 'http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/1268970490torture pokhara.jpg'><img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/activitycover/1268970490torture pokhara.jpg' height='100px' width='100px'></a></div></li><br><li><div style='float: left;'><strong>2012-06-26</strong><br><a href='nhrc_activities_details-50.html'>International Anti Torture Day marked</a></div></li><br></ul>
+
+        
+
+         <div class="more"><a href="nhrc_activities.html">Read More</a></div>
+
+          
+
+           </div>
+
+    </div>
+
+
+
+    <div id="content_right">
+
+<div id="publication">
+
+      Publications</div>
+
+      <div class="content"><ul><li>
+
+
+
+
+
+
+
+							<a href='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/Exhumation Guidelines, 2069.pdf' target='__blank'>शवोत्खनन् मार्ग-निर्देशिका, २०६९</a></br>
+
+
+
+
+
+
+
+							
+
+
+
+
+
+
+
+							<img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/cover/exhumation-thumb.jpg' style ='width:120'></li><li>
+
+
+
+
+
+
+
+							<a href='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/UPR Broucher final.pdf' target='__blank'>विश्वब्यापी आबधिक समीक्षा Universal Periodic Review (UPR)  परिचयात्मक पुस्तिका</a></br>
+
+
+
+
+
+
+
+							
+
+
+
+
+
+
+
+							<img src='http://www.nhrcnepal.org/nhrc_new/doc/newsletter/cover/UPR_Broucher-thumb.jpg' style ='width:120'></li></ul></div>
+
+          </div>
+
+    <div class="clear"></div>
+
+   
+
+</body>
+
+</html>
+
+    <div id="subcontent_nav">
+      <div id="subcontent_sec">
+        <h1>Radio Program</h1>
+        Radio Program on Human Rights in coordination with Radio Sagarmatha (RS) FM 102.4 M Hz. has commenced human rights related radio program entitled Sachetana broadcasting since March 2010 through RS and its 11 network radio stations located at different regions of the country.<br />
+        <br />
+        <div class="more"><a href="nhrc_radio.html">Read More</a></div>
+      </div>
+      <div id="spiliter"></div>
+      <div id="subcontent_sec">
+        <h1>Follow us on</h1>
+        <div><img src="images/icon_facebook.jpg" width="36" height="36" hspace="5" align="absmiddle" /><a href="http://www.facebook.com/pages/NHRC/238642979523524?skip_nax_wizard=true" target="__blank">Facebook</a></div>
+        <div><img src="images/icon_twitter.jpg" width="36" height="36" hspace="5" vspace="5" align="absmiddle" /> <a href="#">Twitter</a></div>
+        <div><img src="images/icon_google.jpg" width="36" height="36" hspace="5" align="absmiddle" /> <a href="#">Google +</a></div>
+        <div><img src="images/icon_rss.jpg" width="36" height="36" hspace="5" vspace="5" align="absmiddle" /> <a href="#">Rss Feedback</a></div>
+      </div>
+      <div id="spiliter"></div>
+      <div id="subcontent_sec">
+        <h1>NHRC Bulletin</h1>
+        <!--<img src="images/bulletin.jpg" alt="NHRC BULLETIN" width="80" height="109" align="right" class="img" />--><ul><li><a href='nhrc_bulletin_details-43.html'>e-Newsletter Vol 7 - Issue 8</a></li><li><a href='nhrc_bulletin_details-155.html'>e-Newsletter Vol 7 - Issue 8</a></li><li><a href='nhrc_bulletin_details-42.html'>e-Newsletter Vol 7 - Issue 7</a></li></ul><br />
+        <br />
+        <div class="more"><a href="nhrc_bulletin.html">Read More</a></div>
+      </div>
+      <div id="spiliter"></div>
+      <div id="subcontent_sec">
+        <h1>Complaints</h1>
+        <ul><li><a href='http://www.nhrcnepal.org/nhrc_new/doc/downloads/111020091532_Nep_Comp_Form.pdf' target=__blank>Download Nepali Complaint Form</a></li><li><a href='http://www.nhrcnepal.org/nhrc_new/doc/downloads/111020091809_HotlineDetails.pdf' target=__blank>Please file your complaint at +977-(0)1-5010000 Human Rights Hotline is Open Round the Clock</a></li></ul>
+        <div class="more"><a href="nhrc_downloads.html">Read More</a></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="down_shadow"></div>
+  <div id="footer">© 2010 National Human Rights Commission - Nepal </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

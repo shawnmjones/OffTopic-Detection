@@ -1,0 +1,438 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="Search" href="/search.php">
+<link rel="icon" href="" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/styles_default.css" id="default">
+<link rel="stylesheet" type="text/css" href="/custom/styles.css">
+<style type='text/css'>
+img.thumb {
+    border:0;
+    width: 100px;
+    max-height: 300px;
+}</style>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://cja.org/rssfeed.php"><title>CJA&nbsp;:&nbsp;Index</title>
+<script language="Javascript"  type="text/javascript" src="/scripts/functions.js"></script>
+<script src="/scripts/jquery/jquery-1.2.6.js"></script>
+<script src="/custom/js/jquery.cycle.all.min.js"></script>
+<script src="/custom/js/slideshow.js"></script>
+<script type="text/javascript">
+
+ sfHover = function() {
+	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+="sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp("sfhover"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+startList = function() {
+if (document.all&&document.getElementById) {
+navRoot = document.getElementById("nav");
+for (i=0; i<navRoot.childNodes.length; i++) {
+node = navRoot.childNodes[i];
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" over";
+  }
+  node.onmouseout=function() {
+  this.className=this.className.replace(" over", "");
+   }
+   }
+  }
+ }
+}
+window.onload=startList;
+
+</script>
+<!--[if(IE)]> <link rel="stylesheet" type="text/css" href="ie_dropdown.css" /> <![endif]--></head>
+<div id="template-container">
+	<div id="template-wrapper">
+		<div id="header">
+			<a href="index.php" title="Center for Justice and Accountability">
+				<img id="banner" src="img/banner.gif" alt="Center for Justice and Accountability"/>
+			</a>
+			<div id="languages">
+				<a href="index.php">English</a>&nbsp;|&nbsp;<a href="spanish">Español</a>&nbsp;|&nbsp;<a href="french">Français</a>&nbsp;|&nbsp;<a href="arabic"> اللغة العربية</a><br>
+				<a href="http://www.facebook.com/CenterForJusticeAndAccountability"><img src="/img/fb.gif" border=0 alt="Facebook"></a> <a href="https://twitter.com/CJA_News "><img src="/img/twitter.gif" border=0 alt="Twitter"></a> <a href="http://www.flickr.com/photos/cja_photos/"><img src="/img/flickr.gif" border=0 alt="Flickr"></a>
+			</div>
+			<div id="menu">
+<ul id="nav" class="main_menu"><li><a href="section.php?id=3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About_Us','','img/nav_1.gif',1)"><img src="img/nav_1.gif" name="About_Us" border="0" alt =""></a><ul><li><a href="section.php?id=86">Mission & Founding</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=88">Timeline</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=87">Impact</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=251">Testimonials</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=247">Funding & Support</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=89">Board of Directors</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=90">Advisory Council</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=91">Staff</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=92">Annual Reports</a><img src="img/spacer.gif" height="4" width="3" align="left"></li></ul></li><li><a  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Our_Work','','img/nav_2.gif',1)"><img src="img/nav_2.gif" name="Our_Work" border="0" alt =""></a><ul><li><a href="section.php?id=95">Amicus Briefs</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=94">Litigation</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=98">Outreach & Education</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=97">Policy</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=96">Transitional Justice</a><img src="img/spacer.gif" height="4" width="3" align="left"></li></ul></li><li><a href="section.php?id=5" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cases','','img/nav_3.gif',1)"><img src="img/nav_3.gif" name="Cases" border="0" alt =""></a></li><li><a  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Countries','','img/nav_4.gif',1)"><img src="img/nav_4.gif" name="Countries" border="0" alt =""></a><ul><li><a href="section.php?id=10">Bosnia</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=446">Cambodia</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=11">Chile</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=12">China</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=397">Colombia</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=119">East Timor</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=14">El Salvador</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=15">Guatemala</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=16">Haiti</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=17">Honduras</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=18">Peru</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=19">Somalia</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=408">United States</a><img src="img/spacer.gif" height="4" width="3" align="left"></li></ul></li><li><a href="section.php?id=7" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press_Room','','img/nav_5.gif',1)"><img src="img/nav_5.gif" name="Press_Room" border="0" alt =""></a><ul><li><a href="section.php?id=100">News & Commentary</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=101">Press Releases</a><img src="img/spacer.gif" height="4" width="3" align="left"></li></ul></li><li><a  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Get_Involved','','img/nav_6.gif',1)"><img src="img/nav_6.gif" name="Get_Involved" border="0" alt =""></a><ul><li><a href="section.php?id=103">Jobs & Pro Bono Practice</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=256">CJA's Annual Event</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=104">Legal Internships</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=105">Volunteer</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=102">Sign Up for CJA News</a><img src="img/spacer.gif" height="4" width="3" align="left"></li><li><a href="section.php?id=333">Events</a><img src="img/spacer.gif" height="4" width="3" align="left"></li></ul></li><li><a href="donate" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Donate','','img/nav_7.gif',1)"><img src="img/nav_7.gif" name="Donate" border="0" alt =""></a></li></ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="content-wrapper">
+				<div id="main-content">
+<!-- Content start -->
+<!-- Slideshow start -->
+  <div id="slideshow-wrapper">
+    <div id="slideshow">
+      
+		<div class="slide" >
+			<div class="image">
+				<img src="img/original/kiobelcourt2.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Supreme Court Hears Argument in Kiobel v. Shell</h1>
+					<p>Keeping US Courts Open to Survivors of Mass Atrocities&nbsp;<a class="read-more-link" href="http://cja.org/article.php?list=type&type=510" title="Supreme Court Hears Argument in Kiobel v. Shell">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/Abukar Banner.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Historic Victory in Ahmed v. Magan!</h1>
+					<p>Former Chief of the Somali National Security Service found liable for torture of CJA client Ahmed pictured here. &nbsp;<a class="read-more-link" href="http://cja.live2.radicaldesigns.org/article.php?list=type&type=422" title="Historic Victory in Ahmed v. Magan!">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/Nimo Buralle Bashe Gulaid Aziz optimal.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Samantar: $21 Million Judgment for CJA's Clients</h1>
+					<p>Former Somali General Held Liable for War Crimes&nbsp;<a class="read-more-link" href="http://cja.org/article.php?id=1089" title="Samantar: $21 Million Judgment for CJA's Clients">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/Mario-Joseph-Brian-Concannon-IACHR_1.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Haiti:  Human Rights Lawyers Face a Rising Tide of Persecution</h1>
+					<p>Death Threats and False Charges Against CJA Partner Attorney Mario Joseph&nbsp;<a class="read-more-link" href="http://cja.org/article.php?id=1181" title="Haiti:  Human Rights Lawyers Face a Rising Tide of Persecution">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/GREECE_IMMIGRANTS_3539f.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Zontul v. Greece</h1>
+					<p>European Court of Human Rights Rules that Rape of Detainees Constitutes Torture&nbsp;<a class="read-more-link" href="http://cja.org/article.php?id=1075" title="Zontul v. Greece">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/justiceandgenerals5_resized.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Ex-Salvadoran Defense Minister Vides Casanova Ruled Deportable for Human Rights Abuses</h1>
+					<p>&nbsp;<a class="read-more-link" href="http://www.cja.org/article.php?id=1078" title="Ex-Salvadoran Defense Minister Vides Casanova Ruled Deportable for Human Rights Abuses">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/Khmer-Rouge-trial-002-crop.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Historic Start of the Second Khmer Rouge Trial</h1>
+					<p>CJA Participates in the Trial of Three Khmer Rouge Leaders for Mass Atrocities&nbsp;<a class="read-more-link" href="http://cja.org/article.php?id=1049" title="Historic Start of the Second Khmer Rouge Trial">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/Guatemala_Protest_Brooke_Anderson.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>The Guatemala Genocide Case</h1>
+					<p>Before the Spanish National Court&nbsp;<a class="read-more-link" href="http://cja.org/article.php?list=type&type=83" title="The Guatemala Genocide Case">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="display:none;">
+			<div class="image">
+				<img src="img/original/Jesuits_march_banner.jpg" border="0"/>
+			</div>
+			<div class="slide-overlay">
+				<div class="slide-text-bg"></div>
+				<div class="slide-text">
+					<h1>Spanish Judge Issues Indictments and Arrest Warrants in Jesuits Massacre Case</h1>
+					<p>&nbsp;<a class="read-more-link" href="http://cja.org/article.php?id=1004" title="Spanish Judge Issues Indictments and Arrest Warrants in Jesuits Massacre Case">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+    <div id="slidenav">
+      <span class="prev arrow"><img src="img/l-arrow.gif" alt="previous" /></span>
+      <span id="slideshow-pager"></span>
+      <span class="next arrow"><img src="img/r-arrow.gif" alt="next" /></span>
+    </div>
+  </div>
+<!-- Slideshow end -->
+					<!-- Updates start -->
+					<div id="updates">
+						<img class="cap" src="img/updates_top.gif"/>
+						<div id="updates-content">
+
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/Ahmed.v.jpg"/>
+    				<a href="article.php?id=1222"><h2>Victory in Magan Case!</h2></a>
+    				<div class="short-description">
+    					11/20/2012: A federal court in Ohio found Colonel Magan liable for the torture, arbitrary detention and cruel treatment of CJA client and former Amnesty International Prisoner of Conscience, Professor Abukar Ahmed (pictured here). Magan was the head of the notorious National Security Service where thousands were unlawfully detained and tortured.
+    				</div>
+				</div>
+				<div class="spacer"> </div>		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/Abdisalla_Somalia_.jpg"/>
+    				<a href="article.php?id=1212"><h2>4th Circuit Denies Somali General Samantar Immunity Again! </h2></a>
+    				<div class="short-description">
+    					11/02/2012: In a landmark decision, the 4th Circuit Court of Appeals has denied Samantar's appeal in the first case to consider the "common law immunity" of foreign officials.  The decision denies immunity for human rights abuses like torture and extrajudicial killing and denies absolute deference to the executive branch. 
+    				</div>
+				</div>
+				<div class="clear"> </div>
+							 <div class="hr-box" id="hr-left"></div>
+							 <div class="hr-box" id="hr-right"></div>
+							 		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/800px-US_Supreme_Court_Building.jpg"/>
+    				<a href="article.php?id=1093"><h2>Kiobel v. Shell: Will the Supreme Court Put a Halt to Human Rights Litigation?</h2></a>
+    				<div class="short-description">
+    					10/01/2012: Oral arguments were heard in Kiobel v. Shell. At issue in the case is whether victims of foreign human rights abuses can continue to bring claims in U.S. courts against perpetrators who have found refuge in our country. Visit CJA's Kiobel Resource Center to read the transcripts and coverage of the case. The Supreme Court is expected to issue a decision in the next few months.
+    				</div>
+				</div>
+				<div class="spacer"> </div>		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/mario2.jpg"/>
+    				<a href="article.php?id=1181"><h2>Haiti:  Human Rights Lawyers Face a Rising Tide of Persecution</h2></a>
+    				<div class="short-description">
+    					09/25/2012: Prominent human rights attorney and long-time CJA partner Mario Joseph is facing an escalating series of threats and harassment against his person and the offices of the Haitian human rights NGO, Bureau des Avocats Internationaux (BAI).  The threats come as possible retaliation for BAI's human rights claims against former dictator Jean-Claude "Baby Doc" Duvalier and the current government of Michel Martelly.  Learn how you can take action to defend Mario Joseph and BAI's important work.
+    				</div>
+				</div>
+				<div class="clear"> </div>
+							 <div class="hr-box" id="hr-left"></div>
+							 <div class="hr-box" id="hr-right"></div>
+							 		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/iengpng.png"/>
+    				<a href="article.php?id=1145"><h2>CJA Statement on Defendant Ieng Thirith's Dismissal from Khmer Rouge Trial
+
+
+  </h2></a>
+    				<div class="short-description">
+    					09/14/2012: The Extraordinary Chambers in the Courts of Cambodia (ECCC) dismissed Ieng Thirith from the second Khmer Rouge trial on grounds of mental unfitness.  Ieng Thirith has been widely believed to have Alzheimer’s disease, affecting her memory and ability to confront evidence against her at trial.
+    				</div>
+				</div>
+				<div class="spacer"> </div>		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/MONTANO_thumb.jpg"/>
+    				<a href="article.php?id=1135"><h2>Jesuits Massacre Defendant Montano Pleads Guilty to U.S. Charges</h2></a>
+    				<div class="short-description">
+    					09/11/2012: Inocente Orlando Montano, retired Salvadoran colonel and defendant in CJA's Jesuits Massacre Case in Spain, pled guilty to six counts of federal criminal immigration fraud and perjury before district judge Douglas P. Woodlock. 
+    				</div>
+				</div>
+				<div class="clear"> </div>
+							 <div class="hr-box" id="hr-left"></div>
+							 <div class="hr-box" id="hr-right"></div>
+							 		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/Nimo Buralle Bashe Gulaid Aziz optimal.jpg"/>
+    				<a href="article.php?id=1089"><h2>Samantar Case: $21 Million Judgment in Favor of CJA Clients</h2></a>
+    				<div class="short-description">
+    					08/28/2012: On August 28, 2012, U.S. Federal Judge Leonie Brinkema awarded $21 million in compensatory and punitive damages against former Somali General Mohamed Ali Samantar. This judgment marks the first time that any Somali government official has been held accountable for the atrocities perpetrated under the Siad Barre regime.
+    				</div>
+				</div>
+				<div class="spacer"> </div>		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/AlmuYoDonna_1.jpg"/>
+    				<a href="article.php?id=1087"><h2>CJA Attorney Almudena Bernabeu Wins YO DONA International Award </h2></a>
+    				<div class="short-description">
+    					06/20/2012: On June 20 in Madrid, Spain, YO DONA magazine announced that Center for Justice and Accountability (CJA) attorney Almudena Bernabeu was the 2012 recipient of its prestigious International Award for Professional Work.
+    				</div>
+				</div>
+				<div class="clear"> </div>
+							 <div class="hr-box" id="hr-left"></div>
+							 <div class="hr-box" id="hr-right"></div>
+							 		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/telmohurtado-mug-shot.jpg"/>
+    				<a href="article.php?id=1080"><h2>Telmo Hurtado Testifies to Cover-Up of Accomarca Massacre in Peruvian Court</h2></a>
+    				<div class="short-description">
+    					04/09/2012:  During criminal proceedings in Peru, Telmo Hurtado - a former military officer and defendant in CJA's Accomarca Case - confessed to his role in the 1985 massacre of 69 villagers in Accomarca, Peru.  Hurtado also revealed that he was ordered to cover up the role of senior officials in the massacre. 
+    				</div>
+				</div>
+				<div class="spacer"> </div>		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/Dana_Shepard_cambodia_banner.jpg"/>
+    				<a href="article.php?id=972"><h2>CJA's Annual Event, May 10, 2012</h2></a>
+    				<div class="short-description">
+    					04/08/2012: Thank you for joining us for CJA's 2012 Annual Event, <i>Celebrating our Victories in the Movement for Global Justice</i>, featuring: Keynote Speaker Kerry Kennedy; former U.S. Ambassador Robert White, Ambassador to El Salvador during the country’s Civil War and recipient of the 2012 Judith Lee Stronach Human Rights Award; Mexico’s Lydia Cacho, a courageous journalist, human rights defender, and recipient of Champion of Justice Award; and CJA client Sophany Bay, a Khmer Rouge survivor who lost almost 100 members of her family.
+    				</div>
+				</div>
+				<div class="clear"> </div>
+							 <div class="hr-box" id="hr-left"></div>
+							 <div class="hr-box" id="hr-right"></div>
+							 		
+	
+				<div class="update-item">
+					<img class="update-thumb" src="img/thumb/vides.jpg"/>
+    				<a href="article.php?id=1078"><h2>Ex-Salvadoran Defense Minister Vides Casanova Ruled Deportable for Human Rights Abuses</h2></a>
+    				<div class="short-description">
+    					02/25/2012: On February 23, 2012, a U.S. immigration judge ruled that Gen. Eugenio Vides Casanova, the former defense minister of El Salvador, can be removed from the United States for the torture of Salvadoran citizens, the 1980 killings of four American churchwomen, and the 1981 killings of two Americans and a Salvadoran land reformer.
+    				</div>
+				</div>
+						
+						
+							<div class="clear"></div>
+						</div>
+						<img class="cap" src="img/updates_bottom.gif"/>		
+					</div>
+					<!-- Updates end -->					
+					<!-- Content end -->
+				</div>
+				<div id="sidebar">
+					<!-- Sidebar start -->
+
+		<div class="nav-item" style="width:317px">
+			<div id="join-cja">
+  <a href="join" title="Join CJA">
+    <img src="img/join_cja.jpg" alt="Your support is needed. Join CJA Today."/>
+  </a>
+</div>
+		</div>
+		
+		<div class="nav-item" style="width:317px">
+			<div id="about-cja" style="background: url('img/about_cja.gif'); height: 269px; width: 316px; font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;">
+  <!-- img src="img/about_cja.gif"/ -->
+  <div id="about-cja-content" class="floating-content"><div style="width: 175px; height: 236px;">
+    <h2 style="font-size: 1.5em;">About CJA</h2>
+    <p style="font-size: 11px;">CJA is an international human rights organization dedicated to deterring torture and other severe human rights abuses around the world and advancing the rights of survivors to seek truth, justice and redress.  CJA uses litigation to hold perpetrators individually accountable for human rights abuses, develop human rights law and advance the rule of law in countries transitioning from periods of abuse.</p>
+    <a class="read-more-link" href="article.php?list=type&type=86" title="About CJA" style="font-size: 11px;">Read more...</a>
+</div>
+  </div>						
+</div>
+		</div>
+		
+		<div class="nav-item" style="width:317px">
+			<div id="our-cases" style="background: url('img/about_justice.gif'); height: 126px; width: 316px; font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;">
+  <div id="our-cases-content" class="floating-content">
+<div style="width: 287px; height: 96px;">
+    <h2 style="font-size: 1.5em;">Our Cases</h2>
+    <p style="font-size: 12px;">CJA is now the leading NGO which brings cases against individual human rights abusers in the U.S. and Spain under principles of universal jurisdiction.</p>
+    <a class="read-more-link" href="cases" title="Our Cases" style="font-size: 12px;">Read more...</a>
+</div>
+  </div>						
+</div>
+		</div>
+		
+		<div class="nav-item" style="width:317px">
+			<div id="sign-up">
+   <a href="signup" title="Sign up for CJA news">
+       <img src="img/sign_up.jpg" alt="Sign up for CJA news"/>
+   </a>
+</div>
+<div id="facebook">
+    <a href="facebook" title="Find us on Facebook">
+        <img src="img/facebook.jpg" alt="Find us on Facebook"/>
+    </a>
+</div>
+		</div>
+		
+		<div class="nav-item" style="width:317px">
+			<a href="https://twitter.com/CJA_News" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CJA_News</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+		<div class="nav-item" style="width:317px">
+			<div id="legal-glossary" class="nav-item">
+  <a href="glossary" title="Legal Glossary">
+    <img src="img/blog.gif" alt="Legal Glossary"/>
+  </a>
+</div>
+		</div>
+		
+		<div class="nav-item" style="width:317px">
+			<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("c54bbdf7ea81015a434dd053254b3f1d");</script><fb:fan profile_id="52340675418" stream="1" connections="" width="316"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Center-for-Justice-and-Accountability/52340675418">Center for Justice and Accountability on Facebook</a> </div>
+<!--
+<div id="news">
+  <img class="cap" src="img/news_top.gif"/>
+  <div id="news-content">
+  </div>
+  <img class="cap" src="img/news_bottom.gif"/>
+</div>
+-->
+		</div>
+		
+					<!-- Sidebar end -->
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-content">
+				<div id="footer-bugs">
+					<a href="facebook"><img src="img/facebook_bug.jpg"/></a>
+					<a href="rss"><img src="img/rss_bug.jpg"/></a>				
+				</div>
+				<div id="footer-navigation">
+					<a href="contact">Contact Us</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="cases">Our Cases</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="glossary">Legal Glossary</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="donate">Donate</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="privacy">Privacy Policy</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="sitemap.php">Site Map</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="credits">Credits</a>
+				</div>
+				<div id="footer-address">
+					870 Market St Suite 680 San Francisco, CA 94102 T415 544 0444 F415 544 0456<br>
+Copyright © 2011 The Center for Justice and Accountability
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

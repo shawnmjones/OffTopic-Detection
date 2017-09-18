@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <title>25 Leaks</title>
+  <link href="/stylesheets/home.css?1301765003" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/jquery.fancybox-1.3.4.css?1301765003" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/jquery.min.js?1301765003" type="text/javascript"></script>
+<script src="/javascripts/rails.js?1301765003" type="text/javascript"></script>
+  <script src="/javascripts/jquery.fancybox-1.3.4.pack.js?1301765003" type="text/javascript"></script>
+<script src="/javascripts/jquery.easing-1.3.pack.js?1301765003" type="text/javascript"></script>
+  <script src="/javascripts/application.js?1301765003" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="image_src"
+      type="image/jpeg"
+      href="/images/logo.png?1301765003" />
+  <meta property="og:image" content="/images/logo.png?1301765003" />
+
+  <!--[if lte IE 7]>
+  <link href="/stylesheets/ie7.css?1301765003" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <meta charset="utf-8" />
+  <link href="http://feeds.feedburner.com/25leaksFeed" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="http://feeds.feedburner.com/25leaksFeed" rel="alternate" title="RSS" type="application/rss+xml" />
+
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="AxQpJqKypCp/qmF3cpvSjr67MSt5NNsh4V9OW7r1YpE="/>
+  
+</head>
+<body>
+
+<h1 id="logo">
+  25 Leaks
+</h1>
+<ul id="home-nav">
+  <li>
+    <a href="/documents"><img alt="تصفح" src="/images/browse.png?1301765003" /></a>
+  </li>
+  <li>
+    <form accept-charset="UTF-8" action="/documents/search" id="search-home" method="get" style="display: none;"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input id="query" name="query" type="text" value="أدخل كلمة البحث" />
+</form>
+    <a href="#" id="search-link"><img alt="ابحث" src="/images/search.png?1301765003" /></a>
+  </li>
+  <li>
+    <a href="/share"><img alt="شارك" src="/images/cont.png?1301765003" /></a>
+  </li>
+</ul>
+<ul id="home-footer">
+  <li>
+    <a href="/about"><img alt="عن الموقع" src="/images/about.png?1301765003" /></a>
+  </li>
+  <li class="sep">
+    <img alt="Sep" src="/images/sep.png?1301765003" />
+  </li>
+  <li>
+    <a href="/contact"><img alt="عاتصل بنا" src="/images/contact.png?1301765003" /></a>
+  </li>
+
+</ul>
+<ul id="home-follow">
+  <li>
+    <a href="http://feeds.feedburner.com/25leaksFeed"><img alt="Rss" src="/images/rss.png?1301765003" /></a>
+  </li>
+  <li>
+    <a href="http://twitter.com/25leaks"><img alt="Twitter" src="/images/twitter.png?1301765003" /></a>
+  </li>
+  <li>
+    <a href="http://www.facebook.com/#!/pages/25leaks/183442221699533"><img alt="Facebook" src="/images/facebook.png?1301765003" /></a>
+  </li>
+  <li style="display: none;">
+    <a href="http://www.youtube.com/watch?v=0tw0tiqiR7I" id="youtube-video">youtube video</a>
+  </li>
+</ul>
+<div class="add-this">
+  <div class="fbShare" style="width: 140px; height: 20px;float: left;direction:ltr;margin-top: -2px;">
+    <a share_url='http://25leaks.com' href='http://www.facebook.com/sharer.php?' name='fb_share'
+       type='button_count'>Share</a>
+
+    <script src='http://static.ak.fbcdn.net/connect.php/js/FB.Share' type='text/javascript'></script>
+  </div>
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="display: inline;">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    <a class="addthis_button_tweet"></a>
+  </div>
+</div>
+
+<div class="add-this">
+
+  <div class="addthis_toolbox addthis_default_style addthis_32x32_style addthis-ie7">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_compact"></a>
+  </div>
+  <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d736b62619971a2"></script>
+  <!-- AddThis Button END -->
+</div>
+<script type="text/javascript">
+    $('#search-link').click(function() {
+        $('#search-home').fadeToggle();
+        return false;
+    });
+    $('#query').focus(function() {
+        if (this.value == 'أدخل كلمة البحث') {
+            this.value = ''
+        }
+    });
+    $('#query').blur(function() {
+        if (this.value == '') {
+            this.value = 'أدخل كلمة البحث'
+        }
+    })
+    $("#youtube-video").click(function() {
+        $.fancybox({
+            'padding'        : 0,
+            'autoScale'        : false,
+            'transitionIn'    : 'none',
+            'transitionOut'    : 'elastic',
+            'title'            : this.title,
+            'width'        : 680,
+            'height'        : 495,
+            'href'            : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+            'type'            : 'swf',
+            'swf'            : {
+                'wmode'        : 'transparent',
+                'allowfullscreen'    : 'true'
+            }
+        });
+
+        return false;
+    });
+//    jQuery(document).ready(function() {
+//        $("#youtube-video").trigger('click');
+//    });
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21869945-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

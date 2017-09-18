@@ -1,0 +1,1375 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>محيط - شبكة الإعلام العربية</title>
+		<meta http-equiv="Content-Language" content="en-us">
+		<META http-equiv="Refresh" content="600">
+		<meta content="Microsoft FrontPage 6.0" name="GENERATOR">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="shortcut icon" type="image/ico" href="http://www.moheet.com/favicon.ico">
+		<link rel="icon" type="image/ico" href="favicon.ico">
+		<link rel="shortcut icon" href="http://www.moheet.com/favicon.ico" type="image/x-icon">
+		<meta name="msapplication-task" content="name=News; action-uri=http://www.moheet.com/subject2.html; icon-uri=http://www.moheet.com/favicon.ico">
+		<meta name="msapplication-task" content="name=Computer; action-uri=http://www.moheet.com/subject10.html; icon-uri=http://www.moheet.com/favicon.ico">
+		<meta name="msapplication-task" content="name=Economy; action-uri=http://www.moheet.com/subject3.html; icon-uri=http://www.moheet.com/favicon.ico">
+		<meta name="msapplication-task" content="name=Woman; action-uri=http://www.lahona.com; icon-uri=http://www.moheet.com/favicon.ico">
+		<meta name="msapplication-task" content="name=korabia; action-uri=http://www.korabia.com; icon-uri=http://www.moheet.com/favicon.ico">
+		<script src="ClientScripts/moheetGlobal.js" type="text/javascript"></script>
+		<LINK href="MoheetStyle.css" type="text/css" rel="stylesheet">
+		<STYLE type="text/css">.watermarkedEmail { BACKGROUND-POSITION: center center; BACKGROUND-IMAGE: url(images/AddEmail.gif); VERTICAL-ALIGN: middle; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: center }
+	.fileHeader { PADDING-RIGHT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #006699 }
+	.fileHeader A:link { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #006699; TEXT-DECORATION: none }
+	.fileHeader A:visited { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #006699; TEXT-DECORATION: none }
+	.fileHeader A:hover { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #3366cc; TEXT-DECORATION: none }
+	.marq { PADDING-RIGHT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #003399 }
+	.marq A:link { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #003399; TEXT-DECORATION: none }
+	.marq A:visited { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #003388; TEXT-DECORATION: none }
+	.marq A:hover { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #3366cc; TEXT-DECORATION: none }
+		</STYLE>
+		<SCRIPT language="JavaScript">
+			var oldColor;
+			var oldGroupColor;		
+			function changeColor(color,groupColor)
+			{	
+				if(color=='x')
+				{
+					color=document.getElementById("tblMain").bgColor;
+					groupColor = document.getElementById("tdHeaders").bgColor;
+				}
+				oldColor=color;
+				oldGroupColor=groupColor;
+				color=GetCookie("pgColor")				
+				if(color==null)return;
+				//if(color.replace("#","").toLowerCase()==oldColor.replace("#","").toLowerCase())return;
+				groupColor=GetCookie("pgGroupColor")
+				
+				oldColor=oldColor.replace(/#/,"").toLowerCase();
+				oldGroupColor=oldGroupColor.replace(/#/,"").toLowerCase();
+				color=color.replace(/#/,"").toLowerCase();
+				groupColor=groupColor.replace(/#/,"").toLowerCase();
+				
+				document.getElementById("MoheetSearch1_tdl").className=color.toUpperCase()+"tdl";
+				document.getElementById("MoheetSearch1_tds").className=color.toUpperCase()+"tds";
+
+				var tdcount=document.getElementsByTagName("td").length;								
+				var tds=document.getElementsByTagName("td")
+				for(var i=0;i<tdcount;i++)
+				{	
+					if( tds.item(i).bgColor.toLowerCase().replace(/#/,"") == oldGroupColor)
+					{
+						tds.item(i).bgColor =groupColor;
+					}
+				}
+
+				//document.getElementById("tblMain2").bgColor = color;
+				document.getElementById("tblMain").bgColor = color;
+				document.getElementById("tdTopHeaderCenter").bgColor = color;
+				document.getElementById("Table1").bgColor = color;
+				document.getElementById("tblMain3").bgColor = color;
+				
+				
+
+				var count=document.images.length
+				for(var i =0;i<count;i++)
+				{
+					document.images[i].src=document.images[i].src.toLowerCase().replace(oldColor,color);
+				}
+								
+			}
+			
+		function preLoad(newcolor)
+		{
+			var imgs = new Array() 
+			if(GetCookie("pgColor")!=null)
+				newcolor=GetCookie("pgColor")
+			imgs[0] = 'images/point001.gif'
+			imgs[1] = 'images/newspoint.gif'
+			imgs[2] = 'images/'+newcolor+'button.gif'
+			imgs[3] = 'images/'+newcolor+'strip002.gif'
+			imgs[4] = 'images/'+newcolor+'strip001.gif'
+			imgs[5] = 'images/'+newcolor+'white003.gif'
+			imgs[6] = 'images/'+newcolor+'white004.gif'
+			imgs[7] = 'images/'+newcolor+'bg001.gif'
+			imgs[8] = 'images/'+newcolor+'bg002.gif'
+			imgs[9] = 'images/'+newcolor+'bg003.gif'
+			imgs[10] = 'images/'+newcolor+'bg004.gif'
+			imgs[11] = 'images/'+newcolor+'moheet-logo.jpg'
+			imgs[12] = 'images/'+newcolor+'_05.gif'
+			imgs[13] = 'images/'+newcolor+'_04.gif'
+			imgs[14] = 'images/'+newcolor+'_03.gif'
+			imgs[15] = 'images/'+newcolor+'_02.gif'
+			imgs[16] = 'images/'+newcolor+'_01.gif'
+
+			var str="hassan"
+			var len = imgs.length;
+			var tempArr = new Array()
+			for (i = 0; i < len; i++)
+			{
+				tempArr[i] = new Image()
+				tempArr[i].src = imgs[i]
+			}
+		}
+		
+		</SCRIPT>
+		<SCRIPT language="javascript">
+		var tdbackground =null
+		function changeTab(tab)
+		{
+			
+			if(strArr==null)
+			{
+				strArr=str.split("¤");
+			}
+			if(tdbackground==null)
+			{
+				tdbackground = document.getElementById("trTabs").cells[0].background
+			}
+			var cellsCount = document.getElementById("trTabs").cells.length;
+			var strArr2;			
+			for(var i =0;i<cellsCount-1;i++)
+			{
+				if(document.getElementById("trTabs").cells[i].id==tab)
+				{	
+					strArr2=strArr[i].split("ô")
+					for(var j=0;j<cellsCount-1;j++)
+					{
+						document.getElementById("trTabs").cells[j].background=""
+						document.getElementById("trTabs").cells[j].className="tab";
+					}
+					
+					
+					document.getElementById("trTabs").cells[i].background= "images/"+document.getElementById("tblMain").bgColor.replace("#","")+"button.gif"
+					document.getElementById("trTabs").cells[i].className="more"
+					
+					currentIndex=i;
+
+					document.getElementById("tdMainPic").innerHTML="<a href='show_news.aspx?nid="+strArr2[1]+"&pg=1'><img style='border : 1px solid #000000' src='"+strArr2[0]+"' width='180' height='135'></a>" ;
+					document.getElementById("tdMainNew").innerHTML="<p align=justify><a href='show_news.aspx?nid="+strArr2[1]+"&pg=1' class=nhsr>"+strArr2[2]+"</a><br>" + strArr2[3]+ "...<a href='show_news.aspx?nid="+strArr2[1]+"&pg=1' class=more>التفاصيل</a></p>" 
+					document.getElementById("tdSubPic1").innerHTML="<a href='show_news.aspx?nid="+strArr2[5]+"&pg=1' class=nhs><img align=baseline border=1 src='"+strArr2[4]+"' style='border : solid 1px #000000' width='53' height='45'></a>";
+					document.getElementById("tdSubNew1").innerHTML="<p align=justify><a href='show_news.aspx?nid="+strArr2[5]+"&pg=1' class=nts>"+strArr2[6]+"</a></p>";
+					document.getElementById("tdSubPic2").innerHTML="<a href='show_news.aspx?nid="+strArr2[8]+"&pg=1' class=nhs><img align=baseline border=1 src='"+strArr2[7]+"' style='border : solid 1px #000000' width='53' height='45'></a>";
+					document.getElementById("tdSubNew2").innerHTML="<p align=justify><a href='show_news.aspx?nid="+strArr2[8]+"&pg=1' class=nts>"+strArr2[9]+"</a></p>";
+				}
+				
+			}
+		}
+		
+		var strArr=null;
+		var currentIndex=0;
+		var isMouseOver=false;
+		var isLoaded =false;
+		var timer;
+		function startMotion()
+		{
+			timer=window.setTimeout(moveNext,8000);
+		}
+		function moveNext()
+		{
+			currentIndex+=1;
+			if(currentIndex==document.getElementById("trTabs").cells.length-1)currentIndex=0;
+			changeTab(document.getElementById("trTabs").cells[currentIndex].id);
+			startMotion();	
+		}
+		
+		</SCRIPT>
+		<!-- Google analytics -->
+		<script type="text/javascript">
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-8270677-1");
+				pageTracker._trackPageview();
+				} catch(err) {}</script>
+		<!-- End of google analytics -->
+		<SCRIPT language="JavaScript" src="CScript.js"></SCRIPT>
+		<script type="text/javascript">
+		function clearEmailTxt(txtEmailID)
+		{
+			var txtEmail = document.getElementById(txtEmailID);
+			
+			txtEmail.className="unwatermarked";
+		}
+
+
+function CheckEmailTxt(txtEmailID)
+{
+	var txtEmail = document.getElementById(txtEmailID)
+	
+    if (txtEmail.value=="")
+    {
+        txtEmail.className="watermarkedEmail";
+    }
+    else
+    {   
+		txtEmail.className="unwatermarked";
+	}
+}
+		</script>
+		<SCRIPT language="JavaScript">
+<!-- HIDE FROM BROWSERS
+
+function newWindow2(url,height,width)
+{
+   var new_width = 0;
+   var new_heigh = 0;
+
+   new_width = parseInt(width) ;
+   new_height = parseInt(height) ;
+   base = " " 
+   urlWindow = window.open(base + url, 'Source', 'width=' + new_width + ',height=' + new_height + ',scrollbars=no');
+   urlWindow.focus;
+}
+
+
+// -->
+		</SCRIPT>
+
+
+
+
+
+
+
+
+
+	</HEAD>
+	<body class="body" bottomMargin="0" leftMargin="0" topMargin="0" scroll="no" onload="isLoaded=true;"
+		rightMargin="0" style="MARGIN-TOP:0px">
+
+<!-- BEGIN EFFECTIVE MEASURE CODE -->
+
+<!-- COPYRIGHT EFFECTIVE MEASURE -->
+
+<script type="text/javascript">
+
+ (function() {
+		
+  var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+		
+  em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+	
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+	
+ })();
+
+</script>
+
+<noscript>
+	
+<img src="//me.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+
+</noscript>
+
+<!--END EFFECTIVE MEASURE CODE -->
+
+
+		<form name="Form1" method="post" action="home.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE" value="dDwtOTAyMDk4MDEzOzs+rdUfS3VoPVn22yWZBP1FwMFOXxg=" />
+
+			<TABLE id="Table9" height="97%" cellSpacing="0" cellPadding="0" width="100%" border="0"
+				style="Z-INDEX:9999">
+				<TR>
+					<TD height="100%">
+						<DIV style="OVERFLOW: auto; WIDTH: 100%; HEIGHT: 100%" ms_positioning="FlowLayout">
+							<!--Table HERE -->
+							<table border="0" cellpadding="0" cellspacing="0" style="BORDER-COLLAPSE: collapse" bordercolor="#111111"
+								width="100%">
+								<tr>
+									<td align="right" valign="top">
+										<!--Iframe Tag  -->
+										<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Left Sponsor - 141 x 693 -->
+										<iframe src="http://c4.zedo.com/jsc/c4/ff2.html?n=1395;c=5;s=4;d=24;w=141;h=693" frameborder="0"
+											marginheight="0" marginwidth="0" scrolling="no" allowTransparency="true" width="141"
+											height="693"></iframe>
+										<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Left Sponsor - 141 x 693 -->
+									</td>
+									<td width="760" align="center" valign="top">
+										<table cellspacing="0" cellpadding="0" style="BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #000000 0px solid; MARGIN: 0px auto; BORDER-LEFT: #000000 0px solid; WIDTH: 98%; BORDER-BOTTOM: #000000 0px solid">
+											<tr>
+												<td style="VERTICAL-ALIGN: top;WIDTH: 50%">
+													<!----left ---->
+												</td>
+												<td style="VERTICAL-ALIGN: top;WIDTH: 760px">
+													<table id="tblMain2" dir="ltr" cellSpacing="0" cellPadding="0" width="760" align="center"
+														border="0">
+														<TR>
+															<TD vAlign="top" colSpan="3" height="5">
+															</TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" height="5" width="10"><img src="images/000000Bg002.gif" id="IMG10" height="10" width="10" border="0" /></TD>
+															<TD vAlign="top" height="5" id="tdTopHeaderCenter" width="740" bgColor="#000000"></TD>
+															<TD vAlign="top" height="5" width="10">
+																<P align="right"><img src="images/000000Bg001.gif" id="IMG11" height="10" width="10" border="0" /></P>
+															</TD>
+														</TR>
+														<TR>
+															<TD vAlign="top" colSpan="3" bgcolor="#245c9d">
+																<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0" bgColor="#000000">
+																	<TR>
+																		<TD style="HEIGHT: 1px" vAlign="bottom" align="center" width="30%">
+																			<!--<P align="left">
+																				<TABLE id="tblColors" dir="ltr" style="BORDER-RIGHT: #ffffff 0px solid; BORDER-TOP: #ffffff 0px solid; BORDER-LEFT: #ffffff 0px solid; BORDER-BOTTOM: #ffffff 0px solid; BORDER-COLLAPSE: collapse"
+																					borderColor="#111111" height="2" cellSpacing="0" cellPadding="0" width="200" align="left"
+																					border="0">
+																					<TR>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							align="center" width="15" colSpan="29" height="3"></TD>
+																					</TR>
+																					<TR>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="15" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'DEE2E5');changeColor('x','x');" width="6"
+																							bgColor="#000000" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'ECD4E9');changeColor('x','x');" width="6"
+																							bgColor="#af63a3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'F6E1E1');changeColor('x','x');" width="6"
+																							bgColor="#9e005d" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'ECD4E9');changeColor('x','x');" width="6"
+																							bgColor="#7c2e78" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'F9F2D9');changeColor('x','x');" width="6"
+																							bgColor="#9b4d00" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'F6E1E1');changeColor('x','x');" width="6"
+																							bgColor="#c73451" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'F9F2D9');changeColor('x','x');" width="6"
+																							bgColor="#f26522" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'E7E9C1');changeColor('x','x');" width="6"
+																							bgColor="#717400" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'CAE7D5');changeColor('x','x');" width="6"
+																							bgColor="#306544" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'F9F2D9');changeColor('x','x');" width="6"
+																							bgColor="#ba954e" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'DEE2E5');changeColor('x','x');" width="6"
+																							bgColor="#8c98ae" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'D1E0F9');changeColor('x','x');" width="6"
+																							bgColor="#618ede" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'D1E0F9');changeColor('x','x');" width="6"
+																							bgColor="#2e65c4" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="3" height="9"></TD>
+																						<TD style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; BORDER-BOTTOM: #ffffff 1px solid"
+																							onclick="setCookieColor(this.bgColor,'D1E0F9');changeColor('x','x');" width="6"
+																							bgColor="#2e3192" height="9"></TD>
+																						<TD style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid"
+																							width="10" height="9"></TD>
+																					</TR>
+																				</TABLE>
+																			</P>-->
+																		</TD>
+																		<TD id="tdTest"></TD>
+
+																		<TD vAlign="bottom" align="right"></TD>
+																		<TD vAlign="bottom" align="right"><A href="moheetRss.aspx" target="_blank"></A></TD>
+																		<TD vAlign="bottom" align="right" width="2%"></TD>
+																	</TR>
+																	<TR>
+																		<TD vAlign="bottom" align="center" width="30%" height="10"></TD>
+																		<TD height="10"></TD>
+																		<TD vAlign="bottom" align="right" height="10"></TD>
+																		<TD vAlign="bottom" align="right" height="10"></TD>
+																		<TD vAlign="bottom" align="right" width="2%" height="10"></TD>
+																	</TR>
+																</TABLE>
+															</TD>
+														</TR>
+													</table>
+													<table id="tblMain3" dir="ltr" cellSpacing="0" cellPadding="0" width="760" align="center"
+														border="0" bgColor="#000000">
+														<TR>
+															<TD id="tdAdv1" valign="top" align="center" colspan="3"><!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Super Banner - 728 x 90 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="728"; var zflag_height="90"; var zflag_sz="14"; 
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Super Banner - 728 x 90 --></TD>
+
+														</TR>
+													</table>
+													<table id="tblMain" dir="ltr" cellspacing="0" cellpadding="0" width="760" align="center" bgcolor="000000" border="0">
+	<tr>
+		<TD valign="top" colspan="3" height="10"></TD>
+	</tr>
+	<tr>
+		<TD valign="top" align="center" colspan="3">
+<script type="text/javascript" src="http://api.yamli.com/js/yamli_api.js?1827"></script>
+<script type="text/javascript">
+      if (typeof(Yamli) == 'object' && Yamli.init('984868'))
+      {
+        Yamli.yamlify('txtSearch',{settingsPlacement:'inside' , uiLanguage:"ar"});
+        Yamli.yamlify('Comments1_txtName',{settingsPlacement:'inside', uiLanguage:"ar"});
+        Yamli.yamlify('Comments1_txtTitle',{settingsPlacement:'inside' , uiLanguage:"ar"});
+        Yamli.yamlify('Comments1_txtCommentbody',{settingsPlacement:'bottomLeft', uiLanguage:"ar"});
+      }
+</script>
+<script language="javascript">
+	function chkSearchText()
+	{
+		if(document.getElementById("txtSearch").value.replace(/ /g,"")=="")
+		{
+			document.getElementById("txtSearch").focus();
+			document.getElementById("txtSearch").value="";
+			return false;
+		}
+		else
+		{
+			var pageUrl;
+			var currentCat;
+			currentCat=(document.getElementById("radioMoheet").checked)?"1":"2";
+			switch(currentCat)
+			{
+				
+				case "1": // ارشيف محيط
+					pageUrl="moheetSearch.aspx?sTxt="+document.getElementById("txtSearch").value;
+					break;
+				case "2": // الارشيف الصحفى
+					pageUrl="askZadSearch.aspx?sTxt="+document.getElementById("txtSearch").value;
+					break;
+			}
+			document.getElementById("aSearch").href=pageUrl;
+			return true;
+		}
+		
+	}
+	function enterPressed()
+	{
+		var key=0;
+		if (document.layers)
+			key=e.which;
+		else 
+			key=event.keyCode;
+			
+		if(key==13)
+			document.getElementById("aSearch").click();
+	}
+</script>
+<TABLE id="Table3" dir="rtl" cellSpacing="0" cellPadding="0" width="97%" border="0">
+	<TR>
+		<TD id="MoheetSearch1_tdl" align="center" width="29%" rowspan="2" class="000000tdl"><A href="home.html" target="_parent"><img src="images/000000moheet-logo.jpg" id="MoheetSearch1_imgLogo" height="45" width="169" border="0" /></A>
+			<DIV id="lblDate" dir="rtl" style="FONT-WEIGHT: bold; FONT-SIZE: 8pt; WIDTH: 100%; COLOR: #ffffff; HEIGHT: 20px"
+				align="center" ms_positioning="FlowLayout"></DIV>
+		</TD>
+		
+		<TD dir="ltr" vAlign="top">
+			<a href="sharing.aspx" target="_parent"><img src="images/000000_01.gif" id="MoheetSearch1_IMG1" border="0" onmouseover="this.style.filter='alpha(opacity=65); -moz-opacity: .65; opacity: .65;';" onmouseout="this.style.filter=''" /></a><a href="http://www.betshoof.com" target="_blank"><img src="images/000000_02.gif" id="MoheetSearch1_IMG2" border="0" onmouseover="this.style.filter='alpha(opacity=65); -moz-opacity: .65; opacity: .65;';" onmouseout="this.style.filter=''" /></a><a href="http://shoghlanty.moheet.com/" target="__blank"><img src="images/000000_03.gif" id="MoheetSearch1_IMG3" border="0" onmouseover="this.style.filter='alpha(opacity=65); -moz-opacity: .65; opacity: .65;';" onmouseout="this.style.filter=''" /></a><a href="weather.aspx" target="_parent"><img src="images/000000_04.gif" id="MoheetSearch1_IMG4" border="0" onmouseover="this.style.filter='alpha(opacity=65); -moz-opacity: .65; opacity: .65;';" onmouseout="this.style.filter=''" /></a><a href="pray.aspx" target="_parent"><img src="images/000000_05.gif" id="MoheetSearch1_IMG5" border="0" onmouseover="this.style.filter='alpha(opacity=65); -moz-opacity: .65; opacity: .65;';" onmouseout="this.style.filter=''" /></a></TD>
+	</TR>
+	<TR>
+		<TD id="MoheetSearch1_tds" dir="rtl" valign="middle" align="center" height="49" class="000000tds">
+			<a id="aSearch" href="moheetSearch.aspx" onclick="return chkSearchText();" target="_parent">
+			</a>
+			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TR>
+					<TD align="center" width="25%">
+						<TABLE class="stw" id="MoheetSearch1_RadioButtonList1" border="0">
+							<TR>
+								<TD><INPUT id="radioMoheet" type="radio" CHECKED value="1" name="RadioGroup"><LABEL for="radioMoheet">محيط</LABEL></TD>
+								<TD><INPUT id="radioAskZad" type="radio" value="2" name="RadioGroup"><LABEL for="radioAskZad">أسك 
+										زاد</LABEL></TD>
+							</TR>
+						</TABLE>
+					</TD>
+					<TD align="center" width="60%"><INPUT class="textInput" onkeydown="enterPressed();" style="WIDTH: 100%" type="text" id="txtSearch"></TD>
+					<TD align="center" width="15%"><INPUT class="btnInput" onclick="document.getElementById('aSearch').click();" type="button"
+							style="WIDTH: 50px; HEIGHT: 20px" value="إبحث" id="btnSearch"></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		
+	</TR>
+</TABLE>
+</TD>
+	</tr>
+	<tr>
+		<TD valign="top" colspan="3" height="3"></TD>
+	</tr>
+	<tr>
+		<TD style="HEIGHT: 20px" valign="bottom" align="center" colspan="3" height="20"><span id="urgentnews"><b></b></span></TD>
+	</tr>
+	<tr>
+		<TD valign="top" colspan="3" height="3"></TD>
+	</tr>
+	<tr id="trtdMainNews3">
+		<TD valign="top" align="center" colspan="3" height="1">
+																<table style="BORDER-COLLAPSE: collapse" bordercolor="#ff3333" cellSpacing="0" cellPadding="0"
+																	width="735" border="0">
+																	<tr>
+																		<td width="10">
+																			<!--Iframe Tag  -->
+																			<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Header - 285 x 83 -->
+																			<iframe src="http://c4.zedo.com/jsc/c4/ff2.html?n=1395;c=5;s=4;d=25;w=285;h=83" frameborder="0"
+																				marginheight="0" marginwidth="0" scrolling="no" allowTransparency width="285" height="83">
+																			</iframe>
+																			<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Header - 285 x 83 -->
+																		</td>
+																		<td width="3"></td>
+																		<td width="5" valign="bottom" align="right"><a target="_blank" href="show_all_files.aspx?cat=49" style="TEXT-DECORATION: none"><b><font size="1" color="#ffffff">المزيد</font></b></a></td>
+																		<td id="tdMainNews3" align="center"><td width='7'></td><td width='235' align='center' valign='middle'><table border='0' cellpadding='0' cellspacing='0' style='border:2px solid #C1C1C1; border-collapse: collapse' width='100%' height='80' bgcolor='#EBEBEB' dir=rtl><tr><td width='50'><a target='_blank' href='show_news.aspx?nid=493458&pg=62' ><img src='http://www.moheet.com/image/73/225-300/732662.jpg' width=70 height=55 style='border : solid 1px #FFFFFF'></a></td><td width='4'></td><td><a target='_blank' href='show_news.aspx?nid=493458&pg=62' class=nhsr>كمال القاضي يكتب: قبل سقوط العقيد بـ"تـــكــة" القذافي.. ضحية البرانويا والناتو والكتاب الأخضر</a></td></tr></table></td><td width='7'></td><td width='235' align='center' valign='middle'><table border='0' cellpadding='0' cellspacing='0' style='border:2px solid #C1C1C1; border-collapse: collapse' width='100%' height='80' bgcolor='#EBEBEB' dir=rtl><tr><td width='50'><a target='_blank' href='show_news.aspx?nid=493392&pg=62' ><img src='http://www.moheet.com/image/73/225-300/733274.jpg' width=70 height=55 style='border : solid 1px #FFFFFF'></a></td><td width='4'></td><td><a target='_blank' href='show_news.aspx?nid=493392&pg=62' class=nhsr>صحافة 28 أغسطس: إسرائيل تتوقع تدهور أكثر للوضع الأمني بسيناء</a></td></tr></table></td></td>
+		
+																	</tr>
+																</table>
+															</TD>
+	</tr>
+	<tr>
+		<TD valign="top" colspan="3" height="3"></TD>
+	</tr>
+	<tr>
+		<TD id="tdUrgent" valign="top" align="center" colspan="3"></TD>
+	</tr>
+	<tr>
+		<TD align="center" colspan="3">
+																<TABLE id="Table5" cellSpacing="0" cellPadding="0" width="100%" border="0">
+																	<TR>
+																		<TD vAlign="top" align="center">
+																			<TABLE id="Table6" height="100%" cellSpacing="0" cellPadding="0" width="225" align="right"
+																				bordercolor="#33ff00" border="0">
+																				<TR>
+																					<TD vAlign="top" align="center">
+																						<DIV align="right">
+																							<TABLE id="Table7" borderColor="#111111" cellSpacing="0" cellPadding="0" bgColor="#266590"
+																								border="0">
+																								<TR>
+																									<TD id="TD1" valign="top" align="left" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="IMG2" width="11" border="0" /></TD>
+		
+																									<TD id="TD2" class="gh" align="right" width="100%" bgcolor="DEE2E5"><A class="gh" href="direct_moheet.aspx" target="_parent">محيط 
+																											مباشر</A></TD>
+		
+																									<TD id="TD3" valign="top" align="right" width="1" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="IMG3" height="23" width="11" border="0" /></TD>
+		
+																								</TR>
+																								<TR>
+																									<TD id="tdNewsAddresses" valign="bottom" align="center" width="1%" bgcolor="#ffffff" colspan="3"><DIV  style="OVERFLOW: auto; WIDTH: 98%;height: 257; "  ms_positioning="FlowLayout"><p align = center><div  style=" WIDTH: 94%;" dir= rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493490&pg=1" >منع وكيل قناتي الحياة وأوربت من مغادرة مصر</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493461&pg=1" >مجلس الوزراء يستعرض الخطة العاجلة لتلبية احتياجات أهالى سيناء</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493460&pg=1" >قطر تستضيف وفود عسكرية عربية للبحث في اوضاع ليبيا</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493436&pg=1" >محمد الإسلامبولي يصل القاهرة بعد غياب 20 عاما</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493435&pg=1" >ميشيل كيلو : المبادرة العربية تتضمن مطالب المعارضة السورية</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493428&pg=1" >"هيومان رايتس" تتهم قوات القذافي بقتل معتقلين وإعدام العشرات من المدنيين</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493425&pg=1" >منظمة حقوقية سورية تدعو وزراء الخارجية العرب إلى مطالبة بشار بالرحيل</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493421&pg=1" >راسموسن يهنئ "الشعب الليبي بالنصر"</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493382&pg=1" >ليبيا: متشددون بين المفرج عنهم من سجن "أبو سليم"</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493378&pg=1" >محققون أميركيون يصلون نيجيريا لمتابعة التحقيقات بحادث أبوجا</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493372&pg=1" >باكستان تحتج بشدة لأفغانستان على هجمات مسلحين عبر أراضيها</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493361&pg=1" >الصحة تقرر تخصيص خط ساخن لتلقى وحل مشاكل الأطباء</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493356&pg=1" >وزيرة الأمن الداخلى الامريكية تحذر المواطنين من خطورة إعصار "أيرين"</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493355&pg=1" >فرق التوقيت بين غزة والضفة " ساعة كاملة " بداية من أول أيام عيد الفطر</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493354&pg=1" >كوندوليزا رايس تنشر في نوفمبر مذكرات جديدة تتناول حربي العراق وأفغانستانستان</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493353&pg=1" >ميركل تشيد بدور الناتو فى إسقاط القذافى</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493352&pg=1" >رحلة جوية سعودية تنقل 200 طن اغاثة عاجلة للصومال</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493351&pg=1" >مسئول امريكي : مقتل الرجل الثاني لـ "القاعدة" في باكستان</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493350&pg=1" >الزعيم الكوري الشمالي يختتم زيارته إلى شمال شرق الصين</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493349&pg=1" >الناتو: لا نية لنشر قوات برية في ليبيا</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493348&pg=1" >ليبرمان: الفلسطينيون يريدون القضاء على دولة إسرائيل</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493347&pg=1" >الثوار يحررون مستشفي "حي بوسليم" ويتحدثون عن عشرات القتلي داخله</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493343&pg=1" >متحدث جزائري : بلادي مستهدفة بوابل من الأخبار الكاذبة</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493334&pg=1" >الجزائر تنفي دخول القذافي الى اراضيها</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493331&pg=1" >تأجيل نظر قضيتي الاستيلاء على أراضي الدولة المتهم فيهماإبراهيم سليمان الى 24 سبتمبر</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493308&pg=1" >وزير داخلية حماس بحث في القاهرة إدخال تسهيلات جديدة على معبر رفح</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493293&pg=1" >تصدير 600 طن من خام "فولراند" من شمال كردفان إلى مصر</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493292&pg=1" >يديعوت أحرنوت : شركات طيران إسرائيلية تلغى رحلاتها للولايات المتحدة بسبب إعصار</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493291&pg=1" >عطل بموقع وزارة التربية والتعليم يمنع ظهور نتيجة الدور الثاني للثانوية</A></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><img border=0 src=images/newspoint.gif vspace=5 align=right><A class=nts href="show_news.aspx?nid=493257&pg=1" >إيران تدعو سوريا للاستجابة لمطالب الشعب المشروعة</A></TD>
+		
+																								</TR>
+																								<TR>
+																									<TD vAlign="bottom" align="left" bgColor="#ffffff"><img src="images/000000white003.gif" id="IMG4" height="10" width="10" border="0" /></TD>
+																									<TD bgColor="#ffffff"></TD>
+																									<TD vAlign="bottom" bgColor="#ffffff">
+																										<P align="right"><img src="images/000000white004.gif" id="IMG5" height="10" width="10" border="0" /></P>
+																									</TD>
+																								</TR>
+																							</TABLE>
+																						</DIV>
+																					</TD>
+																				</TR>
+																				<!--contact logos-->
+																				<tr>
+																					<td align="center">
+																						<table border="0" cellpadding="0" cellspacing="0" style="BORDER-COLLAPSE: collapse" bordercolor="#ffff00"
+																							width="215" align="center">
+																							<tr>
+																								<td class="11" height="3"></td>
+																							</tr>
+																							<tr>
+																								<td width="4"></td>
+																								<td width="20" align="center"><a target="_blank" href="rss.aspx"><img src="images/cog1.jpg" border="0"></a></td>
+																								<td width="6" align="center"></td>
+																								<td width="20" align="center"><a target="_blank" href="http://www.facebook.com/pages/moheetcom/184864788215006?sk=wall"><img src="images/cog2.jpg" border="0"></a></td>
+																								<td width="6" align="center"></td>
+																								<td width="20" align="center"><a target="_blank" href="http://twitter.com/MoheetFans"><img src="images/cog3.jpg" border="0"></a></td>
+																								<td width="6" align="center"></td>
+																								<td width="65" align="center"><a target="_blank" href="http://www.google.com/ig/directory?type=gadgets&amp;url=activedd.googlecode.com/svn/trunk/iGoogle/Gadgets/Moheet/moheet.xml"><img src="images/cog4.jpg" border="0"></a></td>
+																								<td width="12" align="center"></td>
+																								<td width="52" align="center" valign="middle"><b><font size="3" color="#ffffff">: تابعونا</font></b></td>
+																								<td width="4"></td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																				<!--/contact logos-->
+																			</TABLE>
+																		</TD>
+																		<TD align="center" width="69%" valign="top">
+																			<TABLE id="Table3" style="BORDER-COLLAPSE: collapse" cellSpacing="0" cellPadding="0" width="96%"
+																				border="0">
+																				<TR>
+																					<TD id="TD4" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="IMG6" width="11" border="0" /><!--<A href="rss.aspx"><IMG alt="Rss خدمة" src="images/rss.gif" border="0"></A>--></TD>
+		
+																					<TD id="tdHeaders" onmouseover="if(!isLoaded)return; window.clearTimeout(timer);" onmouseout="if(!isLoaded)return; window.clearTimeout(timer); timer=window.setTimeout(moveNext,8000);" valign="bottom" align="center" width="100%" bgcolor="DEE2E5"><TABLE style="BORDER-COLLAPSE: collapse" cellSpacing="0" cellPadding="1" width="100%" border="0" dir="rtl"><TR class =tab id="trTabs"><td background="images\1button.gif" d width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td34" onclick="changeTab(this.id);">أخبار</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td36" onclick="changeTab(this.id);">اقتصاد</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td640" onclick="changeTab(this.id);">رياضة</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td35" onclick="changeTab(this.id);">ثقافة</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td37" onclick="changeTab(this.id);">مـــرأة</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td38" onclick="changeTab(this.id);">فــــن</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td39" onclick="changeTab(this.id);">منوعات</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td566" onclick="changeTab(this.id);">رمضانيات</td><td width="53" height="20"  bgcolor="DEE2E5" style="CURSOR: hand" align="center" id="td570" onclick="changeTab(this.id);">رصد</td><td height="20" bgcolor="DEE2E5"></td></TR></table></TD>
+		
+																					<TD id="TD5" align="right" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="IMG7" height="23" width="11" border="0" /></TD>
+		
+																				</TR>
+																				<TR>
+																					<TD id="tdTabs" dir="rtl" onmouseover="if(!isLoaded)return; window.clearTimeout(timer);" onmouseout="if(!isLoaded)return; window.clearTimeout(timer); timer=window.setTimeout(moveNext,8000);" align="center" width="100%" bgcolor="#ffffff" colspan="3">
+																						<TABLE id="Table4" style="BORDER-COLLAPSE: collapse" cellSpacing="0" cellPadding="0" width="100%"
+																							border="0">
+																							<TR>
+																								<TD vAlign="top" colSpan="9" height="5"></TD>
+																							</TR>
+																							<TR>
+																								<TD width="1%" rowSpan="2">&nbsp;&nbsp;</TD>
+																								<TD id="tdMainPic" class="nts" style="BORDER-TOP: #ffffff 9px solid" valign="top" align="center" width="20%" height="150" rowspan="2"></TD>
+		
+																								<TD style="BORDER-LEFT: #ffffff 5px solid" width="1%" rowSpan="2">&nbsp;</TD>
+																								<TD id="tdMainNew" class="ntm" style="BORDER-TOP: #ffffff 9px solid" valign="top" width="30%" rowspan="2">
+																									<P align="justify">&nbsp;</P>
+																								</TD>
+		
+																								<TD style="BORDER-LEFT: darkgray 0px solid; bordercolor: " width="1%" rowSpan="2">&nbsp;</TD>
+																								<TD width="1%" rowSpan="2">&nbsp;</TD>
+																								<TD id="tdSubPic1" style="BORDER-TOP: #ffffff 9px solid" valign="top" align="center" width="5%"></TD>
+		
+																								<TD width="1%" rowSpan="2">&nbsp;</TD>
+																								<TD id="tdSubNew1" class="nts" valign="top" width="20%"></TD>
+		
+																								<TD width="1%" rowSpan="2">&nbsp;</TD>
+																							</TR>
+																							<TR>
+																								<TD id="tdSubPic2" style="BORDER-TOP: #ffffff 9px solid" valign="top" align="center"></TD>
+		
+																								<TD id="tdSubNew2" class="nts" valign="top" width="20%"></TD>
+		
+																							</TR>
+																						</TABLE>
+																					</TD>
+		
+																				</TR>
+																				<TR>
+																					<TD vAlign="bottom" align="center" width="1%" bgColor="#ffffff">
+																						<P align="left"><img src="images/000000white003.gif" id="IMG8" height="10" width="10" border="0" /></P>
+																					</TD>
+																					<TD align="center" width="33%" bgColor="#ffffff"></TD>
+																					<TD vAlign="bottom" align="center" width="1%" bgColor="#ffffff">
+																						<P align="right"><img src="images/000000white004.gif" id="IMG9" height="10" width="10" border="0" /></P>
+																					</TD>
+																				</TR>
+																				<TR>
+																					<TD align="center" width="100%" colSpan="3" height="10"></TD>
+																				</TR>
+																				<TR>
+																					<TD id="TD6" align="left" width="1%" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="IMG14" height="23" width="11" border="0" /></TD>
+		
+																					<TD id="tdAbwabHeader" class="gh" align="right" width="98%" bgcolor="DEE2E5">&nbsp; 
+																						خدمــات محيط</TD>
+		
+																					<TD id="TD7" align="right" width="1%" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="IMG15" height="23" width="11" border="0" /></TD>
+		
+																				</TR>
+																				<TR>
+																					<TD vAlign="bottom" align="center" bgColor="#ffffff" colSpan="3" height="7"></TD>
+																				</TR>
+																				<TR>
+																					<TD id="tdAbwab" valign="bottom" align="center" bgcolor="#ffffff" colspan="3"><TABLE style="BORDER-COLLAPSE: collapse" dir="rtl"  borderColor="#111111" cellSpacing="0" cellPadding="0" width="90%" border="0" ><tr><td width="25%"><img border="0" src="images/point001.gif"><a href="http://forums.moheet.com" target=_blank class = gi target=_blank>منتديات محيط</a><br><img border="0" src="images/point001.gif"><a href="bourse.aspx" target=_parent class = gi target=_parent>البورصات</a><br><img border="0" src="images/point001.gif"><a href="tenders.aspx" target=_parent class = gi target=_parent>مناقصات</a></td><td width='25%'><img border="0" src="images/point001.gif"><a href="http://shoghlanty.moheet.com/" target=_blank class = gi>فرصة عمل</a><br><img border="0" src="images/point001.gif"><a href="coins.aspx" target=_parent class = gi target=_parent>اسعار العملات</a><br><img border="0" src="images/point001.gif"><a href="pray.aspx" target=_parent class = gi target=_parent>مواقيت الصلاة</a></td><td width='25%'><img border="0" src="images/point001.gif"><a href="weather.aspx" target=_parent class = gi target=_parent>طقس اليوم</a><br><img border="0" src="images/point001.gif"><a href="sharing.aspx" target=_parent class = gi target=_parent>مشاركات القراء</a><br><img border="0" src="images/point001.gif"><a href="http://www.betshoof.com" target=_blank class = gi target=_parent>فضائيات</a><b><font color='red' size='2'> مطور </font></b></tr></table></TD>
+		
+																				</TR>
+																				<TR>
+																					<TD align="left" width="1%" bgColor="#ffffff"><img src="images/000000white003.gif" id="IMG16" height="10" width="10" border="0" /></TD>
+																					<TD align="center" width="33%" bgColor="#ffffff"></TD>
+																					<TD align="right" width="1%" bgColor="#ffffff"><img src="images/000000white004.gif" id="IMG17" height="10" width="10" border="0" /></TD>
+																				</TR>
+																			</TABLE>
+																		</TD>
+																	</TR>
+																</TABLE>
+															</TD>
+	</tr>
+	<tr>
+		<TD colspan="3">
+																<P align="center">
+																	<TABLE id="Table11" cellSpacing="0" cellPadding="0" width="100%" border="0">
+																		<TR>
+																			<TD vAlign="top" align="center" colSpan="3" height="5"></TD>
+																		</TR>
+																		<TR>
+																			<TD vAlign="top" align="right" colSpan="2">
+																				<P>
+																					<TABLE id="Table2" cellSpacing="0" cellPadding="0" width="99%" border="0">
+																						<TR>
+																							<TD id="tdAdv3" valign="top" align="center" width="50%"><!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Medium Rectangle - 300 x 250 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="300"; var zflag_height="250"; var zflag_sz="9"; 
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Medium Rectangle - 300 x 250 --></TD>
+
+																							<TD vAlign="top" align="center">
+																								<DIV align="center">
+																									<DIV align="center">
+																										<TABLE id="Table8" cellSpacing="0" cellPadding="0" width="270" align="center" border="0">
+																											<TR>
+																														<TD id="TD8" align="left" width="1%" bgcolor="DEE2E5" height="5">
+																													<DIV align="center"><FONT size="2"><img src="images/000000strip002.gif" id="IMG18" height="23" width="11" border="0" /></FONT></DIV>
+																												</TD>
+		
+																												<TD id="tdEstetla3" class="gh" align="right" bgcolor="DEE2E5" height="5">استطلاع</TD>
+		
+																												<TD id="TD9" align="right" width="1%" bgcolor="DEE2E5" height="5"><img src="images/000000strip001.gif" id="IMG21" height="23" width="11" border="0" /></TD>
+		
+																											</TR>
+																											<TR>
+																												<TD dir="rtl" style="HEIGHT: 100%" vAlign="top" align="center" bgColor="#ffffff" colSpan="3">
+																													<DIV align="center">
+<TABLE id="Table1" dir="rtl" height="215" cellSpacing="0" cellPadding="0" width="95%" border="0">
+	<TR>
+		<TD class="votingHeader" colSpan="2" height="10%"></TD>
+	</TR>
+	<TR>
+		<TD id="Vote1_tdHeader" class="nhsb" colspan="2">بعد سقوط طرابلس.. هل تتوقع اعتقال الرئيس الليبي قريبا ؟</TD>
+		
+	</TR>
+	<TR>
+		<TD class="votingHeader" colSpan="2" height="5"></TD>
+	</TR>
+	<TR>
+		<TD vAlign="top" align="center" colSpan="2">
+			<DIV dir="rtl" style="WIDTH: 100%; HEIGHT: 100px" align="right" ms_positioning="FlowLayout">
+				<P align="right"><table id="Vote1_radioListChoices" class="gi" border="0">
+			<tr>
+				<td><input id="Vote1_radioListChoices_0" type="radio" name="Vote1:radioListChoices" value="4021" /><label for="Vote1_radioListChoices_0">نعم</label></td>
+			</tr><tr>
+				<td><input id="Vote1_radioListChoices_1" type="radio" name="Vote1:radioListChoices" value="4022" /><label for="Vote1_radioListChoices_1">لا</label></td>
+			</tr><tr>
+				<td><input id="Vote1_radioListChoices_2" type="radio" name="Vote1:radioListChoices" value="4023" /><label for="Vote1_radioListChoices_2">غير مهتم</label></td>
+			</tr>
+		</table></P>
+			</DIV>
+		</TD>
+	</TR>
+	<TR>
+		<TD id="Vote1_tdBtn" valign="middle" align="right" width="30%" height="30">&nbsp;&nbsp; <A accesskey=761 name="1" id="lVote" href=javascript:newWindow("vote.aspx","400","485")><IMG onclick="voteItemChecked();" src="images\buttonvote.gif" border="0"></A></TD>
+		
+		<TD id="Vote1_tdLinks" valign="baseline" align="center" height="30"><A class=more href=javascript:newWindow("vote.aspx?pid=761","400","485")>نتائج الاستطلاع</A>&nbsp;&nbsp;&nbsp;<A class=more href=javascript:newWindow("vote.aspx?pid=761&pg=1&prev=true","400","485")>استطلاعات سابقة</A></TD>
+
+	</TR>
+</TABLE>
+<script language="javascript">
+
+	clientVoted();
+	function clientVoted()
+	{
+		if(GetCookie("pid"+document.getElementById("lVote").accessKey)!=null)
+			document.getElementById("Vote1_radioListChoices").disabled=true;
+		
+	}
+	function voteItemChecked()
+	{
+		var x=0
+		//for(var i=0;i<document.getElementById("Vote1_radioListChoices").childNodes.length;i++)
+		var childCount=document.getElementById("Vote1_radioListChoices").childNodes.length;
+		if(childCount==1)
+			childCount=document.getElementById("Vote1_radioListChoices").rows.length;
+
+		for(var i=0;i<childCount;i++)
+		{
+			if(document.getElementById("Vote1_radioListChoices").disabled)
+			{
+				document.getElementById("lVote").href="javascript:alert('معذرة , لا يمكنك التصويت اكثر من مرة')"
+				x=1;
+				break;
+			}
+			if(document.getElementById("Vote1_radioListChoices_"+i.toString()).checked)
+			{
+				document.getElementById("lVote").href="javascript:newWindow('vote.aspx?pid="+document.getElementById("lVote").accessKey+"&pg="+document.getElementById("lVote").name+"&ch="+document.getElementById("Vote1_radioListChoices_"+i.toString()).value+"','400','485')"
+				x=2;
+				document.getElementById("Vote1_radioListChoices").disabled=true;
+				break;
+			}
+			else
+			{
+				x=3;
+			}
+		}
+		if(x==3)
+		{
+			document.getElementById("lVote").href="javascript:alert('من فضلك اختر احد الاختيارات المتاحة')"
+		}
+	}
+	
+	function newWindow(url,height,width)
+	{
+		
+		var new_width = 0;
+		var new_heigh = 0;
+		
+		new_width = parseInt(width) ;
+		new_height = parseInt(height) ;
+		base = " " 
+		
+		urlWindow = window.open(base + url, 'Source', 'width=' + new_width + ',height=' + new_height + ', top='+(screen.height-new_height)/2+' , left='+(screen.width-new_width)/2+' ,scrollbars=no');
+		
+		urlWindow.focus;
+	}
+</script>
+		</DIV>
+																												</TD>
+																											</TR>
+																											<TR>
+																												<TD vAlign="bottom" align="left" bgColor="#ffffff"><img src="images/000000white003.gif" id="IMG19" height="10" width="10" border="0" /></TD>
+																												<TD vAlign="bottom" align="center" bgColor="#ffffff"></TD>
+																												<TD vAlign="bottom" align="right" bgColor="#ffffff"><img src="images/000000white004.gif" id="IMG20" height="10" width="10" border="0" /></TD>
+																											</TR>
+																										</TABLE>
+																									</DIV>
+																								</DIV>
+																							</TD>
+																						</TR>
+																						<TR>
+																							<TD width="52%" height="10"></TD>
+																							<TD height="10">
+																								<DIV align="center"></DIV>
+																							</TD>
+																						</TR>
+																					</TABLE>
+																				</P>
+																			</TD>
+																			<TD id="tdFrame1" valign="top" align="left" height="10%" rowspan="2">
+<script language="javascript">
+function dropGoChanged()
+{
+	if(document.getElementById("dropxxxCountry").value==0)
+	{
+		document.getElementById("linkGo").href="home.html";
+		return;
+	}
+	document.getElementById("linkGo").href="country"+document.getElementById("dropxxxCountry").value+".html";
+}
+</script>
+<TABLE id="Table11" cellSpacing="0" cellPadding="0" width="152" border="0">
+	<TR>
+		<TD id="MoheetRight1_tdFrame1" valign="top" align="left" width="160" rowspan="2">
+			<table id="MoheetRight1_tblCountry" style="BORDER-COLLAPSE: collapse" bordercolor="#111111" cellspacing="0" cellpadding="0" width="150" border="0">
+			<tr>
+				<TD id="MoheetRight1_TD2" align="center" width="1%" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="MoheetRight1_IMG1" border="0" /></TD>
+				<TD id="MoheetRight1_TD1" class="gh" align="center" bgcolor="DEE2E5"><A class="gh" href="country19.html" target="_parent">العالم 
+							من الداخل</A>
+					</TD>
+				<TD id="MoheetRight1_TD3" align="right" width="1%" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="MoheetRight1_IMG2" border="0" /></TD>
+			</tr>
+			<tr dir="rtl" align="center">
+				<TD class="" bgcolor="#ffffff" colspan="3">
+						<TABLE id="Table10" style="BORDER-COLLAPSE: collapse" borderColor="#ff9900" cellSpacing="0"
+							cellPadding="0" width="95%" align="center" border="0">
+							<TR>
+								<TD height="5"></TD>
+							</TR>
+							<TR>
+								<TD dir="rtl" vAlign="bottom" align="center"><SELECT id="dropxxxCountry" style="BORDER-RIGHT: dimgray 1px solid; BORDER-TOP: dimgray 1px solid; FONT-WEIGHT: bold; BORDER-LEFT: dimgray 1px solid; WIDTH: 91px; COLOR: #000000; BORDER-BOTTOM: dimgray 1px solid"
+										onchange="dropGoChanged();" size="1" name="site">
+										<OPTION value="0" selected>
+										اختر الدولة<OPTION value="19">
+										&nbsp;مصر<OPTION value="20">
+										&nbsp;السعودية<OPTION value="21">
+										&nbsp;ليبيا<OPTION value="22">
+										&nbsp;الكويت<OPTION value="23">
+										&nbsp;البحرين<OPTION value="24">
+										&nbsp;عمان<OPTION value="25">
+										&nbsp;الأردن<OPTION value="26">
+										&nbsp;أريتريا<OPTION value="27">
+										&nbsp;لبنان<OPTION value="28">
+										&nbsp;سوريا<OPTION value="29">
+										&nbsp;اليمن<OPTION value="30">
+										&nbsp;قطر<OPTION value="31">
+										&nbsp;العراق<OPTION value="32">
+										&nbsp;المغرب<OPTION value="33">
+										&nbsp;موريتانيا<OPTION value="34">
+										&nbsp;السودان<OPTION value="35">
+										&nbsp;الصومال<OPTION value="36">
+										&nbsp;جيبوتى<OPTION value="37">
+										&nbsp;تونس<OPTION value="38">
+										&nbsp;الجزائر<OPTION value="39">
+										&nbsp;فلسطين<OPTION value="40">
+										&nbsp;الامارات<OPTION value="41">
+										&nbsp;أفريقيا<OPTION value="42">
+										&nbsp;أسيا<OPTION value="43">
+										&nbsp;اوروبا<OPTION value="44">
+										&nbsp;الأمريكتان<OPTION value="45">&nbsp;استراليا</OPTION>
+									</SELECT>
+									<A id="linkGo" href="country19.html" target="_parent"><INPUT class="btnInput" id="submit1" style="WIDTH: 32px; CURSOR: hand; HEIGHT: 20px; TEXT-ALIGN: center"
+											onclick="document.getElementById('linkGo').click();" value="إذهب" name="submit1"></A>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+			</tr>
+			<tr>
+				<TD align="left" width="1%" bgcolor="#ffffff"><img src="images/000000white003.gif" id="MoheetRight1_IMG3" border="0" /></TD>
+				<TD bgcolor="#ffffff"></TD>
+				<TD align="right" width="1%" bgcolor="#ffffff"><img src="images/000000white004.gif" id="MoheetRight1_IMG4" border="0" /></TD>
+			</tr>
+			<tr>
+				<TD align="center" colspan="3" height="10"></EMBED></TD>
+			</tr>
+		</table>
+		
+			<TABLE id="Table1" style="BORDER-COLLAPSE: collapse" cellSpacing="0" cellPadding="0" width="150"
+				border="0">
+				<TR>
+					<TD id="MoheetRight1_TD7" width="1%" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="MoheetRight1_IMG5" border="0" /></TD>
+		
+					<TD id="MoheetRight1_TD4" class="gh" align="center" bgcolor="DEE2E5">أبواب محيط</TD>
+		
+					<TD id="MoheetRight1_TD8" align="right" width="1%" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="MoheetRight1_IMG6" border="0" /></TD>
+
+				</TR>
+				<TR>
+					<TD bgColor="#ffffff"></TD>
+					<TD dir="rtl" bgColor="#ffffff"><A class="gi" href="subject2.html" target="_parent">أخبار</A><BR>
+						<A class="gi" href="subject3.html" target="_parent">اقتصاد</A><BR>
+						<!--<A class="gi" href="subject4.html" target="_parent">رياضة</A><BR>-->
+						<A class="gi" href="http://www.korabia.com" target="_parent">رياضة</A><BR>
+						<!--<A class="gi" href="subject5.html" target="_parent">مرأة</A><BR>-->
+						<A class="gi" href="http://lahona.moheet.com/" target="_parent">مرأة</A><BR>
+						<A class="gi" href="subject6.html" target="_parent">سيارات</A><BR>
+						<A class="gi" href="subject7.html" target="_parent">دين</A><BR>
+						<A class="gi" href="subject8.html" target="_parent">ثقافة</A><BR>
+						<!--<A class="gi" href="subject9.html" target="_parent">فن</A><BR>-->
+						<A class="gi" href="http://alfanonline.moheet.com/" target="_parent">فن</A><BR>
+						<A class="gi" href="subject10.html" target="_parent">كمبيوتر واتصالات</A><BR>
+						<A class="gi" href="subject11.html" target="_parent">علوم وتكنولوجيا</A><BR>
+						<A class="gi" href="subject12.html" target="_parent">عالم الكتاب</A><BR>
+						<A class="gi" href="subject13.html" target="_parent">سياحة</A><BR>
+						<A class="gi" href="subject14.html" target="_parent">حوادث</A>
+					</TD>
+					<TD bgColor="#ffffff"></TD>
+				</TR>
+				<TR>
+					<TD align="left" width="1%" bgColor="#ffffff">		<img src="images/000000white003.gif" id="MoheetRight1_IMG7" border="0" /></TD>
+					<TD bgColor="#ffffff"></TD>
+					<TD align="right" width="1%" bgColor="#ffffff"><img src="images/000000white004.gif" id="MoheetRight1_IMG8" border="0" /></TD>
+				</TR>
+				<TR>
+					<TD align="left" width="1%" height="10"></TD>
+					<TD height="10"></TD>
+					<TD align="right" width="1%" height="10"></TD>
+				</TR>
+			</TABLE>
+			
+			<TABLE id="Table3" style="BORDER-COLLAPSE: collapse" cellSpacing="0" cellPadding="0" width="150"
+				border="0">
+				<TR>
+					<TD id="MoheetRight1_TD11" width="1%" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="MoheetRight1_IMG13" border="0" /></TD>
+		
+					<TD id="MoheetRight1_TD6" class="gh" align="center" bgcolor="DEE2E5">أبواب 
+						متميزة</TD>
+		
+					<TD id="MoheetRight1_TD12" align="right" width="1%" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="MoheetRight1_IMG14" border="0" /></TD>
+
+				</TR>
+				<TR>
+					<TD bgColor="#ffffff"></TD>
+					<TD dir="rtl" bgColor="#ffffff">
+						<P>
+							<A class="gi" href="http://forums.moheet.com" target="_blank">منتديات محيط</A><BR>
+							<A class="gi" href="dayharvest.aspx" target="_parent">حصاد اليوم</A><BR>
+							<A class="gi" href="show_all_files.aspx" target="_parent">ملفات</A><BR>
+							<A class="gi" href="dialogues.aspx" target="_parent">حوارات</A><BR>
+							<A class="gi" href="wa7a.aspx" target="_parent">استراحة</A><BR>
+							<A class="gi" href="hearts.aspx" target="_parent">أوتار القلوب</A><BR>
+							<A class="gi" href="highHeel.aspx" target="_parent">كعب عالى</A><BR>
+							<A class="gi" href="http://www.shamlola.com/" target="_blank">شيف نودة </A><b><font color="red" size="2">
+									مطور </font></b>
+							<!--<BR>
+							<A class="gi" href="vip.aspx" target="_parent">شخصيات لا تنسى</A><BR>
+							<A class="gi" href="poets.aspx" target="_parent">شعر وشعراء</A><BR>
+							<A class="gi" href="world.aspx" target="_parent">العالم بين يديك</A><br>
+							<hr>
+							<A style="color:blue" href="http://www.amforum.info/" target="_blank"><b>الملتقى الإعلامي العربي</b></A>--></P>
+					</TD>
+					<TD bgColor="#ffffff"></TD>
+				</TR>
+				<TR>
+					<TD align="left" width="1%" bgColor="#ffffff">		<img src="images/000000white003.gif" id="MoheetRight1_IMG15" border="0" /></TD>
+					<TD bgColor="#ffffff"></TD>
+					<TD align="right" width="1%" bgColor="#ffffff"><img src="images/000000white004.gif" id="MoheetRight1_IMG16" border="0" /></TD>
+				</TR>
+				<TR>
+					<TD colSpan="3" height="10"></TD>
+				</TR>
+			</TABLE>
+			<!-- ImageReady Slices (watan.jpg) -->
+			<TABLE id="Table_01" height="302" cellSpacing="0" cellPadding="0" width="148" border="0">
+				<TR>
+					<TD colSpan="2"><img src="images/watan_01.gif" id="MoheetRight1_Img17" height="36" width="148" border="0" /></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country20.html" TARGET="_parent"><img src="images/watan_02.gif" id="MoheetRight1_Img18" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country19.html" TARGET="_parent"><img src="images/watan_03.gif" id="MoheetRight1_Img19" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country22.html" TARGET="_parent"><img src="images/watan_04.gif" id="MoheetRight1_Img20" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country40.html" TARGET="_parent"><img src="images/watan_05.gif" id="MoheetRight1_Img21" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country25.html" TARGET="_parent"><img src="images/watan_06.gif" id="MoheetRight1_Img22" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country23.html" TARGET="_parent"><img src="images/watan_07.gif" id="MoheetRight1_Img23" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country34.html" TARGET="_parent"><img src="images/watan_08.gif" id="MoheetRight1_Img24" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country31.html" TARGET="_parent"><img src="images/watan_09.gif" id="MoheetRight1_Img25" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country38.html" TARGET="_parent"><img src="images/watan_10.gif" id="MoheetRight1_Img26" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country32.html" TARGET="_parent"><img src="images/watan_11.gif" id="MoheetRight1_Img27" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country26.html" TARGET="_parent"><img src="images/watan_12.gif" id="MoheetRight1_Img28" height="23" width="74" border="0" /></A></TD>
+					<TD><A HREF="country29.html" TARGET="_parent"><img src="images/watan_13.gif" id="MoheetRight1_Img29" height="23" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country37.html" TARGET="_parent"><img src="images/watan_14.gif" id="MoheetRight1_Img30" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country35.html" TARGET="_parent"><img src="images/watan_15.gif" id="MoheetRight1_Img31" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country28.html" TARGET="_parent"><img src="images/watan_16.gif" id="MoheetRight1_Img32" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country36.html" TARGET="_parent"><img src="images/watan_17.gif" id="MoheetRight1_Img33" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country39.html" TARGET="_parent"><img src="images/watan_18.gif" id="MoheetRight1_Img34" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country24.html" TARGET="_parent"><img src="images/watan_19.gif" id="MoheetRight1_Img35" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country21.html" TARGET="_parent"><img src="images/watan_20.gif" id="MoheetRight1_Img36" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country30.html" TARGET="_parent"><img src="images/watan_21.gif" id="MoheetRight1_Img37" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD><A HREF="country33.html" TARGET="_parent"><img src="images/watan_22.gif" id="MoheetRight1_Img38" height="24" width="74" border="0" /></A></TD>
+					<TD><A HREF="country27.html" TARGET="_parent"><img src="images/watan_23.gif" id="MoheetRight1_Img39" height="24" width="74" border="0" /></A></TD>
+				</TR>
+				<TR>
+					<TD colSpan="2"><img src="images/watan_24.gif" id="MoheetRight1_Img40" height="3" width="148" border="0" /></TD>
+				</TR>
+				
+			</TABLE> <!-- End ImageReady Slices --> 
+		</TD>
+
+	</TR>
+</TABLE>
+<!-- Ad Sky Scrapper -->
+
+<div style="MARGIN:0px">
+	<div style="TEXT-ALIGN:center">
+		<!-- begin ad tag-->
+		<!-- End ad tag -->
+	</div>
+	<div style="TEXT-ALIGN:center">
+		<div style="MARGIN:0px auto;WIDTH:120px;TEXT-ALIGN:center">
+		</div>
+	</div>
+</div>
+<br>
+																				<!-- google adv -->
+																				<TABLE height="10" cellSpacing="0" cellPadding="0" width="148" border="0">
+																					<TR>
+																						<TD height="5"></TD>
+																					</TR>
+																					<TR>
+																						<TD align="center" height="5"></TD>
+																					</TR>
+																				</TABLE>
+																				<!-- google adv -->
+																				<TABLE id="Table12" cellSpacing="0" cellPadding="0" width="100%" border="0">
+																					<TR>
+																						<TD height="20"></TD>
+																					</TR>
+																					<TR>
+																								<TD id="tdAdv2" align="center"><!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Skyscraper - 120 x 600 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="120"; var zflag_height="600"; var zflag_sz="8"; 
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Skyscraper - 120 x 600 --></TD>
+		
+																					</TR>
+																				</TABLE>
+																			</TD>
+
+																		</TR>
+																		<TR>
+																			<TD id="sdsdsd" vAlign="top" align="right" width="160">
+																				<TABLE id="Table16" cellSpacing="0" cellPadding="0" width="100%" border="0">
+																					<TR>
+																						<TD align="right" height="5">
+																							<!--maill list-->
+																							<TABLE height="10" cellSpacing="0" cellPadding="0" width="150" border="0">
+																								<!--<tr><td height="30" colspan="3" align=center bgcolor=#ffff33><a style="text-decoration: none;color: #666633;" href="javascript:newWindow2('eventsinpictures.aspx?pn=1','600','900')"><font color=#000000 face="tahoma"><b>الأحداث فى صور</b></font></a></td></tr>
+																								<tr><td height="5"colspan="3"></td></tr>-->
+																								<tr>
+																									<TD align="center" colSpan="3" height="5"><a target="_blank" href="https://s3.amazonaws.com/com.alexa.toolbar/atbp/F1IAs7/download/index.htm"><img src="http://www.alexa.com/images/tbplatform/promotebuttons/blue/TB-banner1-1.jpg"
+																												alt="Get our toolbar!"></a></TD>
+																								</tr>
+																								<tr>
+																									<TD align="center" colSpan="3" height="5"></TD>
+																								</tr>
+																								<TR>
+																											<TD id="Td13" valign="top" align="left" bgcolor="#dee2e5"><img src="images/000000strip002.gif" id="Img1" width="11" border="0" /></TD>
+		
+																									<TD id="Td14" class="gh" align="right" width="100%" bgcolor="#dee2e5">النشرة 
+																										الإخبارية</TD>
+		
+																									<TD id="Td15" valign="top" align="right" width="1" bgcolor="#dee2e5"><img src="images/000000strip001.gif" id="Img26" height="23" width="11" border="0" /></TD>
+
+																								</TR>
+																								<tr>
+																									<TD align="center" bgColor="#ffffff" colSpan="3" height="5"></TD>
+																								</tr>
+																								<TR>
+																									<TD align="center" bgColor="#ffffff" colSpan="3" height="5">
+																										<DIV id="mailtext" style="DISPLAY: block">		<input name="mails" id="mails" type="text" class="watermarkedEmail" onblur="CheckEmailTxt(this.id);" onfocus="clearEmailTxt(this.id);" size="16" /><br>
+																											<input onclick="SignIn('mails');" type="button" value="اشترك"></ASP:BUTTON></DIV>
+																									</TD>
+																								</TR>
+																								<TR>
+																									<TD align="center" bgColor="#ffffff" colSpan="3" height="5"><font color="#990000"><b>
+																												<div id="divmessage" align="center"></div>
+																											</b></font>
+																									</TD>
+																								</TR>
+																								<TR>
+																									<TD vAlign="bottom" align="left" bgColor="#ffffff"><img src="images/000000white003.gif" id="Img27" height="10" width="10" border="0" /></TD>
+																									<TD bgColor="#ffffff"></TD>
+																									<TD vAlign="bottom" bgColor="#ffffff">
+																										<P align="right"><img src="images/000000white004.gif" id="Img28" height="10" width="10" border="0" /></P>
+																									</TD>
+																								</TR>
+																							</TABLE>
+																							<!--mail list--></TD>
+																					</TR>
+																					<TR>
+																						<TD height="5"></TD>
+																					</TR>
+																					<TR>
+																						<TD id="tdFrame3" align="right"><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=643&cpg=1" target=_parent>محاكمة القرن</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=492734&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/73/150-200/732807.jpg" width="60" height=50 style=" border : 1px solid #000000">المدعون بالحق المدني يطالبون بمحاكمة مبارك بتهمة الخيانة العظمي </a><a class=more href="subsubject.aspx?pg=57&gp=643&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=644&cpg=1" target=_parent>الناس و المجتمع</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=493232&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/73/150-200/733793.jpg" width="60" height=50 style=" border : 1px solid #000000">"القذافي" يبحث عن الـ"توك توك"في سحور "لوتس" </a><a class=more href="subsubject.aspx?pg=57&gp=644&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=636&cpg=1" target=_parent>شوارع الغضب</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=493457&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/72/150-200/724315.jpg" width="60" height=50 style=" border : 1px solid #000000">صحيفة بريطانية: سوريا ساعدت القذافي علي الهروب من ضربات "الناتو" </a><a class=more href="subsubject.aspx?pg=57&gp=636&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=641&cpg=1" target=_parent>صحافة غربية</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=493509&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/72/150-200/724602.jpg" width="60" height=50 style=" border : 1px solid #000000">" أوبزرفر" : شركات النفط البريطانية تستعد للعودة الى ليبيا بعد رحيل القذافي </a><a class=more href="subsubject.aspx?pg=57&gp=641&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=628&cpg=1" target=_parent>ما بين السطور</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=491743&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/73/150-200/730179.jpg" width="60" height=50 style=" border : 1px solid #000000">الثورات العربية الراهنة .. ألغاز مشفرة تحتاج إلى فك رموزها </a><a class=more href="subsubject.aspx?pg=57&gp=628&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=638&cpg=1" target=_parent>شغل سياسة</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=493307&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/72/150-200/729578.jpg" width="60" height=50 style=" border : 1px solid #000000">الدكتور كمال حبيب يكتب : وثيقة الأزهر </a><a class=more href="subsubject.aspx?pg=57&gp=638&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center"><a class=gh href="subsubject.aspx?pg=57&gp=603&cpg=1" target=_parent>أحداث بالصور</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><tr><td colspan=3 bgColor="#ffffff" height=5></td></tr><TR dir="rtl" align="center"> <td bgColor="#ffffff" ></td><TD bgColor="#ffffff" dir=rtl> <P align="justify"><A href="show_news.aspx?nid=493391&pg=1" class=ntm><IMG align=left src="http://www.moheet.com/image/73/150-200/733751.jpg" width="60" height=50 style=" border : 1px solid #000000">بالصور  .. أول ظهور لبسمة وعمرو حمزاوي بعد الحادثة </a><a class=more href="subsubject.aspx?pg=57&gp=603&cpg=1" target=_parent>المزيد</a></P></TD><td bgColor="#ffffff"></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center" class=gh>قراءة فى الأحداث</TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"> <TD width="100%" bgColor="#ffffff" class="" colspan="3"> <P align="right"><TABLE dir="rtl" cellSpacing="1" cellPadding="1" width="97%" border="0"><TR><TD  valign="center"><A href="show_files.aspx?fid=493374" target=_parent><IMG src="http://www.moheet.com/image/72/150-200/728508.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493374" target=_parent class=ntm>الأسد في ورطة كبيرة بعد مفاجأة صالحي</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=492936" target=_parent><IMG src="http://www.moheet.com/image/59/150-200/591350.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=492936" target=_parent class=ntm>بسيوني والعربي وأنباء سارة للمصريين حول "كامب ديفيد"</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=492659" target=_parent><IMG src="http://www.moheet.com/image/72/150-200/729517.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=492659" target=_parent class=ntm>إسرائيل تبكي مصير القذافي وبوارين تكشف المستور</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=492376" target=_parent><IMG src="http://www.moheet.com/image/49/150-200/496283.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=492376" target=_parent class=ntm>بعد حادث الحدود .. المجلس العسكري يطمئن المصريين وينتصر لوطنية البدو</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><td colSpan="2" align=left><a href="show_all_files.aspx?cat=580" class=more  target=_parent>المزيد</a></td></TR></TABLE></P></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center" class=gh>حديث المدينة</TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"> <TD width="100%" bgColor="#ffffff" class="" colspan="3"> <P align="right"><TABLE dir="rtl" cellSpacing="1" cellPadding="1" width="97%" border="0"><TR><TD  valign="center"><A href="show_files.aspx?fid=493405" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/732803.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493405" target=_parent class=ntm>سوزان وخديجة وهايدى والجمال يزورون علاء وجمال مبارك في طره</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493253" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/733479.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493253" target=_parent class=ntm>انتحار "خنوفة" إمبراطور البلطجة داخل زنزانته</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493226" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/733782.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more>حوار / <a href="show_files.aspx?fid=493226" target=_parent class=ntm>الأشعل : مبارك ووزراؤه عملاء والجنيه يساوي الدولار في عهدي</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493047" target=_parent><IMG src="http://www.moheet.com/image/62/150-200/620755.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493047" target=_parent class=ntm>صحيفة امريكية تكشف فضائح أبناء هشام طلعت مصطفى في بوسطن</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><td colSpan="2" align=left><a href="show_all_files.aspx?cat=620" class=more  target=_parent>المزيد</a></td></TR></TABLE></P></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center" class=gh>بانوراما محيط</TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"> <TD width="100%" bgColor="#ffffff" class="" colspan="3"> <P align="right"><TABLE dir="rtl" cellSpacing="1" cellPadding="1" width="97%" border="0"><TR><TD  valign="center"><A href="show_files.aspx?fid=493315" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/733825.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493315" target=_parent class=ntm>صور ووثائق تفجر مفاجأة .. "هناء" ابنة القذافي بالتبني تظهر بعد 25 سنة</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493295" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/733539.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more>حوار / <a href="show_files.aspx?fid=493295" target=_parent class=ntm>الشحرورة : أنا أجمل من كارول ولا يشبهني أحد</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493217" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/733787.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493217" target=_parent class=ntm>ألف ليلة وليلة  ..  مملكة الإفرنج ومائدة سيدنا سليمان</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493041" target=_parent><IMG src="http://www.moheet.com/image/72/150-200/724107.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493041" target=_parent class=ntm>بالصور  ..  مظاهر الترف بفيللا المعتصم القذافي</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><td colSpan="2" align=left><a href="show_all_files.aspx?cat=480" class=more  target=_parent>المزيد</a></td></TR></TABLE></P></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center" class=gh>تقارير وحوارات</TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"> <TD width="100%" bgColor="#ffffff" class="" colspan="3"> <P align="right"><TABLE dir="rtl" cellSpacing="1" cellPadding="1" width="97%" border="0"><TR><TD  valign="center"><A href="show_files.aspx?fid=493448" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/732604.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493448" target=_parent class=ntm>اشتباكات بين قوات موالية للأسد وجنود منشقين ونشاط دبلوماسي مكثف في دمشق</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493408" target=_parent><IMG src="http://www.moheet.com/image/73/150-200/733564.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493408" target=_parent class=ntm>القذافي مستعد لبحث نقل السلطة والجامعة العربية تدعو للإفراج عن اموال ليبيا المجمدة</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493267" target=_parent><IMG src="http://www.moheet.com/image/71/150-200/717427.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493267" target=_parent class=ntm>كيف نضمن انتخابات مصرية نزيهة بعد 30 عام من التزوير والبلطجة؟</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><TD  valign="center"><A href="show_files.aspx?fid=493203" target=_parent><IMG src="http://www.moheet.com/image/72/150-200/728314.jpg" width="58" height=50 align="right" border="1" style="border: 1px solid #000000"></A></TD><TD><p align="justify" class=more><a href="show_files.aspx?fid=493203" target=_parent class=ntm>تظاهرات في حمص وقلق أمريكي إسرائيلي من "صواريخ" الأسد</a></p></TD></TR><TR><td background="images/line001.gif" colSpan="2" height="15"></td></TR><TR><td colSpan="2" align=left><a href="show_all_files.aspx?cat=49" class=more  target=_parent>المزيد</a></td></TR></TABLE></P></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center" class=gh>المنطقة الحرة</TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><td bgColor="#ffffff" ></td><TD  bgColor="#ffffff" class=""><TABLE dir="rtl" cellSpacing="0" cellPadding="0" width="97%" border="0"><TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=493027" target=_parent class =ntm>العلمانيون الجدد ..  والإفلاس الفكري</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=492592" target=_parent class =ntm>سقوط ملك ملوك إفريقيا‏!‏ / د. اسامة الغزالي حرب</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=492271" target=_parent class =ntm>التطليق لعدم الكفاءة في النسب !! / د. سهيلة زين العابدين حماد</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=491679" target=_parent class =ntm>إشراقات ليلة القدر / أحمد سليمان</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <tr><td dir=rtl align=left><a target=_parent href=more.aspx?pg=1&nid=493027&mid=493028 class=more>المــزيد</a></td></tr></TABLE></TD><td bgColor="#ffffff" ></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="150" border="0" > <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" align="center" class=gh>أقلام واَراء</TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><td bgColor="#ffffff" ></td><TD  bgColor="#ffffff" class=""><TABLE dir="rtl" cellSpacing="0" cellPadding="0" width="97%" border="0"><TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=493514" target=_parent class =ntm>سورية ..  وإنهاء الاستبداد / نبيل شبيب</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=493335" target=_parent class =ntm>سورية بعد ليبيا سقوط وشيك / عبد الله الهدلق</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=493313" target=_parent class =ntm>ظهور القذافي في العراق / هيفاء زنكنة</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <TR><TD><p align = "right"><font color = "000000"><img src=images/newspoint.gif border=0> <a href="show_files.aspx?fid=493046" target=_parent class =ntm>سورية : انفلات العربدة من كل عقال / صبحي حديدي</a></font></p></TD></TR><TR><td background="images/line001.gif" height="15"></td></TR> <tr><td dir=rtl align=left><a target=_parent href=more.aspx?pg=1&nid=493514&mid=493515 class=more>المــزيد</a></td></tr></TABLE></TD><td bgColor="#ffffff" ></td></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE></TD>
+
+																					</TR>
+																					<TR>
+																						<TD align="right">
+																							<TABLE id="Table15" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0"
+																								cellPadding="0" width="150" border="0">
+																								<TR>
+																											<TD id="TD10" align="center" width="1%" bgcolor="DEE2E5"><img src="images/000000strip002.gif" id="IMG22" height="23" width="11" border="0" /></TD>
+		
+																									<TD id="TD11" class="gh" align="center" bgcolor="DEE2E5">اختيارات 
+																										القراء</TD>
+		
+																									<TD id="TD12" align="right" width="1%" bgcolor="DEE2E5"><img src="images/000000strip001.gif" id="IMG25" height="23" width="11" border="0" /></TD>
+		
+																								</TR>
+																								<TR>
+																									<TD align="left" width="1%" bgColor="#ffffff"></TD>
+																									<TD id="tdMostNews" dir="rtl" align="right" bgcolor="#ffffff"><b><font color=#006699>الأكثر قراءة</b><br><img src=images/newspoint.gif border=0> <a class=ntm  href=show_news.aspx?nid=492903&pg=1>عامل يقتل جاره وأهله يعلقون المتهم على باب حديدى ويمزقونه بالمطاوى والسكاكين</a><br><img src=images/line001.gif width=100% height=15 border=0><img src=images/newspoint.gif border=0> <a class=ntm  href=show_files.aspx?fid=493047&pg=1>صحيفة امريكية تكشف فضائح أبناء هشام طلعت مصطفى في بوسطن</a><br><img src=images/line001.gif width=100% height=15 border=0><img src=images/newspoint.gif border=0> <a class=ntm  href=show_files.aspx?fid=493187&pg=1>مصدر عسكري: موكب مصفح نقل القذافي وأبناؤه إلى الجزائر</a><br><img src=images/line001.gif width=100% height=15 border=0><b><font color=#006699>الأكثر تعليقاً</b><br><img src=images/newspoint.gif border=0> <a class=ntm  href=show_news.aspx?nid=493345&pg=1>تقرير 190 ألف مواطن امريكي يعيشون فى ظلام بسبب إعصار "ايرين"</a><br><img src=images/line001.gif width=100% height=15 border=0><img src=images/newspoint.gif border=0> <a class=ntm  href=show_files.aspx?fid=493027&pg=1>العلمانيون الجدد ..  والإفلاس الفكري</a><br><img src=images/line001.gif width=100% height=15 border=0><img src=images/newspoint.gif border=0> <a class=ntm  href=show_files.aspx?fid=493226&pg=1>الأشعل : مبارك ووزراؤه عملاء والجنيه يساوي الدولار في عهدي</a><br><img src=images/line001.gif width=100% height=15 border=0></TD>
+
+																									<TD align="right" width="1%" bgColor="#ffffff"></TD>
+																								</TR>
+																								<TR>
+																									<TD align="left" width="1%" bgColor="#ffffff"></TD>
+																									<TD align="right" bgColor="#ffffff">
+																										<!--<HR color="#696969">--></TD>
+																									<TD align="right" width="1%" bgColor="#ffffff"></TD>
+																								</TR>
+																								<TR>
+																									<TD align="left" width="1%" bgColor="#ffffff"></TD>
+																									<TD dir="rtl" align="center" bgColor="#ffffff"><A class="more" href="mostNews.aspx?p=0" target="_parent">اختيارات 
+																											القراء لأسبوع</A></TD>
+																									<TD align="right" width="1%" bgColor="#ffffff"></TD>
+																								</TR>
+																								<TR>
+																									<TD align="left" width="1%" bgColor="#ffffff"></TD>
+																									<TD dir="rtl" align="center" bgColor="#ffffff"><A class="more" href="mostNews.aspx?p=1" target="_parent">اختيارات 
+																											القراء لشهر</A></TD>
+																									<TD align="right" width="1%" bgColor="#ffffff"></TD>
+																								</TR>
+																								<TR>
+																									<TD align="left" width="1%" bgColor="#ffffff">		<img src="images/000000white003.gif" id="IMG23" height="10" width="10" border="0" /></TD>
+																									<TD bgColor="#ffffff"></TD>
+																									<TD align="right" width="1%" bgColor="#ffffff"><img src="images/000000white004.gif" id="IMG24" height="10" width="10" border="0" /></TD>
+																								</TR>
+																							</TABLE>
+																						</TD>
+																					</TR>
+																				</TABLE>
+																			</TD>
+		<TD id="tdFrame2" valign="top" align="center" width="440"><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject2.html" >آخر الأخبــار</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493453&pg=1" ><IMG height="60" src="http://www.moheet.com/image/69/150-200/696200.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493453&pg=1" class=nhs>الرئيس التركي : لقد فقدنا الثقة في نظام الأسد</a><br>الرئيس التركي عبد الله جول يؤكد الأحد فقد ثقته في سوريا ، مشير الى أن الوضع بلغ مرحلة التغييرات عندها.... <A href="show_news.aspx?nid=493453&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493499&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > لاريجاني: علي الأمريكيين الاعتراف بسلمية البرنامج النووي الإيراني</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493479&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > الانتقالي الليبي: لا محادثات مع القذافي إلى أن يستسلم</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493473&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > مقتل 20 شخصا اثر اجتياح فيضان جنوب غرب نيجيريا</a></p>... <A href="subject2.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject2.html" >أحداث اليوم</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493495&pg=1" ><IMG height="60" src="http://www.moheet.com/image/36/150-200/369771.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493495&pg=1" class=nhs>مسئول عسكري: البحرية اليمنية تحبط هجوما بزورق يحمل متفجرات</a><br>البحرية اليمنية تتمكن السبت من إغراق زورقا بخاريا كان يحمل متفجرات عند اقترابه من سفن تابعة تقوم بدوريات.... <A href="show_news.aspx?nid=493495&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493508&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > صحيفة : قوات خاصة بريطانية تستخدم أجهزة الكترونية متطورة للبحث عن القذافي</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493502&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > باكستان تنفي علمها بمقتل الرجل الثاني في تنظيم القاعدة</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493488&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > عباس:أحداث ايلات أنقذت نتنياهو من مليونية "الربيع اليهودي"</a></p>... <A href="subject2.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject2.html" >حريات</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493476&pg=1" ><IMG height="60" src="http://www.moheet.com/image/51/150-200/513228.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493476&pg=1" class=nhs>حملة لنشطاء أردنيين لمعرفة مصير 250 مواطنا معتقلا في سوريا</a><br>نشطاء حقوقيون أردنيون يطلقون حملة تحت شعار "فك القيد" تهدف لمعرفة مصير 250 أردنيا معتقلين في السجون السورية.... <A href="show_news.aspx?nid=493476&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=491865&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > "حقوق الإنسان": 750 ألف إمرأة متزوجة من أجنبي يعانين عدم الاستقرار</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=491861&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > فروانة : الأسير "صالح العبد" يدخل قائمة "جنرالات الصبر"</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=491363&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > الشرطة الهندية تفرج عن "انا خازاى" وتسمح له بالإضراب عن الطعام</a></p>... <A href="subject2.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject3.html" >اقتصاد</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493487&pg=1" ><IMG height="60" src="http://www.moheet.com/image/61/150-200/616239.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493487&pg=1" class=nhs>صندوق النقد: الإقتصاد العالمى يمر بمرحلة "خطيرة "</a><br>رئيس صندوق النقد الدولى ترى أن مخاطر تراجع الاقتصاد العالمى تتزايد، وأن التطورات التى حدثت هذا الصيف.... <A href="show_news.aspx?nid=493487&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493519&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > باستثناء أثينا ومدريد ..  البورصات الأوروبية تنهي الأسبوععلى ارتفاع</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493503&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > البورصة العمانية تغلق على ارتفاع 117 نقطة</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493165&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > صندوق النقد يعلق اعتراف بالحكومة الليبية الجديدة</a></p>... <A href="subject3.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="http://www.korabia.com" >رياضـة <font color='#A40000' > (برعاية موقع كورابيا) </font></a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493478&pg=1" ><IMG height="60" src="http://www.moheet.com/image/61/150-200/616280.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493478&pg=1" class=nhs>فيديو ـ المحمدي : سأشارك مع ليرس في منتصف سبتمبر</a><br>شارك حسين ياسر المحمدي لاعب الزمالك السابق في تدريبات نادي ليرس البلجيكي بعد أن فسخ تعاقد مع القلعة البيضاء.... <A href="show_news.aspx?nid=493478&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493500&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > الفيفا يضع "كبرياء مصر" و"البطولات العائدة" ضمن أبرز تصريحات الأسبوع</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493494&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > فيرجسون : لا نية لبيع برباتوف  ..  ونهائي دوري الأبطال أحبطه</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493491&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > خاص- الزمالك مازال يأمل في إنهاء صفقة صلاح سليمان</a></p>... <A href="http://www.korabia.com" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject7.html" >ديــــن</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493037&pg=1" ><IMG height="60" src="http://www.moheet.com/image/73/150-200/733301.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493037&pg=1" class=nhs>في حفل إفطار : الإسلام ليس مجرد عبادات ولكنه منهج لإدارة شئون حياتنا</a><br>عقدت جماعة دعوة الحق الإسلامية أمس حفلا للإفطار أعقبه توزيع الجوائز علي حفظة القرآن قامت نقابة الصحفيين.... <A href="show_news.aspx?nid=493037&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493311&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > تنقيط القرآن الكريم من مظاهر حفظ الله تعالى له</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492820&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > فضل قيام ليلة القدر</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492274&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > 15 ألف معتمر مصري يعبرون مركز حدود "المدورة" الأردني منذ بداية رمضان</a></p>... <A href="subject7.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="http://lahona.moheet.com/" >مــــرأة <font color='#A40000' > (برعاية موقع لهن) </font></a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="http://lahona.moheet.com/show_news.aspx?nid=493483&pg=5" ><IMG height="60" src="http://www.moheet.com/image/57/150-200/572253.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="http://lahona.moheet.com/show_news.aspx?nid=493483&pg=5" class=nhs>عاقبيه ولا تضعفي أمامه   ..  التدليل الزائد أحد أسباب غصب طفلك‏</a><br>الأطفال دون الخامسة ينتابهم نوبات غضب عارمة ، يلجأ خلالها الطفل إلى الصراخ بطريقة هستيرية وقد يخبط رأسه.... <A href="http://lahona.moheet.com/show_news.aspx?nid=493483&pg=5" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="http://lahona.moheet.com/show_news.aspx?nid=493493&pg=5" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > "زنقة زنقة" ثوب العيد للموريتانيات!</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="http://lahona.moheet.com/show_news.aspx?nid=493317&pg=5" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > فساتين سندريلا لعروس 2011 ‏</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="http://lahona.moheet.com/show_news.aspx?nid=493310&pg=5" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > احذري  ..  الملح يعرض أسرتك للخرف</a></p>... <A href="http://lahona.moheet.com/" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="http://alfanonline.moheet.com/" >فــــــن <font color='#A40000' > (برعاية موقع الفن أونلاين) </font></a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="http://alfanonline.moheet.com/show_news.aspx?nid=493119&pg=9" ><IMG height="60" src="http://www.moheet.com/image/65/150-200/658057.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="http://alfanonline.moheet.com/show_news.aspx?nid=493119&pg=9" class=nhs>وثائق تورط أمن الدولة في مقتل سعاد حسني</a><br>استمرارا لسلسلة المفاجآت التي يتم الكشف عنها بين الحين والاخر في لغز مقتل الفنانة سعاد حسني ، تم الكشف.... <A href="http://alfanonline.moheet.com/show_news.aspx?nid=493119&pg=9" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="http://alfanonline.moheet.com/show_news.aspx?nid=493501&pg=9" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > رانيا فريد شوقي تودع "خاتم سليمان"</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="http://alfanonline.moheet.com/show_news.aspx?nid=493498&pg=9" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > سمير غانم يقدم " صايعين ضايعين 2"</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="http://alfanonline.moheet.com/show_news.aspx?nid=493496&pg=9" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > "شارع الهرم " يشوه سمعة مصر</a></p>... <A href="http://alfanonline.moheet.com/" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject11.html" >علوم وتكنولوجيا</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493325&pg=1" ><IMG height="60" src="http://www.moheet.com/image/69/150-200/693821.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493325&pg=1" class=nhs>بعيداً عن وصفات الأطباء .. "الأوميجا 3" تحميك من السكتات الدماغية</a><br>لا شك أن هناك الكثير من الأغذية التي تحافظ على سلامة قلبك وجهازك العصبي من الأمراض، ومن بين هذه الأطعمة،.... <A href="show_news.aspx?nid=493325&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493520&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > دراسة: فيتامين "أ" يقلل معدل وفيات الأطفال سنوياً</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493330&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > الإفراط في تناول الملح يسبب الخرف</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493268&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > روسيا توقف استخدام صواريخ "سيوز" عقب تحطم سفينة شحن فضائية</a></p>... <A href="subject11.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject6.html" >سيارات</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=492623&pg=1" ><IMG height="60" src="http://www.moheet.com/image/71/150-200/714625.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=492623&pg=1" class=nhs>وزير الصناعة : نحرص على استمرار مشروع إحلال التاكسي ودراسة تطبيقه على الميكروباص</a><br>أكد الدكتور محمود عيسى وزير الصناعة والتجارة الخارجية حرص الوزارة على استمرار مشروع إحلال السيارة الأجرة.... <A href="show_news.aspx?nid=492623&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492591&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > مصر تبحث سبل الاستفادة من الخبرة الكورية في مجالات صناعة السيارات والالكترونيات</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492034&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > بعد غياب ثلاثين عاما "النصر للسيارات" تعود للسوق بإعادة الهيكلة والتشغيل الشهر المقبل</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=490884&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > كرايسلر مصر تقدم عرضا على سيارتها الجديدة حتى ليلة العيد</a></p>... <A href="subject6.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject10.html" >كمبيوتر واتصالات</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493320&pg=1" ><IMG height="60" src="http://www.moheet.com/image/67/150-200/674297.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493320&pg=1" class=nhs>"سامسونج" تطلق هواتف جديدة تنافس "بلاك بيري"</a><br>شركة "سامسونج" الكورية الجنوبية عملاق صناعة الأجهزة الإلكترونية في العالم، تستعد لإطلاق هاتفين ذكيين.... <A href="show_news.aspx?nid=493320&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493333&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > لأول مرة ..  "فيس بوك" تحقق تريليون زيارة لصفحاتها</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492849&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > "أبل" تطلق نسخة معدلة من هاتف "آي فون4"</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492844&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > "لينوفو" تكشف عن حاسبها اللوحي الجديد</a></p>... <A href="subject10.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject8.html" >ثقافة</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493465&pg=1" ><IMG height="60" src="http://www.moheet.com/image/73/150-200/733832.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493465&pg=1" class=nhs>معارض تشكيلية حول العالم</a><br>- رعى مدير سياحة "إربد" د. بسام توبات، في بيت "عرار الثقافي" بإربد، افتتاح معرض الفنانة التشكيلية رندا.... <A href="show_news.aspx?nid=493465&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493470&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > 18 ألف كتاب تتيحها مكتبة الإسكندرية الرقمية</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493446&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > اليونسكو تحذر من المساس بالتراث الليبي</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493312&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > حسن خلاف رئيس قطاع مكتب وزير الثقافة</a></p>... <A href="subject8.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject12.html" >عالم الكتاب</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493463&pg=1" ><IMG height="60" src="http://www.moheet.com/image/73/150-200/733858.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493463&pg=1" class=nhs>أوراق قاسم التاريخية تثبت وحدة الأقباط والمسلمون</a><br>صدر حديثاً عن مؤسسة "عين"  للدراسات والبحوث الإنسانية والاجتماعية الطبعة الأولى من كتاب "أوراق تاريخية".... <A href="show_news.aspx?nid=493463&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493515&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > "إبداعات عالمية" تترجم "النمر الأبيض" لآديغا</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493459&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > الأمريكيون "أمة من الغرباء" في كتاب غراس اليزابيث</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493449&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > صدور الطبعة الخامسة من "ظل الأفعى" عن الشروق</a></p>... <A href="subject12.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject13.html" >سياحة</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493454&pg=1" ><IMG height="60" src="http://www.moheet.com/image/28/150-200/282432.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493454&pg=1" class=nhs>"فايف كونتيننتس" توسع نطاق اعمالها ليمتد إلى سوريا</a><br>مجموعة "فايف كونتيننتس " لإدارة الفنادق تعلن عن توسيع نطاق عملها ليصل إلى سوريا بهدف توسيع علامتها التجارية.... <A href="show_news.aspx?nid=493454&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=491835&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > جسر جوي لعودة المعتمرين من السبت</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=490007&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > قطر تبني منتجعا تغمره المياه !</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=489108&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > مطاعم أواسيس مصر تنضم لقائمة جينيس للأرقام القياسية</a></p>... <A href="subject13.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject14.html" >الحوادث</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493088&pg=1" ><IMG height="60" src="http://www.moheet.com/image/72/150-200/728442.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493088&pg=1" class=nhs>ضابط شرطة يستعين بـ4 مجهولين لتأديب عامل تزوج زوجته العرفية</a><br>تباشر النيابة العامة بمنطقة الهرم بمحافظة الجيزة المصرية التحقيق مع ضابط شرطة برتبة ملازم أول إستعان.... <A href="show_news.aspx?nid=493088&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493517&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > ضابط سابق يتهم أمن الدولة والشريف بقتل سعاد حسنى بالوثائق</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493105&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > ضبط موظف بالكهرباء تلقي رشوة داخل شقة والدة الفنانة أنوشكا</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493087&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > نمساوى يحتجز ابنتيه داخل مطبخ ويغتصبهما لمدة 40 عاما</a></p>... <A href="subject14.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject2.html" >حصاد اليوم</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493375&pg=1" ><IMG height="60" src="http://www.moheet.com/image/71/150-200/719124.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493375&pg=1" class=nhs>محققون أمريكيون يصلون نيجيريا بعد هجوم استهدف مقر الأمم المتحدة</a><br>متحدثة باسم سفارة الولايات المتحدة في نيجيريا تعلن أن محققين من مكتب التحقيقات الفيدرالي "اف بي آي" وصلوا.... <A href="show_news.aspx?nid=493375&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493504&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > اعتقال خلية تابعة لتنظيم القاعدة مسئولة عن اغتيال ضباط في الجيش العراقي</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493499&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > لاريجاني: علي الأمريكيين الاعتراف بسلمية البرنامج النووي الإيراني</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=493490&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > منع وكيل قناتي الحياة وأوربت من مغادرة مصر</a></p>... <A href="subject2.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject2.html" >محيط مباشر</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=493042&pg=1" ><IMG height="60" src="http://www.moheet.com/image/72/150-200/726829.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=493042&pg=1" class=nhs>أمام السفارة السورية  ..  سوريون يهتفون : "القذافي طار طار وجاء دورك يابشار"</a><br>نظم المئات من النشطاء السوريين بمصر وقفة احتجاجية أمس أمام السفارة السورية بالقاهرة  للتنديد بالمجازر.... <A href="show_news.aspx?nid=493042&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492563&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > احالة بلاغ يتهم مبارك بقتل 7آلاف جندي امن مركزي لنيابة وسط القاهرة</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492519&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > السلمي : هجوم السيدات يجعلنى أختبئ بكرسي سيارتى</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=492042&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > سياسيون : مبارك والقذافي وراء إنفصال جنوب السودان وإسرائيل تدعم تمرد دارفور</a></p>... <A href="subject2.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="420" border="0"> <TR> <TD bgColor="DEE2E5" width="1%" ><IMG src="images/000000strip002.gif" border="0"></TD><TD  bgColor="DEE2E5" dir=rtl > <a class=gh href="subject2.html" >صانعو الأخبار</a></TD><TD  bgColor="DEE2E5" width="1%" align="right"><IMG src="images/000000strip001.gif" border="0"></TD></TR><TR dir="rtl" align="center"><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE  cellSpacing="0" cellPadding="0" dir="rtl"  width="100%" border="0"> <TR><TD width="20%" valign="top" align=right><A href="show_news.aspx?nid=492538&pg=1" ><IMG height="60" src="http://www.moheet.com/image/72/150-200/726829.jpg" width="70" style="border : 1px solid #000000" vspace=9> </TD> <TD vAlign="top" style="BORDER-TOP: #ffffff 6px solid" class=ntm dir=rtl><p align="justify"><A href="show_news.aspx?nid=492538&pg=1" class=nhs>المجلس الاممي لحقوق الإنسان يحقق في جرائم " الأسد " ضد الإنسانية</a><br>قرر مجلس حقوق الإنسان بالأمم المتحدة  بموافقة 33 دولة من الدول الأعضاء، تشكيل لجنة تحقيق لبحث ارتكاب.... <A href="show_news.aspx?nid=492538&pg=1" class=details>التفاصيل</a></TD><td width=7></td><TD vAlign="top" width="40%" style="BORDER-TOP: #ffffff 6px solid" dir=rtl><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=490878&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > غضب بالـ "بي بي سي" بسبب سوار "خيري" لمذيعة شهيرة</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=490410&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > ثورة غضب لتناول سياسي سوري الماء بقناة "العربية" في نهار رمضان</a></p><p align="justify" style="margin-top: 1; margin-bottom: 5"><A href="show_news.aspx?nid=490140&pg=1" class=nts ><img src=images/newspoint.gif border=0 vspace=5 align=right > الطيب يدعو ممثلي القوي السياسية لاعتماد وثيقة الازهر الاربعاء المقبل</a></p>... <A href="subject2.html" class=more >المزيد</a></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td   width="1%" align="left" bgcolor="#ffffff" ><IMG src="images/000000white003.gif" border="0"></td><td bgColor="#ffffff" ></td><td width="1%" align="right" bgcolor="#ffffff"><IMG src="images/000000white004.gif" border="0"></td></TR><TR><TD width="100%" height="10" colspan="3"></TD></TR></TABLE><TABLE style='BORDER-COLLAPSE: collapse' borderColor='#111111' cellSpacing='0' cellPadding='0' width='400' border='0'><TR><TD bgColor='DEE2E5' width='1%' ><IMG src='images/000000strip002.gif' border='0'></TD><TD bgColor='DEE2E5' dir=rtl ><a class=gh target='_blank' href='http://forums.moheet.com/' >منتديات محيط</a>&nbsp;&nbsp;<a target='_blank' href='http://www.google.com/ig/adde?moduleurl=http://forums.moheet.com/external.php?type=RSS2'><img src='http://gmodules.com/ig/images/plus_google.gif' border='0' alt='تابع منتديات محيط في صفحتك على جوجل'></a>&nbsp;&nbsp;<a target='_blank' href='http://twitter.com/#!/Moheet_Forums'><img src='images/cog3.jpg' border='0' alt='تابع منتديات محيط على تويتر'></a>&nbsp;&nbsp;<a target='_blank' href='http://www.facebook.com/pages/%D9%85%D9%86%D8%AA%D8%AF%D9%8A%D8%A7%D8%AA-%D9%85%D8%AD%D9%8A%D8%B7/146371378729112'><img src='images/cog2.jpg' border='0' alt='تابع منتديات محيط على الفيس بوك'></a></TD><TD bgColor='DEE2E5' width='1%' align='right'><IMG src='images/000000strip001.gif' border='0'></TD></TR><TR dir='rtl' align='center'><TD bgColor=#ffffff></td><TD bgColor=#ffffff><TABLE cellSpacing='0' cellPadding='0' dir='rtl' width='100%' border='0' style='border-collapse: collapse' bordercolor='#111111'><TR><TD width='60%' valign='top' align=right><font size='3' face='tahoma' ><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#111111' width='100%' align=right><tr><td ><table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#111111' width='100%' id='AutoNumber1'> <iframe border='0' frameborder='0' height='150' width='400' name='target1' src='forumscript.htm'></iframe></table></td><td width='50'></td></tr></table></font></TD></TR></TABLE></td><TD bgColor=#ffffff></td></TD></TR><TR><td width='1%' align='left' bgcolor='#ffffff' ><IMG src='images/000000white003.gif' border='0'></td><td bgColor='#ffffff' ></td><td width='1%' align='right' bgcolor='#ffffff'><IMG src='images/000000white004.gif' border='0'></td></TR><TR><TD width='100%' height='10' colspan='3'></TD></TR></TABLE></TD>
+	</tr>
+	<tr>
+		<TD valign="top" align="center"></TD>
+		<TD id="rrrr" valign="top" align="center"></TD>
+		<TD valign="top" width="160"></TD>
+	</tr>
+	<tr>
+		<TD></TD>
+		<TD align="center"></TD>
+		<TD></TD>
+	</tr>
+</table>
+
+																</P>
+															</TD>
+														</TR>
+														<TR>
+															<TD dir="rtl" vAlign="middle" align="center" colSpan="3" height="40">
+<A class="morelw" href="moheetaboutus.aspx" target="_parent">من نحن</A>&nbsp;<STRONG><FONT color="#ffffff">|</FONT></STRONG>
+<A class="morelw" href="moheetadv.aspx" target="_parent">إعلن معنا</A>&nbsp;<STRONG><FONT color="#ffffff">|</FONT></STRONG>
+<A class="morelw" href="moheetcontact.aspx" target="_parent">إتصل بنا</A>&nbsp;<STRONG><FONT color="#ffffff">|</FONT></STRONG>
+<A class="morelw" href="Termsofservice.aspx" target="_parent">شروط الخدمة</A>&nbsp;<STRONG><FONT color="#ffffff">|</FONT></STRONG>
+<A class="morelw" href="copyright.aspx" target="_parent">حقوق النشر</A>&nbsp;<STRONG><FONT color="#ffffff">|</FONT></STRONG>
+<A class="morelw" href="siteMap.aspx">خريطة الموقع</A>
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript" src="//secure-uk.imrworldwide.com/v60.js">
+</script>
+<script type="text/javascript">
+ var pvar = { cid: "mena-moheet", content: "0", server: "secure-uk" };
+ var feat = { surveys_enabled: 1, sample_rate: 0.05 };
+ var trac = nol_t(pvar, feat);
+ var _rsND = trac.getSchemeHost(); // For compatibility with v53 surveys
+ var _rsCI = "mena-moheet"; // For compatibility with v53 surveys
+ trac.record().post().do_sample();
+</script>
+<noscript>
+ <div>
+ <img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=mena-moheet&amp;cg=0&amp;cc=1&amp;ts=noscript"
+ width="1" height="1" alt="" />
+ </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+</TD>
+														</TR>
+														<TR>
+															<TD vAlign="bottom" height="5"><img src="images/000000Bg003.gif" id="IMG12" height="10" width="10" border="0" /></TD>
+															<TD vAlign="top" height="5">&nbsp;</TD>
+															<TD vAlign="bottom" height="5">
+																<P align="right"><img src="images/000000Bg004.gif" id="IMG13" height="10" width="10" border="0" /></P>
+															</TD>
+														</TR>
+													</table>
+												</td>
+												<td style="VERTICAL-ALIGN: top;WIDTH: 50%">
+													<!---right adv---->
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td align="left" valign="top">
+										<!--Iframe Tag  -->
+										<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Right Sponsor - 141 x 692 -->
+										<iframe src="http://c4.zedo.com/jsc/c4/ff2.html?n=1395;c=5;s=4;d=23;w=141;h=692" frameborder="0"
+											marginheight="0" marginwidth="0" scrolling="no" allowTransparency="true" width="141"
+											height="692"></iframe>
+										<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Moheet Right Sponsor - 141 x 692 -->
+									</td>
+								</tr>
+							</table>
+							<!-- End of Table HERE !! -->
+							<TABLE id="Table59" cellSpacing="0" cellPadding="0" width="90%" align="center" border="0"
+								DESIGNTIMEDRAGDROP="269">
+								<TR>
+									<TD height="5"></TD>
+								</TR>
+								<TR>
+									<TD vAlign="top" height="5"></TD>
+								</TR>
+								<TR>
+									<TD dir="rtl" vAlign="top" align="center" width="100%"><FONT face="tahoma" color="#044282" size="1">POWERED 
+											BY <A href="http://www.arabia-inform.com"><U><FONT face="tahoma" color="#800000" size="1">ARABIAINFORM.COM</FONT></U></A>
+											<BR>
+											حقوق النشر والطبع © 2002<A href="http://www.arabia-inform.com" target="_top"><U> <FONT face="tahoma" color="#800000" size="1">
+													لأرابيا انفورم</U></FONT></A> احدى شركات <A href="http://www.almosoft.com" target="_top">
+											<U><FONT face="tahoma" color="#800000" size="1">المجموعة المتحدة للبرمجيات.</U></FONT></A>
+										جميع الحقوق محفوظة
+										<BR>
+										Copyright © 2007 <A href="http://www.arabia-inform.com" target="_top"><U><FONT face="tahoma" color="#800000" size="1">
+												ArabiaInform </U></FONT></A>. <A href="http://www.almosoft.com" target="_top">
+											<U><FONT face="tahoma" color="#800000" size="1">( Almotahida group )</U></FONT></A>. 
+										All rights reserved </FONT></TD>
+								</TR>
+								<TR>
+									<TD height="10"></TD>
+								</TR>
+							</TABLE>
+						</DIV>
+						</A>
+					</TD>
+				</TR>
+				<!--<TR>
+					<TD>
+						<TABLE id="Table10" dir="ltr" height="2" cellSpacing="0" cellPadding="0" width="100%" align="center"
+							border="0">
+							<TR>
+								<TD width="1%"><img src="images\8C98AEstripX002.gif" id="picLeft" /></TD>
+								<TD class="fileHeader" id="tdNews" vAlign="top" width="100%" bgColor="#dee2e5" align="center">
+									<MARQUEE id="marqNews" onmouseover="this.scrollAmount=0;" onmouseout="this.scrollAmount=3;"
+										trueSpeed scrollAmount="3" vspace="2" scrollDelay="40" direction="right" loop="INFINITE"
+										width="100%" height="23">
+										<DIV id="divNews" class="marq" dir="rtl" style="VERTICAL-ALIGN: top; WIDTH: 100%; HEIGHT: 100%" noWrap="" ms_positioning="FlowLayout"></DIV>
+									</MARQUEE>
+								</TD>
+								<TD align="right" width="1%"><img src="images\8C98AEstripX001.gif" id="picRight" /></TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>-->
+<tr>
+<td align="center">
+<a target="_blank" href="http://beta.moheet.com/"><img border="0" src="images/beta-moheet.png"></a>
+</td>
+</tr>
+			</TABLE>
+		<script language=JavaScript>showDate();changeColor('000000','DEE2E5'); </script>
+
+	<script language=JavaScript> var str='http://www.moheet.com/image/73/150-200/732604.jpgô493448ôاشتباكات بين قوات موالية للأسد وجنود منشقين ونشاط دبلوماسي مكثف في دمشقôتقارير اخبارية تذكر أن القوات الموالية للرئيس السوري بشار الاسد اشتبكت خلال الليلة البارحة في ضواحي العاصمة دمشق مع جنود منشقين رفضوا اطلاق النار على المحتجينôhttp://www.moheet.com/image/72/150-200/725124.jpgô493497ôمجندات من وحدة الحرس النسائي يتهمن القذافي باغتصابهن...ôhttp://www.moheet.com/image/72/150-200/726432.jpgô493466ôنتنياهو: قرار زيادة القوات المصرية بسيناء بيد...¤http://www.moheet.com/image/68/150-200/680958.jpgô493474ôإعلان ستوكهولم ..  "المياه للجميع" بحلول 2030ôالعاصمة السويدية تشهدختام فعاليات أسبوع "المياه" بإطلاق بيان "إعلان ستوكهولم"، طالبت المنظمات الموقعة بتوفير "شامل" لمياه الشرب    ودعت منظمات متخصصة فيôhttp://www.moheet.com/image/26/150-200/267675.jpgô493519ôباستثناء أثينا ومدريد ..  البورصات الأوروبية تنهي...ôhttp://www.moheet.com/image/37/150-200/377147.jpgô493516ôمصر: تأسيس 114 شركة جديدة¤http://www.moheet.com/image/59/150-200/593964.jpgô493451ôصحيفة سودانية: الزمالك كوبري "عبدربه" إلى المريخ السودانيôيبدو أن مصير اللاعب حسني عبد ربه لاعب النادي الإسماعيلي لم يتحدد حتى الآن، خاصة في ظل رغبة العديد من الأندية في التعاقد مع لاعب الوسط الدولي.ôhttp://www.moheet.com/image/69/150-200/692772.jpgô493455ôرغم فشله في صناعة أي إنجاز  ..  سابيلا يختار ميسي...ôhttp://www.moheet.com/image/71/150-200/718853.jpgô493452ôبوادر أزمة جديدة بين البدري والمريخ  ..  والسبب...¤http://www.moheet.com/image/73/150-200/733861.jpgô493505ôماجد يوسف : الشعر ليس جويدة والأبنودي  ..  والتنوير فريضة غائبةô"الشعر لو ملك السما/ مهما إن علا/ لازم له في الأرض المقر/ مفيش مفر" كلمات للشاعر ماجد يوسف، وهو أحد شعراء العامية من جيل السبعينات، وصاحب دواوين "ست الحزنôhttp://www.moheet.com/image/36/150-200/360621.jpgô493469ôالكفراوي ينتهي من "عشرون قمرا في حجر الغلام"ôhttp://www.moheet.com/image/72/150-200/724772.jpgô493464ôيوسف يطالب سلماوي وعصفور بالإعتذار للشعب الليبي...¤http://www.moheet.com/image/71/150-200/716516.jpgô493248ôحمام كليوباترا في منزلك  .. جمالك في العيد بوصفات العطارين والحمام المغربيôمع حلول عيد الفطر المبارك، تكثر الأفراح والمناسبات السعيدة، والتى تسعى الفتيات لإستقبالها على أفضل ما يكون، فإذا كنت عروس قد أقترب فرحك، أو موعد خطبتك،ôhttp://www.moheet.com/image/72/150-200/725123.jpgô493506ôحارسات القذافي تعرضت للاغتصاب من قبل الدكتاتور...ôhttp://www.moheet.com/image/71/150-200/719050.jpgô493296ôزوجي ومطلقته قصة حب أبدية  ..  أفكر في الطلاق¤http://www.moheet.com/image/73/150-200/733751.jpgô493391ôبالصور  .. أول ظهور لبسمة وعمرو حمزاوي بعد الحادثةôفي أول ظهور لهما بعد حادث الاعتداء الذي تعرض له كل من الفنانة بسمة والناشط السياسي عمرو حمزاوي ، تناول كل من الثنائي الافطار معا على كورنيش النيل. ويعدôhttp://www.moheet.com/image/73/150-200/731539.jpgô493482ôنسرين الامام : محمد هنيدي فجر طاقتي الكوميديةôhttp://www.moheet.com/image/73/150-200/733809.jpgô493323ôبالصور ..  صلاح عبد الله يحتفل بعقد قران ابنته¤http://www.moheet.com/image/73/150-200/732803.jpgô493405ôسوزان وخديجة وهايدى والجمال يزورون علاء وجمال مبارك في طرهôسوزان ثابت قرينة الرئيس السابق حسنى مبارك وخديجة الجمال ووالدها رجل الأعمال محمود الجمال وهايدى راسخ ونجلها عمر يقومون بزيارة علاء وجمال مبارك فى محبسهماôhttp://www.moheet.com/image/72/150-200/728783.jpgô493481ôلجنة علمية تتسلم التقارير الطبية بقضية خالد سعيد...ôhttp://www.moheet.com/image/73/150-200/733166.jpgô493424ô"ارمي زبالتك قدام الحي" .. حملة على "الفيس بوك"...¤http://www.moheet.com/image/58/150-200/584755.jpgô493484ôمفتي المملكة: لا يجوز إخراج زكاة الفطر لحملة إغاثة الشعب الصوماليôالشيخ عبدالعزيز بن عبدالله آل الشيخ مفتي عام المملكة رئيس هيئة كبار العلماء وإدارة البحوث العلمية والإفتاء يوضح أن الفتوى الصادرة من دار الإفتاء والقاضيةôhttp://www.moheet.com/image/46/150-200/466002.jpgô493456ôخضر: زكاة الفطر واجبة على الفقراء ومن يملك قوت...ôhttp://www.moheet.com/image/63/150-200/637913.jpgô493261ôعالم دين سعودى يؤيد إخراج زكاة الفطر "نقودا"¤http://www.moheet.com/image/68/150-200/688558.jpgô493381ôعادل حمودة يكشف:منير ثابت من السلطة والمال والنفوذ إلى الهروبôتحدث الكاتب الصحفي عادل حمودة عن سطوة عائلة سوزان ثابت زوجة الرئيس المخلوع حسني مباركôhttp://www.moheet.com/image/73/150-200/733674.jpgô493393ôالفريق حسام كمال: مصر فقدت ريادتها في عهد مبارك...ôhttp://www.moheet.com/image/57/150-200/572314.jpgô493365ôصبحي: لا أخاف من حكم الإخوان ولا أؤيد التمديد... ';</script>
+
+	<script language=JavaScript>changeTab(document.getElementById('trTabs').cells[0].id);startMotion();</script>
+
+</form>
+	</body>
+
+<!-- Pop 1x1 -->
+<!-- Javascript tag  -->
+<!-- begin ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Pixel/Popup - 1 x 1 -->
+<script language="JavaScript">
+var zflag_nid="1395"; var zflag_cid="5"; var zflag_sid="4"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="15";
+</script>
+<script language="JavaScript" src="http://c4.zedo.com/jsc/c4/fo.js"></script>
+<!-- end ZEDO for channel: Moheet Homepage , publisher: News , Ad Dimension: Pixel/Popup - 1 x 1 -->
+<!-- /Pop 1x1 -->
+
+</HTML>
+<script language=JavaScript> preLoad('000000'); </script>

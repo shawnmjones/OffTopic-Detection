@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Photos, Articles & Videos from the #jan25 Revolution | By planet360 </title>
+
+<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/main.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+</head>
+<body>
+<div style="text-align: center;">
+	<h1>A random selection of photos, articles and videos from #jan25 on twitter.</h1>
+	<h2>The more popular, the bigger/more prominent. Keeps growing and updating.<br /><a href="http://twitter.com/share" class="twitter-share-button" data-text="Photos, articles and videos from #jan25, by planet360." data-count="horizontal" data-related="tareknasr360:tarekshalaby">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></h2>
+</div>
+<div class="flag">
+	<div class="photos_link">
+		<a href='ajax/images.php'  class="thickbox">&nbsp;</a>
+	</div>
+	<div class="articles_link">
+		<a href='ajax/articles.php'   class="thickbox">&nbsp;</a>
+	</div>
+	<div class="videos_link">
+		<a href='ajax/videos.php'   class="thickbox">&nbsp;</a>
+	</div>
+</div>
+<script>
+$().ready(function() {
+	    		$(".thickbox").fancybox({
+				'width'				: '90%',
+				'height'			: '90%',
+				'autoScale'			: true,
+				'transitionIn'		: 'elastic',
+				'transitionOut'		: 'elastic',
+				'padding'			: '0',
+				'margin'			: '0',
+				'type'				: 'iframe'
+			});
+	    	
+	    	});
+</script>
+</body>
+</html>
