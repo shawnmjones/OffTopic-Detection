@@ -1,6 +1,0 @@
-<http://localhost:9900/test1/original>; rel="original",
-<http://localhost:9900/test1/timemap.link>; rel="self"; type="application/link-format"; from="Tue, 01 Oct 2013 20:41:29 GMT"; until="Thu, 03 Oct 2013 19:14:57 GMT",
-<http://localhost:9900/test1/timegate/>; rel="timegate",
-<http://localhost:9900/test1/mementos/memento1.html>; rel="first memento"; datetime="Tue, 01 Oct 2013 20:41:29 GMT",
-<http://localhost:9900/test1/mementos/memento2.html>; rel="memento"; datetime="Tue, 01 Oct 2013 20:42:27 GMT",
-<http://localhost:9900/test1/mementos/memento3.html>; rel="last memento"; datetime="Thu, 03 Oct 2013 19:14:57 GMT"

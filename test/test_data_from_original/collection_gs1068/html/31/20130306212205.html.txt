@@ -1,4 +1,0 @@
-Index of /
-cgi-bin/
-favicon.ico
-Apache Server at bo.amnesty.org Port 80

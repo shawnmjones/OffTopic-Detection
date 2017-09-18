@@ -1,7 +1,0 @@
-Warning:  strpos() [ function.strpos ]: Offset not contained in string in /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php on line 302
-Warning:  strpos() [ function.strpos ]: Offset not contained in string in /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php on line 302
-Warning:  Cannot modify header information - headers already sent by (output started at /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php:302) in /usr/lib/php/RMIT/_inc/header_g2.php on line 39
-Warning:  Cannot modify header information - headers already sent by (output started at /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php:302) in /usr/lib/php/RMIT/_inc/header_g2.php on line 40
-Warning:  Cannot modify header information - headers already sent by (output started at /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php:302) in /usr/lib/php/RMIT/_inc/header_g2.php on line 42
-Warning:  Cannot modify header information - headers already sent by (output started at /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php:302) in /usr/lib/php/RMIT/_inc/header_g2.php on line 43
-Warning:  Cannot modify header information - headers already sent by (output started at /usr/lib/php/RMIT/_lib/aderleeClass.browserInfo.php:302) in /usr/lib/php/RMIT/_inc/header_g2.php on line 44

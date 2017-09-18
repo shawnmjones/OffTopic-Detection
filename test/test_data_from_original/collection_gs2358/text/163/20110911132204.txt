@@ -1,6 +1,0 @@
-Enter Web Address:
- 
- 
- 
-This is the new Wayback Machine prototype. Any URL in ARC files accessible to this sevice can be searched above.
-Home | Internet Archive

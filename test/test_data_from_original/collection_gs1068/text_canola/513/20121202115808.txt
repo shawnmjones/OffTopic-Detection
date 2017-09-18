@@ -1,6 +1,0 @@
-Celebramos la Ley del voto Joven
-Foro Joven de Sostenibilidad
-Si compartís la misión de OAJNU y crees que los jóvenes son un capital importante en esa sociedad, te invitamos a fidelizar tu apoyo a través de un aporte. HACER UNA DONACIÓN!
-Algunos números que nos deja el 2012....  OAJNU durante este año ejecutó 33 PROYECTOS socio educativos a lo largo... http://t.co/RyycPuzA
-Follow @oajnu
-Fatal error:  Uncaught CurlException: 60: SSL certificate problem, verify that the CA cert is OK. Details: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed   thrown in /www/oajnu.org/htdocs/wp-content/plugins/facebook-feed-grabber/facebook-sdk/base_facebook.php on line 814
